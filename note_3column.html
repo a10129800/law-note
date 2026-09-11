@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>犯罪概念與論罪結構 - 刑法導論 3-Column 知識庫筆記</title>
+  <title>刑法導論・犯罪概念與論罪結構完整知識庫 (含 2026 最新法律對照) - Note 3 Column</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -15,6 +15,8 @@
           colors: {
             brand: {
               50: '#F5F3FF',
+              100: '#EDE9FE',
+              200: '#DDD6FE',
               500: '#6366F1',
               600: '#4F46E5',
               700: '#4338CA',
@@ -59,13 +61,16 @@
     html {
       scroll-behavior: smooth;
     }
+    .glow-brand {
+      box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.3);
+    }
   </style>
 </head>
-<body class="bg-white dark:bg-[#0B0F17] text-slate-850 dark:text-slate-200 antialiased min-h-screen transition-colors duration-200">
+<body class="bg-white dark:bg-[#0B0F17] text-slate-800 dark:text-slate-200 antialiased min-h-screen transition-colors duration-200">
 
   <!-- ==================== HEADER ==================== -->
-  <header class="sticky top-0 z-40 w-full border-b border-slate-200 dark:border-slate-800/80 bg-white/80 dark:bg-[#0B0F17]/80 backdrop-blur-md">
-    <div class="max-w-[92rem] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+  <header class="sticky top-0 z-40 w-full border-b border-slate-200 dark:border-slate-800/80 bg-white/85 dark:bg-[#0B0F17]/85 backdrop-blur-md">
+    <div class="max-w-[94rem] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
       
       <!-- Left: Mobile Menu Button & Brand -->
       <div class="flex items-center gap-3">
@@ -80,10 +85,10 @@
           <div>
             <div class="flex items-center gap-2">
               <span class="font-bold text-slate-900 dark:text-white text-base tracking-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                刑法講義<span class="text-indigo-500">.docs</span>
+                刑法總論講義<span class="text-indigo-500">.docs</span>
               </span>
-              <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/60 rounded-full">
-                Note 3 Column 規格
+              <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60 rounded-full">
+                2026 最新法規核對版
               </span>
             </div>
           </div>
@@ -95,7 +100,7 @@
         <button id="searchTriggerBtn" class="w-full flex items-center justify-between px-3.5 py-2 text-sm text-slate-400 bg-slate-100/80 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-indigo-500/50 hover:bg-white dark:hover:bg-slate-800/60 transition-all shadow-sm group">
           <div class="flex items-center gap-2.5">
             <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-            <span class="text-slate-500 dark:text-slate-400">搜尋案例、條文、爭點（如：櫻桃案、期待可能）...</span>
+            <span class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm">搜尋條文、2026未更動、憲判字第8號、案例...</span>
           </div>
           <kbd class="flex items-center gap-0.5 px-2 py-0.5 text-[11px] font-mono text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-sm">
             <span class="text-xs">Ctrl</span> K
@@ -115,8 +120,11 @@
           <svg id="moonIcon" class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
         </button>
 
-        <a href="#simulator" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/60 hover:bg-indigo-100 transition-colors">
-          <span>⚡ 推定模擬器</span>
+        <a href="#law-updates-2026" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60 hover:bg-emerald-100 transition-colors">
+          <span>📜 2026 法規對照</span>
+        </a>
+        <a href="#puzzle-comparer" class="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 border border-purple-200 dark:border-purple-800/60 hover:bg-purple-100 transition-colors">
+          <span>🧩 二階/三階拼圖</span>
         </a>
       </div>
 
@@ -124,158 +132,539 @@
   </header>
 
   <!-- ==================== MAIN BODY (3 COLUMNS) ==================== -->
-  <div class="max-w-[92rem] mx-auto flex">
+  <div class="max-w-[94rem] mx-auto flex">
     
     <!-- Mobile Backdrop -->
     <div id="mobileBackdrop" class="fixed inset-0 z-30 bg-slate-950/60 backdrop-blur-sm hidden lg:hidden"></div>
 
-    <!-- COLUMN 1: LEFT SIDEBAR (Sticky on desktop, never overlaps content) -->
+    <!-- COLUMN 1: LEFT SIDEBAR (Sticky, searchable, categorized) -->
     <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-40 w-72 lg:w-80 h-[calc(100vh-4rem)] shrink-0 bg-white dark:bg-[#0B0F17] border-r border-slate-200 dark:border-slate-800/80 -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col">
       
       <!-- Filter Input -->
       <div class="p-4 border-b border-slate-200 dark:border-slate-800/60">
         <div class="relative">
           <svg class="absolute left-3 top-2.5 w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-          <input id="sidebarFilterInput" type="text" placeholder="篩選章節與爭點..." class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-100 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-lg text-slate-800 dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:border-indigo-500">
+          <input id="sidebarFilterInput" type="text" placeholder="篩選章節、爭點或條文..." class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-100 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-lg text-slate-800 dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:border-indigo-500">
         </div>
       </div>
 
       <!-- Navigation Tree -->
-      <div class="flex-1 overflow-y-auto px-4 py-4 space-y-6">
+      <div id="navTreeContainer" class="flex-1 overflow-y-auto px-4 py-4 space-y-6 text-xs">
         
-        <!-- Volume 1: 導論與犯罪論 -->
-        <div>
-          <div class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
-            導論：三階層論罪體系
+        <!-- Volume 0: 第零篇 運作原理與操作原理 -->
+        <div class="nav-group">
+          <div class="text-[11px] font-bold uppercase tracking-wider text-indigo-500 dark:text-indigo-400 mb-2 flex items-center justify-between">
+            <span>【第零篇】運作原理與操作原理</span>
+            <span class="text-[9px] px-1 py-0.2 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300">基石</span>
           </div>
-          <ul class="space-y-1 pl-1 border-l-2 border-slate-100 dark:border-slate-800/80 ml-1 text-xs">
-            <li>
-              <a href="#overview" class="flex items-center justify-between px-3 py-2 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-200/50 dark:border-indigo-800/40">
-                <span class="truncate">01. 犯罪概念與論罪結構</span>
-                <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-400 font-mono">當前篇</span>
-              </a>
-            </li>
-            <li><a href="#simulator" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">02. 雙重推定互動模擬器</span><span class="text-[10px] px-1.5 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-400 font-mono">Interactive</span></a></li>
-            <li><a href="#culpability" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">03. 不法推定罪責 (壞人)</span></a></li>
-            <li><a href="#wrongfulness" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">04. 構成要件推定違法 (壞事)</span></a></li>
+          <ul class="space-y-1 pl-1 border-l-2 border-indigo-500/40 ml-1">
+            <li class="nav-item"><a href="#vol-0-intro" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">00. 刑法目的與四大支柱</span><span class="text-[9px] px-1 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">架構</span></a></li>
+            <li class="nav-item"><a href="#vol-0-legal-interest" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">01. 法益保護與分則體系圖</span><span class="text-[9px] px-1 py-0.5 rounded bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-400">案例1-1~1-3</span></a></li>
+            <li class="nav-item"><a href="#vol-0-legality" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">02. 罪刑法定四大派生原則</span><span class="text-[9px] px-1 py-0.5 rounded bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-400">案例1-4~1-7</span></a></li>
+            <li class="nav-item"><a href="#vol-0-culpability-principle" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">03. 罪責原則與罪刑相當</span><span class="text-[9px] px-1 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-400">案例1-8</span></a></li>
+            <li class="nav-item"><a href="#vol-0-temp-validity" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">04. 時之效力：從舊從輕原則</span><span class="text-[9px] px-1 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400">案例2-1</span></a></li>
           </ul>
         </div>
 
-        <!-- Volume 2: 15 大經典案例實戰 -->
-        <div>
-          <div class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
-            15 大爭議案例實例庫
+        <!-- Volume 1: 第一章 犯罪的概念 -->
+        <div class="nav-group">
+          <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400 mb-2">
+            【第一章】犯罪概念與三階體系
           </div>
-          <ul class="space-y-1 pl-1 border-l-2 border-slate-100 dark:border-slate-800/80 ml-1 text-xs">
-            <li><a href="#case-1-1" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 1-1~1-4: 欠缺責任與意識</span><span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-mono">§16~§20</span></a></li>
-            <li><a href="#case-1-5" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 1-5: 防衛過當與寬恕罪責</span></a></li>
-            <li><a href="#case-1-6" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 1-6: 幼兒墜床燙衣火災案</span><span class="text-[10px] px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-400 font-mono">期待可能</span></a></li>
-            <li><a href="#case-1-7" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 1-7~1-11: 法定阻卻違法</span><span class="text-[10px] px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-400 font-mono">§21~§24</span></a></li>
-            <li><a href="#case-1-12" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 1-12~1-13: 承諾與義務衝突</span></a></li>
-            <li><a href="#case-1-14" class="flex items-center justify-between px-3 py-2 rounded-lg text-rose-600 dark:text-rose-400 font-semibold hover:bg-rose-50 dark:hover:bg-rose-950/30"><span class="truncate">🍒 案例 1-14: 櫻桃案 (利益失衡)</span><span class="text-[10px] px-1.5 py-0.5 rounded bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-400 font-mono">必考</span></a></li>
-            <li><a href="#case-1-15" class="flex items-center justify-between px-3 py-2 rounded-lg text-rose-600 dark:text-rose-400 font-semibold hover:bg-rose-50 dark:hover:bg-rose-950/30"><span class="truncate">🩸 案例 1-15: 輸血案 (人性尊嚴)</span><span class="text-[10px] px-1.5 py-0.5 rounded bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-400 font-mono">爭點</span></a></li>
+          <ul class="space-y-1 pl-1 border-l-2 border-slate-100 dark:border-slate-800/80 ml-1">
+            <li class="nav-item"><a href="#overview" class="flex items-center justify-between px-3 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-200/50 dark:border-indigo-800/40"><span class="truncate">01. 直觀概念：先事後人</span><span class="text-[9px] px-1 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-400 font-mono">核心</span></a></li>
+            <li class="nav-item"><a href="#simulator" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">02. 雙重推定互動模擬器</span><span class="text-[9px] px-1 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-400 font-mono">Interactive</span></a></li>
+            <li class="nav-item"><a href="#culpability" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">03. 罪責階層 (壞人評價)</span></a></li>
+            <li class="nav-item"><a href="#wrongfulness" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">04. 構成要件與違法性 (壞事)</span></a></li>
+            <li class="nav-item"><a href="#dual-requirement" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">05. 目的犯罪體系與雙重該當</span><span class="text-[9px] px-1 py-0.5 rounded bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-400 font-mono">必讀</span></a></li>
+            <li class="nav-item"><a href="#puzzle-comparer" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">06. 🧩 二階 vs 三階拼圖對比</span><span class="text-[9px] px-1 py-0.5 rounded bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-400 font-mono">新亮點</span></a></li>
+            <li class="nav-item"><a href="#case-1-16" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 1-16: 凶神惡煞 (誤想防衛)</span></a></li>
+            <li class="nav-item"><a href="#case-1-17" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 1-17: 角頭對決 (偶然防衛)</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Volume 2: 第二章 刑法的論罪結構 -->
+        <div class="nav-group">
+          <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400 mb-2">
+            【第二章】刑法的論罪結構
+          </div>
+          <ul class="space-y-1 pl-1 border-l-2 border-slate-100 dark:border-slate-800/80 ml-1">
+            <li class="nav-item"><a href="#ch2-principle" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">07. 處罰原則：故意既遂犯</span></a></li>
+            <li class="nav-item"><a href="#ch2-exceptions" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">08. 處罰例外：未遂與過失</span></a></li>
+            <li class="nav-item"><a href="#ch2-warning" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-rose-600 dark:text-rose-400 font-semibold hover:bg-rose-50 dark:hover:bg-rose-950/30"><span class="truncate">⚠️ 非既遂≠未遂！非故意≠過失！</span><span class="text-[9px] px-1 py-0.5 rounded bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-400 font-mono">大忌</span></a></li>
+            <li class="nav-item"><a href="#case-2-1" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 2-1: 西瓜刀閃過 (未遂)</span></a></li>
+            <li class="nav-item"><a href="#case-2-2" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 2-2: 練刀誤殺 (過失)</span></a></li>
+            <li class="nav-item"><a href="#case-2-3" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 2-3: 意圖挑唆防衛</span><span class="text-[9px] px-1 py-0.5 rounded bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-400">爭點</span></a></li>
+            <li class="nav-item"><a href="#case-2-4" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 2-4: 原因自由行為 (§19Ⅲ)</span><span class="text-[9px] px-1 py-0.5 rounded bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-400">考點</span></a></li>
+            <li class="nav-item"><a href="#ch2-block-exceptions" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">09. 不得主張阻卻之例外體系</span></a></li>
+            <li class="nav-item"><a href="#six-stage-matrix" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-indigo-600 dark:text-indigo-400 font-semibold hover:bg-indigo-50 dark:hover:bg-indigo-950/30"><span class="truncate">10. 基本論罪全流程六階層表</span><span class="text-[9px] px-1 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-400 font-mono">系統圖</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Volume 3: 2026 最新法律動態 -->
+        <div class="nav-group">
+          <div class="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2 flex items-center justify-between">
+            <span>【2026 最新法規檢視】</span>
+            <span class="text-[9px] px-1 py-0.2 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">Live</span>
+          </div>
+          <ul class="space-y-1 pl-1 border-l-2 border-emerald-500/40 ml-1">
+            <li class="nav-item"><a href="#law-updates-2026" class="flex items-center justify-between px-3 py-1.5 rounded-lg bg-emerald-50/50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 font-semibold hover:bg-emerald-100 dark:hover:bg-emerald-950/60"><span class="truncate">⚖️ 2026 條文對比與未更動清單</span><span class="text-[9px] px-1 py-0.5 rounded bg-emerald-200 dark:bg-emerald-900 font-mono">重點</span></a></li>
+            <li class="nav-item"><a href="#const-judgment-8" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">🏛️ 113年憲判字第8號 (死刑限縮)</span></a></li>
+            <li class="nav-item"><a href="#eugenic-status" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">🤰 優生保健法第9條草案現狀</span></a></li>
+            <li class="nav-item"><a href="#recent-criminal-amendments" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">📜 2024~2026 刑法最新修正</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Volume 4: 總複習 -->
+        <div class="nav-group">
+          <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400 mb-2">
+            【總結矩陣】
+          </div>
+          <ul class="space-y-1 pl-1 border-l-2 border-slate-100 dark:border-slate-800/80 ml-1">
+            <li class="nav-item"><a href="#matrix" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">📊 阻卻違法 vs 阻卻罪責 矩陣</span></a></li>
           </ul>
         </div>
 
       </div>
 
-      <div class="p-4 border-t border-slate-200 dark:border-slate-800/60 bg-slate-50/50 dark:bg-slate-900/30 text-xs text-slate-500">
-        📖 刑法總論・三階層體系精要
+      <div class="p-3 border-t border-slate-200 dark:border-slate-800/60 bg-slate-50/50 dark:bg-slate-900/30 text-[11px] text-slate-500 flex items-center justify-between">
+        <span>📖 刑法總論・全書對照講義</span>
+        <span class="text-[10px] text-emerald-500 font-mono font-bold">2026.09 Ver</span>
       </div>
     </aside>
 
     <!-- COLUMN 2: CENTER MAIN READER -->
-    <main class="flex-1 min-w-0 px-4 sm:px-8 xl:px-8 py-8 lg:py-10">
-      <div class="max-w-4xl mx-auto">
+    <main class="flex-1 min-w-0 px-4 sm:px-8 xl:px-10 py-8 lg:py-10">
+      <div class="max-w-4xl mx-auto space-y-12">
         
         <!-- Breadcrumbs -->
-        <nav class="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 mb-6 font-medium">
-          <a href="#" class="hover:text-indigo-600 dark:hover:text-indigo-400">刑法總論</a>
-          <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          <span>導論篇</span>
-          <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          <span class="text-slate-900 dark:text-white font-semibold">第一章 犯罪的概念</span>
-        </nav>
-
-        <!-- Article Header -->
-        <header class="mb-10 pb-8 border-b border-slate-200 dark:border-slate-800/80">
-          <div class="flex flex-wrap items-center gap-2 mb-3">
-            <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/60">
-              導論 第一章
-            </span>
-            <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60">
-              三階層體系基礎
+        <nav class="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 font-medium">
+          <a href="#" class="hover:text-indigo-600 dark:hover:text-indi            <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/60">
+              第零篇運作原理 ＋ 三階深化
             </span>
             <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 border border-purple-200 dark:border-purple-800/60">
-              雙重推定模型
+              六階層論罪矩陣
+            </span>
+            <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-800/60">
+              30 大實例案例庫 (0-1~0-9, 1-1~1-17, 2-1~2-4)
             </span>
           </div>
 
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
-            犯罪概念與論罪結構
+            刑法運作原理・犯罪概念與論罪結構
           </h1>
 
           <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-            以生活經驗為出發點的直觀法學思維。跳脫象牙塔裡的死記硬背，透過「壞人做壞事」的常識直覺，建立穩固又清晰的「三階層推定與反證」思維流程。
+            從刑法四大支柱與分則法益體系出發，深入目的犯罪體系、阻卻違法客主觀雙重該當、二階論四塊拼圖拆解，並實時對照 <strong>2026 年最新公布法律、憲判字第 8 號死刑限縮及各條文未更動狀態</strong>。
           </p>
 
           <div class="flex flex-wrap items-center gap-6 mt-6 pt-6 border-t border-slate-100 dark:border-slate-800/60 text-xs text-slate-500 dark:text-slate-400">
             <div class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>研讀時間約 15 分鐘</span>
+              <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>依據：全國法規資料庫、總統府公報、憲法法庭裁判</span>
             </div>
             <div class="flex items-center gap-2">
               <span class="text-base">⚖️</span>
-              <span>核心考點：不法與罪責、利益衡量、期待可能性</span>
+              <span>涵蓋法條：§ 12~16、§ 18~20、§ 21~27、§ 79-1、§ 80、§ 271、§ 276、§ 277</span>
             </div>
           </div>
         </header>
 
-        <!-- Section: Overview -->
-        <section id="overview" class="scroll-mt-24 space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed">
-          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
-            本篇導讀：直觀思維架構
-          </h2>
-          <p>
-            刑法是一部處理犯罪的法律。何謂犯罪？簡單說就是<strong>「一個壞人」做了「一件壞事」</strong>。
-          </p>
-          <p>
-            然而，經驗告訴我們：<strong>判斷誰是壞人非常困難</strong>（牽涉人的精神狀態、成長背景、主觀惡意），但<strong>判斷一件事是不是壞事相對容易得多</strong>。因此，刑法的論罪順序定為：
-          </p>
-          <div class="p-4 rounded-xl border border-indigo-200 dark:border-indigo-900/60 bg-indigo-50/40 dark:bg-indigo-950/20 font-medium text-indigo-950 dark:text-indigo-200">
-            先判斷「是否有一件壞事發生（評價行為 ➔ 不法）」<br>
-            再判斷「做這件壞事的人是不是一個壞人（評價行為人 ➔ 罪責）」
-          </div>
+        <!-- ==================== SECTION: 第零篇 運作原理與操作原理 ==================== -->
+        <div id="vol-0" class="space-y-10">
+          
+          <!-- Header & 00. 刑法目的與四大支柱 -->
+          <section id="vol-0-intro" class="scroll-mt-24 space-y-5">
+            <div class="flex items-center gap-2 text-indigo-500 font-mono text-xs font-bold uppercase tracking-wider">
+              <span>VOLUME 0</span>
+              <span>•</span>
+              <span>FOUNDATIONS & OPERATIONAL PRINCIPLES</span>
+            </div>
+            
+            <div class="border-b border-slate-100 dark:border-slate-800 pb-3">
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                第零篇 刑法的運作原理與操作原理
+              </h2>
+              <p class="text-xs text-slate-500 mt-1">
+                建立刑法學習的核心價值觀：刑法的任務、動用刑罰的底線與法律操作之基本準繩
+              </p>
+            </div>
 
-          <!-- Callout -->
-          <div class="my-6 rounded-xl border border-blue-500/30 dark:border-blue-500/20 bg-blue-50/50 dark:bg-blue-950/20 p-4.5 text-sm">
-            <div class="flex items-start gap-3">
-              <span class="text-blue-500 text-lg">💡</span>
-              <div>
-                <div class="font-bold text-slate-900 dark:text-white mb-1">推定（Presumption）的法律智慧</div>
-                <div class="text-slate-700 dark:text-slate-300">
-                  會做壞事的人絕大多數是壞人，但「絕大多數不等於百分之百」。為了兼顧審判效率與避免冤抑，法律採取「推定」原則——先預設為壞人，但<strong>賦予行為人舉出反證推翻假設的機會</strong>（阻卻事由）。
+            <!-- 刑法目的與謙抑性 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+              <div class="p-4 rounded-2xl border border-indigo-200 dark:border-indigo-900/60 bg-indigo-50/30 dark:bg-indigo-950/20 space-y-2">
+                <div class="flex items-center gap-2 font-bold text-sm text-indigo-600 dark:text-indigo-400">
+                  <span>⚖️ 刑法的雙重目的</span>
+                </div>
+                <ul class="space-y-1.5 text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <li>• <strong>應報思想（回溯過去）</strong>：對過去之惡行課予應得痛苦。「刑罰不允許超出行為人之責任範圍」（奠定小罪不能大罰）。</li>
+                  <li>• <strong>預防思想（展望未來）</strong>：希冀未來減少犯罪。「刑罰依據必須明確」，使一般人民知所依循。</li>
+                  <li>• <strong>終極歸宿</strong>：保護<strong>「人類極為重要之生活利益（法益）」</strong>。</li>
+                </ul>
+              </div>
+
+              <div class="p-4 rounded-2xl border border-amber-200 dark:border-amber-900/60 bg-amber-50/30 dark:bg-amber-950/20 space-y-2">
+                <div class="flex items-center gap-2 font-bold text-sm text-amber-600 dark:text-amber-400">
+                  <span>🛡️ 最後手段性原則（謙抑性 Ultima Ratio）</span>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  刑罰具有生命、人身與財產剝奪之極端嚴厲性。必須符合<strong>比例原則</strong>，<strong>非到萬不得已絕不輕易動用刑罰</strong>。凡民事賠償或行政管制足以回復秩序者，刑法即退居幕後。
+                </p>
+                <div class="p-2 rounded-lg bg-white dark:bg-slate-900 text-[11px] text-amber-700 dark:text-amber-300 font-medium">
+                  💡 提前整理法律效果，在於時時提醒法律人「審思慎刑」之謙抑理念。
                 </div>
               </div>
+            </div>
+
+            <!-- 四大支柱體系總整圖 -->
+            <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-[#101623] space-y-3">
+              <div class="text-xs font-bold uppercase tracking-wider text-slate-500">刑法帝國四大支柱互相光影</div>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">
+                <div class="p-3 rounded-xl border border-indigo-200 dark:border-indigo-800 bg-white dark:bg-slate-900">
+                  <div class="font-bold text-indigo-600 dark:text-indigo-400 mb-0.5">1. 法益保護原則</div>
+                  <div class="text-[10px] text-slate-400">指明任務與方向</div>
+                </div>
+                <div class="p-3 rounded-xl border border-emerald-200 dark:border-emerald-800 bg-white dark:bg-slate-900">
+                  <div class="font-bold text-emerald-600 dark:text-emerald-400 mb-0.5">2. 罪刑法定原則</div>
+                  <div class="text-[10px] text-slate-400">程序與法治國防線</div>
+                </div>
+                <div class="p-3 rounded-xl border border-purple-200 dark:border-purple-800 bg-white dark:bg-slate-900">
+                  <div class="font-bold text-purple-600 dark:text-purple-400 mb-0.5">3. 罪責原則</div>
+                  <div class="text-[10px] text-slate-400">責任不可逾越上限</div>
+                </div>
+                <div class="p-3 rounded-xl border border-amber-200 dark:border-amber-800 bg-white dark:bg-slate-900">
+                  <div class="font-bold text-amber-600 dark:text-amber-400 mb-0.5">4. 最後手段原則</div>
+                  <div class="text-[10px] text-slate-400">謙抑性與比例節制</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 01. 法益保護原則與分則架構 -->
+          <section id="vol-0-legal-interest" class="scroll-mt-24 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">
+                第一節 法益保護原則：何謂法益與分則體系架構
+              </h3>
+              <span class="text-xs font-mono text-indigo-500">§ 1-1 ~ 1-3</span>
+            </div>
+
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              凡是以法律手段加以保護之重要生活利益，即為法益。法益源於社會倫理價值，<strong>先於法律規範而存在</strong>。通說採<strong>「法益二元論之單相異說」</strong>：超個人法益本質上是<strong>個人法益的集合體</strong>，保護公共安全即是同時保護個人生命，兩者保護方向完全一致！
+            </p>
+
+            <!-- 視覺化刑法分則體系圖 -->
+            <div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs space-y-3">
+              <div class="font-bold text-slate-900 dark:text-white text-xs flex items-center gap-1.5">
+                <span>🗺️ 刑法分則體系結構樹</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="p-3 rounded-xl border border-indigo-100 dark:border-indigo-900/50 bg-indigo-50/30 dark:bg-indigo-950/20 space-y-1.5">
+                  <div class="font-bold text-indigo-600 dark:text-indigo-400">👤 侵害個人法益（§ 271 以下）</div>
+                  <ul class="text-slate-600 dark:text-slate-400 space-y-1 text-[11px]">
+                    <li>• <strong>專屬性法益（人格法益）</strong>：生命、身體健康、人身自由、名譽信用、秘密隱私。</li>
+                    <li>• <strong>非專屬性法益（財產法益）</strong>：個別財產法益（竊盜、毀損）、整體財產法益（詐欺、背信）。</li>
+                  </ul>
+                </div>
+
+                <div class="p-3 rounded-xl border border-purple-100 dark:border-purple-900/50 bg-purple-50/30 dark:bg-purple-950/20 space-y-1.5">
+                  <div class="font-bold text-purple-600 dark:text-purple-400">🏛️ 侵害超個人法益（個人法益集合體）</div>
+                  <ul class="text-slate-600 dark:text-slate-400 space-y-1 text-[11px]">
+                    <li>• <strong>社會法益（§ 173 以下）</strong>：公共安全（放火、水利、交通）、公務職務公正性、公共信用、善良風俗。</li>
+                    <li>• <strong>國家法益（§ 100 以下）</strong>：存立安全（內亂外患）、國家公權力、權力作用、司法權（偽證誣告）。</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-[11px] text-slate-600 dark:text-slate-400">
+                ⭐ <strong>法益三大核心功能</strong>：① 分則犯罪要件設立之體系化基礎 ｜ ② 罪數競合之區分判準 ｜ ③ <strong>構成要件解釋之指導原則</strong>（解釋構成要件必須緊扣法益，絕不可本末倒置！）。
+              </div>
+            </div>
+
+            <!-- 案例 0-1 ~ 0-3 -->
+            <!-- 案例 1-1 ~ 1-3 (導論 0-1 ~ 0-3) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+              <!-- 案例 1-1 -->
+              <div id="case-0-1" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 space-y-2 flex flex-col justify-between">
+                <div class="space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-indigo-600 dark:text-indigo-400">案例 1-1【導論 0-1】</span>
+                    <span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">§ 277 [2026未更動]</span>
+                  </div>
+                  <div class="text-[11px] font-semibold text-slate-800 dark:text-slate-200">長髮剪除案（傷害罪保護法益）</div>
+                  <div class="text-[11px] text-slate-500">甲趁乙女熟睡剪掉其及腰長髮。</div>
+                  <p class="text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">
+                    <strong>爭點</strong>：剪除毛髮是否該當傷害罪？<br>
+                    • 生理機能說（早期實務）：毛髮無痛會再生，難認機能障礙。<br>
+                    • <strong>身體完整性說（通說）</strong>：外貌完整性乃身體法益一環，外觀物理破壞即成立 § 277 傷害罪！
+                  </p>
+                </div>
+                <div class="p-2 rounded-lg bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-200/60 dark:border-emerald-800/40 text-[10px] text-emerald-800 dark:text-emerald-300">
+                  ⚖️ <strong>有無更動備注</strong>：§ 277 I 於 108 年修正提高罰金刑至 10 萬元，<strong>2026 條文未更動</strong>；通說維持「身體完整性說」。
+                </div>
+              </div>
+
+              <!-- 案例 1-2 -->
+              <div id="case-0-2" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 space-y-2 flex flex-col justify-between">
+                <div class="space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-indigo-600 dark:text-indigo-400">案例 1-2【導論 0-2】</span>
+                    <span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">§ 320 [2026未更動]</span>
+                  </div>
+                  <div class="text-[11px] font-semibold text-slate-800 dark:text-slate-200">偷小偷皮夾案（竊盜罪保護法益）</div>
+                  <div class="text-[11px] text-slate-500">甲偷來皮夾沾沾自喜，轉身又被小偷乙偷走。</div>
+                  <p class="text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">
+                    <strong>爭點</strong>：竊盜罪保護所有權或事實持有？<br>
+                    • 所有權說（黃說）：甲無所有權，乙對甲不構成竊盜。<br>
+                    • <strong>所有權及持有說（通說）</strong>：為維護和平秩序防止私力掠奪，<strong>違法持有亦受刑法保護</strong>！乙對甲仍成立 § 320 竊盜罪。
+                  </p>
+                </div>
+                <div class="p-2 rounded-lg bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-200/60 dark:border-emerald-800/40 text-[10px] text-emerald-800 dark:text-emerald-300">
+                  ⚖️ <strong>有無更動備注</strong>：§ 320 於 108 年提高罰金至 50 萬元，<strong>2026 條文未更動</strong>；通說確立「非法持有兼受保護」。
+                </div>
+              </div>
+
+              <!-- 案例 1-3 -->
+              <div id="case-0-3" class="p-3.5 rounded-xl border border-rose-200 dark:border-rose-900/60 bg-rose-50/20 dark:bg-rose-950/20 space-y-2 flex flex-col justify-between">
+                <div class="space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-rose-600 dark:text-rose-400">案例 1-3【導論 0-3】</span>
+                    <span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300 border border-rose-300 dark:border-rose-800 font-semibold">§ 185-4 [⚠️110重大修法]</span>
+                  </div>
+                  <div class="text-[11px] font-semibold text-slate-800 dark:text-slate-200">肇逃罪三大說（致人死傷/肇事/逃逸）</div>
+                  <div class="text-[11px] text-slate-500">擦撞無傷亡、無過失被撞離去、叫救護車未留資料。</div>
+                  <p class="text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">
+                    • 生命身體說：遺棄罪特別規定。<br>
+                    • 公共安全說：防護事故後續公共危險。<br>
+                    • <strong>確認利益說（有力說）</strong>：參與事故者均負在場釐清責任義務。「致人死傷」屬限縮處罰之客管處罰條件。
+                  </p>
+                </div>
+                <div class="p-2 rounded-lg bg-rose-50/70 dark:bg-rose-950/40 border border-rose-200/60 dark:border-rose-800/40 text-[10px] text-rose-800 dark:text-rose-300 leading-tight">
+                  🚨 <strong>重大修法備注</strong>：釋字 777 號宣告違憲！<strong>110 年 5 月 28 日全面修法分流處罰</strong>：區分「無過失（1年以下/3年以下）」與「有過失（6月~5年/1~7年）」，並增設「情節輕微得減免」條款。2026 維持 110 新制！
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 02. 罪刑法定四大派生原則 -->
+          <section id="vol-0-legality" class="scroll-mt-24 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">
+                第二節 罪刑法定原則：付出代價的根據何在？
+              </h3>
+              <span class="text-xs font-mono text-emerald-500">釋字 384 ｜ 刑法 § 1</span>
+            </div>
+
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              刑法第 1 條規定：「行為之處罰，以行為時之法律有明文規定者為限。」司法院釋字第 384 號解釋理由書指出，此原則亦為<strong>最後手段性原則之具體展現</strong>，要求刑事處罰必須具備客觀預測可能性，由此派生四大子原則：
+            </p>
+
+            <!-- 四大原則 Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              
+              <!-- 習慣法禁止 -->
+              <div id="case-0-4" class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 space-y-2 flex flex-col justify-between">
+                <div class="space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-slate-900 dark:text-white text-xs">1. 習慣法禁止原則</span>
+                    <span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-300 dark:border-amber-800 font-semibold">§ 19 III [2026未更動/憲判限縮]</span>
+                  </div>
+                  <div class="font-semibold text-indigo-600 dark:text-indigo-400 text-[11px]">案例 1-4【導論 0-4】：原因自由行為成文化案</div>
+                  <p class="text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">
+                    處罰必須以立法院通過之成文「法律」為限，嚴禁以習慣法理或社會造法入罪。<br>
+                    👉 早期以習慣法理處罰泥醉犯罪人確屬違法，立法院遂於民國 94 年正式增訂 <strong>§ 19 III</strong> 補正罪刑法定。
+                  </p>
+                </div>
+                <div class="p-2 rounded-lg bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/50 dark:border-amber-800/40 text-[10px] text-amber-800 dark:text-amber-300">
+                  ⚖️ <strong>有無更動備注</strong>：§ 19 III 條文文字 2026 未更動；但受 <strong>113 年憲判字第 8 號判決</strong> 拘束（精神障礙者一律排除死刑，但故意自陷原因自由行為者得否排除為當前熱點）。
+                </div>
+              </div>
+
+              <!-- 類推適用禁止 -->
+              <div id="case-0-5" class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 space-y-2 flex flex-col justify-between">
+                <div class="space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-slate-900 dark:text-white text-xs">2. 類推適用禁止原則</span>
+                    <span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">§ 323 [2026未更動]</span>
+                  </div>
+                  <div class="font-semibold text-indigo-600 dark:text-indigo-400 text-[11px]">案例 1-5【導論 0-5】：偷電能與偷接第四台案</div>
+                  <p class="text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">
+                    構成要件解釋嚴格限於「日常生活的可能文義範圍內」，嚴禁法官造法。<br>
+                    👉 電能非動產，由 <strong>§ 323</strong> 明文「以動產論」擬制；但<strong>私接第四台影音訊號（電磁波）</strong>超出動產與能量文義，基於類推禁止，<strong>不構成竊盜罪</strong>（臺灣高等法院 97 上易 648）。
+                  </p>
+                </div>
+                <div class="p-2 rounded-lg bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/50 dark:border-emerald-800/40 text-[10px] text-emerald-800 dark:text-emerald-300">
+                  ⚖️ <strong>有無更動備注</strong>：§ 323 制定迄今文字未變；偷接第四台訊號不成立竊盜罪之判準在 2026 年維持穩定（另依《有線廣播電視法》特別法制裁）。
+                </div>
+              </div>
+
+              <!-- 罪刑明確性 -->
+              <div id="case-0-6" class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 space-y-2 flex flex-col justify-between">
+                <div class="space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-slate-900 dark:text-white text-xs">3. 罪刑明確性原則</span>
+                    <span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">相對法定刑 [2026未更動]</span>
+                  </div>
+                  <div class="font-semibold text-indigo-600 dark:text-indigo-400 text-[11px]">案例 1-6【導論 0-6】：絕對不定期刑 vs 相對不定期刑案</div>
+                  <p class="text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">
+                    罪之要件與刑之效果皆須明確可預見。<br>
+                    👉 「過失致死者必須加以處罰」（未定刑期任由監所或法官心證）屬<strong>絕對不定期刑，違憲無效</strong>；而「處五年以下有期徒刑」定有法定範圍，屬<strong>相對不定期刑，合憲有效</strong>。
+                  </p>
+                </div>
+                <div class="p-2 rounded-lg bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/50 dark:border-emerald-800/40 text-[10px] text-emerald-800 dark:text-emerald-300">
+                  ⚖️ <strong>有無更動備注</strong>：我國刑法全面揚棄絕對不定期刑，均採相對法定刑或絕對確定刑（死刑/無期徒刑），2026 年維持未變。
+                </div>
+              </div>
+
+              <!-- 法不溯及既往 -->
+              <div id="case-0-7" class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 space-y-2 flex flex-col justify-between">
+                <div class="space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-slate-900 dark:text-white text-xs">4. 法不溯及既往原則</span>
+                    <span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">§ 1 [2026未更動]</span>
+                  </div>
+                  <div class="font-semibold text-indigo-600 dark:text-indigo-400 text-[11px]">案例 1-7【導論 0-7】：小三條款溯及既往案</div>
+                  <p class="text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">
+                    處罰必須在行為當時即已有法律規定，不得事後立法溯及突襲人民信賴。<br>
+                    👉 立法院若立法處罰非單身者性交並明訂溯及三年，縱有正當立法目的，依然因破壞法安定性而<strong>違憲無效</strong>！
+                  </p>
+                </div>
+                <div class="p-2 rounded-lg bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/50 dark:border-emerald-800/40 text-[10px] text-emerald-800 dark:text-emerald-300">
+                  ⚖️ <strong>有無更動備注</strong>：刑法 § 1 迄今未更動；另刑法通姦罪已於釋字 791 號宣告違憲除罪化，2026 年維持除罪化現狀。
+                </div>
+              </div>
+
+            </div>
+
+            <!-- 公法憲法深度對照 Callout -->
+            <div class="p-3.5 rounded-xl bg-indigo-50/40 dark:bg-indigo-950/20 border border-indigo-200/80 dark:border-indigo-900/60 text-[11px] text-slate-700 dark:text-slate-300 space-y-1.5">
+              <div class="font-bold text-indigo-700 dark:text-indigo-300 flex items-center gap-1.5">
+                <span>🏛️ 【作者叮嚀】公法（憲法法治國）視角深度對照：</span>
+              </div>
+              <ul class="space-y-1 text-[11px] text-slate-600 dark:text-slate-400">
+                <li>• <strong>依法行政「法律保留原則」</strong>（重要性理論 ➔ 功能最適理論 ➔ <strong>層級化法律保留體系</strong>）：刑法涉及生命與身體自由極端干預，居於<strong>「絕對法律保留（國會保留）」</strong>，嚴格禁止習慣法（社會造法）與類推適用（法官造法）！</li>
+                <li>• <strong>法治國「法律明確性原則」</strong> ➔ 對應<strong>罪刑明確性原則</strong>（構成要件與法律效果兩者皆須明確）。</li>
+                <li>• <strong>法治國「法安定性與信賴保護原則」</strong> ➔ 對應<strong>法不溯及既往原則</strong>（以人民行為時可得預見為限，杜絕突襲）。</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 03. 罪責原則與罪刑相當 -->
+          <section id="vol-0-culpability-principle" class="scroll-mt-24 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">
+                第三節 罪責原則：付出代價的極限何在？
+              </h3>
+              <span class="text-xs font-mono text-purple-500">釋字 630 ｜ 113憲判9</span>
+            </div>
+
+            <div class="p-4 rounded-xl border border-purple-200 dark:border-purple-800 bg-white dark:bg-slate-900/60 space-y-3 text-xs">
+              <div class="font-bold text-slate-900 dark:text-white flex items-center justify-between">
+                <span>⚖️ 罪刑相當原則（釋字第 630 號解釋理由書揭櫫，最後手段性之體現）</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">比例原則</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11px]">
+                刑罰乃對行為人個人罪責之非難。無罪責即無刑罰，且<strong>刑罰必須與其罪責相當（小罪不得大罰）</strong>，個案中施加之刑罰絕不得超出罪責範圍，始符憲法第 23 條比例原則。
+              </p>
+
+              <!-- 案例 1-8 -->
+              <div id="case-0-8" class="p-3 rounded-lg bg-purple-50/40 dark:bg-purple-950/30 border border-purple-200/60 dark:border-purple-800/40 space-y-1.5">
+                <div class="flex items-center justify-between">
+                  <div class="font-bold text-purple-700 dark:text-purple-300 text-xs">案例 1-8【導論 0-8】：準強盜罪（§ 329）強暴脅迫之門檻</div>
+                  <span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-800 font-semibold">§ 329 [2026未更動/113憲判9合憲]</span>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">
+                  竊賊甲行竊失風僅輕推被害人一下即逃逸。準強盜罪法定刑高達 5 年以上，釋字 630 號宣告：準強盜罪之強暴脅迫必須達於<strong>「使人難以抗拒之程度」</strong>者始能成罪，甲輕推未達該門檻，僅成立竊盜罪，始符罪刑相當原則！
+                </p>
+                <div class="p-2 rounded bg-purple-100/50 dark:bg-purple-900/30 text-[10px] text-purple-800 dark:text-purple-300">
+                  ⚖️ <strong>最新憲政裁判更新</strong>：**憲法法庭 113 年憲判字第 9 號判決**（2024 年）再度審查，確認刑法第 329 條在釋字 630 號限縮解釋下<strong>「合憲」</strong>！2026 年條文文字未變。
+                </div>
+              </div>
+
+              <!-- 解題提示：有利人民之類推 -->
+              <div class="p-3 rounded-lg bg-emerald-50/40 dark:bg-emerald-950/20 border border-emerald-200/60 dark:border-emerald-800/40 text-[11px] text-slate-700 dark:text-slate-300 space-y-1">
+                <div class="font-bold text-emerald-800 dark:text-emerald-300">⭐ 【解題提示】節制刑罰發動 vs 有利人民之容許性天平：</div>
+                <p class="leading-relaxed">
+                  罪刑法定與罪責原則是防範國家過度侵犯人權。倘若在個案中對人民（被告）有利，國家節制的阻礙便不存在！因此刑法<strong>「絕對禁止不利於人民之類推與溯及」</strong>，但<strong>「完全容許有利於人民的類推、溯及與援用」</strong>（如超法定阻卻事由、有利法律溯及適用）！
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 04. 刑法操作原理：時之效力與繼續犯 -->
+          <section id="vol-0-temp-validity" class="scroll-mt-24 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">
+                第二章 刑法的操作原理：適用效力與從舊從輕原則
+              </h3>
+              <span class="text-xs font-mono text-emerald-500">刑法 § 2 ｜ 案例 2-1</span>
+            </div>
+
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 space-y-3 text-xs">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="p-3 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+                  <div class="font-bold text-slate-900 dark:text-white mb-1">刑法 § 2 I 本文：原則從舊 [2026未更動]</div>
+                  <div class="text-[11px] text-slate-500">「行為後法律有變更者，適用行為時之法律。」貫徹法不溯及既往原則。</div>
+                </div>
+                <div class="p-3 rounded-lg border border-emerald-200 dark:border-emerald-800 bg-emerald-50/30 dark:bg-emerald-950/20">
+                  <div class="font-bold text-emerald-600 dark:text-emerald-400 mb-1">刑法 § 2 I 但書：例外從輕 [2026未更動]</div>
+                  <div class="text-[11px] text-slate-500">「但行為後之法律有利於行為人者，適用最有利於行為人之法律。」有利人民之溯及容許。</div>
+                </div>
+              </div>
+
+              <!-- 案例 2-1 (導論 0-9) -->
+              <div id="case-0-9" class="p-3.5 rounded-xl border border-purple-500/40 bg-purple-50/20 dark:bg-purple-950/20 space-y-2">
+                <div class="flex items-center justify-between font-bold text-purple-600 dark:text-purple-400 text-xs">
+                  <span>案例 2-1【導論 0-9】：私行拘禁跨越新舊法加重案（繼續犯之適用效力）</span>
+                  <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">§ 302/§ 302-1 [⚠️112重大增訂]</span>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">
+                  <strong>案情</strong>：甲拘禁乙一個半月，拘禁期間立法院修法將 § 302 私行拘禁罪法定刑自 5 年提高為 10 年，新法施行後警方攻堅救出乙。法院依新法判 9 年，甲抗辯違法溯及既往。<br>
+                  👉 <strong>精析結論</strong>：私行拘禁為<strong>「繼續犯」</strong>，其犯罪持續進行至破案時方告終止。法院適用犯罪終了時之現行法，<strong>本質即為適用行為時法，根本不生溯及既往之問題</strong>！甲抗辯無理由！
+                </p>
+                <div class="p-2 rounded-lg bg-purple-100/60 dark:bg-purple-900/30 border border-purple-200/60 dark:border-purple-800/40 text-[10px] text-purple-800 dark:text-purple-300">
+                  🚨 <strong>重大修法備注</strong>：§ 2 從舊從輕維持現行；§ 302 於 108 年提高罰金；立法院更於 <strong>民國 112 年 5 月 31 日增訂公布 § 302-1「加重剝奪行動自由罪」</strong>（拘禁 7 日以上、3 人以上、施以凌虐者處 1~7 年；致死處無期或 10 年以上），2026 年維持施行！
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- ==================== SECTION: 第一章 犯罪的概念 ==================== -->
+        <section id="overview" class="scroll-mt-24 space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed">
+          <div class="flex items-center gap-2 text-indigo-500 font-mono text-xs font-bold uppercase tracking-wider">
+            <span>VOLUME 1</span>
+            <span>•</span>
+            <span>CHAPTER 1</span>
+          </div>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
+            第一章 犯罪的概念：壞人做壞事與先事後人
+          </h2>
+          <p>
+            刑法處理犯罪，直觀拆解就是：<strong>一個「壞人（罪責）」做了「一件壞事（不法）」</strong>。
+          </p>
+          <div class="p-4 rounded-xl border border-indigo-200 dark:border-indigo-900/60 bg-indigo-50/40 dark:bg-indigo-950/20 font-medium text-indigo-950 dark:text-indigo-200 text-sm">
+            ⚖️ <strong>先事後人的法律智慧：</strong><br>
+            評價「人」極難（涉及精神狀態、內心動機、人格特質）；評價「事」極易（流血損害一目了然）。因此審查必為：
+            <div class="mt-2 font-mono text-xs text-indigo-600 dark:text-indigo-400 font-bold">
+              先查「這是否為一件壞事？（不法）」 ➔ 再查「做壞事的人是否為壞人？（罪責）」
             </div>
           </div>
         </section>
 
-        <!-- Section: Interactive Simulator (Note 3 Column 獨家亮點) -->
-        <section id="simulator" class="scroll-mt-24 my-10">
+        <!-- ==================== SECTION: 雙重推定互動模擬器 ==================== -->
+        <section id="simulator" class="scroll-mt-24">
           <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
-            ⚡ 三階層論罪與推定反證互動模擬器
+            ⚡ 三階層雙重推定與反證互動模擬器
           </h2>
           <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
-            點擊下方論罪階段，動態觀察「行為評價（不法）」與「行為人評價（罪責）」的推定路徑與反證推翻邏輯：
+            點擊下方按鈕，一步步體驗「行為評價（不法）」到「行為人評價（罪責）」的推定連鎖與反證推翻邏輯：
           </p>
 
-          <!-- Interactive Stepper Component -->
-          <div class="my-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#101623]/80 p-5 sm:p-6 shadow-xl">
-            
+          <div class="my-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-[#101623] p-5 sm:p-6 shadow-xl">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-slate-200 dark:border-slate-800/80">
               <div>
-                <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">審查階層 Step-by-Step</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">Step-by-Step 階層推演</span>
                 <h3 id="simTitle" class="text-lg font-bold text-slate-900 dark:text-white mt-1">階段 1：直觀犯罪定義（壞人做壞事）</h3>
               </div>
               <div class="bg-indigo-50 dark:bg-indigo-950/80 border border-indigo-200 dark:border-indigo-800/60 px-3.5 py-1.5 rounded-full self-start sm:self-auto text-xs font-semibold text-indigo-700 dark:text-indigo-300">
@@ -303,31 +692,31 @@
               </button>
             </div>
 
-            <!-- Dynamic Interactive Canvas -->
-            <div class="relative my-4 rounded-xl border border-slate-200 dark:border-slate-800/80 bg-slate-950 p-6 overflow-hidden">
-              <div class="relative z-10 flex flex-col gap-6">
+            <!-- Visual Canvas -->
+            <div class="relative my-4 rounded-xl border border-slate-200 dark:border-slate-800/80 bg-slate-950 p-5 overflow-hidden">
+              <div class="relative z-10 flex flex-col gap-5">
                 
-                <!-- Row 1: 行為評價 (不法) -->
+                <!-- Tier 1 -->
                 <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/90 transition-all">
                   <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 flex items-center justify-between">
                     <span>第一階層：行為評價（是否為「壞事」＝ 不法）</span>
                     <span id="tier1Badge" class="text-[10px] px-2 py-0.5 rounded bg-indigo-950 text-indigo-300 font-mono">審查中</span>
                   </div>
 
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div id="nodeTB" class="p-3.5 rounded-lg border border-slate-800 bg-slate-950/80">
                       <div class="font-bold text-xs text-indigo-400 mb-1">1. 構成要件該當性 (形式不法)</div>
-                      <div class="text-[11px] text-slate-400">做出讓人不舒服的舉動（侵害生命、身體、財產等重要生活利益）➔ 符合刑法分則罪名描述。</div>
+                      <div class="text-[11px] text-slate-400">客觀要件＋主觀要件。侵害法益之典型行為，符合條文描述即該當。</div>
                     </div>
 
                     <div id="nodeRW" class="p-3.5 rounded-lg border border-slate-800 bg-slate-950/80">
                       <div class="font-bold text-xs text-amber-400 mb-1">2. 違法性 (實質不法)</div>
-                      <div class="text-[11px] text-slate-400">由構成要件<strong>推定</strong>無正當理由。反證事由：<strong>阻卻違法事由</strong>（§21法令、§22業務、§23防衛、§24避難、利益衡量）。</div>
+                      <div class="text-[11px] text-slate-400">由 TB <strong>推定無正當理由</strong>。反證：法定（§21~24）與超法定阻卻事由。</div>
                     </div>
                   </div>
                 </div>
 
-                <!-- Downward Arrow: 推定 -->
+                <!-- Presumption Connector -->
                 <div class="flex justify-center items-center text-indigo-400 text-xs gap-2">
                   <span class="h-4 w-px bg-indigo-500/50"></span>
                   <span id="presumptionPill" class="font-mono text-[10px] bg-slate-900 px-3 py-0.5 rounded border border-indigo-500/30">
@@ -336,7 +725,7 @@
                   <span class="h-4 w-px bg-indigo-500/50"></span>
                 </div>
 
-                <!-- Row 2: 行為人評價 (罪責) -->
+                <!-- Tier 2 -->
                 <div id="tier2Container" class="p-4 rounded-xl border border-slate-800 bg-slate-900/90 transition-all">
                   <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 flex items-center justify-between">
                     <span>第二階層：行為人評價（是否為「壞人」＝ 罪責）</span>
@@ -344,15 +733,15 @@
                   </div>
 
                   <div id="nodeCul" class="p-3.5 rounded-lg border border-slate-800 bg-slate-950/80">
-                    <div class="font-bold text-xs text-purple-400 mb-1">3. 罪責審查 (個人非難可能性)</div>
-                    <div class="text-[11px] text-slate-400">行為人能否被期待不做壞事？反證事由：<strong>阻卻罪責事由</strong>（§16不法意識、§18年齡、§19精神、§20生理、§23但防衛過當、期待可能性）。</div>
+                    <div class="font-bold text-xs text-purple-400 mb-1">3. 罪責審查 (個人可非難性)</div>
+                    <div class="text-[11px] text-slate-400">能否期待行為人遵守法規範？反證：不法意識(§16)、責任能力(§18~20)、過當寬恕(§23但)、期待不可能。</div>
                   </div>
                 </div>
 
               </div>
             </div>
 
-            <!-- Dynamic Explanations -->
+            <!-- Explanations -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 pt-4 border-t border-slate-200 dark:border-slate-800 text-xs">
               <div>
                 <h4 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-1 text-indigo-500">
@@ -368,7 +757,7 @@
                   ● 反證抗辯機制
                 </h4>
                 <p id="simDefense" class="text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-                  做壞事推定為壞人，但法律設有「阻卻事由」為被告保留平反與不罰之機會。
+                  做壞事先推定為壞人，但法律設有「阻卻事由」為行為人保留平反不罰之機會。
                 </p>
               </div>
             </div>
@@ -376,222 +765,816 @@
           </div>
         </section>
 
-        <!-- Section: 不法推定罪責 -->
-        <section id="culpability" class="scroll-mt-24 space-y-4 my-10">
+        <!-- ==================== SECTION: 罪責階層 ==================== -->
+        <section id="culpability" class="scroll-mt-24 space-y-4">
           <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
-            不法推定罪責原則（壞事推定壞人）
+            罪責階層：不法推定罪責與阻卻事由 (案例 1-1 ～ 1-6)
           </h2>
-          <p class="text-sm leading-relaxed">
-            當行為人做了一件壞事而被推定為壞人時，法律賦予反證推翻的機會。立法者很貼心地在刑法中例示了多種<strong>阻卻罪責事由</strong>：
+          <p class="text-sm text-slate-600 dark:text-slate-400">
+            確立為壞事後，法律推定行為人為壞人。但若具備下列法條或超法定情事，即可推翻罪責推定：
           </p>
 
-          <!-- 案例 1-1 ~ 1-6 卡片 -->
-          <div class="space-y-4 my-6">
-            
-            <!-- 案例 1-1 -->
-            <div id="case-1-1" class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40">
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 font-mono">案例 1-1 • 欠缺不法意識</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300 font-mono">§ 16</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div id="case-1-1" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-bold text-indigo-600 dark:text-indigo-400">案例 1-1: 欠缺不法意識</span>
+                <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300">§ 16 [2026未更動]</span>
               </div>
-              <div class="text-xs bg-white dark:bg-slate-950/80 p-3 rounded-lg border border-slate-200 dark:border-slate-850 mb-2.5 text-slate-700 dark:text-slate-300">
-                🗣️ <strong>被告：</strong>「這是一件壞事嗎？怎麼會？我以為這是 ok 的耶，對不起啦！」
-              </div>
-              <div class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                👉 <strong>問題導引：</strong>主張「欠缺不法意識」之抗辯（§ 16）。行為人不知道法律對其行為有所禁止，<strong>雖做壞事，但非出於惡意壞人</strong>。按情節不可避免者免除其刑，可避免者得減輕其刑。
-              </div>
+              <p class="text-slate-600 dark:text-slate-400">外籍旅客誤攜母國合法草藥入境。不知法律禁止，情節不可避免者免除其刑，可避免者減輕。</p>
             </div>
 
-            <!-- 案例 1-2 -->
-            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40">
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 font-mono">案例 1-2 • 責任能力：年齡</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300 font-mono">§ 18</span>
+            <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-bold text-indigo-600 dark:text-indigo-400">案例 1-2: 責任年齡</span>
+                <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300">§ 18 [2026未更動]</span>
               </div>
-              <div class="text-xs bg-white dark:bg-slate-950/80 p-3 rounded-lg border border-slate-200 dark:border-slate-850 mb-2.5 text-slate-700 dark:text-slate-300">
-                🗣️ <strong>被告：</strong>「雖然我做了一件壞事，但那是因為我年紀小不懂事，原諒我好不好？」
-              </div>
-              <div class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                👉 <strong>問題導引：</strong>主張「欠缺責任能力：年齡」抗辯（§ 18）。未滿 14 歲不罰（排除罪責）；14 歲以上未滿 18 歲或滿 80 歲者得減輕其刑。
-              </div>
+              <p class="text-slate-600 dark:text-slate-400">12 歲孩童偷竊遊戲卡。未滿 14 歲法律擬制無責任能力，不罰；14~18 或滿 80 歲得減輕。</p>
             </div>
 
-            <!-- 案例 1-3 -->
-            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40">
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 font-mono">案例 1-3 • 責任能力：精神障礙</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300 font-mono">§ 19</span>
+            <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-bold text-indigo-600 dark:text-indigo-400">案例 1-3: 精神障礙</span>
+                <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300">§ 19 [2026未更動/排除死刑]</span>
               </div>
-              <div class="text-xs bg-white dark:bg-slate-950/80 p-3 rounded-lg border border-slate-200 dark:border-slate-850 mb-2.5 text-slate-700 dark:text-slate-300">
-                🗣️ <strong>被告：</strong>「吾乃降世羅漢，擊殺沉世惡人乃替天行道！」<br>
-                ⚖️ <strong>律師：</strong>「我的當事人病得不輕，他根本不知道自己在幹嘛。」
-              </div>
-              <div class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                👉 <strong>問題導引：</strong>主張「欠缺責任能力：精神」抗辯（§ 19）。行為人因精神障礙致不能辨識其行為違法（辨識能力），或欠缺依其辨識而行為之能力（控制能力），不罰；顯著減低者得減輕。
-              </div>
+              <p class="text-slate-600 dark:text-slate-400">思覺失調發病打人替天行道。因精神障礙不能辨識違法或欠缺控制能力者，不罰。（依113憲判8，心智缺陷者絕對排除死刑）。</p>
             </div>
 
-            <!-- 案例 1-4 -->
-            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40">
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 font-mono">案例 1-4 • 責任能力：生理瘖啞</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300 font-mono">§ 20</span>
+            <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-bold text-indigo-600 dark:text-indigo-400">案例 1-4: 生理瘖啞</span>
+                <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300">§ 20 [2026未更動]</span>
               </div>
-              <div class="text-xs bg-white dark:bg-slate-950/80 p-3 rounded-lg border border-slate-200 dark:border-slate-850 mb-2.5 text-slate-700 dark:text-slate-300">
-                🗣️ <strong>被告：</strong>……（比手畫腳）。律師：「當事人既聾且啞，智識較差，情有可原。」
-              </div>
-              <div class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                👉 <strong>問題導引：</strong>主張「欠缺責任能力：生理」抗辯（§ 20）。瘖啞人生理學習障礙，法律規定得減輕其刑。
-              </div>
+              <p class="text-slate-600 dark:text-slate-400">天生又聾又啞溝通受阻拉扯傷人。生理學習機能障礙，法律明定得減輕其刑。</p>
             </div>
 
-            <!-- 案例 1-5 -->
-            <div id="case-1-5" class="p-4 rounded-xl border border-amber-500/30 dark:border-amber-500/20 bg-amber-50/30 dark:bg-amber-950/20">
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-bold text-amber-600 dark:text-amber-400 font-mono">案例 1-5 • 寬恕罪責事由：防衛/避難過當</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-mono">§ 23但、§ 24但</span>
+            <div id="case-1-5" class="p-3.5 rounded-xl border border-amber-500/40 bg-amber-50/30 dark:bg-amber-950/20 sm:col-span-2">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-bold text-amber-600 dark:text-amber-400">案例 1-5: 防衛過當與避難過當（寬恕罪責事由）</span>
+                <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300">§ 23但、§ 24但 [2026未更動]</span>
               </div>
-              <div class="text-xs bg-white dark:bg-slate-950/80 p-3 rounded-lg border border-slate-200 dark:border-slate-850 mb-2.5 text-slate-700 dark:text-slate-300">
-                🗣️ <strong>被告：</strong>「是對方先追著我打，情急之下我用手擋甩了他應該不為過吧！」
-              </div>
-              <div class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                👉 <strong>問題導引：</strong>面臨緊急情況，常人本難以精確掌控反擊力道。雖行為過當（仍具不法），但法律基於人性寬恕其過激，<strong>得減輕或免除其刑</strong>。
-              </div>
+              <p class="text-slate-600 dark:text-slate-400">臨危恐慌失手打重傷搶匪。手段雖超越比例原則（不法依然成立），但法律基於人性寬恕過激，得減輕或免除其刑。</p>
             </div>
 
-            <!-- 案例 1-6 -->
-            <div id="case-1-6" class="p-4 rounded-xl border border-purple-500/30 dark:border-purple-500/20 bg-purple-50/30 dark:bg-purple-950/20">
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-bold text-purple-600 dark:text-purple-400 font-mono">案例 1-6 • 超法定阻卻罪責：期待可能性</span>
-                <span class="text-[10px] px-2 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-400 font-mono">超法定核心</span>
+            <div id="case-1-6" class="p-3.5 rounded-xl border border-purple-500/40 bg-purple-50/30 dark:bg-purple-950/20 sm:col-span-2">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-bold text-purple-600 dark:text-purple-400">案例 1-6: 幼兒墜床燙衣火災案（期待可能性理論）</span>
+                <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-400">超法定核心</span>
               </div>
-              <div class="text-xs bg-white dark:bg-slate-950/80 p-3 rounded-lg border border-slate-200 dark:border-slate-850 mb-2.5 text-slate-700 dark:text-slate-300">
-                🗣️ <strong>被告：</strong>「我當時在燙衣服，幼兒突然從床跌落血流不止，我太慌亂了急忙送醫，才忘了拔插頭釀成火災！」
-              </div>
-              <div class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                👉 <strong>問題導引：</strong>主張「無期待可能性」。父母面對骨肉命危時必然慌亂，社會客觀上無法期待其臨危保持冷靜拔掉插頭，<strong>阻卻罪責，不成立犯罪</strong>。
-              </div>
+              <p class="text-slate-600 dark:text-slate-400">母親見嬰墜床頭破血流急奔急診，忘了拔熨斗引發失火。法律客觀上「無法期待」一介常人在至親命危時冷靜拔插頭，阻卻罪責，不罰。</p>
             </div>
-
           </div>
         </section>
 
-        <!-- Section: 壞事與構成要件該當推定違法性 -->
-        <section id="wrongfulness" class="scroll-mt-24 space-y-4 my-10">
+        <!-- ==================== SECTION: 構成要件與違法性 ==================== -->
+        <section id="wrongfulness" class="scroll-mt-24 space-y-4">
           <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
-            壞事如何判斷？構成要件該當推定違法性
+            構成要件與違法性：法定阻卻事由與極限 (案例 1-7 ～ 1-15)
           </h2>
-          <p class="text-sm leading-relaxed">
-            所謂「壞事（不法）」，就是<strong>無緣無故做出令人覺得不舒服的行為</strong>。它由兩個直觀指標構成：
-          </p>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40">
-              <div class="text-xs font-bold text-indigo-500 uppercase tracking-wide mb-1">指標一（形式不法）</div>
-              <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">法益侵害（不舒服的行為）</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                被打一巴掌，臉腫是第一感受（身體法益侵害）。立法者將公認的侵害行為寫入分則（殺人罪、傷害罪、竊盜罪），符合條文特徵即為<strong>「構成要件該當」</strong>。
-              </p>
-            </div>
-
-            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40">
-              <div class="text-xs font-bold text-amber-500 uppercase tracking-wide mb-1">指標二（實質不法）</div>
-              <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">無正當理由（無緣無故）</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                接踵而來的疑惑與氣憤：「憑什麼打我？」。確認法益侵害後，直接<strong>推定該行為無正當理由（具違法性）</strong>，除非能提出「阻卻違法事由」。
-              </p>
-            </div>
-          </div>
-
-          <!-- 法定阻卻違法事由 案例 1-7 ~ 1-11 -->
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-8 mb-4">
-            法定阻卻違法事由（案例 1-7 ～ 1-11）
-          </h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-            
             <div id="case-1-7" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
               <div class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">§ 21 I 依法令之行為（案例 1-7）</div>
-              <p class="text-slate-600 dark:text-slate-400">依《優生保健法》§9 合法人工流產，法規範允許，非壞事。</p>
+              <p class="text-slate-600 dark:text-slate-400">依優生保健法§9人工流產，法秩序所容許，阻卻違法。（注意：生育保健法草案擬廢除配偶同意權，目前立院審議中）。</p>
             </div>
-
             <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
               <div class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">§ 21 II 依上級合法命令（案例 1-8）</div>
-              <p class="text-slate-600 dark:text-slate-400">員警奉合法搜索票破門搜查，受合法公權力命令保護。</p>
+              <p class="text-slate-600 dark:text-slate-400">員警持合法搜索票破門搜查，受合法公權力保護，阻卻違法。</p>
             </div>
-
             <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
               <div class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">§ 22 業務上正當行為（案例 1-9）</div>
-              <p class="text-slate-600 dark:text-slate-400">醫師為病患進行結紮或外科手術，屬社會分工正當醫療。</p>
+              <p class="text-slate-600 dark:text-slate-400">醫師動刀切盲腸，屬正當醫療分工，阻卻違法。</p>
             </div>
-
             <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
               <div class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">§ 23 正當防衛（案例 1-10）</div>
-              <p class="text-slate-600 dark:text-slate-400">遭人圍毆自衛反擊打傷對方。「正者毋須向不正者低頭」。</p>
+              <p class="text-slate-600 dark:text-slate-400">遇刀匪搶劫以傘擊傷制伏。「正者毋須向不正者妥協」。</p>
             </div>
-
             <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 sm:col-span-2">
               <div class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">§ 24 緊急避難（案例 1-11）</div>
-              <p class="text-slate-600 dark:text-slate-400">遭瘋狂野狗追逐無路可逃，破門躲入民宅。基於「社會連帶性」容許危難轉嫁。</p>
+              <p class="text-slate-600 dark:text-slate-400">遭瘋狗追咬撞壞鄰宅門躲入。社會連帶性容許轉嫁輕微財產法益以保全重大生命法益。</p>
             </div>
-
+            <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 sm:col-span-2">
+              <div class="font-bold text-slate-800 dark:text-slate-200 mb-1">超法定阻卻違法：被害人承諾 (1-12) & 義務衝突 (1-13)</div>
+              <p class="text-slate-600 dark:text-slate-400">黑白猜遊戲簽字打巴掌（處分權限內承諾）；火海二子僅能救一人（竭盡所能履行同等義務），均阻卻違法。</p>
+            </div>
+            <div id="case-1-14" class="p-3.5 rounded-xl border border-rose-500/40 bg-rose-50/40 dark:bg-rose-950/20 sm:col-span-2">
+              <div class="font-bold text-rose-600 dark:text-rose-400 mb-1">🍒 案例 1-14 【櫻桃案】—— 利益衡量懸殊（權利濫用）</div>
+              <p class="text-slate-600 dark:text-slate-400">果園主人為保護 5 元櫻桃開槍打死小學生。防衛手段違反利益衡量底線，構成權利濫用，<strong>無法阻卻違法！成立殺人罪！</strong></p>
+            </div>
+            <div id="case-1-15" class="p-3.5 rounded-xl border border-rose-500/40 bg-rose-50/40 dark:bg-rose-950/20 sm:col-span-2">
+              <div class="font-bold text-rose-600 dark:text-rose-400 mb-1">🩸 案例 1-15 【輸血案】—— 手段不正（人性尊嚴底線）</div>
+              <p class="text-slate-600 dark:text-slate-400">醫師強抽無辜義工丙血液救甲。救人目的雖良善，但將人工具化物化，違反憲法第一條人性尊嚴核心，<strong>無法阻卻違法！成立犯罪！</strong></p>
+            </div>
           </div>
+        </section>
 
-          <!-- 超法定阻卻違法 案例 1-12 ~ 1-15 -->
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-8 mb-4">
-            超法定阻卻違法與違法性之極限（案例 1-12 ～ 1-15）
-          </h3>
-          <p class="text-xs text-slate-500 mb-4">
-            通說核心：<strong>「是否合於利益衡量？」</strong>。若犧牲利益大於保全利益，或為達目的不擇手段，即肯定違法性。
+        <!-- ==================== SECTION: 目的犯罪體系與雙重該當 ==================== -->
+        <section id="dual-requirement" class="scroll-mt-24 space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
+            目的犯罪體系與「客、主觀雙重該當」原則
+          </h2>
+          <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            早期學說認為不法是外在壞事（純客觀），罪責是內在壞人（純主觀）。然而現今學說受<strong>目的行為理論</strong>影響，認為目的乃評價不法之核心，因此<strong>不法不是純客觀的，而是客、主觀的綜合評價</strong>！
           </p>
 
+          <div class="p-4 rounded-xl border border-indigo-200 dark:border-indigo-800/60 bg-indigo-50/40 dark:bg-indigo-950/20 text-xs text-slate-700 dark:text-slate-300 space-y-2">
+            <div class="font-bold text-indigo-900 dark:text-indigo-200 text-sm">
+              📌 推翻違法性推定的鐵律：客觀要件 ＋ 主觀要件 必須「均該當」！
+            </div>
+            <p>
+              構成要件該當後，要想推翻違法性推定，阻卻違法事由之<strong>「客觀要件」</strong>（如防衛情狀、避難情狀）與<strong>「主觀要件」</strong>（如防衛意思、避難意思）必須兩者同時具備。欠缺任一要件，推定效力持續維持，不生阻卻違法效力！
+            </p>
+          </div>
+
+          <!-- 案例 1-16 & 1-17 -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div id="case-1-16" class="p-4 rounded-xl border border-amber-500/40 bg-amber-50/30 dark:bg-amber-950/20">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-amber-600 dark:text-amber-400 text-sm">案例 1-16: 凶神惡煞問路挨打案</span>
+                <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300">誤想防衛</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-2">
+                甲見乙長相凶惡，誤以為乙上前問路是要攻擊自己，遂先發制人將乙打成輕傷。
+              </p>
+              <div class="p-2.5 rounded-lg bg-white dark:bg-slate-900 border border-amber-200 dark:border-amber-900/60 text-slate-700 dark:text-slate-300">
+                ⚖️ <strong>問題導引：</strong>甲傷害罪該當（§277）。違法性審查中，甲主觀上有防衛意思，但<strong>客觀上根本不存在防衛情狀（乙只是在問路）</strong>！欠缺客觀要件，<strong>不生推翻違法效力，必須繼續進入罪責審查</strong>。
+              </div>
+            </div>
+
+            <div id="case-1-17" class="p-4 rounded-xl border border-purple-500/40 bg-purple-50/30 dark:bg-purple-950/20">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-purple-600 dark:text-purple-400 text-sm">案例 1-17: 角頭巷弄對決案</span>
+                <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">偶然防衛</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-2">
+                角頭甲狹路相逢仇家乙，甲心想先下手為強拔槍射殺乙；殊不知乙口袋中的手也正握槍瞄準甲想殺人。
+              </p>
+              <div class="p-2.5 rounded-lg bg-white dark:bg-slate-900 border border-purple-200 dark:border-purple-900/60 text-slate-700 dark:text-slate-300">
+                ⚖️ <strong>問題導引：</strong>甲殺人罪該當（§271）。違法性審查中，客觀上雖湊巧存在防衛情狀，但甲主觀上是為了殺仇家，<strong>完全欠缺防衛意思</strong>！欠缺主觀要件，<strong>依然無法阻卻違法，必須繼續進入罪責審查</strong>。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SECTION: 二階論 vs 三階論 拼圖比較 ==================== -->
+        <section id="puzzle-comparer" class="scroll-mt-24 space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
+            🧩 犯罪二階層體系論（二階論）vs 三階論：四塊拼圖大解密
+          </h2>
+          <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            學界很多人以為「二階論不區分構成要件（TB）與違法性（R）」，<strong>這是個天大的誤解！</strong><br>
+            二階論所有不法組成要件都與三階論完全相同，不法都是由<strong>「客觀TB、主觀TB、客觀R、主觀R」</strong>這四塊拼圖組成，兩者僅是四塊拼圖的切法與排列組合不同！
+          </p>
+
+          <!-- Interactive Puzzle Component -->
+          <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#101623] shadow-lg">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800/80">
+              <span class="text-xs font-bold uppercase tracking-wider text-purple-500">拼圖切換展示</span>
+              <div class="inline-flex rounded-xl bg-slate-200 dark:bg-slate-900 p-1 text-xs">
+                <button id="btnView3Tier" onclick="renderPuzzle(3)" class="px-3 py-1 rounded-lg font-semibold bg-white dark:bg-indigo-600 text-indigo-600 dark:text-white shadow-sm transition-all">
+                  三階論（垂直縱向切割）
+                </button>
+                <button id="btnView2Tier" onclick="renderPuzzle(2)" class="px-3 py-1 rounded-lg font-semibold text-slate-600 dark:text-slate-400 hover:text-white transition-all">
+                  二階論（水平橫向切割）
+                </button>
+              </div>
+            </div>
+
+            <!-- Puzzle Grid Container -->
+            <div id="puzzleCanvas" class="my-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- Dynamically populated via JS -->
+            </div>
+
+            <!-- Explanation Box -->
+            <div id="puzzleSummary" class="p-3.5 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-850 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SECTION: 第二章 刑法的論罪結構 ==================== -->
+        <section id="ch2-principle" class="scroll-mt-24 space-y-4">
+          <div class="flex items-center gap-2 text-indigo-500 font-mono text-xs font-bold uppercase tracking-wider">
+            <span>VOLUME 2</span>
+            <span>•</span>
+            <span>CHAPTER 2</span>
+          </div>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
+            第二章 刑法的論罪結構：處罰原則 vs 處罰例外
+          </h2>
+          
+          <div class="space-y-3 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            <p>
+              構成要件是人類經驗累積的產物。能夠被編寫成犯罪構成要件之所作所為，必然都是最典型的不法（如英美法中的重罪 felony：謀殺、強制性交、強盜、夜間侵入住宅、放火等）。
+            </p>
+            <div class="p-4 rounded-xl border border-indigo-200 dark:border-indigo-900/60 bg-indigo-50/40 dark:bg-indigo-950/20">
+              <div class="font-bold text-indigo-950 dark:text-indigo-200 mb-1">處罰原則：故意既遂犯</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">
+                立法者經驗上所設想的典型情形是<strong>「出於故意而達成侵害法益既遂之行為」</strong>。所有分則條文的設計藍本皆是「故意既遂犯」。
+              </p>
+            </div>
+          </div>
+
+          <!-- 處罰例外 -->
+          <div id="ch2-exceptions" class="scroll-mt-24 space-y-3 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+              處罰例外：未遂犯 (§ 25 II) 與過失犯 (§ 12 II)
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              客觀未該當或主觀未該當，原則上不足以建構處罰。基於<strong>罪刑法定原則</strong>，要想例外處罰，必須以<strong>法律有明文宣示處罰者為限</strong>：
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+                <div class="font-bold text-slate-900 dark:text-white mb-1">殺人罪 (§ 271)</div>
+                <div class="text-emerald-500 font-semibold">✔ 處罰未遂 (§271 II)</div>
+                <div class="text-emerald-500 font-semibold">✔ 處罰過失 (§276 I)</div>
+              </div>
+              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+                <div class="font-bold text-slate-900 dark:text-white mb-1">傷害罪 (§ 277)</div>
+                <div class="text-rose-500 font-semibold">✘ 不罰未遂</div>
+                <div class="text-emerald-500 font-semibold">✔ 處罰過失 (§284 I)</div>
+              </div>
+              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+                <div class="font-bold text-slate-900 dark:text-white mb-1">竊盜罪 (§ 320)</div>
+                <div class="text-emerald-500 font-semibold">✔ 處罰未遂 (§320 III)</div>
+                <div class="text-rose-500 font-semibold">✘ 不罰過失</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 解題提示 Callout -->
+          <div id="ch2-warning" class="scroll-mt-24 my-6 rounded-2xl border-2 border-rose-500/60 bg-rose-50/50 dark:bg-rose-950/20 p-5 text-sm">
+            <div class="flex items-start gap-3">
+              <span class="text-rose-500 text-2xl">⚠️</span>
+              <div class="space-y-2">
+                <div class="font-extrabold text-rose-700 dark:text-rose-300 text-base">
+                  【解題提示】學習刑法之天條大忌：非既遂 ≠ 未遂！非故意 ≠ 過失！
+                </div>
+                <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+                  千萬別直覺認為「客觀未該當即為未遂」，或「主觀未該當即為過失」！這是極嚴重的錯誤概念：
+                </p>
+                <ul class="list-disc pl-4 text-xs space-y-1 text-slate-700 dark:text-slate-300">
+                  <li><strong>若直覺非既遂＝未遂</strong> ➔ 審查中將漏未審查<strong>「著手」</strong>！</li>
+                  <li><strong>若直覺非故意＝過失</strong> ➔ 審查中將忽略<strong>「預見可能性」</strong>！</li>
+                  <li><strong>法條邏輯鐵證（§ 12 I）</strong>：規定「行為非出於故意或過失者，不罰。」若肯定「非故意＝過失」，那世上根本不存在「非故意亦非過失（＝無過失）」的範疇了！</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SECTION: 第二章 4 大經典實戰案例 ==================== -->
+        <section id="case-2-1" class="scroll-mt-24 space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
+            第二章 4 大經典實戰案例精析
+          </h2>
+
           <div class="space-y-4 text-xs">
-            <!-- 案例 1-12 & 1-13 -->
-            <div id="case-1-12" class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40">
-              <div class="font-bold text-sm text-slate-900 dark:text-white mb-1">案例 1-12: 得被害人承諾 &amp; 案例 1-13: 義務衝突</div>
-              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                • <strong>黑白猜打巴掌</strong>：被害人自由處分其身體法益，阻卻違法。<br>
-                • <strong>火海救二子能力所限僅救一人</strong>：同時面臨多個同等義務，竭盡所能履行其一，阻卻違法。
-              </p>
-            </div>
-
-            <!-- 案例 1-14: 櫻桃案 -->
-            <div id="case-1-14" class="p-4 rounded-xl border border-rose-500/40 bg-rose-50/40 dark:bg-rose-950/20">
-              <div class="flex items-center gap-2 mb-1.5">
-                <span class="text-base">🍒</span>
-                <span class="font-bold text-sm text-rose-600 dark:text-rose-400">案例 1-14 【櫻桃案】—— 利益衡量懸殊（權利濫用）</span>
+            
+            <!-- 案例 2-1 -->
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-bold text-sm text-indigo-600 dark:text-indigo-400">案例 2-1: 西瓜刀耍帥砍人落空案（未遂犯審查）</span>
+                <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300">§ 25 II ➔ § 271 II</span>
               </div>
-              <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-2">
-                輪椅主人為保護一顆櫻桃不被小學生偷採，在別無他法下開槍射殺小學生。
+              <p class="text-slate-600 dark:text-slate-400 mb-2">
+                甲手持西瓜刀想要砍死乙，不料乙施展凌波微步及時閃過，毫髮無傷。
               </p>
-              <div class="bg-white dark:bg-slate-950 p-2.5 rounded-lg border border-rose-200 dark:border-rose-900/60 text-slate-800 dark:text-slate-200 font-medium">
-                ⚖️ <strong>法理剖析：</strong>保全利益（一顆櫻桃財產）與犧牲利益（無價小學生生命）極端懸殊！正當防衛不得違反利益衡量之比例底線，構成<strong>權利濫用</strong>，違反整體法秩序，<strong>無法阻卻違法！仍成立犯罪！</strong>
+              <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">
+                👉 <strong>問題導引：</strong>甲客觀上未致死，客觀構成要件未該當（<strong>非既遂</strong>）。若要例外處罰，除有法律明文依據（§ 25 II ➔ § 271 II）外，還必須滿足未遂成立要件：<strong>客觀上著手實行 ＋ 主觀上有殺人故意</strong>。成立殺人未遂罪。
               </div>
             </div>
 
-            <!-- 案例 1-15: 輸血案 -->
-            <div id="case-1-15" class="p-4 rounded-xl border border-rose-500/40 bg-rose-50/40 dark:bg-rose-950/20">
-              <div class="flex items-center gap-2 mb-1.5">
-                <span class="text-base">🩸</span>
-                <span class="font-bold text-sm text-rose-600 dark:text-rose-400">案例 1-15 【輸血案】—— 手段不擇手段（人性尊嚴底線）</span>
+            <!-- 案例 2-2 -->
+            <div id="case-2-2" class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-bold text-sm text-indigo-600 dark:text-indigo-400">案例 2-2: 西瓜刀練刀誤殺案（過失犯審查）</span>
+                <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300">§ 12 II ➔ § 276 I</span>
               </div>
-              <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-2">
-                病患甲急需輸血救命，醫師乙強行抽取拒絕捐血之義工丙血液救甲。
+              <p class="text-slate-600 dark:text-slate-400 mb-2">
+                甲手持西瓜刀練習刀法，乙施展凌波微步路過時，竟不慎中刀死亡。
               </p>
-              <div class="bg-white dark:bg-slate-950 p-2.5 rounded-lg border border-rose-200 dark:border-rose-900/60 text-slate-800 dark:text-slate-200 font-medium">
-                ⚖️ <strong>法理剖析：</strong>就行為層面而言，<strong>為達救人目的不可不擇手段侵犯無辜第三人的身體自主權</strong>！此舉違反憲法核心的人性尊嚴與自主原則，<strong>無法阻卻違法！仍成立犯罪！</strong>
+              <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">
+                👉 <strong>問題導引：</strong>甲主觀上無殺人故意，主觀構成要件未該當（<strong>非故意</strong>）。若要例外處罰，除有法律明文（§ 12 II ➔ § 276 I）外，還必須滿足過失成立要件：<strong>客觀上發生死亡既遂結果 ＋ 主觀上有預見可能性與違反注意義務</strong>。成立過失致死罪。（註：108年已廢除業務過失致死）。
+              </div>
+            </div>
+
+            <!-- 案例 2-3 -->
+            <div id="case-2-3" class="p-4 rounded-xl border border-amber-500/40 bg-amber-50/20 dark:bg-amber-950/20">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-bold text-sm text-amber-600 dark:text-amber-400">案例 2-3: 法律系高材生挑唆防衛案（權利濫用例外）</span>
+                <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300">權利濫用</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-2">
+                法律系甲深知正當防衛權利，故意言詞辱罵仇家乙誘其出拳，甲隨即抄起傘架雨傘痛擊乙致多處挫傷。甲主張正當防衛。
+              </p>
+              <div class="p-3 rounded-lg bg-white dark:bg-slate-950 border border-amber-200 dark:border-amber-900/60 text-slate-700 dark:text-slate-300">
+                👉 <strong>問題導引：</strong>客觀反擊、主觀防衛意思表面看似具備。惟甲「意圖利用正當防衛來傷害乙」在先，此種<strong>「意圖式挑唆防衛」乃權利濫用</strong>！與櫻桃案、輸血案同屬<strong>例外無法阻卻違法</strong>！成立傷害罪。
+              </div>
+            </div>
+
+            <!-- 案例 2-4 -->
+            <div id="case-2-4" class="p-4 rounded-xl border border-purple-500/40 bg-purple-50/20 dark:bg-purple-950/20">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-bold text-sm text-purple-600 dark:text-purple-400">案例 2-4: 半斤蛇膽烈酒壯膽殺人案（原因自由行為例外）</span>
+                <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">§ 19 III</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-2">
+                甲想殺乙已久但不敢下手，吃半斤蛇膽並大灌烈酒壯膽，於泥醉無責任能力之狀態下持刀殺死乙。
+              </p>
+              <div class="p-3 rounded-lg bg-white dark:bg-slate-950 border border-purple-200 dark:border-purple-900/60 text-slate-700 dark:text-slate-300">
+                👉 <strong>問題導引：</strong>下手時雖處於無責任能力，但甲係「故意自陷精神障礙以犯殺人罪」，依刑法 § 19 III<strong>「原因自由行為」</strong>之規定，<strong>例外無法阻卻罪責！仍成立殺人既遂罪！</strong>
               </div>
             </div>
 
           </div>
         </section>
 
-        <!-- Section: 終極速查對照表 -->
-        <section id="matrix" class="scroll-mt-24 space-y-4 my-10">
+        <!-- ==================== SECTION: 不得主張阻卻事由之例外體系 ==================== -->
+        <section id="ch2-block-exceptions" class="scroll-mt-24 space-y-4">
           <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
-            📊 終極複習對照矩陣：阻卻違法 vs 阻卻罪責
+            阻卻事由之特殊例外體系總覽
+          </h2>
+          <p class="text-xs text-slate-600 dark:text-slate-400">
+            形式上看似吻合阻卻要件，但因違反法秩序基本法理而<strong>例外不得主張阻卻</strong>之情況：
+          </p>
+          
+          <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800 text-xs">
+            <table class="w-full text-left">
+              <thead class="bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-semibold">
+                <tr>
+                  <th class="p-3">所屬階層</th>
+                  <th class="p-3">不得主張之例外情形</th>
+                  <th class="p-3">法理根基</th>
+                  <th class="p-3">代表案例</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-600 dark:text-slate-400">
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                  <td class="p-3 font-semibold text-amber-500">違法性 (R)</td>
+                  <td class="p-3 font-medium text-slate-900 dark:text-white">明知命令違法 (§ 21 II 但)</td>
+                  <td class="p-3">公務員不得盲從實質明顯違法命令</td>
+                  <td class="p-3">違法刑求命令</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                  <td class="p-3 font-semibold text-amber-500">違法性 (R)</td>
+                  <td class="p-3 font-medium text-slate-900 dark:text-white">特別義務關係 (§ 24 II)</td>
+                  <td class="p-3">軍警消防負有法律特定防難職責</td>
+                  <td class="p-3">消防員臨陣避難毀損</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                  <td class="p-3 font-semibold text-amber-500">違法性 (R)</td>
+                  <td class="p-3 font-medium text-slate-900 dark:text-white">意圖式挑唆防衛</td>
+                  <td class="p-3">權利濫用禁止原則</td>
+                  <td class="p-3">案例 2-3 法律系雨傘案</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                  <td class="p-3 font-semibold text-amber-500">違法性 (R)</td>
+                  <td class="p-3 font-medium text-slate-900 dark:text-white">利益極端失衡</td>
+                  <td class="p-3">防衛手段相當性極限</td>
+                  <td class="p-3">案例 1-14 🍒 櫻桃案</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                  <td class="p-3 font-semibold text-amber-500">違法性 (R)</td>
+                  <td class="p-3 font-medium text-slate-900 dark:text-white">手段違反人性尊嚴</td>
+                  <td class="p-3">人為主體，不得物化為救人手段</td>
+                  <td class="p-3">案例 1-15 🩸 輸血案</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                  <td class="p-3 font-semibold text-purple-500">罪責 (S)</td>
+                  <td class="p-3 font-medium text-slate-900 dark:text-white">原因自由行為 (§ 19 III)</td>
+                  <td class="p-3">自陷無責任能力狀態自招危難</td>
+                  <td class="p-3">案例 2-4 蛇膽烈酒殺人案</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ==================== SECTION: 基本論罪全流程六階層表 ==================== -->
+        <section id="six-stage-matrix" class="scroll-mt-24 space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
+            🏛️ 刑法基本論罪全流程六階層審查總整
+          </h2>
+          <p class="text-xs text-slate-600 dark:text-slate-400">
+            從客觀生活事實到宣告犯罪成立的標準六階審查流程：
+          </p>
+
+          <div class="space-y-3 text-xs">
+            
+            <!-- Tier 1: 行為 -->
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 flex flex-col md:flex-row gap-4 items-start">
+              <div class="w-24 shrink-0 font-bold text-sm text-indigo-500">1. 行為</div>
+              <div class="flex-1 space-y-1">
+                <div class="font-semibold text-slate-900 dark:text-white">刑法意義之行為？（具備人的意思支配可能性）</div>
+                <div class="text-slate-500 leading-relaxed">
+                  • <strong>確認功能</strong>：確認所欲討論之特定生活舉動。<br>
+                  • <strong>過濾功能</strong>：排除非刑法意義之動作（夢遊、反射動作、絕對強制）。<br>
+                  • <strong>分類功能</strong>：作為、純正不作為、不純正不作為（§ 15）。
+                </div>
+              </div>
+            </div>
+
+            <!-- Tier 2: TB -->
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 flex flex-col md:flex-row gap-4 items-start">
+              <div class="w-24 shrink-0 font-bold text-sm text-indigo-500">2. TB 階層</div>
+              <div class="flex-1 space-y-1">
+                <div class="font-semibold text-slate-900 dark:text-white">法益侵害形式為何？（構成要件該當性）</div>
+                <div class="text-slate-500 leading-relaxed">
+                  • <strong>處罰原則</strong>：故意既遂犯（§ 13）。<br>
+                  • <strong>處罰例外</strong>：未遂犯（§ 25，需明文＋著手＋故意）；過失犯（§ 12、§ 14，需明文＋結果既遂＋預見可能）。
+                </div>
+              </div>
+            </div>
+
+            <!-- Tier 3: R -->
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 flex flex-col md:flex-row gap-4 items-start">
+              <div class="w-24 shrink-0 font-bold text-sm text-amber-500">3. R 階層</div>
+              <div class="flex-1 space-y-1">
+                <div class="font-semibold text-slate-900 dark:text-white">有無正當理由？（違法性評價）</div>
+                <div class="text-slate-500 leading-relaxed">
+                  • <strong>可以阻卻違法</strong>：§ 21~24（法令、命令、業務、防衛、避難）、超法定事由（承諾、義務衝突）。<br>
+                  • <strong>不能阻卻違法（例外）</strong>：§ 21 II 但、§ 24 II、意圖挑唆防衛、利益失衡（櫻桃案）、違反人性尊嚴（輸血案）。
+                </div>
+              </div>
+            </div>
+
+            <!-- Tier 4: S -->
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 flex flex-col md:flex-row gap-4 items-start">
+              <div class="w-24 shrink-0 font-bold text-sm text-purple-500">4. S 階層</div>
+              <div class="flex-1 space-y-1">
+                <div class="font-semibold text-slate-900 dark:text-white">個人有無非難可能性？（罪責評價）</div>
+                <div class="text-slate-500 leading-relaxed">
+                  • <strong>可以阻卻罪責</strong>：§ 16（不可避免之不法意識）、§ 18~20（年齡、精神、生理）、§ 23但/24但（過當寬恕）、期待不可能。<br>
+                  • <strong>不能阻卻罪責（例外）</strong>：§ 19 III（原因自由行為）。
+                </div>
+              </div>
+            </div>
+
+            <!-- Tier 5: 其他 -->
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 flex flex-col md:flex-row gap-4 items-start">
+              <div class="w-24 shrink-0 font-bold text-sm text-emerald-500">5. 其他要件</div>
+              <div class="flex-1 space-y-1">
+                <div class="font-semibold text-slate-900 dark:text-white">有無其他刑罰要件？（刑事政策阻卻發動）</div>
+                <div class="text-slate-500 leading-relaxed">
+                  • <strong>客觀處罰條件</strong>、自始排除事由（親屬相盜 §324）、嗣後解除事由（§ 26 不能未遂、§ 27 中止犯）。
+                </div>
+              </div>
+            </div>
+
+            <!-- Tier 6: 結論 -->
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900/90 flex flex-col md:flex-row gap-4 items-start">
+              <div class="w-24 shrink-0 font-bold text-sm text-slate-900 dark:text-white">6. 結論</div>
+              <div class="flex-1 space-y-1">
+                <div class="font-bold text-indigo-600 dark:text-indigo-400">宣告成立特定犯罪</div>
+                <div class="text-slate-600 dark:text-slate-400">
+                  宣告成立○○犯罪之【故意既遂犯 / 未遂犯 / 過失犯】。
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ==================== SECTION: 2026 法律動態核對 (NEW) ==================== -->
+        <section id="law-updates-2026" class="scroll-mt-24 space-y-6">
+          <div class="flex items-center gap-2 text-emerald-500 font-mono text-xs font-bold uppercase tracking-wider">
+            <span>VOLUME 3</span>
+            <span>•</span>
+            <span>2026 LEGAL COMPLIANCE & CHECK</span>
+          </div>
+
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-3">
+            <div>
+              <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
+                ⚖️ 2026 年最新法律動態與講義法條現況對照表
+              </h2>
+              <p class="text-xs text-slate-500 mt-1">
+                核對全國法規資料庫、總統府公報、立法院法律系統與憲法法庭裁判（2026年9月實時狀態）
+              </p>
+            </div>
+            <span class="self-start sm:self-auto px-3 py-1 rounded-full text-xs font-mono font-semibold bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
+              全條文查驗完畢
+            </span>
+          </div>
+
+          <!-- Interactive Filter & Search Bar -->
+          <div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-[#101623] space-y-3">
+            <div class="flex flex-col md:flex-row gap-3 justify-between">
+              <!-- Filter Buttons -->
+              <div class="flex flex-wrap gap-1.5 text-xs">
+                <button onclick="filterLawTable('all')" id="lawTab-all" class="px-3 py-1.5 rounded-xl font-semibold bg-emerald-600 text-white shadow-sm transition-all">全部 (All)</button>
+                <button onclick="filterLawTable('unchanged')" id="lawTab-unchanged" class="px-3 py-1.5 rounded-xl font-semibold bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:text-white border border-slate-200 dark:border-slate-800 transition-all">🟢 總則核心 (2026未更動)</button>
+                <button onclick="filterLawTable('special')" id="lawTab-special" class="px-3 py-1.5 rounded-xl font-semibold bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:text-white border border-slate-200 dark:border-slate-800 transition-all">🟣 分則/特別法 (業務過失廢除)</button>
+                <button onclick="filterLawTable('const')" id="lawTab-const" class="px-3 py-1.5 rounded-xl font-semibold bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:text-white border border-slate-200 dark:border-slate-800 transition-all">🟡 憲法法庭 (死刑限縮)</button>
+              </div>
+
+              <!-- Quick Search Input -->
+              <div class="relative w-full md:w-64">
+                <svg class="absolute left-3 top-2.5 w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                <input id="lawSearchInput" type="text" placeholder="搜尋條號或關鍵字..." class="w-full pl-8 pr-3 py-1.5 text-xs bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-800 dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:border-emerald-500">
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Law Table -->
+          <div id="law-table-2026" class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 shadow-md">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-100 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-semibold">
+                <tr>
+                  <th class="p-3.5 w-28">條號與名稱</th>
+                  <th class="p-3.5">講義核心概念</th>
+                  <th class="p-3.5 w-36">2026 最新法律狀態</th>
+                  <th class="p-3.5">最後修正依據與官方來源</th>
+                </tr>
+              </thead>
+              <tbody id="lawTableBody" class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-600 dark:text-slate-400">
+                
+                <!-- §1 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 1<br><span class="text-[10px] text-slate-400 font-normal">罪刑法定</span></td>
+                  <td class="p-3.5">罪刑法定原則、處罰與保安處分明文要求（四大派生原則）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 94 年 2 月 2 日修正公布，維持現行。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §2 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 2<br><span class="text-[10px] text-slate-400 font-normal">時之效力</span></td>
+                  <td class="p-3.5">從舊從輕原則、繼續犯適用效力（案例 0-9）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 94 年 2 月 2 日修正公布，維持現行。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §12 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 12<br><span class="text-[10px] text-slate-400 font-normal">責任要件</span></td>
+                  <td class="p-3.5">故意與過失責任、無過失不罰（解題大忌根本依據）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 24 年 1 月 1 日制定公布迄今文字未變。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §13 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 13<br><span class="text-[10px] text-slate-400 font-normal">故意</span></td>
+                  <td class="p-3.5">直接故意（處罰原則）、間接故意</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 24 年制定公布迄今文字未變。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §14 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 14<br><span class="text-[10px] text-slate-400 font-normal">過失</span></td>
+                  <td class="p-3.5">無認識過失、有認識過失（處罰例外）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 24 年制定公布迄今文字未變。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §15 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 15<br><span class="text-[10px] text-slate-400 font-normal">不作為犯</span></td>
+                  <td class="p-3.5">保證人地位、作為義務（純正/不純正不作為）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 24 年制定公布迄今文字未變。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §16 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 16<br><span class="text-[10px] text-slate-400 font-normal">不法意識</span></td>
+                  <td class="p-3.5">欠缺不法意識、不可避免免除其刑（案例 1-1）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 94 年 2 月 2 日總統令修正公布採客觀不可避免標準，維持現行。<br><span class="text-[10px] text-slate-400">總統府公報第6617號</span></td>
+                </tr>
+
+                <!-- §18 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 18<br><span class="text-[10px] text-slate-400 font-normal">責任年齡</span></td>
+                  <td class="p-3.5">未滿14歲不罰、14~18歲得減刑（案例 1-2）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 24 年制定公布迄今未變。（民法成年自2023年降為18歲，刑法責任年齡不受影響）。<br><span class="text-[10px] text-slate-400">法務部法律字第11103504840號</span></td>
+                </tr>
+
+                <!-- §19 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="const">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 19<br><span class="text-[10px] text-slate-400 font-normal">精神狀態</span></td>
+                  <td class="p-3.5">辨識/控制能力欠缺與減低、原因自由行為（案例 1-3、2-4）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-300 dark:border-amber-800 font-semibold">條文文字未變 / 實質受限</span></td>
+                  <td class="p-3.5">條文文字最後於民國 94 年修正增訂第3項原因自由行為。⚠️ <strong>憲法法庭 113 年憲判字第 8 號判決宣告：心智缺陷者絕對排除死刑</strong>。<br><a href="https://cons.judicial.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">113年憲判字第8號 ↗</a></td>
+                </tr>
+
+                <!-- §20 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 20<br><span class="text-[10px] text-slate-400 font-normal">瘖啞人</span></td>
+                  <td class="p-3.5">生理學習障礙責任能力減輕（案例 1-4）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 24 年制定公布迄今文字未變。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §21 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 21<br><span class="text-[10px] text-slate-400 font-normal">法令/命令</span></td>
+                  <td class="p-3.5">依法令行為、依上級合法命令（案例 1-7、1-8）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 24 年制定公布迄今文字未變。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §22 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 22<br><span class="text-[10px] text-slate-400 font-normal">業務正當</span></td>
+                  <td class="p-3.5">醫療手術行為、正當社會業務（案例 1-9）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 24 年制定公布迄今文字未變。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §23 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 23<br><span class="text-[10px] text-slate-400 font-normal">正當防衛</span></td>
+                  <td class="p-3.5">防衛情狀、防衛意思、防衛過當（案例 1-10、1-16、1-17、2-3）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 24 年制定公布迄今條文未變。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §24 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 24<br><span class="text-[10px] text-slate-400 font-normal">緊急避難</span></td>
+                  <td class="p-3.5">避難情狀、避難過當、特別義務（案例 1-11）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 24 年制定公布迄今文字未變。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §25 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 25<br><span class="text-[10px] text-slate-400 font-normal">未遂犯</span></td>
+                  <td class="p-3.5">著手實行、處罰例外需明文（案例 2-1）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 94 年 2 月 2 日總統令修正公布，維持現行。<br><span class="text-[10px] text-slate-400">總統府公報第6617號</span></td>
+                </tr>
+
+                <!-- §26 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 26<br><span class="text-[10px] text-slate-400 font-normal">不能犯</span></td>
+                  <td class="p-3.5">不能未遂、無危險不罰（客觀未遂論）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 94 年 2 月 2 日重大修正（由原得減免改為「不罰」），維持現行。<br><span class="text-[10px] text-slate-400">總統府公報第6617號</span></td>
+                </tr>
+
+                <!-- §27 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 27<br><span class="text-[10px] text-slate-400 font-normal">中止犯</span></td>
+                  <td class="p-3.5">因己意中止、防阻結果、準中止犯</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 94 年 2 月 2 日總統令修正公布，維持現行。<br><span class="text-[10px] text-slate-400">總統府公報第6617號</span></td>
+                </tr>
+
+                <!-- §185-3 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="special">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 185-3<br><span class="text-[10px] text-slate-400 font-normal">酒駕危駕</span></td>
+                  <td class="p-3.5">客觀處罰條件（吐氣酒精濃度）、加重刑責</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 111 年 1 月 28 日總統令修正公布提高法定刑至3年，其後維持現行。<br><span class="text-[10px] text-slate-400">總統府公報第7585號</span></td>
+                </tr>
+
+                <!-- §185-4 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="special">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 185-4<br><span class="text-[10px] text-slate-400 font-normal">肇事逃逸</span></td>
+                  <td class="p-3.5">肇逃保護法益三大說（案例 1-3 / 導論 0-3：生命身體說 vs 確認利益說）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300 border border-rose-300 dark:border-rose-800 font-semibold">⚠️ 110年重大修法分流</span></td>
+                  <td class="p-3.5">依釋字第 777 號違憲宣告，立法院於 110 年 5 月 28 日修正公布、5 月 31 日施行，區分過失與無過失分流處罰，維持現行。<br><span class="text-[10px] text-slate-400">總統府公報第7545號</span></td>
+                </tr>
+
+                <!-- §271 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="const">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 271<br><span class="text-[10px] text-slate-400 font-normal">普通殺人罪</span></td>
+                  <td class="p-3.5">故意既遂處罰藍本、未遂處罰明文（案例 1-17、2-1、2-4）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-300 dark:border-amber-800 font-semibold">條文文字未變 / 死刑限縮</span></td>
+                  <td class="p-3.5">條文文字制定迄今未變。⚠️ <strong>113 年憲判字第 8 號判決宣告：死刑僅限於「個案犯罪情節最嚴重」，且須經合議庭一致決、言詞辯論與強制辯護</strong>。<br><a href="https://cons.judicial.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">113年憲判字第8號 ↗</a></td>
+                </tr>
+
+                <!-- §276 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="special">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 276<br><span class="text-[10px] text-slate-400 font-normal">過失致死罪</span></td>
+                  <td class="p-3.5">過失犯處罰明文、預見可能性（案例 2-2：西瓜刀練刀誤殺案）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-800 font-semibold">2026未更動 (無業務過失)</span></td>
+                  <td class="p-3.5">民國 108 年 5 月 29 日總統令修正公布：<strong>全面廢除業務過失致死罪</strong>，普通過失致死刑度提高至5年以下。<br><span class="text-[10px] text-slate-400">總統府公報第7428號</span></td>
+                </tr>
+
+                <!-- §277 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 277<br><span class="text-[10px] text-slate-400 font-normal">普通傷害罪</span></td>
+                  <td class="p-3.5">傷害構成要件、身體完整性侵害說（案例 1-1 / 導論 0-1、1-16、2-3）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 108 年 5 月 29 日總統令修正公布提高罰金刑至十萬元，至 2026 年維持現行。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §284 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="special">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 284<br><span class="text-[10px] text-slate-400 font-normal">過失傷害罪</span></td>
+                  <td class="p-3.5">僅處罰過失之典型罪名</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-800 font-semibold">2026未更動 (無業務過失)</span></td>
+                  <td class="p-3.5">民國 108 年 5 月 29 日總統令修正公布：<strong>全面廢除業務過失傷害罪</strong>，維持現行。<br><span class="text-[10px] text-slate-400">總統府公報第7428號</span></td>
+                </tr>
+
+                <!-- §302 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="special">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 302 / § 302-1<br><span class="text-[10px] text-slate-400 font-normal">私行拘禁 / 加重</span></td>
+                  <td class="p-3.5">剝奪行動自由、繼續犯跨法審查（案例 2-1 / 導論 0-9）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-800 font-semibold">⚠️ 112年增訂加重條款</span></td>
+                  <td class="p-3.5">民國 108 年修正公布調整罰金；<strong>112 年 5 月 31 日增訂公布 § 302-1 加重剝奪行動自由罪</strong>（1~7年），維持現行。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §320 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 320<br><span class="text-[10px] text-slate-400 font-normal">普通竊盜罪</span></td>
+                  <td class="p-3.5">僅處罰未遂、不罰過失之典型罪名；竊盜保護法益（案例 1-2 / 導論 0-2）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 108 年 5 月 29 日總統令修正公布調整罰金刑，維持現行。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §323 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="unchanged">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 323<br><span class="text-[10px] text-slate-400 font-normal">能量動產化</span></td>
+                  <td class="p-3.5">類推適用禁止例外之擬制動產、私接第四台訊號不罰（案例 1-5 / 導論 0-5）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-semibold">2026未更動</span></td>
+                  <td class="p-3.5">民國 24 年 1 月 1 日制定公布迄今文字未變。<br><a href="https://law.moj.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">全國法規資料庫 ↗</a></td>
+                </tr>
+
+                <!-- §329 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="const">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">刑法 § 329<br><span class="text-[10px] text-slate-400 font-normal">準強盜罪</span></td>
+                  <td class="p-3.5">罪刑相當原則與強暴脅迫門檻（案例 1-8 / 導論 0-8）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-300 dark:border-amber-800 font-semibold">2026未更動 / 憲判合憲</span></td>
+                  <td class="p-3.5">條文文字制定未變。⚠️ 經釋字第 630 號及 <strong>113 年憲判字第 9 號判決</strong>宣告限縮「達使人難以抗拒程度」下合憲。<br><a href="https://cons.judicial.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">113年憲判字第9號 ↗</a></td>
+                </tr>
+
+                <!-- 優生保健法 §9 -->
+                <tr class="law-row hover:bg-slate-50 dark:hover:bg-slate-900/40" data-cat="special">
+                  <td class="p-3.5 font-bold text-slate-900 dark:text-white">優生保健法 § 9<br><span class="text-[10px] text-slate-400 font-normal">人工流產</span></td>
+                  <td class="p-3.5">依法令行為阻卻違法之引據（案例 1-7）</td>
+                  <td class="p-3.5"><span class="px-2 py-0.5 rounded-full font-mono text-[10px] bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-300 dark:border-blue-800 font-semibold">現行法未動 / 草案審查中</span></td>
+                  <td class="p-3.5">現行法仍需配偶同意。衛福部擬更名為《生育保健法》並刪除配偶同意權，截至 2026 年 9 月仍在立院審議中，尚未修正施行。<br><a href="https://join.gov.tw/" target="_blank" class="text-indigo-500 hover:underline">衛福部國健署進度說明 ↗</a></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Deep Dive Cards for 2026 Updates -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+            
+            <!-- Card 1: 113憲判8 -->
+            <div id="const-judgment-8" class="p-4 rounded-2xl border border-amber-500/40 bg-amber-50/20 dark:bg-amber-950/20 space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="text-base">🏛️</span>
+                <span class="font-bold text-sm text-amber-600 dark:text-amber-400">113 年憲判字第 8 號（死刑限縮）</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                普通殺人罪（§271）死刑處罰合憲，但設下極限門檻：
+              </p>
+              <ul class="list-disc pl-4 space-y-1 text-slate-600 dark:text-slate-400">
+                <li><strong>情節最嚴重</strong>：僅限直接故意、殘虐手段且無非難減輕情事。</li>
+                <li><strong>排除心智缺陷者</strong>：行為時符合 § 19 II 者<strong>絕對不得判死刑</strong>。</li>
+                <li><strong>正當法律程序</strong>：言詞辯論、強制辯護、合議庭<strong>「一致決」</strong>。</li>
+              </ul>
+            </div>
+
+            <!-- Card 2: 優生保健法 §9 vs 生育保健法草案 -->
+            <div id="eugenic-status" class="p-4 rounded-2xl border border-blue-500/40 bg-blue-50/20 dark:bg-blue-950/20 space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="text-base">🤰</span>
+                <span class="font-bold text-sm text-blue-600 dark:text-blue-400">《優生保健法》§9 vs 《生育保健法》草案</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                刑法 § 21 I「依法令之行為」人工流產阻卻違法之關鍵引據：
+              </p>
+              <ul class="list-disc pl-4 space-y-1 text-slate-600 dark:text-slate-400">
+                <li><strong>現行法規範（2026年9月有效施行中）</strong>：有配偶婦女行人工流產，除特定事由外<strong>仍應得配偶同意</strong>。</li>
+                <li><strong>修法草案現狀</strong>：衛福部擬更名為《生育保健法》刪除配偶同意權，目前草案<strong>仍在立院審議中，尚未修正施行</strong>。</li>
+                <li><strong>答題核心依據</strong>：截至 2026 年現行法<strong>【2026未更動】</strong>，答題應以現行法仍需配偶同意為準。</li>
+              </ul>
+            </div>
+
+            <!-- Card 3: 2024-2026 刑法新修 -->
+            <div id="recent-criminal-amendments" class="p-4 rounded-2xl border border-indigo-500/40 bg-indigo-50/20 dark:bg-indigo-950/20 space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="text-base">📜</span>
+                <span class="font-bold text-sm text-indigo-600 dark:text-indigo-400">2024 ～ 2026 年刑法最新修正</span>
+              </div>
+              <ul class="space-y-1 text-slate-600 dark:text-slate-400 leading-relaxed">
+                <li>• <strong>2026.07.22 修正公布刑法第 80 條</strong>：修正追訴權時效起算與停止事由。</li>
+                <li>• <strong>2026.03.13 修正公布刑法第 79-1 條</strong>：增訂第 78-1、78-2 條（假釋殘刑比例原則）。</li>
+                <li>• <strong>2025.08.01 施行第 272-1 條、§ 286</strong>：重罰兒少凌虐致死與致重傷。</li>
+                <li>• <strong>108 年重要回顧</strong>：牢記<strong>「業務過失」已全面廢除</strong>（§276、§284）。</li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ==================== SECTION: 總複習對照矩陣 ==================== -->
+        <section id="matrix" class="scroll-mt-24 space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
+            📊 總複習對照矩陣：阻卻違法 vs 阻卻罪責
           </h2>
           
-          <div class="my-4 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
+          <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
             <table class="w-full text-left text-xs sm:text-sm">
               <thead class="bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-semibold">
                 <tr>
@@ -618,13 +1601,28 @@
                 </tr>
                 <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
                   <td class="p-3.5 font-semibold text-slate-900 dark:text-white">超法定核心</td>
-                  <td class="p-3.5"><strong>利益衡量原則</strong>（排除櫻桃案、輸血案）</td>
+                  <td class="p-3.5"><strong>利益衡量原則</strong>（排除櫻桃案、輸血案）、被害人承諾、義務衝突</td>
                   <td class="p-3.5"><strong>期待可能性理論</strong>（如：幼兒墜床燙衣失火案）</td>
                 </tr>
                 <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                  <td class="p-3.5 font-semibold text-slate-900 dark:text-white">不得主張之例外</td>
+                  <td class="p-3.5">明知命令違法、特別業務義務、意圖挑唆防衛、櫻桃案、輸血案</td>
+                  <td class="p-3.5">原因自由行為 (§ 19 III)</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                  <td class="p-3.5 font-semibold text-slate-900 dark:text-white">客主觀要件要求</td>
+                  <td class="p-3.5"><strong>客觀情狀與主觀意思缺一不可</strong>（欠客觀為誤想，欠主觀為偶然）</td>
+                  <td class="p-3.5">綜合評估行為人之個別辨識、控制能力與期待可能性</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
                   <td class="p-3.5 font-semibold text-slate-900 dark:text-white">法律效果</td>
-                  <td class="p-3.5"><span class="text-emerald-500 font-semibold">自始不構成犯罪</span>，連帶免除民事侵權</td>
-                  <td class="p-3.5"><span class="text-purple-500 font-semibold">行為仍屬不法</span>，但不罰行為人個人（第三人仍得正當防衛）</td>
+                  <td class="p-3.5"><span class="text-emerald-500 font-semibold">自始不構成犯罪</span>，連帶免除民事侵權賠償</td>
+                  <td class="p-3.5"><span class="text-purple-500 font-semibold">行為依然屬於不法</span>，僅免除或減輕個人刑罰</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                  <td class="p-3.5 font-semibold text-slate-900 dark:text-white">正當防衛適用</td>
+                  <td class="p-3.5">行為合法，第三人<strong>不得</strong>對其正當防衛</td>
+                  <td class="p-3.5">行為仍不法，第三人對其<strong>得</strong>進行正當防衛</td>
                 </tr>
               </tbody>
             </table>
@@ -636,26 +1634,36 @@
 
     <!-- COLUMN 3: RIGHT TABLE OF CONTENTS (TOC) -->
     <aside class="hidden xl:block w-64 shrink-0">
-      <div class="sticky top-24 p-2">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">
-          本頁目錄大綱
+      <div class="sticky top-20 p-2 text-xs">
+        <div class="font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center justify-between">
+          <span>本頁目錄大綱</span>
+          <span class="text-[10px] text-emerald-500 font-mono">2026 Live</span>
         </div>
-        <nav class="space-y-1 text-xs border-l border-slate-200 dark:border-slate-800">
-          <a href="#overview" class="toc-link block py-1.5 pl-3 text-indigo-500 font-semibold -ml-px border-l-2 border-indigo-500">導論與核心思維</a>
-          <a href="#simulator" class="toc-link block py-1.5 pl-3 text-slate-600 dark:text-slate-400 hover:text-white">⚡ 論罪推定模擬器</a>
-          <a href="#culpability" class="toc-link block py-1.5 pl-3 text-slate-600 dark:text-slate-400 hover:text-white">不法推定罪責 (壞人)</a>
-          <a href="#case-1-1" class="toc-link block py-1.5 pl-5 text-slate-500 hover:text-white">案例 1-1~1-4 責任能力</a>
-          <a href="#case-1-5" class="toc-link block py-1.5 pl-5 text-slate-500 hover:text-white">案例 1-5 防衛避難過當</a>
-          <a href="#case-1-6" class="toc-link block py-1.5 pl-5 text-slate-500 hover:text-white">案例 1-6 期待可能性</a>
-          <a href="#wrongfulness" class="toc-link block py-1.5 pl-3 text-slate-600 dark:text-slate-400 hover:text-white">構成要件推定違法 (壞事)</a>
-          <a href="#case-1-7" class="toc-link block py-1.5 pl-5 text-slate-500 hover:text-white">案例 1-7~1-11 法定事由</a>
-          <a href="#case-1-14" class="toc-link block py-1.5 pl-5 text-rose-500 font-semibold hover:text-white">🍒 案例 1-14 櫻桃案</a>
-          <a href="#case-1-15" class="toc-link block py-1.5 pl-5 text-rose-500 font-semibold hover:text-white">🩸 案例 1-15 輸血案</a>
-          <a href="#matrix" class="toc-link block py-1.5 pl-3 text-slate-600 dark:text-slate-400 hover:text-white">📊 終極複習對照矩陣</a>
+        <nav class="space-y-1 border-l border-slate-200 dark:border-slate-800">
+          <a href="#vol-0-intro" class="toc-link block py-1 pl-3 text-indigo-500 font-semibold hover:text-white">第零篇 目的與四大支柱</a>
+          <a href="#vol-0-legal-interest" class="toc-link block py-1 pl-5 text-slate-400 hover:text-white">法益保護與分則 (案例 1-1~1-3)</a>
+          <a href="#vol-0-legality" class="toc-link block py-1 pl-5 text-slate-400 hover:text-white">罪刑法定四大原則 (案例 1-4~1-7)</a>
+          <a href="#vol-0-culpability-principle" class="toc-link block py-1 pl-5 text-slate-400 hover:text-white">罪責原則與準強盜 (案例 1-8)</a>
+          <a href="#vol-0-temp-validity" class="toc-link block py-1 pl-5 text-slate-400 hover:text-white">時之效力與繼續犯 (案例 2-1)</a>
+          <a href="#overview" class="toc-link block py-1 pl-3 text-slate-500 hover:text-white">一、犯罪概念 (先事後人)</a>
+          <a href="#simulator" class="toc-link block py-1 pl-3 text-slate-500 hover:text-white">⚡ 雙重推定模擬器</a>
+          <a href="#culpability" class="toc-link block py-1 pl-3 text-slate-500 hover:text-white">罪責階層 (案例 1-1~1-6)</a>
+          <a href="#wrongfulness" class="toc-link block py-1 pl-3 text-slate-500 hover:text-white">違法性階層 (案例 1-7~1-15)</a>
+          <a href="#dual-requirement" class="toc-link block py-1 pl-3 text-slate-500 hover:text-white">目的體系與雙重該當</a>
+          <a href="#puzzle-comparer" class="toc-link block py-1 pl-3 text-purple-400 font-semibold hover:text-white">🧩 二階 vs 三階拼圖</a>
+          <a href="#ch2-principle" class="toc-link block py-1 pl-3 text-slate-500 hover:text-white">第二章 處罰原則 (故意既遂)</a>
+          <a href="#ch2-warning" class="toc-link block py-1 pl-3 text-rose-500 font-semibold hover:text-white">⚠️ 大忌：非既遂≠未遂</a>
+          <a href="#case-2-1" class="toc-link block py-1 pl-5 text-slate-400 hover:text-white">案例 2-1~2-4 實戰精析</a>
+          <a href="#six-stage-matrix" class="toc-link block py-1 pl-3 text-indigo-400 font-semibold hover:text-white">🏛️ 基本論罪六階層表</a>
+          <a href="#law-updates-2026" class="toc-link block py-1 pl-3 text-emerald-500 font-bold hover:text-white">⚖️ 2026 法律動態核對</a>
+          <a href="#const-judgment-8" class="toc-link block py-1 pl-5 text-amber-500 hover:text-white">🏛️ 113憲判8死刑限縮</a>
+          <a href="#eugenic-status" class="toc-link block py-1 pl-5 text-blue-500 hover:text-white">🤰 優生保健法草案進度</a>
+          <a href="#recent-criminal-amendments" class="toc-link block py-1 pl-5 text-slate-400 hover:text-white">📜 2024~2026 刑法新修正</a>
+          <a href="#matrix" class="toc-link block py-1 pl-3 text-slate-500 hover:text-white">📊 總複習對照矩陣</a>
         </nav>
 
         <!-- Quick actions -->
-        <div class="mt-8 pt-4 border-t border-slate-200 dark:border-slate-800 text-xs space-y-2">
+        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 space-y-2">
           <button onclick="copyPageUrl()" class="text-slate-400 hover:text-white flex items-center gap-1.5 py-1">
             <span>🔗 複製本篇連結</span>
           </button>
@@ -669,30 +1677,16 @@
   </div>
 
   <!-- ==================== SEARCH MODAL ==================== -->
-  <div id="searchModal" class="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-slate-950/70 backdrop-blur-md hidden">
+  <div id="searchModal" class="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-slate-950/75 backdrop-blur-md hidden">
     <div id="modalBackdrop" class="fixed inset-0"></div>
     <div class="relative w-full max-w-2xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden z-10 flex flex-col">
       <div class="flex items-center px-4 py-3.5 border-b border-slate-200 dark:border-slate-800/80 gap-3">
         <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-        <input id="searchInput" type="text" placeholder="搜尋關鍵字（例如：櫻桃案、輸血案、§19、期待可能性、正當防衛）..." class="flex-1 bg-transparent text-sm text-slate-900 dark:text-white focus:outline-none">
+        <input id="searchInput" type="text" placeholder="搜尋關鍵字（如：2026未更動、憲判字第8號、業務過失、挑唆、§19）..." class="flex-1 bg-transparent text-sm text-slate-900 dark:text-white focus:outline-none">
         <button id="closeSearchBtn" class="text-slate-400 hover:text-white p-1">✕</button>
       </div>
       <div id="searchResults" class="p-2 max-h-80 overflow-y-auto space-y-1 text-xs">
-        <a href="#case-1-14" onclick="closeSearchModal()" class="block p-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-900 dark:text-white font-medium">
-          🍒 案例 1-14 【櫻桃案】 <span class="text-[11px] text-slate-400 block font-normal">利益衡量極端失衡・射殺小學生不得阻卻違法</span>
-        </a>
-        <a href="#case-1-15" onclick="closeSearchModal()" class="block p-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-900 dark:text-white font-medium">
-          🩸 案例 1-15 【輸血案】 <span class="text-[11px] text-slate-400 block font-normal">不擇手段侵害他人自主・違反人性尊嚴不得阻卻違法</span>
-        </a>
-        <a href="#case-1-6" onclick="closeSearchModal()" class="block p-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-900 dark:text-white font-medium">
-          案例 1-6 【幼兒墜床燙衣火災案】 <span class="text-[11px] text-slate-400 block font-normal">超法定阻卻罪責・期待可能性核心</span>
-        </a>
-        <a href="#case-1-5" onclick="closeSearchModal()" class="block p-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-900 dark:text-white font-medium">
-          案例 1-5 【正當防衛過當與緊急避難過當】 <span class="text-[11px] text-slate-400 block font-normal">§ 23但、§ 24但 寬恕罪責事由</span>
-        </a>
-        <a href="#matrix" onclick="closeSearchModal()" class="block p-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-900 dark:text-white font-medium">
-          📊 阻卻違法 vs 阻卻罪責 終極速查對照表 <span class="text-[11px] text-slate-400 block font-normal">法條、判斷標準、法律效果完整比較</span>
-        </a>
+        <!-- populated dynamically -->
       </div>
     </div>
   </div>
@@ -735,16 +1729,118 @@
       backdrop.classList.add('hidden');
     });
 
-    // Search Modal
+    // Sidebar Filter
+    const filterInput = document.getElementById('sidebarFilterInput');
+    filterInput.addEventListener('input', (e) => {
+      const val = e.target.value.toLowerCase().trim();
+      const items = document.querySelectorAll('.nav-item');
+      items.forEach(item => {
+        const txt = item.textContent.toLowerCase();
+        if (!val || txt.includes(val)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+
+    // 2026 Law Table Filter & Search Logic
+    let currentLawCategory = 'all';
+    function filterLawTable(cat) {
+      currentLawCategory = cat;
+      const tabs = ['all', 'unchanged', 'special', 'const'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('lawTab-' + t);
+        if (t === cat) {
+          btn.className = 'px-3 py-1.5 rounded-xl font-semibold bg-emerald-600 text-white shadow-sm transition-all';
+        } else {
+          btn.className = 'px-3 py-1.5 rounded-xl font-semibold bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:text-white border border-slate-200 dark:border-slate-800 transition-all';
+        }
+      });
+      applyLawFilterAndSearch();
+    }
+
+    const lawSearchInput = document.getElementById('lawSearchInput');
+    lawSearchInput.addEventListener('input', applyLawFilterAndSearch);
+
+    function applyLawFilterAndSearch() {
+      const query = lawSearchInput.value.toLowerCase().trim();
+      const rows = document.querySelectorAll('.law-row');
+      rows.forEach(row => {
+        const rowCat = row.getAttribute('data-cat');
+        const text = row.textContent.toLowerCase();
+        const matchesCategory = (currentLawCategory === 'all' || rowCat === currentLawCategory);
+        const matchesQuery = (!query || text.includes(query));
+
+        if (matchesCategory && matchesQuery) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    // Search Modal Items
+    const searchItems = [
+      // Part 0 Items
+      { title: '📖 刑法四大支柱：法益、法定、罪責、謙抑', desc: '應報思想 vs 預防思想・最後手段性原則・刑法帝國基石', url: '#vol-0-intro' },
+      { title: '🗺️ 刑法分則體系結構樹：個人法益 vs 超個人法益', desc: '法益二元論單相異說・人格法益、財產法益、社會法益、國家法益', url: '#vol-0-legal-interest' },
+      { title: '案例 1-1 / 0-1 【長髮剪除案】 §277 [2026未更動]', desc: '侵害毛髮是否算傷害？生理機能障礙說 vs 身體完整性侵害說（通說）・108年調高罰金・2026未更動', url: '#case-0-1' },
+      { title: '案例 1-2 / 0-2 【偷小偷皮夾案】 §320 [2026未更動]', desc: '竊盜罪保護所有權或持有？所有權及持有說（通說：違法持有亦受保護）・2026未更動', url: '#case-0-2' },
+      { title: '案例 1-3 / 0-3 【肇事逃逸罪三大說】 §185-4 [⚠️110重大修法分流]', desc: '生命身體安全說 vs 公共安全說 vs 確認利益保障說・釋字777宣告違憲・110年修法分流處罰', url: '#case-0-3' },
+      { title: '📜 罪刑法定四大派生原則（含層級化法律保留）', desc: '習慣法禁止、類推適用禁止、罪刑明確性、法不溯及既往・絕對法律保留', url: '#vol-0-legality' },
+      { title: '案例 1-4 / 0-4 【原因自由行為成文化案】 §19 III [2026未更動/憲判限縮]', desc: '習慣法禁止原則・早期實務違法・94年增訂§19 III・113憲判8號精神障礙排除死刑', url: '#case-0-4' },
+      { title: '案例 1-5 / 0-5 【偷電能與偷接第四台訊號案】 §323 [2026未更動]', desc: '類推適用禁止・電能動產化擬制・私接影音訊號超出動產能量文義不構成竊盜罪', url: '#case-0-5' },
+      { title: '案例 1-6 / 0-6 【絕對不定期刑 vs 相對不定期刑】 [2026未更動]', desc: '罪刑明確性原則・未定刑期違憲無效・相對法定刑體系合憲', url: '#case-0-6' },
+      { title: '案例 1-7 / 0-7 【小三條款溯及既往案】 §1 [2026未更動]', desc: '法不溯及既往原則・事後立法追溯處罰突襲人民・信賴保護違憲・通姦已除罪化', url: '#case-0-7' },
+      { title: '案例 1-8 / 0-8 【準強盜罪強暴脅迫門檻】 §329 [2026未更動/113憲判9合憲]', desc: '罪責相當原則・釋字630與113憲判9號・須達使人難以抗拒程度合憲', url: '#case-0-8' },
+      { title: '案例 2-1 / 0-9 【私行拘禁繼續犯跨法加重案】 §2/§302/§302-1 [⚠️112重大增訂]', desc: '繼續犯之適用效力・行為終了時法即為行為時法・112年增訂§302-1加重處罰', url: '#case-0-9' },
+      { title: '⚖️ 2026 法律動態核對清單與未更動清單', desc: '全國法規資料庫實時核對・§12至§27等2026未更動確認', url: '#law-updates-2026' },
+      { title: '🏛️ 憲法法庭 113 年憲判字第 8 號判決', desc: '死刑限縮情節最嚴重・心智缺陷者絕對排除死刑・一致決', url: '#const-judgment-8' },
+      { title: '🤰 《優生保健法》第9條 vs 《生育保健法》草案', desc: '人工流產配偶同意權刪除草案仍在立法院審議，現行法未動', url: '#eugenic-status' },
+      { title: '⚠️ 刑法業務過失致死/致傷全面廢除', desc: '108年修法刪除業務過失・普通過失致死提高至5年以下', url: '#law-updates-2026' },
+      { title: '📜 2026年7月最新修正公布刑法第80條', desc: '追訴權時效起算與停止事由修正', url: '#recent-criminal-amendments' },
+      { title: '📜 2026年3月最新修正公布刑法第79-1條', desc: '增訂§78-1、§78-2，落實釋字796號殘刑執行比例原則', url: '#recent-criminal-amendments' },
+      { title: '🧩 二階論 vs 三階論 四塊拼圖大解密', desc: '破解不分 TB 與 R 迷思・垂直切割 vs 水平切割對比', url: '#puzzle-comparer' },
+      { title: '⚠️ 解題大忌：非既遂≠未遂！非故意≠過失！', desc: '嚴重背離罪刑法定原則之誤區・§12 I 邏輯鐵證', url: '#ch2-warning' },
+      { title: '案例 1-16 【凶神惡煞問路挨打案】', desc: '誤想防衛・滿足防衛意思但欠缺客觀情狀・無法阻卻違法', url: '#case-1-16' },
+      { title: '案例 1-17 【角頭巷弄先下手為強案】', desc: '偶然防衛・具客觀情狀但欠缺防衛意思・無法阻卻違法', url: '#case-1-17' },
+      { title: '案例 2-1 【西瓜刀耍帥砍人落空案】', desc: '非既遂≠未遂・§25 II ➔ §271 II 著手與故意審查', url: '#case-2-1' },
+      { title: '案例 2-2 【西瓜刀練刀誤殺案】', desc: '非故意≠過失・§12 II ➔ §276 I 預見可能性審查', url: '#case-2-2' },
+      { title: '案例 2-3 【法律系高材生挑唆防衛案】', desc: '意圖式挑唆防衛・權利濫用・例外無法阻卻違法', url: '#case-2-3' },
+      { title: '案例 2-4 【半斤蛇膽烈酒壯膽殺人案】', desc: '原因自由行為 (§19 III)・自陷精神障礙例外無法阻卻罪責', url: '#case-2-4' },
+      { title: '🍒 案例 1-14 【櫻桃案】', desc: '法益衡量極端失衡・射殺小學生不得阻卻違法', url: '#case-1-14' },
+      { title: '🩸 案例 1-15 【輸血案】', desc: '違反人性尊嚴底線・強抽無辜義工血液不得阻卻違法', url: '#case-1-15' },
+      { title: '🏛️ 基本論罪全流程六階層表', desc: '行為 ➔ TB ➔ R ➔ S ➔ 其他刑罰要件 ➔ 終局結論', url: '#six-stage-matrix' },
+      { title: '📊 阻卻違法 vs 阻卻罪責 終極矩陣', desc: '法條、推定、超法定、不得主張例外、法律效果全對照', url: '#matrix' }
+    ];
+
     const searchModal = document.getElementById('searchModal');
     const searchTrigger = document.getElementById('searchTriggerBtn');
     const mobileSearch = document.getElementById('mobileSearchBtn');
     const closeSearch = document.getElementById('closeSearchBtn');
     const modalBackdrop = document.getElementById('modalBackdrop');
     const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+
+    function renderSearchResults(query = '') {
+      const q = query.toLowerCase().trim();
+      const filtered = searchItems.filter(item => !q || item.title.toLowerCase().includes(q) || item.desc.toLowerCase().includes(q));
+      if (filtered.length === 0) {
+        searchResults.innerHTML = '<div class="p-4 text-center text-slate-400">查無相關案例或爭點</div>';
+        return;
+      }
+      searchResults.innerHTML = filtered.map(item => `
+        <a href="${item.url}" onclick="closeSearchModal()" class="block p-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-900 dark:text-white font-medium">
+          <div>${item.title}</div>
+          <div class="text-[11px] text-slate-400 font-normal mt-0.5">${item.desc}</div>
+        </a>
+      `).join('');
+    }
 
     function openSearch() {
       searchModal.classList.remove('hidden');
+      renderSearchResults();
       setTimeout(() => searchInput.focus(), 50);
     }
     function closeSearchModal() {
@@ -755,6 +1851,7 @@
     mobileSearch.addEventListener('click', openSearch);
     closeSearch.addEventListener('click', closeSearchModal);
     modalBackdrop.addEventListener('click', closeSearchModal);
+    searchInput.addEventListener('input', (e) => renderSearchResults(e.target.value));
 
     window.addEventListener('keydown', (e) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
@@ -767,7 +1864,7 @@
 
     function copyPageUrl() {
       navigator.clipboard.writeText(window.location.href);
-      alert('已複製本篇筆記連結至剪貼簿！');
+      alert('已複製本篇講義連結至剪貼簿！');
     }
 
     // Interactive Stepper Logic
@@ -783,24 +1880,24 @@
       {
         title: '階段 2：行為評價（形式不法：法益侵害）',
         focus: '構成要件該當性',
-        meaning: '身體感到紅腫刺痛是第一感受。侵害重大生活利益之典型舉動寫入刑法分則條文（如殺人罪、傷害罪）。符合者即「該當構成要件」。',
-        defense: '確認法益侵害後，立即進入實質違法性之推定。',
+        meaning: '客觀要件（既遂）＋主觀要件（故意）。符合分則罪名描述即該當構成要件。',
+        defense: '確認法益侵害形式後，立即進入實質違法性之推定。',
         pill: '法益侵害（挨打臉痛） ➔ 該當構成要件',
         tbActive: true, rwActive: false, culActive: false
       },
       {
         title: '階段 3：實質不法（無正當理由 ➔ 推定違法性）',
-        focus: '阻卻違法事由反證',
-        meaning: '挨打後第二感受是疑惑與氣憤：「憑什麼無緣無故打我？」。確認構成要件該當，即「推定無正當理由（違法）」。',
-        defense: '行為人可主張【阻卻違法事由】：§21依法令/依命令、§22業務、§23正當防衛、§24緊急避難、超法定利益衡量。推翻成功者自始非壞事！',
-        pill: '構成要件該當 ➔ 推定具違法性（若有正當理由則阻卻）',
+        focus: '阻卻違法雙重該當',
+        meaning: '確認 TB 後，推定無正當理由。要想推翻違法性推定，阻卻違法事由之「客觀要件」與「主觀要件」必須同時具備！',
+        defense: '反證事由：§21法令、§22業務、§23防衛、§24避難、超法定利益衡量。若欠缺任一要件（如誤想防衛、偶然防衛）則不生阻卻效力。',
+        pill: 'TB該當 ➔ 推定具違法性（客主觀雙重該當方得阻卻）',
         tbActive: true, rwActive: true, culActive: false
       },
       {
         title: '階段 4：行為人評價（罪責階層 ➔ 期待可能性）',
         focus: '阻卻罪責事由反證',
-        meaning: '行為已被確立為壞事（不法成立），法律推定其為壞人，進一步審查行為人個人是否具備受譴責性。',
-        defense: '行為人可主張【阻卻罪責事由】：§16欠缺不法意識、§18年齡、§19精神、§20生理、§23但防衛過當、期待不可能（幼兒墜床案）。推翻成功者免除或減輕罪責！',
+        meaning: '不法確立後推定為壞人，進一步審查行為人個人是否具備受非難可能性（責任能力、不法意識、期待可能性）。',
+        defense: '反證事由：§16欠缺不法意識、§18年齡、§19精神、§20生理、§23但防衛過當、欠缺期待可能性（幼兒墜床案）。',
         pill: '不法成立 ➔ 推定具罪責（無期待可能性則阻卻）',
         tbActive: true, rwActive: true, culActive: true
       }
@@ -853,14 +1950,123 @@
       }
     }
 
+    // Puzzle Comparer Logic
+    function renderPuzzle(tier) {
+      const canvas = document.getElementById('puzzleCanvas');
+      const summary = document.getElementById('puzzleSummary');
+      const btn3 = document.getElementById('btnView3Tier');
+      const btn2 = document.getElementById('btnView2Tier');
+
+      if (tier === 3) {
+        btn3.className = 'px-3 py-1 rounded-lg font-semibold bg-white dark:bg-indigo-600 text-indigo-600 dark:text-white shadow-sm transition-all';
+        btn2.className = 'px-3 py-1 rounded-lg font-semibold text-slate-600 dark:text-slate-400 hover:text-white transition-all';
+        
+        canvas.innerHTML = `
+          <!-- Block 1: TB -->
+          <div class="p-4 rounded-xl border border-indigo-500/40 bg-indigo-950/20 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-sm text-indigo-400">第一階：構成要件該當性 (TB)</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-indigo-900/60 text-indigo-300 font-mono">縱向切階層</span>
+              </div>
+              <p class="text-xs text-slate-400 mb-3">包含客觀與主觀兩大要件：</p>
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <div class="p-2 rounded bg-slate-900/90 border border-slate-800 text-center font-mono text-indigo-300">
+                  【拼圖 1】<br>客觀構成要件
+                </div>
+                <div class="p-2 rounded bg-slate-900/90 border border-slate-800 text-center font-mono text-indigo-300">
+                  【拼圖 2】<br>主觀構成要件
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 text-[11px] text-indigo-400/80 font-mono">➔ 兩者該當後，推定具備違法性</div>
+          </div>
+
+          <!-- Block 2: R -->
+          <div class="p-4 rounded-xl border border-amber-500/40 bg-amber-950/20 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-sm text-amber-400">第二階：違法性階層 (R)</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-900/60 text-amber-300 font-mono">反面尋找阻卻</span>
+              </div>
+              <p class="text-xs text-slate-400 mb-3">包含客觀阻卻與主觀防衛意思：</p>
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <div class="p-2 rounded bg-slate-900/90 border border-slate-800 text-center font-mono text-amber-300">
+                  【拼圖 3】<br>客觀阻卻違法
+                </div>
+                <div class="p-2 rounded bg-slate-900/90 border border-slate-800 text-center font-mono text-amber-300">
+                  【拼圖 4】<br>主觀阻卻違法
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 text-[11px] text-amber-400/80 font-mono">➔ 兩者均該當方得推翻推定</div>
+          </div>
+        `;
+
+        summary.innerHTML = `
+          <strong>💡 三階論特色：</strong>由「構成要件該當性」與「違法性」出發建構不法。先垂直將不法切為 TB 與 R，TB 與 R 內部再各自包含客觀與主觀。
+        `;
+      } else {
+        btn2.className = 'px-3 py-1 rounded-lg font-semibold bg-white dark:bg-purple-600 text-purple-600 dark:text-white shadow-sm transition-all';
+        btn3.className = 'px-3 py-1 rounded-lg font-semibold text-slate-600 dark:text-slate-400 hover:text-white transition-all';
+
+        canvas.innerHTML = `
+          <!-- Block 1: 客觀不法 -->
+          <div class="p-4 rounded-xl border border-emerald-500/40 bg-emerald-950/20 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-sm text-emerald-400">客觀不法 (Objective Wrong)</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-900/60 text-emerald-300 font-mono">水平切客觀</span>
+              </div>
+              <p class="text-xs text-slate-400 mb-3">客觀拼圖的組合：</p>
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <div class="p-2 rounded bg-slate-900/90 border border-slate-800 text-center font-mono text-emerald-300">
+                  【拼圖 1】<br>客觀構成要件
+                </div>
+                <div class="p-2 rounded bg-slate-900/90 border border-slate-800 text-center font-mono text-emerald-300">
+                  【拼圖 3】<br>無客觀阻卻違法
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 text-[11px] text-emerald-400/80 font-mono">➔ 客觀構成該當且無客觀阻卻事由</div>
+          </div>
+
+          <!-- Block 2: 主觀不法 -->
+          <div class="p-4 rounded-xl border border-purple-500/40 bg-purple-950/20 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-sm text-purple-400">主觀不法 (Subjective Wrong)</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-purple-900/60 text-purple-300 font-mono">水平切主觀</span>
+              </div>
+              <p class="text-xs text-slate-400 mb-3">主觀拼圖的組合：</p>
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <div class="p-2 rounded bg-slate-900/90 border border-slate-800 text-center font-mono text-purple-300">
+                  【拼圖 2】<br>主觀構成要件
+                </div>
+                <div class="p-2 rounded bg-slate-900/90 border border-slate-800 text-center font-mono text-purple-300">
+                  【拼圖 4】<br>無主觀阻卻違法
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 text-[11px] text-purple-400/80 font-mono">➔ 主觀構成該當且無主觀阻卻事由</div>
+          </div>
+        `;
+
+        summary.innerHTML = `
+          <strong>💡 二階論特色：</strong>由「客觀要件」與「主觀要件」出發建構不法。並非不分 TB 與 R，而是將四塊拼圖改為水平橫切，客觀不法與主觀不法各自單獨產生違法推定效果！
+        `;
+      }
+    }
+    renderPuzzle(3);
+
     // Scrollspy for right Table of Contents
-    const tocSections = document.querySelectorAll('section[id], div[id^="case-"], div[id="matrix"]');
+    const tocSections = document.querySelectorAll('section[id], div[id^="case-"], div[id^="ch2-"], div[id="const-judgment-8"], div[id="eugenic-status"], div[id="recent-criminal-amendments"]');
     const tocLinks = document.querySelectorAll('.toc-link');
 
     window.addEventListener('scroll', () => {
       let current = '';
       tocSections.forEach(section => {
-        const top = section.offsetTop - 130;
+        const top = section.offsetTop - 140;
         if (window.scrollY >= top) {
           current = section.getAttribute('id');
         }
@@ -868,9 +2074,9 @@
 
       tocLinks.forEach(link => {
         if (link.getAttribute('href') === '#' + current) {
-          link.className = 'toc-link block py-1.5 pl-3 text-indigo-500 font-semibold -ml-px border-l-2 border-indigo-500';
+          link.className = 'toc-link block py-1 pl-3 text-emerald-500 font-bold -ml-px border-l-2 border-emerald-500';
         } else {
-          link.className = 'toc-link block py-1.5 pl-3 text-slate-600 dark:text-slate-400 hover:text-white';
+          link.className = 'toc-link block py-1 pl-3 text-slate-500 hover:text-white';
         }
       });
     }, { passive: true });
