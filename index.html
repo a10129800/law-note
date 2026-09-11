@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>犯罪概念與論罪結構 - 刑法導論 3-Column 知識庫筆記</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#F5F3FF',
+              500: '#6366F1',
+              600: '#4F46E5',
+              700: '#4338CA',
+            },
+            crimson: {
+              500: '#F43F5E',
+              600: '#E11D48',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter & JetBrains Mono & Noto Sans TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    pre, code, .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* Sleek custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.3);
+      border-radius: 9999px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: rgba(51, 65, 85, 0.5);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-[#0B0F17] text-slate-850 dark:text-slate-200 antialiased min-h-screen transition-colors duration-200">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="sticky top-0 z-40 w-full border-b border-slate-200 dark:border-slate-800/80 bg-white/80 dark:bg-[#0B0F17]/80 backdrop-blur-md">
+    <div class="max-w-[92rem] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Left: Mobile Menu Button & Brand -->
+      <div class="flex items-center gap-3">
+        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+
+        <a href="#" class="flex items-center gap-2.5 group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-md shadow-indigo-500/25 group-hover:scale-105 transition-transform text-lg">
+            ⚖️
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-slate-900 dark:text-white text-base tracking-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                刑法講義<span class="text-indigo-500">.docs</span>
+              </span>
+              <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/60 rounded-full">
+                Note 3 Column 規格
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Center: Search Trigger (Cmd + K) -->
+      <div class="flex-1 max-w-md mx-4 hidden md:block">
+        <button id="searchTriggerBtn" class="w-full flex items-center justify-between px-3.5 py-2 text-sm text-slate-400 bg-slate-100/80 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-indigo-500/50 hover:bg-white dark:hover:bg-slate-800/60 transition-all shadow-sm group">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <span class="text-slate-500 dark:text-slate-400">搜尋案例、條文、爭點（如：櫻桃案、期待可能）...</span>
+          </div>
+          <kbd class="flex items-center gap-0.5 px-2 py-0.5 text-[11px] font-mono text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-sm">
+            <span class="text-xs">Ctrl</span> K
+          </kbd>
+        </button>
+      </div>
+
+      <!-- Right: Actions -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button id="mobileSearchBtn" class="md:hidden p-2 text-slate-500 dark:text-slate-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </button>
+
+        <!-- Dark/Light Mode Toggle -->
+        <button id="themeToggleBtn" class="p-2 rounded-xl text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-slate-200 dark:hover:border-slate-700" title="切換深色/淺色主題">
+          <svg id="sunIcon" class="w-4 h-4 text-amber-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg id="moonIcon" class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+
+        <a href="#simulator" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/60 hover:bg-indigo-100 transition-colors">
+          <span>⚡ 推定模擬器</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==================== MAIN BODY (3 COLUMNS) ==================== -->
+  <div class="max-w-[92rem] mx-auto flex">
+    
+    <!-- Mobile Backdrop -->
+    <div id="mobileBackdrop" class="fixed inset-0 z-30 bg-slate-950/60 backdrop-blur-sm hidden lg:hidden"></div>
+
+    <!-- COLUMN 1: LEFT SIDEBAR (Sticky on desktop, never overlaps content) -->
+    <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-40 w-72 lg:w-80 h-[calc(100vh-4rem)] shrink-0 bg-white dark:bg-[#0B0F17] border-r border-slate-200 dark:border-slate-800/80 -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col">
+      
+      <!-- Filter Input -->
+      <div class="p-4 border-b border-slate-200 dark:border-slate-800/60">
+        <div class="relative">
+          <svg class="absolute left-3 top-2.5 w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input id="sidebarFilterInput" type="text" placeholder="篩選章節與爭點..." class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-100 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-lg text-slate-800 dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:border-indigo-500">
+        </div>
+      </div>
+
+      <!-- Navigation Tree -->
+      <div class="flex-1 overflow-y-auto px-4 py-4 space-y-6">
+        
+        <!-- Volume 1: 導論與犯罪論 -->
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+            導論：三階層論罪體系
+          </div>
+          <ul class="space-y-1 pl-1 border-l-2 border-slate-100 dark:border-slate-800/80 ml-1 text-xs">
+            <li>
+              <a href="#overview" class="flex items-center justify-between px-3 py-2 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-200/50 dark:border-indigo-800/40">
+                <span class="truncate">01. 犯罪概念與論罪結構</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-400 font-mono">當前篇</span>
+              </a>
+            </li>
+            <li><a href="#simulator" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">02. 雙重推定互動模擬器</span><span class="text-[10px] px-1.5 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-400 font-mono">Interactive</span></a></li>
+            <li><a href="#culpability" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">03. 不法推定罪責 (壞人)</span></a></li>
+            <li><a href="#wrongfulness" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">04. 構成要件推定違法 (壞事)</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Volume 2: 15 大經典案例實戰 -->
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+            15 大爭議案例實例庫
+          </div>
+          <ul class="space-y-1 pl-1 border-l-2 border-slate-100 dark:border-slate-800/80 ml-1 text-xs">
+            <li><a href="#case-1-1" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 1-1~1-4: 欠缺責任與意識</span><span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-mono">§16~§20</span></a></li>
+            <li><a href="#case-1-5" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 1-5: 防衛過當與寬恕罪責</span></a></li>
+            <li><a href="#case-1-6" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 1-6: 幼兒墜床燙衣火災案</span><span class="text-[10px] px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-400 font-mono">期待可能</span></a></li>
+            <li><a href="#case-1-7" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 1-7~1-11: 法定阻卻違法</span><span class="text-[10px] px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-400 font-mono">§21~§24</span></a></li>
+            <li><a href="#case-1-12" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50"><span class="truncate">案例 1-12~1-13: 承諾與義務衝突</span></a></li>
+            <li><a href="#case-1-14" class="flex items-center justify-between px-3 py-2 rounded-lg text-rose-600 dark:text-rose-400 font-semibold hover:bg-rose-50 dark:hover:bg-rose-950/30"><span class="truncate">🍒 案例 1-14: 櫻桃案 (利益失衡)</span><span class="text-[10px] px-1.5 py-0.5 rounded bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-400 font-mono">必考</span></a></li>
+            <li><a href="#case-1-15" class="flex items-center justify-between px-3 py-2 rounded-lg text-rose-600 dark:text-rose-400 font-semibold hover:bg-rose-50 dark:hover:bg-rose-950/30"><span class="truncate">🩸 案例 1-15: 輸血案 (人性尊嚴)</span><span class="text-[10px] px-1.5 py-0.5 rounded bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-400 font-mono">爭點</span></a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="p-4 border-t border-slate-200 dark:border-slate-800/60 bg-slate-50/50 dark:bg-slate-900/30 text-xs text-slate-500">
+        📖 刑法總論・三階層體系精要
+      </div>
+    </aside>
+
+    <!-- COLUMN 2: CENTER MAIN READER -->
+    <main class="flex-1 min-w-0 px-4 sm:px-8 xl:px-8 py-8 lg:py-10">
+      <div class="max-w-4xl mx-auto">
+        
+        <!-- Breadcrumbs -->
+        <nav class="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 mb-6 font-medium">
+          <a href="#" class="hover:text-indigo-600 dark:hover:text-indigo-400">刑法總論</a>
+          <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <span>導論篇</span>
+          <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <span class="text-slate-900 dark:text-white font-semibold">第一章 犯罪的概念</span>
+        </nav>
+
+        <!-- Article Header -->
+        <header class="mb-10 pb-8 border-b border-slate-200 dark:border-slate-800/80">
+          <div class="flex flex-wrap items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/60">
+              導論 第一章
+            </span>
+            <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60">
+              三階層體系基礎
+            </span>
+            <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 border border-purple-200 dark:border-purple-800/60">
+              雙重推定模型
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+            犯罪概念與論罪結構
+          </h1>
+
+          <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+            以生活經驗為出發點的直觀法學思維。跳脫象牙塔裡的死記硬背，透過「壞人做壞事」的常識直覺，建立穩固又清晰的「三階層推定與反證」思維流程。
+          </p>
+
+          <div class="flex flex-wrap items-center gap-6 mt-6 pt-6 border-t border-slate-100 dark:border-slate-800/60 text-xs text-slate-500 dark:text-slate-400">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>研讀時間約 15 分鐘</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-base">⚖️</span>
+              <span>核心考點：不法與罪責、利益衡量、期待可能性</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Section: Overview -->
+        <section id="overview" class="scroll-mt-24 space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
+            本篇導讀：直觀思維架構
+          </h2>
+          <p>
+            刑法是一部處理犯罪的法律。何謂犯罪？簡單說就是<strong>「一個壞人」做了「一件壞事」</strong>。
+          </p>
+          <p>
+            然而，經驗告訴我們：<strong>判斷誰是壞人非常困難</strong>（牽涉人的精神狀態、成長背景、主觀惡意），但<strong>判斷一件事是不是壞事相對容易得多</strong>。因此，刑法的論罪順序定為：
+          </p>
+          <div class="p-4 rounded-xl border border-indigo-200 dark:border-indigo-900/60 bg-indigo-50/40 dark:bg-indigo-950/20 font-medium text-indigo-950 dark:text-indigo-200">
+            先判斷「是否有一件壞事發生（評價行為 ➔ 不法）」<br>
+            再判斷「做這件壞事的人是不是一個壞人（評價行為人 ➔ 罪責）」
+          </div>
+
+          <!-- Callout -->
+          <div class="my-6 rounded-xl border border-blue-500/30 dark:border-blue-500/20 bg-blue-50/50 dark:bg-blue-950/20 p-4.5 text-sm">
+            <div class="flex items-start gap-3">
+              <span class="text-blue-500 text-lg">💡</span>
+              <div>
+                <div class="font-bold text-slate-900 dark:text-white mb-1">推定（Presumption）的法律智慧</div>
+                <div class="text-slate-700 dark:text-slate-300">
+                  會做壞事的人絕大多數是壞人，但「絕大多數不等於百分之百」。為了兼顧審判效率與避免冤抑，法律採取「推定」原則——先預設為壞人，但<strong>賦予行為人舉出反證推翻假設的機會</strong>（阻卻事由）。
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Interactive Simulator (Note 3 Column 獨家亮點) -->
+        <section id="simulator" class="scroll-mt-24 my-10">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
+            ⚡ 三階層論罪與推定反證互動模擬器
+          </h2>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+            點擊下方論罪階段，動態觀察「行為評價（不法）」與「行為人評價（罪責）」的推定路徑與反證推翻邏輯：
+          </p>
+
+          <!-- Interactive Stepper Component -->
+          <div class="my-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#101623]/80 p-5 sm:p-6 shadow-xl">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-slate-200 dark:border-slate-800/80">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">審查階層 Step-by-Step</span>
+                <h3 id="simTitle" class="text-lg font-bold text-slate-900 dark:text-white mt-1">階段 1：直觀犯罪定義（壞人做壞事）</h3>
+              </div>
+              <div class="bg-indigo-50 dark:bg-indigo-950/80 border border-indigo-200 dark:border-indigo-800/60 px-3.5 py-1.5 rounded-full self-start sm:self-auto text-xs font-semibold text-indigo-700 dark:text-indigo-300">
+                審查核心：<span id="simFocusPill" class="font-bold text-indigo-900 dark:text-white">常識直覺入門</span>
+              </div>
+            </div>
+
+            <!-- Stage Buttons -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 my-5">
+              <button onclick="setLawStage(0)" id="lawBtn0" class="p-2.5 text-left rounded-xl border border-indigo-500 bg-indigo-600 text-white font-semibold text-xs shadow-md">
+                <div class="text-[10px] opacity-80 uppercase">Step 01</div>
+                <div class="font-bold mt-0.5">犯罪直觀定義</div>
+              </button>
+              <button onclick="setLawStage(1)" id="lawBtn1" class="p-2.5 text-left rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 text-slate-700 dark:text-slate-300 text-xs">
+                <div class="text-[10px] opacity-80 uppercase">Step 02</div>
+                <div class="font-bold mt-0.5">壞事：法益侵害</div>
+              </button>
+              <button onclick="setLawStage(2)" id="lawBtn2" class="p-2.5 text-left rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 text-slate-700 dark:text-slate-300 text-xs">
+                <div class="text-[10px] opacity-80 uppercase">Step 03</div>
+                <div class="font-bold mt-0.5">違法性與反證</div>
+              </button>
+              <button onclick="setLawStage(3)" id="lawBtn3" class="p-2.5 text-left rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 text-slate-700 dark:text-slate-300 text-xs">
+                <div class="text-[10px] opacity-80 uppercase">Step 04</div>
+                <div class="font-bold mt-0.5">壞人：罪責與反證</div>
+              </button>
+            </div>
+
+            <!-- Dynamic Interactive Canvas -->
+            <div class="relative my-4 rounded-xl border border-slate-200 dark:border-slate-800/80 bg-slate-950 p-6 overflow-hidden">
+              <div class="relative z-10 flex flex-col gap-6">
+                
+                <!-- Row 1: 行為評價 (不法) -->
+                <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/90 transition-all">
+                  <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 flex items-center justify-between">
+                    <span>第一階層：行為評價（是否為「壞事」＝ 不法）</span>
+                    <span id="tier1Badge" class="text-[10px] px-2 py-0.5 rounded bg-indigo-950 text-indigo-300 font-mono">審查中</span>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div id="nodeTB" class="p-3.5 rounded-lg border border-slate-800 bg-slate-950/80">
+                      <div class="font-bold text-xs text-indigo-400 mb-1">1. 構成要件該當性 (形式不法)</div>
+                      <div class="text-[11px] text-slate-400">做出讓人不舒服的舉動（侵害生命、身體、財產等重要生活利益）➔ 符合刑法分則罪名描述。</div>
+                    </div>
+
+                    <div id="nodeRW" class="p-3.5 rounded-lg border border-slate-800 bg-slate-950/80">
+                      <div class="font-bold text-xs text-amber-400 mb-1">2. 違法性 (實質不法)</div>
+                      <div class="text-[11px] text-slate-400">由構成要件<strong>推定</strong>無正當理由。反證事由：<strong>阻卻違法事由</strong>（§21法令、§22業務、§23防衛、§24避難、利益衡量）。</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Downward Arrow: 推定 -->
+                <div class="flex justify-center items-center text-indigo-400 text-xs gap-2">
+                  <span class="h-4 w-px bg-indigo-500/50"></span>
+                  <span id="presumptionPill" class="font-mono text-[10px] bg-slate-900 px-3 py-0.5 rounded border border-indigo-500/30">
+                    不法成立 ➔ 推定行為人具備罪責（壞事推定壞人）
+                  </span>
+                  <span class="h-4 w-px bg-indigo-500/50"></span>
+                </div>
+
+                <!-- Row 2: 行為人評價 (罪責) -->
+                <div id="tier2Container" class="p-4 rounded-xl border border-slate-800 bg-slate-900/90 transition-all">
+                  <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 flex items-center justify-between">
+                    <span>第二階層：行為人評價（是否為「壞人」＝ 罪責）</span>
+                    <span id="tier2Badge" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-400 font-mono">等待不法確立</span>
+                  </div>
+
+                  <div id="nodeCul" class="p-3.5 rounded-lg border border-slate-800 bg-slate-950/80">
+                    <div class="font-bold text-xs text-purple-400 mb-1">3. 罪責審查 (個人非難可能性)</div>
+                    <div class="text-[11px] text-slate-400">行為人能否被期待不做壞事？反證事由：<strong>阻卻罪責事由</strong>（§16不法意識、§18年齡、§19精神、§20生理、§23但防衛過當、期待可能性）。</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Dynamic Explanations -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 pt-4 border-t border-slate-200 dark:border-slate-800 text-xs">
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-1 text-indigo-500">
+                  ● 當前階段法律意涵
+                </h4>
+                <p id="simMeaning" class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  以「一個壞人做了壞事」作為思考起點。先查事，再查人。
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-1 text-emerald-500">
+                  ● 反證抗辯機制
+                </h4>
+                <p id="simDefense" class="text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+                  做壞事推定為壞人，但法律設有「阻卻事由」為被告保留平反與不罰之機會。
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Section: 不法推定罪責 -->
+        <section id="culpability" class="scroll-mt-24 space-y-4 my-10">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
+            不法推定罪責原則（壞事推定壞人）
+          </h2>
+          <p class="text-sm leading-relaxed">
+            當行為人做了一件壞事而被推定為壞人時，法律賦予反證推翻的機會。立法者很貼心地在刑法中例示了多種<strong>阻卻罪責事由</strong>：
+          </p>
+
+          <!-- 案例 1-1 ~ 1-6 卡片 -->
+          <div class="space-y-4 my-6">
+            
+            <!-- 案例 1-1 -->
+            <div id="case-1-1" class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 font-mono">案例 1-1 • 欠缺不法意識</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300 font-mono">§ 16</span>
+              </div>
+              <div class="text-xs bg-white dark:bg-slate-950/80 p-3 rounded-lg border border-slate-200 dark:border-slate-850 mb-2.5 text-slate-700 dark:text-slate-300">
+                🗣️ <strong>被告：</strong>「這是一件壞事嗎？怎麼會？我以為這是 ok 的耶，對不起啦！」
+              </div>
+              <div class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                👉 <strong>問題導引：</strong>主張「欠缺不法意識」之抗辯（§ 16）。行為人不知道法律對其行為有所禁止，<strong>雖做壞事，但非出於惡意壞人</strong>。按情節不可避免者免除其刑，可避免者得減輕其刑。
+              </div>
+            </div>
+
+            <!-- 案例 1-2 -->
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 font-mono">案例 1-2 • 責任能力：年齡</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300 font-mono">§ 18</span>
+              </div>
+              <div class="text-xs bg-white dark:bg-slate-950/80 p-3 rounded-lg border border-slate-200 dark:border-slate-850 mb-2.5 text-slate-700 dark:text-slate-300">
+                🗣️ <strong>被告：</strong>「雖然我做了一件壞事，但那是因為我年紀小不懂事，原諒我好不好？」
+              </div>
+              <div class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                👉 <strong>問題導引：</strong>主張「欠缺責任能力：年齡」抗辯（§ 18）。未滿 14 歲不罰（排除罪責）；14 歲以上未滿 18 歲或滿 80 歲者得減輕其刑。
+              </div>
+            </div>
+
+            <!-- 案例 1-3 -->
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 font-mono">案例 1-3 • 責任能力：精神障礙</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300 font-mono">§ 19</span>
+              </div>
+              <div class="text-xs bg-white dark:bg-slate-950/80 p-3 rounded-lg border border-slate-200 dark:border-slate-850 mb-2.5 text-slate-700 dark:text-slate-300">
+                🗣️ <strong>被告：</strong>「吾乃降世羅漢，擊殺沉世惡人乃替天行道！」<br>
+                ⚖️ <strong>律師：</strong>「我的當事人病得不輕，他根本不知道自己在幹嘛。」
+              </div>
+              <div class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                👉 <strong>問題導引：</strong>主張「欠缺責任能力：精神」抗辯（§ 19）。行為人因精神障礙致不能辨識其行為違法（辨識能力），或欠缺依其辨識而行為之能力（控制能力），不罰；顯著減低者得減輕。
+              </div>
+            </div>
+
+            <!-- 案例 1-4 -->
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 font-mono">案例 1-4 • 責任能力：生理瘖啞</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300 font-mono">§ 20</span>
+              </div>
+              <div class="text-xs bg-white dark:bg-slate-950/80 p-3 rounded-lg border border-slate-200 dark:border-slate-850 mb-2.5 text-slate-700 dark:text-slate-300">
+                🗣️ <strong>被告：</strong>……（比手畫腳）。律師：「當事人既聾且啞，智識較差，情有可原。」
+              </div>
+              <div class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                👉 <strong>問題導引：</strong>主張「欠缺責任能力：生理」抗辯（§ 20）。瘖啞人生理學習障礙，法律規定得減輕其刑。
+              </div>
+            </div>
+
+            <!-- 案例 1-5 -->
+            <div id="case-1-5" class="p-4 rounded-xl border border-amber-500/30 dark:border-amber-500/20 bg-amber-50/30 dark:bg-amber-950/20">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-amber-600 dark:text-amber-400 font-mono">案例 1-5 • 寬恕罪責事由：防衛/避難過當</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-mono">§ 23但、§ 24但</span>
+              </div>
+              <div class="text-xs bg-white dark:bg-slate-950/80 p-3 rounded-lg border border-slate-200 dark:border-slate-850 mb-2.5 text-slate-700 dark:text-slate-300">
+                🗣️ <strong>被告：</strong>「是對方先追著我打，情急之下我用手擋甩了他應該不為過吧！」
+              </div>
+              <div class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                👉 <strong>問題導引：</strong>面臨緊急情況，常人本難以精確掌控反擊力道。雖行為過當（仍具不法），但法律基於人性寬恕其過激，<strong>得減輕或免除其刑</strong>。
+              </div>
+            </div>
+
+            <!-- 案例 1-6 -->
+            <div id="case-1-6" class="p-4 rounded-xl border border-purple-500/30 dark:border-purple-500/20 bg-purple-50/30 dark:bg-purple-950/20">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-purple-600 dark:text-purple-400 font-mono">案例 1-6 • 超法定阻卻罪責：期待可能性</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-400 font-mono">超法定核心</span>
+              </div>
+              <div class="text-xs bg-white dark:bg-slate-950/80 p-3 rounded-lg border border-slate-200 dark:border-slate-850 mb-2.5 text-slate-700 dark:text-slate-300">
+                🗣️ <strong>被告：</strong>「我當時在燙衣服，幼兒突然從床跌落血流不止，我太慌亂了急忙送醫，才忘了拔插頭釀成火災！」
+              </div>
+              <div class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                👉 <strong>問題導引：</strong>主張「無期待可能性」。父母面對骨肉命危時必然慌亂，社會客觀上無法期待其臨危保持冷靜拔掉插頭，<strong>阻卻罪責，不成立犯罪</strong>。
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Section: 壞事與構成要件該當推定違法性 -->
+        <section id="wrongfulness" class="scroll-mt-24 space-y-4 my-10">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
+            壞事如何判斷？構成要件該當推定違法性
+          </h2>
+          <p class="text-sm leading-relaxed">
+            所謂「壞事（不法）」，就是<strong>無緣無故做出令人覺得不舒服的行為</strong>。它由兩個直觀指標構成：
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40">
+              <div class="text-xs font-bold text-indigo-500 uppercase tracking-wide mb-1">指標一（形式不法）</div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">法益侵害（不舒服的行為）</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                被打一巴掌，臉腫是第一感受（身體法益侵害）。立法者將公認的侵害行為寫入分則（殺人罪、傷害罪、竊盜罪），符合條文特徵即為<strong>「構成要件該當」</strong>。
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40">
+              <div class="text-xs font-bold text-amber-500 uppercase tracking-wide mb-1">指標二（實質不法）</div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">無正當理由（無緣無故）</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                接踵而來的疑惑與氣憤：「憑什麼打我？」。確認法益侵害後，直接<strong>推定該行為無正當理由（具違法性）</strong>，除非能提出「阻卻違法事由」。
+              </p>
+            </div>
+          </div>
+
+          <!-- 法定阻卻違法事由 案例 1-7 ~ 1-11 -->
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-8 mb-4">
+            法定阻卻違法事由（案例 1-7 ～ 1-11）
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            
+            <div id="case-1-7" class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+              <div class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">§ 21 I 依法令之行為（案例 1-7）</div>
+              <p class="text-slate-600 dark:text-slate-400">依《優生保健法》§9 合法人工流產，法規範允許，非壞事。</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+              <div class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">§ 21 II 依上級合法命令（案例 1-8）</div>
+              <p class="text-slate-600 dark:text-slate-400">員警奉合法搜索票破門搜查，受合法公權力命令保護。</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+              <div class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">§ 22 業務上正當行為（案例 1-9）</div>
+              <p class="text-slate-600 dark:text-slate-400">醫師為病患進行結紮或外科手術，屬社會分工正當醫療。</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+              <div class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">§ 23 正當防衛（案例 1-10）</div>
+              <p class="text-slate-600 dark:text-slate-400">遭人圍毆自衛反擊打傷對方。「正者毋須向不正者低頭」。</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 sm:col-span-2">
+              <div class="font-bold text-indigo-600 dark:text-indigo-400 mb-1">§ 24 緊急避難（案例 1-11）</div>
+              <p class="text-slate-600 dark:text-slate-400">遭瘋狂野狗追逐無路可逃，破門躲入民宅。基於「社會連帶性」容許危難轉嫁。</p>
+            </div>
+
+          </div>
+
+          <!-- 超法定阻卻違法 案例 1-12 ~ 1-15 -->
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-8 mb-4">
+            超法定阻卻違法與違法性之極限（案例 1-12 ～ 1-15）
+          </h3>
+          <p class="text-xs text-slate-500 mb-4">
+            通說核心：<strong>「是否合於利益衡量？」</strong>。若犧牲利益大於保全利益，或為達目的不擇手段，即肯定違法性。
+          </p>
+
+          <div class="space-y-4 text-xs">
+            <!-- 案例 1-12 & 1-13 -->
+            <div id="case-1-12" class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/40">
+              <div class="font-bold text-sm text-slate-900 dark:text-white mb-1">案例 1-12: 得被害人承諾 &amp; 案例 1-13: 義務衝突</div>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                • <strong>黑白猜打巴掌</strong>：被害人自由處分其身體法益，阻卻違法。<br>
+                • <strong>火海救二子能力所限僅救一人</strong>：同時面臨多個同等義務，竭盡所能履行其一，阻卻違法。
+              </p>
+            </div>
+
+            <!-- 案例 1-14: 櫻桃案 -->
+            <div id="case-1-14" class="p-4 rounded-xl border border-rose-500/40 bg-rose-50/40 dark:bg-rose-950/20">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="text-base">🍒</span>
+                <span class="font-bold text-sm text-rose-600 dark:text-rose-400">案例 1-14 【櫻桃案】—— 利益衡量懸殊（權利濫用）</span>
+              </div>
+              <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-2">
+                輪椅主人為保護一顆櫻桃不被小學生偷採，在別無他法下開槍射殺小學生。
+              </p>
+              <div class="bg-white dark:bg-slate-950 p-2.5 rounded-lg border border-rose-200 dark:border-rose-900/60 text-slate-800 dark:text-slate-200 font-medium">
+                ⚖️ <strong>法理剖析：</strong>保全利益（一顆櫻桃財產）與犧牲利益（無價小學生生命）極端懸殊！正當防衛不得違反利益衡量之比例底線，構成<strong>權利濫用</strong>，違反整體法秩序，<strong>無法阻卻違法！仍成立犯罪！</strong>
+              </div>
+            </div>
+
+            <!-- 案例 1-15: 輸血案 -->
+            <div id="case-1-15" class="p-4 rounded-xl border border-rose-500/40 bg-rose-50/40 dark:bg-rose-950/20">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="text-base">🩸</span>
+                <span class="font-bold text-sm text-rose-600 dark:text-rose-400">案例 1-15 【輸血案】—— 手段不擇手段（人性尊嚴底線）</span>
+              </div>
+              <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-2">
+                病患甲急需輸血救命，醫師乙強行抽取拒絕捐血之義工丙血液救甲。
+              </p>
+              <div class="bg-white dark:bg-slate-950 p-2.5 rounded-lg border border-rose-200 dark:border-rose-900/60 text-slate-800 dark:text-slate-200 font-medium">
+                ⚖️ <strong>法理剖析：</strong>就行為層面而言，<strong>為達救人目的不可不擇手段侵犯無辜第三人的身體自主權</strong>！此舉違反憲法核心的人性尊嚴與自主原則，<strong>無法阻卻違法！仍成立犯罪！</strong>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Section: 終極速查對照表 -->
+        <section id="matrix" class="scroll-mt-24 space-y-4 my-10">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight border-b border-slate-100 dark:border-slate-800 pb-2">
+            📊 終極複習對照矩陣：阻卻違法 vs 阻卻罪責
+          </h2>
+          
+          <div class="my-4 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
+            <table class="w-full text-left text-xs sm:text-sm">
+              <thead class="bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-semibold">
+                <tr>
+                  <th class="p-3.5">比較面向</th>
+                  <th class="p-3.5">違法性階層（不法）</th>
+                  <th class="p-3.5">罪責階層（責任）</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-600 dark:text-slate-400">
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                  <td class="p-3.5 font-semibold text-slate-900 dark:text-white">評價對象</td>
+                  <td class="p-3.5"><strong>「行為（壞事）」</strong> 是否具有正當理由</td>
+                  <td class="p-3.5"><strong>「行為人（壞人）」</strong> 是否具受非難可能性</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                  <td class="p-3.5 font-semibold text-slate-900 dark:text-white">推定模式</td>
+                  <td class="p-3.5">構成要件該當 ➔ 推定具備違法性</td>
+                  <td class="p-3.5">不法該當 ➔ 推定具備罪責（壞事推定壞人）</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                  <td class="p-3.5 font-semibold text-slate-900 dark:text-white">法定事由</td>
+                  <td class="p-3.5">§ 21 (法令/命令)、§ 22 (業務)、§ 23 (正當防衛)、§ 24 (緊急避難)</td>
+                  <td class="p-3.5">§ 16 (不法意識)、§ 18 (年齡)、§ 19 (精神)、§ 20 (生理)、§ 23但/§ 24但 (過當寬恕)</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                  <td class="p-3.5 font-semibold text-slate-900 dark:text-white">超法定核心</td>
+                  <td class="p-3.5"><strong>利益衡量原則</strong>（排除櫻桃案、輸血案）</td>
+                  <td class="p-3.5"><strong>期待可能性理論</strong>（如：幼兒墜床燙衣失火案）</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                  <td class="p-3.5 font-semibold text-slate-900 dark:text-white">法律效果</td>
+                  <td class="p-3.5"><span class="text-emerald-500 font-semibold">自始不構成犯罪</span>，連帶免除民事侵權</td>
+                  <td class="p-3.5"><span class="text-purple-500 font-semibold">行為仍屬不法</span>，但不罰行為人個人（第三人仍得正當防衛）</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- COLUMN 3: RIGHT TABLE OF CONTENTS (TOC) -->
+    <aside class="hidden xl:block w-64 shrink-0">
+      <div class="sticky top-24 p-2">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">
+          本頁目錄大綱
+        </div>
+        <nav class="space-y-1 text-xs border-l border-slate-200 dark:border-slate-800">
+          <a href="#overview" class="toc-link block py-1.5 pl-3 text-indigo-500 font-semibold -ml-px border-l-2 border-indigo-500">導論與核心思維</a>
+          <a href="#simulator" class="toc-link block py-1.5 pl-3 text-slate-600 dark:text-slate-400 hover:text-white">⚡ 論罪推定模擬器</a>
+          <a href="#culpability" class="toc-link block py-1.5 pl-3 text-slate-600 dark:text-slate-400 hover:text-white">不法推定罪責 (壞人)</a>
+          <a href="#case-1-1" class="toc-link block py-1.5 pl-5 text-slate-500 hover:text-white">案例 1-1~1-4 責任能力</a>
+          <a href="#case-1-5" class="toc-link block py-1.5 pl-5 text-slate-500 hover:text-white">案例 1-5 防衛避難過當</a>
+          <a href="#case-1-6" class="toc-link block py-1.5 pl-5 text-slate-500 hover:text-white">案例 1-6 期待可能性</a>
+          <a href="#wrongfulness" class="toc-link block py-1.5 pl-3 text-slate-600 dark:text-slate-400 hover:text-white">構成要件推定違法 (壞事)</a>
+          <a href="#case-1-7" class="toc-link block py-1.5 pl-5 text-slate-500 hover:text-white">案例 1-7~1-11 法定事由</a>
+          <a href="#case-1-14" class="toc-link block py-1.5 pl-5 text-rose-500 font-semibold hover:text-white">🍒 案例 1-14 櫻桃案</a>
+          <a href="#case-1-15" class="toc-link block py-1.5 pl-5 text-rose-500 font-semibold hover:text-white">🩸 案例 1-15 輸血案</a>
+          <a href="#matrix" class="toc-link block py-1.5 pl-3 text-slate-600 dark:text-slate-400 hover:text-white">📊 終極複習對照矩陣</a>
+        </nav>
+
+        <!-- Quick actions -->
+        <div class="mt-8 pt-4 border-t border-slate-200 dark:border-slate-800 text-xs space-y-2">
+          <button onclick="copyPageUrl()" class="text-slate-400 hover:text-white flex items-center gap-1.5 py-1">
+            <span>🔗 複製本篇連結</span>
+          </button>
+          <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="text-slate-400 hover:text-white flex items-center gap-1.5 py-1">
+            <span>↑ 回到頂部</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ==================== SEARCH MODAL ==================== -->
+  <div id="searchModal" class="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-slate-950/70 backdrop-blur-md hidden">
+    <div id="modalBackdrop" class="fixed inset-0"></div>
+    <div class="relative w-full max-w-2xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden z-10 flex flex-col">
+      <div class="flex items-center px-4 py-3.5 border-b border-slate-200 dark:border-slate-800/80 gap-3">
+        <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input id="searchInput" type="text" placeholder="搜尋關鍵字（例如：櫻桃案、輸血案、§19、期待可能性、正當防衛）..." class="flex-1 bg-transparent text-sm text-slate-900 dark:text-white focus:outline-none">
+        <button id="closeSearchBtn" class="text-slate-400 hover:text-white p-1">✕</button>
+      </div>
+      <div id="searchResults" class="p-2 max-h-80 overflow-y-auto space-y-1 text-xs">
+        <a href="#case-1-14" onclick="closeSearchModal()" class="block p-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-900 dark:text-white font-medium">
+          🍒 案例 1-14 【櫻桃案】 <span class="text-[11px] text-slate-400 block font-normal">利益衡量極端失衡・射殺小學生不得阻卻違法</span>
+        </a>
+        <a href="#case-1-15" onclick="closeSearchModal()" class="block p-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-900 dark:text-white font-medium">
+          🩸 案例 1-15 【輸血案】 <span class="text-[11px] text-slate-400 block font-normal">不擇手段侵害他人自主・違反人性尊嚴不得阻卻違法</span>
+        </a>
+        <a href="#case-1-6" onclick="closeSearchModal()" class="block p-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-900 dark:text-white font-medium">
+          案例 1-6 【幼兒墜床燙衣火災案】 <span class="text-[11px] text-slate-400 block font-normal">超法定阻卻罪責・期待可能性核心</span>
+        </a>
+        <a href="#case-1-5" onclick="closeSearchModal()" class="block p-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-900 dark:text-white font-medium">
+          案例 1-5 【正當防衛過當與緊急避難過當】 <span class="text-[11px] text-slate-400 block font-normal">§ 23但、§ 24但 寬恕罪責事由</span>
+        </a>
+        <a href="#matrix" onclick="closeSearchModal()" class="block p-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-900 dark:text-white font-medium">
+          📊 阻卻違法 vs 阻卻罪責 終極速查對照表 <span class="text-[11px] text-slate-400 block font-normal">法條、判斷標準、法律效果完整比較</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    // Theme toggle
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+
+    function updateThemeUI() {
+      const isDark = document.documentElement.classList.contains('dark');
+      if (isDark) {
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      } else {
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      }
+    }
+    updateThemeUI();
+
+    themeBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      updateThemeUI();
+    });
+
+    // Mobile Sidebar
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const backdrop = document.getElementById('mobileBackdrop');
+
+    mobileBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+      backdrop.classList.toggle('hidden');
+    });
+    backdrop.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      backdrop.classList.add('hidden');
+    });
+
+    // Search Modal
+    const searchModal = document.getElementById('searchModal');
+    const searchTrigger = document.getElementById('searchTriggerBtn');
+    const mobileSearch = document.getElementById('mobileSearchBtn');
+    const closeSearch = document.getElementById('closeSearchBtn');
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const searchInput = document.getElementById('searchInput');
+
+    function openSearch() {
+      searchModal.classList.remove('hidden');
+      setTimeout(() => searchInput.focus(), 50);
+    }
+    function closeSearchModal() {
+      searchModal.classList.add('hidden');
+    }
+
+    searchTrigger.addEventListener('click', openSearch);
+    mobileSearch.addEventListener('click', openSearch);
+    closeSearch.addEventListener('click', closeSearchModal);
+    modalBackdrop.addEventListener('click', closeSearchModal);
+
+    window.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        searchModal.classList.contains('hidden') ? openSearch() : closeSearchModal();
+      } else if (e.key === 'Escape') {
+        closeSearchModal();
+      }
+    });
+
+    function copyPageUrl() {
+      navigator.clipboard.writeText(window.location.href);
+      alert('已複製本篇筆記連結至剪貼簿！');
+    }
+
+    // Interactive Stepper Logic
+    const lawStages = [
+      {
+        title: '階段 1：直觀犯罪定義（一個壞人做了壞事）',
+        focus: '常識直覺切入',
+        meaning: '刑法處理犯罪，直觀拆解為「行為評價（壞事＝不法）」與「行為人評價（壞人＝罪責）」。順序必為先事後人。',
+        defense: '做壞事先推定為壞人，但法律設有「阻卻罪責事由」為被告保留反證推翻與平反機會。',
+        pill: '壞人做壞事 ➔ 先事後人',
+        tbActive: false, rwActive: false, culActive: false
+      },
+      {
+        title: '階段 2：行為評價（形式不法：法益侵害）',
+        focus: '構成要件該當性',
+        meaning: '身體感到紅腫刺痛是第一感受。侵害重大生活利益之典型舉動寫入刑法分則條文（如殺人罪、傷害罪）。符合者即「該當構成要件」。',
+        defense: '確認法益侵害後，立即進入實質違法性之推定。',
+        pill: '法益侵害（挨打臉痛） ➔ 該當構成要件',
+        tbActive: true, rwActive: false, culActive: false
+      },
+      {
+        title: '階段 3：實質不法（無正當理由 ➔ 推定違法性）',
+        focus: '阻卻違法事由反證',
+        meaning: '挨打後第二感受是疑惑與氣憤：「憑什麼無緣無故打我？」。確認構成要件該當，即「推定無正當理由（違法）」。',
+        defense: '行為人可主張【阻卻違法事由】：§21依法令/依命令、§22業務、§23正當防衛、§24緊急避難、超法定利益衡量。推翻成功者自始非壞事！',
+        pill: '構成要件該當 ➔ 推定具違法性（若有正當理由則阻卻）',
+        tbActive: true, rwActive: true, culActive: false
+      },
+      {
+        title: '階段 4：行為人評價（罪責階層 ➔ 期待可能性）',
+        focus: '阻卻罪責事由反證',
+        meaning: '行為已被確立為壞事（不法成立），法律推定其為壞人，進一步審查行為人個人是否具備受譴責性。',
+        defense: '行為人可主張【阻卻罪責事由】：§16欠缺不法意識、§18年齡、§19精神、§20生理、§23但防衛過當、期待不可能（幼兒墜床案）。推翻成功者免除或減輕罪責！',
+        pill: '不法成立 ➔ 推定具罪責（無期待可能性則阻卻）',
+        tbActive: true, rwActive: true, culActive: true
+      }
+    ];
+
+    function setLawStage(idx) {
+      const s = lawStages[idx];
+      document.getElementById('simTitle').innerText = s.title;
+      document.getElementById('simFocusPill').innerText = s.focus;
+      document.getElementById('simMeaning').innerText = s.meaning;
+      document.getElementById('simDefense').innerText = s.defense;
+      document.getElementById('presumptionPill').innerText = s.pill;
+
+      for (let i = 0; i < 4; i++) {
+        const btn = document.getElementById('lawBtn' + i);
+        if (i === idx) {
+          btn.className = 'p-2.5 text-left rounded-xl border border-indigo-500 bg-indigo-600 text-white font-semibold text-xs shadow-md';
+        } else {
+          btn.className = 'p-2.5 text-left rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 text-slate-700 dark:text-slate-300 text-xs';
+        }
+      }
+
+      // TB Node
+      const nodeTB = document.getElementById('nodeTB');
+      if (s.tbActive) {
+        nodeTB.className = 'p-3.5 rounded-lg border border-indigo-500/60 bg-indigo-950/40 ring-1 ring-indigo-500/40 text-indigo-200 transition-all';
+      } else {
+        nodeTB.className = 'p-3.5 rounded-lg border border-slate-800 bg-slate-950/80 transition-all';
+      }
+
+      // RW Node
+      const nodeRW = document.getElementById('nodeRW');
+      if (s.rwActive) {
+        nodeRW.className = 'p-3.5 rounded-lg border border-amber-500/60 bg-amber-950/40 ring-1 ring-amber-500/40 text-amber-200 transition-all';
+      } else {
+        nodeRW.className = 'p-3.5 rounded-lg border border-slate-800 bg-slate-950/80 transition-all';
+      }
+
+      // Cul Node
+      const nodeCul = document.getElementById('nodeCul');
+      const tier2Badge = document.getElementById('tier2Badge');
+      if (s.culActive) {
+        nodeCul.className = 'p-3.5 rounded-lg border border-purple-500/60 bg-purple-950/40 ring-1 ring-purple-500/40 text-purple-200 transition-all';
+        tier2Badge.className = 'text-[10px] px-2 py-0.5 rounded bg-purple-950 text-purple-300 font-mono';
+        tier2Badge.innerText = '罪責審查啟動';
+      } else {
+        nodeCul.className = 'p-3.5 rounded-lg border border-slate-800 bg-slate-950/80 transition-all';
+        tier2Badge.className = 'text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-400 font-mono';
+        tier2Badge.innerText = '等待不法確立';
+      }
+    }
+
+    // Scrollspy for right Table of Contents
+    const tocSections = document.querySelectorAll('section[id], div[id^="case-"], div[id="matrix"]');
+    const tocLinks = document.querySelectorAll('.toc-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      tocSections.forEach(section => {
+        const top = section.offsetTop - 130;
+        if (window.scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      tocLinks.forEach(link => {
+        if (link.getAttribute('href') === '#' + current) {
+          link.className = 'toc-link block py-1.5 pl-3 text-indigo-500 font-semibold -ml-px border-l-2 border-indigo-500';
+        } else {
+          link.className = 'toc-link block py-1.5 pl-3 text-slate-600 dark:text-slate-400 hover:text-white';
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>
