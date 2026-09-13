@@ -28,11 +28,13 @@
 
 ```
 criminal-law-notes/
-├── index.html                       # 筆記知識庫主頁面 (直接雙擊即可在瀏覽器開啟)
-├── note_3column.html                # 3-Column 知識庫筆記頁面鏡像
-├── CRIMINAL_LAW_NOTES.md            # 完整純文字 Markdown 研讀手冊與案例筆記
-├── push_to_github.bat               # Windows 一鍵推送到 GitHub 批次檔
-├── README.md                        # 本專案說明文件
+├── visual.html                      # 🎨【全新】全圖解思維與論罪決策視覺版 (流程圖/決策樹/案例卡片)
+├── index.html                       # 📖 筆記知識庫主頁面 (三欄式詳解版，直接雙擊即可開啟)
+├── note_3column.html                # 📖 3-Column 知識庫筆記頁面鏡像
+├── CRIMINAL_LAW_VISUAL_GUIDE.md     # 📊 配套圖解指南 (含 Mermaid 流程圖與速查表格)
+├── CRIMINAL_LAW_NOTES.md            # 📄 完整純文字 Markdown 研讀手冊與案例筆記
+├── push_to_github.bat               # 🚀 Windows 一鍵推送到 GitHub 批次檔
+├── README.md                        # ℹ️ 本專案說明文件
 └── .agents/
     └── skills/
         └── note-3-column/           # Note 3 Column 專用 Skill 定義
@@ -44,9 +46,10 @@ criminal-law-notes/
 
 ---
 
-## 🚀 本地即時瀏覽
+## 🚀 本地即時瀏覽（雙軌系統）
 
-直接在檔案總管中雙擊 `index.html`（或 `note_3column.html`），即可在 Chrome / Edge / Firefox / Safari 等任何現代瀏覽器中流暢運行，無需安裝 Node.js 或本地伺服器。
+- **喜歡圖形思維、流程圖與案例卡片**：直接在檔案總管中雙擊 **`visual.html`**，秒開【全圖解視覺版】！
+- **需要深入檢索條文、法理爭點與學說**：雙擊 **`index.html`** 進入三欄式知識庫，兩版本頂部均支援一鍵無縫切換！
 
 ---
 
