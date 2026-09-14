@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>多欄位漸進閱讀器標準範本</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#EEF2FF',
+              500: '#6366F1',
+              600: '#4F46E5',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    
+    /* 右側章節清單：按第一章前完全隱藏，進入第一章且螢幕足夠寬時顯現 */
+    #rightTocAside {
+      display: none;
+    }
+    body.in-chapter-1 #rightTocAside {
+      display: none;
+    }
+    @media (min-width: 1024px) {
+      body.in-chapter-1 #rightTocAside {
+        display: block;
+        animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-enter {
+      animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-[#0B0F17] dark:text-slate-100 min-h-screen transition-colors duration-200">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 w-full border-b border-slate-200 dark:border-white/[0.08] bg-white/80 dark:bg-[#0B0F17]/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-indigo-500 flex items-center justify-center text-white font-black text-lg">
+          📖
+        </div>
+        <div>
+          <div class="font-extrabold text-sm sm:text-base tracking-tight flex items-center gap-2">
+            <span>書籍與篇名標題</span>
+            <span id="currentChapterBadge" class="text-[10px] px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 font-mono font-bold">本篇導讀</span>
+          </div>
+          <p class="text-[11px] text-slate-500 hidden sm:block">嚴格依據書本內容整理・漸進式閱讀體驗</p>
+        </div>
+      </div>
+      <button id="themeToggleBtn" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-xs">
+        切換深淺模式
+      </button>
+    </div>
+  </header>
+
+  <!-- 3-Column Layout -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="flex gap-8 items-start">
+
+      <!-- Left Sidebar -->
+      <aside class="w-64 sm:w-72 shrink-0 sticky top-24 hidden lg:block space-y-4">
+        <div class="px-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">章節選擇</div>
+        <nav class="space-y-1.5 text-xs font-medium">
+          <button id="navBtnIntro" onclick="switchView('intro')" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl border border-indigo-500/40 bg-indigo-50/60 dark:bg-indigo-950/40 text-left">
+            <span class="font-bold">📖 本篇導讀</span>
+            <span id="navDotIntro" class="w-2 h-2 rounded-full bg-indigo-500"></span>
+          </button>
+          <button id="navBtnChapter1" onclick="switchView('chapter-1')" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl border border-transparent hover:bg-slate-100 dark:hover:bg-slate-800 text-left">
+            <span class="font-bold">📑 第一章 標題</span>
+            <span id="navDotChapter1" class="w-2 h-2 rounded-full bg-transparent"></span>
+          </button>
+        </nav>
+      </aside>
+
+      <!-- Center Main Reader -->
+      <main class="flex-1 min-w-0 max-w-3xl">
+        <!-- View Intro: 按第一章前僅顯示導讀 -->
+        <div id="viewIntro" class="fade-enter space-y-6">
+          <h2 class="text-2xl font-black">篇名導論</h2>
+          <div class="p-6 rounded-3xl border border-indigo-500/30 bg-white dark:bg-[#101623] space-y-3">
+            <h3 class="font-bold text-sm text-indigo-500">本篇導讀原文</h3>
+            <blockquote class="italic border-l-4 border-indigo-500 pl-4 text-sm leading-relaxed">
+              「忠實呈現書本導讀原文，不添加任何推測或預先學說。」
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- View Chapter 1: 按第一章後才出現 -->
+        <div id="viewChapter1" class="fade-enter hidden space-y-6">
+          <div class="flex items-center justify-between border-b pb-3 border-slate-100 dark:border-white/[0.06]">
+            <span class="text-xs text-indigo-500 font-bold">第一章 內文</span>
+            <button onclick="switchView('intro')" class="text-xs text-slate-400 hover:text-indigo-500">← 返回導讀</button>
+          </div>
+          <h2 id="sec-ch1-title" class="text-2xl font-black">第一章 標題</h2>
+          <div class="p-8 rounded-3xl border border-dashed border-indigo-500/30 text-center text-xs text-slate-500">
+            第一章書本內文嚴格依據使用者提供內容逐節建立在此
+          </div>
+        </div>
+      </main>
+
+      <!-- Right TOC: 按第一章前隱藏，按第一章後才出現 -->
+      <aside id="rightTocAside" class="w-60 shrink-0 sticky top-24 space-y-4">
+        <div class="text-[11px] font-bold text-indigo-500">📌 第一章 章節清單</div>
+        <nav class="space-y-1.5 text-xs border-l-2 border-indigo-500/30 pl-3">
+          <a href="#sec-ch1-title" class="block text-indigo-500 font-medium">第一章 標題</a>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+  <script>
+    const themeBtn = document.getElementById('themeToggleBtn');
+    themeBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+
+    const viewIntro = document.getElementById('viewIntro');
+    const viewChapter1 = document.getElementById('viewChapter1');
+    const currentChapterBadge = document.getElementById('currentChapterBadge');
+    const navBtnIntro = document.getElementById('navBtnIntro');
+    const navBtnChapter1 = document.getElementById('navBtnChapter1');
+    const navDotIntro = document.getElementById('navDotIntro');
+    const navDotChapter1 = document.getElementById('navDotChapter1');
+
+    function switchView(viewName) {
+      if (viewName === 'chapter-1') {
+        viewIntro.classList.add('hidden');
+        viewChapter1.classList.remove('hidden');
+        document.body.classList.add('in-chapter-1');
+        currentChapterBadge.textContent = '第一章';
+
+        navBtnIntro.classList.replace('border-indigo-500/40', 'border-transparent');
+        navBtnIntro.classList.remove('bg-indigo-50/60', 'dark:bg-indigo-950/40');
+        navDotIntro.classList.replace('bg-indigo-500', 'bg-transparent');
+
+        navBtnChapter1.classList.replace('border-transparent', 'border-indigo-500/40');
+        navBtnChapter1.classList.add('bg-indigo-50/60', 'dark:bg-indigo-950/40');
+        navDotChapter1.classList.replace('bg-transparent', 'bg-indigo-500');
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.location.hash = 'chapter-1';
+      } else {
+        viewIntro.classList.remove('hidden');
+        viewChapter1.classList.add('hidden');
+        document.body.classList.remove('in-chapter-1');
+        currentChapterBadge.textContent = '本篇導讀';
+
+        navBtnIntro.classList.replace('border-transparent', 'border-indigo-500/40');
+        navBtnIntro.classList.add('bg-indigo-50/60', 'dark:bg-indigo-950/40');
+        navDotIntro.classList.replace('bg-transparent', 'bg-indigo-500');
+
+        navBtnChapter1.classList.replace('border-indigo-500/40', 'border-transparent');
+        navBtnChapter1.classList.remove('bg-indigo-50/60', 'dark:bg-indigo-950/40');
+        navDotChapter1.classList.replace('bg-indigo-500', 'bg-transparent');
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.location.hash = 'intro';
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.location.hash === '#chapter-1') switchView('chapter-1');
+      else switchView('intro');
+    });
+  </script>
+</body>
+</html>
