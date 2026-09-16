@@ -129,49 +129,70 @@
       z-index: 30 !important;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1279px) {
       .app-layout-container {
-        grid-template-columns: 240px minmax(0, 1fr) 260px !important;
-        gap: 1rem !important;
-      }
-      #rightTocAside {
-        width: 260px !important;
-        min-width: 260px !important;
-        max-width: 260px !important;
-      }
-    }
-
-    @media (max-width: 1023px) {
-      .app-layout-container {
-        grid-template-columns: minmax(0, 1fr) 260px !important;
+        grid-template-columns: 240px minmax(0, 1fr) !important;
         gap: 1rem !important;
       }
       #sidebar {
-        display: none !important;
-      }
-      main {
-        grid-column: 1 !important;
+        display: block !important;
+        width: 240px !important;
       }
       #rightTocAside {
-        grid-column: 2 !important;
-        width: 260px !important;
-        min-width: 260px !important;
-        max-width: 260px !important;
+        display: none !important;
       }
     }
 
     @media (max-width: 767px) {
       .app-layout-container {
-        grid-template-columns: 1fr !important;
+        display: block !important;
+        padding: 1rem 0.75rem !important;
       }
       #sidebar {
         display: none !important;
       }
       main {
-        grid-column: 1 !important;
+        display: block !important;
+        width: 100% !important;
       }
       #rightTocAside {
         display: none !important;
+      }
+
+      header > div {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        gap: 0.5rem !important;
+      }
+
+      header > div > div:first-child {
+        min-width: 0 !important;
+        gap: 0.5rem !important;
+      }
+
+      header > div > div:first-child > div:last-child {
+        min-width: 0 !important;
+      }
+
+      header > div > div:first-child > div:last-child > div:first-child {
+        min-width: 0 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+
+      #mobileTocBtn {
+        display: inline-flex !important;
+      }
+
+      main > div {
+        max-width: none !important;
+      }
+
+      pre,
+      .overflow-x-auto {
+        max-width: 100% !important;
+        overflow-x: auto !important;
       }
     }
 
@@ -4559,6 +4580,12 @@
       }
     }
 
+    function setRightTocVisibility(shouldShow) {
+      if (!rightTocAside) return;
+      const isDesktopLayout = window.matchMedia('(min-width: 1280px)').matches;
+      rightTocAside.style.setProperty('display', shouldShow && isDesktopLayout ? 'block' : 'none', 'important');
+    }
+
     function switchView(viewName, shouldScrollTop = true) {
       clearNavStyles();
 
@@ -4572,9 +4599,7 @@
 
         document.body.classList.remove('in-chapter', 'in-chapter-1', 'intro-active');
 
-        if (rightTocAside) {
-          rightTocAside.style.setProperty('display', 'none', 'important');
-        }
+        setRightTocVisibility(false);
 
         if (navBtnHome) {
           navBtnHome.classList.remove(...INACTIVE_CLASS);
@@ -4604,9 +4629,7 @@
         document.body.classList.remove('intro-active');
         document.body.classList.add('in-chapter', 'in-chapter-1');
 
-        if (rightTocAside) {
-          rightTocAside.style.setProperty('display', 'block', 'important');
-        }
+        setRightTocVisibility(true);
 
         navBtnChapter1.classList.remove(...INACTIVE_CLASS);
         navBtnChapter1.classList.add(...ACTIVE_CLASS);
@@ -4631,9 +4654,7 @@
         document.body.classList.remove('in-chapter-1', 'intro-active');
         document.body.classList.add('in-chapter');
 
-        if (rightTocAside) {
-          rightTocAside.style.setProperty('display', 'block', 'important');
-        }
+        setRightTocVisibility(true);
 
         navBtnChapter2.classList.remove(...INACTIVE_CLASS);
         navBtnChapter2.classList.add(...ACTIVE_CLASS);
@@ -4657,9 +4678,7 @@
 
         document.body.classList.remove('in-chapter', 'in-chapter-1', 'intro-active');
 
-        if (rightTocAside) {
-          rightTocAside.style.setProperty('display', 'none', 'important');
-        }
+        setRightTocVisibility(false);
 
         if (navBtnPart0) {
           navBtnPart0.classList.add('text-blue-600', 'dark:text-blue-400');
@@ -4689,9 +4708,7 @@
         document.body.classList.remove('in-chapter-1', 'intro-active');
         document.body.classList.add('in-chapter');
 
-        if (rightTocAside) {
-          rightTocAside.style.setProperty('display', 'block', 'important');
-        }
+        setRightTocVisibility(true);
 
         if (navBtnPart0) {
           navBtnPart0.classList.add('text-blue-600', 'dark:text-blue-400');
@@ -4721,9 +4738,7 @@
 
         document.body.classList.remove('in-chapter', 'in-chapter-1');
 
-        if (rightTocAside) {
-          rightTocAside.style.setProperty('display', 'none', 'important');
-        }
+        setRightTocVisibility(false);
 
         navBtnIntro.classList.add('text-blue-600', 'dark:text-blue-400');
         currentChapterBadge.textContent = '導論';
