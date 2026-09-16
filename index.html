@@ -73,6 +73,12 @@
       animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
+    #mobileDrawer .mobile-drawer-content,
+    #mobileDrawer .mobile-drawer-section,
+    #mobileDrawer .mobile-drawer-meta {
+      flex-shrink: 0;
+    }
+
     /* ===================================================
        三欄布局容器 (CSS Grid)：
        嚴格鎖定 左 (260px) + 中 (1fr) + 右 (280px)
@@ -4207,37 +4213,6 @@
       </aside>
     </div>
 
-  <!-- ==================== MOBILE DRAWER MODAL ==================== -->
-  <div id="mobileDrawer" class="fixed inset-0 z-50 hidden">
-    <div class="fixed inset-0 bg-black/60 backdrop-blur-sm" onclick="toggleMobileDrawer()"></div>
-    <div class="fixed inset-y-0 left-0 w-72 bg-white dark:bg-[#0B0F17] p-6 shadow-2xl flex flex-col justify-between">
-      <div class="space-y-4">
-        <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-white/[0.08]">
-          <div class="font-bold text-sm">章節目錄導航</div>
-          <button onclick="toggleMobileDrawer()" class="p-1 rounded-lg text-slate-400 hover:text-slate-100">✕</button>
-        </div>
-        <nav class="space-y-2 text-xs">
-          <button onclick="switchView('intro'); toggleMobileDrawer();" class="w-full text-left py-2 px-3 rounded-xl font-bold text-slate-800 dark:text-slate-200">
-            導論 犯罪概念與論罪結構
-          </button>
-          <div class="pl-4 space-y-1 border-l border-slate-200 dark:border-slate-800 ml-2">
-            <button onclick="switchView('chapter-1'); toggleMobileDrawer();" class="w-full text-left py-2 px-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium">
-              第一章 犯罪的概念
-            </button>
-            <button onclick="switchView('chapter-2'); toggleMobileDrawer();" class="w-full text-left py-2 px-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium">
-              第二章 刑法的論罪結構
-            </button>
-          </div>
-
-          <div class="pt-2">
-            <button onclick="switchView('part-0'); toggleMobileDrawer();" class="w-full text-left py-2 px-3 rounded-xl font-bold text-slate-800 dark:text-slate-200 hover:text-indigo-600">
-              第零篇 刑法的運作、操作原理與法律效果
-            </button>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </div>
 
   <!-- ==================== MOBILE DRAWER (手機版左側目錄抽屜) ==================== -->
   <div id="mobileDrawer" class="fixed inset-0 z-50 hidden">
@@ -4245,9 +4220,9 @@
     <div class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="toggleMobileDrawer()"></div>
     
     <!-- 抽屜本體 -->
-    <div class="fixed inset-y-0 left-0 w-80 max-w-[88vw] bg-white dark:bg-[#0E131F] border-r border-slate-200 dark:border-white/[0.08] p-5 shadow-2xl flex flex-col justify-between overflow-y-auto z-10 space-y-4">
+    <div class="mobile-drawer-content fixed inset-y-0 left-0 w-80 max-w-[88vw] bg-white dark:bg-[#0E131F] border-r border-slate-200 dark:border-white/[0.08] p-5 shadow-2xl flex flex-col justify-between overflow-y-auto z-10 space-y-4">
       
-      <div class="space-y-4">
+      <div class="mobile-drawer-section space-y-4">
         <!-- 頂部標題與關閉按鈕 -->
         <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-white/[0.06]">
           <div class="flex items-center gap-2 font-bold text-slate-800 dark:text-white">
@@ -4302,7 +4277,7 @@
             </button>
 
             <!-- 第零篇子章節 -->
-            <div class="ml-4 pl-3 border-l-2 border-slate-200 dark:border-slate-800/80 space-y-1 my-1">
+            <div class="mobile-drawer-section ml-4 pl-3 border-l-2 border-slate-200 dark:border-slate-800/80 space-y-1 my-1">
               <button onclick="switchView('part-0'); toggleMobileDrawer();" class="w-full text-left py-1.5 px-2.5 rounded-lg text-[13px] font-medium transition-all text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-indigo-500 flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
                 <span>本篇導讀 (Conducted read)</span>
@@ -4317,7 +4292,7 @@
       </div>
 
       <!-- 抽屜底部：書籍規格資訊卡 (手機版常駐顯示！) -->
-      <div class="p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800/80 bg-slate-50/90 dark:bg-slate-900/60 space-y-2 text-xs">
+      <div class="mobile-drawer-meta p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800/80 bg-slate-50/90 dark:bg-slate-900/60 space-y-2 text-xs">
         <div class="flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-amber-400"></span>
           <span class="text-slate-400 font-bold uppercase tracking-wider text-[10px]">高點法學・圖說系列</span>
