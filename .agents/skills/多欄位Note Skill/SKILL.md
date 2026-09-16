@@ -1,13 +1,14 @@
 ---
 name: 多欄位Note-Skill
 description: >-
-  多欄位Note Skill：嚴格依據書本內容整理筆記，並建置現代高質感多欄位漸進閱讀器（導論下巢狀分列第一章、第二章，點按章節前隱藏其餘內容與右側清單，點按章節後跳轉內文並顯現右側章節清單）。
+  多欄位Note Skill：嚴格依據書本內容整理筆記，建置現代高質感多欄位漸進閱讀器。
+  包含書籍主頁（書本資訊卡片、3D 封面圖與精選插圖展示）、本篇導論與巢狀章節閱讀（點選章節前隱藏其餘內容與右側清單，點選章節後跳轉內文並吸頂顯現右側小節清單）。
   適用於法律筆記、教科書導讀、技術文檔與各類學術知識庫之系統化建置。
 ---
 
 # 多欄位Note Skill (教材依據型多欄位漸進閱讀器規範)
 
-本 Skill 專門用於指導 Agent 遵循**「嚴格依據書本內容整理，絕不自行查找腦補」**的核心原則，建置現代高質感（Pagefy / Mintlify / Stripe Docs 風格）的多欄位筆記閱覽器，並實踐**「漸進式揭露（Progressive Disclosure）」**的互動體驗。
+本 Skill 專門用於指導 Agent 遵循**「嚴格依據書本內容整理，絕不自行查找腦補」**的核心原則，建置具備現代高質感（Pagefy / Mintlify / Stripe Docs 風格）的多欄位筆記閱覽器。系統包含**「書籍主頁（展示書本資訊、封面與插圖）」**、**「本篇導論」**與**「章節內文」**，並完整實踐**「漸進式揭露（Progressive Disclosure）」**的互動體驗。
 
 ---
 
@@ -18,21 +19,65 @@ description: >-
 - **逐字逐頁精確核對**：收錄之導讀、引言、定義與案例必須標註教材頁碼（例如：第 XVIII-1 頁、第 1-1 頁），原文忠實呈現。
 - **插槽保留機制**：若使用者尚未提供某一章節內文，應在中欄保留優雅的「待填入插槽卡片」，絕不隨意填充假資料。
 
-### 2. 漸進式閱讀與視圖控制原則 (Progressive Disclosure)
-- **【左側選單層級架構】**：
-  - 上層篇名（如：`導論 犯罪概念與論罪結構`）。
-  - 縮排子章節（如：`第一章 犯罪的概念`、`第二章 刑法的論罪結構`）。
-  - 選中時呈現**柔和淺藍底、深藍字**（`bg-[#EBF3FE] text-blue-600`）。
-- **【點按章節前 / 導論畫面】**：
-  - **中欄閱讀區**：**僅顯示導論／本篇導讀原文**，絕對不出現其餘章節或未解鎖內容，維持無干擾的極簡閱讀環境。
-  - **右側清單**：**完全不出現（隱藏）**，避免讀者在未進入內文時看到空白或過早的章節目錄。
-- **【點按左側「第一章 犯罪的概念」後】**：
-  - **中欄閱讀區**：平滑切換至第一章內文，頂部具備麵包屑導航與隨時可點擊之「返回導讀」連結。
-  - **右側清單**：**同步顯現**（在桌面端右側展開章節 TOC 清單，支援平滑滾動至各段落錨點與回到頂部）。
-- **【點按「返回導讀」或「導論」】**：
-  - 頁面即刻回退至導讀視圖，右側清單再次自動隱藏。
+### 2. 書籍主頁與書本資訊／圖片展示規範 (Book Home & Media Showcase Standard)
+每一套知識庫或筆記閱覽器，皆必須在左側目錄頂端設有專屬的**「🏠 書籍主頁 (Home)」**，集中呈現書籍基本資料與視覺形象：
+- **書本中繼資料 (Book Metadata) 標準欄位**（以實例《刑法總則【圖說系列】》為基準）：
+  1. **書名**：`刑法總則【圖說系列】`
+  2. **副標題／外文名**：`Strafrecht`
+  3. **作者／編著者**：`陳奕廷(易律師) 編著`
+  4. **系列別**：`律師／司法三等／法研所`
+  5. **出版社**：`高點 (高點法學系列)`
+  6. **出版日期**：`2022／10／31`
+  7. **國際標準書號 (ISBN)**：`9786263342880`
+  8. **書號／代碼**：`L602210`
+  9. **三大編排特色標語**：
+     - `概念圖示・清晰易懂`
+     - `重點彙整・深入淺出`
+     - `例題研究・必勝關鍵`
+- **書籍圖片與視覺展示 (Book Artwork & Illustrations)**：
+  1. **立體質感書封 (3D Perspective Cover)**：
+     - 書封外觀採用具備立體景深（`perspective: 1200px`、深層陰影）、微光澤邊框與書脊光澤之展示容器。
+     - **自訂圖片插槽**：預設使用 `<img>` 標籤載入本機或上傳圖片（如使用者上傳之實體書封）。
+     - **優雅降級佔位 (Graceful Fallback)**：當實體圖片檔案載入中或無法載入時，自動展示高質感之「CSS 漸層立體擬真書封」，帶有燙金標題、版次徽章與裝訂折痕陰影。
+  2. **核心架構插圖與圖解藝廊 (Book Illustrations Grid)**：
+     - 在主頁下方設有「書籍核心圖解與架構預覽」區塊，放置書中重點圖解（如圖 1-1、圖 1-2），點擊可直接跳轉至對應章節錨點。
 
-### 3. 現行法規核對與出處標註原則 (Statutory Currency & Official Sourcing)
+### 3. 漸進式閱讀與三態視圖控制原則 (Progressive Disclosure)
+閱覽器採用三態式視圖切換機制：
+
+```text
+狀態 0: 書籍主頁 (Home)    --> 狀態 1: 本篇導論 (Intro)    --> 狀態 2: 章節內文 (Chapter 1, 2...)
+[中欄: 書籍資訊 + 封面插圖]    [中欄: 僅顯示本篇導讀原文]      [中欄: 章節內文與圖解詳解]
+[右側 TOC: 完全隱藏]           [右側 TOC: 完全隱藏]            [右側 TOC: 吸頂顯現，跟隨高亮]
+```
+
+- **【狀態 0 - 書籍主頁 (`home`)】**：
+  - **左側選單**：高亮「🏠 書籍主頁」（柔和淺藍底、深藍字）。
+  - **中欄閱讀區**：展示書籍資訊看板、3D 封面圖、特色亮點與快速進入按鈕（「🚀 開始閱讀第一章」、「📖 查看本篇導論」）。
+  - **右側清單**：**完全隱藏**，維持極簡專注的主頁視覺。
+- **【狀態 1 - 本篇導論 (`intro`)】**：
+  - **左側選單**：高亮「📖 導論 篇名」。
+  - **中欄閱讀區**：**僅顯示導論／本篇導讀原文**，不出現其餘章節或未解鎖內容，維持無干擾的極簡閱讀環境。
+  - **右側清單**：**完全隱藏**，避免讀者在未進入內文時看到空白或過早的章節目錄。
+- **【狀態 2 - 點按章節（如「第一章 犯罪的概念」）後】**：
+  - **左側選單**：高亮對應章節名稱。
+  - **中欄閱讀區**：平滑切換至章節內文，頂部具備麵包屑導航與「← 返回主頁」、「← 返回導讀」連結。
+  - **右側清單**：**同步顯現**（在桌面端右側展開章節 TOC 清單，支援平滑滾動至各段落錨點與回到頂部）。
+- **【點按「返回導讀」或「返回主頁」】**：
+  - 頁面即刻回退至對應視圖，右側清單再次自動隱藏。
+
+### 4. 左側目錄階層樹與子目錄樣式規範 (Sidebar Hierarchical Tree & Sub-Directory Standard)
+為了清楚呈現教科書或技術文檔「篇章 ➔ 巢狀子章節」的隸屬關係，左側目錄選單必須符合現代文檔庫（Mintlify / Stripe Docs 風格）之階層樹狀規範：
+- **父層單元（Parent Unit / Preface / Part）**：
+  - 例如「導論 犯罪概念與論罪結構」，字體採用較大粗體（`text-[14px]` 或 `text-[14.5px]`、`font-bold`），搭配單元圖示（如 `📖` 或 `📂`），作為目錄分組大綱。
+- **子章節／子項目（Sub-Chapters / Nested Items）**：
+  - 例如「第一章 犯罪的概念」、「第二章 刑法的論罪結構」：
+  - **字體縮小**：字級一律縮小為 **`text-[13px]`**（精緻小巧，與父層形成明確主從視覺差）。
+  - **縱向樹狀分支引導線 (Tree Line)**：子目錄容器外圍必須加上 **`ml-4 pl-3 border-l-2 border-slate-200 dark:border-slate-800/80`**，形成清晰的分支導引線。
+  - **子節點指示圓點 (Item Dot Indicator)**：每個子章節按鈕前端必須配置微型圓點指示符號（如 `w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-blue-500`），選中或懸停時連動發光高亮。
+  - **緊湊微邊距**：邊距調整為 `py-1.5 px-2.5 rounded-lg`，避免按鈕尺寸過大而喧賓奪主，維持極簡專注的子目錄質感。
+
+### 5. 現行法規核對與出處標註原則 (Statutory Currency & Official Sourcing)
 - **實質查核現行法規**：當使用者要求查找現行法規有無更動時，必須實際查核全國法規資料庫、立法院法律系統與重大憲法法庭判決。
 - **卡片下方標準化備註**：在每個案例或法條卡片下方，必須增設專屬「法規查核區塊」：
   1. **現行狀態徽章**：明確標註「條文無更動（維持現行法）」或「條文文字未動・受憲法裁判重大拘束」或具體修正內容。
@@ -40,15 +85,41 @@ description: >-
   3. **周邊連動修正與司法判決**：補充民法成年年齡下修、保安處分修正（如刑法 § 87）、憲法法庭裁判（如 113 年憲判字第 8 號）等重大實務進展。
   4. **權威官方出處**：直接附上全國法規資料庫、憲法法庭或立法院官方連結。
 
-### 4. DOM 結構閉合完整性原則 (HTML Tag Integrity & Anti-Drop Shield)
+### 6. DOM 結構閉合完整性與視圖容器獨立性原則 (HTML Tag Integrity & Blank Screen Prevention)
 - **嚴防未配對或多餘閉合標籤（Stray Closing Tag Trap）**：
   - 嚴禁在案例或段落卡片結尾遺留多餘的 `</div>`！
   - 一旦內文中出現多餘的 `</div>`，瀏覽器會提前閉合中央 `<main>` 與最外層三欄網格容器 `.app-layout-container`。
   - **災難後果**：右側清單 `#rightTocAside` 會被踢出三欄網格容器外，淪為頁面底部的普通全寬區塊，導致右側清單「掉落至頁面下方或左下角橫向展開，無法吸頂跟隨」。
   - **結構鐵律**：`.app-layout-container` 內部**必須且只能**存在 3 個一級子節點：
     - 節點 1：`aside#sidebar`（左側目錄）
-    - 節點 2：`main`（中央閱讀區）
+    - 節點 2：`main`（中央主閱讀區）
     - 節點 3：`aside#rightTocAside`（右側章節清單）
+- **小節內部標籤配對自檢（Section & Card Tag Balance Check）**：
+  - 教材各小節常包含豐富的案例、三階拆解、法條對比表格與邏輯推導卡片，HTML 巢狀深度常達 4～6 層（如 `<section> > div.p-6 > div.space-y-6 > div.grid > div.p-5`）。
+  - **鐵律**：在結束該小節並開始下一個 `<section>` 之前，必須精確核對並閉合所有開啟的內部 `<div>` 以及外層 `<section>`。
+  - **「內文沒東西 / 黑畫面」之致命根因警示**：
+    - 若某一小節（如 Section 5）結尾少寫了 `</div>` 與 `</section>`，瀏覽器解析引擎**不會拋出報錯**，而是會自動將後續的小節甚至後續篇章的獨立視圖（如 `#viewChapter2`、`#viewPart0` 等）全部當作該未閉合段落的內部子元素！
+    - **災難後果**：當讀者切換章節時，JavaScript 執行 `viewChapter2.classList.add('hidden')`，由於後續視圖被誤解析在內部，其父層受 `display: none` 影響，**連帶使子視圖全數隱藏，造成中央主閱讀區一片漆黑、完全無內容顯示（「內文沒東西？」）**！
+  - **防範檢查規程**：
+    1. 每個 `<section>` 必須有且僅有 1 個對應的 `</section>`，且該節內部的所有卡片容器必須在 `</section>` 前全數閉合。
+    2. 新增或修訂任何章節段落後，必須確認所有 `<div id="viewXXX">` 彼此為 `<main>` 的平級兄弟節點（Direct Siblings），絕不允許相互巢狀包覆。
+
+### 7. 母篇章（Part / Division）與「本篇導讀 (Conducted Read)」標準規範 (Conducted Read Standard Specification)
+教科書除全書開篇「導論」外，通常依體系劃分為若干母篇章（例如「第零篇 刑法的運作、操作原理與法律效果」、「第一篇 犯罪論」等）。每篇在進入具體分章前，均設有「本篇導讀」：
+- **左側目錄之母篇章與導讀子項目**：
+  - **母篇章標題按鈕**（如 `navBtnPart0`）：採用較大粗體（`text-[14px]`、`font-bold`），點擊可直接跳轉該篇導讀。
+  - **本篇導讀子按鈕**（如 `navBtnPart0Intro`）：縮排收納於子樹狀引導線內（`ml-4 pl-3 border-l-2`），字級 `text-[13px]`，配置子節點微型圓點指示符，名稱統一定為 **`本篇導讀 (Conducted read)`**。
+- **中央主閱讀區之「本篇導讀」專用視圖容器規範**：
+  - **視圖容器命名**：`#viewIntro`（導論）、`#viewPart0`（第零篇）、`#viewPart1`（第一篇）等。
+  - **上方專業徽章**：必須置放微型等寬英文徽章 **`PREFACE • CONDUCTED READ`**（`text-xs font-mono text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wider`）。
+  - **篇章大標題**：採用醒目大字（`h2`，`text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight`）。
+  - **本篇導讀原文卡片 (Conducted Read Card)**：
+    - 容器外框：`p-6 sm:p-8 rounded-3xl border-2 border-blue-500/30 bg-white dark:bg-[#101623] shadow-sm space-y-4`。
+    - 卡片頂部欄：包含 `📖 本篇導讀 (Conducted Read)`（`text-base sm:text-lg font-bold`）與精確教材頁碼標籤（如 `第 0-1 頁`、`第 XVIII-1 頁`，樣式：`text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-500 dark:text-blue-400 font-bold`）。
+    - 原文引用區：使用 `blockquote` 搭配左側粗邊線（`border-l-4 border-blue-500 pl-4 py-1 text-sm sm:text-base text-slate-700 dark:text-slate-200 leading-relaxed italic`），完整忠實呈現作者課本原文，嚴禁任意刪減或自撰。
+- **沉浸導讀原則（導讀狀態右側 TOC 隱藏）**：
+  - 在所有「本篇導讀」狀態下（如 `#intro`, `#part-0` 等），**右側 TOC 清單必須嚴格隱藏（`display: none !important`）**，避免讀者在未正式進入章節內文前看到零散或空白的小節目錄，維持最高專注度的導讀體驗。
+  - 唯有讀者點擊第一章、第二章等具體子章節時，右側清單才動態吸頂顯現。
 
 ---
 
@@ -58,19 +129,19 @@ description: >-
 
 ```text
 +-----------------------------------------------------------------------------------+
-| 頂部導航列 (Sticky Header) : 標題 + 章節動態徽章 (Badge) + 深淺主題切換 (Sticky)   |
+| 頂部導航列 (Sticky Header) : 標題 + 視圖動態徽章 (Badge) + 深淺主題切換 (Sticky)   |
 +---------------------+---------------------------------------+---------------------+
 | 左側目錄 (Sidebar)  | 中央主閱讀區 (Center Reader)          | 右側章節 (TOC)      |
 | [260px, Sticky]     | [minmax(0, 1fr), 自適應擴展]           | [280px, Sticky]     |
 |                     |                                       |                     |
-| 導論 犯罪概念...    | [狀態 A - 未按章節前 / 導論]          | [狀態 A]            |
-|   第一章 犯罪概念   | 僅顯示導讀卡片，無其餘干擾。          | 【完全隱藏】        |
-|   第二章 論罪結構   | ------------------------------------- | ------------------- |
-| (選中時淺藍底藍字)  | [狀態 B - 點選第一章後]                | [狀態 B]            |
-|                     | 麵包屑導航 + 第一章內文與原文圖解     | 📌 第一章 章節清單  |
-|                     |                                       |  - 一、核心概念     |
-|                     |                                       |  - 二、不法推定罪責 |
-|                     |                                       |  - ... (共八小節)   |
+| 🏠 書籍主頁 (Home)  | 【視圖 0 - 書籍主頁】                 | 【狀態 0 & 1】      |
+| 📖 導論 犯罪概念... | 《刑法總則【圖說系列】》資訊 + 3D書封 | 【完全隱藏】        |
+|   第一章 犯罪概念   | ------------------------------------- | ------------------- |
+|   第二章 論罪結構   | 【視圖 1 - 本篇導論】                 | 【狀態 2 - 章節】   |
+| (選中時淺藍底藍字)  | 僅顯示導讀卡片，無其餘干擾。          | 📌 第一章 章節清單  |
+|                     | ------------------------------------- |  - 一、核心概念     |
+|                     | 【視圖 2 - 第一章內文】               |  - 二、不法推定罪責 |
+|                     | 麵包屑導航 + 第一章內文與原文圖解     |  - ... (共八小節)   |
 |                     |                                       |  - 回到頂部 / 複製  |
 +---------------------+---------------------------------------+---------------------+
 ```
@@ -116,13 +187,13 @@ main {
   width: 100% !important;
 }
 
-/* 3. 右側章節清單：嚴格鎖定第 3 欄，吸頂在右上角（紅圈處） */
+/* 3. 右側章節清單：嚴格鎖定第 3 欄，吸頂在右上角 */
 #rightTocAside {
   grid-column: 3 !important;
   grid-row: 1 !important;
-  display: block !important;
+  display: none; /* 預設在 home 與 intro 狀態下隱藏 */
   position: sticky !important;
-  top: 5rem !important; /* 吸頂於導航列下方 */
+  top: 5rem !important;
   align-self: start !important;
   width: 280px !important;
   min-width: 280px !important;
@@ -132,157 +203,196 @@ main {
   z-index: 30 !important;
 }
 
-/* 響應式斷點規範 */
-@media (max-width: 1200px) {
-  .app-layout-container {
-    grid-template-columns: 240px minmax(0, 1fr) 260px !important;
-    gap: 1rem !important;
-  }
-  #rightTocAside {
-    width: 260px !important;
-    min-width: 260px !important;
-    max-width: 260px !important;
-  }
+/* 進入章節狀態時在寬螢幕顯示右側清單 */
+body.in-chapter #rightTocAside {
+  display: block !important;
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@media (max-width: 1023px) {
-  .app-layout-container {
-    grid-template-columns: minmax(0, 1fr) 260px !important;
-    gap: 1rem !important;
-  }
-  #sidebar {
-    display: none !important;
-  }
-  main {
-    grid-column: 1 !important;
-  }
-  #rightTocAside {
-    grid-column: 2 !important;
-    width: 260px !important;
-    min-width: 260px !important;
-    max-width: 260px !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .app-layout-container {
-    grid-template-columns: 1fr !important;
-  }
-  #sidebar {
-    display: none !important;
-  }
-  main {
-    grid-column: 1 !important;
-  }
-  #rightTocAside {
-    display: none !important;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 ```
 
-### 2. 視圖切換與路由邏輯 (JavaScript State Routing)
+### 2. 書籍主頁 (Book Home) 結構與 3D 書封卡片實例
+
+```html
+<!-- 中央主閱讀區內：書籍主頁 (View Home) -->
+<div id="viewHome" class="space-y-8">
+  <!-- 書籍資訊看板 Hero Card -->
+  <div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-white/[0.08] bg-white/95 dark:bg-[#111726]/95 p-6 sm:p-8 backdrop-blur shadow-sm">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      
+      <!-- 左側：立體書籍封面展示區 -->
+      <div class="md:col-span-5 flex justify-center">
+        <div class="perspective-[1200px] py-2">
+          <!-- 3D 書封容器 -->
+          <div class="relative w-56 h-80 rounded-2xl overflow-hidden shadow-2xl transition-all duration-400 hover:scale-105 border border-white/20 bg-slate-900">
+            <!-- 實體圖片插槽 -->
+            <img id="bookCoverImg" 
+                 src="./book-cover.png" 
+                 alt="刑法總則【圖說系列】封面" 
+                 onerror="this.style.display='none'; document.getElementById('bookCoverFallback').style.display='flex';" 
+                 class="w-full h-full object-cover object-top">
+            
+            <!-- 優雅降級 Fallback 擬真書封 -->
+            <div id="bookCoverFallback" class="hidden absolute inset-0 w-full h-full bg-gradient-to-br from-slate-900 via-blue-950 to-amber-950 p-5 flex flex-col justify-between text-white border border-white/20">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-amber-400/20 text-amber-300 text-[10px] font-bold border border-amber-400/40">圖說系列</span>
+                <span class="text-[10px] text-white/70 font-mono">律師・司三・法研</span>
+              </div>
+              <div class="space-y-1.5 my-auto text-center">
+                <div class="text-[10px] font-bold uppercase tracking-wider text-amber-300">高點法學</div>
+                <h3 class="text-2xl font-black tracking-tight text-white">刑法總則</h3>
+                <p class="text-xs text-blue-300 font-serif italic">Strafrecht</p>
+                <div class="h-0.5 w-10 bg-amber-400 rounded-full mx-auto my-1"></div>
+                <p class="text-[10px] text-white/80">概念圖示・清晰易懂<br>重點彙整・深入淺出<br>例題研究・必勝關鍵</p>
+              </div>
+              <div class="flex items-center justify-between text-[11px] text-white/80 pt-3 border-t border-white/15">
+                <span class="font-bold text-white">陳奕廷(易律師) 編著</span>
+                <span class="text-[10px] text-amber-300 font-bold">高點文化</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右側：書籍詳細規格與資訊 -->
+      <div class="md:col-span-7 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 text-xs font-semibold border border-blue-200 dark:border-blue-800/50">
+          <span>📚 高點法學圖說系列</span>
+          <span class="w-1 h-1 rounded-full bg-blue-500"></span>
+          <span>國考權威用書</span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 dark:text-white">
+          刑法總則【圖說系列】
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          本書專為法律國考與學術深造打造，以清晰的概念圖示化繁為簡，貫穿「不法推定罪責」與三階層論罪體系。緊扣重要學說爭點與司法實務見解，協助考生奠定最堅實的刑法總則思維。
+        </p>
+
+        <!-- 書籍規格清單 -->
+        <div class="grid grid-cols-2 gap-2.5 pt-1 text-xs">
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-800">
+            <span class="text-slate-400 block text-[10px] font-semibold">作者 / 編著</span>
+            <span class="font-bold text-slate-800 dark:text-slate-200">陳奕廷 (易律師) 編著</span>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-800">
+            <span class="text-slate-400 block text-[10px] font-semibold">出版社 / 體系</span>
+            <span class="font-bold text-slate-800 dark:text-slate-200">高點 (高點法學系列)</span>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-800">
+            <span class="text-slate-400 block text-[10px] font-semibold">出版日期 / 書號代碼</span>
+            <span class="font-bold text-slate-800 dark:text-slate-200">2022／10／31 (L602210)</span>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-800">
+            <span class="text-slate-400 block text-[10px] font-semibold">國際標準書號 (ISBN)</span>
+            <span class="font-mono font-bold text-slate-800 dark:text-slate-200">9786263342880</span>
+          </div>
+        </div>
+
+        <!-- 快速行動 CTA 按鈕 -->
+        <div class="flex flex-wrap gap-3 pt-2">
+          <button onclick="switchView('chapter-1')" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-lg shadow-blue-500/20 transition-all">
+            🚀 開始閱讀第一章
+          </button>
+          <button onclick="switchView('intro')" class="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-semibold transition-all">
+            📖 閱讀本篇導論
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### 3. 本篇導讀 (Conducted Read) 視圖標準範本 (HTML Template)
+
+```html
+<!-- 中央主閱讀區內：母篇章本篇導讀視圖 (View Conducted Read) -->
+<div id="viewPart0" class="fade-enter hidden space-y-6">
+  
+  <!-- 頂部精緻英文識別徽章與大標題 -->
+  <div class="space-y-1.5">
+    <span class="text-xs font-mono text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wider">
+      PREFACE • CONDUCTED READ
+    </span>
+    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+      第零篇 刑法的運作、操作原理與法律效果
+    </h2>
+  </div>
+
+  <!-- 本篇導讀卡片 (教材原文卡片) -->
+  <div class="p-6 sm:p-8 rounded-3xl border-2 border-blue-500/30 bg-white dark:bg-[#101623] shadow-sm space-y-4">
+    <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/[0.06] pb-3">
+      <div class="flex items-center gap-2">
+        <span class="text-xl">📖</span>
+        <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">本篇導讀 (Conducted Read)</h3>
+      </div>
+      <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-500 dark:text-blue-400 font-bold">
+        第 0-1 頁
+      </span>
+    </div>
+
+    <!-- 忠實引述課本原文 -->
+    <blockquote class="text-sm sm:text-base text-slate-700 dark:text-slate-200 leading-relaxed italic border-l-4 border-blue-500 pl-4 py-1">
+      「本篇是正式踏入刑法學習前的暖身，介紹影響刑法運作的四大支柱，以及刑法操作的前理解（諸如刑法的適用效力、解釋方法）。至於刑法的法律效果，這個通常被教科書或參考書放在最尾巴說明的刑罰理論，筆者挪移到本篇提前整理，旨在提醒大家「謹思慎刑」的核心理念，也與刑法最後手段性原則接軌。」
+    </blockquote>
+  </div>
+
+</div>
+```
+
+### 4. 多篇章視圖切換 (switchView) 與 Hash 路由規範
 
 ```javascript
-const viewIntro = document.getElementById('viewIntro');
-const viewChapter1 = document.getElementById('viewChapter1');
-const currentChapterBadge = document.getElementById('currentChapterBadge');
-const rightTocAside = document.getElementById('rightTocAside');
-
 function switchView(viewName, shouldScrollTop = true) {
-  if (viewName === 'chapter-1') {
-    // 1. 中央隱藏導讀，顯示第一章
-    viewIntro.classList.add('hidden');
-    viewChapter1.classList.remove('hidden');
+  clearNavStyles();
 
-    // 2. 啟動 body 狀態類別與右側清單顯示
-    document.body.classList.add('in-chapter', 'in-chapter-1');
-    if (rightTocAside) {
-      rightTocAside.style.setProperty('display', 'block', 'important');
-    }
+  // 1. 隱藏所有視圖（確保各容器互斥）
+  if (viewHome) viewHome.classList.add('hidden');
+  if (viewIntro) viewIntro.classList.add('hidden');
+  if (viewChapter1) viewChapter1.classList.add('hidden');
+  if (viewChapter2) viewChapter2.classList.add('hidden');
+  if (viewPart0) viewPart0.classList.add('hidden');
 
-    // 3. 更新標籤與左側高亮
-    currentChapterBadge.textContent = '第一章';
-    updateNavHighlight('chapter-1');
-    renderToc('chapter-1');
-
-    if (shouldScrollTop) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      if (history.replaceState) history.replaceState(null, '', '#chapter-1');
-    }
-  } else {
-    // 1. 中央僅顯示導讀
-    viewIntro.classList.remove('hidden');
-    viewChapter1.classList.add('hidden');
-
-    // 2. 導讀視圖設定
-    document.body.classList.remove('in-chapter', 'in-chapter-1');
-    currentChapterBadge.textContent = '導論';
-    updateNavHighlight('intro');
-    renderToc('intro');
-
-    if (shouldScrollTop) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      if (history.replaceState) history.replaceState(null, '', '#intro');
-    }
+  // 2. 依據視圖名稱精確呈現，並控制右側 TOC 之顯隱
+  if (viewName === 'home') {
+    if (viewHome) viewHome.classList.remove('hidden');
+    if (rightTocAside) rightTocAside.style.setProperty('display', 'none', 'important');
+    currentChapterBadge.textContent = '書籍主頁';
+  } else if (viewName === 'part-0') {
+    if (viewPart0) viewPart0.classList.remove('hidden');
+    // 導讀狀態嚴格隱藏右側 TOC
+    if (rightTocAside) rightTocAside.style.setProperty('display', 'none', 'important');
+    if (navBtnPart0) navBtnPart0.classList.add('text-blue-600', 'dark:text-blue-400');
+    if (navBtnPart0Intro) navBtnPart0Intro.classList.add(...ACTIVE_CLASS);
+    currentChapterBadge.textContent = '第零篇';
+  } else if (viewName === 'chapter-1' || viewName === 'chapter-2') {
+    const targetChapter = viewName === 'chapter-1' ? viewChapter1 : viewChapter2;
+    if (targetChapter) targetChapter.classList.remove('hidden');
+    // 進入實質章節，顯現右側吸頂 TOC
+    document.body.classList.add('in-chapter');
+    if (rightTocAside) rightTocAside.style.setProperty('display', 'block', 'important');
+    renderToc(viewName);
   }
 }
-
-// ⚠️ 關鍵防護：右側小節 TOC 錨點點擊與 Hash 路由
-// 必須使用 scrollToSection 或檢查 startsWith('#sec-')，絕不能在點擊小節錨點時誤觸 else 踢回導論！
-function scrollToSection(e, targetId) {
-  if (e) e.preventDefault();
-  if (viewChapter1.classList.contains('hidden')) {
-    switchView('chapter-1', false);
-  }
-  const target = document.getElementById(targetId);
-  if (target) {
-    const offset = target.getBoundingClientRect().top + window.pageYOffset - 80;
-    window.scrollTo({ top: offset, behavior: 'smooth' });
-    if (history.replaceState) history.replaceState(null, '', '#' + targetId);
-  }
-}
-
-function handleHashRouting() {
-  const hash = window.location.hash;
-  if (hash === '#chapter-1') {
-    switchView('chapter-1', true);
-  } else if (hash.startsWith('#sec-')) {
-    switchView('chapter-1', false);
-    scrollToSection(null, hash.substring(1));
-  } else if (hash === '#intro' || hash === '' || hash === '#') {
-    switchView('chapter-1', false); // 預設展示章節體驗
-  }
-}
-
-window.addEventListener('DOMContentLoaded', handleHashRouting);
-window.addEventListener('hashchange', handleHashRouting);
 ```
-
-### 3. Scrollspy 動態捲動高亮規範 (Dynamic Scrollspy)
-- 監聽 `window.onscroll` 事件，依據當前可見章節錨點，自動高亮右側清單對應連結：
-  - 作用中小節套用：`-ml-px border-l-2 border-blue-600 dark:border-blue-400 bg-blue-50/50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400 font-semibold`。
-  - 未作用項目保持半透明灰色，維持視覺重點清晰。
-
----
-
-## 多檔同步標準 (File Synchronization Standard)
-
-任何更動必須同步維持以下檔案的一致性：
-1. **`CRIMINAL_LAW_NOTES.md`**：Markdown 筆記本體，標註頁碼，僅保留經核實的內容。
-2. **`index.html`**：主要互動式閱覽器入口。
-3. **`note_3column.html`**：鏡像檔，確保直接開啟任一 HTML 均呈現相同體驗。
-4. **`visual.html`**：視覺化／圖解專屬頁面，同步維持一致的章節切換狀態。
 
 ---
 
 ## 驗收檢查清單 (Quality Checklist)
 
-- [ ] **版面定位**：右側章節清單 `#rightTocAside` 是否精確位於螢幕右上角（紅圈處，寬度 280px）？
-- [ ] **吸頂跟隨**：在中央內文長頁面滾動時，右側清單是否能維持 `top: 5rem` 持續固定吸頂？
-- [ ] **防落檢驗**：滾動至頁面最底端時，右側清單是否**絕無掉落至頁面下方或左下角滿版**？
-- [ ] **標籤閉合**：所有卡片（案例、圖解面板）之 `<div>` 標籤是否精確閉合，`.app-layout-container` 是否僅有 3 個一級子節點？
-- [ ] **清單內文核實**：右側清單是否包含完整小節標題（一至八項全部吻合）？
-- [ ] **點擊跳轉與防回退**：點擊右側各小節標題時，是否平滑跳轉至該段落且不會誤跳回導論？
-- [ ] **Scrollspy 高亮**：滾動閱讀到各個案例或圖解段落時，右側對應標題是否即時亮起？
-- [ ] **法規標註規範**：案例卡片底部是否皆有「2026 現行法規狀態」查核徽章與官方資料庫出處？
-- [ ] **多檔同步**：`index.html`、`note_3column.html`、`visual.html` 是否同步維持此最新規範？
+- [ ] **書籍主頁展示**：點擊「🏠 書籍主頁」時，是否正確顯示書籍資訊看板、規格清單（書名、作者、出版社、出版日期、ISBN）與特色摘要？
+- [ ] **書本圖片與 Fallback**：封面展示區是否正確載入書本封面圖片？在未提供圖片時，優雅的立體漸層書封 Fallback 是否正常呈現？
+- [ ] **精選圖解藝廊**：主頁下方是否設有書籍核心圖解卡片預覽區？
+- [ ] **三態與多篇章視圖切換**：`home`（主頁）、`intro`（導論）、各篇導讀（如 `part-0`）與章節（`chapter-1`, `chapter-2`）切換是否完全互斥且無任何黑底白畫面？
+- [ ] **本篇導讀標準卡片**：各篇導讀視圖是否具備 `PREFACE • CONDUCTED READ` 徽章、篇章大標題、頁碼徽章與帶左邊框之 `blockquote` 原文？
+- [ ] **右側 TOC 顯隱**：在「書籍主頁」與「各篇本篇導讀」狀態下，右側章節清單是否**嚴格完全隱藏**？進入第一章或第二章時是否**立即顯現並固定吸頂於右上角**？
+- [ ] **吸頂防落檢驗**：滾動至頁面最底端時，右側清單是否**絕無掉落至頁面下方或左下角滿版**？
+- [ ] **Section 標籤深度配對閉合**：每個 `<section>` 內部之所有卡片與格線 `<div>` 是否於 `</section>` 之前全數閉合？`<section>` 與 `</section>` 數量是否精確 1:1 相等？
+- [ ] **視圖容器平級獨立性**：`<main>` 內各主視圖（`#viewHome`, `#viewIntro`, `#viewChapter1`, `#viewChapter2`, `#viewPart0` 等）是否各自完全閉合且為兄弟節點，絕無相互巢狀包覆導致切換章節時黑底空白（「內文沒東西」）？
+- [ ] **左側目錄子章節樣式**：子章節字級是否小於父層（`text-[13px]`），是否具備左側縱向分支線（`border-l-2`）、微邊距與子項目指示圓點？
+- [ ] **錨點點擊防跳退**：點擊右側各小節 TOC 錨點時，是否平滑跳轉至該段落，且絕不會誤觸跳回主頁或導論？
+
