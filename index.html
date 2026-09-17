@@ -80,20 +80,28 @@
     }
 
     /* ===================================================
-       三欄布局容器 (CSS Grid)：
-       嚴格鎖定 左 (260px) + 中 (1fr) + 右 (280px)
-       絕不允許右側欄落到下方或左下角
+       自適應多欄網格布局容器 (Adaptive Multi-Column Layout)
+       1. 首頁/導論視圖：自適應雙欄模式 (左側欄 260px + 中央主視圖 1fr)
+          右側無清單時不保留 280px 空欄，徹底消除右側過大空白！
+       2. 章節研讀視圖 (body.in-chapter)：三欄專業文檔模式 (左 260px + 中 1fr + 右 280px 吸頂大綱)
        =================================================== */
     .app-layout-container {
       display: grid !important;
-      grid-template-columns: 260px minmax(0, 1fr) 280px !important;
-      gap: 1.5rem !important;
+      grid-template-columns: 260px minmax(0, 1fr) !important;
+      gap: 1.75rem !important;
       width: 100% !important;
       max-width: 92rem !important;
       margin-left: auto !important;
       margin-right: auto !important;
-      padding: 1.5rem 1rem !important;
+      padding: 1.5rem 1.5rem !important;
       box-sizing: border-box !important;
+      transition: grid-template-columns 0.2s ease;
+    }
+
+    /* 進入章節閱讀時（第一章、第二章等），啟用三欄布局並帶出右側吸頂大綱清單 */
+    body.in-chapter .app-layout-container {
+      grid-template-columns: 260px minmax(0, 1fr) 280px !important;
+      gap: 1.5rem !important;
     }
 
     #sidebar {
@@ -130,7 +138,8 @@
     }
 
     @media (max-width: 1279px) {
-      .app-layout-container {
+      .app-layout-container,
+      body.in-chapter .app-layout-container {
         grid-template-columns: 240px minmax(0, 1fr) !important;
         gap: 1rem !important;
       }
@@ -645,7 +654,7 @@
       </aside>
 
       <!-- ==================== 2. CENTER MAIN READER (中央主閱讀區) ==================== -->
-      <main class="flex-1 min-w-0 max-w-3xl">
+      <main class="flex-1 min-w-0 w-full">
 
         <!-- ========================================== -->
         <!-- VIEW 0: 書籍主頁 (Home View) -->
@@ -653,7 +662,7 @@
         <div id="viewHome" class="fade-enter space-y-8">
           
           <!-- 書籍 Hero 卡片 (立體書封 + 極光微光背景 + 量化指標晶片 + 詳細規格資訊) -->
-          <div class="relative overflow-hidden rounded-3xl border border-slate-200/80 dark:border-white/[0.1] bg-white/95 dark:bg-[#111726]/95 p-6 sm:p-8 backdrop-blur shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)]">
+          <div class="relative overflow-hidden rounded-3xl border border-slate-200/80 dark:border-white/[0.1] bg-white/95 dark:bg-[#111726]/95 p-6 sm:p-8 lg:p-10 backdrop-blur shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)]">
             
             <!-- 極光微光光暈背景 (Aurora Mesh Glow Backdrop) -->
             <div class="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl -z-0">
@@ -663,10 +672,10 @@
               <div class="absolute inset-0 bg-[radial-gradient(rgba(99,102,241,0.06)_1px,transparent_1px)] dark:bg-[radial-gradient(rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:22px_22px]"></div>
             </div>
 
-            <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-center">
               
               <!-- 左側：立體書籍封面展示區 -->
-              <div class="md:col-span-5 flex flex-col items-center justify-center py-2">
+              <div class="md:col-span-4 lg:col-span-4 flex flex-col items-center justify-center py-2">
                 <div class="book-3d-wrapper relative flex flex-col items-center">
                   
                   <!-- 懸浮晶透標籤 (Floating Glass Badge) -->
@@ -717,7 +726,7 @@
               </div>
 
               <!-- 右側：書籍詳細規格、指標晶片與資訊清單 -->
-              <div class="md:col-span-7 space-y-4">
+              <div class="md:col-span-8 lg:col-span-8 space-y-4">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 text-xs font-semibold border border-blue-200 dark:border-blue-800/50">
                   <span>📚 高點法學圖說系列</span>
                   <span class="w-1 h-1 rounded-full bg-blue-500"></span>
@@ -725,7 +734,7 @@
                 </div>
                 
                 <div>
-                  <h1 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">
+                  <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">
                     刑法總則【圖說系列】
                   </h1>
                   <p class="text-xs sm:text-sm text-blue-600 dark:text-blue-400 font-mono font-medium mt-1">
@@ -737,42 +746,42 @@
                   本書專為法律國考與學術深造打造，以清晰的概念圖示化繁為簡，貫穿「不法推定罪責」與三階層論罪體系。緊扣重要學說爭點與司法實務見解，協助考生奠定最堅實的刑法總則思維。
                 </p>
 
-                <!-- 教材量化指標晶片 (Academic Metric Chips) -->
+                <!-- 教材量化指標晶片 (Academic Metric Chips：字樣完整呈現，無任何省略縮寫截斷) -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
-                  <div class="metric-chip p-2.5 rounded-2xl bg-slate-50/90 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.08] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-blue-400/50 group">
+                  <div class="metric-chip p-3 rounded-2xl bg-slate-50/90 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.08] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-blue-400/50 group">
                     <div class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-xs font-semibold mb-0.5">
                       <span>📘</span>
-                      <span class="text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-blue-500 transition-colors font-mono">Core Units</span>
+                      <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-blue-500 transition-colors">體系單元</span>
                     </div>
                     <div class="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">6 大單元</div>
-                    <div class="text-[10px] text-slate-500 dark:text-slate-400 truncate">導論至法律效果全景</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 leading-snug whitespace-normal break-words mt-0.5">導論至法律效果</div>
                   </div>
 
-                  <div class="metric-chip p-2.5 rounded-2xl bg-slate-50/90 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.08] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-indigo-400/50 group">
+                  <div class="metric-chip p-3 rounded-2xl bg-slate-50/90 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.08] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-indigo-400/50 group">
                     <div class="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400 text-xs font-semibold mb-0.5">
                       <span>📊</span>
-                      <span class="text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-indigo-500 transition-colors font-mono">Diagrams</span>
+                      <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-indigo-500 transition-colors">體系圖解</span>
                     </div>
                     <div class="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">15+ 幅</div>
-                    <div class="text-[10px] text-slate-500 dark:text-slate-400 truncate">體系思維導圖流程</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 leading-snug whitespace-normal break-words mt-0.5">思維導圖審查流程</div>
                   </div>
 
-                  <div class="metric-chip p-2.5 rounded-2xl bg-slate-50/90 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.08] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-amber-400/50 group">
+                  <div class="metric-chip p-3 rounded-2xl bg-slate-50/90 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.08] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-amber-400/50 group">
                     <div class="flex items-center gap-1.5 text-amber-600 dark:text-amber-400 text-xs font-semibold mb-0.5">
                       <span>⚖️</span>
-                      <span class="text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-amber-500 transition-colors font-mono">Key Cases</span>
+                      <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-amber-500 transition-colors">實務案例</span>
                     </div>
                     <div class="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">50+ 則</div>
-                    <div class="text-[10px] text-slate-500 dark:text-slate-400 truncate">實務判例爭點解構</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 leading-snug whitespace-normal break-words mt-0.5">經典裁判爭點解構</div>
                   </div>
 
-                  <div class="metric-chip p-2.5 rounded-2xl bg-slate-50/90 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.08] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-emerald-400/50 group">
+                  <div class="metric-chip p-3 rounded-2xl bg-slate-50/90 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.08] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-emerald-400/50 group">
                     <div class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 text-xs font-semibold mb-0.5">
                       <span>🛡️</span>
-                      <span class="text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-emerald-500 transition-colors font-mono">Validated</span>
+                      <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-emerald-500 transition-colors">現行校驗</span>
                     </div>
                     <div class="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">2026</div>
-                    <div class="text-[10px] text-slate-500 dark:text-slate-400 truncate">現行條文精準校驗</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 leading-snug whitespace-normal break-words mt-0.5">現行法規最新校驗</div>
                   </div>
                 </div>
 

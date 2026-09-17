@@ -27,7 +27,7 @@ if errorlevel 1 (
 )
 
 set "COMMIT_MESSAGE=%~1"
-if not defined COMMIT_MESSAGE set "COMMIT_MESSAGE=feat: flagship book home visual overhaul with aurora glow, 3D floating animation, and metric chips"
+if not defined COMMIT_MESSAGE set "COMMIT_MESSAGE=fix: eliminate excessive home whitespace with adaptive 2-column layout and fix metric chips text truncation"
 
 git diff --cached --quiet
 if errorlevel 1 (
