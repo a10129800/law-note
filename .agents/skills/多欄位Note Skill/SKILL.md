@@ -121,6 +121,35 @@ description: >-
   - 在所有「本篇導讀」狀態下（如 `#intro`, `#part-0` 等），**右側 TOC 清單必須嚴格隱藏（`display: none !important`）**，避免讀者在未正式進入章節內文前看到零散或空白的小節目錄，維持最高專注度的導讀體驗。
   - 唯有讀者點擊第一章、第二章等具體子章節時，右側清單才動態吸頂顯現。
 
+### 8. 概念焦點框（Focus Box）實體天藍色塊美學與高對比標籤規範 (Focus Box & Callout Aesthetic Standard)
+教材章節開篇核心引言（如「一個壞人做了一件壞事」）、思考核心、法理關鍵推導或總結概念卡片，外觀必須符合專屬的「概念焦點框（Focus Box / `.box-legal-navy`）」規範：
+- **實體色塊底色原則（Vibrant Sky Blue Tint Block）**：
+  - **明亮模式**：嚴禁使用死白無存在感的淡白漸層！必須採用飽滿溫潤的專屬天藍色漸層 **`linear-gradient(135deg, #BAE6FD 0%, #7DD3FC 100%) !important`**，使重點框框與周遭底色（`bg-slate-50`）形成清晰明確的層次區隔，展現扎實的「實體卡片框框」存在感。
+  - **暗夜模式**：無縫切換為深邃沉穩的夜幕晶體藍 **`linear-gradient(135deg, rgba(8, 47, 73, 0.88) 0%, rgba(12, 74, 110, 0.78) 100%) !important`**，兼顧焦點凝聚與夜間長時間護眼。
+- **精緻外框與重點導引線（Border & Left Accent）**：
+  - 外圍配置 **`2px solid #38BDF8 !important`** 天藍邊框搭配 `rounded-2xl`（16px）柔和圓角。
+  - 左側加設自信鮮明的粗體重點導引線 **`border-left: 6px solid #0284C7 !important`**（暗夜模式為 `6px solid #38BDF8 !important`）。
+  - 搭配天藍色微散漫陰影 **`box-shadow: 0 4px 18px -2px rgba(2, 132, 199, 0.18) !important`**，賦予框框立體懸浮感。
+- **超高易讀性內文字體（High-Contrast Readability）**：
+  - 在天藍色底色上，內文正文一律採用深海軍藍 **`color: #0c4a6e !important`**（或 `#032034`），對比度遠超 WCAG AAA（7:1 以上）嚴格標準，消除閱讀疲勞。
+  - 強調字級採用深墨藍色 **`color: #032034 !important; font-weight: 800;`**。
+  - 暗夜模式正文為冰藍色 **`color: #e0f2fe !important`**，強調字為純白色 **`color: #ffffff !important`**。
+- **框內立體純白膠囊標籤（In-Box White Pill Badges）**：
+  - 框框內出現之法律關鍵字（如「一個壞人」、「一件壞事」、「壞事推定壞人」、「不法推定罪責」、「阻卻罪責事由」），在淺藍底色中**一律改採純白襯底＋彩色粗體邊線**立體襯托：
+    - 藍色系標籤（評價客體/行為人）：`background: #ffffff !important; color: #0369a1 !important; border: 1.5px solid #0284c7 !important; font-weight: 800; box-shadow: 0 1px 3px rgba(0,0,0,0.08);`
+    - 琥珀金色標籤（超法定/法益衡量）：`background: #ffffff !important; color: #b45309 !important; border: 1.5px solid #d97706 !important; font-weight: 800;`
+    - 玫瑰紅色標籤（阻卻事由/例外排除）：`background: #ffffff !important; color: #be123c !important; border: 1.5px solid #e11d48 !important; font-weight: 800;`
+  - 暗夜模式標籤則自動切換為對應深色半透明背景與亮彩色邊線文字，層次分明、重點立刻躍然紙上。
+
+### 9. UTF-8 檔案編碼防護與母本同步安全原則 (UTF-8 Integrity & Master Sync Principle)
+- **純 UTF-8 無 BOM 鐵律（Anti-Mojibake Shield）**：
+  - 專案內所有 HTML、Markdown、JS、CSS 檔案必須始終保持標準 UTF-8 編碼。
+  - 嚴防在 Windows 繁體中文環境下因 ANSI / Big5 (CP950) 判定衝突導致繁體中文字元裂解為菱形問號（`` Mojibake）。
+- **雙重母本備援與安全同步架構（Master Sync Architecture）**：
+  - 系統必須維護一組乾淨、無損的母本檔案（如 `visual.html` 為乾淨 UTF-8 母本）。
+  - 所有建置與自動推送批次檔（如 `copy_cover_and_push.bat`）**同步方向必須嚴格鎖定由乾淨母本向目標檔覆蓋**（即 `copy /y visual.html index.html`），嚴禁未經編碼驗證之暫存檔逆向覆蓋母本。
+  - 專案根目錄必須常備一鍵還原批次檔 `restore_index.bat`，若瀏覽器出現編碼暫態異常，讀者可雙擊一鍵無損秒級還原。
+
 ---
 
 ## 標準版面架構 (Layout Architecture)
@@ -380,6 +409,91 @@ function switchView(viewName, shouldScrollTop = true) {
 }
 ```
 
+### 5. 概念焦點框 (Focus Box) CSS 與 HTML 標準範本
+
+```css
+/* 概念焦點框核心樣式 (明亮天藍實體色塊 / 暗夜夜幕晶體藍) */
+.box-legal-navy {
+  background: linear-gradient(135deg, #BAE6FD 0%, #7DD3FC 100%) !important;
+  border: 2px solid #38BDF8 !important;
+  border-left: 6px solid #0284C7 !important;
+  box-shadow: 0 4px 18px -2px rgba(2, 132, 199, 0.18) !important;
+}
+.box-legal-navy p {
+  color: #0c4a6e !important; /* 深海軍藍：高對比極致舒適易讀 */
+}
+.box-legal-navy strong {
+  color: #032034 !important; /* 墨黑深藍強調 */
+}
+
+/* 框內純白襯底彩色膠囊標籤 */
+.box-legal-navy .legal-tag-blue {
+  background: #ffffff !important;
+  color: #0369a1 !important;
+  border: 1.5px solid #0284c7 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+.box-legal-navy .legal-tag-amber {
+  background: #ffffff !important;
+  color: #b45309 !important;
+  border: 1.5px solid #d97706 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+.box-legal-navy .legal-tag-rose {
+  background: #ffffff !important;
+  color: #be123c !important;
+  border: 1.5px solid #e11d48 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* 暗夜模式對應 */
+.dark .box-legal-navy {
+  background: linear-gradient(135deg, rgba(8, 47, 73, 0.88) 0%, rgba(12, 74, 110, 0.78) 100%) !important;
+  border: 2px solid rgba(56, 189, 248, 0.55) !important;
+  border-left: 6px solid #38BDF8 !important;
+  box-shadow: 0 4px 18px -2px rgba(0, 0, 0, 0.35) !important;
+}
+.dark .box-legal-navy p {
+  color: #e0f2fe !important;
+}
+.dark .box-legal-navy strong {
+  color: #ffffff !important;
+}
+.dark .box-legal-navy .legal-tag-blue {
+  background: rgba(3, 105, 161, 0.45) !important;
+  color: #7dd3fc !important;
+  border: 1.5px solid #38bdf8 !important;
+  font-weight: 800 !important;
+}
+.dark .box-legal-navy .legal-tag-amber {
+  background: rgba(180, 83, 9, 0.4) !important;
+  color: #fde047 !important;
+  border: 1.5px solid #f59e0b !important;
+  font-weight: 800 !important;
+}
+.dark .box-legal-navy .legal-tag-rose {
+  background: rgba(190, 18, 60, 0.4) !important;
+  color: #fda4af !important;
+  border: 1.5px solid #f43f5e !important;
+  font-weight: 800 !important;
+}
+```
+
+```html
+<!-- HTML 範例結構 -->
+<div class="box-legal-navy p-6 sm:p-7 rounded-2xl space-y-4 text-sm sm:text-base leading-relaxed">
+  <p>
+    刑法是一部處理犯罪的法律，至於如何謂犯罪？簡單說，<span class="legal-tag-blue">「一個壞人」</span>做了<span class="legal-tag-amber">「一件壞事」</span>就是犯罪。
+  </p>
+  <p>
+    ...這就是<span class="legal-tag-blue">「壞事推定壞人」</span>原則，而推翻罪責推定的理由稱為<span class="legal-tag-rose">「阻卻罪責事由」</span>。
+  </p>
+</div>
+```
+
 ---
 
 ## 驗收檢查清單 (Quality Checklist)
@@ -391,8 +505,13 @@ function switchView(viewName, shouldScrollTop = true) {
 - [ ] **本篇導讀標準卡片**：各篇導讀視圖是否具備 `PREFACE • CONDUCTED READ` 徽章、篇章大標題、頁碼徽章與帶左邊框之 `blockquote` 原文？
 - [ ] **右側 TOC 顯隱**：在「書籍主頁」與「各篇本篇導讀」狀態下，右側章節清單是否**嚴格完全隱藏**？進入第一章或第二章時是否**立即顯現並固定吸頂於右上角**？
 - [ ] **吸頂防落檢驗**：滾動至頁面最底端時，右側清單是否**絕無掉落至頁面下方或左下角滿版**？
+- [ ] **概念焦點框底色辨識度**：核心直觀引言與焦點框框是否採用專屬天藍實體漸層色塊（`#BAE6FD ~ #7DD3FC`），邊界清晰醒目，絕非融入背景的死白淡漸層？
+- [ ] **框內字體與純白膠囊標籤**：天藍框內正文是否採用深海軍藍（`#0C4A6E` / `#032034`）AAA 級易讀色彩？「一個壞人」、「壞事推定壞人」等標籤是否採用純白底色彩色粗體邊線立體襯托？
+- [ ] **檔案編碼純 UTF-8 完整性**：頁面標題、左側選單與中央內文繁體中文字元是否 100% 正確呈現，絕無任何菱形問號（``）編碼損壞？
+- [ ] **母本安全同步方向**：自動構建或推送批次檔（如 `copy_cover_and_push.bat`）是否嚴格鎖定由乾淨母本（`visual.html`）覆蓋目標檔（`index.html`），避免暫存檔案逆向破壞母本？
 - [ ] **Section 標籤深度配對閉合**：每個 `<section>` 內部之所有卡片與格線 `<div>` 是否於 `</section>` 之前全數閉合？`<section>` 與 `</section>` 數量是否精確 1:1 相等？
 - [ ] **視圖容器平級獨立性**：`<main>` 內各主視圖（`#viewHome`, `#viewIntro`, `#viewChapter1`, `#viewChapter2`, `#viewPart0` 等）是否各自完全閉合且為兄弟節點，絕無相互巢狀包覆導致切換章節時黑底空白（「內文沒東西」）？
 - [ ] **左側目錄子章節樣式**：子章節字級是否小於父層（`text-[13px]`），是否具備左側縱向分支線（`border-l-2`）、微邊距與子項目指示圓點？
 - [ ] **錨點點擊防跳退**：點擊右側各小節 TOC 錨點時，是否平滑跳轉至該段落，且絕不會誤觸跳回主頁或導論？
+
 

@@ -432,6 +432,96 @@
       box-shadow: 0 6px 24px -2px rgba(0, 0, 0, 0.45), 0 0 18px rgba(16, 185, 129, 0.06) !important;
     }
 
+    /* ==================== 阻卻違法案例分類頁籤 (Tabs & Pills) ==================== */
+    .just-tab-btn {
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      color: #64748b;
+    }
+    .dark .just-tab-btn {
+      color: #94a3b8;
+    }
+    .just-tab-btn:hover {
+      color: #0f172a;
+      background-color: rgba(241, 245, 249, 0.9);
+    }
+    .dark .just-tab-btn:hover {
+      color: #f8fafc;
+      background-color: rgba(51, 65, 85, 0.6);
+    }
+    .just-tab-btn.tab-active-legal {
+      background: #ffffff !important;
+      color: #047857 !important;
+      border-color: #10b981 !important;
+      box-shadow: 0 4px 14px -2px rgba(16, 185, 129, 0.25) !important;
+    }
+    .dark .just-tab-btn.tab-active-legal {
+      background: #064e3b !important;
+      color: #6ee7b7 !important;
+      border-color: #059669 !important;
+      box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.35) !important;
+    }
+    .just-tab-btn.tab-active-extra {
+      background: #ffffff !important;
+      color: #b45309 !important;
+      border-color: #f59e0b !important;
+      box-shadow: 0 4px 14px -2px rgba(245, 158, 11, 0.25) !important;
+    }
+    .dark .just-tab-btn.tab-active-extra {
+      background: #78350f !important;
+      color: #fde68a !important;
+      border-color: #d97706 !important;
+      box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.35) !important;
+    }
+    .just-tab-btn.tab-active-all {
+      background: #ffffff !important;
+      color: #1d4ed8 !important;
+      border-color: #3b82f6 !important;
+      box-shadow: 0 4px 14px -2px rgba(59, 130, 246, 0.25) !important;
+    }
+    .dark .just-tab-btn.tab-active-all {
+      background: #1e3a8a !important;
+      color: #93c5fd !important;
+      border-color: #2563eb !important;
+      box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.35) !important;
+    }
+
+    .just-pill-btn {
+      cursor: pointer;
+      border: 1px solid #e2e8f0;
+      background-color: #f8fafc;
+      color: #475569;
+      transition: all 0.15s ease;
+    }
+    .dark .just-pill-btn {
+      border-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(15, 23, 42, 0.6);
+      color: #94a3b8;
+    }
+    .just-pill-btn:hover {
+      border-color: #cbd5e1;
+      color: #0f172a;
+    }
+    .dark .just-pill-btn:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #f8fafc;
+    }
+    .just-pill-btn.active-pill {
+      background-color: #0f172a !important;
+      color: #ffffff !important;
+      border-color: #0f172a !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+      font-weight: 700 !important;
+    }
+    .dark .just-pill-btn.active-pill {
+      background-color: #f8fafc !important;
+      color: #0f172a !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.15) !important;
+      font-weight: 700 !important;
+    }
+
     .legal-tag-blue {
       display: inline-flex;
       align-items: center;
@@ -1863,11 +1953,56 @@
                 </p>
               </div>
 
-              <!-- 案例卡片矩陣 (案例 1-7 至 1-11) -->
-              <div class="grid grid-cols-1 gap-5">
+              <!-- ==================== 阻卻違法案例分類控制台 (Category Tabs & Pills) ==================== -->
+              <div class="space-y-3 pt-2">
+                <!-- 一級體系分類標籤列 -->
+                <div class="p-1.5 rounded-2xl bg-slate-100/90 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 shadow-sm flex flex-wrap items-center gap-2">
+                  <button type="button" id="tabBtnLegal" onclick="switchJustTab('legal')" class="just-tab-btn tab-active-legal px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all">
+                    <span>⚖️ 法定阻卻違法</span>
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300">5 例</span>
+                  </button>
+                  <button type="button" id="tabBtnExtra" onclick="switchJustTab('extra')" class="just-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all">
+                    <span>💡 超法定阻卻違法</span>
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300">4 例</span>
+                  </button>
+                  <button type="button" id="tabBtnAll" onclick="switchJustTab('all')" class="just-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all">
+                    <span>📋 全部展開</span>
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300">9 例</span>
+                  </button>
+                </div>
+
+                <!-- 二級案例快選膠囊列：法定案例 (預設顯示) -->
+                <div id="pillsLegal" class="flex flex-wrap items-center gap-1.5 pt-0.5">
+                  <span class="text-[11px] font-bold text-slate-500 dark:text-slate-400 mr-1 flex items-center gap-1">
+                    <span>🎯 聚焦案例：</span>
+                  </span>
+                  <button type="button" onclick="filterJustCase('legal', 'all')" class="just-pill-btn active-pill px-2.5 py-1 rounded-lg text-xs font-semibold">全部法定案例</button>
+                  <button type="button" onclick="filterJustCase('legal', '1-7')" class="just-pill-btn px-2.5 py-1 rounded-lg text-xs font-semibold">1-7 依法令 (墮胎)</button>
+                  <button type="button" onclick="filterJustCase('legal', '1-8')" class="just-pill-btn px-2.5 py-1 rounded-lg text-xs font-semibold">1-8 依命令 (開槍)</button>
+                  <button type="button" onclick="filterJustCase('legal', '1-9')" class="just-pill-btn px-2.5 py-1 rounded-lg text-xs font-semibold">1-9 業務正當 (結紮)</button>
+                  <button type="button" onclick="filterJustCase('legal', '1-10')" class="just-pill-btn px-2.5 py-1 rounded-lg text-xs font-semibold">1-10 正當防衛</button>
+                  <button type="button" onclick="filterJustCase('legal', '1-11')" class="just-pill-btn px-2.5 py-1 rounded-lg text-xs font-semibold">1-11 緊急避難</button>
+                </div>
+
+                <!-- 二級案例快選膠囊列：超法定案例 (切換至 extra 或 all 時顯示) -->
+                <div id="pillsExtra" class="hidden flex flex-wrap items-center gap-1.5 pt-0.5">
+                  <span class="text-[11px] font-bold text-slate-500 dark:text-slate-400 mr-1 flex items-center gap-1">
+                    <span>🎯 聚焦案例：</span>
+                  </span>
+                  <button type="button" onclick="filterJustCase('extra', 'all')" class="just-pill-btn active-pill px-2.5 py-1 rounded-lg text-xs font-semibold">全部超法定案例</button>
+                  <button type="button" onclick="filterJustCase('extra', '1-12')" class="just-pill-btn px-2.5 py-1 rounded-lg text-xs font-semibold">1-12 得承諾 (刺青)</button>
+                  <button type="button" onclick="filterJustCase('extra', '1-13')" class="just-pill-btn px-2.5 py-1 rounded-lg text-xs font-semibold">1-13 推定承諾 (滅火)</button>
+                  <button type="button" onclick="filterJustCase('extra', '1-14')" class="just-pill-btn px-2.5 py-1 rounded-lg text-xs font-semibold">1-14 義務衝突 (櫻桃案)</button>
+                  <button type="button" onclick="filterJustCase('extra', '1-15')" class="just-pill-btn px-2.5 py-1 rounded-lg text-xs font-semibold">1-15 利益衡量 (輸血案)</button>
+                </div>
+              </div>
+
+              <!-- 案例卡片矩陣 (案例 1-7 至 1-11) 面板容器 -->
+              <div id="panelJustLegal" class="space-y-5">
+                <div class="grid grid-cols-1 gap-5">
                 
                 <!-- 案例 1-7 卡片 (教材第 1-5 頁) -->
-                <div class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3">
+                <div id="case-card-1-7" data-case="1-7" class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
                   <div class="flex items-center justify-between">
                     <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 font-mono">
                       ⚖️ 案例 1-7
@@ -1907,7 +2042,7 @@
                   </div>
 
                 <!-- 案例 1-8 卡片 (教材第 1-5 頁) -->
-                <div class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3">
+                <div id="case-card-1-8" data-case="1-8" class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
                   <div class="flex items-center justify-between">
                     <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 font-mono">
                       ⚖️ 案例 1-8
@@ -1946,7 +2081,7 @@
                 </div>
 
                 <!-- 案例 1-9 卡片 (教材第 1-6 頁) -->
-                <div class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3">
+                <div id="case-card-1-9" data-case="1-9" class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
                   <div class="flex items-center justify-between">
                     <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 font-mono">
                       ⚖️ 案例 1-9
@@ -1987,7 +2122,7 @@
                 </div>
 
                 <!-- 案例 1-10 卡片 (教材第 1-6 頁) -->
-                <div class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3">
+                <div id="case-card-1-10" data-case="1-10" class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
                   <div class="flex items-center justify-between">
                     <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 font-mono">
                       ⚖️ 案例 1-10
@@ -2026,7 +2161,7 @@
                 </div>
 
                 <!-- 案例 1-11 卡片 (教材第 1-6 頁) -->
-                <div class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3">
+                <div id="case-card-1-11" data-case="1-11" class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
                   <div class="flex items-center justify-between">
                     <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 font-mono">
                       ⚖️ 案例 1-11
@@ -2065,10 +2200,23 @@
                 </div>
 
               </div>
+                <!-- 底部導航輔助切換列 (Legal) -->
+                <div class="p-4 rounded-2xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200/80 dark:border-emerald-800/50 flex flex-wrap items-center justify-between gap-3 text-xs">
+                  <button type="button" onclick="switchJustTab('extra')" class="inline-flex items-center gap-1.5 font-bold text-amber-700 dark:text-amber-400 hover:underline">
+                    查看超法定阻卻違法事由（案例 1-12 ～ 1-15）→
+                  </button>
+                  <button type="button" onclick="switchJustTab('all')" class="inline-flex items-center gap-1.5 font-bold text-blue-700 dark:text-blue-400 hover:underline">
+                    📋 一鍵展開全部 9 個案例
+                  </button>
+                  <a href="#sec-justification-system" onclick="scrollToSection(event, 'sec-justification-system')" class="inline-flex items-center gap-1.5 font-bold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
+                    前往第十節 阻卻違法體系展開 →
+                  </a>
+                </div>
+              </div> <!-- closes #panelJustLegal -->
             </section>
 
             <!-- SECTION 9: 超法定阻卻違法事由與利益衡量原則 (教材第 1-6 ～ 1-7 頁 案例 1-12 ～ 1-15) -->
-            <section id="sec-extra-unlawful" class="scroll-mt-28 space-y-4">
+            <section id="sec-extra-unlawful" class="hidden scroll-mt-28 space-y-4">
               <div class="flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
@@ -2118,7 +2266,7 @@
               <div class="grid grid-cols-1 gap-5">
 
                 <!-- 案例 1-12 卡片 (教材第 1-7 頁) -->
-                <div class="p-5 rounded-2xl border-2 border-indigo-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3">
+                <div id="case-card-1-12" data-case="1-12" class="p-5 rounded-2xl border-2 border-indigo-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
                   <div class="flex items-center justify-between">
                     <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-400 font-mono">
                       ⚖️ 案例 1-12
@@ -2159,7 +2307,7 @@
                 </div>
 
                 <!-- 案例 1-13 卡片 (教材第 1-7 頁) -->
-                <div class="p-5 rounded-2xl border-2 border-indigo-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3">
+                <div id="case-card-1-13" data-case="1-13" class="p-5 rounded-2xl border-2 border-indigo-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
                   <div class="flex items-center justify-between">
                     <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-400 font-mono">
                       ⚖️ 案例 1-13
@@ -2198,7 +2346,7 @@
                 </div>
 
                 <!-- 案例 1-14 卡片 【櫻桃案】 (教材第 1-7 頁) -->
-                <div class="p-5 rounded-2xl border-2 border-rose-500/40 bg-white dark:bg-[#101623] shadow-md space-y-3">
+                <div id="case-card-1-14" data-case="1-14" class="p-5 rounded-2xl border-2 border-rose-500/40 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
                   <div class="flex items-center justify-between">
                     <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-400 font-mono">
                       🍒 案例 1-14 ───【櫻桃案】
@@ -2239,7 +2387,7 @@
                 </div>
 
                 <!-- 案例 1-15 卡片 【輸血案】 (教材第 1-7 ～ 1-8 頁) -->
-                <div class="p-5 rounded-2xl border-2 border-amber-500/40 bg-white dark:bg-[#101623] shadow-md space-y-3">
+                <div id="case-card-1-15" data-case="1-15" class="p-5 rounded-2xl border-2 border-amber-500/40 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
                   <div class="flex items-center justify-between">
                     <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 font-mono">
                       🩸 案例 1-15 ───【輸血案】
@@ -2280,6 +2428,18 @@
                   </div>
                 </div>
 
+                <!-- 底部導航輔助切換列 (Extra) -->
+                <div class="p-4 rounded-2xl bg-amber-50/70 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-800/50 flex flex-wrap items-center justify-between gap-3 text-xs">
+                  <button type="button" onclick="switchJustTab('legal')" class="inline-flex items-center gap-1.5 font-bold text-emerald-700 dark:text-emerald-400 hover:underline">
+                    ← 查看法定阻卻違法事由（案例 1-7 ～ 1-11）
+                  </button>
+                  <button type="button" onclick="switchJustTab('all')" class="inline-flex items-center gap-1.5 font-bold text-blue-700 dark:text-blue-400 hover:underline">
+                    📋 一鍵展開全部 9 個案例
+                  </button>
+                  <a href="#sec-justification-system" onclick="scrollToSection(event, 'sec-justification-system')" class="inline-flex items-center gap-1.5 font-bold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400">
+                    前往第十節 阻卻違法體系展開 →
+                  </a>
+                </div>
               </div>
             </section>
 
@@ -5514,8 +5674,89 @@
     }
 
     // 4. 平滑滾動至小節（防跳回導論機制）
+    // ==================== 阻卻違法案例分類標籤切換邏輯 (Tabs & Pills) ====================
+    function switchJustTab(tabName) {
+      const panelLegal = document.getElementById('panelJustLegal');
+      const secExtra = document.getElementById('sec-extra-unlawful');
+      const pillsLegal = document.getElementById('pillsLegal');
+      const pillsExtra = document.getElementById('pillsExtra');
+      const btnLegal = document.getElementById('tabBtnLegal');
+      const btnExtra = document.getElementById('tabBtnExtra');
+      const btnAll = document.getElementById('tabBtnAll');
+
+      if (!panelLegal || !secExtra) return;
+
+      // 重設按鈕 active 類別
+      [btnLegal, btnExtra, btnAll].forEach(btn => {
+        if (btn) {
+          btn.classList.remove('tab-active-legal', 'tab-active-extra', 'tab-active-all');
+        }
+      });
+
+      // 重設各面板中所有案例卡片為顯示 (all)
+      filterJustCase('legal', 'all');
+      filterJustCase('extra', 'all');
+
+      if (tabName === 'legal') {
+        panelLegal.classList.remove('hidden');
+        secExtra.classList.add('hidden');
+        if (pillsLegal) pillsLegal.classList.remove('hidden');
+        if (pillsExtra) pillsExtra.classList.add('hidden');
+        if (btnLegal) btnLegal.classList.add('tab-active-legal');
+      } else if (tabName === 'extra') {
+        panelLegal.classList.add('hidden');
+        secExtra.classList.remove('hidden');
+        if (pillsLegal) pillsLegal.classList.add('hidden');
+        if (pillsExtra) pillsExtra.classList.remove('hidden');
+        if (btnExtra) btnExtra.classList.add('tab-active-extra');
+      } else { // 'all'
+        panelLegal.classList.remove('hidden');
+        secExtra.classList.remove('hidden');
+        if (pillsLegal) pillsLegal.classList.remove('hidden');
+        if (pillsExtra) pillsExtra.classList.remove('hidden');
+        if (btnAll) btnAll.classList.add('tab-active-all');
+      }
+    }
+
+    function filterJustCase(scope, caseId) {
+      const container = scope === 'legal' ? document.getElementById('panelJustLegal') : 
+                        scope === 'extra' ? document.getElementById('sec-extra-unlawful') : null;
+      if (!container) return;
+
+      const cards = container.querySelectorAll('[data-case]');
+      cards.forEach(card => {
+        if (caseId === 'all' || card.getAttribute('data-case') === caseId) {
+          card.classList.remove('hidden');
+          card.classList.add('fade-enter');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      // 更新對應膠囊按鈕 active-pill 樣式
+      const pillContainer = scope === 'legal' ? document.getElementById('pillsLegal') : document.getElementById('pillsExtra');
+      if (pillContainer) {
+        const pillButtons = pillContainer.querySelectorAll('.just-pill-btn');
+        pillButtons.forEach(btn => {
+          const onclickAttr = btn.getAttribute('onclick') || '';
+          if (onclickAttr.includes(`'${caseId}'`)) {
+            btn.classList.add('active-pill');
+          } else {
+            btn.classList.remove('active-pill');
+          }
+        });
+      }
+    }
+
     function scrollToSection(e, targetId) {
       if (e) e.preventDefault();
+
+      // 阻卻違法相關小節自動切換對應頁籤
+      if (targetId === 'sec-justification-cases') {
+        switchJustTab('legal');
+      } else if (targetId === 'sec-extra-unlawful') {
+        switchJustTab('extra');
+      }
       
       // 依據錨點前綴判斷所屬章節，確保對應章節處於可見狀態且 body 具備 in-chapter 類別
       if (targetId.startsWith('sec-ch2-')) {
