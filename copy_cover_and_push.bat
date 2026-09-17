@@ -15,8 +15,8 @@ if not exist ".git" (
 	exit /b 1
 )
 
-echo Syncing visual.html with index.html...
-copy /y index.html visual.html >nul
+echo Syncing index.html with visual.html...
+copy /y visual.html index.html >nul
 
 echo Adding all project changes...
 git add -A
@@ -27,7 +27,7 @@ if errorlevel 1 (
 )
 
 set "COMMIT_MESSAGE=%~1"
-if not defined COMMIT_MESSAGE set "COMMIT_MESSAGE=feat: apply prestigious Navy & Champagne Gold palette and accent borders to chapter reading boxes"
+if not defined COMMIT_MESSAGE set "COMMIT_MESSAGE=feat: optimize chapter reading experience with clean typography and calm box palette"
 
 git diff --cached --quiet
 if errorlevel 1 (
