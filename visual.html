@@ -201,52 +201,96 @@
       }
     }
     /* ===================================================
-       正文行距與段落呼吸節奏系統 (Breathing Rhythm)
+       正文排版舒適護眼系統 (Breathing Rhythm & Ergonomic Typography)
+       1. 基礎字級升級至 16.5px~17px（告別 14px 擠壓感）
+       2. 中文字距微調 (+0.038em)，繁體字符分明不黏滯
+       3. 鎖定最佳閱讀行寬 (48rem ~ 768px，約 38~44 字)，徹底消除眼睛跳行迷航
+       4. 沉穩墨黑文字色調 (#1E293B)，筆劃清晰扎實不發虛
        =================================================== */
     :root {
       --reader-scale: 1;
-      --reader-line-height: 1.85; /* 預設舒適呼吸行距 */
-      --reader-para-spacing: 1.25em; /* 段落呼吸留白 */
+      --reader-line-height: 1.88; /* 預設寬敞舒適呼吸行距 */
+      --reader-para-spacing: 1.35em; /* 段落呼吸留白 */
+      --reader-base-font-size: 1.0625rem; /* 17px 書籍標準正文字級 */
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     }
 
     main {
-      font-size: calc(1rem * var(--reader-scale, 1));
+      font-size: calc(var(--reader-base-font-size, 1.0625rem) * var(--reader-scale, 1));
       transition: font-size 0.2s ease;
     }
 
-    /* 針對 main 內所有文字尺寸動態等比縮放，覆蓋固定 Tailwind rem */
-    main .text-\[10px\] { font-size: calc(10px * var(--reader-scale, 1)) !important; }
-    main .text-\[11px\] { font-size: calc(11px * var(--reader-scale, 1)) !important; }
-    main .text-xs       { font-size: calc(0.75rem * var(--reader-scale, 1)) !important; }
-    main .text-sm       { font-size: calc(0.875rem * var(--reader-scale, 1)) !important; }
-    main .text-base     { font-size: calc(1rem * var(--reader-scale, 1)) !important; }
-    main .text-lg       { font-size: calc(1.125rem * var(--reader-scale, 1)) !important; }
-    main .text-xl       { font-size: calc(1.25rem * var(--reader-scale, 1)) !important; }
-    main .text-2xl      { font-size: calc(1.5rem * var(--reader-scale, 1)) !important; }
-    main .text-3xl      { font-size: calc(1.875rem * var(--reader-scale, 1)) !important; }
+    /* 針對 main 內所有文字尺寸等比調整，全面提升基礎辨識度 */
+    main .text-\[10px\] { font-size: calc(11px * var(--reader-scale, 1)) !important; }
+    main .text-\[11px\] { font-size: calc(12px * var(--reader-scale, 1)) !important; }
+    main .text-xs       { font-size: calc(0.84rem * var(--reader-scale, 1)) !important; }
+    main .text-sm       { font-size: calc(0.96rem * var(--reader-scale, 1)) !important; }
+    main .text-base     { font-size: calc(1.0625rem * var(--reader-scale, 1)) !important; }
+    main .text-lg       { font-size: calc(1.1875rem * var(--reader-scale, 1)) !important; }
+    main .text-xl       { font-size: calc(1.35rem * var(--reader-scale, 1)) !important; }
+    main .text-2xl      { font-size: calc(1.6rem * var(--reader-scale, 1)) !important; }
+    main .text-3xl      { font-size: calc(1.95rem * var(--reader-scale, 1)) !important; }
 
-    /* 正文文字行距加大，徹底告別密集黑鐵板感 */
+    /* 正文文字規格：字級提升至 17px、行距 1.88、中文字距 0.038em，沉穩墨色 */
     main p,
     main li,
     main blockquote,
     main dd {
-      line-height: calc(var(--reader-line-height, 1.85) + 0.1 * (var(--reader-scale, 1) - 1)) !important;
+      font-size: calc(1.0625rem * var(--reader-scale, 1)) !important;
+      line-height: calc(var(--reader-line-height, 1.88) + 0.08 * (var(--reader-scale, 1) - 1)) !important;
+      letter-spacing: 0.038em !important;
+      word-break: break-word;
+      color: #1E293B; /* slate-800: 字色沉穩飽滿，消除淺灰發虛感 */
+    }
+
+    .dark main p,
+    .dark main li,
+    .dark main blockquote,
+    .dark main dd {
+      color: #E2E8F0 !important; /* dark mode: 柔和清晰的淡岩色 */
     }
 
     /* 段落呼吸留白加大 */
     main p {
-      margin-bottom: var(--reader-para-spacing, 1.25em) !important;
+      margin-bottom: var(--reader-para-spacing, 1.35em) !important;
     }
     main p:last-child {
       margin-bottom: 0 !important;
     }
 
+    /* 鎖定正文舒適行寬（約 38～44 個中文字），避免眼睛掃視過長而產生回行迷航 */
+    main section > div:not(.overflow-x-auto),
+    main .reader-prose,
+    main article {
+      max-width: 48rem !important; /* ~768px 最佳閱讀眼動幅度 */
+    }
+
     /* 引用塊與法條引述增加呼吸空間 */
     main blockquote {
-      margin-top: 1.1em !important;
-      margin-bottom: 1.1em !important;
-      padding-top: 0.75em !important;
-      padding-bottom: 0.75em !important;
+      margin-top: 1.25em !important;
+      margin-bottom: 1.25em !important;
+      padding-top: 0.85em !important;
+      padding-bottom: 0.85em !important;
+      padding-left: 1.25em !important;
+      padding-right: 1.25em !important;
+    }
+
+    @media (max-width: 767px) {
+      main p,
+      main li,
+      main blockquote,
+      main dd {
+        font-size: calc(1.02rem * var(--reader-scale, 1)) !important; /* 手機端 ~16.3px 舒適字級 */
+        letter-spacing: 0.03em !important;
+      }
+      main section > div:not(.overflow-x-auto) {
+        max-width: 100% !important;
+      }
     }
   </style>
 </head>
@@ -350,7 +394,7 @@
             <div>
               <div class="flex items-center justify-between text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
                 <span>行距呼吸感</span>
-                <span id="lineHeightLabel" class="text-slate-500 font-mono">舒適 (1.85)</span>
+                <span id="lineHeightLabel" class="text-slate-500 font-mono">舒適 (1.88)</span>
               </div>
               <div class="grid grid-cols-3 gap-1 p-1 bg-slate-100 dark:bg-slate-800/80 rounded-xl text-xs font-medium text-center">
                 <button type="button" onclick="setLineHeightPreset('compact')" id="lineHeightBtn-compact" class="py-1.5 rounded-lg transition-all text-slate-600 dark:text-slate-300">緊湊</button>
@@ -3387,9 +3431,9 @@
 
     // ==================== 1.2 正文行距呼吸感控制 (Line Height) ====================
     const LINE_HEIGHT_CONFIG = {
-      'compact': { height: 1.65, spacing: '0.95em', label: '緊湊 (1.65)' },
-      'comfortable': { height: 1.85, spacing: '1.25em', label: '舒適 (1.85)' },
-      'spacious': { height: 2.05, spacing: '1.5em', label: '寬鬆 (2.05)' }
+      'compact': { height: 1.68, spacing: '1.05em', label: '緊湊 (1.68)' },
+      'comfortable': { height: 1.88, spacing: '1.35em', label: '舒適 (1.88)' },
+      'spacious': { height: 2.10, spacing: '1.60em', label: '寬鬆 (2.10)' }
     };
 
     let currentLineHeight = localStorage.getItem('reader-line-height') || 'comfortable';

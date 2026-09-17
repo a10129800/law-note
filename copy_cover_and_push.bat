@@ -24,7 +24,7 @@ if errorlevel 1 (
 )
 
 set "COMMIT_MESSAGE=%~1"
-if not defined COMMIT_MESSAGE set "COMMIT_MESSAGE=refactor: remove sepia mode and clean up mobile drawer"
+if not defined COMMIT_MESSAGE set "COMMIT_MESSAGE=perf: upgrade typography with 17px base, letter-spacing, and line-length control"
 
 git diff --cached --quiet
 if errorlevel 1 (
