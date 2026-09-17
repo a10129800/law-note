@@ -24,7 +24,7 @@ if errorlevel 1 (
 )
 
 set "COMMIT_MESSAGE=%~1"
-if not defined COMMIT_MESSAGE set "COMMIT_MESSAGE=chore: update criminal law notes"
+if not defined COMMIT_MESSAGE set "COMMIT_MESSAGE=refactor: remove sepia mode and clean up mobile drawer"
 
 git diff --cached --quiet
 if errorlevel 1 (
