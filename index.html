@@ -222,7 +222,9 @@
       }
     }
 
-    /* 3D 擬真書封立體感樣式 */
+    /* ===================================================
+       旗艦視覺光感與 3D 擬真動效系統 (Aurora Glow & 3D Book Experience)
+       =================================================== */
     .book-3d-wrapper {
       perspective: 1200px;
     }
@@ -232,11 +234,6 @@
       box-shadow: -10px 16px 32px -6px rgba(0, 0, 0, 0.45),
                   0 0 0 1px rgba(255, 255, 255, 0.1) inset;
     }
-    .book-3d-card:hover {
-      transform: rotateY(-8deg) rotateX(2deg) translateY(-6px) scale(1.03);
-      box-shadow: -16px 24px 44px -8px rgba(0, 0, 0, 0.55),
-                  0 0 0 1px rgba(255, 255, 255, 0.2) inset;
-    }
     .book-spine-shine {
       background: linear-gradient(90deg, 
         rgba(255,255,255,0.2) 0%, 
@@ -244,6 +241,103 @@
         rgba(0,0,0,0.35) 12%, 
         rgba(255,255,255,0.08) 18%, 
         rgba(0,0,0,0) 100%);
+    }
+
+    /* 3D 書封懸浮呼吸微動效 (Silky Floating Breathing Animation) */
+    @keyframes bookFloat {
+      0%, 100% {
+        transform: translateY(0px) rotateY(-5deg) rotateX(2deg);
+        box-shadow: -12px 18px 36px -6px rgba(0, 0, 0, 0.42),
+                    0 0 20px rgba(99, 102, 241, 0.12),
+                    0 0 0 1px rgba(255, 255, 255, 0.12) inset;
+      }
+      50% {
+        transform: translateY(-9px) rotateY(-8deg) rotateX(3.5deg);
+        box-shadow: -18px 28px 46px -8px rgba(0, 0, 0, 0.52),
+                    0 0 32px rgba(99, 102, 241, 0.28),
+                    0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+      }
+    }
+
+    @keyframes shadowPulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+      50% {
+        transform: scale(0.82);
+        opacity: 0.24;
+      }
+    }
+
+    .book-3d-card.float-breathing {
+      animation: bookFloat 5.5s ease-in-out infinite;
+      will-change: transform, box-shadow;
+    }
+    .book-3d-card.float-breathing:hover {
+      animation-play-state: paused;
+      transform: rotateY(-10deg) rotateX(4deg) translateY(-14px) scale(1.04);
+      box-shadow: -22px 34px 54px -10px rgba(0, 0, 0, 0.62),
+                  0 0 40px rgba(99, 102, 241, 0.38),
+                  0 0 0 1px rgba(255, 255, 255, 0.25) inset;
+    }
+
+    .book-pedestal-shadow {
+      width: 175px;
+      height: 18px;
+      margin-top: 14px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at center, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0) 70%);
+      animation: shadowPulse 5.5s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .dark .book-pedestal-shadow {
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 70%);
+    }
+
+    /* Aurora Glow 極光流體微光動態 */
+    @keyframes auroraDrift1 {
+      0%, 100% {
+        transform: translate(0px, 0px) scale(1);
+      }
+      50% {
+        transform: translate(14px, 10px) scale(1.08);
+      }
+    }
+    @keyframes auroraDrift2 {
+      0%, 100% {
+        transform: translate(0px, 0px) scale(1);
+      }
+      50% {
+        transform: translate(-12px, -8px) scale(1.06);
+      }
+    }
+    .aurora-orb-amber {
+      animation: auroraDrift1 8s ease-in-out infinite;
+    }
+    .aurora-orb-indigo {
+      animation: auroraDrift2 9s ease-in-out infinite;
+    }
+    .aurora-orb-cyan {
+      animation: auroraDrift1 7s ease-in-out infinite reverse;
+    }
+
+    /* 晶片卡片微光陰影 */
+    .metric-chip {
+      box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.05);
+    }
+    .dark .metric-chip {
+      box-shadow: 0 2px 12px -2px rgba(0, 0, 0, 0.35);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .book-3d-card.float-breathing,
+      .book-pedestal-shadow,
+      .aurora-orb-amber,
+      .aurora-orb-indigo,
+      .aurora-orb-cyan {
+        animation: none !important;
+      }
     }
 
     /* ===================================================
@@ -558,15 +652,31 @@
         <!-- ========================================== -->
         <div id="viewHome" class="fade-enter space-y-8">
           
-          <!-- 書籍 Hero 卡片 (立體書封 + 詳細規格資訊) -->
-          <div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-white/[0.08] bg-white/95 dark:bg-[#111726]/95 p-6 sm:p-8 backdrop-blur shadow-sm">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <!-- 書籍 Hero 卡片 (立體書封 + 極光微光背景 + 量化指標晶片 + 詳細規格資訊) -->
+          <div class="relative overflow-hidden rounded-3xl border border-slate-200/80 dark:border-white/[0.1] bg-white/95 dark:bg-[#111726]/95 p-6 sm:p-8 backdrop-blur shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)]">
+            
+            <!-- 極光微光光暈背景 (Aurora Mesh Glow Backdrop) -->
+            <div class="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl -z-0">
+              <div class="aurora-orb aurora-orb-amber absolute -top-16 -left-16 w-80 h-80 rounded-full bg-gradient-to-tr from-amber-400/25 via-orange-400/15 to-transparent blur-3xl opacity-75 dark:opacity-40"></div>
+              <div class="aurora-orb aurora-orb-indigo absolute -top-20 -right-20 w-96 h-96 rounded-full bg-gradient-to-bl from-indigo-500/25 via-blue-600/20 to-transparent blur-3xl opacity-80 dark:opacity-50"></div>
+              <div class="aurora-orb aurora-orb-cyan absolute -bottom-20 left-1/4 w-80 h-80 rounded-full bg-gradient-to-t from-cyan-400/15 via-blue-500/10 to-transparent blur-3xl opacity-65 dark:opacity-35"></div>
+              <div class="absolute inset-0 bg-[radial-gradient(rgba(99,102,241,0.06)_1px,transparent_1px)] dark:bg-[radial-gradient(rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:22px_22px]"></div>
+            </div>
+
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
               
               <!-- 左側：立體書籍封面展示區 -->
-              <div class="md:col-span-5 flex justify-center">
-                <div class="book-3d-wrapper py-2">
-                  <!-- 3D 書封卡片 -->
-                  <div class="book-3d-card relative w-56 h-80 rounded-2xl overflow-hidden cursor-pointer select-none bg-slate-900 shadow-2xl">
+              <div class="md:col-span-5 flex flex-col items-center justify-center py-2">
+                <div class="book-3d-wrapper relative flex flex-col items-center">
+                  
+                  <!-- 懸浮晶透標籤 (Floating Glass Badge) -->
+                  <div class="mb-3 px-3 py-1 rounded-full bg-white/85 dark:bg-slate-800/85 backdrop-blur-md border border-slate-200/80 dark:border-white/10 text-[11px] font-semibold text-slate-700 dark:text-slate-200 shadow-sm flex items-center gap-1.5 pointer-events-none transform -translate-y-0.5">
+                    <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>實體教材數位化・2026 最新校驗</span>
+                  </div>
+
+                  <!-- 3D 書封卡片 (帶有 float-breathing 呼吸懸浮動態) -->
+                  <div class="book-3d-card float-breathing relative w-56 h-80 rounded-2xl overflow-hidden cursor-pointer select-none bg-slate-900 shadow-2xl">
                     
                     <!-- 實體封面圖片插槽 (優先載入專案相對路徑 cover.png，並支援本地回退與 CSS 擬真書封) -->
                     <img id="bookCoverImg" 
@@ -600,10 +710,13 @@
                     </div>
 
                   </div>
+
+                  <!-- 3D 擬真地面接觸投影 (與浮動動態連動呼吸收放) -->
+                  <div class="book-pedestal-shadow"></div>
                 </div>
               </div>
 
-              <!-- 右側：書籍詳細規格與資訊清單 -->
+              <!-- 右側：書籍詳細規格、指標晶片與資訊清單 -->
               <div class="md:col-span-7 space-y-4">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 text-xs font-semibold border border-blue-200 dark:border-blue-800/50">
                   <span>📚 高點法學圖說系列</span>
@@ -623,6 +736,45 @@
                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                   本書專為法律國考與學術深造打造，以清晰的概念圖示化繁為簡，貫穿「不法推定罪責」與三階層論罪體系。緊扣重要學說爭點與司法實務見解，協助考生奠定最堅實的刑法總則思維。
                 </p>
+
+                <!-- 教材量化指標晶片 (Academic Metric Chips) -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+                  <div class="metric-chip p-2.5 rounded-2xl bg-slate-50/90 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.08] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-blue-400/50 group">
+                    <div class="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-xs font-semibold mb-0.5">
+                      <span>📘</span>
+                      <span class="text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-blue-500 transition-colors font-mono">Core Units</span>
+                    </div>
+                    <div class="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">6 大單元</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400 truncate">導論至法律效果全景</div>
+                  </div>
+
+                  <div class="metric-chip p-2.5 rounded-2xl bg-slate-50/90 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.08] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-indigo-400/50 group">
+                    <div class="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400 text-xs font-semibold mb-0.5">
+                      <span>📊</span>
+                      <span class="text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-indigo-500 transition-colors font-mono">Diagrams</span>
+                    </div>
+                    <div class="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">15+ 幅</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400 truncate">體系思維導圖流程</div>
+                  </div>
+
+                  <div class="metric-chip p-2.5 rounded-2xl bg-slate-50/90 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.08] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-amber-400/50 group">
+                    <div class="flex items-center gap-1.5 text-amber-600 dark:text-amber-400 text-xs font-semibold mb-0.5">
+                      <span>⚖️</span>
+                      <span class="text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-amber-500 transition-colors font-mono">Key Cases</span>
+                    </div>
+                    <div class="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">50+ 則</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400 truncate">實務判例爭點解構</div>
+                  </div>
+
+                  <div class="metric-chip p-2.5 rounded-2xl bg-slate-50/90 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.08] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-emerald-400/50 group">
+                    <div class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 text-xs font-semibold mb-0.5">
+                      <span>🛡️</span>
+                      <span class="text-[10px] uppercase tracking-wider text-slate-400 group-hover:text-emerald-500 transition-colors font-mono">Validated</span>
+                    </div>
+                    <div class="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">2026</div>
+                    <div class="text-[10px] text-slate-500 dark:text-slate-400 truncate">現行條文精準校驗</div>
+                  </div>
+                </div>
 
                 <!-- 書籍中繼資料表格 (精確對應提供之資訊) -->
                 <div class="grid grid-cols-2 gap-2.5 pt-1 text-xs">
@@ -653,14 +805,15 @@
                 </div>
 
                 <!-- 快速行動 CTA 按鈕 -->
-                <div class="flex flex-wrap gap-3 pt-3">
-                  <button onclick="switchView('chapter-1')" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-lg shadow-blue-500/25 transition-all flex items-center gap-2">
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                  <button onclick="switchView('chapter-1')" class="group relative px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-bold shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center gap-2">
                     <span>🚀 開始閱讀第一章</span>
+                    <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                   </button>
-                  <button onclick="switchView('chapter-2')" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-lg shadow-indigo-500/25 transition-all flex items-center gap-2">
+                  <button onclick="switchView('chapter-2')" class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200/80 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200/70 dark:border-white/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center gap-2">
                     <span>📄 閱讀第二章</span>
                   </button>
-                  <button onclick="switchView('intro')" class="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-semibold transition-all flex items-center gap-2">
+                  <button onclick="switchView('intro')" class="px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center gap-2">
                     <span>📖 查看本篇導論</span>
                   </button>
                 </div>
