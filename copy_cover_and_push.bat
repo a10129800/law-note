@@ -15,6 +15,9 @@ if not exist ".git" (
 	exit /b 1
 )
 
+echo Syncing visual.html with index.html...
+copy /y index.html visual.html >nul
+
 echo Adding all project changes...
 git add -A
 if errorlevel 1 (
@@ -24,7 +27,7 @@ if errorlevel 1 (
 )
 
 set "COMMIT_MESSAGE=%~1"
-if not defined COMMIT_MESSAGE set "COMMIT_MESSAGE=perf: upgrade typography with 17px base, letter-spacing, and line-length control"
+if not defined COMMIT_MESSAGE set "COMMIT_MESSAGE=feat: default to book home on initial open and sync visual.html"
 
 git diff --cached --quiet
 if errorlevel 1 (

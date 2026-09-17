@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>導論・第一章 犯罪的概念（右上角章節清單版） | 刑法研讀筆記</title>
+  <title>刑法總則【圖說系列】研讀筆記 | 書籍主頁</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -113,13 +113,13 @@
       width: 100% !important;
     }
 
-    /* 右側章節清單（Right TOC Aside）：絕對鎖定在右上角（紅圈處），吸頂跟隨 */
+    /* 右側章節清單（Right TOC Aside）：預設在主頁時隱藏，進入章節後才顯現吸頂跟隨 */
     #rightTocAside {
       grid-column: 3 !important;
       grid-row: 1 !important;
-      display: block !important;
+      display: none;
       position: sticky !important;
-      top: 5rem !important; /* 80px 固定吸頂在右上紅圈處 */
+      top: 5rem !important; /* 80px 固定吸頂在右上處 */
       align-self: start !important;
       width: 280px !important;
       min-width: 280px !important;
@@ -340,7 +340,7 @@
     }
   </style>
 </head>
-<body class="in-chapter-1 in-chapter bg-slate-50 text-slate-900 dark:bg-[#0B0F17] dark:text-slate-100 min-h-screen transition-colors duration-200 selection:bg-blue-500 selection:text-white">
+<body class="in-home bg-slate-50 text-slate-900 dark:bg-[#0B0F17] dark:text-slate-100 min-h-screen transition-colors duration-200 selection:bg-blue-500 selection:text-white">
 
   <!-- ==================== HEADER ==================== -->
   <header class="sticky top-0 z-40 w-full border-b border-slate-200 dark:border-white/[0.08] bg-white/80 dark:bg-[#0B0F17]/80 backdrop-blur-md">
@@ -4354,7 +4354,7 @@
       </main>
 
       <!-- ==================== 3. RIGHT TABLE OF CONTENTS (TOC - 右側章節清單) ==================== -->
-      <aside id="rightTocAside" class="p-4 rounded-2xl border-2 border-blue-500/30 bg-white/95 dark:bg-[#101623] shadow-xl space-y-4">
+      <aside id="rightTocAside" style="display: none;" class="p-4 rounded-2xl border-2 border-blue-500/30 bg-white/95 dark:bg-[#101623] shadow-xl space-y-4">
         
         <!-- Header -->
         <div class="flex items-center justify-between pb-2 border-b border-slate-200 dark:border-white/[0.08]">
@@ -4975,6 +4975,7 @@
         if (viewPart0Chapter1) viewPart0Chapter1.classList.add('hidden');
 
         document.body.classList.remove('in-chapter', 'in-chapter-1', 'intro-active');
+        document.body.classList.add('in-home');
 
         setRightTocVisibility(false);
 
@@ -4987,13 +4988,14 @@
         }
 
         currentChapterBadge.textContent = '書籍主頁';
+        document.title = '刑法總則【圖說系列】研讀筆記 | 書籍主頁';
         renderToc('home');
 
         if (shouldScrollTop) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
-          if (window.history && window.history.replaceState) {
-            history.replaceState(null, '', '#home');
-          }
+        }
+        if (window.history && window.history.replaceState) {
+          history.replaceState(null, '', '#home');
         }
       } else if (viewName === 'chapter-1') {
         if (viewHome) viewHome.classList.add('hidden');
@@ -5003,7 +5005,7 @@
         if (viewPart0) viewPart0.classList.add('hidden');
         if (viewPart0Chapter1) viewPart0Chapter1.classList.add('hidden');
 
-        document.body.classList.remove('intro-active');
+        document.body.classList.remove('intro-active', 'in-home');
         document.body.classList.add('in-chapter', 'in-chapter-1');
 
         setRightTocVisibility(true);
@@ -5012,6 +5014,7 @@
         navBtnChapter1.classList.add(...ACTIVE_CLASS);
 
         currentChapterBadge.textContent = '第一章';
+        document.title = '第一章 犯罪的概念 | 刑法總則研讀筆記';
         renderToc('chapter-1');
 
         if (shouldScrollTop) {
@@ -5028,7 +5031,7 @@
         if (viewPart0) viewPart0.classList.add('hidden');
         if (viewPart0Chapter1) viewPart0Chapter1.classList.add('hidden');
 
-        document.body.classList.remove('in-chapter-1', 'intro-active');
+        document.body.classList.remove('in-chapter-1', 'intro-active', 'in-home');
         document.body.classList.add('in-chapter');
 
         setRightTocVisibility(true);
@@ -5037,6 +5040,7 @@
         navBtnChapter2.classList.add(...ACTIVE_CLASS);
 
         currentChapterBadge.textContent = '第二章';
+        document.title = '第二章 刑法的論罪結構 | 刑法總則研讀筆記';
         renderToc('chapter-2');
 
         if (shouldScrollTop) {
@@ -5053,7 +5057,7 @@
         if (viewPart0) viewPart0.classList.remove('hidden');
         if (viewPart0Chapter1) viewPart0Chapter1.classList.add('hidden');
 
-        document.body.classList.remove('in-chapter', 'in-chapter-1', 'intro-active');
+        document.body.classList.remove('in-chapter', 'in-chapter-1', 'intro-active', 'in-home');
 
         setRightTocVisibility(false);
 
@@ -5066,6 +5070,7 @@
         }
 
         currentChapterBadge.textContent = '第零篇';
+        document.title = '第零篇 刑法的運作、操作原理與法律效果 | 刑法總則研讀筆記';
         renderToc('part-0');
 
         if (shouldScrollTop) {
@@ -5082,7 +5087,7 @@
         if (viewPart0) viewPart0.classList.add('hidden');
         if (viewPart0Chapter1) viewPart0Chapter1.classList.remove('hidden');
 
-        document.body.classList.remove('in-chapter-1', 'intro-active');
+        document.body.classList.remove('in-chapter-1', 'intro-active', 'in-home');
         document.body.classList.add('in-chapter');
 
         setRightTocVisibility(true);
@@ -5096,6 +5101,7 @@
         }
 
         currentChapterBadge.textContent = '第零篇 第一章';
+        document.title = '第零篇 第一章 刑法的運作原理 | 刑法總則研讀筆記';
         renderToc('part0-chapter-1');
 
         if (shouldScrollTop) {
@@ -5113,12 +5119,13 @@
         if (viewPart0) viewPart0.classList.add('hidden');
         if (viewPart0Chapter1) viewPart0Chapter1.classList.add('hidden');
 
-        document.body.classList.remove('in-chapter', 'in-chapter-1');
+        document.body.classList.remove('in-chapter', 'in-chapter-1', 'in-home');
 
         setRightTocVisibility(false);
 
         navBtnIntro.classList.add('text-blue-600', 'dark:text-blue-400');
         currentChapterBadge.textContent = '導論';
+        document.title = '導論 犯罪概念與論罪結構 | 刑法總則研讀筆記';
         renderToc('intro');
 
         if (shouldScrollTop) {
@@ -5183,41 +5190,48 @@
       });
     }
 
-    // 6. 智慧 Hash 路由監聽
+    // 6. 智慧 Hash 路由監聽（預設首頁優先機制）
+    let isInitialLoad = !sessionStorage.getItem('has_visited_site');
+    sessionStorage.setItem('has_visited_site', 'true');
+
     function handleHashRouting() {
       const hash = window.location.hash;
-      if (hash === '#home') {
-        switchView('home', true);
-      } else if (hash === '#chapter-1') {
-        switchView('chapter-1', true);
+
+      // 若為初次開啟本站（且非點擊特定法條/案例 #sec- 深層錨點），一律保證首屏顯示【書籍主頁】
+      if (isInitialLoad && !hash.startsWith('#sec-')) {
+        isInitialLoad = false;
+        switchView('home', false);
+        return;
+      }
+
+      if (!hash || hash === '' || hash === '#home') {
+        switchView('home', false);
       } else if (hash.startsWith('#sec-ch2-')) {
-        // 第二章小節錨點：維持第二章並滾動至該小節，絕不誤切回第一章或導論
         switchView('chapter-2', false);
         const targetId = hash.substring(1);
         setTimeout(() => {
           scrollToSection(null, targetId);
         }, 50);
       } else if (hash.startsWith('#sec-p0ch1-')) {
-        // 第零篇第一章小節錨點
         switchView('part0-chapter-1', false);
         const targetId = hash.substring(1);
         setTimeout(() => {
           scrollToSection(null, targetId);
         }, 50);
       } else if (hash.startsWith('#sec-p0-')) {
-        // 第零篇小節錨點：維持第零篇並滾動至該小節
         switchView('part-0', false);
         const targetId = hash.substring(1);
         setTimeout(() => {
           scrollToSection(null, targetId);
         }, 50);
       } else if (hash.startsWith('#sec-')) {
-        // 第一章小節錨點：維持第一章並滾動至該小節，絕不跳回導論
         switchView('chapter-1', false);
         const targetId = hash.substring(1);
         setTimeout(() => {
           scrollToSection(null, targetId);
         }, 50);
+      } else if (hash === '#chapter-1') {
+        switchView('chapter-1', true);
       } else if (hash === '#chapter-2') {
         switchView('chapter-2', true);
       } else if (hash === '#intro') {
@@ -5227,7 +5241,6 @@
       } else if (hash === '#part0-chapter-1') {
         switchView('part0-chapter-1', true);
       } else {
-        // 預設進入書籍主頁
         switchView('home', false);
       }
     }
