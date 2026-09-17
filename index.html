@@ -247,16 +247,102 @@
     }
 
     /* ===================================================
-       閱讀區字級等比縮放系統 (Font Size Scaling - 方案 B)
-       精準鎖定中央 main 閱讀區，絕不影響導航與側欄
+       暖紙羊皮紙護眼色調 (Sepia Theme)
+       溫潤米黃紙質底色、低反射石墨碳墨字、大幅降低生硬冷白光眩光
+       =================================================== */
+    html.sepia body {
+      background-color: #F7F3E9 !important;
+      color: #2D313A !important;
+    }
+
+    html.sepia header {
+      background-color: rgba(247, 243, 233, 0.92) !important;
+      border-color: rgba(220, 208, 185, 0.7) !important;
+    }
+
+    html.sepia aside,
+    html.sepia #sidebar,
+    html.sepia #rightTocAside,
+    html.sepia #mobileDrawer > div:nth-child(2),
+    html.sepia #mobileTocModal > div:nth-child(2) {
+      background-color: #FCF9F2 !important;
+      border-color: #E4DACA !important;
+      color: #2D313A !important;
+    }
+
+    html.sepia .bg-white,
+    html.sepia .dark\:bg-\[\#111726\],
+    html.sepia .dark\:bg-\[\#101623\],
+    html.sepia .dark\:bg-\[\#0B0F17\] {
+      background-color: #FFFDF8 !important;
+      border-color: #E8DFCE !important;
+    }
+
+    html.sepia .bg-slate-50,
+    html.sepia .dark\:bg-slate-900,
+    html.sepia .dark\:bg-slate-800 {
+      background-color: #F2ECE0 !important;
+      border-color: #E2D8C4 !important;
+    }
+
+    html.sepia .border-slate-200,
+    html.sepia .border-slate-100,
+    html.sepia .dark\:border-slate-800,
+    html.sepia .dark\:border-white\/\[0\.08\] {
+      border-color: #E5DCB8 !important;
+    }
+
+    html.sepia .text-slate-900,
+    html.sepia .dark\:text-white,
+    html.sepia .dark\:text-slate-100 {
+      color: #23272F !important;
+    }
+
+    html.sepia .text-slate-800,
+    html.sepia .dark\:text-slate-200 {
+      color: #333842 !important;
+    }
+
+    html.sepia .text-slate-700,
+    html.sepia .dark\:text-slate-300 {
+      color: #424854 !important;
+    }
+
+    html.sepia .text-slate-600,
+    html.sepia .text-slate-500,
+    html.sepia .dark\:text-slate-400 {
+      color: #636A78 !important;
+    }
+
+    /* 暖紙模式藍色系：調校為文人墨藍 (Scholar Indigo) */
+    html.sepia .text-blue-600,
+    html.sepia .dark\:text-blue-400 {
+      color: #3B6BB0 !important;
+    }
+    html.sepia .bg-blue-50,
+    html.sepia .bg-\[\#EBF3FE\],
+    html.sepia .dark\:bg-blue-950\/60 {
+      background-color: #EBF1F9 !important;
+      color: #325B96 !important;
+    }
+    html.sepia .border-blue-500,
+    html.sepia .border-blue-200,
+    html.sepia .border-blue-500\/30 {
+      border-color: rgba(59, 107, 176, 0.35) !important;
+    }
+
+    /* ===================================================
+       正文行距與段落呼吸節奏系統 (Breathing Rhythm)
        =================================================== */
     :root {
       --reader-scale: 1;
+      --reader-line-height: 1.85; /* 預設舒適呼吸行距 */
+      --reader-para-spacing: 1.25em; /* 段落呼吸留白 */
     }
 
     main {
       font-size: calc(1rem * var(--reader-scale, 1));
-      transition: font-size 0.2s ease, line-height 0.2s ease;
+      transition: font-size 0.2s ease;
     }
 
     /* 針對 main 內所有文字尺寸動態等比縮放，覆蓋固定 Tailwind rem */
@@ -270,9 +356,28 @@
     main .text-2xl      { font-size: calc(1.5rem * var(--reader-scale, 1)) !important; }
     main .text-3xl      { font-size: calc(1.875rem * var(--reader-scale, 1)) !important; }
 
-    /* 閱讀段落與引用文字行距微幅調諧 */
-    main p, main li, main blockquote {
-      line-height: calc(1.65 + 0.12 * (var(--reader-scale, 1) - 1)) !important;
+    /* 正文文字行距加大，徹底告別密集黑鐵板感 */
+    main p,
+    main li,
+    main blockquote,
+    main dd {
+      line-height: calc(var(--reader-line-height, 1.85) + 0.1 * (var(--reader-scale, 1) - 1)) !important;
+    }
+
+    /* 段落呼吸留白加大 */
+    main p {
+      margin-bottom: var(--reader-para-spacing, 1.25em) !important;
+    }
+    main p:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    /* 引用塊與法條引述增加呼吸空間 */
+    main blockquote {
+      margin-top: 1.1em !important;
+      margin-bottom: 1.1em !important;
+      padding-top: 0.75em !important;
+      padding-bottom: 0.75em !important;
     }
   </style>
 </head>
@@ -317,23 +422,39 @@
           </button>
 
           <!-- 浮動毛玻璃 Popover 面板 -->
-          <div id="fontSettingsMenu" class="hidden absolute right-0 mt-2 w-72 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-[#111726]/95 backdrop-blur-xl shadow-2xl z-50 space-y-3.5 fade-enter text-slate-800 dark:text-slate-200">
+          <div id="fontSettingsMenu" class="hidden absolute right-0 mt-2 w-80 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-[#111726]/95 backdrop-blur-xl shadow-2xl z-50 space-y-3.5 fade-enter text-slate-800 dark:text-slate-200">
             <!-- 標題與重設按鈕 -->
             <div class="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-white/[0.08]">
               <div class="flex items-center gap-2">
                 <span class="text-xs font-bold flex items-center gap-1.5 text-slate-900 dark:text-white">
-                  <span>🔎</span> 閱讀字體大小
+                  <span>📖</span> 閱讀偏好設定
                 </span>
                 <span id="fontScaleIndicator" class="text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 font-bold">100%</span>
               </div>
-              <button type="button" onclick="resetFontSize()" class="text-[11px] text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" title="重設為預設大小 (100%)">
+              <button type="button" onclick="resetReaderPreferences()" class="text-[11px] text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" title="重設為預設模式">
                 重設
               </button>
             </div>
 
-            <!-- 分段快捷鍵 (Segmented Pills) -->
+            <!-- 1. 閱讀背景色調 (Light / Sepia / Dark) -->
             <div>
-              <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">快速預設級別</div>
+              <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">閱讀背景色調</div>
+              <div class="grid grid-cols-3 gap-1 p-1 bg-slate-100 dark:bg-slate-800/80 rounded-xl text-xs font-medium text-center">
+                <button type="button" onclick="setTheme('light')" id="themeBtn-light" class="py-1.5 rounded-lg transition-all flex items-center justify-center gap-1">
+                  <span>☀️</span><span>明亮</span>
+                </button>
+                <button type="button" onclick="setTheme('sepia')" id="themeBtn-sepia" class="py-1.5 rounded-lg transition-all flex items-center justify-center gap-1">
+                  <span>📜</span><span>暖紙</span>
+                </button>
+                <button type="button" onclick="setTheme('dark')" id="themeBtn-dark" class="py-1.5 rounded-lg transition-all flex items-center justify-center gap-1">
+                  <span>🌙</span><span>暗夜</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 2. 字級快速預設級別 -->
+            <div>
+              <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">字體大小</div>
               <div class="grid grid-cols-4 gap-1 p-1 bg-slate-100 dark:bg-slate-800/80 rounded-xl text-xs font-medium text-center">
                 <button type="button" onclick="setFontScalePreset('sm')" id="fontPresetBtn-sm" class="py-1.5 rounded-lg transition-all text-slate-600 dark:text-slate-300 hover:text-blue-600">小</button>
                 <button type="button" onclick="setFontScalePreset('md')" id="fontPresetBtn-md" class="py-1.5 rounded-lg transition-all bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 font-bold shadow-xs">標準</button>
@@ -342,9 +463,8 @@
               </div>
             </div>
 
-            <!-- 微調步進控制 (Stepper) -->
+            <!-- 3. 字級微調步進控制 -->
             <div>
-              <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">精細微調</div>
               <div class="flex items-center justify-between gap-2">
                 <button type="button" onclick="adjustFontSize(-5)" class="flex-1 py-1.5 px-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-bold flex items-center justify-center gap-1 transition-all" title="縮小 5%">
                   <span class="text-xs font-serif font-black">A-</span>
@@ -357,22 +477,32 @@
               </div>
             </div>
 
-            <!-- 預覽文字提示 -->
+            <!-- 4. 正文行距呼吸感 -->
+            <div>
+              <div class="flex items-center justify-between text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
+                <span>行距呼吸感</span>
+                <span id="lineHeightLabel" class="text-slate-500 font-mono">舒適 (1.85)</span>
+              </div>
+              <div class="grid grid-cols-3 gap-1 p-1 bg-slate-100 dark:bg-slate-800/80 rounded-xl text-xs font-medium text-center">
+                <button type="button" onclick="setLineHeightPreset('compact')" id="lineHeightBtn-compact" class="py-1.5 rounded-lg transition-all text-slate-600 dark:text-slate-300">緊湊</button>
+                <button type="button" onclick="setLineHeightPreset('comfortable')" id="lineHeightBtn-comfortable" class="py-1.5 rounded-lg transition-all bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 font-bold shadow-xs">舒適 (預設)</button>
+                <button type="button" onclick="setLineHeightPreset('spacious')" id="lineHeightBtn-spacious" class="py-1.5 rounded-lg transition-all text-slate-600 dark:text-slate-300">寬鬆</button>
+              </div>
+            </div>
+
+            <!-- 提示說明 -->
             <div class="pt-2 border-t border-slate-100 dark:border-white/[0.08] text-center">
               <p class="text-[11px] text-slate-400 dark:text-slate-400">
-                僅縮放中央閱讀區，目錄與清單保持固定
+                暖紙色調濾除冷白光，搭配寬鬆行距護眼長讀
               </p>
             </div>
           </div>
         </div>
 
-        <button id="themeToggleBtn" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:text-blue-500 text-xs transition-colors" title="切換深淺模式">
-          <svg id="themeMoonIcon" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-          </svg>
-          <svg id="themeSunIcon" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-          </svg>
+        <!-- 頂部色調循環切換鈕 -->
+        <button id="themeToggleBtn" onclick="cycleTheme()" class="p-2 sm:px-2.5 sm:py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm" title="點擊循環切換色調 (明亮 ➔ 暖紙 ➔ 暗夜)">
+          <span id="themeHeaderIcon" class="text-sm leading-none">☀️</span>
+          <span id="themeHeaderLabel" class="text-[10px] text-slate-400 dark:text-slate-400 hidden sm:inline font-medium">明亮</span>
         </button>
       </div>
 
@@ -4380,19 +4510,38 @@
           </button>
         </div>
 
-        <!-- 手機目錄抽屜專屬：字級調整 Widget -->
-        <div class="p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/50 space-y-2">
-          <div class="flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-200">
-            <span class="flex items-center gap-1.5">
-              <span>🔎</span> 閱讀字體大小
-            </span>
-            <span id="drawerFontScaleBadge" class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 font-bold">100%</span>
+        <!-- 手機目錄抽屜專屬：偏好設定 Widget -->
+        <div class="p-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/50 space-y-3">
+          <!-- 色調 -->
+          <div>
+            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">閱讀色調</div>
+            <div class="grid grid-cols-3 gap-1 p-0.5 bg-slate-200/60 dark:bg-slate-800 rounded-xl text-xs text-center font-medium">
+              <button type="button" onclick="setTheme('light')" id="drawerThemeBtn-light" class="py-1 rounded-lg transition-all flex items-center justify-center gap-1"><span>☀️</span><span>明亮</span></button>
+              <button type="button" onclick="setTheme('sepia')" id="drawerThemeBtn-sepia" class="py-1 rounded-lg transition-all flex items-center justify-center gap-1"><span>📜</span><span>暖紙</span></button>
+              <button type="button" onclick="setTheme('dark')" id="drawerThemeBtn-dark" class="py-1 rounded-lg transition-all flex items-center justify-center gap-1"><span>🌙</span><span>暗夜</span></button>
+            </div>
           </div>
-          <div class="grid grid-cols-4 gap-1 p-0.5 bg-slate-200/60 dark:bg-slate-800 rounded-xl text-xs text-center font-medium">
-            <button type="button" onclick="setFontScalePreset('sm')" id="drawerPresetBtn-sm" class="py-1 rounded-lg transition-all text-slate-600 dark:text-slate-300">小</button>
-            <button type="button" onclick="setFontScalePreset('md')" id="drawerPresetBtn-md" class="py-1 rounded-lg transition-all bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 font-bold shadow-xs">標準</button>
-            <button type="button" onclick="setFontScalePreset('lg')" id="drawerPresetBtn-lg" class="py-1 rounded-lg transition-all text-slate-600 dark:text-slate-300">大</button>
-            <button type="button" onclick="setFontScalePreset('xl')" id="drawerPresetBtn-xl" class="py-1 rounded-lg transition-all text-slate-600 dark:text-slate-300">特大</button>
+          <!-- 字級 -->
+          <div>
+            <div class="flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-200 mb-1">
+              <span>字體大小</span>
+              <span id="drawerFontScaleBadge" class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 font-bold">100%</span>
+            </div>
+            <div class="grid grid-cols-4 gap-1 p-0.5 bg-slate-200/60 dark:bg-slate-800 rounded-xl text-xs text-center font-medium">
+              <button type="button" onclick="setFontScalePreset('sm')" id="drawerPresetBtn-sm" class="py-1 rounded-lg transition-all text-slate-600 dark:text-slate-300">小</button>
+              <button type="button" onclick="setFontScalePreset('md')" id="drawerPresetBtn-md" class="py-1 rounded-lg transition-all bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 font-bold shadow-xs">標準</button>
+              <button type="button" onclick="setFontScalePreset('lg')" id="drawerPresetBtn-lg" class="py-1 rounded-lg transition-all text-slate-600 dark:text-slate-300">大</button>
+              <button type="button" onclick="setFontScalePreset('xl')" id="drawerPresetBtn-xl" class="py-1 rounded-lg transition-all text-slate-600 dark:text-slate-300">特大</button>
+            </div>
+          </div>
+          <!-- 行距 -->
+          <div>
+            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">行距呼吸感</div>
+            <div class="grid grid-cols-3 gap-1 p-0.5 bg-slate-200/60 dark:bg-slate-800 rounded-xl text-xs text-center font-medium">
+              <button type="button" onclick="setLineHeightPreset('compact')" id="drawerLineHeightBtn-compact" class="py-1 rounded-lg transition-all text-slate-600 dark:text-slate-300">緊湊</button>
+              <button type="button" onclick="setLineHeightPreset('comfortable')" id="drawerLineHeightBtn-comfortable" class="py-1 rounded-lg transition-all bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 font-bold shadow-xs">舒適</button>
+              <button type="button" onclick="setLineHeightPreset('spacious')" id="drawerLineHeightBtn-spacious" class="py-1 rounded-lg transition-all text-slate-600 dark:text-slate-300">寬鬆</button>
+            </div>
           </div>
         </div>
 
@@ -4517,17 +4666,103 @@
 
   <!-- ==================== JAVASCRIPT LOGIC ==================== -->
   <script>
-    // 1. Theme Toggle (預設為明亮模式 Light Mode)
-    const themeBtn = document.getElementById('themeToggleBtn');
-    themeBtn.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-    });
-    // 僅在使用者過去手動切換並保存為 'dark' 時才開啟深色模式，預設為明亮模式
-    if (localStorage.getItem('theme') === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
+    // ==================== 1. 三段式閱讀色調切換系統 (Light / Sepia / Dark) ====================
+    const THEMES = ['light', 'sepia', 'dark'];
+    let currentTheme = localStorage.getItem('theme') || 'light';
+    if (!THEMES.includes(currentTheme)) currentTheme = 'light';
+
+    function applyTheme(theme, saveToStorage = true) {
+      currentTheme = theme;
+      document.documentElement.classList.remove('dark', 'sepia');
+
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else if (theme === 'sepia') {
+        document.documentElement.classList.add('sepia');
+      }
+
+      // 更新 Header 圖示與文字標籤
+      const headerIcon = document.getElementById('themeHeaderIcon');
+      const headerLabel = document.getElementById('themeHeaderLabel');
+      const iconMap = { light: '☀️', sepia: '📜', dark: '🌙' };
+      const labelMap = { light: '明亮', sepia: '暖紙', dark: '暗夜' };
+
+      if (headerIcon) headerIcon.textContent = iconMap[theme] || '☀️';
+      if (headerLabel) headerLabel.textContent = labelMap[theme] || '明亮';
+
+      // 更新 Popover 與 Drawer 內的三段按鈕高亮
+      THEMES.forEach(t => {
+        const btn = document.getElementById(`themeBtn-${t}`);
+        const drawerBtn = document.getElementById(`drawerThemeBtn-${t}`);
+        const activeClass = 'bg-blue-600 text-white font-bold shadow-xs';
+        const inactiveClass = 'text-slate-600 dark:text-slate-300 hover:text-blue-600';
+
+        if (btn) {
+          btn.className = `py-1.5 rounded-lg transition-all flex items-center justify-center gap-1 ${t === theme ? activeClass : inactiveClass}`;
+        }
+        if (drawerBtn) {
+          drawerBtn.className = `py-1 rounded-lg transition-all flex items-center justify-center gap-1 ${t === theme ? activeClass : inactiveClass}`;
+        }
+      });
+
+      if (saveToStorage) {
+        localStorage.setItem('theme', theme);
+      }
+    }
+
+    function cycleTheme() {
+      const currentIndex = THEMES.indexOf(currentTheme);
+      const nextIndex = (currentIndex + 1) % THEMES.length;
+      applyTheme(THEMES[nextIndex]);
+    }
+
+    function setTheme(theme) {
+      applyTheme(theme);
+    }
+
+    // ==================== 1.2 正文行距呼吸感控制 (Line Height) ====================
+    const LINE_HEIGHT_CONFIG = {
+      'compact': { height: 1.65, spacing: '0.95em', label: '緊湊 (1.65)' },
+      'comfortable': { height: 1.85, spacing: '1.25em', label: '舒適 (1.85)' },
+      'spacious': { height: 2.05, spacing: '1.5em', label: '寬鬆 (2.05)' }
+    };
+
+    let currentLineHeight = localStorage.getItem('reader-line-height') || 'comfortable';
+    if (!LINE_HEIGHT_CONFIG[currentLineHeight]) currentLineHeight = 'comfortable';
+
+    function applyLineHeight(key, saveToStorage = true) {
+      const config = LINE_HEIGHT_CONFIG[key] || LINE_HEIGHT_CONFIG['comfortable'];
+      currentLineHeight = key;
+
+      document.documentElement.style.setProperty('--reader-line-height', config.height.toString());
+      document.documentElement.style.setProperty('--reader-para-spacing', config.spacing);
+
+      const label = document.getElementById('lineHeightLabel');
+      if (label) label.textContent = config.label;
+
+      ['compact', 'comfortable', 'spacious'].forEach(k => {
+        const btn = document.getElementById(`lineHeightBtn-${k}`);
+        const drawerBtn = document.getElementById(`drawerLineHeightBtn-${k}`);
+        const activeClass = 'bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 font-bold shadow-xs';
+        const inactiveClass = 'text-slate-600 dark:text-slate-300 hover:text-blue-600';
+
+        if (btn) btn.className = `py-1.5 rounded-lg transition-all ${k === key ? activeClass : inactiveClass}`;
+        if (drawerBtn) drawerBtn.className = `py-1 rounded-lg transition-all ${k === key ? activeClass : inactiveClass}`;
+      });
+
+      if (saveToStorage) {
+        localStorage.setItem('reader-line-height', key);
+      }
+    }
+
+    function setLineHeightPreset(key) {
+      applyLineHeight(key);
+    }
+
+    function resetReaderPreferences() {
+      applyFontScale(100);
+      applyTheme('light');
+      applyLineHeight('comfortable');
     }
 
     // ==================== 1.5 閱讀器字級等比調整邏輯 (方案 B - Aa Popover) ====================
@@ -4633,8 +4868,10 @@
       }
     });
 
-    // 初始化載入已儲存之字級
+    // 初始化載入已儲存之閱讀偏好（字級、色調、行距）
     applyFontScale(currentFontScale, false);
+    applyTheme(currentTheme, false);
+    applyLineHeight(currentLineHeight, false);
 
     // 2. Mobile Controls
     function toggleMobileDrawer() {
