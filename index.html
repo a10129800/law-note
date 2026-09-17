@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW" class="dark">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -4517,13 +4517,16 @@
 
   <!-- ==================== JAVASCRIPT LOGIC ==================== -->
   <script>
-    // 1. Theme Toggle
+    // 1. Theme Toggle (預設為明亮模式 Light Mode)
     const themeBtn = document.getElementById('themeToggleBtn');
     themeBtn.addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
       localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
     });
-    if (localStorage.getItem('theme') === 'light') {
+    // 僅在使用者過去手動切換並保存為 'dark' 時才開啟深色模式，預設為明亮模式
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
       document.documentElement.classList.remove('dark');
     }
 
