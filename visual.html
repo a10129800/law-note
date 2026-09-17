@@ -170,6 +170,35 @@
         display: none !important;
       }
     }
+
+    /* ===================================================
+       閱讀區字級等比縮放系統 (Font Size Scaling - 方案 B)
+       精準鎖定中央 main 閱讀區，絕不影響導航與側欄
+       =================================================== */
+    :root {
+      --reader-scale: 1;
+    }
+
+    main {
+      font-size: calc(1rem * var(--reader-scale, 1));
+      transition: font-size 0.2s ease, line-height 0.2s ease;
+    }
+
+    /* 針對 main 內所有文字尺寸動態等比縮放，覆蓋固定 Tailwind rem */
+    main .text-\[10px\] { font-size: calc(10px * var(--reader-scale, 1)) !important; }
+    main .text-\[11px\] { font-size: calc(11px * var(--reader-scale, 1)) !important; }
+    main .text-xs       { font-size: calc(0.75rem * var(--reader-scale, 1)) !important; }
+    main .text-sm       { font-size: calc(0.875rem * var(--reader-scale, 1)) !important; }
+    main .text-base     { font-size: calc(1rem * var(--reader-scale, 1)) !important; }
+    main .text-lg       { font-size: calc(1.125rem * var(--reader-scale, 1)) !important; }
+    main .text-xl       { font-size: calc(1.25rem * var(--reader-scale, 1)) !important; }
+    main .text-2xl      { font-size: calc(1.5rem * var(--reader-scale, 1)) !important; }
+    main .text-3xl      { font-size: calc(1.875rem * var(--reader-scale, 1)) !important; }
+
+    /* 閱讀段落與引用文字行距微幅調諧 */
+    main p, main li, main blockquote {
+      line-height: calc(1.65 + 0.12 * (var(--reader-scale, 1) - 1)) !important;
+    }
   </style>
 </head>
 <body class="in-chapter-1 in-chapter bg-slate-50 text-slate-900 dark:bg-[#0B0F17] dark:text-slate-100 min-h-screen transition-colors duration-200 selection:bg-blue-500 selection:text-white">
@@ -207,6 +236,63 @@
           <span>📑</span>
           <span>章節清單</span>
         </button>
+
+        <!-- 字體大小調整 (Aa Popover 面板) -->
+        <div class="relative" id="fontSettingsContainer">
+          <button id="fontSettingsBtn" onclick="toggleFontMenu(event)" class="p-2 sm:px-2.5 sm:py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500/40 text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm" title="閱讀字體大小偏好設定" aria-haspopup="true" aria-expanded="false">
+            <span class="text-sm font-serif font-black leading-none">Aa</span>
+            <span id="fontScaleBadge" class="text-[10px] font-mono text-slate-400 dark:text-slate-400 font-semibold hidden sm:inline">100%</span>
+          </button>
+
+          <!-- 浮動毛玻璃 Popover 面板 -->
+          <div id="fontSettingsMenu" class="hidden absolute right-0 mt-2 w-72 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-[#111726]/95 backdrop-blur-xl shadow-2xl z-50 space-y-3.5 fade-enter text-slate-800 dark:text-slate-200">
+            <!-- 標題與重設按鈕 -->
+            <div class="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-white/[0.08]">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold flex items-center gap-1.5 text-slate-900 dark:text-white">
+                  <span>🔎</span> 閱讀字體大小
+                </span>
+                <span id="fontScaleIndicator" class="text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 font-bold">100%</span>
+              </div>
+              <button type="button" onclick="resetFontSize()" class="text-[11px] text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" title="重設為預設大小 (100%)">
+                重設
+              </button>
+            </div>
+
+            <!-- 分段快捷鍵 (Segmented Pills) -->
+            <div>
+              <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">快速預設級別</div>
+              <div class="grid grid-cols-4 gap-1 p-1 bg-slate-100 dark:bg-slate-800/80 rounded-xl text-xs font-medium text-center">
+                <button type="button" onclick="setFontScalePreset('sm')" id="fontPresetBtn-sm" class="py-1.5 rounded-lg transition-all text-slate-600 dark:text-slate-300 hover:text-blue-600">小</button>
+                <button type="button" onclick="setFontScalePreset('md')" id="fontPresetBtn-md" class="py-1.5 rounded-lg transition-all bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 font-bold shadow-xs">標準</button>
+                <button type="button" onclick="setFontScalePreset('lg')" id="fontPresetBtn-lg" class="py-1.5 rounded-lg transition-all text-slate-600 dark:text-slate-300 hover:text-blue-600">大</button>
+                <button type="button" onclick="setFontScalePreset('xl')" id="fontPresetBtn-xl" class="py-1.5 rounded-lg transition-all text-slate-600 dark:text-slate-300 hover:text-blue-600">特大</button>
+              </div>
+            </div>
+
+            <!-- 微調步進控制 (Stepper) -->
+            <div>
+              <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">精細微調</div>
+              <div class="flex items-center justify-between gap-2">
+                <button type="button" onclick="adjustFontSize(-5)" class="flex-1 py-1.5 px-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-bold flex items-center justify-center gap-1 transition-all" title="縮小 5%">
+                  <span class="text-xs font-serif font-black">A-</span>
+                  <span class="text-[10px] text-slate-400">-5%</span>
+                </button>
+                <button type="button" onclick="adjustFontSize(5)" class="flex-1 py-1.5 px-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-bold flex items-center justify-center gap-1 transition-all" title="放大 5%">
+                  <span class="text-sm font-serif font-black">A+</span>
+                  <span class="text-[10px] text-slate-400">+5%</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 預覽文字提示 -->
+            <div class="pt-2 border-t border-slate-100 dark:border-white/[0.08] text-center">
+              <p class="text-[11px] text-slate-400 dark:text-slate-400">
+                僅縮放中央閱讀區，目錄與清單保持固定
+              </p>
+            </div>
+          </div>
+        </div>
 
         <button id="themeToggleBtn" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:text-blue-500 text-xs transition-colors" title="切換深淺模式">
           <svg id="themeMoonIcon" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -3184,6 +3270,99 @@
     if (localStorage.getItem('theme') === 'light') {
       document.documentElement.classList.remove('dark');
     }
+
+    // ==================== 1.5 閱讀器字級等比調整邏輯 (方案 B - Aa Popover) ====================
+    const FONT_PRESETS = {
+      'sm': 90,
+      'md': 100,
+      'lg': 112,
+      'xl': 125
+    };
+
+    let currentFontScale = parseInt(localStorage.getItem('reader-font-scale'), 10) || 100;
+
+    function applyFontScale(scale, saveToStorage = true) {
+      scale = Math.max(80, Math.min(140, Math.round(scale)));
+      currentFontScale = scale;
+
+      document.documentElement.style.setProperty('--reader-scale', (scale / 100).toString());
+
+      const badge = document.getElementById('fontScaleBadge');
+      const indicator = document.getElementById('fontScaleIndicator');
+      if (badge) badge.textContent = `${scale}%`;
+      if (indicator) indicator.textContent = `${scale}%`;
+
+      // 刷新四段級別按鈕的高亮狀態
+      const keys = ['sm', 'md', 'lg', 'xl'];
+      keys.forEach(k => {
+        const btn = document.getElementById(`fontPresetBtn-${k}`);
+        if (btn) {
+          if (FONT_PRESETS[k] === scale) {
+            btn.className = 'py-1.5 rounded-lg transition-all bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 font-bold shadow-xs';
+          } else {
+            btn.className = 'py-1.5 rounded-lg transition-all text-slate-600 dark:text-slate-300 hover:text-blue-600';
+          }
+        }
+      });
+
+      if (saveToStorage) {
+        localStorage.setItem('reader-font-scale', scale);
+      }
+    }
+
+    function setFontScalePreset(presetKey) {
+      if (FONT_PRESETS[presetKey]) {
+        applyFontScale(FONT_PRESETS[presetKey]);
+      }
+    }
+
+    function adjustFontSize(deltaPercent) {
+      applyFontScale(currentFontScale + deltaPercent);
+    }
+
+    function resetFontSize() {
+      applyFontScale(100);
+    }
+
+    function toggleFontMenu(e) {
+      if (e) e.stopPropagation();
+      const menu = document.getElementById('fontSettingsMenu');
+      const btn = document.getElementById('fontSettingsBtn');
+      if (!menu) return;
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+      } else {
+        menu.classList.add('hidden');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    // 點擊面板外部或按 Escape 自動收合
+    document.addEventListener('click', (e) => {
+      const container = document.getElementById('fontSettingsContainer');
+      const menu = document.getElementById('fontSettingsMenu');
+      const btn = document.getElementById('fontSettingsBtn');
+      if (container && menu && !container.contains(e.target)) {
+        menu.classList.add('hidden');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const menu = document.getElementById('fontSettingsMenu');
+        const btn = document.getElementById('fontSettingsBtn');
+        if (menu && !menu.classList.contains('hidden')) {
+          menu.classList.add('hidden');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+
+    // 初始化載入已儲存之字級
+    applyFontScale(currentFontScale, false);
 
     // 2. Mobile Controls
     function toggleMobileDrawer() {
