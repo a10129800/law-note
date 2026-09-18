@@ -1,0 +1,12 @@
+# Local batch automation scripts
+*.bat
+
+# Temporary files & OS files
+新文字文件.txt
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE / Editor folders
+.vscode/
+.idea/
