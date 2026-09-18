@@ -136,8 +136,8 @@
     @media (min-width: 640px) {
       #statutePopover {
         transform: translateY(6px) scale(0.97);
-        border-radius: 1rem;
-        max-width: 24rem;
+        border-radius: 1.125rem;
+        max-width: 27rem;
         width: 100%;
       }
       #statutePopover.popover-visible {
@@ -5463,22 +5463,24 @@
   <div id="statutePopoverBackdrop" class="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 hidden transition-opacity" onclick="hideStatutePopover(true)"></div>
 
   <div id="statutePopover" class="popover-hidden fixed z-60 bg-white/95 dark:bg-[#111726]/95 backdrop-blur-xl border border-slate-200/90 dark:border-white/[0.14] shadow-2xl shadow-blue-900/20 text-slate-800 dark:text-slate-100 font-sans space-y-3 p-4" role="tooltip" aria-hidden="true">
-    <!-- Popover 頂部標題與體系階層徽章與關閉按鈕 -->
-    <div class="flex items-center justify-between gap-2 border-b border-slate-100 dark:border-white/[0.08] pb-2.5">
-      <div class="flex items-center gap-2 min-w-0">
-        <span class="text-base" id="statutePopIcon">📜</span>
-        <h4 id="statutePopTitle" class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white truncate">刑法第 12 條</h4>
-      </div>
-      <div class="flex items-center gap-2 shrink-0">
-        <span id="statutePopBadge" class="text-[10.5px] font-mono font-bold px-2 py-0.5 rounded-md bg-blue-50 dark:bg-blue-950/70 text-blue-600 dark:text-blue-400 border border-blue-200/60 dark:border-blue-800/60">
-          構成要件
-        </span>
+    <!-- Popover 頂部標題列與體系階層徽章與關閉按鈕 -->
+    <div class="border-b border-slate-100 dark:border-white/[0.08] pb-3 space-y-2">
+      <div class="flex items-center justify-between gap-2">
+        <div class="flex items-center gap-2">
+          <span class="text-base" id="statutePopIcon">📜</span>
+          <span id="statutePopBadge" class="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-md bg-blue-50 dark:bg-blue-950/70 text-blue-600 dark:text-blue-400 border border-blue-200/60 dark:border-blue-800/60">
+            構成要件
+          </span>
+        </div>
         <button type="button" onclick="hideStatutePopover(true)" class="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-700 dark:hover:text-white transition-colors cursor-pointer" title="關閉卡片" aria-label="關閉卡片">
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
           </svg>
         </button>
       </div>
+      <h4 id="statutePopTitle" class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white leading-snug break-words">
+        刑法第 12 條
+      </h4>
     </div>
 
     <!-- 法條完整內容 -->
@@ -7242,12 +7244,12 @@
 
         // 計算桌面版彈出卡片精確定位 (智慧防溢出與上下自動翻轉)
         const rect = targetEl.getBoundingClientRect();
-        const popWidth = Math.min(384, window.innerWidth - 24);
+        const popWidth = Math.min(432, window.innerWidth - 24);
         let left = rect.left + (rect.width / 2) - (popWidth / 2);
         left = Math.max(12, Math.min(left, window.innerWidth - popWidth - 12));
 
         let top;
-        const estimatedHeight = 240;
+        const estimatedHeight = 260;
         if (rect.top > estimatedHeight + 16) {
           top = rect.top - estimatedHeight - 8;
         } else {
