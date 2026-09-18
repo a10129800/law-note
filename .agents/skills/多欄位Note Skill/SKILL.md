@@ -207,6 +207,99 @@ description: >-
   - 在所有主閱讀視圖（書籍主頁、導論、第一章、第二章）正文最底端，固定配置寬版雙向分頁導航卡片。
   - 左側為「← 上一單元」、右側為「下一單元 →」，內含單元識別微標籤、單元大標題與互動懸停位移動畫，引導讀者循序漸進完成整部知識庫之體系化研讀。
 
+### 14. 案例導航控制台高彩度高對比與存在感規範 (Vibrant High-Contrast Case Navigator Console Standard)
+教科書案例眾多時，章節上方常需配置專屬的「案例導航與研讀控制台」。為了徹底杜絕「底色過淡、邊框太細，容易被誤認為空白或忽略」的反饋，必須遵循以下高彩度存在感規範：
+- **拒絕死白與低對比淡漸層（Anti-Washed-Out Principle）**：
+  - 嚴禁使用如 `from-slate-100 to-indigo-50/60` 等在淺色螢幕上趨近於純白（`#f8fafc`）的低對比漸層！這會使控制台喪失實體卡片感，淪為難以辨識的灰白邊線。
+  - **飽和雙色階漸層**：
+    - 法定阻卻違法（翡翠綠）：`linear-gradient(135deg, #dcfce7 0%, #ecfdf5 45%, #d1fae5 100%) !important;`
+    - 超法定阻卻違法（皇家靛藍）：`linear-gradient(135deg, #e0e7ff 0%, #eef2ff 45%, #ede9fe 100%) !important;`
+    - 阻卻罪責（琥珀金）：`linear-gradient(135deg, #fef3c7 0%, #fffbeb 45%, #fde68a 100%) !important;`
+- **8px 實心立體側邊色軸與飽和全不透明邊框（Accent Spine Bar & Solid Border）**：
+  - 外圍配置 **`2.5px solid`** 對應主題色之全不透明邊框（如翡翠綠 `#059669`、皇家靛藍 `#4f46e5`）。
+  - 左側必須加入 **`8px solid` 實心醒目主軸（Spine Bar）**（如 `#047857`、`#4338ca`），使讀者滾動至該節時視覺焦點瞬間被錨定。
+  - 搭配對應色系發光微陰影（如 `box-shadow: 0 10px 25px -4px rgba(79, 70, 229, 0.22)`），使卡片立體浮起。
+- **高對比純白底實體按鈕與極深啟用膠囊（Tactile Pill Controls）**：
+  - **未啟用膠囊按鈕**：一律採用純白高對比底色（`#ffffff`）、深色粗體字（`#0f172a`）、`1.5px solid #94a3b8` 實體邊框與微陰影，不再灰淡模糊。
+  - **啟用中膠囊按鈕（Active）**：切換為深濃漸層（如深翡翠 `#047857 ~ #065f46`、深皇家靛藍 `#4338ca ~ #3730a3`），字體為純白極粗體，搭配該色系專屬光暈陰影。
+- **高彩度實心標題徽章（Solid Badge Icons）**：
+  - 標題字體升級為 `font-black`，主題圖示（`⚖️ / 💡`）改以實心高彩度底色（`bg-emerald-600` / `bg-indigo-600`）搭配白字，案例數量徽章採用高飽和深色白字（`bg-emerald-700` / `bg-indigo-700`），視覺階層分明。
+
+### 15. 案例卡片 DOM 平級性與手風琴折疊看板規範 (Case Card Sibling Integrity & Accordion System)
+- **嚴防案例標籤未閉合導致 DOM 巢狀污染（Case Card Nesting Trap）**：
+  - 每一張案例卡片（如 `#case-card-1-7`）必須各自嚴格閉合其末端 `</div>`！
+  - **致命陷阱警示**：若案例 1-7 少了一個 `</div>`，瀏覽器會將後續的 1-8 至 1-11 全數解析為 1-7 的子節點。當使用者點擊「1-8」膠囊時，JS 為 1-7 加上 `hidden` 類別，**將導致子節點 1-8 至 1-11 全數連帶消失（「除了 1-7 其他打開都沒有案例內容？」）**！
+  - **結構鐵律**：所有案例卡片必須是其父容器（如 `#panelJustLegal` 或網格容器）的直接同級兄弟節點（Direct Siblings）。
+- **單卡手風琴平滑折疊（Single Card Accordion）**：
+  - 每張案例卡片標頭右側配置動態 chevron 箭頭（`▼ / ▲`）。
+  - 點擊標頭任一處（自動排除內部「複製筆記」按鈕與法規超連結），卡片平滑折疊。
+  - 收合後高度縮減 75%，並以單行淡雅提示呈現爭點事實摘要，方便考生一眼快速縱覽全貌。
+- **章節一鍵批次切換（Batch Dashboard Toggles）**：
+  - 導航控制台右側常駐控制器列：`[ ⊞ 精簡看板 ]` 與 `[ ⊟ 展開詳解 ]`，點擊即批次切換當前章節全數案例。
+
+### 16. 核心架構圖與圖說燈箱無損放大鏡規範 (Diagram Lightbox Zoom & Pan Specification)
+法律架構圖（如不法推定罪責原則、四大拼圖模型、三階二階對抗矩陣）細節豐富，必須提供無損放大鏡檢視：
+- **視覺焦點觸發**：滑鼠懸停於核心圖卡時，自動浮現 `🔍 點擊放大檢視` 微互動徽章。
+- **全螢幕毛玻璃燈箱面板（`#diagramLightbox`）**：
+  - 頂部工具列顯示圖解標題、頁碼徽章與操作按鈕：`➖` 縮小、`➕` 放大（50% ～ 250%）、`100%` 當前倍率即時顯示、`重設` 一鍵恢復、`✕` 關閉按鈕。
+- **滾輪縮放與拖曳漫遊**：
+  - 支援滑鼠滾輪隨時無損縮放；倍率大於 100% 時，滑鼠游標轉為 `grab / grabbing`，支援自由拖曳漫遊檢視畫布任一角落。
+  - 支援點擊背景遮罩與鍵盤 `Escape` 鍵退出。
+
+### 17. 刑法核心爭點超級對照矩陣規範 (Mega Comparison Matrix Standard - Direction 6)
+作為教科書第一章（或核心篇章）的壓軸總結樞紐，必須在篇末配置超級對照矩陣：
+- **章節大總結樞紐定位**：
+  - 接續於末尾章節（如第十五節二階論）之後，標記為專屬大章節（例如「十六、刑法核心爭點超級對照矩陣」），並在右側 TOC 與全域搜尋中登錄獨立錨點 `#sec-mega-comparison-matrix`。
+- **三大深度對照矩陣維度**：
+  1. **矩陣 A：【阻卻違法】 vs 【阻卻罪責】（本質體系大對決）**：橫向比對評價客體（行為客觀 vs 行為人主觀）、法律代稱（不法 vs 罪責）、核心金句口訣（非壞事 vs 非壞人）、共犯限制從屬性（連帶從屬 vs 個別獨立）、民事侵權連動賠償（民法 § 149/150 免責 vs 民法 § 187 仍須賠償）。
+  2. **矩陣 B：【正當防衛】 vs 【緊急避難】 vs 【義務衝突】 vs 【極端例外案例】（法益衡平大縱橫）**：縱深剖析法理基礎、危難起因、**利益衡量原則之有無與嚴格度（防衛原則不衡量 vs 避難嚴格衡量 vs 櫻桃案禁止權利濫用 vs 輸血案人性尊嚴底線）**與手段門檻。
+  3. **矩陣 C：【被害人同意】 vs 【得被害人承諾】 vs 【推定承諾】（處分界限大對決）**：釐清審查階層（第一階阻卻構成要件 vs 第二階阻卻違法 vs 超法定）、適用法益範疇、**生命與重大身體之絕對禁止承諾紅線（§ 275 加工自殺、§ 282 承諾傷害）**。
+  4. **全景總覽模式（Mega Unified View）**：支援一鍵展開三大表格，供全螢幕垂直滾動複習。
+- **即時爭點關鍵字檢索過濾（Matrix Live Filter）**：
+  - 矩陣上方常駐快速搜尋輸入框，鍵入「利益衡量」、「人性尊嚴」、「共犯」、「櫻桃案」等字眼，表格即時高亮並篩選符合列。
+- **案例卡片一鍵跳轉與發光波紋（Pulse Focus）**：
+  - 點擊表格內任意案例跳轉按鈕（如 `1-10 防衛 ↗`、`1-14 櫻桃案 ↗`），自動解除篩選隱藏、展開手風琴、平滑滾動定位，並觸發 **紫藍色立體發光波紋動畫（`.card-pulse-target`）**，讓讀者瞬間鎖定目標卡片！
+
+### 18. 篇、章、節三層樹狀目錄結構與子目錄獨立閱讀視圖規範 (Three-Tier Part-Chapter-Section Hierarchy & Sub-Directory Reader Specification)
+教科書、法學體系書或大型技術手冊通常遵循「篇 (Part / Division)」➔「章 (Chapter)」➔「節 (Section)」的三層結構（例如：第零篇 ➔ 第一章 刑法的運作原理 ➔ 第一節 法益保護原則）。為了維護嚴謹的認知層次，必須恪守三層階層樹與視圖解耦準則：
+
+- **左側目錄樹階層結構 (Sidebar Three-Tier Tree Structure)**：
+  - **嚴禁扁平化並列**：嚴禁將「節」與「章」或「篇」作為同級平級按鈕直接並列，這會破壞知識結構的主從關係，導致目錄混亂失序。
+  - **第三層縮排子目錄容器 (`#partXChYSubTree`)**：
+    - 在父章節按鈕（如 `navBtnPart0Ch1`）正下方，必須建立專屬縮排引導線容器：`div#partXChYSubTree.ml-3.5.pl-2.5.border-l-2.border-slate-200.dark:border-slate-800`。
+    - **子節按鈕視覺微化**：字級縮為 `text-[12.5px]` 或 `text-[13px]`，邊距更為緊湊（`py-1 px-2 rounded-lg`），前端配置精緻圖示（如 `💎` 或微型圓點指示符），形成明確的樹狀分支視覺。
+  - **手機端抽屜鏡像縮排 (Mobile Drawer Parity)**：
+    - 手機端抽屜選單必須 1:1 鏡像此三層結構，採用縮排邊線容器（`ml-4 pl-3 border-l-2 border-slate-200 dark:border-slate-800`），杜絕雙端結構脫節。
+
+- **章節與小節之視圖解耦 (View Decoupling & Sub-Unit Navigation)**：
+  - **父章節視圖 (`viewPartXChapterY`)**：
+    - 聚焦於該章之「篇章前言」、全章核心指導思想（如刑法目的：應報思想 vs. 預防思想）與宏觀架構推導（如四大支柱推導體系）。
+    - 章末必須配置**「本章子目錄與分節研讀導引 (Sub-Sections Navigation)」**：
+      - 設置精美子單元導航卡片（標註 `SECTION 1 • READY TO READ`、`SECTION 2 • COMING SOON` 等狀態徽章）。
+      - 提供鮮明的進入按鈕（如 `🚀 開始研讀 第一節 法益保護原則 →`），點擊直接呼叫 `switchView('partX-chY-secZ')` 平滑切換至子節視圖。
+  - **子節獨立視圖 (`viewPartXChYSecZ`)**：
+    - 每一「節」必須擁有獨立的視圖容器 `<div id="viewPartXChYSecZ" class="fade-enter hidden space-y-8">`，嚴禁將數萬字的小節內文硬塞在父章節底部無限堆疊。
+    - **動態頂部麵包屑 (Breadcrumb Navigation)**：
+      - 頂端配置清晰麵包屑導航：`第零篇 / 第一章 刑法的運作原理 / 第一節 法益保護原則`，並於右上角常駐「← 返回第一章總覽」快捷按鈕。
+    - **核心定義金句與法理展開**：
+      - 專屬原文定義金句卡片（如「凡是以法律手段而加以保護之重要生活利益，即稱為法益」）、實質先在性分析與機能界限對照。
+    - **篇章進度待續提示卡 (Progress & Scope Callout)**：
+      - 若該節僅收錄部分教材頁碼（如第 2-1 頁），末端必須配置典雅的虛線進度卡，明確註明「教材第 2-1 頁已收錄完畢，後續內容待後續教材頁面提供後即時增補」，給予讀者明確的進度心理預期。
+
+- **全套 JavaScript 配套相容規範 (Full-Stack JS Wiring Standard)**：
+  - **`TOC_CONFIG` 對象化目錄**：為子節建立專屬清單物件（如 `TOC_CONFIG['part0-ch1-sec1']`），切換至該節時右側目錄自動切換為該節內部小標題（如 `#sec-p0ch1-sec1-def`）。
+  - **`switchView()` 視圖切換**：正確顯隱各視圖容器，套用子節按鈕高亮樣式（`ACTIVE_CLASS`），即時更新頂部動態徽章（如 `currentChapterBadge.textContent = '第零篇 第一章・第一節'`）與 `document.title`。
+  - **`scrollToSection()` 錨點前綴分流**：判斷錨點前綴（如 `sec-p0ch1-sec1-`），若當前處於其他視圖，自動優先呼叫 `switchView('part0-ch1-sec1', false)` 開啟第一節，再平滑滾動至目標元素。
+  - **`handleHashRouting()` 智慧路由**：支援 `#part0-ch1-sec1` 以及 `#sec-p0ch1-sec1-*` 深層網址直達。
+  - **`SEARCH_DATABASE` 全域檢索登錄**：登錄獨立概念卡（如 `concept-legal-interest`），關聯 `view: 'part0-ch1-sec1'`，支援 `Ctrl+K` 搜尋直達定位。
+
+- **母本、發布檔與 Markdown 三方同步規範 (Master-Publish-Markdown Triple Sync)**：
+  - 當完成三層目錄重構與內文收錄時，必須同時同步更新：
+    1. [visual.html](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/visual.html)（母本）
+    2. [index.html](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/index.html)（發布檔，維持 100% 位元組對齊）
+    3. [CRIMINAL_LAW_NOTES.md](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/CRIMINAL_LAW_NOTES.md)（課本研讀大綱）
+  - 確保三者在章節層次、標題命名、法規文字與定義原文上 100% 絕對一致。
+
 ---
 
 ## 標準版面架構 (Layout Architecture)
@@ -710,6 +803,238 @@ ${caseData.relatedStatutes.map(s => `[[${s}]]`).join(' ')}
 }
 ```
 
+### 10. 高彩度案例導航控制台樣式 (Vibrant Case Navigator Console CSS)
+
+```css
+/* 案例導航控制台專屬鮮明樣式 (高對比、8px側軸、拒絕死白) */
+.nav-console-emerald {
+  background: linear-gradient(135deg, #dcfce7 0%, #ecfdf5 45%, #d1fae5 100%) !important;
+  border: 2.5px solid #059669 !important;
+  border-left: 8px solid #047857 !important;
+  box-shadow: 0 10px 25px -4px rgba(5, 150, 105, 0.22), 0 3px 8px rgba(0, 0, 0, 0.05) !important;
+}
+.dark .nav-console-emerald {
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.55) 0%, rgba(15, 23, 42, 0.95) 55%, rgba(6, 44, 32, 0.6) 100%) !important;
+  border: 2.5px solid #10b981 !important;
+  border-left: 8px solid #34d399 !important;
+  box-shadow: 0 10px 28px -4px rgba(0, 0, 0, 0.5), 0 0 16px rgba(16, 185, 129, 0.2) !important;
+}
+
+.nav-console-indigo {
+  background: linear-gradient(135deg, #e0e7ff 0%, #eef2ff 45%, #ede9fe 100%) !important;
+  border: 2.5px solid #4f46e5 !important;
+  border-left: 8px solid #4338ca !important;
+  box-shadow: 0 10px 25px -4px rgba(79, 70, 229, 0.22), 0 3px 8px rgba(0, 0, 0, 0.05) !important;
+}
+.dark .nav-console-indigo {
+  background: linear-gradient(135deg, rgba(49, 46, 129, 0.55) 0%, rgba(15, 23, 42, 0.95) 55%, rgba(67, 56, 202, 0.45) 100%) !important;
+  border: 2.5px solid #6366f1 !important;
+  border-left: 8px solid #818cf8 !important;
+  box-shadow: 0 10px 28px -4px rgba(0, 0, 0, 0.5), 0 0 16px rgba(99, 102, 241, 0.2) !important;
+}
+
+.just-pill-btn {
+  cursor: pointer;
+  border: 1.5px solid #94a3b8;
+  background-color: #ffffff;
+  color: #0f172a;
+  font-weight: 700;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.just-pill-btn.active-pill {
+  font-weight: 800 !important;
+  transform: translateY(-1px);
+}
+#pillsLegal .just-pill-btn.active-pill {
+  background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important;
+  border-color: #064e3b !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(4, 120, 87, 0.45) !important;
+}
+#pillsExtra .just-pill-btn.active-pill {
+  background: linear-gradient(135deg, #4338ca 0%, #3730a3 100%) !important;
+  border-color: #312e81 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(67, 56, 202, 0.45) !important;
+}
+```
+
+### 11. 案例卡片手風琴折疊核心邏輯 (Case Accordion Engine JS)
+
+```javascript
+function toggleCaseCard(card) {
+  if (!card) return;
+  const isCollapsed = card.classList.toggle('case-collapsed');
+  const btn = card.querySelector('.case-accordion-btn svg');
+  if (btn) btn.style.transform = isCollapsed ? 'rotate(-90deg)' : 'rotate(0deg)';
+}
+
+function toggleAllCases(expand) {
+  const allCards = document.querySelectorAll('.case-card');
+  allCards.forEach(card => {
+    if (expand) {
+      card.classList.remove('case-collapsed');
+    } else {
+      card.classList.add('case-collapsed');
+    }
+    const btn = card.querySelector('.case-accordion-btn svg');
+    if (btn) btn.style.transform = expand ? 'rotate(0deg)' : 'rotate(-90deg)';
+  });
+}
+```
+
+### 12. 爭點核心矩陣對照表控制器 (Mega Comparison Matrix Controller JS)
+
+```javascript
+function switchMatrixTab(tabKey) {
+  const panels = {
+    'tabA': document.getElementById('matrixPanelA'),
+    'tabB': document.getElementById('matrixPanelB'),
+    'tabC': document.getElementById('matrixPanelC'),
+    'tabAll': document.getElementById('matrixPanelAll')
+  };
+  const buttons = {
+    'tabA': document.getElementById('btnTabA'),
+    'tabB': document.getElementById('btnTabB'),
+    'tabC': document.getElementById('btnTabC'),
+    'tabAll': document.getElementById('btnTabAll')
+  };
+
+  Object.keys(panels).forEach(key => {
+    if (panels[key]) panels[key].classList.add('hidden');
+    if (buttons[key]) buttons[key].classList.remove('active-matrix-tab');
+  });
+
+  if (panels[tabKey]) {
+    panels[tabKey].classList.remove('hidden');
+    panels[tabKey].classList.add('fade-enter');
+  }
+  if (buttons[tabKey]) buttons[tabKey].classList.add('active-matrix-tab');
+}
+
+function filterMatrixRows(query) {
+  const q = (query || '').trim().toLowerCase();
+  const allRows = document.querySelectorAll('#sec-mega-comparison-matrix tbody tr');
+  allRows.forEach(row => {
+    if (!q) { row.style.display = ''; return; }
+    const searchKeywords = (row.getAttribute('data-search') || '').toLowerCase();
+    const isMatch = searchKeywords.includes(q) || row.textContent.toLowerCase().includes(q);
+    row.style.display = isMatch ? '' : 'none';
+  });
+}
+
+function jumpToCaseCard(caseId) {
+  if (viewChapter1.classList.contains('hidden')) switchView('chapter-1', false);
+  if (['1-7', '1-8', '1-9', '1-10', '1-11'].includes(caseId)) filterJustCase('legal', caseId);
+  else if (['1-12', '1-13', '1-14', '1-15'].includes(caseId)) filterJustCase('extra', caseId);
+
+  const targetEl = document.getElementById(`case-card-${caseId}`);
+  if (targetEl) {
+    if (targetEl.classList.contains('case-collapsed')) toggleCaseCard(targetEl);
+    const offset = targetEl.getBoundingClientRect().top + window.pageYOffset - 90;
+    window.scrollTo({ top: offset, behavior: 'smooth' });
+    targetEl.classList.remove('card-pulse-target');
+    void targetEl.offsetWidth;
+    targetEl.classList.add('card-pulse-target');
+    showToast(`🎯 已定位至 案例 ${caseId}`, '⚖️');
+  }
+}
+```
+
+### 13. 篇、章、節三層子目錄與獨立視圖切換實作 (Three-Tier Sub-Directory & Independent View Implementation)
+
+#### (1) 左側側邊欄樹狀引導線容器 (HTML)
+```html
+<!-- 父章節：第一章 刑法的運作原理 -->
+<button id="navBtnPart0Ch1" onclick="switchView('part0-chapter-1')" class="group flex items-center justify-between w-full px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100/60 dark:hover:bg-slate-800/40 transition-all text-left">
+  <div class="flex items-center gap-2 min-w-0">
+    <span class="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-blue-500"></span>
+    <span class="truncate">第一章 刑法的運作原理</span>
+  </div>
+</button>
+
+<!-- 第三層子目錄樹狀引導線容器 -->
+<div id="part0Ch1SubTree" class="ml-3.5 pl-2.5 border-l-2 border-slate-200 dark:border-slate-800/80 space-y-1 mt-0.5 mb-1.5">
+  <button id="navBtnPart0Ch1Sec1" onclick="switchView('part0-ch1-sec1')" class="group flex items-center justify-between w-full px-2 py-1 rounded-lg text-[12.5px] font-medium text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-100/60 dark:hover:bg-slate-800/40 transition-all text-left">
+    <div class="flex items-center gap-1.5 min-w-0">
+      <span class="text-xs">💎</span>
+      <span class="truncate">第一節 法益保護原則</span>
+    </div>
+    <span class="text-[10px] font-mono px-1 rounded bg-indigo-500/10 text-indigo-500">2-1頁</span>
+  </button>
+</div>
+```
+
+#### (2) 主閱讀區子單元入口卡片與子節獨立視圖 (HTML)
+```html
+<!-- 父章節末尾：子單元入口導航卡片 (viewPart0Chapter1) -->
+<div class="p-6 rounded-3xl border-2 border-indigo-500/40 bg-gradient-to-br from-indigo-50/90 via-blue-50/50 to-purple-50/40 dark:from-indigo-950/40 space-y-4">
+  <div class="flex items-center gap-2.5">
+    <span class="w-8 h-8 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-sm">💎</span>
+    <div>
+      <span class="text-[10px] font-mono uppercase font-bold text-indigo-600 dark:text-indigo-400 block tracking-wider">SECTION 1 • READY TO READ</span>
+      <h4 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">第一節 法益保護原則——何謂法益？</h4>
+    </div>
+  </div>
+  <button onclick="switchView('part0-ch1-sec1')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 text-white font-bold text-xs hover:bg-indigo-700 shadow-md transition-all">
+    <span>🚀 開始研讀 第一節 法益保護原則</span>
+    <span>→</span>
+  </button>
+</div>
+
+<!-- 子節獨立視圖 (viewPart0Ch1Sec1) -->
+<div id="viewPart0Ch1Sec1" class="fade-enter hidden space-y-8">
+  <!-- 麵包屑導航與返回按鈕 -->
+  <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-white/[0.06]">
+    <nav class="flex items-center gap-2 text-xs font-medium text-slate-400">
+      <button onclick="switchView('part-0')">第零篇</button>
+      <span>/</span>
+      <button onclick="switchView('part0-chapter-1')">第一章 刑法的運作原理</button>
+      <span>/</span>
+      <span class="text-indigo-600 dark:text-indigo-400 font-bold">第一節 法益保護原則</span>
+    </nav>
+    <button onclick="switchView('part0-chapter-1')" class="text-xs text-slate-400 hover:text-indigo-500 flex items-center gap-1">
+      ← 返回第一章總覽
+    </button>
+  </div>
+  <!-- 內文核心段落... -->
+</div>
+```
+
+#### (3) 核心控制邏輯與路由配對 (JavaScript)
+```javascript
+// 1. TOC_CONFIG 登錄子節專屬目錄
+TOC_CONFIG['part0-ch1-sec1'] = {
+  badge: '教材第 2-1 頁',
+  title: '📌 第一節 法益保護原則 清單',
+  items: [
+    { id: 'sec-p0ch1-sec1-def', label: '一、法益核心法定定義' },
+    { id: 'sec-p0ch1-sec1-nature', label: '二、法益三大本質與源起特徵' },
+    { id: 'sec-p0ch1-sec1-func', label: '三、法益之雙重機能與界限' }
+  ]
+};
+
+// 2. scrollToSection 支援子節前綴自動視圖切換
+function scrollToSection(e, targetId) {
+  if (e) e.preventDefault();
+  if (targetId.startsWith('sec-p0ch1-sec1-')) {
+    if (viewPart0Ch1Sec1.classList.contains('hidden')) switchView('part0-ch1-sec1', false);
+  } else if (targetId.startsWith('sec-p0ch1-')) {
+    if (viewPart0Chapter1.classList.contains('hidden')) switchView('part0-chapter-1', false);
+  }
+  // ... 平滑滾動至目標元素
+}
+
+// 3. handleHashRouting 支援深層直達
+if (hash.startsWith('#sec-p0ch1-sec1-')) {
+  switchView('part0-ch1-sec1', false);
+  setTimeout(() => { scrollToSection(null, hash.substring(1)); }, 50);
+} else if (hash === '#part0-ch1-sec1') {
+  switchView('part0-ch1-sec1', true);
+}
+```
+
 ---
 
 ## 驗收檢查清單 (Quality Checklist)
@@ -719,22 +1044,24 @@ ${caseData.relatedStatutes.map(s => `[[${s}]]`).join(' ')}
 - [ ] **精選圖解藝廊**：主頁下方是否設有書籍核心圖解卡片預覽區？
 - [ ] **三態與多篇章視圖切換**：`home`（主頁）、`intro`（導論）、各篇導讀（如 `part-0`）與章節（`chapter-1`, `chapter-2`）切換是否完全互斥且無任何黑底白畫面？
 - [ ] **本篇導讀標準卡片**：各篇導讀視圖是否具備 `PREFACE • CONDUCTED READ` 徽章、篇章大標題、頁碼徽章與帶左邊框之 `blockquote` 原文？
+- [ ] **三層樹狀目錄縮排**：側邊欄「章」下方是否有專屬縮排引導線容器（`ml-3.5 pl-2.5 border-l-2`）收納「節」作為子目錄？手機抽屜是否 1:1 鏡像縮排，杜絕扁平混淆？
+- [ ] **章節與小節視圖解耦**：點選「章」是否展示篇章前言與宏觀推導，並於章末提供「子單元導航入口卡片」？點選「節」是否流暢切換至獨立子節視圖？
+- [ ] **動態麵包屑導航與返回**：子節獨立視圖頂端是否配置完整麵包屑（篇 / 章 / 節）與「← 返回第一章總覽」按鈕？
+- [ ] **右側 TOC 與全域路由支援**：切換至子節時，右側 TOC 是否動態更新為該節小標題清單？`#part0-ch1-sec1` 與內部錨點是否支援網址深層直達與 `Ctrl+K` 搜尋直達？
+- [ ] **母本、發布檔與 Markdown 三方同步**：`visual.html`、`index.html` 與 `CRIMINAL_LAW_NOTES.md` 在章節層次、標題名稱、原文定義上是否 100% 絕對一致？
 - [ ] **右側 TOC 顯隱**：在「書籍主頁」與「各篇本篇導讀」狀態下，右側章節清單是否**嚴格完全隱藏**？進入第一章或第二章時是否**立即顯現並固定吸頂於右上角**？
 - [ ] **吸頂防落檢驗**：滾動至頁面最底端時，右側清單是否**絕無掉落至頁面下方或左下角滿版**？
 - [ ] **概念焦點框底色辨識度**：核心直觀引言與焦點框框是否採用專屬天藍實體漸層色塊（`#BAE6FD ~ #7DD3FC`），邊界清晰醒目，絕非融入背景的死白淡漸層？
-- [ ] **框內字體與純白膠囊標籤**：天藍框內正文是否採用深海軍藍（`#0C4A6E` / `#032034`）AAA 級易讀色彩？「一個壞人」、「壞事推定壞人」等標籤是否採用純白底色彩色粗體邊線立體襯托？
+- [ ] **案例導航控制台高對比**：控制台是否具備 **8px 實心側邊色軸**（翠綠 `#047857`、靛藍 `#4338ca`）、**2.5px 全不透明飽和邊框**與純白高對比按鈕？絕非低彩度灰白邊線！
+- [ ] **案例卡片平級性與無污染**：每個 `#case-card-X-X` 是否各自完全閉合且為容器平級兄弟節點，絕無因標籤遺漏導致後續卡片淪為前案子節點（DOM 污染防護）？
+- [ ] **案例手風琴與看板切換**：單卡標頭點擊是否平滑折疊？頂部 `[ ⊞ 精簡看板 ]` 與 `[ ⊟ 展開詳解 ]` 是否能一鍵整章批次切換？
+- [ ] **核心圖解無損燈箱放大鏡**：圖卡懸停是否出現 `🔍 點擊放大檢視`？燈箱是否支援 50%～250% 滾輪縮放、拖曳漫遊與 Esc 退出？
+- [ ] **超級對照矩陣 (第十六節)**：第一章末尾是否收錄十六節「⚡ 刑法核心爭點超級對照矩陣」？三大 Tab 切換、爭點即時檢索過濾與案例跳轉脈衝波紋（`card-pulse-target`）是否靈敏順暢？
 - [ ] **檔案編碼純 UTF-8 完整性**：頁面標題、左側選單與中央內文繁體中文字元是否 100% 正確呈現，絕無任何菱形問號編碼損壞？
 - [ ] **母本安全同步方向**：自動構建或推送批次檔（如 `copy_cover_and_push.bat`）是否嚴格鎖定由乾淨母本（`visual.html`）覆蓋目標檔（`index.html`），避免暫存檔案逆向破壞母本？
-- [ ] **Section 標籤深度配對閉合**：每個 `<section>` 內部之所有卡片與格線 `<div>` 是否於 `</section>` 之前全數閉合？`<section>` 與 `</section>` 數量是否精確 1:1 相等？
-- [ ] **視圖容器平級獨立性**：`<main>` 內各主視圖（`#viewHome`, `#viewIntro`, `#viewChapter1`, `#viewChapter2`, `#viewPart0` 等）是否各自完全閉合且為兄弟節點，絕無相互巢狀包覆導致切換章節時黑底空白（「內文沒東西」）？
-- [ ] **左側目錄子章節樣式**：子章節字級是否小於父層（`text-[13px]`），是否具備左側縱向分支線（`border-l-2`）、微邊距與子項目指示圓點？
-- [ ] **錨點點擊防跳退**：點擊右側各小節 TOC 錨點時，是否平滑跳轉至該段落，且絕不會誤觸跳回主頁或導論？
-- [ ] **法條原地卡片純淨度**：正文與標題是否 100% 杜絕正則貪婪掃描與虛線底線？是否僅精準綁定案例卡片標頭徽章與法規按鈕？
-- [ ] **法條卡片雙層標頭防截斷**：法條彈窗標頭是否拆為兩層（第一層放置階層徽章與關閉鈕，第二層放置完整法條標題）？是否使用 `break-words` 且**絕無 `truncate` 裁切**？
-- [ ] **行動端抽屜式面板**：在螢幕寬度 < 768px 時，法條懸浮卡片是否自動轉為自底端滑出的標準面板（Bottom Sheet），並配置全螢幕毛玻璃遮罩與顯眼的 `✕` 關閉按鈕？
-- [ ] **全域智慧搜尋 (Ctrl+K)**：按下 `Ctrl+K` 或點擊導航搜尋鈕是否順利呼出全螢幕搜尋浮層？四象限分類過濾（全部/案例/法條/學說）與鍵盤箭頭選擇是否靈活？跳轉後目標卡片是否居中並觸發 2.5 秒脈衝光暈高亮？
-- [ ] **案例爭點一鍵導出筆記**：點擊「📋 複製筆記」後是否生成規範的 Anki/Notion 雙鏈 Markdown 內容？按鈕是否暫態切換為「✓ 已複製」並於右下角彈出微型 Toast 通知？
-- [ ] **環形進度回到頂部按鈕**：頁面滾動超過 300px 時是否平滑浮現？SVG 環形軌道動態周長（125.66px）與懸停百分比是否正確反映研讀進度？點擊是否平滑回頂？
+- [ ] **全域智慧搜尋 (Ctrl+K)**：按下 `Ctrl+K` 或點擊導航搜尋鈕是否順利呼出全螢幕搜尋浮層？跳轉後目標卡片是否居中並觸發脈衝光暈高亮？
+- [ ] **案例爭點一鍵導出筆記**：點擊「📋 複製筆記」後是否生成規範的 Markdown 內容並彈出微型 Toast 通知？
+- [ ] **環形進度回到頂部按鈕**：頁面滾動超過 300px 時是否平滑浮現？動態周長（125.66px）與懸停百分比是否正確反映研讀進度？
 
 
 
