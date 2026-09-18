@@ -1286,6 +1286,14 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 group-hover:bg-indigo-600 transition-colors"></span>
                     <span>第一節 法益保護原則</span>
                   </button>
+                  <button id="navBtnPart0Ch1Sec2" onclick="switchView('part0-ch1-sec2')" class="w-full text-left py-1 px-2 rounded-lg text-[12px] font-medium transition-all text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center gap-2 group">
+                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 group-hover:bg-indigo-600 transition-colors"></span>
+                    <span>第二節 罪刑法定原則</span>
+                  </button>
+                  <button id="navBtnPart0Ch1Sec3" onclick="switchView('part0-ch1-sec3')" class="w-full text-left py-1 px-2 rounded-lg text-[12px] font-medium transition-all text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center gap-2 group">
+                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 group-hover:bg-indigo-600 transition-colors"></span>
+                    <span>第三節 罪責原則</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -5857,20 +5865,20 @@
             </div>
 
             <div class="space-y-4">
-              <!-- 第一節 焦點精選導航卡片 (已收錄・可立即進入) -->
-              <div class="p-6 rounded-3xl border-2 border-indigo-500/40 bg-gradient-to-br from-indigo-50/90 via-blue-50/50 to-purple-50/40 dark:from-indigo-950/40 dark:via-blue-950/30 dark:to-purple-950/20 shadow-sm space-y-4 hover:border-indigo-500 transition-all">
+              <!-- 第一節 導航卡片 (已完畢) -->
+              <div class="p-6 rounded-3xl border border-indigo-500/30 bg-gradient-to-br from-indigo-50/70 via-blue-50/40 to-purple-50/30 dark:from-indigo-950/30 dark:via-blue-950/20 dark:to-purple-950/20 shadow-sm space-y-4 hover:border-indigo-500/60 transition-all">
                 <div class="flex items-center justify-between flex-wrap gap-2">
                   <div class="flex items-center gap-2.5">
                     <span class="w-8 h-8 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-sm shadow-md shadow-indigo-500/30">💎</span>
                     <div>
-                      <span class="text-[10px] font-mono uppercase font-bold text-indigo-600 dark:text-indigo-400 block tracking-wider">SECTION 1 • READY TO READ</span>
+                      <span class="text-[10px] font-mono uppercase font-bold text-emerald-600 dark:text-emerald-400 block tracking-wider">SECTION 1 • COMPLETED ✓</span>
                       <h4 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">
                         第一節 法益保護原則——何謂法益？
                       </h4>
                     </div>
                   </div>
-                  <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold border border-indigo-500/20">
-                    教材第 2-1 頁 原文定義
+                  <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 font-bold border border-emerald-500/20">
+                    教材第 2-1 ～ 2-4 頁 全節完備
                   </span>
                 </div>
 
@@ -5879,7 +5887,7 @@
                     「凡是以法律手段而加以保護之重要生活利益，即稱為法益。」
                   </p>
                   <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                    涵蓋法益之核心法定定義、三大本質與源起特徵（倫理價值觀念、實質先在性、實證化擔保）及憲法界限。
+                    涵蓋法益之核心法定定義、三大本質與源起特徵、雙重機能、二元區分量相異說、三大案例（剪髮案、黑吃黑案、肇逃案）與解題提示方法論。
                   </p>
                 </div>
 
@@ -5887,39 +5895,69 @@
                   <span class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
                     <span>📚 刑法四大支柱之第一支柱</span>
                   </span>
-                  <button onclick="switchView('part0-ch1-sec1')" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-lg shadow-indigo-500/25 transition-all flex items-center gap-2 group hover:-translate-y-0.5">
-                    <span>🚀 開始研讀 第一節 法益保護原則</span>
+                  <button onclick="switchView('part0-ch1-sec1')" class="px-4 py-2 rounded-xl bg-indigo-600/90 hover:bg-indigo-600 text-white text-xs font-bold shadow-md shadow-indigo-500/20 transition-all flex items-center gap-1.5 group hover:-translate-y-0.5">
+                    <span>複習 第一節 法益保護原則</span>
                     <span class="group-hover:translate-x-0.5 transition-transform">→</span>
                   </button>
                 </div>
               </div>
 
-              <!-- 後續小節佔位卡片 (嚴格依據書本進度，插槽保留) -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
-                <div class="p-4 rounded-2xl border border-dashed border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/30 space-y-1.5 opacity-75">
-                  <div class="flex items-center justify-between text-xs">
-                    <span class="font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
-                      <span>📜</span>
-                      <span>第二節 罪刑法定原則</span>
-                    </span>
-                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-500">待後續教材提供</span>
+              <!-- 第二節與第三節 啟用卡片網格 (雙雙完備・點擊立即研讀！) -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+                <!-- 第二節 罪刑法定原則 -->
+                <div class="p-5 rounded-3xl border-2 border-blue-500/40 bg-gradient-to-br from-blue-50/90 via-sky-50/50 to-indigo-50/40 dark:from-blue-950/40 dark:via-sky-950/30 dark:to-indigo-950/20 shadow-sm space-y-3.5 hover:border-blue-500 transition-all flex flex-col justify-between">
+                  <div class="space-y-2.5">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <span class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs shadow-sm">📜</span>
+                        <span class="text-[10px] font-mono uppercase font-bold text-blue-600 dark:text-blue-400">SECTION 2 • READY TO READ</span>
+                      </div>
+                      <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold border border-blue-500/20">
+                        教材第 2-5 ～ 2-7 頁
+                      </span>
+                    </div>
+                    <h4 class="text-base font-black text-slate-900 dark:text-white">
+                      第二節 罪刑法定原則——付出代價的根據何在？
+                    </h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                      釋字第 384 號理由書・刑法 § 1・四大派生面向（習慣法禁止、類推適用禁止、明確性原則、溯及既往禁止）與四大經典案例（1-4 至 1-7）及公法憲法對照。
+                    </p>
                   </div>
-                  <p class="text-[11.5px] text-slate-500 dark:text-slate-400 leading-relaxed">
-                    四大支柱之第三支柱，由預防思想導出「使人民安措其手足」，含最後手段性原則之互為光影探討。
-                  </p>
+                  <div class="pt-2 border-t border-blue-200/50 dark:border-blue-900/40 flex items-center justify-between">
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400">四大支柱之第三支柱</span>
+                    <button onclick="switchView('part0-ch1-sec2')" class="px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-md shadow-blue-500/20 transition-all flex items-center gap-1 group hover:-translate-y-0.5">
+                      <span>🚀 研讀 第二節</span>
+                      <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+                    </button>
+                  </div>
                 </div>
 
-                <div class="p-4 rounded-2xl border border-dashed border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/30 space-y-1.5 opacity-75">
-                  <div class="flex items-center justify-between text-xs">
-                    <span class="font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
-                      <span>⚖️</span>
-                      <span>第三節 罪責原則</span>
-                    </span>
-                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-500">待後續教材提供</span>
+                <!-- 第三節 罪責原則 -->
+                <div class="p-5 rounded-3xl border-2 border-purple-500/40 bg-gradient-to-br from-purple-50/90 via-fuchsia-50/50 to-indigo-50/40 dark:from-purple-950/40 dark:via-fuchsia-950/30 dark:to-indigo-950/20 shadow-sm space-y-3.5 hover:border-purple-500 transition-all flex flex-col justify-between">
+                  <div class="space-y-2.5">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <span class="w-7 h-7 rounded-lg bg-purple-600 text-white flex items-center justify-center font-bold text-xs shadow-sm">⚖️</span>
+                        <span class="text-[10px] font-mono uppercase font-bold text-purple-600 dark:text-purple-400">SECTION 3 • READY TO READ</span>
+                      </div>
+                      <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 font-bold border border-purple-500/20">
+                        教材第 2-7 ～ 2-8 頁
+                      </span>
+                    </div>
+                    <h4 class="text-base font-black text-slate-900 dark:text-white">
+                      第三節 罪責原則——付出代價的極限何在？
+                    </h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                      釋字第 630 號理由書・雙重核心內涵（無罪責即無刑罰、罪刑相當原則）・案例 1-8（準強盜罪達難以抗拒合憲限縮）・解題提示（有利人民容許例外）・全章四大支柱總結！
+                    </p>
                   </div>
-                  <p class="text-[11.5px] text-slate-500 dark:text-slate-400 leading-relaxed">
-                    四大支柱之第四支柱，由應報思想導出「小罪不能大罰」，貫徹無責任即無刑罰之核心準則。
-                  </p>
+                  <div class="pt-2 border-t border-purple-200/50 dark:border-purple-900/40 flex items-center justify-between">
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400">四大支柱之第四支柱</span>
+                    <button onclick="switchView('part0-ch1-sec3')" class="px-3.5 py-1.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold shadow-md shadow-purple-500/20 transition-all flex items-center gap-1 group hover:-translate-y-0.5">
+                      <span>🚀 研讀 第三節</span>
+                      <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -5980,7 +6018,7 @@
           <div class="space-y-2">
             <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-mono text-xs font-bold">
               <span>第零篇・第一章・第一節</span>
-              <span class="px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950/40 text-[11px] border border-indigo-200 dark:border-indigo-900/50">教材第 2-1 ~ 2-3 頁 原文體系</span>
+              <span class="px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950/40 text-[11px] border border-indigo-200 dark:border-indigo-900/50">教材第 2-1 ~ 2-4 頁 原文體系</span>
             </div>
             <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
               第一節 法益保護原則——何謂法益？
@@ -6579,12 +6617,12 @@
             </div>
           </section>
 
-          <!-- 九、實例演練【案例 1-3】：肇事逃逸罪要件爭議（致人死傷與肇事） -->
+          <!-- 九、實例演練【案例 1-3】：肇事逃逸罪要件爭議（致人死傷、肇事與逃逸） -->
           <section id="sec-p0ch1-sec1-case-1-3" class="space-y-6 pt-2">
             <div class="flex items-center gap-3">
               <span class="w-2 h-6 rounded-full bg-cyan-600"></span>
               <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
-                九、實例演練【案例 1-3】：肇事逃逸罪要件爭議（致人死傷與肇事）
+                九、實例演練【案例 1-3】：肇事逃逸罪要件解釋爭議（致人死傷、肇事與逃逸）
               </h3>
             </div>
 
@@ -6598,10 +6636,10 @@
                   </span>
                   <div>
                     <h4 class="font-black text-slate-900 dark:text-white text-sm sm:text-base">
-                      案例 1-3 肇事逃逸罪要件解釋爭議（致人死傷與肇事）
+                      案例 1-3 肇事逃逸罪要件解釋爭議（致人死傷、肇事與逃逸）
                     </h4>
                     <div class="flex items-center gap-2 text-[11px] text-slate-400 font-mono">
-                      <span>教材第 2-3 頁</span>
+                      <span>教材第 2-3 ～ 2-4 頁</span>
                       <span>•</span>
                       <span>關聯法條：<span class="statute-link" data-statute="185-4">刑法第 185-4 條</span>（肇事致人死傷逃逸罪）</span>
                     </div>
@@ -6609,8 +6647,8 @@
                 </div>
               </div>
 
-              <!-- 雙子題事實與問題導引 -->
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+              <!-- 三大子題事實與問題導引網格 -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 text-xs">
                 <!-- 子題 (一)：致人死傷要件 -->
                 <div class="p-4 rounded-2xl bg-cyan-50/40 dark:bg-cyan-950/20 border border-cyan-200/70 dark:border-cyan-900/40 space-y-2.5">
                   <div class="flex items-center justify-between">
@@ -6625,12 +6663,9 @@
                       「甲駕駛汽車不當與對向來車乙發生擦撞，甲隨即加速逃逸，惟乙車僅車身烤漆掉落，並無人員傷亡。」
                     </p>
                   </div>
-                  <div class="text-[11.5px] text-slate-600 dark:text-slate-300 space-y-1">
-                    <p class="font-bold text-slate-800 dark:text-slate-200">❓ 爭點：如何理解肇事逃逸罪（§ 185-4）內「致人死傷」之要件？</p>
-                    <p class="leading-relaxed">
-                      本罪立法目的在於維護交通安全，並即時救助傷者生命身體法益。若事故僅造成車輛烤漆受損等<strong>純粹財產損害而無人死傷</strong>，欠缺「致人死傷」要件，不構成本罪。
-                    </p>
-                  </div>
+                  <p class="text-[11px] text-slate-600 dark:text-slate-300 font-medium">
+                    ❓ <strong>爭點</strong>：如何理解肇事逃逸罪（§ 185-4）內「致人死傷」之要件？
+                  </p>
                 </div>
 
                 <!-- 子題 (二)：肇事要件與過失責任 -->
@@ -6647,12 +6682,171 @@
                       「甲駕駛汽車在無過失的狀態下遭乙過失追撞，乙倒地血流如注，甲自認錯不在己，逕直接離去。」
                     </p>
                   </div>
-                  <div class="text-[11.5px] text-slate-600 dark:text-slate-300 space-y-1">
-                    <p class="font-bold text-slate-800 dark:text-slate-200">❓ 爭點：如何理解肇事逃逸罪內「肇事」之要件？是否包含無過失？</p>
-                    <p class="leading-relaxed">
-                      「肇事」究竟限於有過失之肇事，抑或包含無過失之交通事故？（司法院釋字第 777 號解釋曾宣告舊法違憲，立法院隨後於 110 年修法明文化）。
+                  <p class="text-[11px] text-slate-600 dark:text-slate-300 font-medium">
+                    ❓ <strong>爭點</strong>：如何理解肇事逃逸罪內「肇事」之要件？是否包含無過失？
+                  </p>
+                </div>
+
+                <!-- 子題 (三)：逃逸要件與救助未留名 -->
+                <div class="p-4 rounded-2xl bg-amber-50/40 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-2.5">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-amber-950 dark:text-amber-200 flex items-center gap-1.5">
+                      <span class="w-5 h-5 rounded bg-amber-500/10 text-amber-600 flex items-center justify-center font-mono font-bold text-[11px]">㈢</span>
+                      <span>移置叫車未留名離去</span>
+                    </span>
+                    <span class="text-[10px] text-amber-700 dark:text-amber-300 font-mono font-bold">逃逸要件解讀</span>
+                  </div>
+                  <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-amber-100 dark:border-amber-900/40">
+                    <p class="text-[11.5px] text-slate-700 dark:text-slate-200 font-serif leading-relaxed">
+                      「甲不慎撞傷路人乙，乙倒在路中央碎片狼藉，甲將其移置人行道並電召救護車，待抵達後未留個資離去。」
                     </p>
                   </div>
+                  <p class="text-[11px] text-slate-600 dark:text-slate-300 font-medium">
+                    ❓ <strong>爭點</strong>：如何理解肇事逃逸罪內「逃逸」之要件？已救助但隱匿身分是否該當？
+                  </p>
+                </div>
+              </div>
+
+              <!-- 問題導引與三大理論交鋒 (教材第 2-4 頁 原文分析) -->
+              <div class="space-y-3 pt-1">
+                <div class="text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
+                  <span>◀</span>
+                  <span>問題導引：三大保護法益學說之對立與要件詮釋</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold ml-1">
+                    教材第 2-4 頁 原文分析
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 text-xs">
+                  <!-- 說一：生命身體安全保障說 -->
+                  <div class="p-4 rounded-2xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/80 dark:border-blue-900/50 space-y-2.5">
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-blue-950 dark:text-blue-200 flex items-center gap-1.5">
+                        <span class="px-1.5 py-0.5 rounded bg-blue-200 dark:bg-blue-900 text-[10px] font-mono">說一</span>
+                        <span>生命身體安全保障說</span>
+                      </span>
+                      <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold">早期實務</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                      本罪為遺棄罪之特別規定，以<strong>減少被害人死傷</strong>為目的。
+                    </p>
+                    <ul class="text-[11px] text-slate-600 dark:text-slate-300 space-y-1 pl-2 border-l-2 border-blue-300 dark:border-blue-800">
+                      <li>• <strong>「致人死傷」</strong>：與法益侵害有關之構成要件要素。</li>
+                      <li>• <strong>「肇事」</strong>：限於前行為過失致他人生命身體安全受到威脅，行為人因而負有<strong>救助義務</strong>。</li>
+                      <li>• <strong>「逃逸」</strong>：指對於生命身體之危險狀態<strong>不為救助</strong>。</li>
+                    </ul>
+                    <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-blue-100 dark:border-blue-900/40 text-[11px] text-blue-950 dark:text-blue-300">
+                      ⚖️ <strong>本案涵攝</strong>：問題(一)無傷不成立；問題(二)無過失不成立；問題(三)已救助排除危險<strong>不成立本罪</strong>。
+                    </div>
+                  </div>
+
+                  <!-- 說二：公共安全保障說 -->
+                  <div class="p-4 rounded-2xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-200/80 dark:border-purple-900/50 space-y-2.5">
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-purple-950 dark:text-purple-200 flex items-center gap-1.5">
+                        <span class="px-1.5 py-0.5 rounded bg-purple-200 dark:bg-purple-900 text-[10px] font-mono">說二</span>
+                        <span>公共安全保障說</span>
+                      </span>
+                      <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 font-bold">少數說 / 體例</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                      由立法章節體例來看（公共危險罪章），乃是保護<strong>不特定多數人的公共安全</strong>。事故現場殘骸混亂，會引發後續公共危險。
+                    </p>
+                    <ul class="text-[11px] text-slate-600 dark:text-slate-300 space-y-1 pl-2 border-l-2 border-purple-300 dark:border-purple-800">
+                      <li>• <strong>「致人死傷」</strong>：與保護法益無關，<strong>屬立法錯誤應加以刪除</strong>。</li>
+                      <li>• <strong>「肇事」</strong>：限於前行為過失致生後續公共危險，因而負有<strong>控管義務</strong>。</li>
+                      <li>• <strong>「逃逸」</strong>：指對<strong>公共危險不為控管</strong>。</li>
+                    </ul>
+                    <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-purple-100 dark:border-purple-900/40 text-[11px] text-purple-950 dark:text-purple-300">
+                      ⚖️ <strong>本案涵攝</strong>：問題(一)若未控管危險可能成立；問題(二)無過失不成立；問題(三)碎片未清<strong>可能成立本罪</strong>。
+                    </div>
+                  </div>
+
+                  <!-- 說三：確認利益保障說 -->
+                  <div class="p-4 rounded-2xl bg-emerald-50/50 dark:bg-emerald-950/20 border-2 border-emerald-300 dark:border-emerald-800/60 space-y-2.5">
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-emerald-950 dark:text-emerald-200 flex items-center gap-1.5">
+                        <span class="px-1.5 py-0.5 rounded bg-emerald-200 dark:bg-emerald-900 text-[10px] font-mono">說三</span>
+                        <span>確認利益保障說</span>
+                      </span>
+                      <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">學說有力說 ⭐</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                      本罪乃為解決<strong>肇事責任之釐清問題</strong>。基於社會連帶思想，事故參與者無論有無過失均負有<strong>協助確認責任歸屬義務</strong>。
+                    </p>
+                    <ul class="text-[11px] text-slate-600 dark:text-slate-300 space-y-1 pl-2 border-l-2 border-emerald-300 dark:border-emerald-800">
+                      <li>• <strong>「致人死傷」</strong>：限縮刑罰權發動的<strong>客觀處罰條件</strong>。</li>
+                      <li>• <strong>「肇事」</strong>：<strong>不限故意、過失或無過失</strong>之前行為。</li>
+                      <li>• <strong>「逃逸」</strong>：指<strong>逃避責任歸屬義務之隱匿行為</strong>。</li>
+                    </ul>
+                    <div class="p-2.5 rounded-xl bg-emerald-100/60 dark:bg-emerald-950/60 text-[11px] text-emerald-950 dark:text-emerald-200 font-medium">
+                      ⚖️ <strong>本案涵攝</strong>：問題(一)欠處罰條件不成立；問題(二)未停留釐清<strong>成立</strong>；問題(三)隱匿身分<strong>成立本罪</strong>！
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 深度對照矩陣表格 -->
+              <div class="space-y-2 pt-2">
+                <div class="text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                  <span>📊</span>
+                  <span>案例 1-3 三大理論全面對照矩陣</span>
+                </div>
+                <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+                  <table class="w-full text-left text-xs border-collapse min-w-[620px]">
+                    <thead>
+                      <tr class="bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-800">
+                        <th class="py-2.5 px-3 font-bold w-1/5">比較項目</th>
+                        <th class="py-2.5 px-3 font-bold w-4/15 text-blue-700 dark:text-blue-300">① 生命身體安全保障說（早期實務）</th>
+                        <th class="py-2.5 px-3 font-bold w-4/15 text-purple-700 dark:text-purple-300">② 公共安全保障說（少數說）</th>
+                        <th class="py-2.5 px-3 font-bold w-4/15 text-emerald-700 dark:text-emerald-300 bg-emerald-500/5">③ 確認利益保障說（有力說 ⭐）</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 dark:divide-slate-800/60 text-[11.5px] text-slate-600 dark:text-slate-300">
+                      <tr>
+                        <td class="py-2 px-3 font-bold bg-slate-50/50 dark:bg-slate-900/50">保護法益</td>
+                        <td class="py-2 px-3">被害人生命、身體安全</td>
+                        <td class="py-2 px-3">不特定多數人交通公共安全</td>
+                        <td class="py-2 px-3 font-semibold text-emerald-900 dark:text-emerald-300 bg-emerald-500/5">事故責任釐清之確認利益</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2 px-3 font-bold bg-slate-50/50 dark:bg-slate-900/50">致人死傷定位</td>
+                        <td class="py-2 px-3">構成要件要素（實質法益損害）</td>
+                        <td class="py-2 px-3">立法贅文／立法錯誤應刪除</td>
+                        <td class="py-2 px-3 font-semibold text-emerald-900 dark:text-emerald-300 bg-emerald-500/5">客觀處罰條件（限縮刑罰門檻）</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2 px-3 font-bold bg-slate-50/50 dark:bg-slate-900/50">肇事之理解</td>
+                        <td class="py-2 px-3">限過失致人死傷（負救助義務）</td>
+                        <td class="py-2 px-3">限過失致現場危險（負控管義務）</td>
+                        <td class="py-2 px-3 font-semibold text-emerald-900 dark:text-emerald-300 bg-emerald-500/5">不限過失（故意、過失、無過失均屬之）</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2 px-3 font-bold bg-slate-50/50 dark:bg-slate-900/50">逃逸之理解</td>
+                        <td class="py-2 px-3">對生命危險不為救助即離去</td>
+                        <td class="py-2 px-3">對現場公共危險不為控管</td>
+                        <td class="py-2 px-3 font-semibold text-emerald-900 dark:text-emerald-300 bg-emerald-500/5">逃避責任歸屬義務之隱匿身分</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2 px-3 font-bold bg-slate-50/50 dark:bg-slate-900/50">問題(一)純車損</td>
+                        <td class="py-2 px-3 text-rose-600 font-semibold">❌ 不成立（欠缺死傷要件）</td>
+                        <td class="py-2 px-3 text-amber-600 font-semibold">⚠️ 碎片未控管可能成立</td>
+                        <td class="py-2 px-3 text-rose-600 font-semibold bg-emerald-500/5">❌ 不成立（欠缺客觀處罰條件）</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2 px-3 font-bold bg-slate-50/50 dark:bg-slate-900/50">問題(二)無過失遭撞</td>
+                        <td class="py-2 px-3 text-rose-600 font-semibold">❌ 不成立（無過失非肇事）</td>
+                        <td class="py-2 px-3 text-rose-600 font-semibold">❌ 不成立（無過失不負控管義務）</td>
+                        <td class="py-2 px-3 text-emerald-700 dark:text-emerald-400 font-black bg-emerald-500/5">⭕ 成立（發生事故即有確認義務）</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2 px-3 font-bold bg-slate-50/50 dark:bg-slate-900/50">問題(三)救助未留名</td>
+                        <td class="py-2 px-3 text-rose-600 font-semibold">❌ 不成立（危險已獲救助排除）</td>
+                        <td class="py-2 px-3 text-amber-600 font-semibold">⚠️ 碎片未清理可能成立</td>
+                        <td class="py-2 px-3 text-emerald-700 dark:text-emerald-400 font-black bg-emerald-500/5">⭕ 成立（未留個資逃避責任歸屬）</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
 
@@ -6661,30 +6855,116 @@
                 <div class="flex items-center justify-between">
                   <span class="font-bold text-xs text-slate-800 dark:text-slate-200 flex items-center gap-2">
                     <span>💡</span>
-                    <span>現行法規範延伸（釋字第 777 號與 110 年修法）</span>
+                    <span>現行法規範延伸（釋字第 777 號與 110 年修法總結）</span>
                   </span>
                   <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold">法規查核通過</span>
                 </div>
                 <p class="text-[11.5px] text-slate-600 dark:text-slate-300 leading-relaxed">
-                  110 年 5 月 28 日修正之現行 <span class="statute-link" data-statute="185-4">刑法第 185-4 條</span> 將原本抽象之「肇事」修正為<strong>「發生交通事故」</strong>，並區分<strong>「致人傷害而逃逸」</strong>（處六月以上五年以下有期徒刑）與<strong>「致人重傷或死亡而逃逸」</strong>（處一年以上七年以下有期徒刑）；第 2 項更明定<strong>「犯前項之罪，無過失者，減輕或免除其刑」</strong>，兼顧救護生命與罪責原則。
+                  司法院釋字第 777 號宣告舊刑法第 185-4 條違憲後，立法院於 110 年修正現行法條：將抽象「肇事」修正為<strong>「發生交通事故」</strong>，並區分<strong>致人傷害</strong>（處六月以上五年以下）與<strong>致人重傷或死亡</strong>（處一年以上七年以下）；第 2 項更明定<strong>「犯前項之罪，無過失者，減輕或免除其刑」</strong>。立法實質融合救助人身法益與責任確認利益之衡平考量。
                 </p>
               </div>
+            </div>
+          </section>
 
-              <!-- 教材進度待續提示卡 -->
-              <div class="p-4 rounded-2xl bg-slate-50/70 dark:bg-slate-900/40 border border-dashed border-slate-300 dark:border-slate-700 flex items-center justify-between flex-wrap gap-3">
-                <div class="flex items-center gap-2.5">
-                  <span class="text-2xl">⏳</span>
+          <!-- 十、解題提示：法益確認乃構成要件解釋與分則學習之先決基石 -->
+          <section id="sec-p0ch1-sec1-tips-methodology" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-amber-500"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                十、解題提示：法益確認乃構成要件解釋與分則學習之先決基石
+              </h3>
+            </div>
+
+            <div class="p-6 rounded-3xl border border-slate-200 dark:border-white/[0.08] bg-white dark:bg-[#101623] shadow-sm space-y-6">
+              <!-- 原文金句精華焦點框 -->
+              <div class="p-5 rounded-2xl bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-indigo-500/10 border-2 border-amber-400/40 dark:border-amber-500/30 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-xs text-amber-900 dark:text-amber-300 uppercase tracking-wider font-mono flex items-center gap-2">
+                    <span>📖</span>
+                    <span>教材第 2-4 頁 原文精華【解題提示】</span>
+                  </span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/15 text-amber-800 dark:text-amber-300 font-bold">
+                    方法論核心
+                  </span>
+                </div>
+
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-amber-200 dark:border-amber-900/50 shadow-xs">
+                  <p class="text-xs sm:text-[13px] text-slate-800 dark:text-slate-100 font-serif leading-relaxed">
+                    「前述幾個案例只是要告訴大家<strong>『保護法益的確認』將直接影響刑法分則構成要件要素的解釋與定位</strong>。至於各個犯罪的細部要件爭執及立場抉擇，待分則處再逐一分析說明。因此刑法分則的學習上，<strong>確認保護法益是絕對必要的前置工作</strong>，只有清楚掌握該罪的保護法益，才能在紛雜的要素中正確歸類、整理，在案例解析上也十分重要，如果對所討論的犯罪可以先有一個既定保護法益存在，那檢討構成要件就會相對單純且<strong>事半功倍</strong>。」
+                  </p>
+                </div>
+              </div>
+
+              <!-- 分則研讀與案例審查四步模型卡片 -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 text-xs">
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                      <span class="w-6 h-6 rounded-lg bg-indigo-500/10 text-indigo-600 flex items-center justify-center font-mono font-bold">1</span>
+                      <span>確認保護法益</span>
+                    </span>
+                    <span class="text-[10px] text-indigo-500 font-mono font-bold">前置基石</span>
+                  </div>
+                  <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                    研讀任何條文，先自問「本罪保護何種利益？」區分專屬人格、財產利益或超個人秩序。
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                      <span class="w-6 h-6 rounded-lg bg-blue-500/10 text-blue-600 flex items-center justify-center font-mono font-bold">2</span>
+                      <span>指導要件解釋</span>
+                    </span>
+                    <span class="text-[10px] text-blue-500 font-mono font-bold">目的導引</span>
+                  </div>
+                  <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                    構成要件之解釋緊扣法益保護目的，避免望文生義或本末倒置，防止過度限縮或不當擴張。
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                      <span class="w-6 h-6 rounded-lg bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-mono font-bold">3</span>
+                      <span>定位要素屬性</span>
+                    </span>
+                    <span class="text-[10px] text-emerald-500 font-mono font-bold">體系歸位</span>
+                  </div>
+                  <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                    分辨要素屬於客觀行為、結果、不法要素、身分要件抑或客觀處罰條件，條理井然。
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                      <span class="w-6 h-6 rounded-lg bg-purple-500/10 text-purple-600 flex items-center justify-center font-mono font-bold">4</span>
+                      <span>案例精準涵攝</span>
+                    </span>
+                    <span class="text-[10px] text-purple-500 font-mono font-bold">事半功倍</span>
+                  </div>
+                  <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                    各說對立之根源在於保護法益之認定。掌握法益主軸，任何紛雜案例均能提綱挈領破題。
+                  </p>
+                </div>
+              </div>
+
+              <!-- 第一節完整完結進度提示卡 -->
+              <div class="p-5 rounded-2xl bg-gradient-to-r from-emerald-50 via-teal-50 to-indigo-50 dark:from-emerald-950/30 dark:via-teal-950/20 dark:to-indigo-950/30 border border-emerald-300 dark:border-emerald-800/60 flex items-center justify-between flex-wrap gap-3">
+                <div class="flex items-center gap-3">
+                  <span class="text-3xl">🎉</span>
                   <div>
-                    <div class="text-xs font-bold text-slate-800 dark:text-slate-200">
-                      教材第 2-2 ～ 2-3 頁 內容已完整收錄
+                    <div class="text-sm font-black text-emerald-950 dark:text-emerald-200">
+                      教材第 2-1 ～ 2-4 頁 第一節【法益保護原則——何謂法益？】全節收錄完畢！
                     </div>
-                    <div class="text-[11px] text-slate-500 dark:text-slate-400">
-                      案例 1-3 深入學說審查與後續第二節內容，待後續教材頁面（第 2-4 頁起）提供。
+                    <div class="text-xs text-slate-600 dark:text-slate-300 mt-0.5">
+                      完整涵蓋法益定義、三大本質、雙重機能、二元區分量相異說、分則架構、三大功能、三大實例演練（剪髮案、黑吃黑案、肇逃案）與解題提示方法論。後續單元待第二節教材提供。
                     </div>
                   </div>
                 </div>
-                <span class="px-2.5 py-1 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-mono text-xs font-bold">
-                  第 2-2 ~ 2-3 頁 完畢
+                <span class="px-3 py-1.5 rounded-xl bg-emerald-600 text-white font-mono text-xs font-black shadow-sm">
+                  第一節 完畢 (P. 2-1 ~ 2-4)
                 </span>
               </div>
             </div>
@@ -6704,9 +6984,970 @@
               </div>
             </button>
 
+            <button onclick="switchView('part0-ch1-sec2')" class="group p-4 rounded-2xl border border-indigo-500/40 hover:border-indigo-500 bg-gradient-to-br from-indigo-50/50 to-blue-50/30 dark:from-indigo-950/30 dark:to-blue-950/20 text-right transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md flex items-center justify-between gap-3">
+              <div class="min-w-0 text-left">
+                <span class="text-[11px] text-indigo-700 dark:text-indigo-400 font-mono block font-bold">下一單元 (第 2-5 ～ 2-7 頁)</span>
+                <span class="text-xs font-extrabold text-slate-900 dark:text-white group-hover:text-indigo-700 dark:group-hover:text-indigo-400 transition-colors truncate block">
+                  第二節 罪刑法定原則——付出代價的根據何在？ →
+                </span>
+              </div>
+              <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 text-white flex items-center justify-center text-sm font-bold shrink-0 group-hover:scale-105 transition-transform shadow-md shadow-indigo-500/30">
+                📜
+              </div>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- VIEW 7: 第零篇 第一章・第二節 罪刑法定原則——付出代價的根據何在？ (教材第 2-5 ~ 2-7 頁) -->
+        <!-- ========================================================================= -->
+        <div id="viewPart0Ch1Sec2" class="fade-enter hidden space-y-8">
+          
+          <!-- Breadcrumb & Back -->
+          <div class="flex items-center justify-between gap-4 border-b border-slate-100 dark:border-white/[0.06] pb-3">
+            <nav class="flex items-center gap-2 text-xs font-medium text-slate-400 flex-wrap">
+              <button onclick="switchView('part-0')" class="hover:text-indigo-500 transition-colors">第零篇</button>
+              <span>/</span>
+              <button onclick="switchView('part0-chapter-1')" class="hover:text-indigo-500 transition-colors">第一章 刑法的運作原理</button>
+              <span>/</span>
+              <span class="text-indigo-600 dark:text-indigo-400 font-bold">第二節 罪刑法定原則</span>
+            </nav>
+            <button onclick="switchView('part0-chapter-1')" class="text-xs text-slate-400 hover:text-indigo-500 flex items-center gap-1 transition-colors shrink-0">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+              </svg>
+              <span>返回第一章總覽</span>
+            </button>
+          </div>
+
+          <!-- Section Header -->
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-mono text-xs font-bold">
+              <span>第零篇・第一章・第二節</span>
+              <span class="px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950/40 text-[11px] border border-indigo-200 dark:border-indigo-900/50">教材第 2-5 ～ 2-7 頁 原文體系</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+              第二節 罪刑法定原則——付出代價的根據何在？
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+              行為之處罰，以行為時之法律有明文規定者為限（付出代價之根據）。深入剖析習慣法禁止、類推適用禁止、罪刑明確性與溯及既往禁止四大面向、成文法主義、文義極限與憲法法治國對照
+            </p>
+          </div>
+
+          <!-- 一、罪刑法定原則核心定義與法源依據 -->
+          <section id="sec-p0ch1-sec2-def" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-blue-600"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                一、罪刑法定原則之核心法定定義與憲法法源（教材第 2-5 頁）
+              </h3>
+            </div>
+
+            <div class="p-6 rounded-3xl border border-slate-200 dark:border-white/[0.08] bg-white dark:bg-[#101623] shadow-sm space-y-6">
+              <!-- 核心法定定義與釋字 384 金句卡片 -->
+              <div class="p-5 rounded-2xl bg-gradient-to-br from-blue-50/80 via-sky-50/50 to-indigo-50/40 dark:from-blue-950/40 dark:via-sky-950/20 dark:to-indigo-950/20 border-2 border-blue-500/30 space-y-4">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="text-xl">📜</span>
+                    <span class="font-bold text-xs text-blue-800 dark:text-blue-300 uppercase tracking-wider font-mono">
+                      罪刑法定原則（Nullum crimen, nulla poena sine lege）
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span data-statute="1" class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold border border-blue-500/20 cursor-pointer">
+                      刑法 § 1
+                    </span>
+                    <span data-statute="384" class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-bold border border-amber-500/20 cursor-pointer">
+                      釋字第 384 號
+                    </span>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-blue-200 dark:border-blue-900/60 shadow-sm space-y-2">
+                  <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 border-b border-slate-100 dark:border-slate-800 pb-1.5">
+                    <span>刑法第 1 條前段明文</span>
+                    <span>法律保留之最高體現</span>
+                  </div>
+                  <p class="text-sm sm:text-base font-black text-blue-900 dark:text-blue-200 leading-relaxed font-serif">
+                    「行為之處罰，以行為時之法律有明文規定者為限。」
+                  </p>
+                </div>
+
+                <!-- 釋字 384 號理由書摘錄 -->
+                <div class="p-4 rounded-xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200/80 dark:border-amber-900/40 space-y-1.5 text-xs text-slate-700 dark:text-slate-300">
+                  <div class="flex items-center justify-between font-bold text-amber-800 dark:text-amber-300">
+                    <span class="flex items-center gap-1.5">
+                      <span>⚖️</span>
+                      <span>司法院釋字第 384 號解釋理由書（憲法法源依據）</span>
+                    </span>
+                    <span class="font-mono text-[10px]">憲法第 8 條 正當法律程序</span>
+                  </div>
+                  <blockquote class="italic text-slate-700 dark:text-slate-200 leading-relaxed pl-2 border-l-2 border-amber-500 font-serif">
+                    「實質正當之法律程序，包括罪刑法定主義之要求。非經立法院通過、總統公布之法律明文規定，不得以習慣法創設罪刑，亦不得超越法條文義而類推適用，始符憲法保障人身自由之本旨。」
+                  </blockquote>
+                </div>
+
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  罪刑法定原則被譽為<strong>「刑法的大憲章」</strong>。其核心價值在於<strong>節制國家權力任意發動、保障人民行為自由與預測可能性</strong>。國家欲使人民付出代價（發動刑罰制裁），必須以事前制定且明確的法律為唯一根據。
+                </p>
+              </div>
+
+              <!-- 原文圖解還原：四大面向架構圖 -->
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                    <span class="text-blue-500">🗺️</span>
+                    <span>罪刑法定原則之四大面向派生子原則（教材第 2-5 頁 原文圖解）</span>
+                  </h4>
+                  <span class="text-[11px] font-mono text-slate-400">四大派生面向</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
+                  <!-- 面向 1 -->
+                  <div class="p-4 rounded-2xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/80 dark:border-blue-900/40 space-y-1.5">
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-blue-900 dark:text-blue-200 flex items-center gap-1.5">
+                        <span class="w-6 h-6 rounded-lg bg-blue-600 text-white flex items-center justify-center font-mono font-bold text-xs">1</span>
+                        <span>習慣法之禁止</span>
+                      </span>
+                      <span class="text-[10px] text-blue-500 font-mono font-bold">成文法主義</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                      刑罰法律必須由立法院通過、總統公布之<strong>形式法律</strong>定之，不得逕以社會習慣或倫理直接作為論罪科刑之法源。
+                    </p>
+                  </div>
+
+                  <!-- 面向 2 -->
+                  <div class="p-4 rounded-2xl bg-indigo-50/50 dark:bg-indigo-950/20 border border-indigo-200/80 dark:border-indigo-900/40 space-y-1.5">
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-indigo-900 dark:text-indigo-200 flex items-center gap-1.5">
+                        <span class="w-6 h-6 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-mono font-bold text-xs">2</span>
+                        <span>類推適用之禁止</span>
+                      </span>
+                      <span class="text-[10px] text-indigo-500 font-mono font-bold">文義最大射程</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                      法無明文不為罪。條文可能文義為刑罰射程極限，絕對嚴禁超出文義而類推適用不利於行為人之處罰。
+                    </p>
+                  </div>
+
+                  <!-- 面向 3 -->
+                  <div class="p-4 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/80 dark:border-amber-900/40 space-y-1.5">
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-amber-900 dark:text-amber-200 flex items-center gap-1.5">
+                        <span class="w-6 h-6 rounded-lg bg-amber-600 text-white flex items-center justify-center font-mono font-bold text-xs">3</span>
+                        <span>罪刑明確性原則</span>
+                      </span>
+                      <span class="text-[10px] text-amber-600 font-mono font-bold">可預見性</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                      犯罪要件與法律效果均須清楚具體，一般理性人民得有預見可能性（構成要件明確性＋法律效果明確性）。
+                    </p>
+                  </div>
+
+                  <!-- 面向 4 -->
+                  <div class="p-4 rounded-2xl bg-rose-50/50 dark:bg-rose-950/20 border border-rose-200/80 dark:border-rose-900/40 space-y-1.5">
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-rose-900 dark:text-rose-200 flex items-center gap-1.5">
+                        <span class="w-6 h-6 rounded-lg bg-rose-600 text-white flex items-center justify-center font-mono font-bold text-xs">4</span>
+                        <span>溯及既往之禁止</span>
+                      </span>
+                      <span class="text-[10px] text-rose-500 font-mono font-bold">法安定性</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                      行為時法律無明文者不罰。國家制定新法時，不得將效力溯及於制定前已發生之行為，以保障人民信賴利益。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 二、面向一：習慣法之禁止（案例 1-4） -->
+          <section id="sec-p0ch1-sec2-sub1-custom" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-blue-600"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                二、面向一：習慣法之禁止（教材第 2-5 頁）
+              </h3>
+            </div>
+
+            <div class="p-6 rounded-3xl border border-slate-200 dark:border-white/[0.08] bg-white dark:bg-[#101623] shadow-sm space-y-6">
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+                刑罰制裁剝奪人民之自由、財產甚至生命，其成立與法律效果<strong>必須由形式意義之成文法律（立法院三讀通過、總統公布）明文規定</strong>。任何民間習慣、不成文法規或未明文化的法理，均不得直接作為論罪科刑的根據。
+              </p>
+
+              <!-- 案例 1-4 卡片 -->
+              <div id="case-card-0-1-4" data-case="0-1-4" class="case-card p-5 sm:p-6 rounded-2xl border-2 border-blue-500/30 bg-blue-50/20 dark:bg-blue-950/20 space-y-4 transition-all">
+                <div class="flex items-center justify-between border-b border-blue-200/60 dark:border-blue-800/40 pb-3 flex-wrap gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2.5 py-1 rounded-lg bg-blue-600 text-white font-mono text-xs font-bold shadow-xs">案例 1-4</span>
+                    <h4 class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white">
+                      原因自由行為與習慣法禁止之檢驗（教材第 2-5 頁）
+                    </h4>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span data-statute="19-3" class="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 font-bold border border-blue-200 dark:border-blue-700/50 cursor-pointer">
+                      § 19 Ⅲ 明文化
+                    </span>
+                    <button type="button" onclick="copyCaseNote('0-1-4')" class="copy-case-btn text-[11px] px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:text-blue-600 font-semibold shadow-2xs transition-all flex items-center gap-1 cursor-pointer">
+                      <span>📋</span><span>複製爭點筆記</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 案件事實 -->
+                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/80 border border-blue-100 dark:border-blue-900/40 text-xs sm:text-[13px] text-slate-700 dark:text-slate-200 leading-relaxed space-y-1">
+                  <div class="font-bold text-blue-900 dark:text-blue-300">📌 案件事實背景</div>
+                  <p>
+                    甲在動手行兇殺人前，自知若保持清醒可能會膽怯心軟，於是故意狂飲烈酒以壯膽，使其於行兇實行階段陷入精神障礙心智缺陷狀態（不能辨識違法或欠缺依辨識而行為之能力）。甲於法庭抗辯：刑法在早期並未明文處罰「原因自由行為」，司法機關不能依習慣法或刑法法理直接定罪！
+                  </p>
+                </div>
+
+                <!-- 深度爭點與解析 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                  <div class="p-3.5 rounded-xl bg-rose-50/60 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/40 space-y-1.5">
+                    <span class="font-bold text-rose-800 dark:text-rose-300 flex items-center gap-1">
+                      <span>⚠️</span><span>修法前爭議：習慣法之疑慮</span>
+                    </span>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                      早期刑法第 19 條僅規定精神障礙者不罰或減刑，並無明文排除自陷精神障礙之情形。實務逕引「原因自由行為」之法理予以論罪，屢遭學界批評牴觸習慣法之禁止與法律保留原則。
+                    </p>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-emerald-50/60 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/40 space-y-1.5">
+                    <span class="font-bold text-emerald-800 dark:text-emerald-300 flex items-center gap-1">
+                      <span>✓</span><span>修法後解法：成文法明文化</span>
+                    </span>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                      立法院於民國 94 年修正刑法，正式增訂<strong>第 19 條第 3 項</strong>：「前二項規定，於因故意或過失自行招致者，不適用之。」將法理明文化為成文法律，徹底完足罪刑法定原則之形式依據。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 三、面向二：類推適用之禁止（案例 1-5） -->
+          <section id="sec-p0ch1-sec2-sub2-analogy" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-indigo-600"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                三、面向二：類推適用之禁止（教材第 2-5 ～ 2-6 頁）
+              </h3>
+            </div>
+
+            <div class="p-6 rounded-3xl border border-slate-200 dark:border-white/[0.08] bg-white dark:bg-[#101623] shadow-sm space-y-6">
+              <div class="p-4 rounded-2xl bg-indigo-50/50 dark:bg-indigo-950/20 border border-indigo-200/80 dark:border-indigo-900/40 space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+                <div class="font-bold text-indigo-900 dark:text-indigo-200 flex items-center gap-2">
+                  <span>⚖️</span>
+                  <span>條文可能文義：刑罰擴張的最遠射程</span>
+                </div>
+                <p>
+                  所謂類推適用，指法律對於系爭案件未有明文規定，而比附援引性質相似案件之法律條文予以適用。在民事法領域為填補法律漏洞所許，但在<strong>刑法領域絕對嚴格禁止不利於行為人之類推適用</strong>！法官解釋刑法時，<strong>「條文可能之字面文義」是刑法擴張解釋的最大極限</strong>，一旦超越文字文義範疇，即屬違法之類推適用。
+                </p>
+              </div>
+
+              <!-- 案例 1-5 卡片 -->
+              <div id="case-card-0-1-5" data-case="0-1-5" class="case-card p-5 sm:p-6 rounded-2xl border-2 border-indigo-500/30 bg-indigo-50/20 dark:bg-indigo-950/20 space-y-4 transition-all">
+                <div class="flex items-center justify-between border-b border-indigo-200/60 dark:border-indigo-800/40 pb-3 flex-wrap gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2.5 py-1 rounded-lg bg-indigo-600 text-white font-mono text-xs font-bold shadow-xs">案例 1-5</span>
+                    <h4 class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white">
+                      竊電擬制 vs 偷接第四台影音訊號禁止類推適用（教材第 2-5 ～ 2-6 頁）
+                    </h4>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span data-statute="323" class="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300 font-bold border border-indigo-200 dark:border-indigo-700/50 cursor-pointer">
+                      § 323 能量擬制
+                    </span>
+                    <button type="button" onclick="copyCaseNote('0-1-5')" class="copy-case-btn text-[11px] px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:text-indigo-600 font-semibold shadow-2xs transition-all flex items-center gap-1 cursor-pointer">
+                      <span>📋</span><span>複製爭點筆記</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 案件事實 -->
+                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/80 border border-indigo-100 dark:border-indigo-900/40 text-xs sm:text-[13px] text-slate-700 dark:text-slate-200 leading-relaxed space-y-1">
+                  <div class="font-bold text-indigo-900 dark:text-indigo-300">📌 案件事實</div>
+                  <p>
+                    甲為了免費收看電視節目，未經第四台有線電視業者同意，擅自爬上電線桿以同軸電纜線私接業者的傳輸線路，將第四台之影像與聲音訊號引導至自家電視機免費觀賞。檢察官依刑法第 320 條竊盜罪及第 323 條準動產起訴。
+                  </p>
+                </div>
+
+                <!-- 深度法理分析與裁判對照 -->
+                <div class="space-y-3 text-xs">
+                  <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+                    <div class="flex items-center justify-between font-bold text-slate-800 dark:text-slate-200">
+                      <span>🏛️ 臺灣高等法院 97 年度上易字第 648 號刑事判決要旨</span>
+                      <span class="text-indigo-600 dark:text-indigo-400 font-mono">類推禁止標竿判決</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+                      <div class="p-3 rounded-lg bg-white dark:bg-slate-850 border border-slate-200 dark:border-slate-700 space-y-1">
+                        <div class="font-bold text-blue-700 dark:text-blue-300">① 刑法 § 323 之「能量」定義</div>
+                        <p class="text-slate-600 dark:text-slate-300 text-[11.5px] leading-relaxed">
+                          刑法 § 323 規定「電能、熱能及其他能量，關於本章之罪，以動產論。」此處之能量，係指具備<strong>獨立物理效用與經濟價值之物質能量</strong>（如電力、瓦斯、熱能）。
+                        </p>
+                      </div>
+                      <div class="p-3 rounded-lg bg-white dark:bg-slate-850 border border-slate-200 dark:border-slate-700 space-y-1">
+                        <div class="font-bold text-rose-700 dark:text-rose-300">② 有線電視「訊號」非能量</div>
+                        <p class="text-slate-600 dark:text-slate-300 text-[11.5px] leading-relaxed">
+                          有線電視傳輸之光電訊號，僅係<strong>聲音與影像資訊之載體</strong>，並非獨立物理能量。若將影音訊號解釋為刑法 § 323 之能量，已超越文義最大射程，屬於<strong>違法的不利類推適用</strong>！
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-300 text-emerald-900 dark:text-emerald-300 font-bold text-[11.5px]">
+                      判決結論：甲之行為於刑法竊盜罪不成立犯罪（判決無罪）！立法院事後乃於《有線廣播電視法》第 74 條另行制定民事損害賠償與特定處罰規範以填補漏洞。
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 四、面向三：罪刑明確性原則（案例 1-6） -->
+          <section id="sec-p0ch1-sec2-sub3-clarity" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-amber-600"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                四、面向三：罪刑明確性原則（教材第 2-6 頁）
+              </h3>
+            </div>
+
+            <div class="p-6 rounded-3xl border border-slate-200 dark:border-white/[0.08] bg-white dark:bg-[#101623] shadow-sm space-y-6">
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+                法律不能含混曖昧。罪刑明確性原則要求國家在制定刑罰時，無論是<strong>「犯罪之構成要件」</strong>或是<strong>「相應之法律效果（刑罰種類與刑度）」</strong>，均必須具備足夠的明確性，使受規範之人民得有預見可能性，並受司法機關嚴謹審查。
+              </p>
+
+              <!-- 雙軌明確性對照網格 -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <div class="p-4 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/80 dark:border-amber-900/40 space-y-2">
+                  <div class="flex items-center justify-between font-bold text-amber-900 dark:text-amber-200">
+                    <span>① 構成要件之明確性</span>
+                    <span class="text-[10px] font-mono text-amber-600">可預見性</span>
+                  </div>
+                  <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                    禁止使用過度空泛或曖昧不明之文字（如「行為不檢者處刑」）。法律條文之規定必須使一般理性人民能夠理解其行為界限，並能知悉何者為法律所禁止。
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/80 dark:border-amber-900/40 space-y-2">
+                  <div class="flex items-center justify-between font-bold text-amber-900 dark:text-amber-200">
+                    <span>② 法律效果之明確性</span>
+                    <span class="text-[10px] font-mono text-amber-600">刑度界限</span>
+                  </div>
+                  <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                    禁止規定絕對不定期刑。立法者必須清楚規定刑罰種類（死刑、無期徒刑、有期徒刑、罰金）以及具體的法定刑幅度，使人民明確知悉犯罪之代價。
+                  </p>
+                </div>
+              </div>
+
+              <!-- 案例 1-6 卡片 -->
+              <div id="case-card-0-1-6" data-case="0-1-6" class="case-card p-5 sm:p-6 rounded-2xl border-2 border-amber-500/30 bg-amber-50/20 dark:bg-amber-950/20 space-y-4 transition-all">
+                <div class="flex items-center justify-between border-b border-amber-200/60 dark:border-amber-800/40 pb-3 flex-wrap gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2.5 py-1 rounded-lg bg-amber-600 text-white font-mono text-xs font-bold shadow-xs">案例 1-6</span>
+                    <h4 class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white">
+                      法律效果明確性：絕對不定期刑違憲 vs 相對不定期刑合憲（教材第 2-6 頁）
+                    </h4>
+                  </div>
+                  <button type="button" onclick="copyCaseNote('0-1-6')" class="copy-case-btn text-[11px] px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:text-amber-600 font-semibold shadow-2xs transition-all flex items-center gap-1 cursor-pointer">
+                    <span>📋</span><span>複製爭點筆記</span>
+                  </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                  <div class="p-3.5 rounded-xl bg-rose-50/80 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-900/50 space-y-1.5">
+                    <span class="font-bold text-rose-800 dark:text-rose-300 flex items-center gap-1">
+                      <span>✕</span><span>絕對不定期刑（違憲・嚴格禁止！）</span>
+                    </span>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                      例如法律條文若規定：「犯本罪者，處有期徒刑，<strong>直到改過自新為止</strong>。」行為人完全無法預見自身將被剝奪人身自由多久，刑罰效果全由行政或行刑機關恣意決定，<strong>嚴重違反法律效果明確性原則，違憲無效！</strong>
+                    </p>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-emerald-50/80 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900/50 space-y-1.5">
+                    <span class="font-bold text-emerald-800 dark:text-emerald-300 flex items-center gap-1">
+                      <span>✓</span><span>相對不定期刑（合憲・常態裁量）</span>
+                    </span>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                      例如刑法各分則條文規定：「處<strong>五年以上十二年以下</strong>有期徒刑。」此種訂出明確法定刑上限與下限，賦予法官依個案情狀（§ 57）裁量之空間，兼具<strong>明確性與個案正義</strong>，完全合憲。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 五、面向四：溯及既往之禁止（案例 1-7） -->
+          <section id="sec-p0ch1-sec2-sub4-retroactive" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-rose-600"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                五、面向四：溯及既往之禁止（教材第 2-6 ～ 2-7 頁）
+              </h3>
+            </div>
+
+            <div class="p-6 rounded-3xl border border-slate-200 dark:border-white/[0.08] bg-white dark:bg-[#101623] shadow-sm space-y-6">
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+                刑法第 1 條揭櫫「行為之處罰，以<strong>行為時</strong>之法律有明文規定者為限」。此即<strong>法不溯及既往原則</strong>。國家所制定之刑處新規範，絕對不得溯及處罰公布施行前人民已從事之合法或不具刑事處罰之行為。否則人民將無從根據現有法律安排生活，法安定性與信賴保護將蕩然無存。
+              </p>
+
+              <!-- 案例 1-7 卡片 -->
+              <div id="case-card-0-1-7" data-case="0-1-7" class="case-card p-5 sm:p-6 rounded-2xl border-2 border-rose-500/30 bg-rose-50/20 dark:bg-rose-950/20 space-y-4 transition-all">
+                <div class="flex items-center justify-between border-b border-rose-200/60 dark:border-rose-800/40 pb-3 flex-wrap gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2.5 py-1 rounded-lg bg-rose-600 text-white font-mono text-xs font-bold shadow-xs">案例 1-7</span>
+                    <h4 class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white">
+                      小三條款溯及生效之違法檢驗（教材第 2-6 ～ 2-7 頁）
+                    </h4>
+                  </div>
+                  <button type="button" onclick="copyCaseNote('0-1-7')" class="copy-case-btn text-[11px] px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:text-rose-600 font-semibold shadow-2xs transition-all flex items-center gap-1 cursor-pointer">
+                    <span>📋</span><span>複製爭點筆記</span>
+                  </button>
+                </div>
+
+                <!-- 案件事實 -->
+                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/80 border border-rose-100 dark:border-rose-900/40 text-xs sm:text-[13px] text-slate-700 dark:text-slate-200 leading-relaxed space-y-1">
+                  <div class="font-bold text-rose-900 dark:text-rose-300">📌 案件事實背景</div>
+                  <p>
+                    公務員甲長期在婚外包養小三。政府為了端正公務紀律，於某年 1 月 1 日經立法院修法增訂「公務員婚外情重懲條例」，明定公務員婚外情處三年有期徒刑；且法案條文末竟附帶規定<strong>「本法自前一年 7 月 1 日起溯及生效」</strong>。檢察官乃依該法追訴甲前一年下半年的包養行為。
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs space-y-2">
+                  <div class="font-bold text-rose-700 dark:text-rose-300">⚖️ 爭點深度審查：溯及條款之效力</div>
+                  <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                    甲於前一年 7 月至 12 月從事包養行為時，國家法律並無刑事處罰之明文規定。甲基於行為時之法律秩序安排其行為，享有憲法所保障之信賴利益。新法於 1 月 1 日立法時將刑罰溯及既往發動，公然牴觸憲法罪刑法定原則與法不溯及既往原則，該「溯及生效條款」<strong>違法違憲，對甲之過去行為絕對不生效力！</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 六、作者叮嚀：罪刑法定原則與公法概念對照卡 -->
+          <section id="sec-p0ch1-sec2-author-memo" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-amber-500"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                六、作者叮嚀：罪刑法定原則與公法（憲法）概念深度對照（教材第 2-7 頁）
+              </h3>
+            </div>
+
+            <div class="p-6 rounded-3xl border-2 border-amber-400/40 bg-gradient-to-br from-amber-50/50 via-white to-orange-50/30 dark:from-amber-950/30 dark:via-slate-900 dark:to-orange-950/20 shadow-md space-y-4">
+              <div class="flex items-center justify-between border-b border-amber-200/70 dark:border-amber-900/50 pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xl">💡</span>
+                  <h4 class="font-extrabold text-sm sm:text-base text-amber-950 dark:text-amber-200">
+                    陳奕廷（易律師）考前叮嚀：刑法與公法法治國原則的完全映射
+                  </h4>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-700 dark:text-amber-300 font-bold">
+                  教材第 2-7 頁 作者叮嚀
+                </span>
+              </div>
+
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                罪刑法定原則並非刑法所獨創之孤立概念，其背後本質即為<strong>憲法法治國原則（Rechtsstaatsprinzip）</strong>在刑法領域的具體投射。考生若能同時掌握其在公法上的對應概念，對於申論題之論述縱深極有裨益：
+              </p>
+
+              <!-- 公法刑法四大對照卡片 -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
+                <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-850 border border-amber-200 dark:border-amber-900/50 space-y-1.5 shadow-2xs">
+                  <div class="flex items-center justify-between font-bold">
+                    <span class="text-blue-700 dark:text-blue-300">① 習慣法之禁止</span>
+                    <span class="text-slate-400 font-mono text-[10px]">對應公法 ➔</span>
+                  </div>
+                  <div class="p-2 rounded-lg bg-blue-50 dark:bg-blue-950/40 text-blue-900 dark:text-blue-200 font-semibold text-[11.5px]">
+                    🏛️ 憲法之「絕對法律保留原則」
+                  </div>
+                  <p class="text-slate-500 dark:text-slate-400 text-[11px]">
+                    剝奪人身自由之最嚴重干預，必須由國會制定之形式法律直接明定，不得授權行政命令，更不可由習慣法補充。
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-850 border border-amber-200 dark:border-amber-900/50 space-y-1.5 shadow-2xs">
+                  <div class="flex items-center justify-between font-bold">
+                    <span class="text-indigo-700 dark:text-indigo-300">② 類推適用之禁止</span>
+                    <span class="text-slate-400 font-mono text-[10px]">對應公法 ➔</span>
+                  </div>
+                  <div class="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 text-indigo-900 dark:text-indigo-200 font-semibold text-[11.5px]">
+                    ⚖️ 憲法第 80 條「法官依據法律獨立審判」
+                  </div>
+                  <p class="text-slate-500 dark:text-slate-400 text-[11px]">
+                    司法權不得逾越立法權之文字界限擅自創設刑處，確保權力分立與司法謙抑。
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-850 border border-amber-200 dark:border-amber-900/50 space-y-1.5 shadow-2xs">
+                  <div class="flex items-center justify-between font-bold">
+                    <span class="text-amber-700 dark:text-amber-300">③ 罪刑明確性原則</span>
+                    <span class="text-slate-400 font-mono text-[10px]">對應公法 ➔</span>
+                  </div>
+                  <div class="p-2 rounded-lg bg-amber-50 dark:bg-amber-950/40 text-amber-900 dark:text-amber-200 font-semibold text-[11.5px]">
+                    📜 憲法之「法律明確性原則」
+                  </div>
+                  <p class="text-slate-500 dark:text-slate-400 text-[11px]">
+                    法治國之基本要求：受規範者可預見、可理解，且得由司法審查機關確認解釋（釋字第 432、521 號）。
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-850 border border-amber-200 dark:border-amber-900/50 space-y-1.5 shadow-2xs">
+                  <div class="flex items-center justify-between font-bold">
+                    <span class="text-rose-700 dark:text-rose-300">④ 溯及既往之禁止</span>
+                    <span class="text-slate-400 font-mono text-[10px]">對應公法 ➔</span>
+                  </div>
+                  <div class="p-2 rounded-lg bg-rose-50 dark:bg-rose-950/40 text-rose-900 dark:text-rose-200 font-semibold text-[11.5px]">
+                    🛡️ 憲法之「法安定性與信賴保護原則」
+                  </div>
+                  <p class="text-slate-500 dark:text-slate-400 text-[11px]">
+                    人民對國家既有法秩序之合法信賴受憲法保護，國家不得恣意制定真正溯及既往法規損害人民利益（釋字第 574、717 號）。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section Bottom Pagination: 第二節底部 -->
+          <div class="pt-8 border-t border-slate-200 dark:border-white/[0.08] grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <button onclick="switchView('part0-ch1-sec1')" class="group p-4 rounded-2xl border border-slate-200 dark:border-white/[0.08] hover:border-blue-500/40 bg-white dark:bg-[#111726] text-left transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 group-hover:bg-blue-50 dark:group-hover:bg-blue-950 group-hover:text-blue-600 dark:group-hover:text-blue-400 flex items-center justify-center text-sm font-bold shrink-0 transition-colors">
+                ←
+              </div>
+              <div class="min-w-0">
+                <span class="text-[11px] text-slate-400 font-mono block">上一單元 (第 2-1 頁)</span>
+                <span class="text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate block">
+                  第一節 法益保護原則——何謂法益？
+                </span>
+              </div>
+            </button>
+
+            <button onclick="switchView('part0-ch1-sec3')" class="group p-4 rounded-2xl border border-purple-500/40 hover:border-purple-500 bg-gradient-to-br from-purple-50/50 to-indigo-50/30 dark:from-purple-950/30 dark:to-indigo-950/20 text-right transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md flex items-center justify-between gap-3">
+              <div class="min-w-0 text-left">
+                <span class="text-[11px] text-purple-700 dark:text-purple-400 font-mono block font-bold">下一單元 (第 2-7 頁)</span>
+                <span class="text-xs font-extrabold text-slate-900 dark:text-white group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors truncate block">
+                  第三節 罪責原則——付出代價的極限何在？ →
+                </span>
+              </div>
+              <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 text-white flex items-center justify-center text-sm font-bold shrink-0 group-hover:scale-105 transition-transform shadow-md shadow-purple-500/30">
+                ⚖️
+              </div>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- VIEW 8: 第零篇 第一章・第三節 罪責原則——付出代價的極限何在？ (教材第 2-7 ~ 2-8 頁) -->
+        <!-- ========================================================================= -->
+        <div id="viewPart0Ch1Sec3" class="fade-enter hidden space-y-8">
+          
+          <!-- Breadcrumb & Back -->
+          <div class="flex items-center justify-between gap-4 border-b border-slate-100 dark:border-white/[0.06] pb-3">
+            <nav class="flex items-center gap-2 text-xs font-medium text-slate-400 flex-wrap">
+              <button onclick="switchView('part-0')" class="hover:text-purple-500 transition-colors">第零篇</button>
+              <span>/</span>
+              <button onclick="switchView('part0-chapter-1')" class="hover:text-purple-500 transition-colors">第一章 刑法的運作原理</button>
+              <span>/</span>
+              <span class="text-purple-600 dark:text-purple-400 font-bold">第三節 罪責原則</span>
+            </nav>
+            <button onclick="switchView('part0-chapter-1')" class="text-xs text-slate-400 hover:text-purple-500 flex items-center gap-1 transition-colors shrink-0">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+              </svg>
+              <span>返回第一章總覽</span>
+            </button>
+          </div>
+
+          <!-- Section Header -->
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 text-purple-600 dark:text-purple-400 font-mono text-xs font-bold">
+              <span>第零篇・第一章・第三節</span>
+              <span class="px-2 py-0.5 rounded-md bg-purple-50 dark:bg-purple-950/40 text-[11px] border border-purple-200 dark:border-purple-900/50">教材第 2-7 ～ 2-8 頁 原文體系</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+              第三節 罪責原則——付出代價的極限何在？
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+              刑罰以個人責任為前提。深入解析無罪責即無刑罰原則、罪刑相當原則、準強盜罪難以抗拒合憲限縮（釋字第 630 號），以及節制刑罰本質下有利人民之容許例外
+            </p>
+          </div>
+
+          <!-- 一、罪責原則核心定義與雙重內涵 -->
+          <section id="sec-p0ch1-sec3-def" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-purple-600"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                一、罪責原則之核心法定定義與憲法基石（教材第 2-7 頁）
+              </h3>
+            </div>
+
+            <div class="p-6 rounded-3xl border border-slate-200 dark:border-white/[0.08] bg-white dark:bg-[#101623] shadow-sm space-y-6">
+              <!-- 釋字 630 號核心卡片 -->
+              <div class="p-5 rounded-2xl bg-gradient-to-br from-purple-50/80 via-fuchsia-50/50 to-indigo-50/40 dark:from-purple-950/40 dark:via-fuchsia-950/20 dark:to-indigo-950/20 border-2 border-purple-500/30 space-y-4">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="text-xl">⚖️</span>
+                    <span class="font-bold text-xs text-purple-800 dark:text-purple-300 uppercase tracking-wider font-mono">
+                      罪責原則（Schuldprinzip）核心憲法位階
+                    </span>
+                  </div>
+                  <span data-statute="630" class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 font-bold border border-purple-500/20 cursor-pointer">
+                    司法院釋字第 630 號
+                  </span>
+                </div>
+
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-purple-200 dark:border-purple-900/60 shadow-sm space-y-2">
+                  <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 border-b border-slate-100 dark:border-slate-800 pb-1.5">
+                    <span>司法院釋字第 630 號解釋理由書權威揭櫫</span>
+                    <span>憲法法治國與人身自由</span>
+                  </div>
+                  <blockquote class="text-sm sm:text-base font-black text-purple-900 dark:text-purple-200 leading-relaxed font-serif">
+                    「刑罰以個人責任為前提，無責任即無刑罰；且刑罰之嚴苛程度，應與行為人責任之程度相當。」
+                  </blockquote>
+                </div>
+
+                <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                  罪責原則由<strong>應報思想</strong>導出，並與憲法法治國原則、第 8 條人身自由保障及第 23 條比例原則緊密相連。其揭示了國家刑罰權行使的<strong>絕對道德底線與代價極限</strong>——不能讓人民承擔超過其責任的過苛刑罰。
+                </p>
+              </div>
+
+              <!-- 二、罪責原則之雙重核心內涵 -->
+              <div id="sec-p0ch1-sec3-dual-aspects" class="space-y-3 pt-2">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                    <span class="text-purple-500">🎯</span>
+                    <span>罪責原則之雙重核心內涵（教材第 2-7 頁 原文圖解）</span>
+                  </h4>
+                  <span class="text-[11px] font-mono text-slate-400">雙重內涵</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                  <!-- 內涵 1 -->
+                  <div class="p-4 rounded-2xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-200/80 dark:border-purple-900/40 space-y-2">
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-purple-900 dark:text-purple-200 flex items-center gap-1.5">
+                        <span class="w-6 h-6 rounded-lg bg-purple-600 text-white flex items-center justify-center font-mono font-bold text-xs">①</span>
+                        <span>無罪責即無刑罰原則</span>
+                      </span>
+                      <span class="text-[10px] text-purple-500 font-mono font-bold">Nulla poena sine culpa</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                      刑罰之成立必須以個人具備非難責任為前提。若行為人欠缺期待可能性（超法定阻卻罪責）、具阻卻罪責事由（§ 18 未滿14歲、§ 19 精神障礙、§ 16 不可避免禁止錯誤），<strong>國家絕對不得予以科處任何刑罰</strong>。
+                    </p>
+                  </div>
+
+                  <!-- 內涵 2 -->
+                  <div class="p-4 rounded-2xl bg-indigo-50/50 dark:bg-indigo-950/20 border border-indigo-200/80 dark:border-indigo-900/40 space-y-2">
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-indigo-900 dark:text-indigo-200 flex items-center gap-1.5">
+                        <span class="w-6 h-6 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-mono font-bold text-xs">②</span>
+                        <span>罪刑相當原則</span>
+                      </span>
+                      <span class="text-[10px] text-indigo-500 font-mono font-bold">罪責相符</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                      刑罰之嚴苛程度必須與行為人的不法內涵及可責性相稱。易律師口訣：<strong>「小罪不能大罰，重罪不能輕罰」</strong>。刑度必須合乎比例原則，禁止過苛處罰。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 三、案例 1-8：準強盜罪與罪刑相當性 -->
+          <section id="sec-p0ch1-sec3-case-1-8" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-indigo-600"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                三、案例 1-8：準強盜罪與罪刑相當性（教材第 2-7 ～ 2-8 頁）
+              </h3>
+            </div>
+
+            <div class="p-6 rounded-3xl border border-slate-200 dark:border-white/[0.08] bg-white dark:bg-[#101623] shadow-sm space-y-6">
+              <!-- 案例 1-8 卡片 -->
+              <div id="case-card-0-1-8" data-case="0-1-8" class="case-card p-5 sm:p-6 rounded-2xl border-2 border-indigo-500/30 bg-indigo-50/20 dark:bg-indigo-950/20 space-y-4 transition-all">
+                <div class="flex items-center justify-between border-b border-indigo-200/60 dark:border-indigo-800/40 pb-3 flex-wrap gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2.5 py-1 rounded-lg bg-indigo-600 text-white font-mono text-xs font-bold shadow-xs">案例 1-8</span>
+                    <h4 class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white">
+                      準強盜罪強暴脅迫之合憲性限縮——釋字第 630 號（教材第 2-7 ～ 2-8 頁）
+                    </h4>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span data-statute="329" class="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300 font-bold border border-indigo-200 dark:border-indigo-700/50 cursor-pointer">
+                      § 329 準強盜罪
+                    </span>
+                    <span data-statute="630" class="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-purple-100 dark:bg-purple-900/60 text-purple-700 dark:text-purple-300 font-bold border border-purple-200 dark:border-purple-700/50 cursor-pointer">
+                      釋字 630 號
+                    </span>
+                    <button type="button" onclick="copyCaseNote('0-1-8')" class="copy-case-btn text-[11px] px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:text-indigo-600 font-semibold shadow-2xs transition-all flex items-center gap-1 cursor-pointer">
+                      <span>📋</span><span>複製爭點筆記</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 案件事實 -->
+                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/80 border border-indigo-100 dark:border-indigo-900/40 text-xs sm:text-[13px] text-slate-700 dark:text-slate-200 leading-relaxed space-y-1">
+                  <div class="font-bold text-indigo-900 dark:text-indigo-300">📌 案件事實</div>
+                  <p>
+                    竊賊甲在路邊行竊乙的腳踏車得手，牽車欲離去時被失主乙發現。乙衝上前伸手抓住甲的衣領大喊抓賊。甲為了掙脫脫身，隨手「輕推」了乙一下，乙腳步踉蹌但未跌倒亦未受傷，甲趁隙騎車離去。檢察官依刑法第 329 條準強盜罪起訴（以強盜論，法定刑為五年以上有期徒刑）。
+                  </p>
+                </div>
+
+                <!-- 深度爭點與違憲疑慮 -->
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2 text-xs">
+                  <div class="font-bold text-slate-800 dark:text-slate-200 flex items-center justify-between">
+                    <span>⚠️ 核心爭點：條文字面過寬 vs 罪刑相當原則之衝突</span>
+                    <span class="text-rose-600 font-mono font-bold">小罪大罰疑慮</span>
+                  </div>
+                  <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                    刑法第 329 條規定：「竊盜或搶奪，因防護贓物、脫免逮捕或湮滅罪證，而<strong>當場施以強暴脅迫</strong>者，以強盜論。」<br>
+                    普通強盜罪（§ 328）明定強暴脅迫必須<strong>「至使不能抗拒」</strong>；但 § 329 字面上卻只寫「當場施以強暴脅迫」。若竊賊僅輕推一下、甩開手，即被直接「以強盜論」論處<strong>五年以上有期徒刑之重罪</strong>，顯然輕重失衡，嚴重違反「罪刑相當原則」！
+                  </p>
+                </div>
+
+                <!-- 釋字 630 號合憲限縮關鍵解方 -->
+                <div class="p-4 rounded-xl bg-emerald-50/80 dark:bg-emerald-950/30 border border-emerald-300 dark:border-emerald-800/60 space-y-2 text-xs">
+                  <div class="flex items-center justify-between font-bold text-emerald-900 dark:text-emerald-200">
+                    <span class="flex items-center gap-1.5">
+                      <span>✓</span>
+                      <span>司法院釋字第 630 號解釋：合憲性限縮（合憲之關鍵門檻）</span>
+                    </span>
+                    <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-emerald-600 text-white">難以抗拒之程度</span>
+                  </div>
+                  <p class="text-slate-700 dark:text-slate-200 leading-relaxed text-[11.5px]">
+                    大法官宣告刑法 § 329 並非當然違憲，但<strong>必須為合憲性限縮解釋</strong>：<br>
+                    準強盜罪之強暴、脅迫手段，在客觀上必須<strong>「達於使人難以抗拒之程度」</strong>，使其不法內涵與非難可責性實質上等同於強盜罪，始得「以強盜論」！如此方能符合憲法第 23 條之比例原則與罪刑相當原則。
+                  </p>
+                  <div class="pt-1.5 border-t border-emerald-200 dark:border-emerald-800/60 text-emerald-800 dark:text-emerald-300 font-bold text-[11.5px]">
+                    🎯 案例結論：甲隨手輕推乙一下，客觀上顯未達「使人難以抗拒之程度」，故不該當刑法第 329 條準強盜罪！僅能成立刑法第 320 條普通竊盜罪與可能的妨害名譽/強制未遂等罪。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 四、解題提示：節制刑罰發動之本質——有利人民者皆容許 -->
+          <section id="sec-p0ch1-sec3-tips-favor" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-amber-500"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                四、解題提示：節制刑罰發動之本質——有利於人民者皆容許！（教材第 2-8 頁）
+              </h3>
+            </div>
+
+            <div class="p-6 rounded-3xl border-2 border-amber-400/40 bg-gradient-to-br from-amber-50/50 via-white to-orange-50/30 dark:from-amber-950/30 dark:via-slate-900 dark:to-orange-950/20 shadow-md space-y-5">
+              <div class="flex items-center justify-between border-b border-amber-200/70 dark:border-amber-900/50 pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xl">💡</span>
+                  <h4 class="font-extrabold text-sm sm:text-base text-amber-950 dark:text-amber-200">
+                    陳奕廷（易律師）解題提示：刑法法理的終極心法
+                  </h4>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-700 dark:text-amber-300 font-bold">
+                  教材第 2-8 頁 解題提示
+                </span>
+              </div>
+
+              <div class="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+                <p>
+                  許多初學者常困惑：刑法不是明定「罪刑法定」、「禁止習慣法」、「禁止類推適用」嗎？那為什麼刑法上還會承認<strong>「超法定阻卻違法事由（如得被害人承諾、推定的承諾）」</strong>與<strong>「超法定阻卻罪責事由（如期待可能性欠缺）」</strong>呢？這難道沒有違反罪刑法定原則嗎？
+                </p>
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-amber-200 dark:border-amber-900/60 shadow-sm space-y-2">
+                  <div class="font-black text-amber-800 dark:text-amber-300 text-sm font-serif">
+                    🔑 核心破題關鍵：刑法規範的本質在於「節制國家刑罰權」！
+                  </div>
+                  <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                    罪刑法定原則與罪責原則的立法目的，全在於<strong>「防止國家濫用刑罰權，節制國家對人民的侵害」</strong>。如果個案處理的結果是<strong>對人民有利（出罪、阻卻不法、阻卻罪責、免除刑罰）</strong>，那麼根本就不存在任何「防範國家侵害人民」的理由！
+                  </p>
+                </div>
+              </div>
+
+              <!-- 有利 vs 不利 絕對雙向對照矩陣 -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <!-- 不利於人民 -->
+                <div class="p-4 rounded-2xl bg-rose-50/70 dark:bg-rose-950/30 border-2 border-rose-400/60 dark:border-rose-900/60 space-y-2">
+                  <div class="flex items-center justify-between font-bold text-rose-900 dark:text-rose-200">
+                    <span class="flex items-center gap-1.5 text-sm">
+                      <span>🚫</span><span>若個案結果「不利於人民」</span>
+                    </span>
+                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-rose-600 text-white font-bold">絕對嚴格禁止</span>
+                  </div>
+                  <ul class="space-y-1.5 text-slate-700 dark:text-slate-300 text-[11.5px] leading-relaxed list-disc list-inside">
+                    <li>禁止以習慣法創設罪名或加重刑罰</li>
+                    <li>禁止不利於行為人之類推適用</li>
+                    <li>禁止不具明確性之模糊規定</li>
+                    <li>禁止不利於行為人之溯及既往</li>
+                  </ul>
+                  <div class="text-[11px] text-rose-700 dark:text-rose-400 font-bold pt-1 border-t border-rose-200 dark:border-rose-900/50">
+                    ➔ 恪遵罪刑法定，全面封堵國家濫權可能！
+                  </div>
+                </div>
+
+                <!-- 有利於人民 -->
+                <div class="p-4 rounded-2xl bg-emerald-50/70 dark:bg-emerald-950/30 border-2 border-emerald-400/60 dark:border-emerald-900/60 space-y-2">
+                  <div class="flex items-center justify-between font-bold text-emerald-900 dark:text-emerald-200">
+                    <span class="flex items-center gap-1.5 text-sm">
+                      <span>✓</span><span>若個案結果「有利於人民」</span>
+                    </span>
+                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-600 text-white font-bold">全面容許肯定</span>
+                  </div>
+                  <ul class="space-y-1.5 text-slate-700 dark:text-slate-300 text-[11.5px] leading-relaxed list-disc list-inside">
+                    <li><strong>容許有利之法理與習慣法</strong>：創設超法定阻卻違法與超法定阻卻罪責</li>
+                    <li><strong>容許有利之類推適用</strong>：如類推正當防衛、緊急避難規定出罪</li>
+                    <li><strong>容許有利之溯及既往</strong>：刑法 § 2 Ⅰ 但書「從舊從輕原則」</li>
+                    <li><strong>容許有利之合憲限縮</strong>：如釋字 630 號限縮強暴脅迫要件</li>
+                  </ul>
+                  <div class="text-[11px] text-emerald-700 dark:text-emerald-400 font-bold pt-1 border-t border-emerald-200 dark:border-emerald-900/50">
+                    ➔ 人權保障至上，無節制國家刑罰發動之必要！
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 五、第一章 四大支柱全景整合對照與全章完結慶祝 -->
+          <section id="sec-p0ch1-sec3-chapter1-summary" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-indigo-600"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                五、第一章 刑法運作四大支柱全景整合對照與全章完結（教材第 2-1 ～ 2-8 頁）
+              </h3>
+            </div>
+
+            <div class="p-6 rounded-3xl border border-slate-200 dark:border-white/[0.08] bg-white dark:bg-[#101623] shadow-sm space-y-6">
+              <div class="space-y-2">
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                  <span>🏛️</span>
+                  <span>刑法四大支柱體系總覽（易律師精闢歸納）</span>
+                </h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                  至此，教材第零篇第一章【刑法的運作原理】三大節四大支柱全數完備！掌握這四根大柱子，就掌握了整個刑法哲學的骨架：
+                </p>
+              </div>
+
+              <!-- 四大支柱全景表格 -->
+              <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#101623] shadow-xs">
+                <table class="w-full text-left border-collapse text-xs">
+                  <thead>
+                    <tr class="bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-700 font-bold">
+                      <th class="p-3">支柱名稱</th>
+                      <th class="p-3 border-l border-slate-200 dark:border-slate-700">核心提問</th>
+                      <th class="p-3 border-l border-slate-200 dark:border-slate-700">思想淵源</th>
+                      <th class="p-3 border-l border-slate-200 dark:border-slate-700">核心法律要求與規範功能</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-850/50">
+                      <td class="p-3 font-bold text-indigo-600 dark:text-indigo-400 whitespace-nowrap">
+                        ① 法益保護原則
+                      </td>
+                      <td class="p-3 border-l border-slate-100 dark:border-slate-800 font-semibold text-slate-900 dark:text-white">
+                        刑法的目的何在？
+                      </td>
+                      <td class="p-3 border-l border-slate-100 dark:border-slate-800">
+                        生活利益保全
+                      </td>
+                      <td class="p-3 border-l border-slate-100 dark:border-slate-800 leading-relaxed">
+                        保護重要生活利益（生命、身體、自由、財產、社會、國家）；具積極保護與消極界限機能；為構成要件解釋指導原則。
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-850/50">
+                      <td class="p-3 font-bold text-blue-600 dark:text-blue-400 whitespace-nowrap">
+                        ② 最後手段性原則
+                      </td>
+                      <td class="p-3 border-l border-slate-100 dark:border-slate-800 font-semibold text-slate-900 dark:text-white">
+                        刑法在何種情況下發動？
+                      </td>
+                      <td class="p-3 border-l border-slate-100 dark:border-slate-800">
+                        刑罰謙抑思想
+                      </td>
+                      <td class="p-3 border-l border-slate-100 dark:border-slate-800 leading-relaxed">
+                        刑罰為最嚴厲制裁手段，動用成本極高。非民事、行政手段不能達成目的時，始得以刑罰作為最後防線（Ultima Ratio）。
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-850/50">
+                      <td class="p-3 font-bold text-amber-600 dark:text-amber-400 whitespace-nowrap">
+                        ③ 罪刑法定原則
+                      </td>
+                      <td class="p-3 border-l border-slate-100 dark:border-slate-800 font-semibold text-slate-900 dark:text-white">
+                        付出代價的根據何在？
+                      </td>
+                      <td class="p-3 border-l border-slate-100 dark:border-slate-800">
+                        預防思想（人民安措手足）
+                      </td>
+                      <td class="p-3 border-l border-slate-100 dark:border-slate-800 leading-relaxed">
+                        刑法 § 1・釋字 384。習慣法禁止、類推適用禁止、明確性原則、溯及既往禁止。保障人民預見性與人權。
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-850/50">
+                      <td class="p-3 font-bold text-purple-600 dark:text-purple-400 whitespace-nowrap">
+                        ④ 罪責原則
+                      </td>
+                      <td class="p-3 border-l border-slate-100 dark:border-slate-800 font-semibold text-slate-900 dark:text-white">
+                        付出代價的極限何在？
+                      </td>
+                      <td class="p-3 border-l border-slate-100 dark:border-slate-800">
+                        應報思想（小罪不能大罰）
+                      </td>
+                      <td class="p-3 border-l border-slate-100 dark:border-slate-800 leading-relaxed">
+                        釋字 630。無罪責即無刑罰；罪刑相當原則。準強盜罪合憲限縮。有利人民之類推、溯及與法理全面容許。
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- 全章完結里程碑慶祝卡片 -->
+              <div class="p-6 rounded-3xl bg-gradient-to-r from-emerald-500/15 via-teal-500/10 to-indigo-500/15 border-2 border-emerald-500/40 dark:border-emerald-500/30 flex items-center justify-between flex-wrap gap-4">
+                <div class="flex items-center gap-3.5">
+                  <span class="text-4xl">🎉</span>
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-xs font-mono font-bold px-2 py-0.5 rounded-full bg-emerald-600 text-white shadow-2xs">MILESTONE ACHIEVED</span>
+                      <span class="text-xs text-emerald-700 dark:text-emerald-300 font-bold">教材第 2-1 ～ 2-8 頁 全章完結</span>
+                    </div>
+                    <h4 class="text-base sm:text-lg font-black text-slate-900 dark:text-white mt-1">
+                      恭喜！第零篇 第一章【刑法的運作原理】全數研讀完畢！
+                    </h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+                      涵蓋第一節法益保護原則（P. 2-1~2-4）、第二節罪刑法定原則（P. 2-5~2-7）、第三節罪責原則（P. 2-7~2-8），共 8 大經典案例深度解構、公法對照、釋字 630 合憲限縮與解題心法全部收錄。
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button onclick="switchView('home')" class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 text-xs font-bold shadow-sm transition-all">
+                    🏠 回書籍主頁
+                  </button>
+                  <button onclick="switchView('part0-chapter-1')" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-md shadow-emerald-500/25 transition-all">
+                    📑 第一章總覽
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section Bottom Pagination: 第三節底部 (第一章全章完結) -->
+          <div class="pt-8 border-t border-slate-200 dark:border-white/[0.08] grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <button onclick="switchView('part0-ch1-sec2')" class="group p-4 rounded-2xl border border-slate-200 dark:border-white/[0.08] hover:border-blue-500/40 bg-white dark:bg-[#111726] text-left transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 group-hover:bg-blue-50 dark:group-hover:bg-blue-950 group-hover:text-blue-600 dark:group-hover:text-blue-400 flex items-center justify-center text-sm font-bold shrink-0 transition-colors">
+                ←
+              </div>
+              <div class="min-w-0">
+                <span class="text-[11px] text-slate-400 font-mono block">上一單元 (第 2-5 頁)</span>
+                <span class="text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate block">
+                  第二節 罪刑法定原則——付出代價的根據何在？
+                </span>
+              </div>
+            </button>
+
             <button onclick="switchView('home')" class="group p-4 rounded-2xl border border-amber-500/40 hover:border-amber-500 bg-gradient-to-br from-amber-50/50 to-orange-50/30 dark:from-amber-950/30 dark:to-orange-950/20 text-right transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md flex items-center justify-between gap-3">
               <div class="min-w-0 text-left">
-                <span class="text-[11px] text-amber-700 dark:text-amber-400 font-mono block font-bold">教材章節總覽</span>
+                <span class="text-[11px] text-amber-700 dark:text-amber-400 font-mono block font-bold">第一章完結</span>
                 <span class="text-xs font-extrabold text-slate-900 dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors truncate block">
                   🏠 回到書籍主頁 (首頁看板)
                 </span>
@@ -6881,6 +8122,14 @@
                   <button onclick="switchView('part0-ch1-sec1'); toggleMobileDrawer();" class="w-full text-left py-1 px-2 rounded-lg text-[12px] font-medium transition-all text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-indigo-500 flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
                     <span>第一節 法益保護原則</span>
+                  </button>
+                  <button onclick="switchView('part0-ch1-sec2'); toggleMobileDrawer();" class="w-full text-left py-1 px-2 rounded-lg text-[12px] font-medium transition-all text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-indigo-500 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+                    <span>第二節 罪刑法定原則</span>
+                  </button>
+                  <button onclick="switchView('part0-ch1-sec3'); toggleMobileDrawer();" class="w-full text-left py-1 px-2 rounded-lg text-[12px] font-medium transition-all text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-indigo-500 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+                    <span>第三節 罪責原則</span>
                   </button>
                 </div>
               </div>
@@ -7368,6 +8617,8 @@
     const viewPart0 = document.getElementById('viewPart0');
     const viewPart0Chapter1 = document.getElementById('viewPart0Chapter1');
     const viewPart0Ch1Sec1 = document.getElementById('viewPart0Ch1Sec1');
+    const viewPart0Ch1Sec2 = document.getElementById('viewPart0Ch1Sec2');
+    const viewPart0Ch1Sec3 = document.getElementById('viewPart0Ch1Sec3');
     const rightTocAside = document.getElementById('rightTocAside');
     const currentChapterBadge = document.getElementById('currentChapterBadge');
     
@@ -7380,6 +8631,8 @@
     const navBtnPart0Intro = document.getElementById('navBtnPart0Intro');
     const navBtnPart0Ch1 = document.getElementById('navBtnPart0Ch1');
     const navBtnPart0Ch1Sec1 = document.getElementById('navBtnPart0Ch1Sec1');
+    const navBtnPart0Ch1Sec2 = document.getElementById('navBtnPart0Ch1Sec2');
+    const navBtnPart0Ch1Sec3 = document.getElementById('navBtnPart0Ch1Sec3');
 
     // 樣式常數：典雅法學藏青色系（選中時為柔和淺藍底、深沉法學藍字）
     const ACTIVE_CLASS = ['bg-blue-50', 'dark:bg-blue-950/70', 'text-blue-800', 'dark:text-blue-300', 'font-semibold'];
@@ -7406,6 +8659,14 @@
         navBtnPart0Ch1Sec1.classList.remove(...ACTIVE_CLASS);
         navBtnPart0Ch1Sec1.classList.add(...INACTIVE_CLASS);
       }
+      if (navBtnPart0Ch1Sec2) {
+        navBtnPart0Ch1Sec2.classList.remove(...ACTIVE_CLASS);
+        navBtnPart0Ch1Sec2.classList.add(...INACTIVE_CLASS);
+      }
+      if (navBtnPart0Ch1Sec3) {
+        navBtnPart0Ch1Sec3.classList.remove(...ACTIVE_CLASS);
+        navBtnPart0Ch1Sec3.classList.add(...INACTIVE_CLASS);
+      }
       if (navBtnHome) {
         navBtnHome.classList.remove(...ACTIVE_CLASS);
         navBtnHome.classList.add(...INACTIVE_CLASS);
@@ -7430,7 +8691,9 @@
           { action: "switchView('chapter-2')", label: '📄 第二章 刑法的論罪結構 (1-13 ~ 1-15 頁)' },
           { action: "switchView('part-0')", label: '⚖️ 第零篇 刑法的運作、操作原理與法律效果' },
           { action: "switchView('part0-chapter-1')", label: '📑 第零篇 第一章 刑法的運作原理 (第 2-1 頁)' },
-          { action: "switchView('part0-ch1-sec1')", label: '💎 第一節 法益保護原則——何謂法益？ (第 2-1 ~ 2-3 頁)' }
+          { action: "switchView('part0-ch1-sec1')", label: '💎 第一節 法益保護原則 (第 2-1 ~ 2-4 頁)' },
+          { action: "switchView('part0-ch1-sec2')", label: '📜 第二節 罪刑法定原則 (第 2-5 ~ 2-7 頁)' },
+          { action: "switchView('part0-ch1-sec3')", label: '⚖️ 第三節 罪責原則 (第 2-7 ~ 2-8 頁)' }
         ]
       },
       'intro': {
@@ -7443,7 +8706,9 @@
           { action: "switchView('chapter-2')", label: '📄 第二章 刑法的論罪結構 (1-13 ~ 1-15 頁)' },
           { action: "switchView('part-0')", label: '⚖️ 第零篇 刑法的運作、操作原理與法律效果' },
           { action: "switchView('part0-chapter-1')", label: '📑 第零篇 第一章 刑法的運作原理 (第 2-1 頁)' },
-          { action: "switchView('part0-ch1-sec1')", label: '💎 第一節 法益保護原則——何謂法益？ (第 2-1 ~ 2-3 頁)' }
+          { action: "switchView('part0-ch1-sec1')", label: '💎 第一節 法益保護原則 (第 2-1 ~ 2-4 頁)' },
+          { action: "switchView('part0-ch1-sec2')", label: '📜 第二節 罪刑法定原則 (第 2-5 ~ 2-7 頁)' },
+          { action: "switchView('part0-ch1-sec3')", label: '⚖️ 第三節 罪責原則 (第 2-7 ~ 2-8 頁)' }
         ]
       },
       'part-0': {
@@ -7453,7 +8718,9 @@
           { action: "switchView('home')", label: '🏠 書籍主頁 (首頁看板)' },
           { action: "switchView('part-0')", label: '📖 本篇導讀 (第 0-1 頁)' },
           { action: "switchView('part0-chapter-1')", label: '📑 第一章 刑法的運作原理 (第 2-1 頁)' },
-          { action: "switchView('part0-ch1-sec1')", label: '💎 第一節 法益保護原則——何謂法益？ (第 2-1 ~ 2-3 頁)' },
+          { action: "switchView('part0-ch1-sec1')", label: '💎 第一節 法益保護原則 (第 2-1 ~ 2-4 頁)' },
+          { action: "switchView('part0-ch1-sec2')", label: '📜 第二節 罪刑法定原則 (第 2-5 ~ 2-7 頁)' },
+          { action: "switchView('part0-ch1-sec3')", label: '⚖️ 第三節 罪責原則 (第 2-7 ~ 2-8 頁)' },
           { action: "switchView('intro')", label: '📖 導論 犯罪概念與論罪結構' },
           { action: "switchView('chapter-1')", label: '📑 第一章 犯罪的概念' },
           { action: "switchView('chapter-2')", label: '📄 第二章 刑法的論罪結構' }
@@ -7464,11 +8731,14 @@
         title: '📌 第零篇 第一章 章節清單',
         items: [
           { id: 'sec-p0ch1-four-pillars', label: '一、篇章前言：刑法目的與四大支柱' },
-          { id: 'sec-p0ch1-sub-sections-nav', label: '二、第一章 子單元導航 (第一節入口)' }
+          { id: 'sec-p0ch1-sub-sections-nav', label: '二、第一章 子單元導航 (三小節全備)' },
+          { action: "switchView('part0-ch1-sec1')", label: '💎 第一節 法益保護原則 (P. 2-1~2-4)' },
+          { action: "switchView('part0-ch1-sec2')", label: '📜 第二節 罪刑法定原則 (P. 2-5~2-7)' },
+          { action: "switchView('part0-ch1-sec3')", label: '⚖️ 第三節 罪責原則 (P. 2-7~2-8)' }
         ]
       },
       'part0-ch1-sec1': {
-        badge: '教材第 2-1 ~ 2-3 頁',
+        badge: '教材第 2-1 ~ 2-4 頁',
         title: '📌 第一節 法益保護原則 清單',
         items: [
           { id: 'sec-p0ch1-sec1-def', label: '一、法益核心法定定義' },
@@ -7479,7 +8749,31 @@
           { id: 'sec-p0ch1-sec1-functions-three', label: '六、法益三大功能與解釋原則' },
           { id: 'sec-p0ch1-sec1-case-1-1', label: '七、案例 1-1：剪髮報復案（身體法益）' },
           { id: 'sec-p0ch1-sec1-case-1-2', label: '八、案例 1-2：黑吃黑竊皮夾案（竊盜法益）' },
-          { id: 'sec-p0ch1-sec1-case-1-3', label: '九、案例 1-3：肇事逃逸罪要件爭議' }
+          { id: 'sec-p0ch1-sec1-case-1-3', label: '九、案例 1-3：肇事逃逸罪要件爭議' },
+          { id: 'sec-p0ch1-sec1-tips-methodology', label: '十、解題提示：法益確認與分則學習' }
+        ]
+      },
+      'part0-ch1-sec2': {
+        badge: '教材第 2-5 ~ 2-7 頁',
+        title: '📌 第二節 罪刑法定原則 清單',
+        items: [
+          { id: 'sec-p0ch1-sec2-def', label: '一、罪刑法定核心定義與釋字384' },
+          { id: 'sec-p0ch1-sec2-sub1-custom', label: '二、面向一：習慣法之禁止（案例 1-4）' },
+          { id: 'sec-p0ch1-sec2-sub2-analogy', label: '三、面向二：類推適用之禁止（案例 1-5）' },
+          { id: 'sec-p0ch1-sec2-sub3-clarity', label: '四、面向三：罪刑明確性原則（案例 1-6）' },
+          { id: 'sec-p0ch1-sec2-sub4-retroactive', label: '五、面向四：溯及既往之禁止（案例 1-7）' },
+          { id: 'sec-p0ch1-sec2-author-memo', label: '六、作者叮嚀：公法憲法概念對照' }
+        ]
+      },
+      'part0-ch1-sec3': {
+        badge: '教材第 2-7 ~ 2-8 頁',
+        title: '📌 第三節 罪責原則 清單',
+        items: [
+          { id: 'sec-p0ch1-sec3-def', label: '一、罪責原則核心定義與釋字630' },
+          { id: 'sec-p0ch1-sec3-dual-aspects', label: '二、罪責原則之雙重核心內涵' },
+          { id: 'sec-p0ch1-sec3-case-1-8', label: '三、案例 1-8 準強盜罪與合憲限縮' },
+          { id: 'sec-p0ch1-sec3-tips-favor', label: '四、解題提示：有利人民容許例外' },
+          { id: 'sec-p0ch1-sec3-chapter1-summary', label: '五、四大支柱全景整合與全章完結' }
         ]
       },
       'chapter-1': {
@@ -7574,6 +8868,8 @@
         if (viewPart0) viewPart0.classList.add('hidden');
         if (viewPart0Chapter1) viewPart0Chapter1.classList.add('hidden');
         if (viewPart0Ch1Sec1) viewPart0Ch1Sec1.classList.add('hidden');
+        if (viewPart0Ch1Sec2) viewPart0Ch1Sec2.classList.add('hidden');
+        if (viewPart0Ch1Sec3) viewPart0Ch1Sec3.classList.add('hidden');
 
         document.body.classList.remove('in-chapter', 'in-chapter-1', 'intro-active');
         document.body.classList.add('in-home');
@@ -7606,6 +8902,8 @@
         if (viewPart0) viewPart0.classList.add('hidden');
         if (viewPart0Chapter1) viewPart0Chapter1.classList.add('hidden');
         if (viewPart0Ch1Sec1) viewPart0Ch1Sec1.classList.add('hidden');
+        if (viewPart0Ch1Sec2) viewPart0Ch1Sec2.classList.add('hidden');
+        if (viewPart0Ch1Sec3) viewPart0Ch1Sec3.classList.add('hidden');
 
         document.body.classList.remove('intro-active', 'in-home');
         document.body.classList.add('in-chapter', 'in-chapter-1');
@@ -7633,6 +8931,8 @@
         if (viewPart0) viewPart0.classList.add('hidden');
         if (viewPart0Chapter1) viewPart0Chapter1.classList.add('hidden');
         if (viewPart0Ch1Sec1) viewPart0Ch1Sec1.classList.add('hidden');
+        if (viewPart0Ch1Sec2) viewPart0Ch1Sec2.classList.add('hidden');
+        if (viewPart0Ch1Sec3) viewPart0Ch1Sec3.classList.add('hidden');
 
         document.body.classList.remove('in-chapter-1', 'intro-active', 'in-home');
         document.body.classList.add('in-chapter');
@@ -7660,6 +8960,8 @@
         if (viewPart0) viewPart0.classList.remove('hidden');
         if (viewPart0Chapter1) viewPart0Chapter1.classList.add('hidden');
         if (viewPart0Ch1Sec1) viewPart0Ch1Sec1.classList.add('hidden');
+        if (viewPart0Ch1Sec2) viewPart0Ch1Sec2.classList.add('hidden');
+        if (viewPart0Ch1Sec3) viewPart0Ch1Sec3.classList.add('hidden');
 
         document.body.classList.remove('in-chapter', 'in-chapter-1', 'intro-active', 'in-home');
 
@@ -7691,6 +8993,8 @@
         if (viewPart0) viewPart0.classList.add('hidden');
         if (viewPart0Chapter1) viewPart0Chapter1.classList.remove('hidden');
         if (viewPart0Ch1Sec1) viewPart0Ch1Sec1.classList.add('hidden');
+        if (viewPart0Ch1Sec2) viewPart0Ch1Sec2.classList.add('hidden');
+        if (viewPart0Ch1Sec3) viewPart0Ch1Sec3.classList.add('hidden');
 
         document.body.classList.remove('in-chapter-1', 'intro-active', 'in-home');
         document.body.classList.add('in-chapter');
@@ -7723,6 +9027,8 @@
         if (viewPart0) viewPart0.classList.add('hidden');
         if (viewPart0Chapter1) viewPart0Chapter1.classList.add('hidden');
         if (viewPart0Ch1Sec1) viewPart0Ch1Sec1.classList.remove('hidden');
+        if (viewPart0Ch1Sec2) viewPart0Ch1Sec2.classList.add('hidden');
+        if (viewPart0Ch1Sec3) viewPart0Ch1Sec3.classList.add('hidden');
 
         document.body.classList.remove('in-chapter-1', 'intro-active', 'in-home');
         document.body.classList.add('in-chapter');
@@ -7750,6 +9056,80 @@
             history.replaceState(null, '', '#part0-ch1-sec1');
           }
         }
+      } else if (viewName === 'part0-ch1-sec2') {
+        if (viewHome) viewHome.classList.add('hidden');
+        viewIntro.classList.add('hidden');
+        viewChapter1.classList.add('hidden');
+        viewChapter2.classList.add('hidden');
+        if (viewPart0) viewPart0.classList.add('hidden');
+        if (viewPart0Chapter1) viewPart0Chapter1.classList.add('hidden');
+        if (viewPart0Ch1Sec1) viewPart0Ch1Sec1.classList.add('hidden');
+        if (viewPart0Ch1Sec2) viewPart0Ch1Sec2.classList.remove('hidden');
+        if (viewPart0Ch1Sec3) viewPart0Ch1Sec3.classList.add('hidden');
+
+        document.body.classList.remove('in-chapter-1', 'intro-active', 'in-home');
+        document.body.classList.add('in-chapter');
+
+        setRightTocVisibility(true);
+
+        if (navBtnPart0) {
+          navBtnPart0.classList.add('text-blue-600', 'dark:text-blue-400');
+        }
+        if (navBtnPart0Ch1) {
+          navBtnPart0Ch1.classList.add('text-indigo-600', 'dark:text-indigo-400');
+        }
+        if (navBtnPart0Ch1Sec2) {
+          navBtnPart0Ch1Sec2.classList.remove(...INACTIVE_CLASS);
+          navBtnPart0Ch1Sec2.classList.add(...ACTIVE_CLASS);
+        }
+
+        currentChapterBadge.textContent = '第零篇 第一章・第二節';
+        document.title = '第二節 罪刑法定原則——付出代價的根據何在？ | 刑法總則研讀筆記';
+        renderToc('part0-ch1-sec2');
+
+        if (shouldScrollTop) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          if (window.history && window.history.replaceState) {
+            history.replaceState(null, '', '#part0-ch1-sec2');
+          }
+        }
+      } else if (viewName === 'part0-ch1-sec3') {
+        if (viewHome) viewHome.classList.add('hidden');
+        viewIntro.classList.add('hidden');
+        viewChapter1.classList.add('hidden');
+        viewChapter2.classList.add('hidden');
+        if (viewPart0) viewPart0.classList.add('hidden');
+        if (viewPart0Chapter1) viewPart0Chapter1.classList.add('hidden');
+        if (viewPart0Ch1Sec1) viewPart0Ch1Sec1.classList.add('hidden');
+        if (viewPart0Ch1Sec2) viewPart0Ch1Sec2.classList.add('hidden');
+        if (viewPart0Ch1Sec3) viewPart0Ch1Sec3.classList.remove('hidden');
+
+        document.body.classList.remove('in-chapter-1', 'intro-active', 'in-home');
+        document.body.classList.add('in-chapter');
+
+        setRightTocVisibility(true);
+
+        if (navBtnPart0) {
+          navBtnPart0.classList.add('text-blue-600', 'dark:text-blue-400');
+        }
+        if (navBtnPart0Ch1) {
+          navBtnPart0Ch1.classList.add('text-indigo-600', 'dark:text-indigo-400');
+        }
+        if (navBtnPart0Ch1Sec3) {
+          navBtnPart0Ch1Sec3.classList.remove(...INACTIVE_CLASS);
+          navBtnPart0Ch1Sec3.classList.add(...ACTIVE_CLASS);
+        }
+
+        currentChapterBadge.textContent = '第零篇 第一章・第三節';
+        document.title = '第三節 罪責原則——付出代價的極限何在？ | 刑法總則研讀筆記';
+        renderToc('part0-ch1-sec3');
+
+        if (shouldScrollTop) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          if (window.history && window.history.replaceState) {
+            history.replaceState(null, '', '#part0-ch1-sec3');
+          }
+        }
       } else {
         // 導論畫面
         if (viewHome) viewHome.classList.add('hidden');
@@ -7759,6 +9139,8 @@
         if (viewPart0) viewPart0.classList.add('hidden');
         if (viewPart0Chapter1) viewPart0Chapter1.classList.add('hidden');
         if (viewPart0Ch1Sec1) viewPart0Ch1Sec1.classList.add('hidden');
+        if (viewPart0Ch1Sec2) viewPart0Ch1Sec2.classList.add('hidden');
+        if (viewPart0Ch1Sec3) viewPart0Ch1Sec3.classList.add('hidden');
 
         document.body.classList.remove('in-chapter', 'in-chapter-1', 'in-home');
 
@@ -7953,6 +9335,14 @@
         if (viewChapter2.classList.contains('hidden')) {
           switchView('chapter-2', false);
         }
+      } else if (targetId.startsWith('sec-p0ch1-sec3-')) {
+        if (viewPart0Ch1Sec3.classList.contains('hidden')) {
+          switchView('part0-ch1-sec3', false);
+        }
+      } else if (targetId.startsWith('sec-p0ch1-sec2-')) {
+        if (viewPart0Ch1Sec2.classList.contains('hidden')) {
+          switchView('part0-ch1-sec2', false);
+        }
       } else if (targetId.startsWith('sec-p0ch1-sec1-')) {
         if (viewPart0Ch1Sec1.classList.contains('hidden')) {
           switchView('part0-ch1-sec1', false);
@@ -8023,6 +9413,18 @@
         setTimeout(() => {
           scrollToSection(null, targetId);
         }, 50);
+      } else if (hash.startsWith('#sec-p0ch1-sec3-')) {
+        switchView('part0-ch1-sec3', false);
+        const targetId = hash.substring(1);
+        setTimeout(() => {
+          scrollToSection(null, targetId);
+        }, 50);
+      } else if (hash.startsWith('#sec-p0ch1-sec2-')) {
+        switchView('part0-ch1-sec2', false);
+        const targetId = hash.substring(1);
+        setTimeout(() => {
+          scrollToSection(null, targetId);
+        }, 50);
       } else if (hash.startsWith('#sec-p0ch1-sec1-')) {
         switchView('part0-ch1-sec1', false);
         const targetId = hash.substring(1);
@@ -8059,6 +9461,10 @@
         switchView('part0-chapter-1', true);
       } else if (hash === '#part0-ch1-sec1') {
         switchView('part0-ch1-sec1', true);
+      } else if (hash === '#part0-ch1-sec2') {
+        switchView('part0-ch1-sec2', true);
+      } else if (hash === '#part0-ch1-sec3' || hash === '#part0_ch1-sec3') {
+        switchView('part0-ch1-sec3', true);
       } else {
         switchView('home', false);
       }
@@ -8661,14 +10067,25 @@
       },
       {
         id: 'case-p0-1-3',
-        title: '案例 1-3 肇事逃逸罪要件爭議（致人死傷要件與肇事要件解讀）',
+        title: '案例 1-3 肇事逃逸罪要件爭議（致人死傷、肇事與逃逸要件三大法益說）',
         category: 'case',
         categoryLabel: '案例',
-        keywords: ['案例1-3', '肇事逃逸', '致人死傷', '肇事', '烤漆掉落', '無過失', '185-4', '§185-4', '釋字777號', '第零篇'],
+        keywords: ['案例1-3', '肇事逃逸', '致人死傷', '肇事', '逃逸', '生命身體安全保障說', '公共安全保障說', '確認利益保障說', '185-4', '§185-4', '釋字777號', '第零篇', '2-4頁'],
         view: 'part0-ch1-sec1',
         anchor: 'sec-p0ch1-sec1-case-1-3',
-        page: 'P. 2-3',
-        desc: '擦撞僅車損無人傷亡不構成本罪；無過失離去爭議經釋字777號後，現行法增訂無過失者得減免其刑。'
+        page: 'P. 2-3~2-4',
+        desc: '包含三小題事實：純車損逃逸、無過失遭撞逕離、電召救護車未留名。三大保護法益說深度交鋒與2026現行法§185-4修正檢驗。'
+      },
+      {
+        id: 'concept-p0-tips-methodology',
+        title: '十、解題提示：法益確認乃構成要件解釋與分則學習之先決基石（教材第 2-4 頁）',
+        category: 'concept',
+        categoryLabel: '核心概念',
+        keywords: ['解題提示', '保護法益的確認', '構成要件要素', '解釋指導原則', '事半功倍', '方法論', '前置工作', '2-4頁'],
+        view: 'part0-ch1-sec1',
+        anchor: 'sec-p0ch1-sec1-tips-methodology',
+        page: 'P. 2-4',
+        desc: '確認保護法益是絕對必要的前置工作！只有清楚掌握該罪的保護法益，才能在紛雜的要素中正確歸類、整理，檢討構成要件事半功倍。'
       },
       {
         id: 'concept-legal-interest-duality',
@@ -8702,6 +10119,173 @@
         anchor: 'sec-p0ch1-sec1-functions-three',
         page: 'P. 2-2',
         desc: '三大功能：犯罪要件設立基礎、競合判準、構成要件解釋指導原則。構成要件解釋必須緊扣所保護之法益，不能本末倒置。'
+      },
+
+      // 第零篇 第一章 第二節 罪刑法定原則 & 第三節 罪責原則 新增條目 (教材第 2-5 ~ 2-8 頁)
+      {
+        id: 'art-1',
+        title: '刑法第 1 條（罪刑法定原則與行為時法）',
+        category: 'article',
+        categoryLabel: '法條',
+        keywords: ['1條', '§1', '罪刑法定原則', '行為時之法律', '保安處分', '成文法主義', '2-5頁'],
+        view: 'part0-ch1-sec2',
+        anchor: 'sec-p0ch1-sec2-def',
+        page: 'P. 2-5',
+        desc: '行為之處罰，以行為時之法律有明文規定者為限。拘束人身自由之保安處分亦同。罪刑法定四大面向之核心母法。'
+      },
+      {
+        id: 'art-323',
+        title: '刑法第 323 條（能量擬制物規範與竊盜客體）',
+        category: 'article',
+        categoryLabel: '法條',
+        keywords: ['323條', '§323', '能量', '動產', '電能', '熱能', '第四台訊號', '類推禁止', '2-5頁'],
+        view: 'part0-ch1-sec2',
+        anchor: 'sec-p0ch1-sec2-sub2-analogy',
+        page: 'P. 2-5~2-6',
+        desc: '電能、熱能及其他能量關於本章之罪視為動產。有線電視影音訊號為資訊載體非物理能量，禁止不利類推適用。'
+      },
+      {
+        id: 'art-329',
+        title: '刑法第 329 條（準強盜罪要件與釋字 630 號限縮）',
+        category: 'article',
+        categoryLabel: '法條',
+        keywords: ['329條', '§329', '準強盜罪', '強暴脅迫', '防護贓物', '脫免逮捕', '難以抗拒', '罪刑相當', '2-7頁'],
+        view: 'part0-ch1-sec3',
+        anchor: 'sec-p0ch1-sec3-case-1-8',
+        page: 'P. 2-7~2-8',
+        desc: '竊盜或搶奪因防護贓物、脫免逮捕當場施強暴脅迫以強盜論。釋字630號合憲限縮須達「至使難以抗拒」程度。'
+      },
+      {
+        id: 'const-384',
+        title: '司法院釋字第 384 號解釋（正當法律程序與罪刑法定主義）',
+        category: 'article',
+        categoryLabel: '法條',
+        keywords: ['釋字384', '384號', '正當法律程序', '憲法第8條', '罪刑法定主義', '實質正當', '2-5頁'],
+        view: 'part0-ch1-sec2',
+        anchor: 'sec-p0ch1-sec2-def',
+        page: 'P. 2-5',
+        desc: '實質正當之法律程序包含罪刑法定主義之要求；非經形式法律明文規定不得以習慣法創設罪刑，亦不得超越文義類推適用。'
+      },
+      {
+        id: 'const-630',
+        title: '司法院釋字第 630 號解釋（準強盜罪合憲限縮與罪責相當原則）',
+        category: 'article',
+        categoryLabel: '法條',
+        keywords: ['釋字630', '630號', '準強盜罪', '難以抗拒', '罪責原則', '罪刑相當原則', '比例原則', '2-7頁'],
+        view: 'part0-ch1-sec3',
+        anchor: 'sec-p0ch1-sec3-def',
+        page: 'P. 2-7~2-8',
+        desc: '刑罰以個人責任為前提，無責任即無刑罰；準強盜罪所施強暴脅迫須客觀達「至使難以抗拒」程度始符罪刑相當原則。'
+      },
+      {
+        id: 'case-p0-1-4',
+        title: '案例 1-4 原因自由行為與習慣法之禁止（教材第 2-5 頁）',
+        category: 'case',
+        categoryLabel: '案例',
+        keywords: ['案例1-4', '原因自由行為', '習慣法禁止', '自陷精神障礙', '19條第3項', '成文法明文化', '第零篇', '2-5頁'],
+        view: 'part0-ch1-sec2',
+        anchor: 'sec-p0ch1-sec2-sub1-custom',
+        page: 'P. 2-5',
+        desc: '行兇前飲酒壯膽自陷精神障礙。早期實務逕以習慣法或法理處罰受批評，民國94年正式增訂刑法§19Ⅲ明文化徹底符合成文法要求。'
+      },
+      {
+        id: 'case-p0-1-5',
+        title: '案例 1-5 竊電擬制 vs 偷接第四台影音訊號類推禁止（教材第 2-5 ～ 2-6 頁）',
+        category: 'case',
+        categoryLabel: '案例',
+        keywords: ['案例1-5', '第四台', '有線電視', '同軸電纜', '竊電', '類推適用禁止', '323條', '97上易648', '第零篇', '2-5頁'],
+        view: 'part0-ch1-sec2',
+        anchor: 'sec-p0ch1-sec2-sub2-analogy',
+        page: 'P. 2-5~2-6',
+        desc: '擅自私接第四台線路觀看。高院97上易648號判決認訊號非刑法§323之獨立物理能量，若涵攝為能量屬違法類推適用，判決無罪。'
+      },
+      {
+        id: 'case-p0-1-6',
+        title: '案例 1-6 法律效果明確性：絕對不定期刑違憲 vs 相對不定期刑合憲（教材第 2-6 頁）',
+        category: 'case',
+        categoryLabel: '案例',
+        keywords: ['案例1-6', '絕對不定期刑', '相對不定期刑', '明確性原則', '法律效果明確性', '直到改過自新', '第零篇', '2-6頁'],
+        view: 'part0-ch1-sec2',
+        anchor: 'sec-p0ch1-sec2-sub3-clarity',
+        page: 'P. 2-6',
+        desc: '「處有期徒刑直到改過自新為止」屬絕對不定期刑嚴重違憲；「處五年以上十二年以下」訂有上下限為相對不定期刑，完全合憲。'
+      },
+      {
+        id: 'case-p0-1-7',
+        title: '案例 1-7 小三條款溯及生效之違法檢驗（教材第 2-6 ～ 2-7 頁）',
+        category: 'case',
+        categoryLabel: '案例',
+        keywords: ['案例1-7', '小三條款', '包養', '公務員', '法不溯及既往', '信賴保護', '溯及生效違憲', '第零篇', '2-6頁'],
+        view: 'part0-ch1-sec2',
+        anchor: 'sec-p0ch1-sec2-sub4-retroactive',
+        page: 'P. 2-6~2-7',
+        desc: '立法增訂公務員婚外情條例並附帶溯及前半年生效處罰甲。公然牴觸憲法罪刑法定與溯及既往禁止原則，該溯及條款違法無效。'
+      },
+      {
+        id: 'case-p0-1-8',
+        title: '案例 1-8 準強盜罪強暴脅迫合憲限縮——釋字 630 號（教材第 2-7 ～ 2-8 頁）',
+        category: 'case',
+        categoryLabel: '案例',
+        keywords: ['案例1-8', '準強盜罪', '輕推', '脫免逮捕', '釋字630', '難以抗拒', '罪刑相當', '小罪不能大罰', '第零篇', '2-7頁'],
+        view: 'part0-ch1-sec3',
+        anchor: 'sec-p0ch1-sec3-case-1-8',
+        page: 'P. 2-7~2-8',
+        desc: '甲偷腳踏車得手被抓衣領隨手輕推乙一下離去。釋字630號合憲限縮強暴脅迫須達難以抗拒程度，輕推未達門檻不成立準強盜罪！'
+      },
+      {
+        id: 'concept-nulla-poena-four',
+        title: '第二節 罪刑法定原則四大面向派生子原則（教材第 2-5 頁 原文圖解）',
+        category: 'concept',
+        categoryLabel: '核心概念',
+        keywords: ['罪刑法定四大面向', '習慣法禁止', '類推適用禁止', '罪刑明確性', '溯及既往禁止', '大憲章', '2-5頁'],
+        view: 'part0-ch1-sec2',
+        anchor: 'sec-p0ch1-sec2-def',
+        page: 'P. 2-5',
+        desc: '深入剖析習慣法之禁止（成文法）、類推適用之禁止（文義射程）、罪刑明確性（構成要件與法律效果）與溯及既往之禁止（法安定性）。'
+      },
+      {
+        id: 'concept-author-memo-public-law',
+        title: '六、作者叮嚀：罪刑法定原則與公法憲法概念完全映射（教材第 2-7 頁）',
+        category: 'concept',
+        categoryLabel: '核心概念',
+        keywords: ['作者叮嚀', '公法對照', '憲法法治國', '絕對法律保留', '法官依據法律審判', '信賴保護原則', '2-7頁'],
+        view: 'part0-ch1-sec2',
+        anchor: 'sec-p0ch1-sec2-author-memo',
+        page: 'P. 2-7',
+        desc: '易律師考前叮嚀：罪刑法定四面向與公法絕對法律保留、憲法第80條審判、法律明確性、法安定性信賴保護完全對應。'
+      },
+      {
+        id: 'concept-culpability-principle',
+        title: '第三節 罪責原則——付出代價的極限何在？（教材第 2-7 頁 原文定義）',
+        category: 'concept',
+        categoryLabel: '核心概念',
+        keywords: ['罪責原則', '付出代價的極限', '無罪責即無刑罰', '罪刑相當原則', '小罪不能大罰', '釋字630', '2-7頁'],
+        view: 'part0-ch1-sec3',
+        anchor: 'sec-p0ch1-sec3-def',
+        page: 'P. 2-7',
+        desc: '刑罰以個人責任為前提。雙重內涵：無罪責即無刑罰（Nulla poena sine culpa）與罪刑相當原則（小罪不能大罰，重罪不能輕罰）。'
+      },
+      {
+        id: 'concept-favor-defendants-rule',
+        title: '四、解題提示：刑法本質在節制國家刑罰發動——有利於人民者皆容許！（教材第 2-8 頁）',
+        category: 'concept',
+        categoryLabel: '核心概念',
+        keywords: ['解題提示', '終極心法', '有利於人民', '超法定阻卻違法', '超法定阻卻罪責', '有利類推', '有利溯及', '2-8頁'],
+        view: 'part0-ch1-sec3',
+        anchor: 'sec-p0ch1-sec3-tips-favor',
+        page: 'P. 2-8',
+        desc: '刑法規範目的在於節制國家濫權！不利人民絕對嚴格禁止，但有利於人民者（超法定阻卻事由、有利類推、從舊從輕）全面容許肯定。'
+      },
+      {
+        id: 'concept-chapter-1-four-pillars-table',
+        title: '五、第一章 刑法運作四大支柱全景整合對照與全章完結（教材第 2-1 ～ 2-8 頁）',
+        category: 'concept',
+        categoryLabel: '核心概念',
+        keywords: ['四大支柱總表', '法益保護原則', '最後手段性原則', '罪刑法定原則', '罪責原則', '全章完結', '第一章', '2-8頁'],
+        view: 'part0-ch1-sec3',
+        anchor: 'sec-p0ch1-sec3-chapter1-summary',
+        page: 'P. 2-8',
+        desc: '四大支柱全景表：法益保護（目的）、最後手段性（發動情況）、罪刑法定（根據何在）、罪責原則（極限何在），全章完整融會貫通。'
       }
     ];
 
@@ -9114,6 +10698,48 @@
         stage: '個別財產法益保護',
         body: '① 意圖為自己或第三人不法之所有，而竊取他人之動產者，為竊盜罪，處五年以下有期徒刑、拘役或五十萬元以下罰金。\n② 意圖為自己或第三人不法之利益，而竊佔他人之不動產者，依前項之規定處斷。\n③ 前二項之未遂犯罰之。',
         role: '保護法益採「所有權及持有說」（通說）：保護所有人所有權與事實持有人支配關係，禁止私力侵奪，黑吃黑亦受刑法保護。'
+      },
+      '1': {
+        title: '刑法第 1 條【罪刑法定原則】',
+        badge: '憲法刑法基石',
+        stage: '罪刑法定四大派生面向 (Nulla poena)',
+        body: '行為之處罰，以行為時之法律有明文規定者為限。拘束人身自由之保安處分，亦同。',
+        role: '現代法治國刑法大憲章。派生四大面向：習慣法之禁止、類推適用之禁止、罪刑明確性原則、溯及既往之禁止。'
+      },
+      '19-3': {
+        title: '刑法第 19 條第 3 項【原因自由行為明文化】',
+        badge: '責任原則例外',
+        stage: '責任能力：自陷障礙排除 (S)',
+        body: '前二項規定，於因故意或過失自行招致者，不適用之。',
+        role: '94 年刑法修法增訂，將自陷精神障礙不法行為明文化為成文法，徹底符合習慣法禁止與成文法主義。'
+      },
+      '323': {
+        title: '刑法第 323 條【能量視為動產擬制】',
+        badge: '財產法益擬制',
+        stage: '構成要件：動產客體擬制擴張',
+        body: '電能、熱能及其他能量，關於本章之罪，視為動產。',
+        role: '立法擬制無體能量為動產。第四台有線電視影音訊號為資訊載體而非獨立物理能量，禁止不利類推適用（高院97上易648）。'
+      },
+      '329': {
+        title: '刑法第 329 條【準強盜罪與合憲限縮】',
+        badge: '財產暴力擬制',
+        stage: '強盜罪擬制與罪刑相當性',
+        body: '竊盜或搶奪，因防護贓物、脫免逮捕或湮滅罪證，而當場施以強暴脅迫者，以強盜論。',
+        role: '法定刑高達五年以上有期徒刑。釋字第 630 號合憲限縮：強暴脅迫須達「至使難以抗拒」程度，始符罪刑相當原則。'
+      },
+      '384': {
+        title: '司法院釋字第 384 號解釋【實質正當法律程序】',
+        badge: '憲法位階解釋',
+        stage: '正當法律程序與罪刑法定主義',
+        body: '實質正當之法律程序，包括罪刑法定主義之要求。非經立法院通過、總統公布之法律明文規定，不得以習慣法創設罪刑，亦不得超越法條文義而類推適用。',
+        role: '將罪刑法定主義自刑法第 1 條提升至憲法第 8 條「正當法律程序」之最高憲法位階保障。'
+      },
+      '630': {
+        title: '司法院釋字第 630 號解釋【準強盜罪合憲性限縮】',
+        badge: '憲法位階解釋',
+        stage: '罪責原則與罪刑相當原則',
+        body: '刑法第 329 條準強盜罪擬制為第 328 條強盜罪，所施之強暴、脅迫，亦必須達於至使人難以抗拒之程度，始符憲法比例原則與罪刑相當原則。',
+        role: '確立罪責原則為憲法位階原則。避免輕微暴力（如輕推）被以強盜重罪論處，貫徹小罪不能大罰之應報思想。'
       }
     };
 
@@ -9230,7 +10856,12 @@
     function bindStatuteElement(el, matchedKey) {
       el.dataset.statuteBound = 'true';
       el.classList.add('statute-trigger');
-      el.setAttribute('title', `查看 刑法第 ${matchedKey === '113-8' ? '113年憲判字第8號' : matchedKey + ' 條'} 條文與爭點`);
+      let statuteLabel = `刑法第 ${matchedKey} 條`;
+      if (matchedKey === '113-8') statuteLabel = '113 年憲判字第 8 號判決';
+      else if (matchedKey === '384') statuteLabel = '司法院釋字第 384 號解釋';
+      else if (matchedKey === '630') statuteLabel = '司法院釋字第 630 號解釋';
+      else if (matchedKey === '19-3') statuteLabel = '刑法第 19 條第 3 項';
+      el.setAttribute('title', `查看 ${statuteLabel} 條文與爭點`);
 
       // 桌面版延遲懸停 (260ms 防誤觸，滑鼠快速滑過不彈出)
       el.addEventListener('mouseenter', () => {
@@ -9535,29 +11166,271 @@
    - 竊盜罪所保護之法益包涵物之所有權關係，以及事實上持有人對物之支配關係。
    - 違法持有亦受刑法和平秩序保護，禁止私力侵奪。乙侵害甲對皮夾之事實支配，對甲構成竊盜罪。`,
 
-      '0-1-3': `# ⚖️ 【案例 1-3 肇事逃逸罪要件解釋（致人死傷與肇事）】
-> 📚 出處：陳奕廷(易律師)《刑法總則【圖說系列】》第 2-3 頁
-> 🏷️ 關聯法條：刑法第 185-4 條（肇事致人死傷逃逸罪）
+      '0-1-3': `# ⚖️ 【案例 1-3 肇事逃逸罪三大保護法益理論與要件爭議】
+> 📚 出處：陳奕廷(易律師)《刑法總則【圖說系列】》第 2-3 ～ 2-4 頁
+> 🏷️ 關聯法條：刑法第 185-4 條、第 294 條、釋字第 777 號
 
-### 📌 案例事實與審查
-1. **問題 (一)：僅車損未傷人逃逸**
-   - 甲擦撞乙車僅烤漆掉落無人死傷，甲加速逃逸。
-   - 刑法第 185-4 條立法旨趣在救助人身法益，以「致人死傷」為必要要件。未造成人員死傷者，不成立本罪。
-2. **問題 (二)：無過失遭撞逕行離去**
-   - 甲無過失遭乙追撞，乙受傷流血，甲自認錯不在己逕自離去。
-   - 爭議點在於「肇事」是否包含無過失。司法院釋字第 777 號宣告違憲後，110 年立法院修正刑法第 185-4 條，明定「發生交通事故」，並增訂「無過失者減輕或免除其刑」，以兼顧救護義務與罪責原則。`,
+### 📌 案例事實與三大問題
+1. **問題 (一)：僅車損未傷人逃逸（致人死傷要件）**
+   - 甲駕駛擦撞乙車，僅烤漆掉落無人傷亡，甲隨即加速逃逸。
+2. **問題 (二)：無過失遭撞逕行離去（肇事要件）**
+   - 甲無過失遭乙追撞，乙受傷倒地流血，甲自認錯不在己逕自駛去。
+3. **問題 (三)：移置傷者電召救護車未留個資離去（逃逸要件）**
+   - 甲撞傷乙，將乙移至人行道並電召救護車，待抵達後未留任何資料離去。
 
-      'p0-1-3': `# ⚖️ 【案例 1-3 肇事逃逸罪要件解釋（致人死傷與肇事）】
-> 📚 出處：陳奕廷(易律師)《刑法總則【圖說系列】》第 2-3 頁
-> 🏷️ 關聯法條：刑法第 185-4 條（肇事致人死傷逃逸罪）
+### 💡 三大保護法益理論交鋒與要件解讀
+1. **生命身體安全保障說（早期實務見解）**：
+   - 本罪為遺棄罪之特別規定，減少死傷為目的。
+   - 「致人死傷」為構成要件；「肇事」限過失（具救助義務）；「逃逸」指不為救助生命身體。
+   - 【涵攝結論】：問題(一)不成立、問題(二)不成立、問題(三)已救助排除危險，不成立本罪。
+2. **公共安全保障說（少數說 / 體例）**：
+   - 依分則第十一章公共危險罪體例，保護不特定多數人公共安全。
+   - 「致人死傷」與法益無關屬立法錯誤應刪除；「肇事」限過失致現場危險；「逃逸」指對公共危險不為控管。
+   - 【涵攝結論】：問題(一)若現場碎片未控管可能成立；問題(二)無過失不成立；問題(三)地上碎片未清理可能成立本罪。
+3. **確認利益保障說（學說有力說 ⭐）**：
+   - 為解決肇事責任釐清問題（社會連帶思想，無論有無過失均負協助確認責任義務）。
+   - 「致人死傷」為客觀處罰條件；「肇事」不限故意、過失或無過失；「逃逸」指逃避責任歸屬義務之隱匿身分行為。
+   - 【涵攝結論】：問題(一)欠處罰條件不成立；問題(二)未停留釐清責任成立本罪；問題(三)未留個資隱匿身分成立本罪。
 
-### 📌 案例事實與審查
-1. **問題 (一)：僅車損未傷人逃逸**
-   - 甲擦撞乙車僅烤漆掉落無人死傷，甲加速逃逸。
-   - 刑法第 185-4 條立法旨趣在救助人身法益，以「致人死傷」為必要要件。未造成人員死傷者，不成立本罪。
-2. **問題 (二)：無過失遭撞逕行離去**
-   - 甲無過失遭乙追撞，乙受傷流血，甲自認錯不在己逕自離去。
-   - 爭議點在於「肇事」是否包含無過失。司法院釋字第 777 號宣告違憲後，110 年立法院修正刑法第 185-4 條，明定「發生交通事故」，並增訂「無過失者減輕或免除其刑」，以兼顧救護義務與罪責原則。`
+### 📜 2026 現行法規（刑法第 185-4 條）
+- 110.05.28 修正施行：將「肇事」修正為「發生交通事故」，並明定「無過失者，減輕或免除其刑」，折衷兼顧救助義務與罪責原則。
+
+### 🎯 國考速記口訣
+法益確認為先決，要件爭點全破解！`,
+
+      'p0-1-3': `# ⚖️ 【案例 1-3 肇事逃逸罪三大保護法益理論與要件爭議】
+> 📚 出處：陳奕廷(易律師)《刑法總則【圖說系列】》第 2-3 ～ 2-4 頁
+> 🏷️ 關聯法條：刑法第 185-4 條、第 294 條、釋字第 777 號
+
+### 📌 案例事實與三大問題
+1. **問題 (一)：僅車損未傷人逃逸（致人死傷要件）**
+   - 甲駕駛擦撞乙車，僅烤漆掉落無人傷亡，甲隨即加速逃逸。
+2. **問題 (二)：無過失遭撞逕行離去（肇事要件）**
+   - 甲無過失遭乙追撞，乙受傷倒地流血，甲自認錯不在己逕自駛去。
+3. **問題 (三)：移置傷者電召救護車未留個資離去（逃逸要件）**
+   - 甲撞傷乙，將乙移至人行道並電召救護車，待抵達後未留任何資料離去。
+
+### 💡 三大保護法益理論交鋒與要件解讀
+1. **生命身體安全保障說（早期實務見解）**：
+   - 本罪為遺棄罪之特別規定，減少死傷為目的。
+   - 「致人死傷」為構成要件；「肇事」限過失（具救助義務）；「逃逸」指不為救助生命身體。
+   - 【涵攝結論】：問題(一)不成立、問題(二)不成立、問題(三)已救助排除危險，不成立本罪。
+2. **公共安全保障說（少數說 / 體例）**：
+   - 依分則第十一章公共危險罪體例，保護不特定多數人公共安全。
+   - 「致人死傷」與法益無關屬立法錯誤應刪除；「肇事」限過失致現場危險；「逃逸」指對公共危險不為控管。
+   - 【涵攝結論】：問題(一)若現場碎片未控管可能成立；問題(二)無過失不成立；問題(三)地上碎片未清理可能成立本罪。
+3. **確認利益保障說（學說有力說 ⭐）**：
+   - 為解決肇事責任釐清問題（社會連帶思想，無論有無過失均負協助確認責任義務）。
+   - 「致人死傷」為客觀處罰條件；「肇事」不限故意、過失或無過失；「逃逸」指逃避責任歸屬義務之隱匿身分行為。
+   - 【涵攝結論】：問題(一)欠處罰條件不成立；問題(二)未停留釐清責任成立本罪；問題(三)未留個資隱匿身分成立本罪。
+
+### 📜 2026 現行法規（刑法第 185-4 條）
+- 110.05.28 修正施行：將「肇事」修正為「發生交通事故」，並明定「無過失者，減輕或免除其刑」，折衷兼顧救助義務與罪責原則。
+
+### 🎯 國考速記口訣
+法益確認為先決，要件爭點全破解！`,
+
+      '0-1-4': `# ⚖️ 【案例 1-4 原因自由行為與習慣法之禁止】
+> 📚 出處：陳奕廷(易律師)《刑法總則【圖說系列】》第 2-5 頁
+> 🏷️ 關聯法條：刑法第 1 條（罪刑法定）、第 19 條第 3 項（原因自由行為）
+
+### 📌 案件事實
+甲行兇前為免膽怯心軟，故意狂飲烈酒壯膽，使其於殺人實行階段陷入精神障礙心智缺陷狀態。甲抗辯刑法早期未明文處罰原因自由行為，不得依習慣法論罪。
+
+### 💡 核心爭點與體系檢驗
+1. **習慣法禁止原則（刑法第 1 條）**：
+   - 刑罰法規必須由立法院三讀通過、總統公布之「成文法律」明定。
+   - 不得逕以習慣法或不成文法理直接創設罪刑。
+2. **修法前困境**：
+   - 早期刑法第 19 條僅規定精神障礙不罰或減刑，實務逕引法理處罰，遭批評牴觸習慣法之禁止與罪刑法定主義。
+3. **修法後解決（明文化）**：
+   - 民國 94 年立法院修正刑法增訂第 19 條第 3 項：「前二項規定，於因故意或過失自行招致者，不適用之。」
+   - 正式將法理轉化為形式成文法，徹底符合罪刑法定要求。
+
+### 🎯 國考速記口訣
+成文法外無刑罰，法理入法方可罰！`,
+
+      'p0-1-4': `# ⚖️ 【案例 1-4 原因自由行為與習慣法之禁止】
+> 📚 出處：陳奕廷(易律師)《刑法總則【圖說系列】》第 2-5 頁
+> 🏷️ 關聯法條：刑法第 1 條（罪刑法定）、第 19 條第 3 項（原因自由行為）
+
+### 📌 案件事實
+甲行兇前為免膽怯心軟，故意狂飲烈酒壯膽，使其於殺人實行階段陷入精神障礙心智缺陷狀態。甲抗辯刑法早期未明文處罰原因自由行為，不得依習慣法論罪。
+
+### 💡 核心爭點與體系檢驗
+1. **習慣法禁止原則（刑法第 1 條）**：
+   - 刑罰法規必須由立法院三讀通過、總統公布之「成文法律」明定。
+   - 不得逕以習慣法或不成文法理直接創設罪刑。
+2. **修法前困境**：
+   - 早期刑法第 19 條僅規定精神障礙不罰或減刑，實務逕引法理處罰，遭批評牴觸習慣法之禁止與罪刑法定主義。
+3. **修法後解決（明文化）**：
+   - 民國 94 年立法院修正刑法增訂第 19 條第 3 項：「前二項規定，於因故意或過失自行招致者，不適用之。」
+   - 正式將法理轉化為形式成文法，徹底符合罪刑法定要求。
+
+### 🎯 國考速記口訣
+成文法外無刑罰，法理入法方可罰！`,
+
+      '0-1-5': `# ⚖️ 【案例 1-5 竊電擬制 vs 偷接第四台影音訊號類推禁止】
+> 📚 出處：陳奕廷(易律師)《刑法總則【圖說系列】》第 2-5 ～ 2-6 頁
+> 🏷️ 關聯法條：刑法第 1 條、第 320 條、第 323 條；臺灣高等法院 97 年度上易字第 648 號判決
+
+### 📌 案件事實
+甲未經第四台業者同意，擅自爬電線桿以同軸電纜私接線路，將影像與聲音訊號引至自家電視免費觀賞。檢察官依竊盜罪與第 323 條擬制能量動產起訴。
+
+### 💡 核心爭點與體系檢驗
+1. **類推適用之禁止（文義最大射程）**：
+   - 刑法禁止超越法條可能字面文義而為不利行為人之類推適用。
+2. **刑法第 323 條「能量」之文義極限**：
+   - 法條明文列舉「電能、熱能及其他能量」，係指具備獨立物理效用與經濟價值之物質能量。
+3. **影音訊號之本質（高院 97 上易 648 號）**：
+   - 有線電視光電訊號僅係「聲音與影像資訊之載體」，並非獨立之物理能量。
+   - 若將訊號涵攝或類推為能量，超越文義射程，屬違法之不利類推適用。
+4. **判決結論**：
+   - 甲不成立竊盜罪（判決無罪）！立法者事後於《有線廣播電視法》第 74 條另立規範以補漏洞。
+
+### 🎯 國考速記口訣
+訊號載體非能量，類推入罪法不許！`,
+
+      'p0-1-5': `# ⚖️ 【案例 1-5 竊電擬制 vs 偷接第四台影音訊號類推禁止】
+> 📚 出處：陳奕廷(易律師)《刑法總則【圖說系列】》第 2-5 ～ 2-6 頁
+> 🏷️ 關聯法條：刑法第 1 條、第 320 條、第 323 條；臺灣高等法院 97 年度上易字第 648 號判決
+
+### 📌 案件事實
+甲未經第四台業者同意，擅自爬電線桿以同軸電纜私接線路，將影像與聲音訊號引至自家電視免費觀賞。檢察官依竊盜罪與第 323 條擬制能量動產起訴。
+
+### 💡 核心爭點與體系檢驗
+1. **類推適用之禁止（文義最大射程）**：
+   - 刑法禁止超越法條可能字面文義而為不利行為人之類推適用。
+2. **刑法第 323 條「能量」之文義極限**：
+   - 法條明文列舉「電能、熱能及其他能量」，係指具備獨立物理效用與經濟價值之物質能量。
+3. **影音訊號之本質（高院 97 上易 648 號）**：
+   - 有線電視光電訊號僅係「聲音與影像資訊之載體」，並非獨立之物理能量。
+   - 若將訊號涵攝或類推為能量，超越文義射程，屬違法之不利類推適用。
+4. **判決結論**：
+   - 甲不成立竊盜罪（判決無罪）！立法者事後於《有線廣播電視法》第 74 條另立規範以補漏洞。
+
+### 🎯 國考速記口訣
+訊號載體非能量，類推入罪法不許！`,
+
+      '0-1-6': `# ⚖️ 【案例 1-6 法律效果明確性：絕對不定期刑違憲 vs 相對不定期刑合憲】
+> 📚 出處：陳奕廷(易律師)《刑法總則【圖說系列】》第 2-6 頁
+> 🏷️ 關聯法理：罪刑明確性原則（法律效果明確性）、憲法法治國原則
+
+### 📌 案例情境與類型對照
+法律條文對犯罪效果之規定方式，直接牽涉人民對刑度代價之預測可能性。
+
+### 💡 核心爭點與體系檢驗
+1. **罪刑明確性之雙重面向**：
+   - 構成要件明確性（何行為構成犯罪）。
+   - 法律效果明確性（犯罪之後果刑度）。
+2. **絕對不定期刑（違憲嚴禁）**：
+   - 規範模式：「處有期徒刑，直到改過自新為止。」
+   - 違憲理由：無刑期上限與下限，由行刑機關恣意剝奪自由，完全欠缺預見可能性，違憲無效。
+3. **相對不定期刑（合憲常態）**：
+   - 規範模式：「處五年以上十二年以下有期徒刑。」
+   - 合憲理由：訂有清晰法定刑幅度，兼顧法安定性明確性與法官個案裁量正義（§ 57），合憲有效。
+
+### 🎯 國考速記口訣
+刑度範圍定明文，絕對不定必違憲！`,
+
+      'p0-1-6': `# ⚖️ 【案例 1-6 法律效果明確性：絕對不定期刑違憲 vs 相對不定期刑合憲】
+> 📚 出處：陳奕廷(易律師)《刑法總則【圖說系列】》第 2-6 頁
+> 🏷️ 關聯法理：罪刑明確性原則（法律效果明確性）、憲法法治國原則
+
+### 📌 案例情境與類型對照
+法律條文對犯罪效果之規定方式，直接牽涉人民對刑度代價之預測可能性。
+
+### 💡 核心爭點與體系檢驗
+1. **罪刑明確性之雙重面向**：
+   - 構成要件明確性（何行為構成犯罪）。
+   - 法律效果明確性（犯罪之後果刑度）。
+2. **絕對不定期刑（違憲嚴禁）**：
+   - 規範模式：「處有期徒刑，直到改過自新為止。」
+   - 違憲理由：無刑期上限與下限，由行刑機關恣意剝奪自由，完全欠缺預見可能性，違憲無效。
+3. **相對不定期刑（合憲常態）**：
+   - 規範模式：「處五年以上十二年以下有期徒刑。」
+   - 合憲理由：訂有清晰法定刑幅度，兼顧法安定性明確性與法官個案裁量正義（§ 57），合憲有效。
+
+### 🎯 國考速記口訣
+刑度範圍定明文，絕對不定必違憲！`,
+
+      '0-1-7': `# ⚖️ 【案例 1-7 小三條款溯及生效之違法檢驗】
+> 📚 出處：陳奕廷(易律師)《刑法總則【圖說系列】》第 2-6 ～ 2-7 頁
+> 🏷️ 關聯法條：刑法第 1 條（行為時法）、憲法法安定性與信賴保護原則
+
+### 📌 案件事實
+公務員甲長期包養小三。立法院於 1 月 1 日增訂「公務員婚外情重懲條例」，明定處三年有期徒刑，並附帶規定「本法自前一年 7 月 1 日起溯及生效」。檢方依該法追訴甲前一年的行為。
+
+### 💡 核心爭點與體系檢驗
+1. **法不溯及既往原則（刑法第 1 條前段）**：
+   - 「行為之處罰，以行為時之法律有明文規定者為限。」
+   - 行為人僅能依據行為當時存在且有效之法律安排其生活。
+2. **信賴保護與法安定性**：
+   - 甲從事包養行為時，法律並無刑事處罰規定，甲享有憲法保障之行為自由與信賴利益。
+3. **審查結論**：
+   - 附帶之「溯及生效條款」違反罪刑法定原則與真正溯及既往禁止原則，該溯及規定違法違憲，對甲過去行為絕對無效，不得追訴！
+
+### 🎯 國考速記口訣
+行為時法為準繩，事後溯及全無效！`,
+
+      'p0-1-7': `# ⚖️ 【案例 1-7 小三條款溯及生效之違法檢驗】
+> 📚 出處：陳奕廷(易律師)《刑法總則【圖說系列】》第 2-6 ～ 2-7 頁
+> 🏷️ 關聯法條：刑法第 1 條（行為時法）、憲法法安定性與信賴保護原則
+
+### 📌 案件事實
+公務員甲長期包養小三。立法院於 1 月 1 日增訂「公務員婚外情重懲條例」，明定處三年有期徒刑，並附帶規定「本法自前一年 7 月 1 日起溯及生效」。檢方依該法追訴甲前一年的行為。
+
+### 💡 核心爭點與體系檢驗
+1. **法不溯及既往原則（刑法第 1 條前段）**：
+   - 「行為之處罰，以行為時之法律有明文規定者為限。」
+   - 行為人僅能依據行為當時存在且有效之法律安排其生活。
+2. **信賴保護與法安定性**：
+   - 甲從事包養行為時，法律並無刑事處罰規定，甲享有憲法保障之行為自由與信賴利益。
+3. **審查結論**：
+   - 附帶之「溯及生效條款」違反罪刑法定原則與真正溯及既往禁止原則，該溯及規定違法違憲，對甲過去行為絕對無效，不得追訴！
+
+### 🎯 國考速記口訣
+行為時法為準繩，事後溯及全無效！`,
+
+      '0-1-8': `# ⚖️ 【案例 1-8 準強盜罪強暴脅迫合憲限縮——釋字第 630 號】
+> 📚 出處：陳奕廷(易律師)《刑法總則【圖說系列】》第 2-7 ～ 2-8 頁
+> 🏷️ 關聯法條：刑法第 329 條（準強盜）、第 328 條（普通強盜）、司法院釋字第 630 號解釋
+
+### 📌 案件事實
+甲偷腳踏車得手被失主乙拉住衣領大喊抓賊。甲為脫身隨手輕推乙一下，乙腳步踉蹌未跌倒亦未受傷，甲趁隙騎車逃離。檢察官依準強盜罪（以強盜論，處五年以上重刑）起訴。
+
+### 💡 核心爭點與體系檢驗
+1. **罪刑相當原則與罪責原則之衝突**：
+   - 普通強盜罪（§ 328）以「至使不能抗拒」為要件，處 5 年以上重刑。
+   - 準強盜罪（§ 329）文義僅定「當場施以強暴脅迫」，若輕推即擬制強盜處 5 年以上，屬嚴重「小罪大罰」，違反憲法罪責相當原則。
+2. **司法院釋字第 630 號合憲性限縮**：
+   - 準強盜罪所施之強暴、脅迫，在客觀上必須達到「至使人難以抗拒之程度」，始符憲法比例原則與罪刑相當性。
+3. **案例涵攝結論**：
+   - 甲僅隨手輕推乙一下，未達「難以抗拒」門檻，不該當刑法第 329 條準強盜罪！
+   - 僅成立刑法第 320 條普通竊盜罪。
+
+### 🎯 國考速記口訣
+準強盜罪擬制重，難以抗拒始相當！`,
+
+      'p0-1-8': `# ⚖️ 【案例 1-8 準強盜罪強暴脅迫合憲限縮——釋字第 630 號】
+> 📚 出處：陳奕廷(易律師)《刑法總則【圖說系列】》第 2-7 ～ 2-8 頁
+> 🏷️ 關聯法條：刑法第 329 條（準強盜）、第 328 條（普通強盜）、司法院釋字第 630 號解釋
+
+### 📌 案件事實
+甲偷腳踏車得手被失主乙拉住衣領大喊抓賊。甲為脫身隨手輕推乙一下，乙腳步踉蹌未跌倒亦未受傷，甲趁隙騎車逃離。檢察官依準強盜罪（以強盜論，處五年以上重刑）起訴。
+
+### 💡 核心爭點與體系檢驗
+1. **罪刑相當原則與罪責原則之衝突**：
+   - 普通強盜罪（§ 328）以「至使不能抗拒」為要件，處 5 年以上重刑。
+   - 準強盜罪（§ 329）文義僅定「當場施以強暴脅迫」，若輕推即擬制強盜處 5 年以上，屬嚴重「小罪大罰」，違反憲法罪責相當原則。
+2. **司法院釋字第 630 號合憲性限縮**：
+   - 準強盜罪所施之強暴、脅迫，在客觀上必須達到「至使人難以抗拒之程度」，始符憲法比例原則與罪刑相當性。
+3. **案例涵攝結論**：
+   - 甲僅隨手輕推乙一下，未達「難以抗拒」門檻，不該當刑法第 329 條準強盜罪！
+   - 僅成立刑法第 320 條普通竊盜罪。
+
+### 🎯 國考速記口訣
+準強盜罪擬制重，難以抗拒始相當！`
     };
 
     let toastTimeout = null;
@@ -9942,8 +11815,8 @@
         });
       });
 
-      // 2. 內文核心圖解卡片 (圖 1-2, 拼圖模型, 論罪結構等)
-      const visualContainers = document.querySelectorAll('#viewChapter1 .rounded-2xl, #viewChapter2 .rounded-2xl');
+      // 2. 內文核心圖解卡片 (圖 1-2, 拼圖模型, 論罪結構, 四大支柱, 罪刑法定四大面向等)
+      const visualContainers = document.querySelectorAll('#viewChapter1 .rounded-2xl, #viewChapter2 .rounded-2xl, #viewPart0Chapter1 .rounded-2xl, #viewPart0Ch1Sec1 .rounded-2xl, #viewPart0Ch1Sec2 .rounded-2xl, #viewPart0Ch1Sec3 .rounded-2xl');
       visualContainers.forEach(container => {
         if (container.classList.contains('zoomable-diagram') || container.classList.contains('case-card')) return;
         const text = container.textContent || '';
@@ -9963,6 +11836,21 @@
         } else if (text.includes('客觀歸責') && text.includes('主觀歸責')) {
           matchedTitle = '客觀歸責與主觀歸責體系推導圖';
           matchedPage = 'P. 2-6';
+        } else if (text.includes('四大面向派生子原則') || (text.includes('習慣法之禁止') && text.includes('類推適用之禁止'))) {
+          matchedTitle = '罪刑法定原則四大派生面向架構圖';
+          matchedPage = 'P. 2-5';
+        } else if (text.includes('罪刑法定原則與公法') && text.includes('概念深度對照')) {
+          matchedTitle = '作者叮嚀：罪刑法定原則與公法概念深度對照矩陣';
+          matchedPage = 'P. 2-7';
+        } else if (text.includes('罪責原則之雙重核心內涵')) {
+          matchedTitle = '罪責原則雙重核心內涵架構圖';
+          matchedPage = 'P. 2-7';
+        } else if (text.includes('刑法四大支柱體系總覽') || text.includes('四大支柱體系總覽')) {
+          matchedTitle = '第一章 刑法運作四大支柱全景整合對照表';
+          matchedPage = 'P. 2-1~2-8';
+        } else if (text.includes('若個案結果「不利於人民」') && text.includes('若個案結果「有利於人民」')) {
+          matchedTitle = '刑法節制本質：不利人民嚴格禁止 vs 有利人民全面容許對照矩陣';
+          matchedPage = 'P. 2-8';
         }
 
         if (matchedTitle) {
