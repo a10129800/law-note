@@ -116,34 +116,54 @@
     }
 
     /* ==================== 升級功能 1 & 2 & 3 專用樣式 ==================== */
-    /* 1. 法條原地即時懸浮卡片 (Statute Popover) */
+    /* 1. 法條原地懸浮卡片 (Statute Popover - 極簡無擾設計) */
     .statute-trigger {
       cursor: pointer;
-      text-decoration-line: underline;
-      text-decoration-style: dotted;
-      text-decoration-color: rgba(59, 130, 246, 0.6);
-      text-underline-offset: 3px;
-      transition: all 0.15s ease;
+      text-decoration: none !important;
+      transition: opacity 0.15s ease;
     }
     .statute-trigger:hover {
-      text-decoration-style: solid;
-      color: #2563eb !important;
-    }
-    .dark .statute-trigger:hover {
-      color: #60a5fa !important;
+      opacity: 0.82;
     }
     #statutePopover {
       position: fixed;
-      z-index: 100;
+      z-index: 60;
       pointer-events: none;
       opacity: 0;
-      transform: translateY(6px) scale(0.97);
-      transition: opacity 0.18s cubic-bezier(0.16, 1, 0.3, 1), transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    #statutePopover.popover-visible {
-      pointer-events: auto;
-      opacity: 1;
-      transform: translateY(0) scale(1);
+    /* 桌面版浮動卡片 */
+    @media (min-width: 640px) {
+      #statutePopover {
+        transform: translateY(6px) scale(0.97);
+        border-radius: 1rem;
+        max-width: 24rem;
+        width: 100%;
+      }
+      #statutePopover.popover-visible {
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    /* 手機版底部抽屜 (Bottom Sheet) */
+    @media (max-width: 639px) {
+      #statutePopover {
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        top: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 1.25rem 1.25rem 0 0 !important;
+        transform: translateY(100%);
+        box-shadow: 0 -10px 35px rgba(0, 0, 0, 0.3);
+      }
+      #statutePopover.popover-visible {
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* 2. 右下角環形進度「回到頂部」浮動鈕 (Floating Back to Top) */
@@ -5440,16 +5460,25 @@
   </div>
 
   <!-- ==================== STATUTE HOVER POPOVER (法條原地即時懸浮卡片) ==================== -->
-  <div id="statutePopover" class="w-80 sm:w-96 p-4 rounded-2xl bg-white/95 dark:bg-[#111726]/95 backdrop-blur-xl border border-slate-200/90 dark:border-white/[0.14] shadow-2xl shadow-blue-900/15 text-slate-800 dark:text-slate-100 font-sans space-y-3" role="tooltip" aria-hidden="true">
-    <!-- Popover 頂部標題與體系階層徽章 -->
+  <div id="statutePopoverBackdrop" class="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 hidden transition-opacity" onclick="hideStatutePopover(true)"></div>
+
+  <div id="statutePopover" class="popover-hidden fixed z-60 bg-white/95 dark:bg-[#111726]/95 backdrop-blur-xl border border-slate-200/90 dark:border-white/[0.14] shadow-2xl shadow-blue-900/20 text-slate-800 dark:text-slate-100 font-sans space-y-3 p-4" role="tooltip" aria-hidden="true">
+    <!-- Popover 頂部標題與體系階層徽章與關閉按鈕 -->
     <div class="flex items-center justify-between gap-2 border-b border-slate-100 dark:border-white/[0.08] pb-2.5">
       <div class="flex items-center gap-2 min-w-0">
         <span class="text-base" id="statutePopIcon">📜</span>
         <h4 id="statutePopTitle" class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white truncate">刑法第 12 條</h4>
       </div>
-      <span id="statutePopBadge" class="shrink-0 text-[10.5px] font-mono font-bold px-2 py-0.5 rounded-md bg-blue-50 dark:bg-blue-950/70 text-blue-600 dark:text-blue-400 border border-blue-200/60 dark:border-blue-800/60">
-        構成要件
-      </span>
+      <div class="flex items-center gap-2 shrink-0">
+        <span id="statutePopBadge" class="text-[10.5px] font-mono font-bold px-2 py-0.5 rounded-md bg-blue-50 dark:bg-blue-950/70 text-blue-600 dark:text-blue-400 border border-blue-200/60 dark:border-blue-800/60">
+          構成要件
+        </span>
+        <button type="button" onclick="hideStatutePopover(true)" class="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-700 dark:hover:text-white transition-colors cursor-pointer" title="關閉卡片" aria-label="關閉卡片">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
     </div>
 
     <!-- 法條完整內容 -->
@@ -7183,12 +7212,15 @@
     };
 
     let popoverTimeout = null;
+    let popoverHoverTimer = null;
+
     function showStatutePopover(key, targetEl) {
       clearTimeout(popoverTimeout);
       const data = STATUTE_POPUP_DB[key];
       if (!data) return;
 
       const popover = document.getElementById('statutePopover');
+      const backdrop = document.getElementById('statutePopoverBackdrop');
       const titleEl = document.getElementById('statutePopTitle');
       const badgeEl = document.getElementById('statutePopBadge');
       const bodyEl = document.getElementById('statutePopBody');
@@ -7201,81 +7233,122 @@
       if (subEl) subEl.textContent = data.stage;
       if (roleEl) roleEl.textContent = data.role;
 
-      // 計算彈出卡片精確定位 (智慧防溢出與上下自動翻轉)
-      const rect = targetEl.getBoundingClientRect();
-      const popWidth = Math.min(384, window.innerWidth - 24);
-      let left = rect.left + (rect.width / 2) - (popWidth / 2);
-      left = Math.max(12, Math.min(left, window.innerWidth - popWidth - 12));
+      const isMobile = window.innerWidth < 640;
 
-      // 檢查上方空間是否充足 (預設優先放置於目標上方)
-      let top;
-      const estimatedHeight = 220;
-      if (rect.top > estimatedHeight + 16) {
-        top = rect.top - estimatedHeight - 8;
+      if (isMobile) {
+        if (backdrop) backdrop.classList.remove('hidden');
       } else {
-        top = rect.bottom + 8;
+        if (backdrop) backdrop.classList.add('hidden');
+
+        // 計算桌面版彈出卡片精確定位 (智慧防溢出與上下自動翻轉)
+        const rect = targetEl.getBoundingClientRect();
+        const popWidth = Math.min(384, window.innerWidth - 24);
+        let left = rect.left + (rect.width / 2) - (popWidth / 2);
+        left = Math.max(12, Math.min(left, window.innerWidth - popWidth - 12));
+
+        let top;
+        const estimatedHeight = 240;
+        if (rect.top > estimatedHeight + 16) {
+          top = rect.top - estimatedHeight - 8;
+        } else {
+          top = rect.bottom + 8;
+        }
+
+        popover.style.left = `${left}px`;
+        popover.style.top = `${top}px`;
       }
 
-      popover.style.left = `${left}px`;
-      popover.style.top = `${top}px`;
       popover.classList.add('popover-visible');
     }
 
-    function hideStatutePopover() {
-      popoverTimeout = setTimeout(() => {
+    function hideStatutePopover(immediate = false) {
+      const doHide = () => {
         const popover = document.getElementById('statutePopover');
+        const backdrop = document.getElementById('statutePopoverBackdrop');
         if (popover) popover.classList.remove('popover-visible');
-      }, 160);
+        if (backdrop) backdrop.classList.add('hidden');
+      };
+
+      if (immediate) {
+        clearTimeout(popoverTimeout);
+        clearTimeout(popoverHoverTimer);
+        doHide();
+      } else {
+        popoverTimeout = setTimeout(doHide, 160);
+      }
     }
 
     // 當滑鼠移入 Popover 本身時保持開啟，離開時關閉
     const popoverEl = document.getElementById('statutePopover');
     if (popoverEl) {
       popoverEl.addEventListener('mouseenter', () => { clearTimeout(popoverTimeout); });
-      popoverEl.addEventListener('mouseleave', hideStatutePopover);
+      popoverEl.addEventListener('mouseleave', () => {
+        if (window.innerWidth >= 640) hideStatutePopover();
+      });
     }
 
-    // 自動初始化頁面中所有法條觸發標籤
+    // 精確初始化法條觸發器：僅針對案例卡片徽章與法規連結，絕不干擾正文與標題
     function initStatuteTriggers() {
-      const candidates = document.querySelectorAll('span, a, strong, div');
-      candidates.forEach(el => {
+      // 1. 案例卡片右上角的法條標籤 (例如: § 16 欠缺不法意識)
+      const caseBadges = document.querySelectorAll('div.flex.items-center.justify-between > span');
+      caseBadges.forEach(el => {
         if (el.dataset.statuteBound) return;
         const text = el.textContent || '';
-        
-        // 匹配 § 12, § 16, § 19, 113年憲判字第8號 等
-        let matchedKey = null;
-        if (text.includes('113年憲判字第8號') || text.includes('憲判字第8號')) {
-          matchedKey = '113-8';
-        } else {
-          const match = text.match(/§\s*(\d+)/);
-          if (match && STATUTE_POPUP_DB[match[1]]) {
-            matchedKey = match[1];
-          }
+        const match = text.match(/§\s*(\d+)/);
+        if (match && STATUTE_POPUP_DB[match[1]]) {
+          bindStatuteElement(el, match[1]);
         }
+      });
 
-        // 若為法規超連結亦檢查
-        if (!matchedKey && el.tagName === 'A' && el.href) {
-          const urlMatch = el.href.match(/flno=(\d+)/);
-          if (urlMatch && STATUTE_POPUP_DB[urlMatch[1]]) {
-            matchedKey = urlMatch[1];
-          }
+      // 2. 全國法規資料庫外部連結 (例如: 全國法規資料庫 § 16 條文 ↗)
+      const mojLinks = document.querySelectorAll('a[href*="law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno="]');
+      mojLinks.forEach(el => {
+        if (el.dataset.statuteBound) return;
+        const match = el.href.match(/flno=(\d+)/);
+        if (match && STATUTE_POPUP_DB[match[1]]) {
+          bindStatuteElement(el, match[1]);
         }
+      });
 
-        if (matchedKey) {
-          el.dataset.statuteBound = 'true';
-          el.classList.add('statute-trigger');
-          el.setAttribute('title', `點擊或懸停查看 刑法第 ${matchedKey === '113-8' ? '113年憲判字第8號' : matchedKey + ' 條'} 現行條文與爭點`);
-          
-          el.addEventListener('mouseenter', () => showStatutePopover(matchedKey, el));
-          el.addEventListener('mouseleave', hideStatutePopover);
-          el.addEventListener('click', (e) => {
-            // 在手機或觸控螢幕上支援點擊切換
-            if (window.innerWidth < 1024) {
-              e.preventDefault();
-              showStatutePopover(matchedKey, el);
-            }
-          });
+      // 3. 特別標註有 data-statute 屬性之元素
+      const customElements = document.querySelectorAll('[data-statute]');
+      customElements.forEach(el => {
+        if (el.dataset.statuteBound) return;
+        const key = el.dataset.statute;
+        if (STATUTE_POPUP_DB[key]) {
+          bindStatuteElement(el, key);
         }
+      });
+    }
+
+    function bindStatuteElement(el, matchedKey) {
+      el.dataset.statuteBound = 'true';
+      el.classList.add('statute-trigger');
+      el.setAttribute('title', `查看 刑法第 ${matchedKey === '113-8' ? '113年憲判字第8號' : matchedKey + ' 條'} 條文與爭點`);
+
+      // 桌面版延遲懸停 (260ms 防誤觸，滑鼠快速滑過不彈出)
+      el.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 640) {
+          clearTimeout(popoverHoverTimer);
+          popoverHoverTimer = setTimeout(() => {
+            showStatutePopover(matchedKey, el);
+          }, 260);
+        }
+      });
+
+      el.addEventListener('mouseleave', () => {
+        if (window.innerWidth >= 640) {
+          clearTimeout(popoverHoverTimer);
+          hideStatutePopover();
+        }
+      });
+
+      // 點擊觸發 (行動端點選或桌面端直接點擊)
+      el.addEventListener('click', (e) => {
+        if (el.tagName === 'A') {
+          e.preventDefault();
+        }
+        showStatutePopover(matchedKey, el);
       });
     }
 
