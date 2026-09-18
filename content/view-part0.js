@@ -3,7 +3,7 @@
  * 第零篇 刑法的運作、操作原理與法律效果 (本篇導讀)
  */
 window.APP_VIEWS = window.APP_VIEWS || {};
-window.APP_VIEWS['viewPart0'] = `
+window.APP_VIEWS['viewPart0'] = window.APP_VIEWS['part0'] = `
         <!-- VIEW 4: 第零篇 刑法的運作、操作原理與法律效果 (本篇導讀) -->
         <div id="viewPart0" class="fade-enter hidden space-y-6">
           

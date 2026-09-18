@@ -3,7 +3,7 @@
 // 封裝自刑法總則【圖說系列】之書籍主頁，包含 3D 書封、極光光暈、量化晶片、詳細規格與圖解藝廊
 // ==============================================================================
 window.APP_VIEWS = window.APP_VIEWS || {};
-window.APP_VIEWS['viewHome'] = `
+window.APP_VIEWS['viewHome'] = window.APP_VIEWS['home'] = `
         <!-- ========================================== -->
         <!-- VIEW 0: 書籍主頁 (Home View) -->
         <!-- ========================================== -->
@@ -39,7 +39,7 @@ window.APP_VIEWS['viewHome'] = `
                     <img id="bookCoverImg" 
                          src="./cover.png" 
                          alt="刑法總則【圖說系列】封面" 
-                         onerror="this.onerror=null; this.src='file:///C:/Users/mice/.gemini/antigravity-ide/brain/0e0d470c-7eec-401f-a716-406160abe91a/.user_uploaded/media_1789548648115.png'; this.onerror=function(){ this.style.display='none'; document.getElementById('bookCoverFallback').style.display='flex'; }" 
+                         onerror="this.style.display='none'; var fb = document.getElementById('bookCoverFallback'); if(fb) fb.style.display='flex';" 
                          class="w-full h-full object-cover object-top">
                     
                     <!-- 優雅降級 Fallback 擬真書封 (若實體圖片加載失敗時自動呈現) -->

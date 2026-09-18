@@ -3,7 +3,7 @@
 // 封裝自刑法總則【圖說系列】之導論 犯罪概念與論罪結構 Conducted Read
 // ==============================================================================
 window.APP_VIEWS = window.APP_VIEWS || {};
-window.APP_VIEWS['viewIntro'] = `
+window.APP_VIEWS['viewIntro'] = window.APP_VIEWS['intro'] = `
         <!-- VIEW A: 本篇導讀 (初始畫面：按下第一章前僅顯示導讀，其餘內容不出現) -->
         <div id="viewIntro" class="fade-enter hidden space-y-6">
           

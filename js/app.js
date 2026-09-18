@@ -2,28 +2,109 @@
 // 刑法總則【圖說系列】研讀筆記 - 核心控制器 (App Controller)
 // ===================================================
 
-// ==================== 0. 視圖掛載系統 (Mount Views System) ====================
-function mountAllViews() {
-  const container = document.getElementById('mainContentContainer');
-  if (!container || !window.APP_VIEWS) return;
+// ==================== 0. 全域節點快取與樣式常數宣告 ====================
+const ACTIVE_CLASS = ['bg-blue-50', 'dark:bg-blue-950/70', 'text-blue-800', 'dark:text-blue-300', 'font-semibold'];
+const INACTIVE_CLASS = ['text-slate-600', 'dark:text-slate-400', 'font-medium'];
 
-  const views = [
-    window.APP_VIEWS.home,
-    window.APP_VIEWS.intro,
-    window.APP_VIEWS.chapter1,
-    window.APP_VIEWS.chapter2,
-    window.APP_VIEWS.part0,
-    window.APP_VIEWS.part0Ch1,
-    window.APP_VIEWS.part0Ch1Sec1,
-    window.APP_VIEWS.part0Ch1Sec2,
-    window.APP_VIEWS.part0Ch1Sec3
-  ];
+let viewHome = null;
+let viewIntro = null;
+let viewChapter1 = null;
+let viewChapter2 = null;
+let viewPart0 = null;
+let viewPart0Chapter1 = null;
+let viewPart0Ch1Sec1 = null;
+let viewPart0Ch1Sec2 = null;
+let viewPart0Ch1Sec3 = null;
 
-  container.innerHTML = views.filter(Boolean).join('\n');
+let rightTocAside = null;
+let currentChapterBadge = null;
+
+let navBtnHome = null;
+let navDotHome = null;
+let navBtnIntro = null;
+let navBtnChapter1 = null;
+let navBtnChapter2 = null;
+let navBtnPart0 = null;
+let navBtnPart0Intro = null;
+let navBtnPart0Ch1 = null;
+let navBtnPart0Ch1Sec1 = null;
+let navBtnPart0Ch1Sec2 = null;
+let navBtnPart0Ch1Sec3 = null;
+
+function refreshViewElements() {
+  viewHome = document.getElementById('viewHome');
+  viewIntro = document.getElementById('viewIntro');
+  viewChapter1 = document.getElementById('viewChapter1');
+  viewChapter2 = document.getElementById('viewChapter2');
+  viewPart0 = document.getElementById('viewPart0');
+  viewPart0Chapter1 = document.getElementById('viewPart0Chapter1');
+  viewPart0Ch1Sec1 = document.getElementById('viewPart0Ch1Sec1');
+  viewPart0Ch1Sec2 = document.getElementById('viewPart0Ch1Sec2');
+  viewPart0Ch1Sec3 = document.getElementById('viewPart0Ch1Sec3');
+
+  rightTocAside = document.getElementById('rightTocAside');
+  currentChapterBadge = document.getElementById('currentChapterBadge');
+
+  navBtnHome = document.getElementById('navBtnHome');
+  navDotHome = document.getElementById('navDotHome');
+  navBtnIntro = document.getElementById('navBtnIntro');
+  navBtnChapter1 = document.getElementById('navBtnChapter1');
+  navBtnChapter2 = document.getElementById('navBtnChapter2');
+  navBtnPart0 = document.getElementById('navBtnPart0');
+  navBtnPart0Intro = document.getElementById('navBtnPart0Intro');
+  navBtnPart0Ch1 = document.getElementById('navBtnPart0Ch1');
+  navBtnPart0Ch1Sec1 = document.getElementById('navBtnPart0Ch1Sec1');
+  navBtnPart0Ch1Sec2 = document.getElementById('navBtnPart0Ch1Sec2');
+  navBtnPart0Ch1Sec3 = document.getElementById('navBtnPart0Ch1Sec3');
 }
 
-// 立即同步掛載所有視圖
+// ==================== 0.1 視圖掛載系統 (Mount Views System) ====================
+function mountAllViews() {
+  try {
+    const container = document.getElementById('mainContentContainer');
+    if (!container || !window.APP_VIEWS) return;
+
+    const orderedViews = [
+      window.APP_VIEWS.viewHome || window.APP_VIEWS.home,
+      window.APP_VIEWS.viewIntro || window.APP_VIEWS.intro,
+      window.APP_VIEWS.viewChapter1 || window.APP_VIEWS.chapter1,
+      window.APP_VIEWS.viewChapter2 || window.APP_VIEWS.chapter2,
+      window.APP_VIEWS.viewPart0 || window.APP_VIEWS.part0,
+      window.APP_VIEWS.viewPart0Chapter1 || window.APP_VIEWS.viewPart0Ch1 || window.APP_VIEWS.part0Chapter1 || window.APP_VIEWS.part0Ch1,
+      window.APP_VIEWS.viewPart0Ch1Sec1 || window.APP_VIEWS.part0Ch1Sec1,
+      window.APP_VIEWS.viewPart0Ch1Sec2 || window.APP_VIEWS.part0Ch1Sec2,
+      window.APP_VIEWS.viewPart0Ch1Sec3 || window.APP_VIEWS.part0Ch1Sec3
+    ];
+
+    const views = [];
+    const addedHtmls = new Set();
+
+    orderedViews.forEach(html => {
+      if (html && typeof html === 'string') {
+        views.push(html);
+        addedHtmls.add(html);
+      }
+    });
+
+    // 保底：若有任何其他視圖字串，也自動掛載
+    Object.keys(window.APP_VIEWS).forEach(k => {
+      const html = window.APP_VIEWS[k];
+      if (html && typeof html === 'string' && !addedHtmls.has(html)) {
+        views.push(html);
+        addedHtmls.add(html);
+      }
+    });
+
+    container.innerHTML = views.filter(Boolean).join('\n');
+    refreshViewElements();
+  } catch (err) {
+    console.error('mountAllViews error:', err);
+  }
+}
+
+// 立即同步掛載所有視圖並綁定節點
 mountAllViews();
+refreshViewElements();
 
 // 引用外部抽取之資料常數
 const TOC_CONFIG = window.TOC_CONFIG || {};
@@ -229,33 +310,7 @@ function toggleMobileTocModal() {
   if (modal) modal.classList.toggle('hidden');
 }
 
-// ==================== 3. 視圖元素與導航節點獲取 ====================
-const viewHome = document.getElementById('viewHome');
-const viewIntro = document.getElementById('viewIntro');
-const viewChapter1 = document.getElementById('viewChapter1');
-const viewChapter2 = document.getElementById('viewChapter2');
-const viewPart0 = document.getElementById('viewPart0');
-const viewPart0Chapter1 = document.getElementById('viewPart0Chapter1');
-const viewPart0Ch1Sec1 = document.getElementById('viewPart0Ch1Sec1');
-const viewPart0Ch1Sec2 = document.getElementById('viewPart0Ch1Sec2');
-const viewPart0Ch1Sec3 = document.getElementById('viewPart0Ch1Sec3');
-const rightTocAside = document.getElementById('rightTocAside');
-const currentChapterBadge = document.getElementById('currentChapterBadge');
-
-const navBtnHome = document.getElementById('navBtnHome');
-const navDotHome = document.getElementById('navDotHome');
-const navBtnIntro = document.getElementById('navBtnIntro');
-const navBtnChapter1 = document.getElementById('navBtnChapter1');
-const navBtnChapter2 = document.getElementById('navBtnChapter2');
-const navBtnPart0 = document.getElementById('navBtnPart0');
-const navBtnPart0Intro = document.getElementById('navBtnPart0Intro');
-const navBtnPart0Ch1 = document.getElementById('navBtnPart0Ch1');
-const navBtnPart0Ch1Sec1 = document.getElementById('navBtnPart0Ch1Sec1');
-const navBtnPart0Ch1Sec2 = document.getElementById('navBtnPart0Ch1Sec2');
-const navBtnPart0Ch1Sec3 = document.getElementById('navBtnPart0Ch1Sec3');
-
-const ACTIVE_CLASS = ['bg-blue-50', 'dark:bg-blue-950/70', 'text-blue-800', 'dark:text-blue-300', 'font-semibold'];
-const INACTIVE_CLASS = ['text-slate-600', 'dark:text-slate-400', 'font-medium'];
+// ==================== 3. 視圖元素與導航節點獲取 (已於頂部宣告並由 refreshViewElements() 統一綁定) ====================
 
 function clearNavStyles() {
   if (navBtnChapter1) {
@@ -348,6 +403,13 @@ function setRightTocVisibility(shouldShow) {
 
 // ==================== 5. 視圖切換系統 (View Switcher) ====================
 function switchView(viewName, shouldScrollTop = true) {
+  if (!viewHome || !document.getElementById('viewHome')) {
+    const container = document.getElementById('mainContentContainer');
+    if (container && container.children.length === 0) {
+      mountAllViews();
+    }
+  }
+  refreshViewElements();
   clearNavStyles();
 
   const allViews = [
@@ -1742,3 +1804,42 @@ window.addEventListener('load', () => {
   initLightboxEvents();
   setupZoomableDiagrams();
 });
+
+// ==================== 16. 全域 API 導出 (確保 HTML inline onclick 100% 可呼叫) ====================
+window.switchView = switchView;
+window.toggleTheme = toggleTheme;
+window.cycleTheme = cycleTheme;
+window.setTheme = setTheme;
+window.applyTheme = applyTheme;
+window.applyLineHeight = applyLineHeight;
+window.setLineHeightPreset = setLineHeightPreset;
+window.resetReaderPreferences = resetReaderPreferences;
+window.applyFontScale = applyFontScale;
+window.setFontScalePreset = setFontScalePreset;
+window.adjustFontSize = adjustFontSize;
+window.resetFontSize = resetFontSize;
+window.toggleFontMenu = toggleFontMenu;
+window.toggleMobileDrawer = toggleMobileDrawer;
+window.toggleMobileTocModal = toggleMobileTocModal;
+window.openSearchModal = openSearchModal;
+window.closeSearchModal = closeSearchModal;
+window.setSearchFilter = setSearchFilter;
+window.handleSearchInput = handleSearchInput;
+window.quickFillSearch = quickFillSearch;
+window.scrollToSection = scrollToSection;
+window.copyPageUrl = copyPageUrl;
+window.showStatutePopover = showStatutePopover;
+window.hideStatutePopover = hideStatutePopover;
+window.copyCaseNote = copyCaseNote;
+window.toggleCaseCard = toggleCaseCard;
+window.toggleAllCases = toggleAllCases;
+window.switchJustTab = switchJustTab;
+window.filterJustCase = filterJustCase;
+window.switchMatrixTab = switchMatrixTab;
+window.filterMatrixConcept = filterMatrixConcept;
+window.openDiagramLightbox = openDiagramLightbox;
+window.closeDiagramLightbox = closeDiagramLightbox;
+window.lightboxZoom = lightboxZoom;
+window.lightboxResetZoom = lightboxResetZoom;
+window.refreshViewElements = refreshViewElements;
+window.mountAllViews = mountAllViews;

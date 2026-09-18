@@ -3,7 +3,7 @@
  * 第零篇 第一章 第一節 法益保護原則——何謂法益？ (教材第 2-1 ~ 2-4 頁)
  */
 window.APP_VIEWS = window.APP_VIEWS || {};
-window.APP_VIEWS['viewPart0Ch1Sec1'] = `
+window.APP_VIEWS['viewPart0Ch1Sec1'] = window.APP_VIEWS['part0Ch1Sec1'] = `
         <!-- VIEW 6: 第零篇 第一章・第一節 法益保護原則——何謂法益？ (教材第 2-1 ~ 2-4 頁) -->
         <div id="viewPart0Ch1Sec1" class="fade-enter hidden space-y-8">
           

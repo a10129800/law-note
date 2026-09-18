@@ -3,7 +3,7 @@
  * 第零篇 第一章 刑法的運作原理 (教材第 2-1 頁)
  */
 window.APP_VIEWS = window.APP_VIEWS || {};
-window.APP_VIEWS['viewPart0Chapter1'] = `
+window.APP_VIEWS['viewPart0Chapter1'] = window.APP_VIEWS['viewPart0Ch1'] = window.APP_VIEWS['part0Ch1'] = window.APP_VIEWS['part0Chapter1'] = `
         <!-- VIEW 5: 第零篇 第一章 刑法的運作原理 (教材第 2-1 頁) -->
         <div id="viewPart0Chapter1" class="fade-enter hidden space-y-8">
           

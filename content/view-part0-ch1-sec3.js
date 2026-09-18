@@ -3,7 +3,7 @@
  * 第零篇 第一章 第三節 罪責原則——付出代價的極限何在？ (教材第 2-7 ~ 2-8 頁)
  */
 window.APP_VIEWS = window.APP_VIEWS || {};
-window.APP_VIEWS['viewPart0Ch1Sec3'] = `
+window.APP_VIEWS['viewPart0Ch1Sec3'] = window.APP_VIEWS['part0Ch1Sec3'] = `
         <!-- VIEW 8: 第零篇 第一章・第三節 罪責原則——付出代價的極限何在？ (教材第 2-7 ~ 2-8 頁) -->
         <div id="viewPart0Ch1Sec3" class="fade-enter hidden space-y-8">
           

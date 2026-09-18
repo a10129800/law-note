@@ -3,7 +3,7 @@
 // 包含 16 個大節、案例 1-1 至 1-17、Mega 爭點對照矩陣
 // ==============================================================================
 window.APP_VIEWS = window.APP_VIEWS || {};
-window.APP_VIEWS['viewChapter1'] = `
+window.APP_VIEWS['viewChapter1'] = window.APP_VIEWS['chapter1'] = `
         <!-- VIEW B: 第一章 犯罪的概念 (點擊第一章後才跳轉顯示此處，右側清單同時顯現) -->
         <div id="viewChapter1" class="fade-enter hidden space-y-8">
           

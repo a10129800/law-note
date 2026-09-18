@@ -254,12 +254,138 @@ criminal-law-notes/
 4. 控制器 `js/app.js` 於頁面加載時同步調用 `mountAllViews()` 瞬間注入容器。
 👉 **完全不需要本機架設 HTTP Web Server，直接雙擊 `index.html` 即可完美運作！**
 
+### 📌 Milestone 11：視圖掛載鍵值對齊與暫時性死區(TDZ)修復（修復內文空白與三區按鈕失效）(v3.1)
+
+在模組化重構上線至 GitHub Pages 與本機雙擊開啟的實測過程中，全面排查並修復了兩大核心互動阻礙，建構具備強韌自癒力之前端掛載與事件體系：
+
+#### 🔍 1. 痛點一：內文完全空白消失（View Key Mismatch）
+- **現象回放**：頁面僅渲染頂部 Header 與左側目錄，中央主閱讀容器 `<main id="mainContentContainer">` 呈現完全空白。
+- **根本原因**：
+  - 各篇章視圖模組（`content/view-*.js`）註冊全稱（如 `window.APP_VIEWS['viewHome']`、`window.APP_VIEWS['viewPart0Chapter1']`）。
+  - 控制器 `js/app.js` 初版讀取無前綴簡稱（`home`, `chapter1`, `part0Ch1` 等），導致取值全為 `undefined`。
+  - `views.filter(Boolean)` 產生空陣列，將主閱讀容器覆寫為空字串。
+- **解決方案**：
+  - **雙別名相容映射**：`orderedViews` 陣列採用 `viewHome || home`、`viewPart0Chapter1 || part0Ch1` 等所有全稱與簡稱。
+  - **視圖層雙向賦值**：全部 9 個 `view-*.js` 視圖模組同步宣告雙別名（如 `window.APP_VIEWS['viewHome'] = window.APP_VIEWS['home'] = ...`）。
+  - **動態遍歷保底**：自動遍歷 `window.APP_VIEWS` 中任何尚未被納入的視圖字串追加掛載，確保未來新擴充章節絕不遺漏。
+
+#### 🔍 2. 痛點二：三區按鈕點擊完全無反應（TDZ ReferenceError）
+
+- **現象回放**：  
+  當內文掛載修復後，使用者點擊介面中的各項功能按鈕時，畫面完全靜止無任何反應，彷彿按鈕均為死連結。經系統化排查，受影響的共有**三大核心互動區域**：
+  1. **頂部 Header 快捷列**：深淺色彩模式切換鈕（`[☀️ 明亮]` / `[🌙 暗黑]`，調用 `toggleTheme()`）、字級與行距調整選單無反應。
+  2. **左側目錄導航側邊欄 (Sidebar Navigation)**：
+     - 書籍首頁鈕 (`navBtnHome` ➔ `switchView('home')`)
+     - 導論本篇導讀鈕 (`navBtnIntro` ➔ `switchView('intro')`)
+     - 第一章《犯罪的概念》(`navBtnChapter1` ➔ `switchView('chapter-1')`)
+     - 第二章《刑法的論罪結構》(`navBtnChapter2` ➔ `switchView('chapter-2')`)
+     - 第零篇本篇導讀鈕 (`navBtnPart0` / `navBtnPart0Intro` ➔ `switchView('part0-intro')`)
+     - 第零篇第一章總覽鈕 (`navBtnPart0Ch1` ➔ `switchView('part0-chapter-1')`)
+     - 第一節法益保護原則 (`navBtnPart0Ch1Sec1` ➔ `switchView('part0-ch1-sec1')`)
+     - 第二節罪刑法定原則 (`navBtnPart0Ch1Sec2` ➔ `switchView('part0-ch1-sec2')`)
+     - 第三節罪責原則 (`navBtnPart0Ch1Sec3` ➔ `switchView('part0-ch1-sec3')`)
+  3. **書籍首頁 Hero 資訊看板底部 CTA 跳轉按鈕**：
+     - `[🚀 開始閱讀第一章]` (`onclick="switchView('chapter-1')"`）
+     - `[📄 閱讀第二章]` (`onclick="switchView('chapter-2')"`）
+     - `[📖 查看本篇導論]` (`onclick="switchView('intro')"`）
+
+- **深度診斷與根因剖析（Root Cause Deep Dive）**：
+  - **F12 瀏覽器控制台關鍵報錯**：
+    ```text
+    Uncaught ReferenceError: Cannot access 'viewHome' before initialization
+        at refreshViewElements (app.js:35)
+        at mountAllViews (app.js:99)
+        at app.js:106
+    ```
+  - **ES6 暫時性死區（Temporal Dead Zone, TDZ）觸發機制**：
+    - 在 ES6+ 中，使用 `let` 與 `const` 宣告的變數具有塊級作用域（Block Scope）。雖然在編譯階段變數名被提升（Hoisting），但在代碼執行流正式走到變數的 `let` 宣告語句之前，該變數處於不可讀寫的**暫時性死區（TDZ）**。
+    - 在最初模組化重構時，為了儘早將各視圖 HTML 注入 DOM，在 `app.js` 第 106 行立即執行了 `mountAllViews()`，並在其末尾調用了 `refreshViewElements()` 以抓取 DOM 元素快取。
+    - 然而，元素宣告語句（如 `let viewHome = null;`、`let viewChapter1 = null;`）原先被放置在檔案後方的第 255 行！
+    - 當執行到第 35 行 `viewHome = document.getElementById('viewHome')` 時，變數 `viewHome` 尚未完成初始化，JavaScript 引擎立刻拋出 `Uncaught ReferenceError`，導致整個 `app.js` 腳本執行在此中途崩潰！
+  - **骨牌效應（連鎖失靈原因）**：
+    - 由於腳本在加載初期即報錯終止，位於下方定義的所有控制器函式（包括 `switchView()`、`toggleTheme()`、`openSearchModal()` 等）根本未被 JavaScript 引擎註冊到全域作用域。
+    - 當使用者在頁面上點擊 `<button onclick="switchView('chapter-1')">` 時，瀏覽器試圖在 `window` 尋找 `switchView` 識別字，但該函式為 `undefined`，造成全站按鈕全面癱瘓。
+
+- **Before vs After 代碼重構對比**：
+
+  ```javascript
+  // ❌ 重構前：順序顛倒觸發 TDZ（代碼中途崩潰）
+  function mountAllViews() {
+    container.innerHTML = ...;
+    refreshViewElements(); // 🚨 調用時 viewHome 處於 TDZ！
+  }
+  mountAllViews(); // 🚨 執行中斷，後續函式完全未載入
+
+  function refreshViewElements() {
+    viewHome = document.getElementById('viewHome'); // 💥 ReferenceError
+  }
+  let viewHome; // 宣告太晚（位於第 255 行）
+  function switchView(viewName) { ... }
+  ```
+
+  ```javascript
+  // ✅ 重構後：嚴格頂置宣告 + 顯式全域導出（100% 穩定自癒）
+  // 1. 全域節點變數與樣式常數一律移至第 5 行最頂端
+  const ACTIVE_CLASS = ['bg-blue-50', 'text-blue-800', ...];
+  let viewHome = null;
+  let viewChapter1 = null;
+  // ... 宣告全部元素變數
+
+  // 2. 視圖元素刷新器
+  function refreshViewElements() {
+    viewHome = document.getElementById('viewHome');
+    viewChapter1 = document.getElementById('viewChapter1');
+    // 安全賦值，無 TDZ 問題
+  }
+
+  // 3. 掛載邏輯封裝並置於頂置宣告之後，配置 try...catch 防護
+  function mountAllViews() {
+    try {
+      // 容錯別名掛載與動態保底遍歷...
+      container.innerHTML = views.filter(Boolean).join('\n');
+      refreshViewElements();
+    } catch (err) {
+      console.error('mountAllViews error:', err);
+    }
+  }
+  mountAllViews();
+  refreshViewElements();
+
+  // 4. 核心控制器函式在 switchView 開頭強制動態刷新
+  function switchView(viewName, targetAnchor = null) {
+    refreshViewElements(); // 確保 DOM 節點永遠有效
+    const allViews = [viewHome, viewIntro, viewChapter1, ...];
+    // 順暢切換顯示與隱藏...
+  }
+
+  // 5. 腳本末尾顯式導出至 window 全域物件（確保 HTML inline onclick 100% 命中）
+  window.switchView = switchView;
+  window.toggleTheme = toggleTheme;
+  window.openSearchModal = openSearchModal;
+  // ... 導出 30+ 個核心控制器函式
+  ```
+
+- **四重防禦自癒架構（4-Pillar Robustness Architecture）**：
+  1. **宣告層頂置（Top-level Hoisting Safety）**：將所有 DOM 快取變數 (`let viewHome = null;` 等) 與樣式陣列 (`ACTIVE_CLASS`) 統一宣告於 `app.js` 最上方（第 5~33 行），從語言層面杜絕 TDZ 發生。
+  2. **例外安全防護（Try-Catch Guard）**：`mountAllViews()` 內部加入 `try ... catch`，防止任何單一視圖字串異常中斷整個控制器執行。
+  3. **視圖切換動態自癒（Just-In-Time Element Refresh）**：在每次 `switchView()` 執行起點強制呼叫 `refreshViewElements()`，保證動態加載後的 DOM 參照永遠即時且正確，無懼異步延遲。
+  4. **全域顯式導出（Explicit Window Global Export）**：在 `app.js` 底部將所有 30+ 個核心控制器函式明確綁定至 `window`（如 `window.switchView = switchView; window.toggleTheme = toggleTheme;`），保證無論在任何模組化環境或非同步載入情境下，HTML inline 事件處理器 100% 可被正常調用。
+  5. **線上/離線相容性備援（Online/Offline Fallback）**：更新 `view-home.js` 封面圖片載入失敗備援邏輯，移除遠端線上環境對本地 `file:///` 的無效引用，杜絕控制台安全性警告。
+
+- **驗收測試標準作業程序 (Verification SOP)**：
+  - **步驟 1（控制台健康檢查）**：開啟瀏覽器開發者工具（F12 ➔ Console），重新整理頁面，確認無任何紅色報錯（0 Errors）。
+  - **步驟 2（頂部色彩切換驗證）**：點擊 Header 右上角 `[☀️ 明亮]` 按鈕，背景應即時在深黑與象牙白之間順暢切換，圖示與標籤隨動變更為 `[🌙 暗黑]`。
+  - **步驟 3（側邊欄多層跳轉驗證）**：依序點擊左側目錄之「第一章 犯罪的概念」、「第二章 刑法的論罪結構」、「第零篇 第一節 法益保護原則」，確認中央主閱讀視圖平滑滑動切換、右側 TOC 即時更新小節清單，且無畫面空白。
+  - **步驟 4（首頁 CTA 導航驗證）**：返回「書籍首頁」，點擊 Hero 卡片下方的 `[🚀 開始閱讀第一章]`、`[📄 閱讀第二章]` 與 `[📖 查看本篇導論]`，確認能精準跳轉至對應章節頂部。
+
 ---
 
 ## ⚠️ 架構防坑筆記 (Gotchas)
 
 | 地雷問題 | 根本原因 | 解決方案 |
 | :--- | :--- | :--- |
+| **三區按鈕點擊全無反應** | 在 `mountAllViews()` 中提前調用賦值給下方尚未宣告的 `let` 變數，觸發 TDZ `ReferenceError` 導致腳本中斷、全域函式未註冊。 | 節點變數與樣式常數一律宣告於腳本最頂端（Top-level），在 `switchView` 入口實施 JIT 自癒刷新，並將所有控制器函式顯式綁定至 `window` 全域物件。 |
+| **模組化掛載內文空白遺失** | 視圖檔案全域 Key（`viewHome`）與控制器掛載清單（`home`）命名失配，導致 `filter(Boolean)` 清空主閱讀容器。 | 控制器採用雙別名容錯（`viewHome \|\| home`）與動態保底遍歷，視圖層同步雙向聲明。 |
 | **右側目錄掉落至頁尾** | 內文小節遺留多餘未閉合的 `</div>`，導致 `<main>` 提前閉合。 | 確保 `.app-layout-container` 嚴格維持 3 個一級子節點。 |
 | **章節切換時畫面全黑** | 小節少寫 `</section>`，使後續視圖被誤包覆於父層遭 `display: none`。 | 所有 `#viewXXX` 必須為平級兄弟節點，`<section>` 1:1 精確配對。 |
 | **標題尾端被「...」吃掉** | 在單一行內塞入徽章、關閉鈕與標題，並套用 `truncate`。 | 拆為雙層標頭，標題獨立成行使用 `break-words`。 |

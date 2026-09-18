@@ -3,7 +3,7 @@
 // 包含構成要件本質、例外擴張處罰、案例 2-1 至 2-4、其他刑罰要件及犯罪基本審查流程
 // ==============================================================================
 window.APP_VIEWS = window.APP_VIEWS || {};
-window.APP_VIEWS['viewChapter2'] = `
+window.APP_VIEWS['viewChapter2'] = window.APP_VIEWS['chapter2'] = `
         <!-- VIEW C: 第二章 刑法的論罪結構 (點擊第二章後顯示) -->
         <div id="viewChapter2" class="fade-enter hidden space-y-8">
           

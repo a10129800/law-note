@@ -3,7 +3,7 @@
  * 第零篇 第一章 第二節 罪刑法定原則——付出代價的根據何在？ (教材第 2-5 ~ 2-7 頁)
  */
 window.APP_VIEWS = window.APP_VIEWS || {};
-window.APP_VIEWS['viewPart0Ch1Sec2'] = `
+window.APP_VIEWS['viewPart0Ch1Sec2'] = window.APP_VIEWS['part0Ch1Sec2'] = `
         <!-- VIEW 7: 第零篇 第一章・第二節 罪刑法定原則——付出代價的根據何在？ (教材第 2-5 ~ 2-7 頁) -->
         <div id="viewPart0Ch1Sec2" class="fade-enter hidden space-y-8">
           
