@@ -150,6 +150,63 @@ description: >-
   - 所有建置與自動推送批次檔（如 `copy_cover_and_push.bat`）**同步方向必須嚴格鎖定由乾淨母本向目標檔覆蓋**（即 `copy /y visual.html index.html`），嚴禁未經編碼驗證之暫存檔逆向覆蓋母本。
   - 專案根目錄必須常備一鍵還原批次檔 `restore_index.bat`，若瀏覽器出現編碼暫態異常，讀者可雙擊一鍵無損秒級還原。
 
+### 10. 法條原地指引卡片與零干擾防截斷規範 (Unobtrusive Statute Popover & Anti-Truncation Standard)
+法條原地懸浮預覽旨在為讀者提供即時法理對照，但絕不能犧牲閱讀的流暢與版面的乾淨。必須嚴格恪守以下準則：
+- **禁止正文貪婪掃描與底線雜訊污染（Zero Prose Clutter Principle）**：
+  - 嚴禁用正則表達式遍歷內文所有 `span, a, strong, div` 節點自動套用虛線底線！這會使引言、標題、正文充滿突兀的點狀下劃線，破壞整齊度與排版美感。
+  - **精準綁定鐵律**：事件監聽僅能鎖定「專屬案例卡片標頭膠囊徽章（如 `data-statute="刑法第16條"`）」或法規出處按鈕，維持內文閱讀區 100% 純淨無雜訊。
+- **懸停防誤觸延遲機制（Desktop Hover Debounce）**：
+  - 桌面端懸停觸發必須加入 **200~260ms** 的防誤觸計時器（`hoverTimer`）。
+  - 當滑鼠只是快速劃過頁面時，卡片絕不突兀閃爍跳出；唯有讀者目光停留並刻意懸停時，才優雅淡入。
+- **雙端響應式分流（Mobile Bottom Sheet vs. Desktop Floating Card）**：
+  - **桌面端（`>= 768px`）**：採絕對定位懸浮卡片，最大寬度擴增至 **`max-w-[27rem]`（432px）**，確保長法條標題與階層徽章能從容舒展，不顯擁擠。
+  - **行動端（`< 768px`）**：嚴禁在手機中央彈出懸浮窗！必須全面轉為標準的**「底部滑出抽屜式面板（Bottom Sheet）」**（`fixed inset-x-0 bottom-0`），配合全螢幕半透明毛玻璃遮罩（`backdrop-blur-sm bg-black/50`）與顯眼的專屬 `✕` 關閉按鈕，點擊遮罩或按鈕即刻向下滑出收起。
+- **雙層頂部標頭與徹底防截斷規範（Two-Tier Anti-Truncation Standard）**：
+  - 針對長法條名稱（如《刑法第 16 條【禁止錯誤／違法性錯誤】》），**嚴禁在單一行內擠入「圖示 + 標籤 + 標題 + 關閉按鈕」並施加 `truncate` 導致字尾被「...」無情裁切**！
+  - **標準雙層版面結構**：
+    - **第 1 層（輔助分類與操作列）**：左側放置法規圖示（`📜`）與彩色階層審查徽章（如 `罪責階段審查`）；右側放置顯眼的關閉按鈕（`✕`）。
+    - **第 2 層（完整法定標題列）**：獨立成專屬整行，寬度滿版（`w-full`），標題標籤使用 **`h4.break-words.leading-snug`**，**絕對禁止使用 `truncate`**！確保長法條標題在手機與電腦端 100% 完整無漏展示。
+
+### 11. 全域極速智慧搜尋系統規範 (Global Fast Search Standard - Ctrl+K)
+知識庫文檔龐大時，必須為讀者提供秒級直達的智慧檢索中心：
+- **全域快捷鍵召喚（Shortcut Binding）**：全域監聽 `Ctrl + K` 與 `Cmd + K`，亦在頂部導航列常駐搜尋入口按鈕，點擊即喚醒毛玻璃全螢幕搜尋浮層（Search Modal）。
+- **四象限即時分類過濾膠囊（Filter Pills）**：
+  - 搜尋列下方提供微型分類過濾標籤：`全部`、`⚖️ 案例`、`📜 法條`、`💡 核心學說`。
+  - 支援點擊即時重篩，亦支援關鍵字模糊加權比對（標題、副標、關鍵爭點與法條條號）。
+- **全鍵盤無障礙導航（Keyboard Accessibility）**：
+  - 支援 `↑` / `↓` 鍵上下巡覽搜尋結果項目，被選中項目高亮凸顯；按下 `Enter` 鍵直接跳轉。
+  - 按下 `Escape` 鍵或點擊遮罩即刻平滑關閉。
+- **搜尋目標脈衝光暈導引（Search Target Pulse Glow）**：
+  - 跳轉至目標案例或小節卡片時，系統自動將該卡片平滑滾動至螢幕正中央（`scrollIntoView({ behavior: 'smooth', block: 'center' })`）。
+  - 目標元素自動注入專屬脈衝光暈 class（`.search-target-highlight`），觸發持續 **2.5 秒**的呼吸動態微光（外發光天藍色光暈與微浮放效果），讓讀者在滿版文字中瞬間鎖定答案，隨後光暈優雅自然消退。
+
+### 12. 案例爭點一鍵導出與雙鏈筆記格式規範 (One-Click Note Export & Anki/Notion Formatting)
+教科書的案例與爭點是考生與法律學習者的核心記憶資產，必須支援一鍵轉換為個人筆記：
+- **案例標頭專屬動作鈕**：在每個案例卡片右上角配置低調精緻的「`📋 複製筆記`」操作按鈕。
+- **標準化 Markdown 雙鏈筆記排版**：導出格式必須兼顧 Anki 卡片正面/背面、Notion 雙欄與 Obsidian 雙鏈語法：
+  - `# ⚖️ 【案例 1-1】案例名稱`
+  - `> 📖 出處：陳奕廷《刑法總則【圖說系列】》第 X-X 頁`
+  - `## 📌 案件事實`：摘錄精簡事實。
+  - `## 🔍 階層審查與核心爭點`：條列構成要件、違法性、罪責各階段審查結論。
+  - `## 💡 考點速記口訣`：記憶公式與關鍵法理推導。
+  - `## 📜 關聯法條`：列出關聯條號（如 `[[刑法第16條]]`）。
+- **即時微互動反饋（Micro-Feedback）**：
+  - 點擊後剪貼簿複製成功，按鈕文字與圖示暫態切換為「`✓ 已複製`」並變換亮色。
+  - 同步於頁面右下角彈出精緻微型 Toast 提示通知（「已複製案例爭點筆記至剪貼簿」），維持 3 秒後平滑淡出。
+
+### 13. 深層研讀進度可視化與章節分頁規範 (Reading Progress & Pagination Standard)
+針對長篇學術知識庫，消除讀者進度迷失感並提供體系化沉浸導引：
+- **頂部黏性進度微流光（2.5px Sticky Progress Bar）**：
+  - 緊貼於頂部導航列下沿，高度為極細緻之 `2.5px`。
+  - 隨頁面垂直滾動距離即時計算讀取百分比，採用柔和漸層（如天藍至青藍），微光流動，絕不阻擋任何文字點擊。
+- **右下角懸浮環形進度回到頂部按鈕（Circular Progress FAB）**：
+  - 右下角常駐 48x48px 晶體圓形按鈕，內嵌 SVG 環形進度軌道（直徑 40px，圓周長精確定為 `125.66px`）。
+  - 當滾動深度小於 300px 時優雅隱藏；超過 300px 時平滑縮放浮現。
+  - 平時以動態圓弧勾勒當前篇章研讀百分比，滑鼠懸停時中心箭頭平滑漸變為「數字百分比（如 `78%`）」，點擊後平滑滾動回頂。
+- **章節底端雙向導航分頁卡片（Two-Way Pagination Cards）**：
+  - 在所有主閱讀視圖（書籍主頁、導論、第一章、第二章）正文最底端，固定配置寬版雙向分頁導航卡片。
+  - 左側為「← 上一單元」、右側為「下一單元 →」，內含單元識別微標籤、單元大標題與互動懸停位移動畫，引導讀者循序漸進完成整部知識庫之體系化研讀。
+
 ---
 
 ## 標準版面架構 (Layout Architecture)
@@ -494,6 +551,165 @@ function switchView(viewName, shouldScrollTop = true) {
 </div>
 ```
 
+### 6. 法條懸浮卡片雙層標頭與響應式抽屜面板範本 (Statute Popover Template)
+
+```html
+<!-- 法條原地指引懸浮卡片 (桌面絕對定位 / 行動端底部滑出面板) -->
+<div id="statutePopover" class="hidden fixed z-50 transition-all duration-200" style="display: none;">
+  <!-- 行動端毛玻璃背景遮罩 (Backdrop) -->
+  <div id="statutePopoverBackdrop" class="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm -z-10"></div>
+
+  <!-- 卡片主體容器 (桌面寬度 max-w-[27rem]，行動端 bottom sheet) -->
+  <div class="w-full md:max-w-[27rem] rounded-t-3xl md:rounded-2xl border border-slate-200/80 dark:border-slate-700/80 bg-white/95 dark:bg-[#0f172a]/95 backdrop-blur-md shadow-2xl p-5 space-y-3.5">
+    
+    <!-- 雙層標頭 - 第 1 層：分類圖示、階層徽章與顯眼關閉按鈕 -->
+    <div class="flex items-center justify-between gap-2">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="text-base shrink-0">📜</span>
+        <span id="statuteStageBadge" class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-300 border border-blue-200 dark:border-blue-700/50">
+          罪責階段審查
+        </span>
+      </div>
+      <button onclick="hideStatutePopover()" class="w-7 h-7 rounded-full flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-base font-bold" title="關閉">
+        ✕
+      </button>
+    </div>
+
+    <!-- 雙層標頭 - 第 2 層：完整法定標題 (break-words，絕無 truncate 裁切！) -->
+    <div class="w-full">
+      <h4 id="statuteTitle" class="text-sm sm:text-base font-black text-slate-900 dark:text-white break-words leading-snug">
+        刑法第 16 條【禁止錯誤／違法性錯誤】
+      </h4>
+    </div>
+
+    <!-- 條文內文摘錄 -->
+    <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-800">
+      <p id="statuteBody" class="text-xs text-slate-700 dark:text-slate-200 leading-relaxed font-sans"></p>
+    </div>
+
+    <!-- 教科書審查要點 -->
+    <div class="space-y-1">
+      <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">💡 國考審查要點</span>
+      <p id="statuteNote" class="text-xs text-blue-700 dark:text-blue-300 leading-relaxed bg-blue-50/60 dark:bg-blue-950/40 p-2.5 rounded-lg border border-blue-100 dark:border-blue-900/40"></p>
+    </div>
+  </div>
+</div>
+```
+
+```javascript
+// 桌面端 260ms 防誤觸延遲邏輯範本
+let statuteHoverTimer = null;
+
+function bindStatuteBadge(element, statuteKey) {
+  element.addEventListener('mouseenter', (e) => {
+    clearTimeout(statuteHoverTimer);
+    statuteHoverTimer = setTimeout(() => {
+      showStatutePopover(statuteKey, element);
+    }, 260); // 260ms 防劃過誤觸
+  });
+  element.addEventListener('mouseleave', () => {
+    clearTimeout(statuteHoverTimer);
+  });
+}
+```
+
+### 7. 環形滾動進度回到頂部按鈕 (Circular Progress FAB) 範本
+
+```html
+<!-- 48x48px 懸浮環形按鈕 (周長 125.66 = 2 * PI * 20) -->
+<button id="btnScrollTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
+        class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur border border-slate-200 dark:border-slate-700 shadow-xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none group">
+  <!-- SVG 圓弧進度軌道 -->
+  <svg class="w-12 h-12 -rotate-90 pointer-events-none" viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2.5" class="text-slate-200 dark:text-slate-800 fill-none" />
+    <circle id="scrollTopProgressCircle" cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" 
+            class="text-blue-600 dark:text-blue-400 fill-none transition-all duration-75" 
+            stroke-dasharray="125.66" stroke-dashoffset="125.66" />
+  </svg>
+  <!-- 中心箭頭 (懸停時轉為百分比數字) -->
+  <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+    <span id="scrollTopIcon" class="text-slate-700 dark:text-slate-200 text-sm font-bold group-hover:opacity-0 transition-opacity">↑</span>
+    <span id="scrollTopPercent" class="text-[10px] font-mono font-bold text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">0%</span>
+  </div>
+</button>
+```
+
+```javascript
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? Math.min(1, Math.max(0, scrollTop / docHeight)) : 0;
+  
+  // 更新周長 offset
+  const circumference = 125.66;
+  const offset = circumference - (progress * circumference);
+  const circle = document.getElementById('scrollTopProgressCircle');
+  if (circle) circle.style.strokeDashoffset = offset;
+
+  // 浮現控制 (>300px)
+  const btn = document.getElementById('btnScrollTop');
+  if (btn) {
+    if (scrollTop > 300) {
+      btn.classList.remove('opacity-0', 'pointer-events-none');
+      btn.classList.add('opacity-100');
+    } else {
+      btn.classList.add('opacity-0', 'pointer-events-none');
+      btn.classList.remove('opacity-100');
+    }
+  }
+  const percentText = document.getElementById('scrollTopPercent');
+  if (percentText) percentText.textContent = `${Math.round(progress * 100)}%`;
+});
+```
+
+### 8. 全域搜尋目標脈衝光暈動畫 (Search Target Pulse Glow)
+
+```css
+/* 搜尋導航跳轉目標呼吸脈衝高亮 */
+@keyframes searchTargetPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(56, 189, 248, 0.25);
+    transform: scale(1.01);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
+    transform: scale(1);
+  }
+}
+.search-target-highlight {
+  animation: searchTargetPulse 1.25s ease-in-out 2 !important;
+  border-color: #0284c7 !important;
+}
+```
+
+### 9. 案例筆記 Markdown 雙鏈結構格式化器 (Case Note Formatter)
+
+```javascript
+function formatCaseNoteMarkdown(caseData) {
+  return `# ⚖️ 【${caseData.id}】${caseData.title}
+> 📖 出處：陳奕廷《刑法總則【圖說系列】》第 ${caseData.page} 頁
+
+## 📌 案件事實
+${caseData.facts}
+
+## 🔍 階層審查與核心爭點
+- **構成要件**：${caseData.tbReview || '該當'}
+- **違法性**：${caseData.rwReview || '不具阻卻違法事由'}
+- **罪責階層**：${caseData.guiltReview}
+
+## 💡 考點速記口訣
+${caseData.keyTips}
+
+## 📜 關聯法條
+${caseData.relatedStatutes.map(s => `[[${s}]]`).join(' ')}
+`;
+}
+```
+
 ---
 
 ## 驗收檢查清單 (Quality Checklist)
@@ -507,11 +723,18 @@ function switchView(viewName, shouldScrollTop = true) {
 - [ ] **吸頂防落檢驗**：滾動至頁面最底端時，右側清單是否**絕無掉落至頁面下方或左下角滿版**？
 - [ ] **概念焦點框底色辨識度**：核心直觀引言與焦點框框是否採用專屬天藍實體漸層色塊（`#BAE6FD ~ #7DD3FC`），邊界清晰醒目，絕非融入背景的死白淡漸層？
 - [ ] **框內字體與純白膠囊標籤**：天藍框內正文是否採用深海軍藍（`#0C4A6E` / `#032034`）AAA 級易讀色彩？「一個壞人」、「壞事推定壞人」等標籤是否採用純白底色彩色粗體邊線立體襯托？
-- [ ] **檔案編碼純 UTF-8 完整性**：頁面標題、左側選單與中央內文繁體中文字元是否 100% 正確呈現，絕無任何菱形問號（``）編碼損壞？
+- [ ] **檔案編碼純 UTF-8 完整性**：頁面標題、左側選單與中央內文繁體中文字元是否 100% 正確呈現，絕無任何菱形問號編碼損壞？
 - [ ] **母本安全同步方向**：自動構建或推送批次檔（如 `copy_cover_and_push.bat`）是否嚴格鎖定由乾淨母本（`visual.html`）覆蓋目標檔（`index.html`），避免暫存檔案逆向破壞母本？
 - [ ] **Section 標籤深度配對閉合**：每個 `<section>` 內部之所有卡片與格線 `<div>` 是否於 `</section>` 之前全數閉合？`<section>` 與 `</section>` 數量是否精確 1:1 相等？
 - [ ] **視圖容器平級獨立性**：`<main>` 內各主視圖（`#viewHome`, `#viewIntro`, `#viewChapter1`, `#viewChapter2`, `#viewPart0` 等）是否各自完全閉合且為兄弟節點，絕無相互巢狀包覆導致切換章節時黑底空白（「內文沒東西」）？
 - [ ] **左側目錄子章節樣式**：子章節字級是否小於父層（`text-[13px]`），是否具備左側縱向分支線（`border-l-2`）、微邊距與子項目指示圓點？
 - [ ] **錨點點擊防跳退**：點擊右側各小節 TOC 錨點時，是否平滑跳轉至該段落，且絕不會誤觸跳回主頁或導論？
+- [ ] **法條原地卡片純淨度**：正文與標題是否 100% 杜絕正則貪婪掃描與虛線底線？是否僅精準綁定案例卡片標頭徽章與法規按鈕？
+- [ ] **法條卡片雙層標頭防截斷**：法條彈窗標頭是否拆為兩層（第一層放置階層徽章與關閉鈕，第二層放置完整法條標題）？是否使用 `break-words` 且**絕無 `truncate` 裁切**？
+- [ ] **行動端抽屜式面板**：在螢幕寬度 < 768px 時，法條懸浮卡片是否自動轉為自底端滑出的標準面板（Bottom Sheet），並配置全螢幕毛玻璃遮罩與顯眼的 `✕` 關閉按鈕？
+- [ ] **全域智慧搜尋 (Ctrl+K)**：按下 `Ctrl+K` 或點擊導航搜尋鈕是否順利呼出全螢幕搜尋浮層？四象限分類過濾（全部/案例/法條/學說）與鍵盤箭頭選擇是否靈活？跳轉後目標卡片是否居中並觸發 2.5 秒脈衝光暈高亮？
+- [ ] **案例爭點一鍵導出筆記**：點擊「📋 複製筆記」後是否生成規範的 Anki/Notion 雙鏈 Markdown 內容？按鈕是否暫態切換為「✓ 已複製」並於右下角彈出微型 Toast 通知？
+- [ ] **環形進度回到頂部按鈕**：頁面滾動超過 300px 時是否平滑浮現？SVG 環形軌道動態周長（125.66px）與懸停百分比是否正確反映研讀進度？點擊是否平滑回頂？
+
 
 
