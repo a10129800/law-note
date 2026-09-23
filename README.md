@@ -207,7 +207,7 @@ criminal-law-notes/
 │   ├── toc-config.js
 │   ├── search-db.js
 │   └── statute-db.js
-├── content/                     # 視圖層：9 個獨立抽取的篇章視圖模組
+├── content/                     # 視圖層：11 個獨立抽取的篇章視圖模組
 │   ├── view-home.js
 │   ├── view-intro.js
 │   ├── view-chapter1.js
@@ -216,7 +216,9 @@ criminal-law-notes/
 │   ├── view-part0-ch1.js
 │   ├── view-part0-ch1-sec1.js
 │   ├── view-part0-ch1-sec2.js
-│   └── view-part0-ch1-sec3.js
+│   ├── view-part0-ch1-sec3.js
+│   ├── view-part0-ch2.js
+│   └── view-part0-ch2-sec1.js
 └── js/                          # 控制器層：核心互動與事件綁定邏輯
     └── app.js
 ```
@@ -224,12 +226,12 @@ criminal-law-notes/
 ##### 🏗️ 模組分層與詳細檔案清單 (便於研讀、除錯與後續擴充)
 
 * **主進入外殼**：
-  * [`index.html`](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/index.html)（645 行，乾淨輕量骨架）
+  * [`index.html`](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/index.html)（665 行，乾淨輕量骨架）
 * **樣式層 (`css/`)**：
   * [`css/app.css`](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/css/app.css)（完整收錄 1,025 行自定義 CSS，含 3D 書封、極光動效、爭點對照矩陣、自適應三欄）
 * **資料層 (`data/`)**：
   * [`data/toc-config.js`](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/data/toc-config.js)（全書目錄大綱設定 `window.TOC_CONFIG`）
-  * [`data/search-db.js`](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/data/search-db.js)（全域搜尋庫 50+ 筆完整條目 `window.SEARCH_DATABASE`）
+  * [`data/search-db.js`](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/data/search-db.js)（全域搜尋庫 55+ 筆完整條目 `window.SEARCH_DATABASE`）
   * [`data/statute-db.js`](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/data/statute-db.js)（法條懸浮快顯 DB 與 Anki/Notion 爭點筆記庫）
 * **視圖層 (`content/`)**：
   * [`content/view-home.js`](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/content/view-home.js)（書籍主頁：3D 書封、量化指標晶片、精選圖解藝廊）
@@ -241,6 +243,8 @@ criminal-law-notes/
   * [`content/view-part0-ch1-sec1.js`](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/content/view-part0-ch1-sec1.js)（第一節 法益保護原則：案例 1-1 ~ 1-3）
   * [`content/view-part0-ch1-sec2.js`](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/content/view-part0-ch1-sec2.js)（第二節 罪刑法定原則：四大面向、案例 1-4 ~ 1-7）
   * [`content/view-part0-ch1-sec3.js`](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/content/view-part0-ch1-sec3.js)（第三節 罪責原則：釋字630、案例 1-8、四大支柱全景整合）
+  * [`content/view-part0-ch2.js`](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/content/view-part0-ch2.js)（第二章 刑法的操作原理：篇章總覽與分節導引）
+  * [`content/view-part0-ch2-sec1.js`](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/content/view-part0-ch2-sec1.js)（第一節 刑法的適用效力：教材第 2-9 ～ 2-11 頁，涵蓋時之效力、繼續犯、限時法76決議、保安處分雙軌制、屬地原則三大支柱、案例 2-1 ～ 2-5）
 * **控制器層 (`js/`)**：
   * [`js/app.js`](file:///c:/Users/mice/.gemini/antigravity-ide/scratch/criminal-law-notes/js/app.js)（視圖自動注入、深淺主題、Aa 字級與行距、Hash 路由、Scrollspy、全域搜尋、法條懸浮、案例複製、架構圖燈箱）
 
@@ -253,6 +257,26 @@ criminal-law-notes/
 3. `index.html` 透過最標準的 `<script src="...">` 與 `<link rel="stylesheet">` 引入。
 4. 控制器 `js/app.js` 於頁面加載時同步調用 `mountAllViews()` 瞬間注入容器。
 👉 **完全不需要本機架設 HTTP Web Server，直接雙擊 `index.html` 即可完美運作！**
+
+### 📌 Milestone 13：第一節《刑法的適用效力》教材第 2-9 頁原文與案例 2-1 深度收錄 (v3.3)
+- **教材第 2-9 頁原文忠實收錄 (`content/view-part0-ch2-sec1.js`)**：
+  - 適用效力三大先天限制（時間範圍、空間範圍、人別範圍）。
+  - 時的適用效力：從舊從輕原則（刑法 § 2 Ⅰ 本文從舊原則 vs 但書從輕原則對照表格）。
+  - **案例 2-1 拘禁跨越修法案**：私行拘禁罪（§ 302）為繼續犯（Dauerdelikt），犯罪行為終了在破案時（100.02.01），適用新法為行為時法，根本不生從舊從輕比較問題，法院判處 9 年有期徒刑合法無訛。
+  - 2026 現行法規查核：刑法 § 2 Ⅰ 與 § 302 條文現況及最高法院 89 年台上字第 5235 號判決拘束力。
+- **全套三層階層樹導航完備**：
+  - 第二章下方建立專屬子目錄容器 `#part0Ch2SubTree`，配置 `navBtnPart0Ch2Sec1`（第一節 刑法的適用效力）。
+  - 第二章主視圖內 Section 1 卡片即時亮起 `READY TO READ` 標章，提供直接進入按鈕。
+  - `TOC_CONFIG`、`SEARCH_DATABASE` 與 `js/app.js` 完整登錄子節與案例 2-1，支援 `Ctrl+K` 快速搜尋秒級跳轉。
+
+### 📌 Milestone 12：第零篇 第二章《刑法的操作原理》插槽與導航體系建置 (v3.2)
+- **嚴格書本依據插槽卡片 (`content/view-part0-ch2.js`)**：
+  - 遵循《多欄位Note Skill》第 1 條規範，建立具備天藍色實體焦點框（`.box-legal-navy`）之專屬插槽視圖。
+  - 完整配置動態麵包屑導航、大標題、副標題與「SECTION 1 / 2 COMING SOON」預備單元卡片。
+- **全套三欄導航樹與互動閉環**：
+  - 側邊欄於第一章下方新增「第二章 刑法的操作原理」按鈕（帶有精緻琥珀色微型「插槽」膠囊徽章），手機抽屜 1:1 鏡像縮排。
+  - 第一章第三節底部雙向分頁「下一單元」無縫閉環銜接至第二章。
+  - `TOC_CONFIG`、`SEARCH_DATABASE` 與 `js/app.js` 全面串接 `part0-chapter-2`，支援 `Ctrl+K` 快速搜尋直達與 Hash 路由。
 
 ### 📌 Milestone 11：視圖掛載鍵值對齊與暫時性死區(TDZ)修復（修復內文空白與三區按鈕失效）(v3.1)
 

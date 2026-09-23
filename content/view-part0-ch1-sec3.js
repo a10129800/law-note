@@ -408,15 +408,15 @@ window.APP_VIEWS['viewPart0Ch1Sec3'] = window.APP_VIEWS['part0Ch1Sec3'] = `
               </div>
             </button>
 
-            <button onclick="switchView('home')" class="group p-4 rounded-2xl border border-amber-500/40 hover:border-amber-500 bg-gradient-to-br from-amber-50/50 to-orange-50/30 dark:from-amber-950/30 dark:to-orange-950/20 text-right transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md flex items-center justify-between gap-3">
+            <button onclick="switchView('part0-chapter-2')" class="group p-4 rounded-2xl border border-indigo-500/40 hover:border-indigo-500 bg-gradient-to-br from-indigo-50/50 to-blue-50/30 dark:from-indigo-950/30 dark:to-blue-950/20 text-right transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md flex items-center justify-between gap-3">
               <div class="min-w-0 text-left">
-                <span class="text-[11px] text-amber-700 dark:text-amber-400 font-mono block font-bold">第一章完結</span>
-                <span class="text-xs font-extrabold text-slate-900 dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors truncate block">
-                  🏠 回到書籍主頁 (首頁看板)
+                <span class="text-[11px] text-indigo-600 dark:text-indigo-400 font-mono block font-bold">下一單元・進入第二章</span>
+                <span class="text-xs font-extrabold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors truncate block">
+                  第二章 刑法的操作原理 (插槽) →
                 </span>
               </div>
-              <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 text-white flex items-center justify-center text-sm font-bold shrink-0 group-hover:scale-105 transition-transform shadow-md shadow-amber-500/30">
-                🏠
+              <div class="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-sm font-bold shrink-0 group-hover:scale-105 transition-transform shadow-md shadow-indigo-600/30">
+                →
               </div>
             </button>
           </div>

@@ -746,5 +746,115 @@ window.SEARCH_DATABASE = [
     anchor: 'sec-p0ch1-sec3-chapter1-summary',
     page: 'P. 2-8',
     desc: '四大支柱全景表：法益保護（目的）、最後手段性（發動情況）、罪刑法定（根據何在）、罪責原則（極限何在），全章完整融會貫通。'
+  },
+  {
+    id: 'concept-p0ch2-overview',
+    title: '第零篇 第二章 刑法的操作原理（篇章總覽）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['第二章', '刑法的操作原理', '操作原理', '適用效力', '解釋方法', '時之效力', '地之效力', '第零篇第二章'],
+    view: 'part0-chapter-2',
+    anchor: 'sec-p0ch2-overview',
+    page: '第零篇 第二章',
+    desc: '第零篇第二章刑法的操作原理：探討刑法的適用效力（時之效力、地之效力）與解釋方法。'
+  },
+  {
+    id: 'case-2-1',
+    title: '案例 2-1 拘禁跨越新舊法案（繼續犯之行為時認定）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-1', '拘禁跨越新舊法', '私行拘禁', '繼續犯', '行為時', '從舊從輕', '§2', '§302', '2-9頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-case-2-1',
+    page: 'P. 2-9',
+    desc: '甲自99年拘禁乙至100年2月被破案，中間修法加重刑度。私行拘禁為繼續犯，行為終了在破案時，適用新法施行法為行為時法，不生從舊從輕比較問題。'
+  },
+  {
+    id: 'concept-p0ch2-sec1-three-dimensions',
+    title: '一、刑法適用效力之三大先天限制（時、地、人）（教材第 2-9 頁）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['適用效力', '三大先天限制', '時間範圍', '空間範圍', '人別範圍', '時的效力', '地的效力', '人的效力', '2-9頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-three-dimensions',
+    page: 'P. 2-9',
+    desc: '刑法並非無遠弗屆適用，區分為時間範圍（時之適用效力）、空間範圍（地之適用效力）與人別範圍（人之適用效力）。'
+  },
+  {
+    id: 'concept-p0ch2-sec1-retroactive',
+    title: '二、時的適用效力：從舊從輕原則（刑法 § 2）（教材第 2-9 頁）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['從舊從輕原則', '時的適用效力', '法不溯及既往', '行為時', '最有利', '§2', '2-9頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-retroactive-principle',
+    page: 'P. 2-9',
+    desc: '原則適用行為時法（從舊）；例外行為後法律變更有利於行為人者，適用最有利於行為人之法律（從輕）。'
+  },
+  {
+    id: 'case-2-2',
+    title: '案例 2-2 限時法之追溯效力案（動員戡亂時期國安法，76年第12次刑庭決議）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-2', '限時法', '追溯效力', '動員戡亂時期國家安全法', '76年第12次刑庭決議', '從舊從輕', '§2', '免訴判決', '2-10頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-case-2-2',
+    page: 'P. 2-10',
+    desc: '甲於動員戡亂時期違犯國安法，動員戡亂結束後受審。實務76年決議採肯定說：限時法失效仍適用§ 2從輕原則諭知免訴，以維罪刑法定。'
+  },
+  {
+    id: 'concept-p0ch2-sec1-security-measures',
+    title: '五、保安處分之時間效力：雙軌區分原則（教材第 2-10 頁）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['保安處分', '時間效力', '拘束人身自由', '非拘束人身自由', '§2Ⅰ', '§2Ⅱ', '裁判時法', '從舊從輕', '2-10頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-security-measures',
+    page: 'P. 2-10',
+    desc: '拘束人身自由之保安處分（如監護、強制治療）適用從舊從輕原則（§ 2 Ⅰ）；非拘束人身自由之保安處分（保護管束、驅逐出境）適用裁判時法（§ 2 Ⅱ）。'
+  },
+  {
+    id: 'concept-p0ch2-sec1-spatial-scope',
+    title: '六、地的適用效力：屬地原則三大支柱（核心、擴張、隔地）（教材第 2-10 ～ 2-11 頁）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['地的適用效力', '空間效力', '屬地原則', '浮動領土', '隔地犯', '§3', '§4', '2-11頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-spatial-scope',
+    page: 'P. 2-11',
+    desc: '屬地原則三大支柱：1.核心（領土領海領空） 2.擴張（領域外船艦航空器浮動領土） 3.隔地（行為或結果擇一在國內；含未遂預期結果地、共同正犯其他行為地、共犯正犯行為地）。'
+  },
+  {
+    id: 'case-2-3',
+    title: '案例 2-3 跨境電信詐騙案（隔地犯 § 4 結果地在台灣）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-3', '跨境詐騙', '電信詐騙', '隔地犯', '結果地', '菲律賓機房', '§4', '2-11頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-case-2-3',
+    page: 'P. 2-11',
+    desc: '詐騙集團總部在菲律賓，以電話誘騙在台灣被害人匯款。按刑法 § 4 屬典型隔地犯，結果地在台灣，適用我國刑法。'
+  },
+  {
+    id: 'case-2-4',
+    title: '案例 2-4 駐外使領館內犯罪案（國際法管轄權放棄慣例與領域擬制）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-4', '使領館', '駐外使領館', '外國使館', '國際法慣例', '放棄管轄權', '領域內犯罪', '2-11頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-case-2-4',
+    page: 'P. 2-11',
+    desc: '我國人甲在我國駐外使領館內犯罪。使館非浮動領土，依國際法慣例，須有明顯事證足認駐在國已同意放棄管轄權，始得以在我國領域內犯罪論。'
+  },
+  {
+    id: 'case-2-5',
+    title: '案例 2-5 大陸地區犯罪案（特殊之國內關係，最高法院 90 年台上字第 4247 號）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-5', '大陸地區犯罪', '特殊之國內關係', '兩岸人民關係條例', '兩岸條例§2', '90台上4247', '2-11頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-case-2-5',
+    page: 'P. 2-11',
+    desc: '大陸地區犯罪是否適用刑法？實務 90 台上 4247 採特殊國內關係，依兩岸人民關係條例 § 2 大陸地區仍屬我國領土，在大陸犯罪仍屬在中華民國領域內犯罪。'
   }
 ];

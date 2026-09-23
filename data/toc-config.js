@@ -15,7 +15,8 @@ window.TOC_CONFIG = {
       { action: "switchView('part0-chapter-1')", label: '📑 第零篇 第一章 刑法的運作原理 (第 2-1 頁)' },
       { action: "switchView('part0-ch1-sec1')", label: '💎 第一節 法益保護原則 (第 2-1 ~ 2-4 頁)' },
       { action: "switchView('part0-ch1-sec2')", label: '📜 第二節 罪刑法定原則 (第 2-5 ~ 2-7 頁)' },
-      { action: "switchView('part0-ch1-sec3')", label: '⚖️ 第三節 罪責原則 (第 2-7 ~ 2-8 頁)' }
+      { action: "switchView('part0-ch1-sec3')", label: '⚖️ 第三節 罪責原則 (第 2-7 ~ 2-8 頁)' },
+      { action: "switchView('part0-chapter-2')", label: '📑 第零篇 第二章 刑法的操作原理 (插槽)' }
     ]
   },
   'intro': {
@@ -30,7 +31,8 @@ window.TOC_CONFIG = {
       { action: "switchView('part0-chapter-1')", label: '📑 第零篇 第一章 刑法的運作原理 (第 2-1 頁)' },
       { action: "switchView('part0-ch1-sec1')", label: '💎 第一節 法益保護原則 (第 2-1 ~ 2-4 頁)' },
       { action: "switchView('part0-ch1-sec2')", label: '📜 第二節 罪刑法定原則 (第 2-5 ~ 2-7 頁)' },
-      { action: "switchView('part0-ch1-sec3')", label: '⚖️ 第三節 罪責原則 (第 2-7 ~ 2-8 頁)' }
+      { action: "switchView('part0-ch1-sec3')", label: '⚖️ 第三節 罪責原則 (第 2-7 ~ 2-8 頁)' },
+      { action: "switchView('part0-chapter-2')", label: '📑 第零篇 第二章 刑法的操作原理 (插槽)' }
     ]
   },
   'part-0': {
@@ -43,6 +45,7 @@ window.TOC_CONFIG = {
       { action: "switchView('part0-ch1-sec1')", label: '💎 第一節 法益保護原則 (第 2-1 ~ 2-4 頁)' },
       { action: "switchView('part0-ch1-sec2')", label: '📜 第二節 罪刑法定原則 (第 2-5 ~ 2-7 頁)' },
       { action: "switchView('part0-ch1-sec3')", label: '⚖️ 第三節 罪責原則 (第 2-7 ~ 2-8 頁)' },
+      { action: "switchView('part0-chapter-2')", label: '📑 第二章 刑法的操作原理 (待填入插槽)' },
       { action: "switchView('intro')", label: '📖 導論 犯罪概念與論罪結構' },
       { action: "switchView('chapter-1')", label: '📑 第一章 犯罪的概念' },
       { action: "switchView('chapter-2')", label: '📄 第二章 刑法的論罪結構' }
@@ -56,7 +59,8 @@ window.TOC_CONFIG = {
       { id: 'sec-p0ch1-sub-sections-nav', label: '二、第一章 子單元導航 (三小節全備)' },
       { action: "switchView('part0-ch1-sec1')", label: '💎 第一節 法益保護原則 (P. 2-1~2-4)' },
       { action: "switchView('part0-ch1-sec2')", label: '📜 第二節 罪刑法定原則 (P. 2-5~2-7)' },
-      { action: "switchView('part0-ch1-sec3')", label: '⚖️ 第三節 罪責原則 (P. 2-7~2-8)' }
+      { action: "switchView('part0-ch1-sec3')", label: '⚖️ 第三節 罪責原則 (P. 2-7~2-8)' },
+      { action: "switchView('part0-chapter-2')", label: '📑 下一章：第二章 刑法的操作原理 →' }
     ]
   },
   'part0-ch1-sec1': {
@@ -95,7 +99,37 @@ window.TOC_CONFIG = {
       { id: 'sec-p0ch1-sec3-dual-aspects', label: '二、罪責原則之雙重核心內涵' },
       { id: 'sec-p0ch1-sec3-case-1-8', label: '三、案例 1-8 準強盜罪與合憲限縮' },
       { id: 'sec-p0ch1-sec3-tips-favor', label: '四、解題提示：有利人民容許例外' },
-      { id: 'sec-p0ch1-sec3-chapter1-summary', label: '五、四大支柱全景整合與全章完結' }
+      { id: 'sec-p0ch1-sec3-chapter1-summary', label: '五、四大支柱全景整合與全章完結' },
+      { action: "switchView('part0-chapter-2')", label: '📑 前往第二章 刑法的操作原理 (插槽) →' }
+    ]
+  },
+  'part0-chapter-2': {
+    badge: '第零篇 第二章',
+    title: '📌 第二章 章節導航',
+    items: [
+      { id: 'sec-p0ch2-overview', label: '一、篇章總覽與插槽說明' },
+      { id: 'sec-p0ch2-upcoming-sections', label: '二、子單元導航 (第一節已就緒)' },
+      { action: "switchView('part0-ch2-sec1')", label: '🚀 第一節 刑法的適用效力 (第 2-9 頁) →' },
+      { action: "switchView('part0-ch1-sec3')", label: '← 返回第一章第三節 (罪責原則)' },
+      { action: "switchView('part-0')", label: '📖 返回第零篇導讀' },
+      { action: "switchView('home')", label: '🏠 回到書籍主頁' }
+    ]
+  },
+  'part0-ch2-sec1': {
+    badge: '教材第 2-9 ～ 2-11 頁',
+    title: '📌 第一節 適用效力 清單',
+    items: [
+      { id: 'sec-p0ch2-sec1-three-dimensions', label: '一、適用效力三大先天限制（時、地、人）' },
+      { id: 'sec-p0ch2-sec1-retroactive-principle', label: '二、時的適用效力：從舊從輕原則（§ 2）' },
+      { id: 'sec-p0ch2-sec1-case-2-1', label: '三、案例 2-1 拘禁跨越修法案（繼續犯）' },
+      { id: 'sec-p0ch2-sec1-case-2-2', label: '四、案例 2-2 限時法之追溯效力案（76年決議）' },
+      { id: 'sec-p0ch2-sec1-security-measures', label: '五、保安處分之時間效力（雙軌區分原則）' },
+      { id: 'sec-p0ch2-sec1-spatial-scope', label: '六、地的適用效力：三大支柱（核心、擴張、隔地）' },
+      { id: 'sec-p0ch2-sec1-case-2-3', label: '七、案例 2-3 跨境電信詐騙案（隔地犯 § 4）' },
+      { id: 'sec-p0ch2-sec1-case-2-4', label: '八、案例 2-4 駐外使領館犯罪案（國際法管轄慣例）' },
+      { id: 'sec-p0ch2-sec1-case-2-5', label: '九、案例 2-5 大陸地區犯罪案（特殊國內關係）' },
+      { action: "switchView('part0-chapter-2')", label: '← 返回第二章總覽' },
+      { action: "switchView('home')", label: '🏠 回到書籍主頁' }
     ]
   },
   'chapter-1': {

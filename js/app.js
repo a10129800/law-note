@@ -15,6 +15,8 @@ let viewPart0Chapter1 = null;
 let viewPart0Ch1Sec1 = null;
 let viewPart0Ch1Sec2 = null;
 let viewPart0Ch1Sec3 = null;
+let viewPart0Chapter2 = null;
+let viewPart0Ch2Sec1 = null;
 
 let rightTocAside = null;
 let currentChapterBadge = null;
@@ -30,6 +32,8 @@ let navBtnPart0Ch1 = null;
 let navBtnPart0Ch1Sec1 = null;
 let navBtnPart0Ch1Sec2 = null;
 let navBtnPart0Ch1Sec3 = null;
+let navBtnPart0Ch2 = null;
+let navBtnPart0Ch2Sec1 = null;
 
 function refreshViewElements() {
   viewHome = document.getElementById('viewHome');
@@ -41,6 +45,8 @@ function refreshViewElements() {
   viewPart0Ch1Sec1 = document.getElementById('viewPart0Ch1Sec1');
   viewPart0Ch1Sec2 = document.getElementById('viewPart0Ch1Sec2');
   viewPart0Ch1Sec3 = document.getElementById('viewPart0Ch1Sec3');
+  viewPart0Chapter2 = document.getElementById('viewPart0Chapter2');
+  viewPart0Ch2Sec1 = document.getElementById('viewPart0Ch2Sec1');
 
   rightTocAside = document.getElementById('rightTocAside');
   currentChapterBadge = document.getElementById('currentChapterBadge');
@@ -56,6 +62,8 @@ function refreshViewElements() {
   navBtnPart0Ch1Sec1 = document.getElementById('navBtnPart0Ch1Sec1');
   navBtnPart0Ch1Sec2 = document.getElementById('navBtnPart0Ch1Sec2');
   navBtnPart0Ch1Sec3 = document.getElementById('navBtnPart0Ch1Sec3');
+  navBtnPart0Ch2 = document.getElementById('navBtnPart0Ch2');
+  navBtnPart0Ch2Sec1 = document.getElementById('navBtnPart0Ch2Sec1');
 }
 
 // ==================== 0.1 視圖掛載系統 (Mount Views System) ====================
@@ -73,7 +81,9 @@ function mountAllViews() {
       window.APP_VIEWS.viewPart0Chapter1 || window.APP_VIEWS.viewPart0Ch1 || window.APP_VIEWS.part0Chapter1 || window.APP_VIEWS.part0Ch1,
       window.APP_VIEWS.viewPart0Ch1Sec1 || window.APP_VIEWS.part0Ch1Sec1,
       window.APP_VIEWS.viewPart0Ch1Sec2 || window.APP_VIEWS.part0Ch1Sec2,
-      window.APP_VIEWS.viewPart0Ch1Sec3 || window.APP_VIEWS.part0Ch1Sec3
+      window.APP_VIEWS.viewPart0Ch1Sec3 || window.APP_VIEWS.part0Ch1Sec3,
+      window.APP_VIEWS.viewPart0Chapter2 || window.APP_VIEWS.viewPart0Ch2 || window.APP_VIEWS.part0Chapter2 || window.APP_VIEWS['part0-chapter-2'],
+      window.APP_VIEWS.viewPart0Ch2Sec1 || window.APP_VIEWS.part0Ch2Sec1 || window.APP_VIEWS['part0-ch2-sec1']
     ];
 
     const views = [];
@@ -345,6 +355,14 @@ function clearNavStyles() {
     navBtnPart0Ch1Sec3.classList.remove(...ACTIVE_CLASS);
     navBtnPart0Ch1Sec3.classList.add(...INACTIVE_CLASS);
   }
+  if (navBtnPart0Ch2) {
+    navBtnPart0Ch2.classList.remove(...ACTIVE_CLASS);
+    navBtnPart0Ch2.classList.add(...INACTIVE_CLASS);
+  }
+  if (navBtnPart0Ch2Sec1) {
+    navBtnPart0Ch2Sec1.classList.remove(...ACTIVE_CLASS);
+    navBtnPart0Ch2Sec1.classList.add(...INACTIVE_CLASS);
+  }
   if (navBtnHome) {
     navBtnHome.classList.remove(...ACTIVE_CLASS);
     navBtnHome.classList.add(...INACTIVE_CLASS);
@@ -414,7 +432,8 @@ function switchView(viewName, shouldScrollTop = true) {
 
   const allViews = [
     viewHome, viewIntro, viewChapter1, viewChapter2, 
-    viewPart0, viewPart0Chapter1, viewPart0Ch1Sec1, viewPart0Ch1Sec2, viewPart0Ch1Sec3
+    viewPart0, viewPart0Chapter1, viewPart0Ch1Sec1, viewPart0Ch1Sec2, viewPart0Ch1Sec3,
+    viewPart0Chapter2, viewPart0Ch2Sec1
   ];
 
   // 隱藏全部
@@ -596,6 +615,51 @@ function switchView(viewName, shouldScrollTop = true) {
     if (shouldScrollTop) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       if (window.history && window.history.replaceState) history.replaceState(null, '', '#part0-ch1-sec3');
+    }
+
+  } else if (viewName === 'part0-chapter-2') {
+    if (viewPart0Chapter2) viewPart0Chapter2.classList.remove('hidden');
+    document.body.classList.remove('in-chapter-1', 'intro-active', 'in-home');
+    document.body.classList.add('in-chapter');
+
+    setRightTocVisibility(true);
+
+    if (navBtnPart0) navBtnPart0.classList.add('text-blue-600', 'dark:text-blue-400');
+    if (navBtnPart0Ch2) {
+      navBtnPart0Ch2.classList.remove(...INACTIVE_CLASS);
+      navBtnPart0Ch2.classList.add(...ACTIVE_CLASS);
+    }
+
+    if (currentChapterBadge) currentChapterBadge.textContent = '第零篇 第二章';
+    document.title = '第零篇 第二章 刑法的操作原理 | 刑法總則研讀筆記';
+    renderToc('part0-chapter-2');
+
+    if (shouldScrollTop) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (window.history && window.history.replaceState) history.replaceState(null, '', '#part0-chapter-2');
+    }
+
+  } else if (viewName === 'part0-ch2-sec1') {
+    if (viewPart0Ch2Sec1) viewPart0Ch2Sec1.classList.remove('hidden');
+    document.body.classList.remove('in-chapter-1', 'intro-active', 'in-home');
+    document.body.classList.add('in-chapter');
+
+    setRightTocVisibility(true);
+
+    if (navBtnPart0) navBtnPart0.classList.add('text-blue-600', 'dark:text-blue-400');
+    if (navBtnPart0Ch2) navBtnPart0Ch2.classList.add('text-indigo-600', 'dark:text-indigo-400');
+    if (navBtnPart0Ch2Sec1) {
+      navBtnPart0Ch2Sec1.classList.remove(...INACTIVE_CLASS);
+      navBtnPart0Ch2Sec1.classList.add(...ACTIVE_CLASS);
+    }
+
+    if (currentChapterBadge) currentChapterBadge.textContent = '第零篇 第二章・第一節';
+    document.title = '第一節 刑法的適用效力 | 刑法總則研讀筆記';
+    renderToc('part0-ch2-sec1');
+
+    if (shouldScrollTop) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (window.history && window.history.replaceState) history.replaceState(null, '', '#part0-ch2-sec1');
     }
 
   } else {
@@ -789,6 +853,14 @@ function scrollToSection(e, targetId) {
     if (viewChapter2 && viewChapter2.classList.contains('hidden')) {
       switchView('chapter-2', false);
     }
+  } else if (targetId.startsWith('sec-p0ch2-sec1-')) {
+    if (viewPart0Ch2Sec1 && viewPart0Ch2Sec1.classList.contains('hidden')) {
+      switchView('part0-ch2-sec1', false);
+    }
+  } else if (targetId.startsWith('sec-p0ch2-')) {
+    if (viewPart0Chapter2 && viewPart0Chapter2.classList.contains('hidden')) {
+      switchView('part0-chapter-2', false);
+    }
   } else if (targetId.startsWith('sec-p0ch1-sec3-')) {
     if (viewPart0Ch1Sec3 && viewPart0Ch1Sec3.classList.contains('hidden')) {
       switchView('part0-ch1-sec3', false);
@@ -863,6 +935,14 @@ function handleHashRouting() {
     switchView('chapter-2', false);
     const targetId = hash.substring(1);
     setTimeout(() => { scrollToSection(null, targetId); }, 50);
+  } else if (hash.startsWith('#sec-p0ch2-sec1-')) {
+    switchView('part0-ch2-sec1', false);
+    const targetId = hash.substring(1);
+    setTimeout(() => { scrollToSection(null, targetId); }, 50);
+  } else if (hash.startsWith('#sec-p0ch2-')) {
+    switchView('part0-chapter-2', false);
+    const targetId = hash.substring(1);
+    setTimeout(() => { scrollToSection(null, targetId); }, 50);
   } else if (hash.startsWith('#sec-p0ch1-sec3-')) {
     switchView('part0-ch1-sec3', false);
     const targetId = hash.substring(1);
@@ -903,6 +983,10 @@ function handleHashRouting() {
     switchView('part0-ch1-sec2', true);
   } else if (hash === '#part0-ch1-sec3' || hash === '#part0_ch1-sec3') {
     switchView('part0-ch1-sec3', true);
+  } else if (hash === '#part0-chapter-2' || hash === '#part0-ch2') {
+    switchView('part0-chapter-2', true);
+  } else if (hash === '#part0-ch2-sec1') {
+    switchView('part0-ch2-sec1', true);
   } else {
     switchView('home', false);
   }
