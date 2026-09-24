@@ -856,5 +856,161 @@ window.SEARCH_DATABASE = [
     anchor: 'sec-p0ch2-sec1-case-2-5',
     page: 'P. 2-11',
     desc: '大陸地區犯罪是否適用刑法？實務 90 台上 4247 採特殊國內關係，依兩岸人民關係條例 § 2 大陸地區仍屬我國領土，在大陸犯罪仍屬在中華民國領域內犯罪。'
+  },
+  {
+    id: 'auxiliary-geographic-scope',
+    title: '地的適用效力：輔助基準（屬人原則、保護原則、世界原則）',
+    category: 'theory',
+    categoryLabel: '核心學說',
+    keywords: ['輔助基準', '屬人原則', '保護原則', '世界原則', '處罰自己人', '處罰外國人', '雙重犯罪原則', '§5', '§6', '§7', '§8', '2-12頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-auxiliary-scope',
+    page: 'P. 2-12',
+    desc: '輔助基準三大支柱：1.屬人原則（§ 6+§ 7 處罰自己人，國民守法義務與公務員忠誠） 2.保護原則（§ 8 處罰外國人保護國民；§ 5 處罰任何人國家自我保護） 3.世界原則（§ 5 跨國共通公敵）。'
+  },
+  {
+    id: 'case-2-6',
+    title: '案例 2-6 我國人境外偽造外國股票案（保護原則限本國法益，最高法院 72 年台上字第 5872 號判例）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-6', '偽造外國股票', '德國公司股票', '保護原則', '本國法益', '有價證券', '72台上5872', '§5第6款', '§7', '§201', '2-12頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-case-2-6',
+    page: 'P. 2-12',
+    desc: '我國國民甲在美國偽造德國公司股票。§ 5 保護原則意在保護本國法益，偽造有價證券僅限我國證券（72台上5872例）；外國股票在國內無流通性亦不該當 § 201，故無我國刑法適用！'
+  },
+  {
+    id: 'geographic-priority-order',
+    title: '解題提示：地的適用效力嚴格審查順序（主要基準優先，輔助基準具補充性）',
+    category: 'theory',
+    categoryLabel: '核心學說',
+    keywords: ['審查順序', '地的效力審查順序', '主要基準優先', '補充性地位', '解題提示', '屬地優先', '四大原則對照', '2-12頁', '2-13頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-geographic-order',
+    page: 'P. 2-12~2-13',
+    desc: '地的適用效力有嚴格審查順序：必須優先檢驗主要基準（屬地原則 § 3+§ 4），當無從適用主要基準時方能思考輔助基準（屬人、保護、世界）。輔助基準僅具補充性地位！'
+  },
+  {
+    id: 'case-guang-da-xing',
+    title: '實例演練：台菲漁業爭議「廣大興案」（主要基準優先於保護原則，避免跳躍思考）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['廣大興案', '台菲漁業爭議', '公海開槍', '浮動領土', '隔地犯', '§3但書', '§4', '§8', '跳躍思考', '主要基準優先', '2-13頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-geographic-order',
+    page: 'P. 2-13',
+    desc: '菲律賓海巡在公海開槍射殺我國廣大興號船長。行為地在菲國船艦，死亡結果地在台灣船艦（浮動領土），按 § 4 隔地犯直接適用我國刑法！切勿跳躍至 § 8 保護原則。'
+  },
+  {
+    id: 'foreign-judgments-principle',
+    title: '外國裁判之效力 ➔ 複動原則（刑法 § 9：主權獨立不生一事不再理、折抵原則）',
+    category: 'theory',
+    categoryLabel: '核心學說',
+    keywords: ['外國裁判之效力', '複動原則', '9條', '§9', '一事不再理', '外國確定裁判', '折抵刑期', '免除執行', '主權獨立', '2-13頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-geographic-order',
+    page: 'P. 2-13',
+    desc: '刑法 § 9 採複動原則：各國刑事裁判權本於主權獨立各自發動，外國裁判不生一事不再理；但在外國已受刑得免其刑之全部或一部執行以兼顧人權。'
+  },
+  {
+    id: 'table-1-geographic-decision-tree',
+    title: '【表 1】地的適用效力思考順序流程圖（主要基準 § 3+§ 4 ➔ 輔助基準 § 5~§ 8）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['表1', '思考順序流程圖', '主要基準', '輔助基準', '屬地原則', '保護原則', '屬人原則', '世界原則', '不適用我國刑法', '2-13頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-geographic-order',
+    page: 'P. 2-13',
+    desc: '思考順序決策樹：§ 3+§ 4 國內犯罪（是 ➔ 適用）➔ 否 ➔ 國外犯罪輔助基準（§ 5 ➔ § 6 ➔ § 7 ➔ § 8）➔ 皆否則不適用我國刑法。'
+  },
+  {
+    id: 'presidential-immunity',
+    title: '人的適用效力：(一) 總統 ➔ 刑事豁免權（憲法 § 52、釋字第 627 號：訴訟障礙事由）',
+    category: 'theory',
+    categoryLabel: '核心學說',
+    keywords: ['總統刑事豁免權', '刑事豁免權', '憲法52條', '憲法§52', '釋字627號', '內亂罪', '外患罪', '訴訟障礙事由', '限縮性', '暫時性', '2-14頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-personal-scope',
+    page: 'P. 2-14',
+    desc: '憲法 § 52：總統除犯內亂或外患罪外，非經罷免或解職，不受刑事上之訴追。釋字 627 號定位為程序法上「限縮性、暫時性之訴訟障礙事由」，卸任後仍得追訴。'
+  },
+  {
+    id: 'legislative-speech-immunity',
+    title: '人的適用效力：(二) 民意代表 ➔ 言論免責權（憲法 § 73、釋字第 165、435 號：實體免責事由）',
+    category: 'theory',
+    categoryLabel: '核心學說',
+    keywords: ['民代言論免責權', '言論免責權', '憲法73條', '憲法§73', '釋字165號', '釋字435號', '立法委員', '地方議員', '附隨行為', '蓄意肢體動作', '實體免責', '2-14頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-personal-scope',
+    page: 'P. 2-14',
+    desc: '憲法 § 73：立委在院內言論表決對外不負責任。釋字 165 擴及地方民代；釋字 435 採最大程度保障，但蓄意肢體動作致侵害他人法益者不在保障之列。性質為自始排除刑罰事由。'
+  },
+  {
+    id: 'diplomatic-immunity',
+    title: '人的適用效力：(三) 外國元首、使節、領事、駐軍 ➔ 外交豁免權（國際法外交慣例）',
+    category: 'theory',
+    categoryLabel: '核心學說',
+    keywords: ['外交豁免權', '外國元首', '大使', '公使', '領事', '外交使節', '外國駐軍', '國際法慣例', '維也納外交關係公約', '2-14頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-personal-scope',
+    page: 'P. 2-14',
+    desc: '依國際法之外交慣例與維也納條約，外國元首、大使、公使、領事、外交使節及經許可駐軍享有外交豁免權，不受地主國刑事審判管轄。'
+  },
+  {
+    id: 'personal-scope-takeaway',
+    title: '📖 解題提示：總統刑事豁免權（訴訟障礙事由）vs. 民代言論免責權（實體法免責權）本質區辨',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['解題提示', '訴訟障礙事由', '實體免責權', '程序法 vs 實體法', '卸任追訴', '終局排除', '易混淆考點', '2-14頁'],
+    view: 'part0-ch2-sec1',
+    anchor: 'sec-p0ch2-sec1-personal-scope',
+    page: 'P. 2-14',
+    desc: '總統刑事豁免權乃程序法上的「訴訟障礙事由」，並未排除犯罪成立；民代言論免責權乃實體法上的「免責權」，自始排除犯罪成立或阻卻刑罰發動。兩者本質迥異！'
+  },
+  {
+    id: 'interpretation-methods-overview',
+    title: '第二節 刑法之解釋方法（司法解釋與立法解釋二元體系、四大法學解釋方法）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['第二節', '刑法的解釋方法', '法律解釋二元', '司法解釋', '立法解釋', '刑法10條', '§10', '2-14頁', '2-15頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-classification',
+    page: 'P. 2-14～2-15',
+    desc: '法律解釋之二元分類：針對既存條文適用之司法解釋（法學方法論）與預先以條文定義之立法解釋（刑法 § 10）。'
+  },
+  {
+    id: 'four-interpretation-methods',
+    title: '司法解釋四大方法：文義解釋、歷史解釋、目的解釋、體系解釋',
+    category: 'theory',
+    categoryLabel: '核心學說',
+    keywords: ['文義解釋', '歷史解釋', '目的解釋', '體系解釋', '解釋的最外延', '當代目的', '立法者意思', '條文整合', '2-14頁', '2-15頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-methods',
+    page: 'P. 2-14～2-15',
+    desc: '文義解釋為起點與最外延；歷史解釋探求立法者原意；目的解釋確認規範當代目的；體系解釋尋求整體法秩序脈絡佐證。'
+  },
+  {
+    id: 'interpretation-diagram-dynamic',
+    title: '司法解釋的相互關係架構圖（罪刑法定原則 vs. 法益保護原則之動態拉扯）',
+    category: 'concept',
+    categoryLabel: '架構圖說',
+    keywords: ['司法解釋相互關係', '罪刑法定原則', '法益保護原則', '動態拉扯', '體系解釋輔助', '文義起點', '目的解釋', '2-15頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-diagram',
+    page: 'P. 2-15',
+    desc: '罪刑法定（重文義）與法益保護（重目的）相互拉扯，並由體系解釋提供佐證與條文調整之相互關係架構。'
+  },
+  {
+    id: 'case-2-7',
+    title: '【案例 2-7】留在現場抽煙冒充目擊者案（肇事逃逸罪 § 185-4 文義 vs. 目的解釋衝突）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-7', '留在現場抽煙', '冒充目擊者', '肇事逃逸', '185-4', '§185-4', '文義解釋', '目的解釋', '釋字777號', '2-15頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-case-2-7',
+    page: 'P. 2-15',
+    desc: '甲撞人後移車在現場人行道抽煙並向警方謊稱目擊者。文義解釋認未物理脫離不該當；目的解釋認實質阻礙救護該當。文義為最外延不得類推！現行法已增訂現場隱瞞身分處罰。'
   }
 ];
+
+

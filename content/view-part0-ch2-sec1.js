@@ -32,14 +32,14 @@ window.APP_VIEWS['viewPart0Ch2Sec1'] = window.APP_VIEWS['part0Ch2Sec1'] = window
             <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-mono text-xs font-bold">
               <span>第零篇 第二章・第一節</span>
               <span class="px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950/40 text-[11px] border border-indigo-200 dark:border-indigo-900/50">
-                教材第 2-9 ～ 2-10 頁 原文精確收錄
+                教材第 2-9 ～ 2-14 頁 原文精確收錄（第一節全節完結）
               </span>
             </div>
             <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
               第一節 刑法的適用效力
             </h2>
             <p class="text-xs sm:text-sm text-slate-500">
-              探討刑法適用效力之三大先天限制（時、地、人）、從舊從輕原則（§ 2）、繼續犯行為時認定、限時法追溯力（76年決議）、保安處分時間效力與屬地原則（§ 3+§ 4）
+              探討刑法適用效力之三大先天限制（時、地、人）：從舊從輕原則（§ 2）、繼續犯、限時法追溯力、保安處分雙軌制；地的主要基準屬地原則（§ 3+§ 4）、輔助基準（§ 5～§ 8）、案例 2-6、廣大興案、外國裁判複動原則（§ 9）；人的適用效力（總統刑事豁免權、民代言論免責權、外交豁免權）與審查解題提示
             </p>
           </div>
 
@@ -1026,25 +1026,933 @@ window.APP_VIEWS['viewPart0Ch2Sec1'] = window.APP_VIEWS['part0Ch2Sec1'] = window
             </div>
           </section>
 
-          <!-- 十、篇章進度待續提示卡 (Progress Callout) -->
-          <div class="p-6 rounded-3xl border-2 border-dashed border-indigo-400/40 bg-indigo-50/20 dark:bg-indigo-950/10 space-y-3 text-center sm:text-left">
+          <!-- 十、地的適用效力：(二) 輔助基準（屬人、保護、世界原則，教材第 2-12 頁） -->
+          <section id="sec-p0ch2-sec1-auxiliary-scope" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-indigo-600"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                十、地的適用效力：(二) 輔助基準（屬人、保護、世界原則）
+              </h3>
+            </div>
+
+            <!-- 天藍色概念焦點框 (Focus Box) -->
+            <div class="box-legal-navy p-6 sm:p-8 rounded-3xl space-y-6">
+              <div class="flex items-center justify-between border-b border-sky-300/40 dark:border-sky-700/40 pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xl">🌐</span>
+                  <h4 class="text-base sm:text-lg font-black text-[#032034] dark:text-white">
+                    地的適用效力輔助基準體系（教材第 2-12 頁）
+                  </h4>
+                </div>
+                <span class="px-2.5 py-0.5 rounded-full bg-white dark:bg-slate-800 text-[#0369a1] dark:text-sky-300 text-xs font-mono font-bold border border-sky-300 dark:border-sky-600 shadow-xs">
+                  AUXILIARY CRITERIA
+                </span>
+              </div>
+
+              <blockquote class="border-l-4 border-[#0284c7] pl-4 py-1 text-xs sm:text-sm text-[#0c4a6e] dark:text-sky-100 leading-relaxed italic space-y-1">
+                <p>
+                  「(二) 輔助基準：包含屬人原則、保護原則與世界原則。分別基於國民守法義務、公務員忠誠義務、國家保護人民責任、國家自我防衛及國際世界共通價值，延伸國家刑罰權於境外。」—— 陳奕廷《刑法總則【圖說系列】》第 2-12 頁
+                </p>
+              </blockquote>
+
+              <!-- 輔助基準三大支柱網格 -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
+                
+                <!-- 1. 屬人原則 -->
+                <div class="p-5 rounded-2xl bg-white/95 dark:bg-slate-900/90 border border-sky-200 dark:border-sky-800 space-y-3.5 shadow-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 font-mono font-bold text-[11px] border border-blue-200 dark:border-blue-800">
+                      § 6 + § 7
+                    </span>
+                    <span class="text-xs font-bold text-slate-500">處罰自己人</span>
+                  </div>
+                  <div>
+                    <h5 class="text-sm font-black text-slate-900 dark:text-white flex items-center gap-1.5">
+                      <span>👤</span>
+                      <span>1. 屬人原則</span>
+                    </h5>
+                    <p class="text-[11px] text-blue-600 dark:text-blue-400 font-medium mt-0.5">
+                      國民一般守法義務 ＋ 公務員特殊忠誠義務
+                    </p>
+                  </div>
+                  <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2 leading-relaxed">
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold shrink-0">•</span>
+                      <span><strong>核心</strong>：國家刑罰權適用於在國外的我國人民。</span>
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold shrink-0">•</span>
+                      <span><strong>國民境外犯重罪（§ 7）</strong>：犯最輕本刑 3 年以上有期徒刑之重罪。<strong>惟犯罪地法律不罰者，不在此限</strong>（雙重犯罪原則）。</span>
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold shrink-0">•</span>
+                      <span><strong>公務員境外特定罪（§ 6）</strong>：犯特定公職瀆職、脫逃、偽造文書、侵占等罪。</span>
+                    </li>
+                  </ul>
+                  <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex justify-end">
+                    <button type="button" class="statute-popover-trigger text-[11px] text-blue-600 dark:text-blue-400 hover:underline font-semibold flex items-center gap-1 cursor-pointer" data-statute="7">
+                      <span>查看 § 7 條文</span>
+                      <span>→</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 2. 保護原則 -->
+                <div class="p-5 rounded-2xl bg-white/95 dark:bg-slate-900/90 border border-sky-200 dark:border-sky-800 space-y-3.5 shadow-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="px-2 py-0.5 rounded bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 font-mono font-bold text-[11px] border border-purple-200 dark:border-purple-800">
+                      § 8 / § 5
+                    </span>
+                    <span class="text-xs font-bold text-slate-500">處罰外國人 / 任何人</span>
+                  </div>
+                  <div>
+                    <h5 class="text-sm font-black text-slate-900 dark:text-white flex items-center gap-1.5">
+                      <span>🛡️</span>
+                      <span>2 & 3. 保護原則</span>
+                    </h5>
+                    <p class="text-[11px] text-purple-600 dark:text-purple-400 font-medium mt-0.5">
+                      國家保護人民客觀義務 ＋ 國家自我保護
+                    </p>
+                  </div>
+                  <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2 leading-relaxed">
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-purple-500 font-bold shrink-0">•</span>
+                      <span><strong>處罰外國人（§ 8）</strong>：在國外對我國人犯最輕本刑 3 年以上重罪。惟犯罪地不罰者不在此限。</span>
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-purple-500 font-bold shrink-0">•</span>
+                      <span><strong>國家自我保護（§ 5 ①②③⑤⑥⑦）</strong>：處罰任何人於國外侵害本國重大法益（內亂、外患、妨害公務、偽幣、本國有價證券、公文書公印文）。</span>
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-purple-500 font-bold shrink-0">•</span>
+                      <span><strong>限本國法益（72台上5872例）</strong>：§ 5 僅保護本國法益，不包含外國有價證券！</span>
+                    </li>
+                  </ul>
+                  <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex justify-end">
+                    <button type="button" class="statute-popover-trigger text-[11px] text-purple-600 dark:text-purple-400 hover:underline font-semibold flex items-center gap-1 cursor-pointer" data-statute="5">
+                      <span>查看 § 5 條文</span>
+                      <span>→</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 3. 世界原則 -->
+                <div class="p-5 rounded-2xl bg-white/95 dark:bg-slate-900/90 border border-sky-200 dark:border-sky-800 space-y-3.5 shadow-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-mono font-bold text-[11px] border border-emerald-200 dark:border-emerald-800">
+                      § 5 ④⑧⑨⑩
+                    </span>
+                    <span class="text-xs font-bold text-slate-500">處罰任何人（公敵）</span>
+                  </div>
+                  <div>
+                    <h5 class="text-sm font-black text-slate-900 dark:text-white flex items-center gap-1.5">
+                      <span>🌍</span>
+                      <span>4. 世界原則</span>
+                    </h5>
+                    <p class="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium mt-0.5">
+                      基於世界共通性犯罪（國際社會公敵）
+                    </p>
+                  </div>
+                  <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2 leading-relaxed">
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-emerald-500 font-bold shrink-0">•</span>
+                      <span><strong>核心</strong>：國家刑罰權適用於侵害跨國界共通價值之犯罪。</span>
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-emerald-500 font-bold shrink-0">•</span>
+                      <span><strong>法條列舉罪名</strong>：涉及安毒（§ 5 ④）、毒品（§ 5 ⑧）、劫奴或買賣人口（§ 5 ⑨）、海盜罪（§ 5 ⑩）。</span>
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-emerald-500 font-bold shrink-0">•</span>
+                      <span><strong>重要增訂（105 年）</strong>：刑法 § 5 增訂第 11 款加重詐欺罪（§ 339-4），將跨境電信機房詐欺納入世界原則管轄！</span>
+                    </li>
+                  </ul>
+                  <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex justify-end">
+                    <button type="button" class="statute-popover-trigger text-[11px] text-emerald-600 dark:text-emerald-400 hover:underline font-semibold flex items-center gap-1 cursor-pointer" data-statute="5">
+                      <span>查看 § 5 罪名</span>
+                      <span>→</span>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          <!-- 十一、案例 2-6：我國人境外偽造外國股票案（教材第 2-12 頁 原文案例） -->
+          <section id="sec-p0ch2-sec1-case-2-6" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-indigo-600"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                十一、案例 2-6：我國人境外偽造外國股票案（教材第 2-12 頁）
+              </h3>
+            </div>
+
+            <!-- 案例卡片 2-6 -->
+            <div id="case-card-2-6" data-case="2-6" class="rounded-3xl border-2 border-indigo-500/40 bg-white dark:bg-[#111726] shadow-md overflow-hidden transition-all duration-300">
+              
+              <!-- 案例標頭 -->
+              <div class="p-5 sm:p-6 bg-gradient-to-r from-indigo-50/80 via-blue-50/50 to-transparent dark:from-indigo-950/40 dark:via-blue-950/20 border-b border-slate-100 dark:border-white/[0.08] flex flex-wrap items-center justify-between gap-3">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-8 h-8 rounded-xl bg-indigo-600 text-white font-black text-sm flex items-center justify-center shadow-md shadow-indigo-600/30">
+                    2-6
+                  </span>
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-xs font-mono font-bold text-indigo-600 dark:text-indigo-400">CASE 2-6 • 最高法院 72 年台上字第 5872 號判例</span>
+                      <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold">教材第 2-12 頁</span>
+                    </div>
+                    <h4 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">
+                      境外偽造外國公司股票——保護原則之本國法益界限
+                    </h4>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <button type="button" class="statute-popover-trigger px-2.5 py-1 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold border border-slate-200 dark:border-slate-700 shadow-2xs hover:text-indigo-600 transition-colors cursor-pointer" data-statute="5">
+                    📜 刑法 § 5 第 6 款
+                  </button>
+                  <button type="button" class="statute-popover-trigger px-2.5 py-1 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold border border-slate-200 dark:border-slate-700 shadow-2xs hover:text-indigo-600 transition-colors cursor-pointer" data-statute="7">
+                    📜 刑法 § 7
+                  </button>
+                  <button type="button" class="statute-popover-trigger px-2.5 py-1 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold border border-slate-200 dark:border-slate-700 shadow-2xs hover:text-indigo-600 transition-colors cursor-pointer" data-statute="201">
+                    📜 刑法 § 201
+                  </button>
+                  <button type="button" onclick="copyCaseNote('case-2-6', this)" class="case-copy-btn px-3 py-1 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-md shadow-indigo-600/20 transition-all flex items-center gap-1.5 cursor-pointer">
+                    <span>📋</span>
+                    <span>複製筆記</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 案例內容主體 -->
+              <div class="p-6 sm:p-8 space-y-6">
+                
+                <!-- 案件事實 (Fact Box) -->
+                <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-2.5">
+                  <div class="flex items-center gap-2 text-xs font-bold text-slate-800 dark:text-slate-200">
+                    <span class="text-base">📌</span>
+                    <span>教材原文案件事實（第 2-12 頁）：</span>
+                  </div>
+                  <blockquote class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed italic border-l-3 border-indigo-500 pl-3">
+                    我國國民甲在美國偽造德國公司股票而成立偽造有價證券罪，是否有我國刑法的適用？
+                  </blockquote>
+                </div>
+
+                <!-- 作者權威問題導引 (教材第 2-12 頁 原文解析) -->
+                <div class="p-4 sm:p-5 rounded-2xl bg-indigo-50/70 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800 space-y-2">
+                  <div class="flex items-center gap-2 text-xs font-bold text-indigo-800 dark:text-indigo-300">
+                    <span>◀ 問題導引 ▶</span>
+                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold">最高法院 72 年台上字第 5872 號判例</span>
+                  </div>
+                  <blockquote class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed italic border-l-3 border-indigo-500 pl-3">
+                    「§ 5 採取的保護原則意在保護本國法益，因此本條所謂偽造有價證券當指我國的有價證券，不包括外國有價證券在內（72台上5872例）。」
+                  </blockquote>
+                </div>
+
+                <!-- 權威階層三階段管轄檢驗 -->
+                <div class="space-y-3">
+                  <h5 class="text-sm font-black text-slate-900 dark:text-white flex items-center gap-2">
+                    <span class="w-1.5 h-4 bg-indigo-600 rounded-full"></span>
+                    <span>案例 2-6 管轄權三大審查層次推導</span>
+                  </h5>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 text-xs sm:text-sm">
+                    <!-- 第一步：屬地原則審查 -->
+                    <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+                      <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-slate-800 dark:text-slate-200">第 1 階：主要基準</span>
+                        <span class="text-[10px] font-mono text-red-500 font-bold">❌ 排除</span>
+                      </div>
+                      <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                        甲在美國偽造（行為地在國外），德國公司股票在國外發行流通（法益受侵害結果地亦在國外），無從適用刑法第 3 條或第 4 條之屬地原則。
+                      </p>
+                    </div>
+
+                    <!-- 第二步：保護原則審查 -->
+                    <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+                      <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-slate-800 dark:text-slate-200">第 2 階：保護原則 § 5</span>
+                        <span class="text-[10px] font-mono text-red-500 font-bold">❌ 排除</span>
+                      </div>
+                      <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                        § 5 意在保護本國法益。依 72 台上 5872 號判例，§ 5 第 6 款偽造有價證券僅限我國有價證券，不包含外國有價證券，無法依第 5 條擴張管轄。
+                      </p>
+                    </div>
+
+                    <!-- 第三步：屬人原則審查 -->
+                    <div class="p-4 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/30 border border-indigo-300 dark:border-indigo-800 space-y-1.5">
+                      <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-indigo-800 dark:text-indigo-300">第 3 階：屬人原則 § 7</span>
+                        <span class="text-[10px] font-mono text-red-500 font-bold">❌ 排除</span>
+                      </div>
+                      <p class="text-xs text-indigo-900 dark:text-indigo-200 leading-relaxed">
+                        判例闡明：刑法第 201 條限於「在國內有流通性」之有價證券。外國股票在國內無流通性，根本不該當我國 § 201，自亦無從適用 § 7！
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- 最終結論卡片 -->
+                  <div class="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-300 dark:border-emerald-800 text-xs sm:text-sm">
+                    <div class="flex items-center gap-2 text-emerald-800 dark:text-emerald-300 font-bold">
+                      <span>⚖️</span>
+                      <span>最終管轄審查結論：</span>
+                    </div>
+                    <p class="text-xs text-emerald-900 dark:text-emerald-200 mt-1 font-semibold leading-relaxed">
+                      本案無論主要基準（屬地原則）或輔助基準（保護原則、屬人原則）均無適用餘地，甲之行為<strong>無我國刑法的適用</strong>！
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 2026 現行法規與權威判例查核區塊 -->
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 space-y-2.5 text-xs">
+                  <div class="flex items-center justify-between border-b border-slate-200/80 dark:border-slate-800 pb-1.5">
+                    <span class="font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                      <span>📌</span>
+                      <span>【2026 最高法院判例與條文狀態查核】</span>
+                    </span>
+                    <span class="px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono font-bold text-[10px]">
+                      72 台上 5872 判例
+                    </span>
+                  </div>
+                  <div class="space-y-1.5 text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                    <div>
+                      • <strong class="text-slate-800 dark:text-slate-200">最高法院 72 年台上字第 5872 號判例全文要旨</strong>：「刑法第二百零一條第一項所謂之有價證券，係指在國內有流通性之有價證券而言，外國公司股票在國內並無流通性者，非本條所指之有價證券。又刑法第五條第六款所稱犯第二百零一條之偽造有價證券罪，係指本國之有價證券而言，外國之有價證券並不包括在內。」
+                    </div>
+                    <div>
+                      • <strong class="text-slate-800 dark:text-slate-200">刑法第 5 條第 6 款（保護原則）</strong>：條文文字維持現行法。保護之客體嚴格限於本國法益，不包含外國有價證券。
+                    </div>
+                    <div>
+                      • <strong class="text-slate-800 dark:text-slate-200">刑法第 7 條（國民國外重罪）</strong>：條文文字維持現行法。適用前提須行為人該當我國刑法分則之重罪構成要件；若不該當分則罪名，無從依第 7 條處罰。
+                    </div>
+                  </div>
+                  <div class="pt-1 flex items-center justify-between text-[11px] text-slate-400">
+                    <span>資料來源：司法院裁判書系統、最高法院判例要旨</span>
+                    <span class="font-mono">P. 2-12 案例 2-6 核對完畢</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          <!-- 十二、解題提示：地的適用效力嚴格審查順序（教材第 2-12 頁 原文精華） -->
+          <section id="sec-p0ch2-sec1-geographic-order" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-indigo-600"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                十二、解題提示：地的適用效力嚴格審查順序（教材第 2-12 頁）
+              </h3>
+            </div>
+
+            <!-- 解題提示卡片 (Takeaway Box) -->
+            <div class="p-6 sm:p-8 rounded-3xl border-2 border-indigo-500/40 bg-white dark:bg-[#101623] shadow-sm space-y-6">
+              <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/[0.08] pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xl">📖</span>
+                  <h4 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">
+                    教材原文解題提示：主要基準優先與輔助基準補充性
+                  </h4>
+                </div>
+                <span class="px-2.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 text-xs font-mono font-bold border border-indigo-200 dark:border-indigo-800">
+                  METHODOLOGY
+                </span>
+              </div>
+
+              <!-- 原文金句引用 -->
+              <blockquote class="p-4 rounded-2xl border-l-4 border-indigo-600 bg-indigo-50/50 dark:bg-indigo-950/30 text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-semibold italic">
+                「請注意，地的適用效力有嚴格的審查順序，必須優先檢驗主要基準，當無從適用主要基準時，方能思考輔助基準。簡言之，輔助基準僅有補充性地位，不能凌駕主要基準之上。」
+              </blockquote>
+
+              <!-- 嚴格審查順序流程圖 (Mermaid Architecture) -->
+              <div class="space-y-3">
+                <h5 class="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider flex items-center gap-1.5 font-mono">
+                  <span>🧭</span>
+                  <span>地的適用效力審查思維流程圖</span>
+                </h5>
+
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+                  <div class="grid grid-cols-1 md:grid-cols-4 gap-3 text-center">
+                    <div class="p-3.5 rounded-xl bg-blue-50 dark:bg-blue-950/50 border-2 border-blue-500 text-left space-y-1">
+                      <span class="text-[10px] font-mono font-bold text-blue-600 dark:text-blue-400 block">STEP 1 • 主要基準優先</span>
+                      <h6 class="text-xs font-black text-slate-900 dark:text-white">屬地原則 (§ 3 + § 4)</h6>
+                      <p class="text-[11px] text-slate-600 dark:text-slate-300">
+                        檢驗天然領域、浮動領土或隔地犯（行為或結果擇一在國內）。若該當即適用！
+                      </p>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-purple-50 dark:bg-purple-950/50 border border-purple-300 dark:border-purple-800 text-left space-y-1">
+                      <span class="text-[10px] font-mono font-bold text-purple-600 dark:text-purple-400 block">STEP 2 • 輔助基準一</span>
+                      <h6 class="text-xs font-black text-slate-900 dark:text-white">屬人原則 (§ 6 + § 7)</h6>
+                      <p class="text-[11px] text-slate-600 dark:text-slate-300">
+                        處罰自己人：我國公務員國外特定罪（§ 6）或國民國外犯 3 年以上重罪（§ 7）。
+                      </p>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/50 border border-amber-300 dark:border-amber-800 text-left space-y-1">
+                      <span class="text-[10px] font-mono font-bold text-amber-600 dark:text-amber-400 block">STEP 3 • 輔助基準二</span>
+                      <h6 class="text-xs font-black text-slate-900 dark:text-white">保護原則 (§ 8 + § 5)</h6>
+                      <p class="text-[11px] text-slate-600 dark:text-slate-300">
+                        處罰侵害國民（§ 8）或處罰任何人侵害國家重大法益（§ 5 ①②③⑤⑥⑦）。
+                      </p>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-300 dark:border-emerald-800 text-left space-y-1">
+                      <span class="text-[10px] font-mono font-bold text-emerald-600 dark:text-emerald-400 block">STEP 4 • 輔助基準三</span>
+                      <h6 class="text-xs font-black text-slate-900 dark:text-white">世界原則 (§ 5 ④⑧⑨⑩)</h6>
+                      <p class="text-[11px] text-slate-600 dark:text-slate-300">
+                        國際共通公敵犯罪：毒品、劫奴、海盜、跨境加重電信詐欺（第 11 款）。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 四大原則全景橫向超級對照表格 -->
+              <div class="space-y-3">
+                <h5 class="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider flex items-center gap-1.5 font-mono">
+                  <span>📊</span>
+                  <span>刑法空間效力四大原則完整橫向對照表</span>
+                </h5>
+
+                <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+                  <table class="w-full text-left text-xs text-slate-600 dark:text-slate-300">
+                    <thead class="bg-slate-50 dark:bg-slate-900/80 text-slate-800 dark:text-slate-200 text-[11px] font-black border-b border-slate-200 dark:border-slate-800">
+                      <tr>
+                        <th class="p-3">適用原則</th>
+                        <th class="p-3">位階分類</th>
+                        <th class="p-3">法條依據</th>
+                        <th class="p-3">適用主體</th>
+                        <th class="p-3">法理基礎</th>
+                        <th class="p-3">雙重犯罪限制</th>
+                        <th class="p-3">典型代表案</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                      <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
+                        <td class="p-3 font-bold text-blue-600 dark:text-blue-400">屬地原則</td>
+                        <td class="p-3"><span class="px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-bold">主要基準</span></td>
+                        <td class="p-3 font-mono">§ 3 + § 4</td>
+                        <td class="p-3">任何人（不分國籍）</td>
+                        <td class="p-3">國民主權之空間界限</td>
+                        <td class="p-3 text-slate-400">無（直接管轄）</td>
+                        <td class="p-3">案例 2-3（隔地犯詐騙）</td>
+                      </tr>
+                      <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
+                        <td class="p-3 font-bold text-purple-600 dark:text-purple-400">屬人原則</td>
+                        <td class="p-3"><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold">輔助基準</span></td>
+                        <td class="p-3 font-mono">§ 6 + § 7</td>
+                        <td class="p-3">我國國民、我國公務員</td>
+                        <td class="p-3">國民守法義務＋特殊忠誠</td>
+                        <td class="p-3 font-semibold text-amber-600 dark:text-amber-400">有（§ 7 犯罪地不罰免罰）</td>
+                        <td class="p-3">國民境外犯 3 年以上重罪</td>
+                      </tr>
+                      <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
+                        <td class="p-3 font-bold text-amber-600 dark:text-amber-400">保護原則</td>
+                        <td class="p-3"><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold">輔助基準</span></td>
+                        <td class="p-3 font-mono">§ 5 ①②③⑤⑥⑦ / § 8</td>
+                        <td class="p-3">外國人、任何人</td>
+                        <td class="p-3">國家自我防衛＋保護國民責任</td>
+                        <td class="p-3 font-semibold text-slate-500">§ 8 有；§ 5 無</td>
+                        <td class="p-3">案例 2-6（限本國法益）</td>
+                      </tr>
+                      <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
+                        <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">世界原則</td>
+                        <td class="p-3"><span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold">輔助基準</span></td>
+                        <td class="p-3 font-mono">§ 5 ④⑧⑨⑩⑪</td>
+                        <td class="p-3">任何人（國際公敵）</td>
+                        <td class="p-3">跨國共通價值與國際公義</td>
+                        <td class="p-3 text-slate-400">無（公敵全球共懲）</td>
+                        <td class="p-3">境外電信機房加重詐欺</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- 廣大興案實例剖析（教材第 2-13 頁 原文案例） -->
+              <div class="p-5 sm:p-6 rounded-2xl bg-amber-50/70 dark:bg-amber-950/30 border border-amber-300 dark:border-amber-800 space-y-3.5">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base">🚢</span>
+                    <h5 class="text-sm font-black text-amber-900 dark:text-amber-200">
+                      實例剖析：台菲漁業爭議（廣大興案）——主要基準優先性之嚴格檢驗
+                    </h5>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-700 dark:text-amber-300 font-bold">
+                      教材第 2-13 頁
+                    </span>
+                    <button type="button" onclick="copyCaseNote('guangdaxing', this)" class="px-2.5 py-1 rounded-lg bg-amber-100 dark:bg-amber-900/60 hover:bg-amber-200 dark:hover:bg-amber-800 text-amber-800 dark:text-amber-200 text-xs font-bold transition-all shadow-xs flex items-center gap-1 cursor-pointer" title="複製 Anki/Notion 格式案例筆記">
+                      <span>📋</span>
+                      <span>複製筆記</span>
+                    </button>
+                  </div>
+                </div>
+
+                <blockquote class="p-3.5 rounded-xl border-l-4 border-amber-600 bg-white/80 dark:bg-slate-900/80 text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed italic">
+                  「以去年鬧得沸沸揚揚的『台菲漁業爭議（廣大興案）』為例，懸掛我國國旗的廣大興號，在公海上遭到菲律賓海巡人員持續槍擊，中華民國籍船長洪石成不幸中彈身亡，我國刑法得否適用呢？雖由 § 8 似乎立馬得出『肯定』的答案，卻犯了跳躍思考的大錯！因為就殺人罪而言，殺人行為地乃菲律賓船艦，死亡結果地則是我國船艦，按 § 4 陽地犯罪得適用我國刑法。當依據屬地原則（主要基準）就能得出結論時，便無保護原則（輔助基準）的出場機會了¹。」
+                </blockquote>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1 text-xs">
+                  <div class="p-3.5 rounded-xl bg-white/90 dark:bg-slate-900/90 border border-red-200 dark:border-red-900/50 space-y-1">
+                    <span class="font-bold text-red-600 dark:text-red-400 flex items-center gap-1">
+                      <span>⚠️</span>
+                      <span>常見跳躍思考大錯（直覺誤區）</span>
+                    </span>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                      直覺看到「菲律賓人（外國人）在公海殺死台灣船長洪石成（我國人）」，便直接跳躍套用刑法 § 8（保護原則：外國人對我國人犯重罪）。此思維忽略了審查順序，混淆了管轄位階！
+                    </p>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-white/90 dark:bg-slate-900/90 border border-emerald-200 dark:border-emerald-900/50 space-y-1">
+                    <span class="font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
+                      <span>✅</span>
+                      <span>嚴謹順序推導（正解）</span>
+                    </span>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px]">
+                      廣大興號懸掛我國國旗，屬刑法 § 3 但書之浮動領土！洪石成中彈身亡之結果發生於我國船艦上，依 <strong>刑法 § 4 隔地犯</strong>，直接依 <strong>主要基準（屬地原則）</strong> 適用我國刑法，保護原則根本無須出場！
+                    </p>
+                  </div>
+                </div>
+
+                <div class="text-[11px] text-slate-500 dark:text-slate-400 flex items-center gap-1 pt-1 border-t border-amber-200/60 dark:border-amber-900/40">
+                  <span>📖 註 1：</span>
+                  <span>就此爭議，請詳見薛智仁，從台菲漁業爭議看公海上武裝衝突的刑事管轄權問題，臺灣法學 227，P. 34 以下。</span>
+                  <span class="text-slate-400">（編按：原書文字作「陽地犯罪」，實指「隔地犯」）</span>
+                </div>
+              </div>
+
+              <!-- (三) 外國裁判之效力➔複動原則（刑法 § 9，教材第 2-13 頁） -->
+              <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-3.5">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base">⚖️</span>
+                    <h5 class="text-sm font-black text-slate-900 dark:text-white">
+                      (三) 外國裁判之效力 ➔ 複動原則（刑法 § 9）
+                    </h5>
+                  </div>
+                  <button type="button" class="statute-popover-trigger px-2.5 py-0.5 rounded-lg bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400 text-xs font-semibold border border-slate-200 dark:border-slate-700 cursor-pointer" data-statute="9">
+                    📜 刑法 § 9 條文
+                  </button>
+                </div>
+
+                <blockquote class="p-3 rounded-xl border-l-4 border-indigo-500 bg-white/80 dark:bg-slate-900/80 text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-mono italic">
+                  1. 經外國確定裁判：仍得依本法處斷。<br>
+                  2. 在外國已受刑之全部或一部執行：得免其刑之全部或一部之執行。
+                </blockquote>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+                  <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1">
+                        <span>1. 經外國確定裁判</span>
+                      </span>
+                      <span class="px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-mono font-bold text-[10px]">
+                        主權獨立
+                      </span>
+                    </div>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                      <strong>仍得依本法處斷！</strong> 國家刑罰權基於主權獨立性，不受外國法院裁判之拘束，外國裁判在我國不生「一事不再理」之直接拘束力。
+                    </p>
+                  </div>
+
+                  <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5">
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1">
+                        <span>2. 在外國已受刑之執行</span>
+                      </span>
+                      <span class="px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 font-mono font-bold text-[10px]">
+                        人道折抵
+                      </span>
+                    </div>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                      <strong>得免其刑之全部或一部之執行！</strong> 基於憲法比例原則與人道避免過苛，在外國已受刑之全部或一部執行者，法院得自由裁量予以免除或折抵。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 【表 1】地的適用效力思考順序（教材第 2-13 頁 原文圖表） -->
+              <div class="space-y-3 pt-2">
+                <div class="flex items-center justify-between">
+                  <h5 class="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider flex items-center gap-1.5 font-mono">
+                    <span>🧭</span>
+                    <span>【表 1】地的適用效力思考順序（教材第 2-13 頁 原文體系全景圖）</span>
+                  </h5>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-bold">
+                    教材第 2-13 頁
+                  </span>
+                </div>
+
+                <!-- 流程圖表呈現 -->
+                <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-4">
+                  <!-- 階層 1: 主要基準 -->
+                  <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border-2 border-blue-500 shadow-xs flex flex-col md:flex-row items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                      <span class="w-16 text-center py-1 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-mono font-bold text-xs">
+                        § 3 + § 4
+                      </span>
+                      <div>
+                        <span class="text-xs font-bold text-blue-600 dark:text-blue-400 font-mono">主要基準：國內犯罪</span>
+                        <div class="text-sm font-black text-slate-900 dark:text-white flex items-center gap-2">
+                          <span class="px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 text-xs font-bold">屬地原則</span>
+                          <span>犯罪發生在我國領域之內</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2 shrink-0">
+                      <span class="px-3 py-1 rounded-lg bg-emerald-600 text-white font-bold text-xs flex items-center gap-1 shadow-sm">
+                        <span>是 ➔</span>
+                        <span>適用我國刑法</span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- 箭頭向下 -->
+                  <div class="flex justify-center -my-2">
+                    <span class="text-xs font-bold text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-3 py-0.5 rounded-full border border-slate-200 dark:border-slate-700">
+                      ↓ 否
+                    </span>
+                  </div>
+
+                  <!-- 輔助基準區塊 -->
+                  <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+                    <div class="text-xs font-mono font-bold text-purple-600 dark:text-purple-400 border-b border-slate-100 dark:border-slate-800 pb-2">
+                      輔助基準：國外犯罪
+                    </div>
+
+                    <!-- 1. § 5 -->
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50">
+                      <div class="flex items-center gap-2.5">
+                        <span class="w-12 text-center py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 font-mono font-bold text-xs">§ 5</span>
+                        <span class="text-xs font-bold text-slate-800 dark:text-slate-200">保護原則 ＋ 世界原則</span>
+                        <span class="text-xs text-slate-500">我國重大法益 ＋ 世界共通價值</span>
+                      </div>
+                      <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">是 ➔ 適用我國刑法</span>
+                    </div>
+
+                    <!-- 否 ↓ -->
+                    <div class="flex justify-center -my-1">
+                      <span class="text-[10px] text-slate-400 font-mono font-bold">↓ 否</span>
+                    </div>
+
+                    <!-- 2. § 6 -->
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50">
+                      <div class="flex items-center gap-2.5">
+                        <span class="w-12 text-center py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 font-mono font-bold text-xs">§ 6</span>
+                        <span class="text-xs font-bold text-slate-800 dark:text-slate-200">屬人原則</span>
+                        <span class="text-xs text-slate-500">我國公務員犯特定之罪</span>
+                      </div>
+                      <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">是 ➔ 適用我國刑法</span>
+                    </div>
+
+                    <!-- 否 ↓ -->
+                    <div class="flex justify-center -my-1">
+                      <span class="text-[10px] text-slate-400 font-mono font-bold">↓ 否</span>
+                    </div>
+
+                    <!-- 3. § 7 -->
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50">
+                      <div class="flex items-center gap-2.5">
+                        <span class="w-12 text-center py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 font-mono font-bold text-xs">§ 7</span>
+                        <span class="text-xs font-bold text-slate-800 dark:text-slate-200">屬人原則</span>
+                        <span class="text-xs text-slate-500">我國國民犯特定之罪</span>
+                      </div>
+                      <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">是 ➔ 適用我國刑法</span>
+                    </div>
+
+                    <!-- 否 ↓ -->
+                    <div class="flex justify-center -my-1">
+                      <span class="text-[10px] text-slate-400 font-mono font-bold">↓ 否</span>
+                    </div>
+
+                    <!-- 4. § 8 -->
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50">
+                      <div class="flex items-center gap-2.5">
+                        <span class="w-12 text-center py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 font-mono font-bold text-xs">§ 8</span>
+                        <span class="text-xs font-bold text-slate-800 dark:text-slate-200">保護原則</span>
+                        <span class="text-xs text-slate-500">外國人對我國國民犯特定之罪</span>
+                      </div>
+                      <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">是 ➔ 適用我國刑法</span>
+                    </div>
+                  </div>
+
+                  <!-- 箭頭向下 -->
+                  <div class="flex justify-center -my-2">
+                    <span class="text-xs font-bold text-slate-400 font-mono bg-slate-100 dark:bg-slate-800 px-3 py-0.5 rounded-full border border-slate-200 dark:border-slate-700">
+                      ↓ 否
+                    </span>
+                  </div>
+
+                  <!-- 最終不適用 -->
+                  <div class="flex justify-center">
+                    <span class="px-5 py-2 rounded-xl bg-red-100 dark:bg-red-950/80 text-red-700 dark:text-red-300 font-black text-xs border border-red-200 dark:border-red-800 flex items-center gap-1.5 shadow-xs">
+                      <span>❌ 不適用我國刑法</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 十三、三、人的適用效力（教材第 2-14 頁 原文規範） -->
+          <section id="sec-p0ch2-sec1-personal-scope" class="space-y-6 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-6 rounded-full bg-indigo-600"></span>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight">
+                十三、三、人的適用效力（教材第 2-14 頁）
+              </h3>
+            </div>
+
+            <!-- 天藍色概念焦點框 (Focus Box) -->
+            <div class="box-legal-navy p-6 sm:p-8 rounded-3xl space-y-6">
+              <div class="flex items-center justify-between border-b border-sky-300/40 dark:border-sky-700/40 pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xl">👤</span>
+                  <h4 class="text-base sm:text-lg font-black text-[#032034] dark:text-white">
+                    三、人的適用效力（教材第 2-14 頁 原文體系）
+                  </h4>
+                </div>
+                <span class="px-2.5 py-0.5 rounded-full bg-white dark:bg-slate-800 text-[#0369a1] dark:text-sky-300 text-xs font-mono font-bold border border-sky-300 dark:border-sky-600 shadow-xs">
+                  教材第 2-14 頁
+                </span>
+              </div>
+
+              <!-- 人的效力三大支柱網格 -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
+                
+                <!-- (一) 總統刑事豁免權 -->
+                <div class="p-5 rounded-2xl bg-white/95 dark:bg-slate-900/90 border border-sky-200 dark:border-sky-800 space-y-3.5 shadow-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 font-mono font-bold text-[11px] border border-blue-200 dark:border-blue-800">
+                      憲法 § 52・釋627號
+                    </span>
+                    <span class="text-xs font-bold text-amber-600 dark:text-amber-400">訴訟障礙事由</span>
+                  </div>
+                  <div>
+                    <h5 class="text-sm font-black text-slate-900 dark:text-white flex items-center gap-1.5">
+                      <span>🎖️</span>
+                      <span>(一) 總統 ➔ 刑事豁免權</span>
+                    </h5>
+                    <p class="text-[11px] text-blue-600 dark:text-blue-400 font-medium mt-0.5">
+                      程序法上的訴訟障礙（未排除犯罪成立）
+                    </p>
+                  </div>
+                  <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2 leading-relaxed">
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold shrink-0">•</span>
+                      <span><strong>1. 性質</strong>：<strong>限縮性、暫時性</strong> 的訴訟障礙事由。</span>
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold shrink-0">•</span>
+                      <span><strong>2. 限縮性</strong>：總統除犯 <strong>內亂罪、外患罪</strong> 外，不受刑事上之訴追。</span>
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-blue-500 font-bold shrink-0">•</span>
+                      <span><strong>3. 暫時性</strong>：總統 <strong>非經罷免、解職</strong>，不受刑事上之訴追（卸任或解職後仍得起訴追究！）。</span>
+                    </li>
+                  </ul>
+                  <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex justify-end gap-2">
+                    <button type="button" class="statute-popover-trigger text-[11px] text-blue-600 dark:text-blue-400 hover:underline font-semibold cursor-pointer" data-statute="const-52">
+                      📜 憲法 § 52
+                    </button>
+                    <button type="button" class="statute-popover-trigger text-[11px] text-blue-600 dark:text-blue-400 hover:underline font-semibold cursor-pointer" data-statute="627">
+                      🔍 釋字第 627 號
+                    </button>
+                  </div>
+                </div>
+
+                <!-- (二) 民代言論免責權 -->
+                <div class="p-5 rounded-2xl bg-white/95 dark:bg-slate-900/90 border border-sky-200 dark:border-sky-800 space-y-3.5 shadow-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="px-2 py-0.5 rounded bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 font-mono font-bold text-[11px] border border-purple-200 dark:border-purple-800">
+                      憲法 § 73・釋165/435
+                    </span>
+                    <span class="text-xs font-bold text-purple-600 dark:text-purple-400">實體法免責權</span>
+                  </div>
+                  <div>
+                    <h5 class="text-sm font-black text-slate-900 dark:text-white flex items-center gap-1.5">
+                      <span>🏛️</span>
+                      <span>(二) 民代 ➔ 言論免責權</span>
+                    </h5>
+                    <p class="text-[11px] text-purple-600 dark:text-purple-400 font-medium mt-0.5">
+                      自始性的個人排除刑罰事由（實體免責）
+                    </p>
+                  </div>
+                  <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2 leading-relaxed">
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-purple-500 font-bold shrink-0">•</span>
+                      <span><strong>1. 性質</strong>：<strong>自始性的個人排除刑罰事由</strong>。</span>
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-purple-500 font-bold shrink-0">•</span>
+                      <span><strong>2. 釋字 165 號</strong>：主體包含 <strong>中央民代（立委）</strong> 以及 <strong>地方民代（議員）</strong>。</span>
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-purple-500 font-bold shrink-0">•</span>
+                      <span><strong>3. 釋字 435 號</strong>：保障範圍作最大程度界定（院會或委員會發言、質詢、提案、表決、協商、公聽會）。<strong>越此範圍與行使職權無關之行為（諸如蓄意之肢體動作侵害法益者），不在保障之列！</strong></span>
+                    </li>
+                  </ul>
+                  <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex justify-end gap-2">
+                    <button type="button" class="statute-popover-trigger text-[11px] text-purple-600 dark:text-purple-400 hover:underline font-semibold cursor-pointer" data-statute="const-73">
+                      📜 憲法 § 73
+                    </button>
+                    <button type="button" class="statute-popover-trigger text-[11px] text-purple-600 dark:text-purple-400 hover:underline font-semibold cursor-pointer" data-statute="435">
+                      🔍 釋字第 435 號
+                    </button>
+                  </div>
+                </div>
+
+                <!-- (三) 外交豁免權 -->
+                <div class="p-5 rounded-2xl bg-white/95 dark:bg-slate-900/90 border border-sky-200 dark:border-sky-800 space-y-3.5 shadow-xs">
+                  <div class="flex items-center justify-between">
+                    <span class="px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-mono font-bold text-[11px] border border-emerald-200 dark:border-emerald-800">
+                      國際法外交慣例
+                    </span>
+                    <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">國際法豁免</span>
+                  </div>
+                  <div>
+                    <h5 class="text-sm font-black text-slate-900 dark:text-white flex items-center gap-1.5">
+                      <span>🌐</span>
+                      <span>(三) 外交豁免權</span>
+                    </h5>
+                    <p class="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium mt-0.5">
+                      外國元首、使節、經許可駐軍之豁免
+                    </p>
+                  </div>
+                  <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2 leading-relaxed">
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-emerald-500 font-bold shrink-0">•</span>
+                      <span><strong>適用對象</strong>：外國元首、大使、公使、領事、外交使節、經許可駐軍之外國軍隊。</span>
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-emerald-500 font-bold shrink-0">•</span>
+                      <span><strong>法源依據</strong>：維也納外交關係公約與國際法外交慣例。</span>
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-emerald-500 font-bold shrink-0">•</span>
+                      <span><strong>處理方式</strong>：不受我國刑事管轄審判，通常依外交途徑宣告為不受歡迎人物（Persona non grata）驅逐出境或由派遣國自行處置。</span>
+                    </li>
+                  </ul>
+                  <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex justify-end">
+                    <span class="text-[11px] text-slate-400 font-mono">維也納公約 VCDR</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- 📖 解題提示（教材第 2-14 頁 原文精華） -->
+              <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900/80 border-2 border-sky-300 dark:border-sky-700 space-y-3.5">
+                <div class="flex items-center justify-between border-b border-sky-100 dark:border-sky-900 pb-2">
+                  <div class="flex items-center gap-2">
+                    <span class="text-base">📖</span>
+                    <h5 class="text-sm font-black text-[#032034] dark:text-white">
+                      解題提示：訴訟障礙事由 vs 實體免責權之本質區辨
+                    </h5>
+                  </div>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-950 text-[#0369a1] dark:text-sky-300 font-bold">
+                    教材第 2-14 頁 原文精華
+                  </span>
+                </div>
+
+                <blockquote class="p-3.5 rounded-xl border-l-4 border-[#0284c7] bg-sky-50/50 dark:bg-sky-950/40 text-xs sm:text-sm text-[#0c4a6e] dark:text-sky-100 leading-relaxed font-semibold italic">
+                  「請注意，總統的刑事豁免權乃程序法上的『訴訟障礙事由』，並未排除犯罪之成立與刑罰之適用；民代的言論免責權乃實體法上的『免責權』，可以排除犯罪成立或阻卻刑罰的發動。兩者性質差異甚大，讀者請切勿混淆。」
+                </blockquote>
+
+                <!-- 雙軌對照表格 -->
+                <div class="overflow-x-auto rounded-xl border border-sky-200 dark:border-sky-800 pt-1">
+                  <table class="w-full text-left text-xs text-slate-600 dark:text-slate-300">
+                    <thead class="bg-sky-100/70 dark:bg-sky-950/70 text-[#032034] dark:text-white text-[11px] font-black border-b border-sky-200 dark:border-sky-800">
+                      <tr>
+                        <th class="p-2.5">比較面向</th>
+                        <th class="p-2.5">總統刑事豁免權（憲法 § 52）</th>
+                        <th class="p-2.5">民代言論免責權（憲法 § 73）</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-sky-100 dark:divide-sky-900/50">
+                      <tr>
+                        <td class="p-2.5 font-bold text-slate-800 dark:text-slate-200">法律性質</td>
+                        <td class="p-2.5 text-blue-700 dark:text-blue-300 font-bold">程序法 ➔「訴訟障礙事由」</td>
+                        <td class="p-2.5 text-purple-700 dark:text-purple-300 font-bold">實體法 ➔「自始排除刑罰事由（免責權）」</td>
+                      </tr>
+                      <tr>
+                        <td class="p-2.5 font-bold text-slate-800 dark:text-slate-200">犯罪成立與否</td>
+                        <td class="p-2.5 text-amber-700 dark:text-amber-300 font-semibold">行為仍成立犯罪，具備不法與罪責！</td>
+                        <td class="p-2.5 text-emerald-700 dark:text-emerald-300 font-semibold">自始排除犯罪成立或阻卻刑罰發動！</td>
+                      </tr>
+                      <tr>
+                        <td class="p-2.5 font-bold text-slate-800 dark:text-slate-200">時間存續效力</td>
+                        <td class="p-2.5"><strong>暫時性</strong>：卸任或經罷免解職後，即得訴追追究！</td>
+                        <td class="p-2.5"><strong>永久性</strong>：任期內合法行使職權之言論，卸任後終身免責！</td>
+                      </tr>
+                      <tr>
+                        <td class="p-2.5 font-bold text-slate-800 dark:text-slate-200">偵查證據保全</td>
+                        <td class="p-2.5">依釋字 627 號：任內檢察官仍得進行必要之證據保全</td>
+                        <td class="p-2.5">既屬實體免責，檢察官不得進行刑事偵查訴追</td>
+                      </tr>
+                      <tr>
+                        <td class="p-2.5 font-bold text-slate-800 dark:text-slate-200">行為態樣邊界</td>
+                        <td class="p-2.5">除內亂、外患罪外，所有刑事犯罪暫不受訴追</td>
+                        <td class="p-2.5">限於議事職權關聯言論；<strong>蓄意肢體衝突暴力除外</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- 2026 現行法規查核區塊 -->
+                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-1.5 text-xs">
+                  <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-1">
+                    <span class="font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 text-[11.5px]">
+                      <span>📌</span>
+                      <span>【2026 現行法規與憲法判決查核狀態】</span>
+                    </span>
+                    <span class="px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 font-mono font-bold text-[10px]">
+                      憲法法庭裁判拘束
+                    </span>
+                  </div>
+                  <div class="space-y-1 text-slate-600 dark:text-slate-300 text-[11px] leading-relaxed">
+                    <div>• <strong>中華民國憲法第 52 條、第 73 條</strong>：憲法本文條文有效施行。</div>
+                    <div>• <strong>司法院釋字第 627 號解釋</strong>：總統刑事豁免權為程序性訴訟障礙，兼顧元首尊嚴與國家安定，卸任後追訴權時效起算。</div>
+                    <div>• <strong>司法院釋字第 435 號解釋</strong>：立委言論免責權不包含肢體暴力，打架或砸毀公物等毀損、傷害罪行不受憲法保障。</div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 十四、第一節全節完結里程碑卡片 (Milestone Callout) -->
+          <div class="p-6 sm:p-8 rounded-3xl border-2 border-indigo-500/50 bg-gradient-to-br from-indigo-50/70 via-blue-50/40 to-purple-50/50 dark:from-indigo-950/50 dark:via-blue-950/30 dark:to-purple-950/40 space-y-4 shadow-sm text-center sm:text-left">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
               <div class="space-y-1">
                 <span class="text-xs font-mono font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block">
-                  PAGE 2-11 COMPLETED • AWAITING PAGE 2-12
+                  CHAPTER 2 SECTION 1 COMPLETED • PAGES 2-9 TO 2-14 FULLY ARCHIVED
                 </span>
-                <h4 class="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200">
-                  🎉 教材第 2-9 ～ 2-11 頁已完整收錄！後續頁碼（第 2-12 頁起）待續
+                <h4 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">
+                  🎉 第一節【刑法的適用效力】全節完整收錄完畢！
                 </h4>
               </div>
-              <span class="px-3 py-1 rounded-xl bg-indigo-600 text-white text-xs font-bold shrink-0 shadow-sm">
-                進度：第 2-11 頁完畢
+              <span class="px-3 py-1 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-xs font-bold shrink-0 shadow-md shadow-indigo-600/30">
+                第一節全節完結 (P. 2-9 ～ 2-14)
               </span>
             </div>
-            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              已收錄第一節核心體系：三大先天限制、從舊從輕原則（§ 2）、案例 2-1（繼續犯）、案例 2-2（限時法 76 年決議）、保安處分雙軌制、屬地原則三大支柱（天然領域、浮動領土、隔地犯）、案例 2-3（跨境電信詐騙 § 4）、案例 2-4（使領館管轄慣例）、案例 2-5（大陸地區犯罪與特殊之國內關係 90台上4247）。
-              待您後續提供第 2-12 頁課文或截圖後，將即刻為您無縫接續增補擴充！
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              第一節已全面收錄刑法適用效力之三大先天限制：
+              <br>• <strong>時的適用效力（P. 2-9～2-10）</strong>：從舊從輕原則（§ 2）、案例 2-1（繼續犯）、案例 2-2（限時法 76 年決議）、保安處分雙軌制。
+              <br>• <strong>地的適用效力（P. 2-10～2-13）</strong>：屬地主要基準（§ 3+§ 4）、案例 2-3（隔地犯詐騙）、案例 2-4（使領館慣例）、案例 2-5（大陸地區犯罪）、輔助基準三大原則（屬人 § 6+§ 7、保護 § 5+§ 8、世界 § 5）、案例 2-6（偽造外國股票案 72 年判例）、廣大興案、複動原則（§ 9）與【表 1】思考順序。
+              <br>• <strong>人的適用效力（P. 2-14）</strong>：總統刑事豁免權（憲法 § 52、釋 627）、民代言論免責權（憲法 § 73、釋 165/435）、外交豁免權與訴訟障礙事由 vs 實體免責權解題提示。
             </p>
+            <div class="pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-indigo-200/60 dark:border-indigo-800/60 text-xs">
+              <span class="text-slate-500 dark:text-slate-400">
+                👉 後續單元：<strong>第二節 刑法之解釋方法</strong>（教材第 2-15 頁起，待提供課文即刻為您無縫接續增補）
+              </span>
+              <button onclick="switchView('part0-chapter-2')" class="text-indigo-600 dark:text-indigo-400 font-bold hover:underline cursor-pointer">
+                返回第二章總覽 →
+              </button>
+            </div>
           </div>
 
           <!-- Chapter Bottom Pagination: 第一節底部 -->

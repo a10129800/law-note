@@ -108,15 +108,16 @@ window.TOC_CONFIG = {
     title: '📌 第二章 章節導航',
     items: [
       { id: 'sec-p0ch2-overview', label: '一、篇章總覽與插槽說明' },
-      { id: 'sec-p0ch2-upcoming-sections', label: '二、子單元導航 (第一節已就緒)' },
-      { action: "switchView('part0-ch2-sec1')", label: '🚀 第一節 刑法的適用效力 (第 2-9 頁) →' },
+      { id: 'sec-p0ch2-upcoming-sections', label: '二、子單元導航 (第一節全節完結)' },
+      { action: "switchView('part0-ch2-sec1')", label: '🚀 第一節 刑法的適用效力 (第 2-9～2-14 頁) →' },
+      { action: "switchView('part0-ch2-sec2')", label: '⏳ 第二節 刑法之解釋方法 (教材第 2-15 頁起) →' },
       { action: "switchView('part0-ch1-sec3')", label: '← 返回第一章第三節 (罪責原則)' },
       { action: "switchView('part-0')", label: '📖 返回第零篇導讀' },
       { action: "switchView('home')", label: '🏠 回到書籍主頁' }
     ]
   },
   'part0-ch2-sec1': {
-    badge: '教材第 2-9 ～ 2-11 頁',
+    badge: '教材第 2-9 ～ 2-14 頁 (全節完結)',
     title: '📌 第一節 適用效力 清單',
     items: [
       { id: 'sec-p0ch2-sec1-three-dimensions', label: '一、適用效力三大先天限制（時、地、人）' },
@@ -128,6 +129,22 @@ window.TOC_CONFIG = {
       { id: 'sec-p0ch2-sec1-case-2-3', label: '七、案例 2-3 跨境電信詐騙案（隔地犯 § 4）' },
       { id: 'sec-p0ch2-sec1-case-2-4', label: '八、案例 2-4 駐外使領館犯罪案（國際法管轄慣例）' },
       { id: 'sec-p0ch2-sec1-case-2-5', label: '九、案例 2-5 大陸地區犯罪案（特殊國內關係）' },
+      { id: 'sec-p0ch2-sec1-auxiliary-scope', label: '十、地的適用效力：(二) 輔助基準（屬人、保護、世界）' },
+      { id: 'sec-p0ch2-sec1-case-2-6', label: '十一、案例 2-6 境外偽造外國股票案（72年判例）' },
+      { id: 'sec-p0ch2-sec1-geographic-order', label: '十二、解題提示：地的適用效力嚴格審查順序（廣大興案、外國裁判複動原則 § 9）' },
+      { id: 'sec-p0ch2-sec1-personal-scope', label: '十三、人的適用效力（總統、民代、外交豁免權與訴訟障礙事由）' },
+      { action: "switchView('part0-ch2-sec2')", label: '👉 下一單元：第二節 刑法之解釋方法 →' },
+      { action: "switchView('part0-chapter-2')", label: '← 返回第二章總覽' },
+      { action: "switchView('home')", label: '🏠 回到書籍主頁' }
+    ]
+  },
+  'part0-ch2-sec2': {
+    badge: '教材第 2-15 頁起 (待填入)',
+    title: '📌 第二節 解釋方法 清單',
+    items: [
+      { id: 'sec-p0ch2-sec2-slot', label: '一、篇章總覽與插槽說明' },
+      { id: 'sec-p0ch2-sec2-roadmap', label: '二、刑法解釋方法之核心預備體系' },
+      { action: "switchView('part0-ch2-sec1')", label: '← 返回第一節 刑法的適用效力' },
       { action: "switchView('part0-chapter-2')", label: '← 返回第二章總覽' },
       { action: "switchView('home')", label: '🏠 回到書籍主頁' }
     ]
