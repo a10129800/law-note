@@ -132,24 +132,24 @@ window.APP_VIEWS['viewPart0Chapter2'] = window.APP_VIEWS['viewPart0Ch2'] = windo
                 <div class="space-y-3">
                   <div class="flex items-center justify-between">
                     <span class="text-xs font-mono font-bold text-purple-600 dark:text-purple-400 flex items-center gap-1.5">
-                      <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
-                      <span>SECTION 2 • READY TO VIEW</span>
+                      <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+                      <span>SECTION 2 • READY TO READ</span>
                     </span>
                     <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 font-bold border border-purple-500/20">
-                      教材第 2-15 頁起預備
+                      教材第 2-14 ～ 2-24 頁
                     </span>
                   </div>
                   <h4 class="text-base font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                     第二節 刑法之解釋方法
                   </h4>
                   <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                    探討文義解釋、體系解釋、歷史解釋、目的解釋，以及擴張解釋與禁止不利類推之邊界劃定。
+                    探討司法解釋四大方法、合憲性與憲法取向解釋、案例 2-7 至 2-15、刑法 § 10 名詞定義（公務員三大類型【表2】與個別化概念、重傷列舉與概括、性交三大審查要件）。
                   </p>
                 </div>
                 <div class="pt-2 flex items-center justify-between border-t border-purple-100 dark:border-purple-900/40">
                   <span class="text-[11px] font-mono text-slate-400">刑法 § 10 解釋法則</span>
                   <button onclick="switchView('part0-ch2-sec2')" class="px-3.5 py-1.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold shadow-md shadow-purple-600/25 transition-all flex items-center gap-1 hover:-translate-y-0.5 cursor-pointer">
-                    <span>🚀 檢視插槽導航</span>
+                    <span>🚀 開始研讀第二節</span>
                     <span>→</span>
                   </button>
                 </div>
@@ -171,15 +171,15 @@ window.APP_VIEWS['viewPart0Chapter2'] = window.APP_VIEWS['viewPart0Ch2'] = windo
               </div>
             </button>
 
-            <button onclick="switchView('home')" class="group p-4 rounded-2xl border border-amber-500/40 hover:border-amber-500 bg-gradient-to-br from-amber-50/50 to-orange-50/30 dark:from-amber-950/30 dark:to-orange-950/20 text-right transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md flex items-center justify-between gap-3">
+            <button onclick="switchView('part0-chapter-3')" class="group p-4 rounded-2xl border border-indigo-500/40 hover:border-indigo-500 bg-gradient-to-br from-indigo-50/50 to-blue-50/30 dark:from-indigo-950/30 dark:to-blue-950/20 text-right transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md flex items-center justify-between gap-3 cursor-pointer">
               <div class="min-w-0 text-left">
-                <span class="text-[11px] text-amber-700 dark:text-amber-400 font-mono block font-bold">快速導覽</span>
-                <span class="text-xs font-extrabold text-slate-900 dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors truncate block">
-                  🏠 回到書籍主頁 (首頁看板)
+                <span class="text-[11px] text-indigo-700 dark:text-indigo-400 font-mono block font-bold">下一章・插槽預備</span>
+                <span class="text-xs font-extrabold text-slate-900 dark:text-white group-hover:text-indigo-700 dark:group-hover:text-indigo-400 transition-colors truncate block">
+                  第三章 刑法的法律效果 (插槽) →
                 </span>
               </div>
-              <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 text-white flex items-center justify-center text-sm font-bold shrink-0 group-hover:scale-105 transition-transform shadow-md shadow-amber-500/30">
-                🏠
+              <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 text-white flex items-center justify-center text-sm font-bold shrink-0 group-hover:scale-105 transition-transform shadow-md shadow-indigo-500/30">
+                ⚖️
               </div>
             </button>
           </div>

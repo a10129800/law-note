@@ -1010,7 +1010,564 @@ window.SEARCH_DATABASE = [
     anchor: 'sec-p0ch2-sec2-case-2-7',
     page: 'P. 2-15',
     desc: '甲撞人後移車在現場人行道抽煙並向警方謊稱目擊者。文義解釋認未物理脫離不該當；目的解釋認實質阻礙救護該當。文義為最外延不得類推！現行法已增訂現場隱瞞身分處罰。'
+  },
+  {
+    id: 'case-2-8',
+    title: '【案例 2-8】男男合意口交案（通姦罪 § 239 構成要件解釋、文義歷史 vs 目的體系、釋字第 791 號除刑化）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-8', '男男口交', '通姦罪', '相姦罪', '239', '§239', '姦淫', '性交', '釋字791號', '婚姻圓滿不可侵犯性', '2-16頁', '2-17頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-case-2-8',
+    page: 'P. 2-16～2-17',
+    desc: '甲乙兩男合意口交是否構成通姦罪？文義歷史解釋認限於性器接合與異性；目的體系解釋認破壞家庭和諧不限異性。釋字 791 號宣告通姦罪違憲立即失效，110年已刪除刑法 § 239。'
+  },
+  {
+    id: 'constitutional-interpretation-methods',
+    title: '特殊的憲法解釋方法：合憲性解釋 vs. 憲法取向解釋（權力相互尊重與價值引領）',
+    category: 'theory',
+    categoryLabel: '核心學說',
+    keywords: ['特殊的憲法解釋方法', '合憲性解釋', '憲法取向解釋', '避免違憲', '權力相互尊重', '釋字509號', '釋字585號', '許宗力', '2-17頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-constitutional',
+    page: 'P. 2-17',
+    desc: '合憲性解釋：多種結果中擇一避免宣告違憲之結論（不得逾越合理文義、不得偏離規範核心）；憲法取向解釋：多種合憲可能性中擇與憲法精神最密切相合者。'
+  },
+  {
+    id: 'deng-yuan-zhen-case',
+    title: '鄧元貞重婚案與釋字第 242 號（憲法取向解釋經典實例、大法官可否解釋判決爭點）',
+    category: 'case',
+    categoryLabel: '經典釋憲',
+    keywords: ['鄧元貞', '鄧元貞重婚案', '釋字242號', '憲法取向解釋', '兩岸隔絕', '婚姻家庭保障', '解釋判決', '2-17頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-constitutional',
+    page: 'P. 2-17',
+    desc: '法院忽略憲法取向解釋造成個案不正義，後經釋字第 242 號挽救，引發大法官能否解釋裁判之重大憲法訴訟爭點。'
+  },
+  {
+    id: 'public-official-three-types',
+    title: '刑法 § 10 Ⅱ 一般化公務員三大類型：身分公務員、授權公務員、委託公務員與【表2】判斷流程',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['公務員', '一般化公務員', '身分公務員', '授權公務員', '委託公務員', '表2', '刑法10條', '§10', '行政輔助人', '私經濟行為', '2-18頁', '2-19頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-public-official',
+    page: 'P. 2-18～2-19',
+    desc: '身分公務員（機關＋法定權限，不限公共事務）；授權公務員（法定權限＋公共事務，排除私經濟）；委託公務員（依法受託公權力＋公共事務，排除行政助手與私經濟）。'
+  },
+  {
+    id: 'individualized-public-official',
+    title: '個別化公務員概念（黃榮堅教授學說：保護公務正確性、廣義功能意義公務員）',
+    category: 'theory',
+    categoryLabel: '核心學說',
+    keywords: ['個別化公務員概念', '黃榮堅', '基礎刑法學', '總則統一定義本末倒置', '保護公務正確性', '功能意義公務員', '妨害公務罪', '2-19頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-individualized',
+    page: 'P. 2-19',
+    desc: '黃榮堅教授主張總則統一定義公務員本末倒置，應依分則保護法益個別獨立判斷。例如保護公務正確性採取廣義功能意義公務員概念。'
+  },
+  {
+    id: 'case-2-9',
+    title: '【案例 2-9】村長、里長是否為刑法上的公務員？（最高法院 98 台上 7191 號判決）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-9', '村長', '里長', '地方制度法', '身分公務員', '地方行政機關', '2-20頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-individualized',
+    page: 'P. 2-20',
+    desc: '村里長辦公處為地方行政機關，村里長辦理村里公務及交辦事項，屬依法服務於地方自治團體所屬機關而具有法定職務權限之身分公務員。'
+  },
+  {
+    id: 'case-2-10',
+    title: '【案例 2-10】軍人是否為刑法上的公務員？（一般士兵 vs. 具有法定公務權限者）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-10', '軍人', '士兵', '法定職務權限', '身分公務員', '2-20頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-individualized',
+    page: 'P. 2-20',
+    desc: '一般士兵雖依國防兵役法令服務於國家所屬機關，但並無法定職務權限，非刑法上公務員！僅在別有法令依據從事一定公務者始屬公務員。'
+  },
+  {
+    id: 'case-2-11',
+    title: '【案例 2-11】公立大學教授以不實單據核銷國科會補助費案（最高法院 103 年第 10 次決議）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-11', '大學教授', '國科會補助費', '科研採購', '身分公務員', '授權公務員', '委託公務員', '103年第10次決議', '2-21頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-individualized',
+    page: 'P. 2-21',
+    desc: '公立大學教授受託執行科研計畫屬學術研究，參與採購為附隨事務無涉公權力行使，非身分、非授權、非委託公務員，無刑法公務員身分。'
+  },
+  {
+    id: 'grievous-bodily-harm-classification',
+    title: '刑法 § 10 Ⅳ 重傷之立法解釋：列舉規定（毀敗 vs. 嚴重減損）與概括規定（重大不治難治）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['重傷', '毀敗', '嚴重減損', '重大不治難治', '刑法10條第4項', '補充性關係', '2-21頁', '2-22頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-grievous-bodily-harm',
+    page: 'P. 2-21～2-22',
+    desc: '毀敗（完全永久喪失）；嚴重減損（大部分機能喪失）。第六款概括規定具補充性，重大應限於接近生命危險。前五款列舉壟斷各機能審查。'
+  },
+  {
+    id: 'case-2-12',
+    title: '【案例 2-12】使他人一顆腎臟破裂切除案（實務認重大不治該當 vs. 學說認單腎足維生非重傷）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-12', '腎臟破裂', '切除腎臟', '重傷', '76台上2907', '86台上1787', '生命危險', '2-22頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-grievous-bodily-harm',
+    page: 'P. 2-22',
+    desc: '實務認切除單腎屬重大傷害且為不治符合第6款重傷；學說認重傷法定刑接近殺人，單腎仍足擔負過濾機能無生命威脅，非重傷。'
+  },
+  {
+    id: 'case-2-13',
+    title: '【案例 2-13】剪斷生殖器僅餘兩公分案（排泄機能 vs. 性功能 vs. 製造精子生殖機能）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-13', '剪斷生殖器', '排尿機能', '生殖機能', '性功能', '78台上3271', '嚴重減損', '2-22頁', '2-23頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-grievous-bodily-harm',
+    page: 'P. 2-22～2-23',
+    desc: '能正常排尿排泄無礙；條文生殖機能指製造精子受孕能力而非勃起快感。若睪丸完好未喪失大部分生殖機能，客觀上不該當重傷。'
+  },
+  {
+    id: 'case-2-14',
+    title: '【案例 2-14】斷手接回恢復良好案（後果持續存在原則、可預見期間無法治癒）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-14', '斷手接回', '後果持續存在', '手術接回', '蔡聖偉', '斷手是否罪', '28上1098', '2-23頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-grievous-bodily-harm',
+    page: 'P. 2-23',
+    desc: '重傷限於後果持續存在始能罪刑相當，毋須終身但須無法在可預見期間治癒。接回恢復良好無日後功能障礙者，不構成重傷。'
+  },
+  {
+    id: 'case-2-15',
+    title: '【案例 2-15】小提琴絕世高手斷指案（個人職業特殊功能考量 vs. 一般性客觀標準通說）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例2-15', '小提琴家', '斷指', '個人功能', '一般客觀標準', '普通傷害', '扣扳機', '2-23頁', '2-24頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-grievous-bodily-harm',
+    page: 'P. 2-23～2-24',
+    desc: '重傷應採一般性客觀標準不能因人而異（通說），基本抓握功能健全僅成立普通傷害；個人功能考量說認成立重傷。軍人無法扣扳機同理。'
+  },
+  {
+    id: 'sexual-intercourse-definition',
+    title: '刑法 § 10 Ⅴ 性交之立法解釋：非正當目的（醫療排除）、主客體性別平等、受體三部位限制',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['性交定義', '刑法10條第5項', '非正當目的', '醫療行為排除', '婦產科內診', '進入接合', '性器肛門口腔', '2-24頁'],
+    view: 'part0-ch2-sec2',
+    anchor: 'sec-p0ch2-sec2-sexual-intercourse',
+    page: 'P. 2-24',
+    desc: '主觀非正當目的（排除婦產科內診、嬰兒肛溫）；主客體無性別差異；行為為進入或使之接合；受體嚴格鎖定性器、肛門與口腔三者。'
+  },
+
+  // 第零篇 第三章 刑法的法律效果 (教材第 2-25 ～ 2-27 頁)
+  {
+    id: 'part0-chapter-3-overview',
+    title: '第零篇 第三章 刑法的法律效果（刑罰理論、雙軌制裁體系與刑罰四大步驟）',
+    category: 'chapter',
+    categoryLabel: '章節導覽',
+    keywords: ['第三章', '刑法的法律效果', '法律效果', '第零篇第三章', '謹思慎刑', '扮家家酒', '比例原則', '2-25頁'],
+    view: 'part0-chapter-3',
+    anchor: 'sec-p0ch3-intro',
+    page: 'P. 2-25～2-27',
+    desc: '若不理解法律效果，大言不慚說某人成立本罪猶如扮家家酒。理解付出代價後始能更審慎研究法學問題。'
+  },
+  {
+    id: 'retributive-theory',
+    title: '應報理論（絕對理論）：懲罰過去法益侵害、以眼還眼、漢摩拉比法典第23條無過失國賠',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['應報理論', '絕對理論', '以眼還眼', '以牙還牙', '同態復仇', '漢摩拉比法典', '無過失國賠', '罪刑相當', '2-25頁'],
+    view: 'part0-chapter-3',
+    anchor: 'sec-p0ch3-theories',
+    page: 'P. 2-25～2-26',
+    desc: '源於同態復仇思想，公正應報犯罪撫平損害。優點在設定刑罰上限不能超過所生危害；缺點是無助受刑人脫離犯罪更增再犯率。'
+  },
+  {
+    id: 'general-prevention-theory',
+    title: '一般預防理論：威嚇社會大眾嚇阻犯罪、兵聖孫武斬愛妾練娘子軍典故',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['一般預防', '預防理論', '威嚇大眾', '嚇阻犯罪', '孫武', '練娘子軍', '斬愛妾', '刑罰越殘酷越好', '2-26頁'],
+    view: 'part0-chapter-3',
+    anchor: 'sec-p0ch3-theories',
+    page: 'P. 2-26',
+    desc: '藉刑罰痛苦性威嚇一般大眾以嚇阻犯罪。優點是維護秩序；缺點背離犯罪學（犯人多自認不會被抓）且易導向刑罰越殘酷越好之偏差。'
+  },
+  {
+    id: 'special-prevention-theory',
+    title: '特別預防理論：矯治犯罪人再社會化、電影開膛手傑克腦前葉切開術（現代保安處分前身）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['特別預防', '再社會化', '矯治犯罪人', '開膛手傑克', '腦前葉切開術', '保安處分前身', '無限期處罰', '2-26頁'],
+    view: 'part0-chapter-3',
+    anchor: 'sec-p0ch3-theories',
+    page: 'P. 2-26',
+    desc: '目的在矯治行為人除去犯罪因子。優點是有助再社會化；缺點為若再犯風險高，貫徹本說將得出無限期處罰之荒謬結論。'
+  },
+  {
+    id: 'combination-theory-dual-track',
+    title: '結合理論與雙軌制裁體系：刑罰要件（TB+R+S）vs. 保安處分要件（TB+R即可發動）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['結合理論', '折衷理論', '雙軌體系', '雙軌制裁', '刑罰與保安處分', 'TBRS', 'TBR', '保安處分要件', '2-26頁'],
+    view: 'part0-chapter-3',
+    anchor: 'sec-p0ch3-combination',
+    page: 'P. 2-26',
+    desc: '以危害為上限（應報），兼顧威嚇（一般預防）與再社會化（特別預防）。刑罰須三階層該當（TB+R+S），保安處分具備不法（TB+R）即可發動，二者可並行。'
+  },
+  {
+    id: 'four-steps-of-punishment',
+    title: '刑罰產生的四大步驟與思考架構：法定刑 ➔ 處斷刑 ➔ 宣告刑 ➔ 執行刑',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['刑罰思考步驟', '四大步驟', '法定刑', '處斷刑', '宣告刑', '執行刑', '量定刑罰', '確定範圍', '2-27頁'],
+    view: 'part0-chapter-3',
+    anchor: 'sec-p0ch3-steps-diagram',
+    page: 'P. 2-27',
+    desc: '步驟①找尋基本範圍（法定刑）；步驟②調整處斷範圍（處斷刑）；步驟③範圍內選定刑罰（宣告刑）；步驟④執行刑罰（執行刑）。'
+  },
+
+  // 第零篇 第三章 第一節 刑罰的種類——兼談法定刑 (教材第 2-27 ～ 2-29 頁)
+  {
+    id: 'part0-ch3-sec1-overview',
+    title: '第零篇 第三章 第一節 刑罰的種類——兼談法定刑（完全性法條構造與刑種體系）',
+    category: 'chapter',
+    categoryLabel: '章節導覽',
+    keywords: ['第一節', '刑罰的種類', '兼談法定刑', '第三章第一節', '主刑從刑', '完全性法條', '2-27頁'],
+    view: 'part0-ch3-sec1',
+    anchor: 'sec-p0ch3-sec1-statutory-penalty',
+    page: 'P. 2-27～2-29',
+    desc: '法定刑是個別罪名所定之刑，刑法條文為成立要件＋法定刑之完全性法條。規範主刑三種與從刑體系。'
+  },
+  {
+    id: 'statutory-penalty-structure',
+    title: '法定刑與完全性法條結構：犯罪成立要件（Tatbestand）＋ 法律效果（Rechtsfolge）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['完全性法條', '法定刑結構', '殺人者', '成立要件', '法律效果', '刑法271條', '§271', '2-27頁'],
+    view: 'part0-ch3-sec1',
+    anchor: 'sec-p0ch3-sec1-statutory-penalty',
+    page: 'P. 2-27',
+    desc: '我國刑法原則上均為完全性法條。如殺人罪：殺人者為犯罪成立要件，處死刑、無期徒刑或十年以上有期徒刑為法定刑。'
+  },
+  {
+    id: 'principal-penalties-death-liberty-fine',
+    title: '主刑三大種類：死刑（§63限制與113憲判8）、自由刑（無期/有期/拘役度量）、罰金刑',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['主刑', '刑法33條', '§33', '死刑', '63條限制', '§63', '無期徒刑', '有期徒刑', '拘役', '罰金', '2-27頁'],
+    view: 'part0-ch3-sec1',
+    anchor: 'sec-p0ch3-sec1-principal-penalties',
+    page: 'P. 2-27',
+    desc: '死刑受§63未滿18歲或滿80歲不得處死限制；自由刑含無期、有期（2月至15年，加至20年）、拘役（1日至60日，加至120日）；罰金為1000元以上。'
+  },
+  {
+    id: 'deprivation-of-civil-rights-incapacitation',
+    title: '褫奪公權（§37）：資格刑、新法刪除四權、失能理論（剝奪權能等同失去犯罪能力）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['褫奪公權', '資格刑', '37條', '§37', '失能理論', '公職候選人', '刪除四權', '主刑執行完畢起算', '2-28頁'],
+    view: 'part0-ch3-sec1',
+    anchor: 'sec-p0ch3-sec1-accessory-penalties',
+    page: 'P. 2-28',
+    desc: '剝奪公務員及公職候選人資格，新法已刪除選舉罷免四權。宣告1年以上徒刑認有必要者宣告1～10年，採失能理論裁量，原則自主刑執行完畢起算。'
+  },
+  {
+    id: 'confiscation-and-recovery-gross-net',
+    title: '沒收標的與追徵抵償：違禁物、犯罪工具與所得、總額原則（不扣除成本）vs 淨額原則',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['沒收', '38條', '§38', '追徵追繳抵償', '違禁物', '犯罪所得', '總額原則', '淨額原則', '沒收新制獨立化', '2-28頁'],
+    view: 'part0-ch3-sec1',
+    anchor: 'sec-p0ch3-sec1-accessory-penalties',
+    page: 'P. 2-28',
+    desc: '必沒收違禁物、得沒收供犯罪物與所得物。相對沒收附隨主刑，絕對沒收得單獨宣告。追徵抵償為沒收補充規定。沒收新制採總額原則避免有利可圖。'
+  },
+  {
+    id: 'four-statutory-penalty-patterns',
+    title: '法定刑四大主刑配置模式：唯一主刑模式、多數主刑選科、多數主刑併科、選科或併科',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['法定刑模式', '唯一主刑', '選科模式', '併科模式', '選科或併科', '選科與併科', '276條', '185條之3', '2-28頁', '2-29頁'],
+    view: 'part0-ch3-sec1',
+    anchor: 'sec-p0ch3-sec1-penalty-patterns',
+    page: 'P. 2-28～2-29',
+    desc: '唯一主刑（如預備殺人§271Ⅲ）；多數選科（如過失致死§276Ⅰ擇一科處）；多數併科（如業務過失§276Ⅱ得併科罰金）；選科或併科（如不能安全駕駛§185-3具雙重彈性）。'
+  },
+  {
+    id: 'sentence-adjustment-and-order-ch3-sec2',
+    title: '處斷刑基本概念與先加後減法則（§71）：分則零星規定（§134、§347Ⅴ）與加減方法（§63～§73）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['處斷刑', '刑罰調整', '先加後減', '刑法71條', '§71', '134條', '§134', '347條第5項', '§347', '2-29頁'],
+    view: 'part0-ch3-sec2',
+    anchor: 'sec-p0ch3-sec2-concept',
+    page: 'P. 2-29',
+    desc: '法定刑經加重或減輕調整後之刑罰範圍稱為處斷刑。分則有§134公務員假藉職權加重1/2、§347Ⅴ釋放減刑。加減同時存在依§71採「先加後減」法則。'
+  },
+  {
+    id: 'recidivism-five-requirements-ch3-sec2',
+    title: '累犯成立五大要件（§47～§49）：曾受徒刑執行、5年內、後罪故意有期徒刑以上、非外國裁判',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['累犯', '刑法47條', '§47', '48條', '49條', '§49', '累犯要件', '易科罰金', '緩刑撤銷', '假釋中不成立', '2-29頁', '2-30頁'],
+    view: 'part0-ch3-sec2',
+    anchor: 'sec-p0ch3-sec2-recidivism',
+    page: 'P. 2-29～2-30',
+    desc: '曾受徒刑執行完畢或赦免後5年內故意再犯有期徒刑以上之罪。拘役罰金不成立；易科罰金算；緩刑未撤銷不算，撤銷服刑算；假釋中再犯不成立累犯。'
+  },
+  {
+    id: 'recidivism-interpretation-775-ch3-sec2',
+    title: '司法院釋字第 775 號解釋：累犯一律加重最低本刑違憲、法院得不加重審查裁量',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['釋字775', '釋字第775號', '775號解釋', '累犯違憲', '重複評價禁止', '罪刑相當原則', '最低本刑不予加重', '釋字812', '2-30頁'],
+    view: 'part0-ch3-sec2',
+    anchor: 'sec-p0ch3-sec2-recidivism',
+    page: 'P. 2-30',
+    desc: '釋字775號宣告刑法第47條第1項不分情節一律加重最低本刑違反罪刑相當原則。法院應審酌個案罪責，認不符罪刑相當者得裁量不加重最低本刑。'
+  },
+  {
+    id: 'surrender-three-requirements-ch3-sec2',
+    title: '自首成立三大要件（§62）：申告自己之罪、未被有權機關發覺（20上1721）、自動接受裁判',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['自首', '刑法62條', '§62', '自首要件', '得減輕其刑', '20上1721', '94台上5690', '接受裁判', '逃逸非自首', '2-30頁', '2-31頁'],
+    view: 'part0-ch3-sec2',
+    anchor: 'sec-p0ch3-sec2-surrender',
+    page: 'P. 2-30～2-31',
+    desc: '主動向有權偵查機關申告自己尚未被發覺之罪並接受裁判，得減輕其刑。無形式限制可代為申告；申告後逃匿者屬向檢警挑釁，不成立自首。'
+  },
+  {
+    id: 'surrender-recantation-effect-ch3-sec2',
+    title: '自首後翻供之效力（99台上7333決）：事後翻供甚至否認犯罪，依然不影響先前自首之效力',
+    category: 'case',
+    categoryLabel: '實務裁判',
+    keywords: ['99台上7333', '自首翻供', '翻供不影響自首', '否認犯罪', '自首效力', '2-30頁'],
+    view: 'part0-ch3-sec2',
+    anchor: 'sec-p0ch3-sec2-surrender',
+    page: 'P. 2-30',
+    desc: '最高法院 99 年度台上字第 7333 號判決：縱或行為人自首，嗣後卻又翻供甚至否認犯罪之行為，依然不影響先前自首的效力。'
+  },
+  {
+    id: 'surrender-vs-confession-vs-appearance-ch3-sec2',
+    title: '關鍵法學辨析：自首（§62未發覺申告）、投案（已發覺鎖定主動到案）、自白（訴訟不利己陳述）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['自首vs投案', '自首vs自白', '投案', '自白', '偵查中自白', '有權偵查機關', '2-31頁'],
+    view: 'part0-ch3-sec2',
+    anchor: 'sec-p0ch3-sec2-surrender-vs-confession',
+    page: 'P. 2-31',
+    desc: '自首：犯罪未發覺前主動申告自己犯罪並受裁判；投案：檢警已鎖定犯罪嫌疑人後主動到案；自白：審判或偵查中坦承犯行或為不利己陳述。'
+  },
+  {
+    id: 'sentencing-proportionality-and-pronounced-penalty-ch3-sec3',
+    title: '量刑中心思想：罪刑相當原則、合理的刑罰（小罪不大罰）與公平的刑罰（平等對待）、宣告刑之確立',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['罪刑相當原則', '宣告刑', '量刑原則', '合理的刑罰', '公平的刑罰', '小罪不能大罰', '平等原則', '2-31頁'],
+    view: 'part0-ch3-sec3',
+    anchor: 'sec-p0ch3-sec3-concept',
+    page: 'P. 2-31',
+    desc: '刑事處罰必須與罪責相當，施加刑罰不得超逾罪責範圍。法官依據罪刑相當原則在處斷刑框架內找出合理、公平之刑罰，於主文宣示為宣告刑。'
+  },
+  {
+    id: 'sentencing-factors-ten-circumstances-ch3-sec3',
+    title: '處斷刑範圍內的量刑考量標的（§57）：十大審酌事項（動機、手段、被害關係、犯後態度）與例示性質',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['刑法57條', '§57', '量刑考量標的', '例示規定', '動機目的', '手段', '犯後態度', '2-31頁'],
+    view: 'part0-ch3-sec3',
+    anchor: 'sec-p0ch3-sec3-sentencing-factors',
+    page: 'P. 2-31',
+    desc: '刑法第57條明定以行為人之責任為基礎，審酌動機、手段、生活狀況、品行、智識、與被害人關係、損害及犯後態度等十款事項，性質為開放例示規定。'
+  },
+  {
+    id: 'sentencing-double-evaluation-prohibition-ch3-sec3',
+    title: '禁止重複評價原則在量刑之適用：已列入構成要件加減者，量刑時不得再重複評價（殺尊親屬罪範例）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['禁止重複評價', '重複評價禁止', '殺害直系血親尊親屬罪', '272條', '§272', '被害人關係', '2-31頁'],
+    view: 'part0-ch3-sec3',
+    anchor: 'sec-p0ch3-sec3-sentencing-factors',
+    page: 'P. 2-31',
+    desc: '審酌事項若已於分則列為犯罪加減成立要件（如殺直系血親尊親屬罪加重1/2），量刑時不能再重複以「行為人與被害人關係」§57第7款加重量刑。'
+  },
+  {
+    id: 'sentencing-silence-right-exercise-99-6995-ch3-sec3',
+    title: '權利行使不得作為不利評價（99台上6995決）：行使緘默權不得認定為犯後態度不佳加重量刑',
+    category: 'case',
+    categoryLabel: '實務裁判',
+    keywords: ['99台上6995', '緘默權', '犯後態度不佳', '權利行使', '憲法防禦權', '加重量刑禁止', '2-31頁'],
+    view: 'part0-ch3-sec3',
+    anchor: 'sec-p0ch3-sec3-sentencing-factors',
+    page: 'P. 2-31',
+    desc: '最高法院 99 年度台上字第 6995 號判決：被告於訴訟中行使緘默權或辯明無罪，乃憲法保障之正當防禦權行使，絕不得認定為犯罪後態度不佳而予以加重量刑。'
+  },
+  {
+    id: 'sentencing-improper-connection-prohibition-ch3-sec3',
+    title: '不當聯結禁止原則：操作「行為人人格品性」須以直接形成犯罪行為基礎者為限',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['不當聯結禁止', '人格品性', '行為人品行', '關聯性要求', '品格證據', '2-31頁'],
+    view: 'part0-ch3-sec3',
+    anchor: 'sec-p0ch3-sec3-sentencing-factors',
+    page: 'P. 2-31',
+    desc: '在操作刑法第57條第5款行為人品行時，須以已經成為人格特徵並直接形成犯罪行為之建構基礎者，才能作為量刑因子，嚴禁與案情無關之恣意不當聯結。'
+  },
+  {
+    id: 'supplementary-sentencing-rules-58-59-61-ch3-sec3',
+    title: '超出處斷刑範圍的量刑補充規則：§58酌加（所得利益罰金）、§59酌減（情堪憫恕）、§61酌免（有罪免刑）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['量刑補充規則', '58條酌加', '§58', '59條酌減', '§59', '61條酌免', '§61', '顯可憫恕', '有罪免刑', '2-31頁', '2-32頁'],
+    view: 'part0-ch3-sec3',
+    anchor: 'sec-p0ch3-sec3-supplementary-rules',
+    page: 'P. 2-31～2-32',
+    desc: '法官例外打破處斷刑之規則：§58在所得利益範圍內加重罰金；§59犯罪情狀顯可憫恕得低於最低刑酌減；§61微罪顯可憫恕得免除其刑，但本質仍為有罪判決。'
+  },
+  // ==================== 第零篇 第三章 第四節 刑罰的執行——兼談執行刑 (教材第 2-32 ～ 2-36 頁) ====================
+  {
+    id: 'case-p0ch3-sec4-3-1',
+    title: '案例 3-1（強制性交前科再犯毀損文書罪——法定刑、處斷刑、宣告刑、執行刑四階推導）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例3-1', '案例 3-1', '毀損文書罪', '352條', '§352', '累犯加重', '法定刑', '處斷刑', '宣告刑', '執行刑', '易科罰金', '2-32頁'],
+    view: 'part0-ch3-sec4',
+    anchor: 'sec-p0ch3-sec4-concept',
+    page: 'P. 2-32',
+    desc: '甲犯強制性交罪服刑5年出獄3年後再犯毀損文書罪。四階精密演繹：法定刑3年以下、累犯處斷刑3月以上4.5年以下、宣告刑5月有期徒刑、執行刑折算易科罰金新台幣15萬元。'
+  },
+  {
+    id: 'case-p0ch3-sec4-3-2',
+    title: '案例 3-2（數罪併罰定應執行刑逾6個月得否易科罰金？——§ 41 Ⅷ 與釋字第 662 號解釋）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例3-2', '案例 3-2', '數罪併罰', '定執行刑逾6個月', '易科罰金', '41條第8項', '§41第8項', '釋字662號', '釋字第662號', '短期自由刑流弊', '2-33頁', '2-34頁'],
+    view: 'part0-ch3-sec4',
+    anchor: 'sec-p0ch3-sec4-substitute',
+    page: 'P. 2-33～2-34',
+    desc: '竊盜4月與傷害4月合併定執行刑7月。司法院釋字第662號與§41Ⅷ明定：各罪宣告刑均得易科罰金者，縱合併定執行刑逾6個月，仍得易科罰金，以符合避免短期自由刑流弊之初衷。'
+  },
+  {
+    id: 'case-p0ch3-sec4-3-3',
+    title: '案例 3-3（緩刑期滿後方判處徒刑應否撤銷緩刑？——§ 76 但書重大例外避免拖延訴訟脫法）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例3-3', '案例 3-3', '撤銷緩刑', '緩刑期滿', '76條但書', '§76但書', '拖延訴訟', '75條', '§75', '75條之1', '§75之1', '2-35頁'],
+    view: 'part0-ch3-sec4',
+    anchor: 'sec-p0ch3-sec4-probation',
+    page: 'P. 2-35',
+    desc: '甲緩刑期間與17歲少女同居性行為，緩刑期滿後始判處徒刑。§76但書重大例外：只要符合§75或§75之1撤銷事由，縱緩刑期滿原宣告刑亦不失效力，得依法撤銷緩刑並接續執行。'
+  },
+  {
+    id: 'case-p0ch3-sec4-3-4',
+    title: '案例 3-4（假釋遭法務部駁回之救濟管道？——監獄行刑法申訴與司法院釋字第 691 號解釋行政訴訟救濟）',
+    category: 'case',
+    categoryLabel: '案例',
+    keywords: ['案例3-4', '案例 3-4', '假釋駁回', '行政救濟', '救濟管道', '監獄行刑法6條', '釋字691號', '釋字第691號', '行政訴訟', '行政法院', '法官保留', '2-36頁'],
+    view: 'part0-ch3-sec4',
+    anchor: 'sec-p0ch3-sec4-parole',
+    page: 'P. 2-36',
+    desc: '甲服刑過半申請假釋遭法務部駁回。除監獄行刑法申訴外，依司法院釋字第691號解釋：受刑人不服不予假釋決定，得循序向行政法院提起行政救濟，維護憲法第16條訴訟權。'
+  },
+  {
+    id: 'concept-substitute-punishment-four-types',
+    title: '易刑處分四大形態體系（易科罰金 §41、易服勞役 §42、易以訓誡 §43、易服社會勞動 §41+§42之1）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['易刑處分', '易科罰金', '易服勞役', '易以訓誡', '易服社會勞動', '避免短期自由刑流弊', '檢察官裁量', '41條', '42條', '43條', '2-33頁', '2-34頁'],
+    view: 'part0-ch3-sec4',
+    anchor: 'sec-p0ch3-sec4-substitute',
+    page: 'P. 2-33～2-34',
+    desc: '易刑處分四大形態深度解析：易科罰金避免短期自由刑交叉感染、易服勞役解決無力完納罰金、易以訓誡針對微罪公益動機、易服社會勞動彌補貧富不均促進再社會化。'
+  },
+  {
+    id: 'concept-probation-system-74-76',
+    title: '暫緩刑罰執行之寬典：緩刑宣告要件（§74）、裁量標準、附加負擔與期滿效力（§76 視為自始未受刑之宣告）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['緩刑', '暫緩執行', '法院專屬職權', '74條要件', '宣告刑2年以下', '附負擔緩刑', '期滿未經撤銷', '視為自始未受刑之宣告', '76條', '2-34頁', '2-35頁'],
+    view: 'part0-ch3-sec4',
+    anchor: 'sec-p0ch3-sec4-probation',
+    page: 'P. 2-34～2-35',
+    desc: '緩刑體系：法院專屬職權（2～5年），要件包含受2年以下徒刑宣告、5年內未曾故意受徒刑宣告、認暫不執行為適當；效力不及於從刑；期滿未經撤銷刑之宣告失其效力。'
+  },
+  {
+    id: 'concept-parole-system-77-79',
+    title: '提前回歸社會之寬恕：假釋實質要件（§77）、消極排除事由3款、法規批評與保護管束（§79 以已執行論）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['假釋', '提前釋放', '法務部決定', '法官保留欠缺', '77條實質要件', '未滿6個月', '重罪累犯再犯', '性侵害治療', '保護管束', '以已執行論', '79條', '2-35頁', '2-36頁'],
+    view: 'part0-ch3-sec4',
+    anchor: 'sec-p0ch3-sec4-parole',
+    page: 'P. 2-35～2-36',
+    desc: '假釋制度：監獄報請法務部核准，受徒刑執行無期逾25年、有期逾1/2、累犯逾2/3且有悛悔實據；排除未滿6月、5年以上重罪累犯再犯、性侵治療未顯著降低危險；期滿以已執行論。'
+  },
+  {
+    id: 'concept-execution-comparison-matrix',
+    title: '刑罰執行三大調節制度對比總表（易刑處分 vs 緩刑 vs 假釋 決定主體、門檻要件、附隨效力、法律效果總整）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['刑罰執行對照矩陣', '三大調節制度', '易刑處分 vs 緩刑 vs 假釋', '比較表格', '宣告刑與執行刑', '2-36頁'],
+    view: 'part0-ch3-sec4',
+    anchor: 'sec-p0ch3-sec4-summary-matrix',
+    page: 'P. 2-36',
+    desc: '橫向對比總表：深入比較易刑處分、緩刑、假釋之決定機關（法院/檢察官/法務部）、宣告刑門檻（6月/2年/無限制）、適用階段、監督機制（保護管束）與終局法律效果。'
+  },
+  {
+    id: 'concept-statute-of-limitations-p0ch3-sec4',
+    title: '刑法中的時效制度：追訴權時效（§80）vs 行刑權時效（§84）雙軌體系架構',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['刑法時效', '追訴權時效', '行刑權時效', '時效完成', '80條', '84條', '§80', '§84', '法安定性', '2-37頁'],
+    view: 'part0-ch3-sec4',
+    anchor: 'sec-p0ch3-sec4-statute-of-limitations',
+    page: 'P. 2-37',
+    desc: '刑法時效雙軌：追訴權時效規範判決確定前國家追訴權之存續；行刑權時效規範判決確定後刑罰落實執行之期間。時效完成即限縮或消滅國家刑罰權。'
+  },
+  {
+    id: 'concept-prosecution-limitation-start-p0ch3-sec4',
+    title: '追訴權時效起算點（§80Ⅱ）：狀態犯（犯罪成立日起算）vs 繼續犯（行為終了日起算）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['追訴權時效起算點', '狀態犯起算', '繼續犯起算', '犯罪成立時', '行為終了時', '80條第2項', '§80第2項', '私行拘禁', '2-37頁'],
+    view: 'part0-ch3-sec4',
+    anchor: 'sec-p0ch3-sec4-statute-of-limitations',
+    page: 'P. 2-37',
+    desc: '刑法第80條第2項明定：狀態犯（如殺人、竊盜）自犯罪成立之日起算追訴權時效；繼續犯（如私行拘禁罪）自違法狀態終了、行為終了之日起算。'
+  },
+  {
+    id: 'concept-prosecution-limitation-remedy-p0ch3-sec4',
+    title: '罹於追訴權時效之訴訟法雙階效果：尚未起訴不起訴處分（刑訴§252②）vs 已經起訴免訴判決（刑訴§302②）',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['罹於追訴權時效', '不起訴處分', '免訴判決', '刑訴252條', '刑訴302條', '形式裁判', '追訴權消滅', '2-37頁'],
+    view: 'part0-ch3-sec4',
+    anchor: 'sec-p0ch3-sec4-statute-of-limitations',
+    page: 'P. 2-37',
+    desc: '犯罪一旦罹於追訴權時效：偵查階段尚未起訴者，檢察官應依刑事訴訟法第252條第2款為「不起訴處分」；審判階段已經起訴者，法院應依第302條第2款為「免訴判決」。'
+  },
+  {
+    id: 'concept-execution-limitation-p0ch3-sec4',
+    title: '行刑權時效（§84）：裁判確定日起算，罹於期間行刑權消滅，裁判即不得再執行',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['行刑權時效', '84條', '§84', '裁判確定之日', '行刑權消滅', '裁判不得再執行', '逃匿通緝', '2-37頁'],
+    view: 'part0-ch3-sec4',
+    anchor: 'sec-p0ch3-sec4-statute-of-limitations',
+    page: 'P. 2-37',
+    desc: '刑法第84條規定，行刑權時效自裁判確定之日起算。若罹於行刑權時效期間，行刑權歸於消滅，該確定裁判即不得再予執行送監。'
   }
 ];
+
+
 
 

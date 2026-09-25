@@ -27,6 +27,42 @@ window.APP_VIEWS['viewPart0'] = window.APP_VIEWS['part0'] = `
             <blockquote class="text-sm sm:text-base text-slate-700 dark:text-slate-200 leading-relaxed italic border-l-4 border-blue-500 pl-4 py-1">
               「本篇是正式踏入刑法學習前的暖身，介紹影響刑法運作的四大支柱，以及刑法操作的前理解（諸如刑法的適用效力、解釋方法）。至於刑法的法律效果，這個通常被教科書或參考書放在最尾巴說明的刑罰理論，筆者挪移到本篇提前整理，旨在提醒大家「謹思慎刑」的核心理念，也與刑法最後手段性原則接軌。」
             </blockquote>
+
+            <!-- 第零篇 三大章節全景導覽網格 -->
+            <div class="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div onclick="switchView('part0-chapter-1')" class="p-3.5 rounded-2xl border border-indigo-200 dark:border-indigo-900/60 bg-indigo-50/40 dark:bg-indigo-950/20 hover:border-indigo-500/60 transition-all cursor-pointer space-y-1.5 group">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-mono font-bold text-indigo-600 dark:text-indigo-400">CHAPTER 1</span>
+                  <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">已完結</span>
+                </div>
+                <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                  第一章 刑法的運作原理
+                </div>
+                <p class="text-[11px] text-slate-500 line-clamp-2">四大支柱：最後手段性、罪刑法定、法益保護、罪責原則</p>
+              </div>
+
+              <div onclick="switchView('part0-chapter-2')" class="p-3.5 rounded-2xl border border-blue-200 dark:border-blue-900/60 bg-blue-50/40 dark:bg-blue-950/20 hover:border-blue-500/60 transition-all cursor-pointer space-y-1.5 group">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-mono font-bold text-blue-600 dark:text-blue-400">CHAPTER 2</span>
+                  <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">已完結</span>
+                </div>
+                <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  第二章 刑法的操作原理
+                </div>
+                <p class="text-[11px] text-slate-500 line-clamp-2">刑法的適用效力（時、地、人）與解釋方法（司法解釋、§10 立法解釋）</p>
+              </div>
+
+              <div onclick="switchView('part0-chapter-3')" class="p-3.5 rounded-2xl border border-purple-200 dark:border-purple-900/60 bg-purple-50/40 dark:bg-purple-950/20 hover:border-purple-500/60 transition-all cursor-pointer space-y-1.5 group">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-mono font-bold text-purple-600 dark:text-purple-400">CHAPTER 3</span>
+                  <span class="text-[10px] px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 font-bold">導論已收錄</span>
+                </div>
+                <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                  第三章 刑法的法律效果
+                </div>
+                <p class="text-[11px] text-slate-500 line-clamp-2">刑罰目的理論（應報、預防、結合）、雙軌體系與思考四大步驟</p>
+              </div>
+            </div>
           </div>
 
           <!-- Chapter Bottom Pagination: 第零篇導讀底部 -->
