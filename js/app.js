@@ -2179,3 +2179,20 @@ window.lightboxZoom = lightboxZoom;
 window.lightboxResetZoom = lightboxResetZoom;
 window.refreshViewElements = refreshViewElements;
 window.mountAllViews = mountAllViews;
+
+function toggleOriginalQuote() {
+  const container = document.getElementById('originalQuoteContainer');
+  const text = document.getElementById('quoteToggleText');
+  const icon = document.getElementById('quoteToggleIcon');
+  if (!container) return;
+  if (container.classList.contains('hidden')) {
+    container.classList.remove('hidden');
+    if (text) text.innerText = '隱藏純文字引文';
+    if (icon) icon.innerText = '✕';
+  } else {
+    container.classList.add('hidden');
+    if (text) text.innerText = '查看純文字引文';
+    if (icon) icon.innerText = '📄';
+  }
+}
+window.toggleOriginalQuote = toggleOriginalQuote;
