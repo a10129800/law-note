@@ -583,6 +583,17 @@ window.SEARCH_DATABASE = [
 
   // 第零篇 第一章 第二節 罪刑法定原則 & 第三節 罪責原則 新增條目 (教材第 2-5 ~ 2-8 頁)
   {
+    id: 'concept-nulla-poena-novice',
+    title: '🐣 小白秒懂專區：30 秒白話搞懂「罪刑法定原則」與大富翁桌遊比喻',
+    category: 'concept',
+    categoryLabel: '核心概念',
+    keywords: ['小白秒懂', '白話文', '大富翁', '白話翻譯', '遊戲規則', '三大禁令', '沒先講好不能算帳', '罪刑法定原則', '2-5頁'],
+    view: 'part0-ch1-sec2',
+    anchor: 'sec-p0ch1-sec2-def',
+    page: 'P. 2-5',
+    desc: '「沒先講好的規矩不能事後算帳！」法條白話大翻譯：大富翁遊戲規則書比喻、三大白話禁令（不准亂編罪、不准腦補擴大、不准搭時光機翻舊帳）。'
+  },
+  {
     id: 'art-1',
     title: '刑法第 1 條（罪刑法定原則與行為時法）',
     category: 'article',

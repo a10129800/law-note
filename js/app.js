@@ -2155,79 +2155,11 @@ function initLightboxEvents() {
 }
 
 function setupZoomableDiagrams() {
-  const homeDiagrams = document.querySelectorAll('#viewHome .grid.grid-cols-1.sm\\:grid-cols-2 > div.group');
-  homeDiagrams.forEach((card, idx) => {
-    if (card.classList.contains('zoomable-diagram')) return;
-    card.classList.add('zoomable-diagram');
-    const title = card.querySelector('span.font-bold')?.textContent || `精選圖解 ${idx + 1}`;
-    const page = card.querySelector('span.font-mono')?.textContent || '書籍精華';
-    
-    const badge = document.createElement('div');
-    badge.className = 'zoomable-badge absolute top-2 right-2 px-2 py-0.5 rounded-full bg-blue-600/90 text-white text-[10px] font-bold shadow flex items-center gap-1 z-10';
-    badge.innerHTML = `<span>🔍 全螢幕檢視</span>`;
-    card.style.position = 'relative';
-    card.appendChild(badge);
-
-    card.addEventListener('click', (e) => {
-      if (e.target.closest('button') || e.target.closest('a')) return;
-      e.stopPropagation();
-      openDiagramLightbox(card, title, page);
-    });
-  });
-
-  const visualContainers = document.querySelectorAll('#viewChapter1 .rounded-2xl, #viewChapter2 .rounded-2xl, #viewPart0Chapter1 .rounded-2xl, #viewPart0Ch1Sec1 .rounded-2xl, #viewPart0Ch1Sec2 .rounded-2xl, #viewPart0Ch1Sec3 .rounded-2xl');
-  visualContainers.forEach(container => {
-    if (container.classList.contains('zoomable-diagram') || container.classList.contains('case-card')) return;
-    const text = container.textContent || '';
-    
-    let matchedTitle = null;
-    let matchedPage = '教材圖說';
-
-    if (text.includes('圖 1-2') || text.includes('不法推定罪責原則')) {
-      matchedTitle = '圖 1-2：不法推定罪責原則架構圖';
-      matchedPage = 'P. 1-2';
-    } else if (text.includes('二階論罪結構') && text.includes('三階論罪結構')) {
-      matchedTitle = '二階論罪結構 vs. 三階論罪結構對抗矩陣';
-      matchedPage = 'P. 2-1~2-3';
-    } else if (text.includes('四大拼圖') || text.includes('不法四大拼圖')) {
-      matchedTitle = '刑法總則【不法四大拼圖模型】';
-      matchedPage = 'P. 2-4';
-    } else if (text.includes('客觀歸責') && text.includes('主觀歸責')) {
-      matchedTitle = '客觀歸責與主觀歸責體系推導圖';
-      matchedPage = 'P. 2-6';
-    } else if (text.includes('四大面向派生子原則') || (text.includes('習慣法之禁止') && text.includes('類推適用之禁止'))) {
-      matchedTitle = '罪刑法定原則四大派生面向架構圖';
-      matchedPage = 'P. 2-5';
-    } else if (text.includes('罪刑法定原則與公法') && text.includes('概念深度對照')) {
-      matchedTitle = '作者叮嚀：罪刑法定原則與公法概念深度對照矩陣';
-      matchedPage = 'P. 2-7';
-    } else if (text.includes('罪責原則之雙重核心內涵')) {
-      matchedTitle = '罪責原則雙重核心內涵架構圖';
-      matchedPage = 'P. 2-7';
-    } else if (text.includes('刑法四大支柱體系總覽') || text.includes('四大支柱體系總覽')) {
-      matchedTitle = '第一章 刑法運作四大支柱全景整合對照表';
-      matchedPage = 'P. 2-1~2-8';
-    } else if (text.includes('若個案結果「不利於人民」') && text.includes('若個案結果「有利於人民」')) {
-      matchedTitle = '刑法節制本質：不利人民嚴格禁止 vs 有利人民全面容許對照矩陣';
-      matchedPage = 'P. 2-8';
-    }
-
-    if (matchedTitle) {
-      container.classList.add('zoomable-diagram');
-      container.style.position = 'relative';
-      
-      if (!container.querySelector('.zoomable-badge')) {
-        const badge = document.createElement('div');
-        badge.className = 'zoomable-badge absolute top-3 right-3 px-2 py-0.5 rounded-full bg-blue-600/90 text-white text-[10px] font-bold shadow flex items-center gap-1 z-10';
-        badge.innerHTML = `<span>🔍 點擊放大檢視</span>`;
-        container.appendChild(badge);
-      }
-
-      container.addEventListener('click', (e) => {
-        if (e.target.closest('button') || e.target.closest('a') || e.target.closest('[data-statute]')) return;
-        openDiagramLightbox(container, matchedTitle, matchedPage);
-      });
-    }
+  // 依使用者需求：已移除「點擊放大檢視」懸浮標籤與燈箱觸發功能
+  document.querySelectorAll('.zoomable-badge').forEach(el => el.remove());
+  document.querySelectorAll('.zoomable-diagram').forEach(el => {
+    el.classList.remove('zoomable-diagram');
+    el.style.cursor = 'default';
   });
 }
 
