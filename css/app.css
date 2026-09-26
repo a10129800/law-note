@@ -240,31 +240,61 @@ code, pre {
    =================================================== */
 .app-layout-container {
   display: grid !important;
-  grid-template-columns: 260px minmax(0, 1fr) !important;
-  gap: 1.75rem !important;
+  grid-template-columns: 280px minmax(0, 1fr) !important;
+  gap: 1.5rem !important;
   width: 100% !important;
-  max-width: 92rem !important;
+  max-width: 98rem !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding: 1.5rem 1.5rem !important;
+  padding: 1.25rem 1.5rem !important;
   box-sizing: border-box !important;
-  transition: grid-template-columns 0.2s ease;
+  transition: grid-template-columns 0.25s ease, gap 0.25s ease;
 }
 
-/* 進入章節閱讀時（第一章、第二章等），啟用三欄布局並帶出右側吸頂大綱清單 */
+/* 進入章節閱讀時（第一章、第二章等）：右側欄精簡至 220px，緊湊邊距 1.25rem (20px)，釋放大片閱讀區 */
 body.in-chapter .app-layout-container {
-  grid-template-columns: 260px minmax(0, 1fr) 280px !important;
+  grid-template-columns: 280px minmax(0, 1fr) 220px !important;
+  gap: 1.25rem !important;
+}
+
+/* 右側收合模式：右側清單收合，中欄閱讀卡片最大化展開無邊界空白 */
+body.toc-collapsed .app-layout-container,
+body.in-chapter.toc-collapsed .app-layout-container {
+  grid-template-columns: 280px minmax(0, 1fr) !important;
   gap: 1.5rem !important;
+}
+
+body.toc-collapsed #rightTocAside,
+body.in-chapter.toc-collapsed #rightTocAside {
+  display: none !important;
 }
 
 #sidebar {
   grid-column: 1 !important;
   grid-row: 1 !important;
+  width: 100% !important;
+  max-width: 280px !important;
+  min-width: 0 !important;
   position: sticky !important;
   top: 5rem !important;
   align-self: start !important;
   max-height: calc(100vh - 6.5rem) !important;
   overflow-y: auto !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 1.25rem;
+  padding: 1rem 0.85rem !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark #sidebar {
+  background: rgba(16, 22, 35, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3) !important;
 }
 
 main {
@@ -274,7 +304,7 @@ main {
   width: 100% !important;
 }
 
-/* 右側章節清單（Right TOC Aside）：預設在主頁時隱藏，進入章節後才顯現吸頂跟隨 */
+/* 右側章節清單（Right TOC Aside）：精簡寬度 220px，消除底部空白，支援自由收合 */
 #rightTocAside {
   grid-column: 3 !important;
   grid-row: 1 !important;
@@ -282,23 +312,26 @@ main {
   position: sticky !important;
   top: 5rem !important; /* 80px 固定吸頂在右上處 */
   align-self: start !important;
-  width: 280px !important;
-  min-width: 280px !important;
-  max-width: 280px !important;
+  width: 220px !important;
+  min-width: 220px !important;
+  max-width: 220px !important;
   max-height: calc(100vh - 6.5rem) !important;
   overflow-y: auto !important;
   z-index: 30 !important;
+  box-sizing: border-box !important;
+  padding: 0.85rem !important;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1240px) {
   .app-layout-container,
   body.in-chapter .app-layout-container {
-    grid-template-columns: 240px minmax(0, 1fr) !important;
-    gap: 1rem !important;
+    grid-template-columns: 270px minmax(0, 1fr) !important;
+    gap: 1.25rem !important;
+    padding: 1rem 1.25rem !important;
   }
   #sidebar {
     display: block !important;
-    width: 240px !important;
+    max-width: 270px !important;
   }
   #rightTocAside {
     display: none !important;
@@ -997,11 +1030,12 @@ main p:last-child {
   margin-bottom: 0 !important;
 }
 
-/* 鎖定正文舒適行寬（約 38～44 個中文字），避免眼睛掃視過長而產生回行迷航 */
+/* 正文內容與研讀卡片完整填滿中欄寬度，消除右側巨大的空曠斷層 */
 main section > div:not(.overflow-x-auto),
 main .reader-prose,
 main article {
-  max-width: 48rem !important; /* ~768px 最佳閱讀眼動幅度 */
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 /* 引用塊與法條引述增加呼吸空間 */

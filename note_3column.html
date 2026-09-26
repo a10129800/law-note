@@ -80,24 +80,51 @@
        =================================================== */
     .app-layout-container {
       display: grid !important;
-      grid-template-columns: 260px minmax(0, 1fr) 280px !important;
-      gap: 1.5rem !important;
+      grid-template-columns: 280px minmax(0, 1fr) 220px !important;
+      gap: 1.25rem !important;
       width: 100% !important;
-      max-width: 92rem !important;
+      max-width: 98rem !important;
       margin-left: auto !important;
       margin-right: auto !important;
-      padding: 1.5rem 1rem !important;
+      padding: 1.25rem 1.5rem !important;
       box-sizing: border-box !important;
+    }
+
+    body.toc-collapsed .app-layout-container {
+      grid-template-columns: 280px minmax(0, 1fr) !important;
+      gap: 1.5rem !important;
+    }
+
+    body.toc-collapsed #rightTocAside {
+      display: none !important;
     }
 
     #sidebar {
       grid-column: 1 !important;
       grid-row: 1 !important;
+      width: 100% !important;
+      max-width: 280px !important;
+      min-width: 0 !important;
       position: sticky !important;
       top: 5rem !important;
       align-self: start !important;
       max-height: calc(100vh - 6.5rem) !important;
       overflow-y: auto !important;
+      overflow-x: hidden !important;
+      box-sizing: border-box !important;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      border-radius: 1.25rem;
+      padding: 1rem 0.85rem !important;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .dark #sidebar {
+      background: rgba(16, 22, 35, 0.85) !important;
+      border-color: rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3) !important;
     }
 
     main {
@@ -107,31 +134,36 @@
       width: 100% !important;
     }
 
-    /* 右側章節清單（Right TOC Aside）：絕對鎖定在右上角（紅圈處），吸頂跟隨 */
+    /* 右側章節清單（Right TOC Aside）：精簡寬度 220px，消除底部空白，支援自由收合 */
     #rightTocAside {
       grid-column: 3 !important;
       grid-row: 1 !important;
       display: block !important;
       position: sticky !important;
-      top: 5rem !important; /* 80px 固定吸頂在右上紅圈處 */
+      top: 5rem !important; /* 80px 固定吸頂在右上處 */
       align-self: start !important;
-      width: 280px !important;
-      min-width: 280px !important;
-      max-width: 280px !important;
+      width: 220px !important;
+      min-width: 220px !important;
+      max-width: 220px !important;
       max-height: calc(100vh - 6.5rem) !important;
       overflow-y: auto !important;
       z-index: 30 !important;
+      box-sizing: border-box !important;
+      padding: 0.85rem !important;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1240px) {
       .app-layout-container {
-        grid-template-columns: 240px minmax(0, 1fr) 260px !important;
-        gap: 1rem !important;
+        grid-template-columns: 270px minmax(0, 1fr) !important;
+        gap: 1.25rem !important;
+        padding: 1rem 1.25rem !important;
+      }
+      #sidebar {
+        display: block !important;
+        max-width: 270px !important;
       }
       #rightTocAside {
-        width: 260px !important;
-        min-width: 260px !important;
-        max-width: 260px !important;
+        display: none !important;
       }
     }
 
@@ -543,68 +575,297 @@
             </div>
 
             <blockquote class="text-sm sm:text-base text-slate-700 dark:text-slate-200 leading-relaxed italic border-l-4 border-blue-500 pl-4 py-1">
-              「本篇是對刑法的初步鳥瞰。首先介紹犯罪概念與通說採取的三階層體系論，再快速瀏覽刑法的論罪結構。期望帶領讀者建立一個穩固又直觀的思維流程，畢竟法律不該是象牙塔裡的學問，而是人類生活經驗的縮影與結晶。」
-            </blockquote>
-          </div>
+              「本篇是對刑法的初步鳥瞰。首�              <!-- 刑法核心直觀法理：現代法學邏輯流程看板 -->
+              <div class="rounded-3xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-[#0E1524] shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                
+                <!-- 1. 頂部看板標題與出處條 -->
+                <div class="flex items-center justify-between px-5 sm:px-7 py-3.5 border-b border-slate-100 dark:border-white/[0.06] bg-slate-50/80 dark:bg-slate-900/50 backdrop-blur-sm">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center text-sm shadow-sm shadow-blue-500/20">
+                      ⚖️
+                    </div>
+                    <div>
+                      <span class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white tracking-tight">刑法核心直觀法理</span>
+                      <span class="ml-2 text-[11px] px-2 py-0.5 rounded-md bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 font-semibold border border-blue-200/60 dark:border-blue-800/40">
+                        三階體系前導
+                      </span>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold border border-slate-200 dark:border-slate-700">
+                      教材第 1-1 頁
+                    </span>
+                  </div>
+                </div>
 
-        </div>
+                <div class="p-6 sm:p-8 md:p-9 space-y-7">
 
-        <!-- VIEW B: 第一章 犯罪的概念 (點擊第一章後才跳轉顯示此處，右側清單同時顯現) -->
-        <div id="viewChapter1" class="fade-enter hidden space-y-8">
-          
-          <!-- Breadcrumb & Back -->
-          <div class="flex items-center justify-between gap-4 border-b border-slate-100 dark:border-white/[0.06] pb-3">
-            <nav class="flex items-center gap-2 text-xs font-medium text-slate-400">
-              <button onclick="switchView('intro')" class="hover:text-blue-500 transition-colors">導論 犯罪概念與論罪結構</button>
-              <span>/</span>
-              <span class="text-blue-600 dark:text-blue-400 font-bold">第一章 犯罪的概念</span>
-            </nav>
-            <button onclick="switchView('intro')" class="text-xs text-slate-400 hover:text-blue-500 flex items-center gap-1 transition-colors">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-              </svg>
-              <span>返回導讀</span>
-            </button>
-          </div>
+                  <!-- 2. 第一層：日常直觀開篇 (Hero Banner) -->
+                  <div class="relative overflow-hidden rounded-2xl p-5 sm:p-6 bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white shadow-md">
+                    <!-- 背景微光動態裝飾 -->
+                    <div class="absolute -right-8 -top-8 w-44 h-44 rounded-full bg-blue-500/10 blur-2xl pointer-events-none"></div>
+                    <div class="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                      <div class="space-y-1.5 max-w-xl">
+                        <div class="flex items-center gap-2 text-blue-300 text-xs font-semibold tracking-wider uppercase">
+                          <span>◆ 犯罪的日常核心直觀</span>
+                        </div>
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+                          刑法是一部處理犯罪的法律，至於何謂犯罪？最簡單的本質直觀即是：
+                        </p>
+                      </div>
+                      
+                      <!-- 犯罪核心等式組件 -->
+                      <div class="inline-flex items-center gap-2.5 bg-white/10 dark:bg-black/30 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/20 shrink-0">
+                        <span class="px-2.5 py-1 rounded-lg bg-indigo-500/80 text-white font-bold text-xs sm:text-sm shadow-sm">
+                          一個壞人
+                        </span>
+                        <span class="text-xs text-blue-200 font-medium">做了</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-amber-500/90 text-white font-bold text-xs sm:text-sm shadow-sm">
+                          一件壞事
+                        </span>
+                        <span class="text-xs text-blue-200 font-medium">＝</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-rose-500/90 text-white font-black text-xs sm:text-sm shadow-sm">
+                          犯罪
+                        </span>
+                      </div>
+                    </div>
+                  </div>
 
-          <!-- Chapter Header -->
-          <div class="space-y-2">
-            <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-mono text-xs font-bold">
-              <span>導論・第一章 1-1 ～ 1-11</span>
-            </div>
-            <h2 id="sec-ch1-title" class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
-              第一章 犯罪的概念
-            </h2>
-            <p class="text-xs sm:text-sm text-slate-500">
-              嚴格依據教材第 1-1 ～ 1-9 頁內容收錄
-            </p>
-          </div>
+                  <!-- 3. 第二層：評判順序與推定動線 (3-Step Flow Bento Grid) -->
+                  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    
+                    <!-- 卡片 1: 評判次序 -->
+                    <div class="rounded-2xl p-5 border border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/30 flex flex-col justify-between space-y-4">
+                      <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                          <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300">
+                            STEP 01
+                          </span>
+                          <span class="text-xs text-slate-400 font-medium">實務裁決先後</span>
+                        </div>
+                        <h4 class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white">
+                          評判次序決策
+                        </h4>
+                        <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-400">
+                          判斷「誰是壞人」極其困難，但判斷「一件壞事」相對客觀明確，因此確立次序：
+                        </p>
+                      </div>
 
-          <!-- 第一章 書本內文 -->
-          <div class="space-y-10">
-            
-            <!-- SECTION 1: 核心概念 (第 1-1 頁) -->
-            <section id="sec-intro-concept" class="scroll-mt-28 space-y-4">
-              <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
-                  一、犯罪的核心直觀：「一個壞人做了一件壞事」
-                </h3>
-              </div>
-              
-              <div class="p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-white/[0.08] bg-white dark:bg-[#101623] shadow-sm space-y-4 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-200">
-                <p>
-                  刑法是一部處理犯罪的法律，至於如何謂犯罪？簡單說，<strong class="text-blue-600 dark:text-blue-400 font-bold">「一個壞人」做了「一件壞事」就是犯罪</strong>。
-                </p>
-                <p>
-                  經驗告訴我們判斷誰是壞人非常困難，但判斷一件壞事卻比較容易，因此我們決定先判斷<strong class="text-slate-900 dark:text-white font-bold">「是否有一件壞事發生」</strong>，再判斷<strong class="text-slate-900 dark:text-white font-bold">「做這件壞事的人是不是一個壞人」</strong>。
-                </p>
-                <p>
-                  基於經驗的累積，會做壞事的人絕大多數（不是百分之百！）都是壞人，所以確定一件壞事的發生，就先<strong class="text-slate-900 dark:text-white font-bold">「推定」</strong>做這件壞事的人是一個壞人，這就是<strong class="text-blue-600 dark:text-blue-400 font-bold">「壞事推定壞人」</strong>原則。
-                </p>
-                <p>
-                  有鑑於這只是一個經驗上的直覺假設，而人類經驗卻不完全可靠，使用推定這個法律概念，為我們保留<strong>反證推翻假設</strong>的機會。我們將壞事以<strong class="text-blue-600 dark:text-blue-400 font-bold">「不法」</strong>代稱，壞人以<strong class="text-blue-600 dark:text-blue-400 font-bold">「罪責」</strong>代稱，前述的推定模式就是<strong class="text-blue-600 dark:text-blue-400 font-bold">「不法推定罪責」</strong>原則，而推翻罪責推定的理由稱為<strong class="text-rose-500 font-bold">「阻卻罪責事由」</strong>。
-                </p>
+                      <div class="space-y-2 pt-2 border-t border-slate-200/60 dark:border-slate-800">
+                        <div class="flex items-center gap-2 p-2 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200/70 dark:border-amber-800/40 text-xs">
+                          <span class="w-5 h-5 rounded-md bg-amber-500 text-white flex items-center justify-center font-bold text-[10px] shrink-0">1</span>
+                          <span class="font-bold text-amber-900 dark:text-amber-200">先判斷「是否有壞事發生」</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2 rounded-xl bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200/70 dark:border-indigo-800/40 text-xs">
+                          <span class="w-5 h-5 rounded-md bg-indigo-500 text-white flex items-center justify-center font-bold text-[10px] shrink-0">2</span>
+                          <span class="font-bold text-indigo-900 dark:text-indigo-200">再判斷「做壞事的人是否是壞人」</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 卡片 2: 壞事推定壞人原則 -->
+                    <div class="rounded-2xl p-5 border border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/30 flex flex-col justify-between space-y-4">
+                      <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                          <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300">
+                            STEP 02
+                          </span>
+                          <span class="text-xs text-slate-400 font-medium">經驗法則累積</span>
+                        </div>
+                        <h4 class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white">
+                          經驗直覺推定
+                        </h4>
+                        <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-400">
+                          會做壞事的人絕大多數都是壞人，故一旦確定一件壞事發生，法律上先行推定：
+                        </p>
+                      </div>
+
+                      <div class="pt-2 border-t border-slate-200/60 dark:border-slate-800">
+                        <div class="p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200/70 dark:border-emerald-800/40 text-center space-y-1">
+                          <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium block">
+                            確立基本原則
+                          </span>
+                          <span class="font-black text-xs sm:text-sm text-emerald-900 dark:text-emerald-200 tracking-wide block">
+                            「壞事推定壞人」原則
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 卡片 3: 反證推翻與防禦 -->
+                    <div class="rounded-2xl p-5 border border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/30 flex flex-col justify-between space-y-4">
+                      <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                          <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-900/40 text-rose-700 dark:text-rose-300">
+                            STEP 03
+                          </span>
+                          <span class="text-xs text-slate-400 font-medium">防錯保留機制</span>
+                        </div>
+                        <h4 class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white">
+                          保留反證機會
+                        </h4>
+                        <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-400">
+                          人類經驗不完全可靠，透過「推定」技術，特別為被告保留了反證推翻假設之防線：
+                        </p>
+                      </div>
+
+                      <div class="pt-2 border-t border-slate-200/60 dark:border-slate-800">
+                        <div class="p-3 rounded-xl bg-rose-50 dark:bg-rose-950/30 border border-rose-200/70 dark:border-rose-800/40 text-center space-y-1">
+                          <span class="text-[11px] text-rose-600 dark:text-rose-400 font-medium block">
+                            推翻罪責推定之理由
+                          </span>
+                          <span class="font-black text-xs sm:text-sm text-rose-900 dark:text-rose-200 tracking-wide block">
+                            「阻卻罪責事由」
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- 4. 第三層：生活直觀 ➔ 法律術語 抽象化矩陣 (Semantic Mapping Panel) -->
+                  <div class="rounded-2xl border border-blue-200/70 dark:border-blue-900/50 bg-gradient-to-br from-blue-50/40 via-indigo-50/20 to-white dark:from-[#0f172a] dark:to-[#111c34] p-5 sm:p-6 space-y-4">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                        <h4 class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white tracking-wide">
+                          法學概念代稱與推定模式
+                        </h4>
+                      </div>
+                      <span class="text-[11px] text-slate-500 dark:text-slate-400">日常用語 ➔ 刑法體系概念</span>
+                    </div>
+
+                    <!-- 雙軌對照卡片 -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                      
+                      <!-- 軌道 A: 壞事 -> 不法 -->
+                      <div class="p-3.5 rounded-xl bg-white dark:bg-[#151f33] border border-amber-200/80 dark:border-amber-900/40 flex items-center justify-between shadow-xs">
+                        <div class="space-y-0.5">
+                          <span class="text-[11px] text-slate-400 font-medium">客觀行為層面</span>
+                          <div class="font-bold text-slate-700 dark:text-slate-300 text-sm">
+                            「壞事」代稱
+                          </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <span class="text-slate-400 text-xs">➔</span>
+                          <span class="px-3 py-1.5 rounded-lg bg-amber-500/15 text-amber-700 dark:text-amber-300 font-black text-base border border-amber-500/30">
+                            不法
+                          </span>
+                        </div>
+                      </div>
+
+                      <!-- 軌道 B: 壞人 -> 罪責 -->
+                      <div class="p-3.5 rounded-xl bg-white dark:bg-[#151f33] border border-indigo-200/80 dark:border-indigo-900/40 flex items-center justify-between shadow-xs">
+                        <div class="space-y-0.5">
+                          <span class="text-[11px] text-slate-400 font-medium">主觀行為人層面</span>
+                          <div class="font-bold text-slate-700 dark:text-slate-300 text-sm">
+                            「壞人」代稱
+                          </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <span class="text-slate-400 text-xs">➔</span>
+                          <span class="px-3 py-1.5 rounded-lg bg-indigo-500/15 text-indigo-700 dark:text-indigo-300 font-black text-base border border-indigo-500/30">
+                            罪責
+                          </span>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <!-- 終極法理推導看板 -->
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 p-4 rounded-xl bg-white dark:bg-[#151f33] border border-blue-200/80 dark:border-blue-800/40 shadow-xs">
+                      <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-blue-600/10 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-sm">
+                          📌
+                        </span>
+                        <div>
+                          <div class="text-[11px] text-slate-400 font-medium">刑法體系化推定模式</div>
+                          <div class="font-extrabold text-sm sm:text-base text-blue-900 dark:text-blue-300">
+                            「不法推定罪責」原則
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="flex items-center gap-2 text-xs">
+                        <span class="text-slate-400 hidden sm:inline">遇有反證 ➔</span>
+                        <span class="px-3 py-1 rounded-lg bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-800/50 font-bold whitespace-nowrap">
+                          以「阻卻罪責事由」推翻
+                        </span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- 5. 底部收合式原文對照抽屜 -->
+                <div class="border-t border-slate-100 dark:border-white/[0.06] bg-slate-50/50 dark:bg-slate-900/30">
+                  <details class="group">
+                    <summary class="flex items-center justify-between px-6 py-3 text-xs text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 cursor-pointer select-none">
+                      <span class="flex items-center gap-2 font-medium">
+                        <svg class="w-4 h-4 text-blue-500 group-open:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                        展開教科書原文段落對照（教材第 1-1 頁）
+                      </span>
+                      <span class="text-[11px] text-slate-400">點擊查看/收合</span>
+                    </summary>
+                    <div class="px-6 pb-5 pt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300 space-y-3 border-t border-slate-200/50 dark:border-slate-800/60">
+                      <p>刑法是一部處理犯罪的法律，至於如何謂犯罪？簡單說，<span class="legal-tag-blue">「一個壞人」</span>做了<span class="legal-tag-amber">「一件壞事」</span>就是犯罪。</p>
+                      <p>經驗告訴我們判斷誰是壞人非常困難，但判斷一件壞事卻比較容易，因此我們決定先判斷<strong class="text-slate-900 dark:text-white font-bold bg-slate-100 dark:bg-slate-850 px-1.5 py-0.5 rounded">「是否有一件壞事發生」</strong>，再判斷<strong class="text-slate-900 dark:text-white font-bold bg-slate-100 dark:bg-slate-850 px-1.5 py-0.5 rounded">「做這件壞事的人是不是一個壞人」</strong>。</p>
+                      <p>基於經驗的累積，會做壞事的人絕大多數（不是百分之百！）都是壞人，所以確定一件壞事的發生，就先<strong class="text-slate-900 dark:text-white font-bold bg-slate-100 dark:bg-slate-850 px-1.5 py-0.5 rounded">「推定」</strong>做這件壞事的人是一個壞人，這就是<span class="legal-tag-blue">「壞事推定壞人」</span>原則。</p>
+                      <p>有鑑於這只是一個經驗上的直覺假設，而人類經驗卻不完全可靠，使用推定這個法律概念，為我們保留<strong class="underline decoration-blue-500 decoration-2 underline-offset-4">反證推翻假設</strong>的機會。我們將壞事以<span class="legal-tag-blue">「不法」</span>代稱，壞人以<span class="legal-tag-blue">「罪責」</span>代稱，前述的推定模式就是<span class="legal-tag-blue font-black">「不法推定罪責」</span>原則，而推翻罪責推定的理由稱為<span class="legal-tag-rose">「阻卻罪責事由」</span>。</p>
+                    </div>
+                  </details>
+                </div>
+
+              </div>                   <div class="px-4 py-2.5 rounded-xl bg-[#48D5CA] text-white font-medium text-xs sm:text-sm shadow-sm whitespace-nowrap">
+                          推定模式就是「不法推定罪責」
+                        </div>
+
+                        <div class="flex items-center gap-2.5">
+                          <div class="px-4 py-2.5 rounded-xl bg-[#4CA9F5] text-white font-medium text-xs sm:text-sm shadow-sm whitespace-nowrap">
+                            推翻罪責推定的理由稱為
+                          </div>
+                          
+                          <div class="text-[#FB8C42] shrink-0">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                          </div>
+
+                          <div class="px-4 py-2.5 rounded-xl bg-[#FFD1C1] text-[#C2410C] dark:bg-[#7C2D12]/60 dark:text-[#FDBA74] border border-[#FFAB91] dark:border-[#9A3412] font-bold text-xs sm:text-sm shadow-sm whitespace-nowrap">
+                            阻卻罪責事由
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- 底部收合式原文完整對照 (供深入對照教材用) -->
+                <div class="border-t border-slate-100 dark:border-white/[0.06] bg-slate-50/50 dark:bg-slate-900/30">
+                  <details class="group">
+                    <summary class="flex items-center justify-between px-6 py-3 text-xs text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 cursor-pointer select-none">
+                      <span class="flex items-center gap-2 font-medium">
+                        <svg class="w-4 h-4 text-blue-500 group-open:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                        展開教科書原文段落對照（教材第 1-1 頁）
+                      </span>
+                      <span class="text-[11px] text-slate-400">點擊查看/收合</span>
+                    </summary>
+                    <div class="px-6 pb-5 pt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300 space-y-3 border-t border-slate-200/50 dark:border-slate-800/60">
+                      <p>刑法是一部處理犯罪的法律，至於如何謂犯罪？簡單說，<span class="legal-tag-blue">「一個壞人」</span>做了<span class="legal-tag-amber">「一件壞事」</span>就是犯罪。</p>
+                      <p>經驗告訴我們判斷誰是壞人非常困難，但判斷一件壞事卻比較容易，因此我們決定先判斷<strong class="text-slate-900 dark:text-white font-bold bg-slate-100 dark:bg-slate-850 px-1.5 py-0.5 rounded">「是否有一件壞事發生」</strong>，再判斷<strong class="text-slate-900 dark:text-white font-bold bg-slate-100 dark:bg-slate-850 px-1.5 py-0.5 rounded">「做這件壞事的人是不是一個壞人」</strong>。</p>
+                      <p>基於經驗的累積，會做壞事的人絕大多數（不是百分之百！）都是壞人，所以確定一件壞事的發生，就先<strong class="text-slate-900 dark:text-white font-bold bg-slate-100 dark:bg-slate-850 px-1.5 py-0.5 rounded">「推定」</strong>做這件壞事的人是一個壞人，這就是<span class="legal-tag-blue">「壞事推定壞人」</span>原則。</p>
+                      <p>有鑑於這只是一個經驗上的直覺假設，而人類經驗卻不完全可靠，使用推定這個法律概念，為我們保留<strong class="underline decoration-blue-500 decoration-2 underline-offset-4">反證推翻假設</strong>的機會。我們將壞事以<span class="legal-tag-blue">「不法」</span>代稱，壞人以<span class="legal-tag-blue">「罪責」</span>代稱，前述的推定模式就是<span class="legal-tag-blue font-black">「不法推定罪責」</span>原則，而推翻罪責推定的理由稱為<span class="legal-tag-rose">「阻卻罪責事由」</span>。</p>
+                    </div>
+                  </details>
+                </div>
+
               </div>
             </section>
 

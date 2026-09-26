@@ -469,9 +469,110 @@ function renderToc(viewName) {
 
 function setRightTocVisibility(shouldShow) {
   if (!rightTocAside) return;
-  const isDesktopLayout = window.matchMedia('(min-width: 1280px)').matches;
-  rightTocAside.style.setProperty('display', shouldShow && isDesktopLayout ? 'block' : 'none', 'important');
+  const isDesktopLayout = window.matchMedia('(min-width: 1241px)').matches;
+  const isCollapsed = document.body.classList.contains('toc-collapsed');
+  const visible = shouldShow && isDesktopLayout && !isCollapsed;
+  rightTocAside.style.setProperty('display', visible ? 'block' : 'none', 'important');
+
+  const restoreBtn = document.getElementById('floatingTocRestoreBtn');
+  if (restoreBtn) {
+    if (shouldShow && isCollapsed && isDesktopLayout) {
+      restoreBtn.classList.remove('hidden');
+    } else {
+      restoreBtn.classList.add('hidden');
+    }
+  }
 }
+
+/**
+ * 切換/收合右側章節清單，釋放最大閱讀空間
+ */
+function toggleRightToc(show) {
+  const isCurrentlyCollapsed = document.body.classList.contains('toc-collapsed');
+  const shouldShow = typeof show === 'boolean' ? show : isCurrentlyCollapsed;
+  const restoreBtn = document.getElementById('floatingTocRestoreBtn');
+
+  if (shouldShow) {
+    document.body.classList.remove('toc-collapsed');
+    if (restoreBtn) restoreBtn.classList.add('hidden');
+    setRightTocVisibility(true);
+  } else {
+    document.body.classList.add('toc-collapsed');
+    if (restoreBtn) restoreBtn.classList.remove('hidden');
+    if (rightTocAside) rightTocAside.style.setProperty('display', 'none', 'important');
+  }
+}
+window.toggleRightToc = toggleRightToc;
+
+/**
+ * 智慧章節摺疊樹狀管理 (Intelligent Subtree Folding)
+ * 自動展開當前閱讀的章節小節，其餘章節優雅收合，徹底解除左欄擁擠感
+ */
+function updateSidebarSubtrees(viewName) {
+  const ch1Tree = document.getElementById('part0Ch1SubTree');
+  const ch2Tree = document.getElementById('part0Ch2SubTree');
+  const ch3Tree = document.getElementById('part0Ch3SubTree');
+  const chev1 = document.getElementById('chevron-part0Ch1');
+  const chev2 = document.getElementById('chevron-part0Ch2');
+  const chev3 = document.getElementById('chevron-part0Ch3');
+
+  if (!ch1Tree || !ch2Tree || !ch3Tree) return;
+
+  const isCh1 = viewName.startsWith('part0-ch1') || viewName === 'part0-chapter-1';
+  const isCh2 = viewName.startsWith('part0-ch2') || viewName === 'part0-chapter-2';
+  const isCh3 = viewName.startsWith('part0-ch3') || viewName === 'part0-chapter-3';
+
+  if (isCh1) {
+    ch1Tree.classList.remove('hidden');
+    ch2Tree.classList.add('hidden');
+    ch3Tree.classList.add('hidden');
+    if (chev1) chev1.textContent = '▼';
+    if (chev2) chev2.textContent = '▶';
+    if (chev3) chev3.textContent = '▶';
+  } else if (isCh2) {
+    ch1Tree.classList.add('hidden');
+    ch2Tree.classList.remove('hidden');
+    ch3Tree.classList.add('hidden');
+    if (chev1) chev1.textContent = '▶';
+    if (chev2) chev2.textContent = '▼';
+    if (chev3) chev3.textContent = '▶';
+  } else if (isCh3) {
+    ch1Tree.classList.add('hidden');
+    ch2Tree.classList.add('hidden');
+    ch3Tree.classList.remove('hidden');
+    if (chev1) chev1.textContent = '▶';
+    if (chev2) chev2.textContent = '▶';
+    if (chev3) chev3.textContent = '▼';
+  } else if (viewName === 'part-0') {
+    ch1Tree.classList.remove('hidden');
+    ch2Tree.classList.add('hidden');
+    ch3Tree.classList.add('hidden');
+    if (chev1) chev1.textContent = '▼';
+    if (chev2) chev2.textContent = '▶';
+    if (chev3) chev3.textContent = '▶';
+  }
+}
+
+/**
+ * 手動展開/收合章節樹
+ */
+function toggleSubTree(treeId, event) {
+  if (event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+  const tree = document.getElementById(treeId);
+  if (!tree) return;
+  const isHidden = tree.classList.toggle('hidden');
+  const chevronId = treeId === 'part0Ch1SubTree' ? 'chevron-part0Ch1' : 
+                    treeId === 'part0Ch2SubTree' ? 'chevron-part0Ch2' : 
+                    treeId === 'part0Ch3SubTree' ? 'chevron-part0Ch3' : null;
+  if (chevronId) {
+    const chev = document.getElementById(chevronId);
+    if (chev) chev.textContent = isHidden ? '▶' : '▼';
+  }
+}
+window.toggleSubTree = toggleSubTree;
 
 // ==================== 5. 視圖切換系統 (View Switcher) ====================
 function switchView(viewName, shouldScrollTop = true) {
@@ -483,6 +584,7 @@ function switchView(viewName, shouldScrollTop = true) {
   }
   refreshViewElements();
   clearNavStyles();
+  updateSidebarSubtrees(viewName);
 
   const allViews = [
     viewHome, viewIntro, viewChapter1, viewChapter2, 
@@ -1286,6 +1388,11 @@ function updateReadingProgress() {
   if (progressBar) {
     progressBar.style.width = `${percent}%`;
   }
+
+  const tocPercent = document.getElementById('tocProgressPercent');
+  const tocBar = document.getElementById('tocProgressBarFill');
+  if (tocPercent) tocPercent.textContent = `${Math.round(percent)}%`;
+  if (tocBar) tocBar.style.width = `${percent}%`;
 
   const ring = document.getElementById('backToTopCircle');
   const bttBtn = document.getElementById('floatingBackToTop');
