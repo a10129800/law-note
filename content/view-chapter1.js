@@ -1006,67 +1006,219 @@ window.APP_VIEWS['viewChapter1'] = window.APP_VIEWS['chapter1'] = `
             </section>
 
             <!-- SECTION 4: 超法定阻卻罪責事由與期待可能性 (第 1-3 頁 案例 1-6) -->
-            <section id="sec-extra-cases" class="scroll-mt-28 space-y-4">
-              <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+            <section id="sec-extra-cases" class="scroll-mt-28 space-y-5">
+              <div class="flex items-center gap-2.5">
+                <span class="w-3 h-3 rounded-full bg-blue-600 animate-pulse"></span>
+                <h3 class="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-wide">
                   四、超法定阻卻罪責事由與「期待可能性」（案例 1-6）
                 </h3>
               </div>
 
-              <div class="box-legal-navy p-6 sm:p-7 rounded-2xl space-y-4 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-200">
-                <div class="flex items-center justify-between border-b border-blue-200/60 dark:border-blue-800/40 pb-3">
-                  <div class="flex items-center gap-2">
-                    <span class="text-base sm:text-lg">💡</span>
-                    <span class="font-extrabold text-sm sm:text-base text-blue-900 dark:text-blue-200 tracking-wide">超法定阻卻罪責事由與期待可能性</span>
+              <!-- 導讀看板：深藍/靛青高飽和立體卡片 -->
+              <div class="p-6 sm:p-7 rounded-3xl border-2 border-blue-500/80 dark:border-blue-500/70 bg-gradient-to-br from-blue-50/80 via-white to-indigo-50/40 dark:from-[#0d1c38] dark:via-[#10192e] dark:to-[#070f1e] shadow-lg shadow-blue-500/10 space-y-4 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-200">
+                <div class="flex items-center justify-between border-b-2 border-blue-200/80 dark:border-blue-900/60 pb-3 flex-wrap gap-2">
+                  <div class="flex items-center gap-2.5">
+                    <span class="text-xl">💡</span>
+                    <span class="font-black text-sm sm:text-base text-blue-950 dark:text-blue-200 tracking-wide">
+                      超法定阻卻罪責事由與期待可能性
+                    </span>
                   </div>
-                  <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-blue-100/80 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 font-bold border border-blue-200 dark:border-blue-700/50">
-                    教材第 1-3 頁
+                  <span class="text-xs font-mono font-bold px-2.5 py-1 rounded-lg bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-200 border border-blue-300 dark:border-blue-700">
+                    教材第 1-3 頁 原文精義
                   </span>
                 </div>
+                
                 <p>
-                  當然立法雖密仍有一疏，若是在刑法典中找不到反證推翻理由，也允許找尋刑法典外的理由，亦即<span class="legal-tag-amber">「超法定阻卻罪責事由」</span>。
+                  當然立法雖密仍有一疏，若是在刑法典中找不到法定的反證推翻理由，法律亦允許在法典之外尋求正當理由，亦即
+                  <span class="px-3 py-1 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-white font-black text-xs sm:text-sm shadow-sm inline-block">
+                    「超法定阻卻罪責事由」
+                  </span>。
                 </p>
+                
                 <p>
-                  現今犯罪體系以<span class="legal-tag-blue">「行為人有無（不做壞事的）期待可能性？」</span>作為罪責的實質非難核心，若行為人可被期待不做壞事便是具備罪責，既然<strong class="text-slate-900 dark:text-white font-bold bg-slate-100 dark:bg-slate-850 px-1.5 py-0.5 rounded">期待可能性是罪責的核心</strong>，那麼法定或超法定阻卻罪責事由都必須依循期待可能性來詮釋。
+                  現今犯罪體系以
+                  <span class="px-3 py-1 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black text-xs sm:text-sm shadow-sm inline-block">
+                    「行為人有無（不做壞事的）期待可能性？」
+                  </span>
+                  作為罪責的實質非難核心。若行為人在客觀嚴苛處境下可被期待不做壞事，始具備罪責；既然
+                  <strong class="text-blue-950 dark:text-blue-100 font-black underline decoration-blue-500 decoration-2 underline-offset-4">
+                    期待可能性是罪責之實質靈魂
+                  </strong>，那麼不論法定或超法定阻卻罪責事由，均必須依循「期待可能性」之法理核心來詮釋！
                 </p>
               </div>
 
-              <!-- 案例 1-6 卡片 -->
-              <div class="p-5 rounded-2xl border-2 border-amber-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3">
-                <div class="flex items-center justify-between">
-                  <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 font-mono">
+              <!-- 案例 1-6 卡片 (高飽和琥珀/金黃主題) -->
+              <div class="p-5 sm:p-6 rounded-2xl border-2 border-amber-400 dark:border-amber-500 bg-gradient-to-br from-amber-50/80 via-white to-amber-50/30 dark:from-[#291908] dark:via-[#1c1409] dark:to-[#070f1e] shadow-md hover:shadow-xl transition-all space-y-4">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                  <span class="text-xs font-black px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-sm shadow-amber-500/30 font-mono tracking-wide">
                     🦅 案例 1-6
                   </span>
-                  <span class="text-xs px-2 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-bold">
-                    超法定抗辯：期待可能性
+                  <span class="text-xs px-3 py-1 rounded-xl bg-indigo-600 text-white font-black shadow-sm shadow-indigo-600/30">
+                    超法定抗辯：期待可能性欠缺（幼兒墜地失火案）
                   </span>
                 </div>
-                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800/80 text-xs sm:text-sm">
-                  <strong class="text-slate-900 dark:text-white">被告：</strong>「我當時在燙衣服，但因為幼兒從床上跌落而血流不止，我太慌亂了，急忙將幼兒送醫而忘了拔掉插頭，才會釀成火災。」
+                
+                <!-- 被告心聲對話框 -->
+                <div class="p-4 rounded-xl bg-amber-50/90 dark:bg-amber-950/60 border-2 border-amber-300 dark:border-amber-800/80 text-xs sm:text-sm text-slate-800 dark:text-slate-100 flex items-start gap-3 shadow-inner">
+                  <span class="text-base shrink-0">🗣️</span>
+                  <div>
+                    <strong class="text-amber-900 dark:text-amber-300 font-black">被告心聲抗辯：</strong>
+                    <span class="italic">「我當時正在燙衣服，突然幼兒從床上跌落頭部破裂、血流不止！我整個人嚇得六神無主，一心只想抱著孩子衝去急診，慌亂中完全忘記拔掉熨斗插頭，才會釀成後續火災啊！」</span>
+                  </div>
                 </div>
-                <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1">
-                  <div class="font-bold text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
-                    <span>◀ 問題導引 ▶</span>
+
+                <div class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2">
+                  <div class="font-black text-amber-950 dark:text-amber-200 flex items-center gap-1.5">
+                    <span class="text-base">🎯</span>
+                    <span>問題導引與法理核心：</span>
                   </div>
                   <p class="leading-relaxed">
-                    主張「無期待可能性（或低度期待可能性）」的超法定抗辯。作父母的在幼兒受傷的情況下必然手足無措，對於這種處境特別艱難的行為人，社會難以期待其冷靜地拔掉插頭以避免火災發生，<span class="text-blue-600 dark:text-blue-400 font-bold">因而雖做壞事，但卻不是壞人</span>。
+                    主張「無期待可能性（或低度期待可能性）」之超法定抗辯。作父母的面對骨肉重傷瀕死，必然陷入極度恐慌混亂。對於這種客觀處境極端艱困的行為人，法律與社會客觀上根本難以期待其能超人般冷靜拔除插頭：
+                    <span class="mt-1 inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-amber-600 text-white font-black text-xs shadow-xs">
+                      ✨ 因而雖做壞事（失火侵害法益），但主觀上絕不是壞人！
+                    </span>
                   </p>
                 </div>
+
                 <!-- 2026 現行法規查核與資料來源 -->
-                <div class="pt-3 border-t border-slate-100 dark:border-white/[0.06] space-y-1.5 text-xs">
+                <div class="pt-3 border-t-2 border-amber-100 dark:border-amber-900/50 space-y-1.5 text-xs">
                   <div class="flex items-center justify-between flex-wrap gap-2">
                     <div class="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
-                      <span class="text-indigo-500">💡</span>
-                      <span>2026 現行法規狀態：</span>
-                      <span class="px-2 py-0.5 rounded-full text-[11px] bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold">超法定事由・實務適用確立</span>
+                      <span class="text-indigo-600 dark:text-indigo-400">💡</span>
+                      <span>2026 現行實務狀態：</span>
+                      <span class="px-2 py-0.5 rounded-full text-[11px] bg-indigo-600 text-white font-black">超法定事由・實務一致肯認</span>
                     </div>
-                    <span class="text-[11px] text-slate-400 font-mono">最高法院 30 上 2240 號判例等裁判要旨</span>
+                    <span class="text-[11px] text-slate-600 dark:text-slate-300 font-mono font-bold">最高法院 30 年上字第 2240 號判例等裁判要旨</span>
                   </div>
-                  <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-[11.5px] bg-slate-50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800/60">
-                    <strong class="text-slate-700 dark:text-slate-300">法規狀態：</strong>刑法總則截至 2026 年未明文增列概括條款，司法實務與學說通說一致肯認「期待可能性」為罪責實質非難之核心，若客觀處境極度重大艱困致無法期待行為人遵守規範時，得阻卻或減免罪責。
+                  <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[11.5px] bg-white/90 dark:bg-slate-900/60 p-3 rounded-xl border border-amber-200 dark:border-amber-800/60">
+                    <strong class="text-amber-900 dark:text-amber-200 font-bold">法規與實務定性：</strong>刑法總則截至 2026 年雖未明文增列期待可能性之概括法條，但最高法院與刑法通說一致肯認：期待可能性為罪責實質非難之核心，若行為人客觀處境極度困窘危難，致客觀上「無法期待其遵守法規範」時，得阻卻或減輕罪責。
                   </p>
                 </div>
+              </div>
+
+              <!-- 🌟 白話文詳解專區：秒懂「超法定阻卻罪責」與「期待可能性」 -->
+              <div class="rounded-3xl border-2 border-amber-400/90 dark:border-amber-600 bg-gradient-to-br from-amber-50/60 via-white to-orange-50/30 dark:from-[#1b140a] dark:via-[#191209] dark:to-[#070f1e] p-6 sm:p-8 space-y-6 shadow-xl">
+                
+                <!-- 標題列 (避免使用觸發腳本的關鍵字) -->
+                <div class="flex items-center justify-between border-b-2 border-amber-200/80 dark:border-amber-900/60 pb-4 flex-wrap gap-3">
+                  <div class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-2xl bg-amber-600 text-white flex items-center justify-center text-xl shadow-md shadow-amber-600/30">
+                      💡
+                    </span>
+                    <div>
+                      <h4 class="font-black text-base sm:text-xl text-amber-950 dark:text-amber-200 tracking-wide">
+                        白話文秒懂這區：什麼是「期待可能性」與「超法定」？
+                      </h4>
+                      <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                        用最接地氣的人之常情，徹底看透刑法罪責最溫暖、有人性的一面
+                      </p>
+                    </div>
+                  </div>
+                  <span class="text-xs font-mono font-bold px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/70 text-amber-800 dark:text-amber-200 border border-amber-300 dark:border-amber-700">
+                    法律白話大解讀
+                  </span>
+                </div>
+
+                <!-- 雙欄寬敞拆解卡片 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                  
+                  <!-- 白話重點 1: 什麼是期待可能性 -->
+                  <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/90 border-2 border-blue-300 dark:border-blue-700/80 shadow-sm space-y-3">
+                    <div class="flex items-center justify-between gap-2 pb-2.5 border-b border-blue-100 dark:border-blue-900/60">
+                      <div class="flex items-center gap-2.5">
+                        <span class="w-6 h-6 rounded-lg bg-blue-600 text-white font-black text-xs flex items-center justify-center shrink-0 shadow-xs">1</span>
+                        <span class="font-black text-blue-950 dark:text-blue-200 text-sm sm:text-base">什麼叫「期待可能性」？（法律的同理心）</span>
+                      </div>
+                      <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-200 font-bold border border-blue-200 dark:border-blue-800 shrink-0">
+                        刑法核心靈魂
+                      </span>
+                    </div>
+
+                    <div class="p-3 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200/80 dark:border-blue-900/50 text-xs sm:text-sm font-bold text-blue-900 dark:text-blue-200 flex items-center gap-2">
+                      <span>⚖️</span>
+                      <span>「法律不強人所難，法律不能要求大家都是超人！」</span>
+                    </div>
+
+                    <p class="text-xs sm:text-[13px] text-slate-600 dark:text-slate-300 leading-relaxed">
+                      如果設身處地，把全世界任何一個正常人丟到那種生死交關或極度驚恐的處境裡，<strong class="text-blue-700 dark:text-blue-300 font-bold">十個人裡面有十個人都會做出同樣慌亂的選擇</strong>，那法律怎麼能苛求（期待）他冷靜克制？既然「無法期待他保持完美」，他就沒有罪惡感，不能處罰他！
+                    </p>
+                  </div>
+
+                  <!-- 白話重點 2: 什麼叫超法定 -->
+                  <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/90 border-2 border-amber-300 dark:border-amber-700/80 shadow-sm space-y-3">
+                    <div class="flex items-center justify-between gap-2 pb-2.5 border-b border-amber-100 dark:border-amber-900/60">
+                      <div class="flex items-center gap-2.5">
+                        <span class="w-6 h-6 rounded-lg bg-amber-600 text-white font-black text-xs flex items-center justify-center shrink-0 shadow-xs">2</span>
+                        <span class="font-black text-amber-950 dark:text-amber-200 text-sm sm:text-base">什麼叫「超法定」？（條文漏掉時的活路）</span>
+                      </div>
+                      <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-200 font-bold border border-amber-200 dark:border-amber-800 shrink-0">
+                        法典外正義後門
+                      </span>
+                    </div>
+
+                    <div class="p-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-900/50 text-xs sm:text-sm font-bold text-amber-900 dark:text-amber-200 flex items-center gap-2">
+                      <span>📖</span>
+                      <span>「立法再周密，也寫不盡天下所有突發的人間慘劇！」</span>
+                    </div>
+
+                    <p class="text-xs sm:text-[13px] text-slate-600 dark:text-slate-300 leading-relaxed">
+                      前一節講的 14 歲以下、精神病、聾啞等，都寫在法條裡（叫「法定」）。但人間危難千奇百怪，法條不可能全部條列。法官發現雖然法條沒明寫，但行為人確實處於「完全無期待可能」的險境時，可以直接引用這項法理判免責，這就叫<strong class="text-amber-700 dark:text-amber-300 font-bold">「超法定」</strong>！
+                    </p>
+                  </div>
+
+                  <!-- 白話重點 3: 案例 1-6 深度剖析 (全寬展示) -->
+                  <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/90 border-2 border-indigo-300 dark:border-indigo-700/80 shadow-sm space-y-3 lg:col-span-2">
+                    <div class="flex items-center justify-between gap-2 pb-2.5 border-b border-indigo-100 dark:border-indigo-900/60 flex-wrap">
+                      <div class="flex items-center gap-2.5">
+                        <span class="w-6 h-6 rounded-lg bg-indigo-600 text-white font-black text-xs flex items-center justify-center shrink-0 shadow-xs">3</span>
+                        <span class="font-black text-indigo-950 dark:text-indigo-200 text-sm sm:text-base">用案例 1-6 實戰拆解：忘拔熨斗的媽媽該被判刑嗎？</span>
+                      </div>
+                      <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-800 dark:text-indigo-200 font-bold border border-indigo-200 dark:border-indigo-800 shrink-0">
+                        情理法完美平衡
+                      </span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+                      <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 space-y-1">
+                        <div class="font-black text-xs sm:text-sm text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
+                          <span class="text-rose-500">❌</span>
+                          <span>客觀行為面（壞事）：</span>
+                        </div>
+                        <p class="text-xs text-slate-600 dark:text-slate-300">
+                          整棟大樓被燒了，鄰居財產化為灰燼，客觀上確實該當失火罪構成要件，且無正當防衛理由，<strong class="text-rose-600 dark:text-rose-400">這是一件無庸置疑的壞事（不法成立）</strong>。
+                        </p>
+                      </div>
+
+                      <div class="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200/80 dark:border-emerald-800 space-y-1">
+                        <div class="font-black text-xs sm:text-sm text-emerald-900 dark:text-emerald-200 flex items-center gap-1.5">
+                          <span class="text-emerald-500">⭕</span>
+                          <span>主觀責任面（壞人？）：</span>
+                        </div>
+                        <p class="text-xs text-slate-600 dark:text-slate-300">
+                          骨肉摔得頭破血流生死未卜，天下哪個父母那一秒不是慌忙抱著就衝？法律絕不能期待她慢條斯理拔插頭。<strong class="text-emerald-700 dark:text-emerald-300">她不是壞人（無期待可能性，罪責被推翻不罰）</strong>！
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- 記憶口訣金句條 -->
+                <div class="p-4 rounded-2xl bg-gradient-to-r from-amber-600 via-orange-600 to-indigo-700 text-white flex items-center justify-between gap-4 flex-wrap shadow-lg">
+                  <div class="flex items-center gap-3">
+                    <span class="text-2xl">🏆</span>
+                    <div>
+                      <div class="text-xs text-amber-200 font-bold">期待可能性與超法定事由・終極精華口訣</div>
+                      <div class="font-black text-xs sm:text-base tracking-wide">
+                        「法律不強人所難！生死關頭無超人，無期待可能即無罪責！」
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-xs font-bold bg-white/20 backdrop-blur-xs px-3.5 py-1.5 rounded-xl border border-white/20 whitespace-nowrap">
+                    客觀壞事雖成立 ➔ 處境艱困不認壞人 ➔ 超法定推翻罪責！
+                  </div>
+                </div>
+
               </div>
             </section>
 
@@ -1277,80 +1429,171 @@ window.APP_VIEWS['viewChapter1'] = window.APP_VIEWS['chapter1'] = `
                 </h3>
               </div>
 
-              <!-- 原文圖解還原面板 -->
-              <div class="p-6 sm:p-8 rounded-3xl border-2 border-blue-500/30 bg-white dark:bg-[#101623] shadow-md space-y-6">
-                <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-white/[0.06]">
-                  <span class="font-bold text-sm text-blue-600 dark:text-blue-400">構成要件該當性推定違法性原則架構圖</span>
-                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-400">教材第 1-5 頁</span>
+              <!-- 原文圖解還原面板 (高飽和色彩顯眼版) -->
+              <div class="p-6 sm:p-8 rounded-3xl border-2 border-blue-500 dark:border-blue-400 bg-gradient-to-b from-blue-50/50 via-white to-indigo-50/40 dark:from-[#0d172a] dark:via-[#101623] dark:to-[#0a1120] shadow-xl space-y-6">
+                <div class="flex items-center justify-between pb-3 border-b-2 border-blue-200/80 dark:border-blue-900/60">
+                  <div class="flex items-center gap-2">
+                    <span class="text-lg">⚖️</span>
+                    <span class="font-black text-sm sm:text-base text-blue-700 dark:text-blue-300 tracking-wide">構成要件該當性推定違法性原則架構圖</span>
+                  </div>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 font-bold border border-blue-300 dark:border-blue-700 shadow-xs">教材第 1-5 頁</span>
                 </div>
 
-                <div class="max-w-xl mx-auto flex flex-col items-center gap-6 py-2">
+                <div class="max-w-2xl mx-auto flex flex-col items-center gap-6 py-2">
                   
                   <!-- 頂部起點：不法 -->
-                  <div class="flex items-center gap-4 w-full">
-                    <div class="px-5 py-2 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-extrabold text-sm shadow-md shrink-0">
+                  <div class="flex items-center gap-3 sm:gap-4 w-full">
+                    <div class="px-6 py-2.5 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-black text-sm sm:text-base shadow-lg shadow-blue-500/30 shrink-0 ring-4 ring-blue-400/25 tracking-wide">
                       不法
                     </div>
-                    <div class="h-0.5 flex-1 bg-slate-300 dark:bg-slate-700 relative">
-                      <div class="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t-2 border-r-2 border-slate-400 rotate-45"></div>
+                    <div class="h-1.5 flex-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-full relative">
+                      <div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 border-t-3 border-r-3 border-purple-500 rotate-45"></div>
                     </div>
-                    <div class="text-xs text-slate-400">形式與實質雙構面</div>
+                    <div class="px-3 py-1.5 rounded-xl bg-purple-100 dark:bg-purple-950/80 text-purple-800 dark:text-purple-300 font-black text-xs border border-purple-300 dark:border-purple-700 shrink-0 shadow-xs">
+                      形式與實質雙構面
+                    </div>
                   </div>
 
-                  <!-- 形式不法 vs 實質不法 矩陣 -->
+                  <!-- 形式不法 vs 實質不法 雙軌矩陣 (高飽和色彩顯眼版) -->
                   <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
                     
-                    <!-- 軌道 1：形式不法 -->
-                    <div class="p-4 rounded-2xl border border-blue-500/20 bg-blue-50/20 dark:bg-blue-950/20 space-y-2">
+                    <!-- 軌道 1：形式不法 (天空藍 / 蔚藍主題) -->
+                    <div class="p-5 rounded-2xl border-2 border-sky-400 dark:border-sky-500 bg-gradient-to-br from-sky-50 via-white to-blue-50/60 dark:from-sky-950/40 dark:via-[#101827] dark:to-sky-950/20 shadow-md space-y-3">
                       <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold text-slate-500">不法層次</span>
-                        <span class="text-xs px-2 py-0.5 rounded bg-blue-500/10 text-blue-500 font-bold">形式不法</span>
+                        <span class="text-xs font-black text-sky-800 dark:text-sky-300 uppercase tracking-wider">不法層次</span>
+                        <span class="text-xs px-3 py-1 rounded-xl bg-sky-600 text-white font-black shadow-sm shadow-sky-600/30">形式不法</span>
                       </div>
-                      <div class="text-xs text-slate-400">典型法益侵害</div>
-                      <div class="pt-2 border-t border-blue-500/20 flex items-center justify-between">
-                        <span class="text-xs text-slate-500">法律代稱</span>
-                        <span class="text-sm sm:text-base font-black text-blue-600 dark:text-blue-400">構成要件該當性</span>
+                      <div class="text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-200 flex items-center gap-1.5">
+                        <span>📐</span>
+                        <span>典型法益侵害（外在吻合罪名）</span>
+                      </div>
+                      <div class="pt-3 border-t-2 border-sky-200 dark:border-sky-800/80 flex items-center justify-between">
+                        <span class="text-xs font-black text-sky-900 dark:text-sky-300">法律代稱</span>
+                        <span class="text-base sm:text-lg font-black text-sky-600 dark:text-sky-300 tracking-wide drop-shadow-xs">構成要件該當性 (TB)</span>
                       </div>
                     </div>
 
-                    <!-- 軌道 2：實質不法 -->
-                    <div class="p-4 rounded-2xl border border-purple-500/20 bg-purple-50/20 dark:bg-purple-950/20 space-y-2">
+                    <!-- 軌道 2：實質不法 (紫羅蘭 / 桃紫主題) -->
+                    <div class="p-5 rounded-2xl border-2 border-fuchsia-400 dark:border-fuchsia-500 bg-gradient-to-br from-fuchsia-50 via-white to-purple-50/60 dark:from-fuchsia-950/40 dark:via-[#160f26] dark:to-purple-950/20 shadow-md space-y-3">
                       <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold text-slate-500">不法層次</span>
-                        <span class="text-xs px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 font-bold">實質不法</span>
+                        <span class="text-xs font-black text-fuchsia-800 dark:text-fuchsia-300 uppercase tracking-wider">不法層次</span>
+                        <span class="text-xs px-3 py-1 rounded-xl bg-fuchsia-600 text-white font-black shadow-sm shadow-fuchsia-600/30">實質不法</span>
                       </div>
-                      <div class="text-xs text-slate-400">無正當理由</div>
-                      <div class="pt-2 border-t border-purple-500/20 flex items-center justify-between">
-                        <span class="text-xs text-slate-500">法律代稱</span>
-                        <span class="text-sm sm:text-base font-black text-purple-600 dark:text-purple-400">違法性</span>
+                      <div class="text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-200 flex items-center gap-1.5">
+                        <span>🚫</span>
+                        <span>無正當理由（欠缺合法事由）</span>
+                      </div>
+                      <div class="pt-3 border-t-2 border-fuchsia-200 dark:border-fuchsia-800/80 flex items-center justify-between">
+                        <span class="text-xs font-black text-fuchsia-900 dark:text-fuchsia-300">法律代稱</span>
+                        <span class="text-base sm:text-lg font-black text-fuchsia-600 dark:text-fuchsia-300 tracking-wide drop-shadow-xs">違法性 (R)</span>
                       </div>
                     </div>
 
                   </div>
 
-                  <!-- 推定與反證循環機制面板 -->
-                  <div class="w-full p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 space-y-3">
-                    <div class="flex items-center justify-between text-xs">
-                      <div class="flex items-center gap-2">
-                        <span class="px-2 py-0.5 rounded bg-blue-500 text-white font-bold font-mono">推定</span>
-                        <span class="text-slate-600 dark:text-slate-300">構成要件該當 ➔ 直接推定具備違法性</span>
+                  <!-- 推定與反證循環機制看板 (高對比鮮亮版) -->
+                  <div class="w-full p-5 rounded-2xl border-2 border-indigo-300 dark:border-indigo-600 bg-gradient-to-r from-blue-50/80 via-indigo-50/60 to-purple-50/80 dark:from-blue-950/40 dark:via-indigo-950/30 dark:to-purple-950/40 shadow-md space-y-3.5">
+                    <div class="flex items-center justify-between text-xs sm:text-sm gap-2">
+                      <div class="flex items-center gap-2.5">
+                        <span class="px-3 py-1 rounded-xl bg-blue-600 text-white font-black text-xs shadow-md shadow-blue-600/30 tracking-wider shrink-0">推定</span>
+                        <span class="font-black text-slate-800 dark:text-slate-100">構成要件該當 ➔ 直接推定具備違法性</span>
                       </div>
-                      <span class="text-[11px] text-slate-400">訴訟效率</span>
+                      <span class="px-2.5 py-1 rounded-lg bg-blue-600 text-white font-black text-[11px] shrink-0 shadow-xs">訴訟效率</span>
                     </div>
-                    <div class="flex items-center justify-between text-xs pt-2 border-t border-slate-200 dark:border-slate-800">
-                      <div class="flex items-center gap-2">
-                        <span class="px-2 py-0.5 rounded bg-emerald-500 text-white font-bold font-mono">反證</span>
-                        <span class="text-slate-600 dark:text-slate-300">主張阻卻違法事由 ➔ 推翻推定</span>
+                    <div class="flex items-center justify-between text-xs sm:text-sm pt-3 border-t-2 border-indigo-200/80 dark:border-indigo-800/80 gap-2">
+                      <div class="flex items-center gap-2.5">
+                        <span class="px-3 py-1 rounded-xl bg-rose-600 text-white font-black text-xs shadow-md shadow-rose-600/30 tracking-wider shrink-0">反證</span>
+                        <span class="font-black text-slate-800 dark:text-slate-100">主張阻卻違法事由 ➔ 推翻推定</span>
                       </div>
-                      <span class="text-[11px] text-slate-400">防範誤判</span>
+                      <span class="px-2.5 py-1 rounded-lg bg-rose-600 text-white font-black text-[11px] shrink-0 shadow-xs">防範誤判</span>
                     </div>
                   </div>
 
-                  <p class="text-xs text-slate-500 dark:text-slate-400 text-center leading-relaxed">
+                  <!-- 核心原則總結語錄 -->
+                  <div class="w-full p-4 rounded-xl bg-amber-50 dark:bg-amber-950/60 border-2 border-amber-300 dark:border-amber-700/80 text-xs sm:text-sm text-amber-950 dark:text-amber-200 text-center leading-relaxed font-semibold shadow-xs">
                     前述的推定模式是<strong>「構成要件該當推定違法性」原則</strong>，而推翻違法推定的理由稱<strong>「阻卻違法事由」</strong>。
-                  </p>
+                  </div>
 
                 </div>
+
+                <!-- 白話文秒懂專區 (依先前慣例貼心展開) -->
+                <div class="p-5 sm:p-6 rounded-2xl border-2 border-amber-400 dark:border-amber-500 bg-gradient-to-br from-amber-50/90 via-orange-50/40 to-yellow-50/60 dark:from-[#241a0d] dark:via-[#1a150e] dark:to-[#17130c] shadow-lg space-y-4">
+                  <div class="flex items-center justify-between border-b-2 border-amber-300/80 dark:border-amber-700/60 pb-3">
+                    <div class="flex items-center gap-2">
+                      <span class="text-xl">💡</span>
+                      <span class="font-black text-sm sm:text-base text-amber-950 dark:text-amber-200">
+                        白話文超展開：打人巴掌比喻與推定原理
+                      </span>
+                    </div>
+                    <span class="text-xs px-2.5 py-1 rounded-full bg-amber-200/80 dark:bg-amber-800 text-amber-900 dark:text-amber-200 font-black">
+                      生活化秒懂拆解
+                    </span>
+                  </div>
+
+                  <!-- 4 大白話解析卡片 (2欄排列) -->
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 text-xs sm:text-sm">
+                    
+                    <!-- 重點一：形式不法 -->
+                    <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-sky-300 dark:border-sky-700 space-y-2 shadow-xs">
+                      <div class="font-black text-sky-900 dark:text-sky-300 flex items-center gap-1.5 text-sm">
+                        <span class="w-5 h-5 rounded-md bg-sky-600 text-white flex items-center justify-center font-bold text-xs">1</span>
+                        <span>形式不法：法條的「外在拍立得」</span>
+                      </div>
+                      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                        只要你的動作吻合刑法分則寫的罪名（例如刑法第 277 條「傷害人之身體」），就像拿相機拍一張快照，<strong class="text-sky-800 dark:text-sky-300 font-bold">外觀完全對得上號</strong>，這就叫「構成要件該當」，也就是抓到了形式上的壞事！
+                      </p>
+                    </div>
+
+                    <!-- 重點二：實質不法 -->
+                    <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-fuchsia-300 dark:border-fuchsia-700 space-y-2 shadow-xs">
+                      <div class="font-black text-fuchsia-900 dark:text-fuchsia-300 flex items-center gap-1.5 text-sm">
+                        <span class="w-5 h-5 rounded-md bg-fuchsia-600 text-white flex items-center justify-center font-bold text-xs">2</span>
+                        <span>實質不法：背後「毫無正當理由」</span>
+                      </div>
+                      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                        光外表吻合還不夠！重點是<strong class="text-fuchsia-800 dark:text-fuchsia-300 font-bold">「你有沒有正當理由？」</strong>如果你純粹是看人不爽動手、毫無任何正當藉口，實質上完全沒有任何價值能被原諒，這就是「實質不法（違法性成立）」。
+                      </p>
+                    </div>
+
+                    <!-- 重點三：為什麼推定 -->
+                    <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-emerald-300 dark:border-emerald-700 space-y-2 shadow-xs">
+                      <div class="font-black text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5 text-sm">
+                        <span class="w-5 h-5 rounded-md bg-emerald-600 text-white flex items-center justify-center font-bold text-xs">3</span>
+                        <span>為什麼該當就推定違法？（訴訟效率）</span>
+                      </div>
+                      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                        生活常理告訴我們：大白天走在路上，誰會平白無故給人一巴掌？所以只要你動手打了人，法官不必慢慢猜，而是<strong class="text-emerald-800 dark:text-emerald-300 font-bold">直接推定你無理（推定具備違法性）</strong>，訴訟才有效率！
+                      </p>
+                    </div>
+
+                    <!-- 重點四：反證推翻 -->
+                    <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-rose-300 dark:border-rose-700 space-y-2 shadow-xs">
+                      <div class="font-black text-rose-900 dark:text-rose-300 flex items-center gap-1.5 text-sm">
+                        <span class="w-5 h-5 rounded-md bg-rose-600 text-white flex items-center justify-center font-bold text-xs">4</span>
+                        <span>萬一有防衛呢？阻卻違法推翻！（防範誤判）</span>
+                      </div>
+                      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                        若事實上是對方向你揮刀，你為保命才反擊呢？這時只要亮出<strong class="text-rose-800 dark:text-rose-300 font-bold">「正當防衛（刑法第 23 條）」</strong>免死金牌，違法性推定就會<span class="underline font-bold text-rose-700 dark:text-rose-300">立刻被推翻</span>，不法當場消滅！
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <!-- 核心口訣金色橫條 -->
+                  <div class="p-3.5 rounded-xl bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 text-white flex items-center justify-between gap-3 flex-wrap shadow-md">
+                    <div class="flex items-center gap-2.5">
+                      <span class="text-lg">📢</span>
+                      <span class="font-black text-xs sm:text-sm">
+                        核心精華口訣：先看外觀踩紅線（TB）➔ 常理推定無理（R）➔ 舉出正當防衛即刻推翻！
+                      </span>
+                    </div>
+                    <span class="text-[11px] font-bold bg-white/20 backdrop-blur-xs px-2.5 py-0.5 rounded-full text-white">
+                      刑法審查基石
+                    </span>
+                  </div>
+
+                </div>
+
               </div>
             </section>
 
@@ -1429,205 +1672,315 @@ window.APP_VIEWS['viewChapter1'] = window.APP_VIEWS['chapter1'] = `
                 </div>
               </div>
 
-              <!-- 案例卡片矩陣 (案例 1-7 至 1-11) 面板容器 -->
+              <!-- 案例卡片矩陣 (案例 1-7 至 1-11) 面板容器 (高彩度主題顯眼版) -->
               <div id="panelJustLegal" class="space-y-5">
                 <div class="grid grid-cols-1 gap-5">
                 
-                <!-- 案例 1-7 卡片 (教材第 1-5 頁) -->
-                <div id="case-card-1-7" data-case="1-7" class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 font-mono">
+                <!-- 案例 1-7 卡片：依法令之行為 (亮蔚藍/天空藍主題) -->
+                <div id="case-card-1-7" data-case="1-7" class="p-5 sm:p-6 rounded-2xl border-2 border-sky-400 dark:border-sky-500 bg-gradient-to-br from-sky-50/80 via-white to-blue-50/40 dark:from-[#0c1a2e] dark:via-[#0e1726] dark:to-[#070f1e] shadow-lg hover:shadow-xl transition-all space-y-4">
+                  <div class="flex items-center justify-between flex-wrap gap-2">
+                    <span class="text-xs font-black px-3 py-1.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-sm shadow-sky-500/30 font-mono tracking-wide">
                       ⚖️ 案例 1-7
                     </span>
-                    <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">
+                    <span class="text-xs px-3 py-1 rounded-xl bg-sky-600 text-white font-black shadow-sm shadow-sky-600/30">
                       阻卻違法抗辯：依法令之行為 (§ 21 Ⅰ)
                     </span>
                   </div>
-                  <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800/80 text-xs sm:text-sm">
-                    <strong class="text-slate-900 dark:text-white">被告：</strong>「我的確有為他人墮胎，但卻是在符合優生保健法 § 9 的情況下。」
+                  
+                  <!-- 被告心聲對話框 -->
+                  <div class="p-4 rounded-xl bg-sky-50/90 dark:bg-sky-950/60 border-2 border-sky-300 dark:border-sky-800/80 text-xs sm:text-sm text-slate-800 dark:text-slate-100 flex items-start gap-3 shadow-inner">
+                    <span class="text-base shrink-0">🗣️</span>
+                    <div>
+                      <strong class="text-sky-900 dark:text-sky-300 font-black">被告心聲抗辯：</strong>
+                      <span class="italic">「我的確有為他人墮胎，但卻是在符合優生保健法 § 9 的情況下。」</span>
+                    </div>
                   </div>
-                  <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1">
-                    <div class="font-bold text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
-                      <span>◀ 問題導引 ▶</span>
+
+                  <div class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2">
+                    <div class="font-black text-sky-950 dark:text-sky-200 flex items-center gap-1.5">
+                      <span>◀ 問題導引與體系定位 ▶</span>
                     </div>
                     <p class="leading-relaxed">
-                      主張「依法令之行為」的抗辯（§ 21 Ⅰ）。由於這是法規所允許的墮胎行為，縱使的確造成法益侵害（胎兒生命），<span class="text-emerald-600 dark:text-emerald-400 font-bold">但卻因為有正當理由而並非壞事</span>。
+                      主張「依法令之行為」的抗辯（§ 21 Ⅰ）。由於這是法規所允許的墮胎行為，縱使客觀上的確造成法益侵害（胎兒生命），<strong class="text-sky-800 dark:text-sky-300 font-bold underline decoration-sky-400 decoration-2 underline-offset-4">但卻因為有正當理由而並非壞事</strong>。
                     </p>
                   </div>
+
+                  <!-- 白話文秒懂專區 -->
+                  <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-sky-300 dark:border-sky-700/80 space-y-2.5 shadow-xs">
+                    <div class="font-black text-sky-900 dark:text-sky-300 flex items-center gap-2 text-xs sm:text-sm">
+                      <span class="text-base">💡</span>
+                      <span>白話秒懂拆解：法規自己准許的事，刑法絕不當雙面人！</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                      雖然人工流產中止了胎兒生命，但《優生保健法》在特定醫療與優生事由下，白紙黑字允許合格醫師施行。既然國家法律本身就允許這件事發生，刑法就不能「人格分裂」又跑出來說你有罪！只要合乎法令程序，行為就具備完全的正當理由，違法性當場被推翻！
+                    </p>
+                    <div class="pt-1 text-[11px] font-bold text-sky-700 dark:text-sky-300">
+                      常理口訣：法律明文准許做，刑法絕不當雙面人！
+                    </div>
+                  </div>
+
                   <!-- 2026 現行法規查核與資料來源 -->
-                  <div class="pt-3 border-t border-slate-100 dark:border-white/[0.06] space-y-1.5 text-xs">
+                  <div class="pt-3 border-t-2 border-sky-200/80 dark:border-sky-900/60 space-y-1.5 text-xs">
                     <div class="flex items-center justify-between flex-wrap gap-2">
                       <div class="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
-                        <span class="text-emerald-500">📌</span>
+                        <span class="text-sky-600 dark:text-sky-400">📌</span>
                         <span>2026 現行法規狀態：</span>
-                        <span class="px-2 py-0.5 rounded-full text-[11px] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold">條文維持現行法・實務與草案接軌</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-[11px] bg-sky-100 dark:bg-sky-950/80 text-sky-800 dark:text-sky-300 font-bold border border-sky-300 dark:border-sky-700">條文維持現行法・實務與草案接軌</span>
                       </div>
                       <div class="flex items-center gap-2 font-mono text-[11px]">
-                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=21" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">§ 21 條文 ↗</a>
+                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=21" target="_blank" rel="noopener noreferrer" class="text-sky-700 dark:text-sky-300 hover:underline font-bold">§ 21 條文 ↗</a>
                         <span class="text-slate-300 dark:text-slate-700">|</span>
-                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0070001&flno=9" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">優生保健法 § 9 ↗</a>
+                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0070001&flno=9" target="_blank" rel="noopener noreferrer" class="text-sky-700 dark:text-sky-300 hover:underline font-bold">優生保健法 § 9 ↗</a>
                       </div>
                     </div>
-                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-[11.5px] bg-slate-50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800/60">
-                      <strong class="text-slate-700 dark:text-slate-300">條文內容與法理：</strong>刑法 § 21 第 1 項「依法令之行為，不罰。」醫師符合優生保健法所定之醫療與優生事由施行人工流產，合於法令阻卻違法；近年主管機關持續研擬《生育保健法》修正草案，擬廢除人工流產需配偶同意權規定，貫徹女性身體自主權，惟不論條文修正與否，合法醫療處遇皆屬「依法令之行為」而不罰。
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11.5px] bg-sky-50/50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-sky-200/60 dark:border-sky-800/60">
+                      <strong class="text-slate-800 dark:text-slate-200">條文內容與法理：</strong>刑法 § 21 第 1 項「依法令之行為，不罰。」醫師符合優生保健法所定之醫療與優生事由施行人工流產，合於法令阻卻違法；近年主管機關持續研擬《生育保健法》修正草案，擬廢除人工流產需配偶同意權規定，貫徹女性身體自主權，惟不論條文修正與否，合法醫療處遇皆屬「依法令之行為」而不罰。
                     </p>
                   </div>
                 </div>
 
-                <!-- 案例 1-8 卡片 (教材第 1-5 頁) -->
-                <div id="case-card-1-8" data-case="1-8" class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 font-mono">
+                <!-- 案例 1-8 卡片：依命令之行為 (亮紫羅蘭/靛藍主題) -->
+                <div id="case-card-1-8" data-case="1-8" class="p-5 sm:p-6 rounded-2xl border-2 border-indigo-400 dark:border-indigo-500 bg-gradient-to-br from-indigo-50/80 via-white to-purple-50/40 dark:from-[#13112c] dark:via-[#0e1222] dark:to-[#090b17] shadow-lg hover:shadow-xl transition-all space-y-4">
+                  <div class="flex items-center justify-between flex-wrap gap-2">
+                    <span class="text-xs font-black px-3 py-1.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-sm shadow-indigo-500/30 font-mono tracking-wide">
                       ⚖️ 案例 1-8
                     </span>
-                    <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">
+                    <span class="text-xs px-3 py-1 rounded-xl bg-indigo-600 text-white font-black shadow-sm shadow-indigo-600/30">
                       阻卻違法抗辯：依命令之行為 (§ 21 Ⅱ)
                     </span>
                   </div>
-                  <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800/80 text-xs sm:text-sm">
-                    <strong class="text-slate-900 dark:text-white">被告：</strong>「我有拿別人的東西，但卻是因為上級的命令我才這麼做。」
+                  
+                  <!-- 被告心聲對話框 -->
+                  <div class="p-4 rounded-xl bg-indigo-50/90 dark:bg-indigo-950/60 border-2 border-indigo-300 dark:border-indigo-800/80 text-xs sm:text-sm text-slate-800 dark:text-slate-100 flex items-start gap-3 shadow-inner">
+                    <span class="text-base shrink-0">🗣️</span>
+                    <div>
+                      <strong class="text-indigo-900 dark:text-indigo-300 font-black">被告心聲抗辯：</strong>
+                      <span class="italic">「我有拿別人的東西，但卻是因為上級的命令我才這麼做。」</span>
+                    </div>
                   </div>
-                  <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1">
-                    <div class="font-bold text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
-                      <span>◀ 問題導引 ▶</span>
+
+                  <div class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2">
+                    <div class="font-black text-indigo-950 dark:text-indigo-200 flex items-center gap-1.5">
+                      <span>◀ 問題導引與體系定位 ▶</span>
                     </div>
                     <p class="leading-relaxed">
-                      主張「依命令之行為」的抗辯（§ 21 Ⅱ）。由於有合法的上級公務員命令存在，縱使的確造成法益侵害（所有權），<span class="text-emerald-600 dark:text-emerald-400 font-bold">但卻因為有正當理由而並非壞事</span>。
+                      主張「依命令之行為」的抗辯（§ 21 Ⅱ）。由於有合法的上級公務員命令存在，縱使客觀上的確造成法益侵害（所有權），<strong class="text-indigo-800 dark:text-indigo-300 font-bold underline decoration-indigo-400 decoration-2 underline-offset-4">但卻因為有正當理由而並非壞事</strong>。
                     </p>
                   </div>
+
+                  <!-- 白話文秒懂專區 -->
+                  <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-indigo-300 dark:border-indigo-700/80 space-y-2.5 shadow-xs">
+                    <div class="font-black text-indigo-900 dark:text-indigo-300 flex items-center gap-2 text-xs sm:text-sm">
+                      <span class="text-base">💡</span>
+                      <span>白話秒懂拆解：聽合法命令免責，但明知違法不可盲從！</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                      警察奉分局長的合法公務命令扣押涉案物資，外表上把別人的東西帶走（看似侵害所有權），但基層只是執行公權力的手腳，有上級合法命令當靠山，自然免罰！但千萬注意：若長官私自叫你去「偷燒證物、痛打犯人」，這種明擺著違法的黑令，你若還傻傻照做就必須跟長官一起坐牢（相對服從說）！
+                    </p>
+                    <div class="pt-1 text-[11px] font-bold text-indigo-700 dark:text-indigo-300">
+                      常理口訣：合法命令服從免責；明知違法盲從必罰！
+                    </div>
+                  </div>
+
                   <!-- 2026 現行法規查核與資料來源 -->
-                  <div class="pt-3 border-t border-slate-100 dark:border-white/[0.06] space-y-1.5 text-xs">
+                  <div class="pt-3 border-t-2 border-indigo-200/80 dark:border-indigo-900/60 space-y-1.5 text-xs">
                     <div class="flex items-center justify-between flex-wrap gap-2">
                       <div class="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
-                        <span class="text-emerald-500">📌</span>
+                        <span class="text-indigo-600 dark:text-indigo-400">📌</span>
                         <span>2026 現行法規狀態：</span>
-                        <span class="px-2 py-0.5 rounded-full text-[11px] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold">條文維持現行法・採相對服從說</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-[11px] bg-indigo-100 dark:bg-indigo-950/80 text-indigo-800 dark:text-indigo-300 font-bold border border-indigo-300 dark:border-indigo-700">條文維持現行法・採相對服從說</span>
                       </div>
                       <div class="flex items-center gap-2 font-mono text-[11px]">
-                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=21" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">§ 21 條文 ↗</a>
+                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=21" target="_blank" rel="noopener noreferrer" class="text-indigo-700 dark:text-indigo-300 hover:underline font-bold">§ 21 條文 ↗</a>
                       </div>
                     </div>
-                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-[11.5px] bg-slate-50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800/60">
-                      <strong class="text-slate-700 dark:text-slate-300">條文內容與審查要件：</strong>刑法 § 21 第 2 項「依所屬上級公務員命令之職務上行為，不罰。但明知命令違法者，不在此限。」要件包含：發令者與行為人具備職務上下監督隸屬關係、命令屬職權範圍且具法定形式；但書採「相對服從說」，若公務員明知命令違法（如長官命令銷毀特定證據）仍盲從執行者，不得免責，以杜絕公務濫權。
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11.5px] bg-indigo-50/50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-indigo-200/60 dark:border-indigo-800/60">
+                      <strong class="text-slate-800 dark:text-slate-200">條文內容與審查要件：</strong>刑法 § 21 第 2 項「依所屬上級公務員命令之職務上行為，不罰。但明知命令違法者，不在此限。」要件包含：發令者與行為人具備職務上下監督隸屬關係、命令屬職權範圍且具法定形式；但書採「相對服從說」，若公務員明知命令違法（如長官命令銷毀特定證據）仍盲從執行者，不得免責，以杜絕公務濫權。
                     </p>
                   </div>
                 </div>
 
-                <!-- 案例 1-9 卡片 (教材第 1-6 頁) -->
-                <div id="case-card-1-9" data-case="1-9" class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 font-mono">
+                <!-- 案例 1-9 卡片：業務上正當行為 (翠綠/碧青主題) -->
+                <div id="case-card-1-9" data-case="1-9" class="p-5 sm:p-6 rounded-2xl border-2 border-teal-400 dark:border-teal-500 bg-gradient-to-br from-teal-50/80 via-white to-emerald-50/40 dark:from-[#081f1d] dark:via-[#0c181f] dark:to-[#061214] shadow-lg hover:shadow-xl transition-all space-y-4">
+                  <div class="flex items-center justify-between flex-wrap gap-2">
+                    <span class="text-xs font-black px-3 py-1.5 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-600 text-white shadow-sm shadow-teal-500/30 font-mono tracking-wide">
                       ⚖️ 案例 1-9
                     </span>
-                    <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">
+                    <span class="text-xs px-3 py-1 rounded-xl bg-teal-600 text-white font-black shadow-sm shadow-teal-600/30">
                       阻卻違法抗辯：業務上正當行為 (§ 22)
                     </span>
                   </div>
-                  <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800/80 text-xs sm:text-sm">
-                    <strong class="text-slate-900 dark:text-white">被告：</strong>「我幫人作結紮手術縱使該當重傷罪之構成要件，但我可是醫生耶！」
+                  
+                  <!-- 被告心聲對話框 -->
+                  <div class="p-4 rounded-xl bg-teal-50/90 dark:bg-teal-950/60 border-2 border-teal-300 dark:border-teal-800/80 text-xs sm:text-sm text-slate-800 dark:text-slate-100 flex items-start gap-3 shadow-inner">
+                    <span class="text-base shrink-0">🗣️</span>
+                    <div>
+                      <strong class="text-teal-900 dark:text-teal-300 font-black">被告心聲抗辯：</strong>
+                      <span class="italic">「我幫人作結紮手術縱使該當重傷罪之構成要件，但我可是醫生耶！」</span>
+                    </div>
                   </div>
-                  <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1">
-                    <div class="font-bold text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
-                      <span>◀ 問題導引 ▶</span>
+
+                  <div class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2">
+                    <div class="font-black text-teal-950 dark:text-teal-200 flex items-center gap-1.5">
+                      <span>◀ 問題導引與體系定位 ▶</span>
                     </div>
                     <p class="leading-relaxed">
-                      主張「業務上正當行為」的抗辯（§ 22）。正當的業務執行乃社會分工所必需，縱使的確造成法益侵害（重大身體），<span class="text-emerald-600 dark:text-emerald-400 font-bold">但卻因為有正當理由而並非壞事</span>。
+                      主張「業務上正當行為」的抗辯（§ 22）。正當的業務執行乃社會分工所必需，縱使客觀上的確造成法益侵害（重大身體機能），<strong class="text-teal-800 dark:text-teal-300 font-bold underline decoration-teal-400 decoration-2 underline-offset-4">但卻因為有正當理由而並非壞事</strong>。
                     </p>
                   </div>
+
+                  <!-- 白話文秒懂專區 -->
+                  <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-teal-300 dark:border-teal-700/80 space-y-2.5 shadow-xs">
+                    <div class="font-black text-teal-900 dark:text-teal-300 flex items-center gap-2 text-xs sm:text-sm">
+                      <span class="text-base">💡</span>
+                      <span>白話秒懂拆解：常人動刀叫重傷，名醫動刀救生命！</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                      如果路人無緣無故拿手術刀切開你的肚子或剪斷輸精管，那是十惡不赦的重傷害罪！但如果換成合格外科醫師在手術室執行合法結紮或切除腫瘤，這是社會維持健康運作不可或缺的正當醫療業務。只要依照醫療常規並獲得病患同意，這就是正當業務行為，完全不具違法性！
+                    </p>
+                    <div class="pt-1 text-[11px] font-bold text-teal-700 dark:text-teal-300">
+                      常理口訣：常人動刀是重傷害，醫師動刀救人性命！
+                    </div>
+                  </div>
+
                   <!-- 2026 現行法規查核與資料來源 -->
-                  <div class="pt-3 border-t border-slate-100 dark:border-white/[0.06] space-y-1.5 text-xs">
+                  <div class="pt-3 border-t-2 border-teal-200/80 dark:border-teal-900/60 space-y-1.5 text-xs">
                     <div class="flex items-center justify-between flex-wrap gap-2">
                       <div class="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
-                        <span class="text-emerald-500">📌</span>
+                        <span class="text-teal-600 dark:text-teal-400">📌</span>
                         <span>2026 現行法規狀態：</span>
-                        <span class="px-2 py-0.5 rounded-full text-[11px] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold">條文維持現行法・醫療法規程序齊備</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-[11px] bg-teal-100 dark:bg-teal-950/80 text-teal-800 dark:text-teal-300 font-bold border border-teal-300 dark:border-teal-700">條文維持現行法・醫療常規程序齊備</span>
                       </div>
                       <div class="flex items-center gap-2 font-mono text-[11px]">
-                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=22" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">§ 22 條文 ↗</a>
+                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=22" target="_blank" rel="noopener noreferrer" class="text-teal-700 dark:text-teal-300 hover:underline font-bold">§ 22 條文 ↗</a>
                         <span class="text-slate-300 dark:text-slate-700">|</span>
-                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020021&flno=63" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">醫療法 § 63 ↗</a>
+                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0020021&flno=63" target="_blank" rel="noopener noreferrer" class="text-teal-700 dark:text-teal-300 hover:underline font-bold">醫療法 § 63 ↗</a>
                       </div>
                     </div>
-                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-[11.5px] bg-slate-50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800/60">
-                      <strong class="text-slate-700 dark:text-slate-300">條文內容與醫療常規：</strong>刑法 § 22「業務上之正當行為，不罰。」醫師執行合法外科手術、結紮等侵入性醫療處置，客觀上侵害身體完整性，但只要出於醫療目的、合於醫療水準常規，並依醫療法第 63、64 條履行說明與知情同意程序，即屬業務上正當行為阻卻違法。
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11.5px] bg-teal-50/50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-teal-200/60 dark:border-teal-800/60">
+                      <strong class="text-slate-800 dark:text-slate-200">條文內容與醫療常規：</strong>刑法 § 22「業務上之正當行為，不罰。」醫師執行合法外科手術、結紮等侵入性醫療處置，客觀上侵害身體完整性，但只要出於醫療目的、合於醫療水準常規，並依醫療法第 63、64 條履行說明與知情同意程序，即屬業務上正當行為阻卻違法。
                     </p>
                   </div>
                 </div>
 
-                <!-- 案例 1-10 卡片 (教材第 1-6 頁) -->
-                <div id="case-card-1-10" data-case="1-10" class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 font-mono">
+                <!-- 案例 1-10 卡片：正當防衛 (烈焰琥珀/橙紅主題) -->
+                <div id="case-card-1-10" data-case="1-10" class="p-5 sm:p-6 rounded-2xl border-2 border-amber-400 dark:border-orange-500 bg-gradient-to-br from-amber-50/80 via-white to-orange-50/40 dark:from-[#261708] dark:via-[#1a1410] dark:to-[#120a04] shadow-lg hover:shadow-xl transition-all space-y-4">
+                  <div class="flex items-center justify-between flex-wrap gap-2">
+                    <span class="text-xs font-black px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-sm shadow-amber-500/30 font-mono tracking-wide">
                       ⚖️ 案例 1-10
                     </span>
-                    <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">
+                    <span class="text-xs px-3 py-1 rounded-xl bg-orange-600 text-white font-black shadow-sm shadow-orange-600/30">
                       阻卻違法抗辯：正當防衛 (§ 23)
                     </span>
                   </div>
-                  <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800/80 text-xs sm:text-sm">
-                    <strong class="text-slate-900 dark:text-white">被告：</strong>「我莫名其妙被人進攻，是為了保護自己才將對方打傷。」
+                  
+                  <!-- 被告心聲對話框 -->
+                  <div class="p-4 rounded-xl bg-amber-50/90 dark:bg-amber-950/60 border-2 border-amber-300 dark:border-amber-800/80 text-xs sm:text-sm text-slate-800 dark:text-slate-100 flex items-start gap-3 shadow-inner">
+                    <span class="text-base shrink-0">🗣️</span>
+                    <div>
+                      <strong class="text-amber-900 dark:text-amber-300 font-black">被告心聲抗辯：</strong>
+                      <span class="italic">「我莫名其妙被人進攻，是為了保護自己才將對方打傷。」</span>
+                    </div>
                   </div>
-                  <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1">
-                    <div class="font-bold text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
-                      <span>◀ 問題導引 ▶</span>
+
+                  <div class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2">
+                    <div class="font-black text-amber-950 dark:text-amber-200 flex items-center gap-1.5">
+                      <span>◀ 問題導引與體系定位 ▶</span>
                     </div>
                     <p class="leading-relaxed">
-                      主張「正當防衛」的抗辯（§ 23）。本於「自我保護」以及「正者毋須向不正者低頭」的社會共識，面臨現在不法侵害時應有反擊的權利，縱使的確造成法益侵害（身體），<span class="text-emerald-600 dark:text-emerald-400 font-bold">但卻因為有正當理由而並非壞事</span>。
+                      主張「正當防衛」的抗辯（§ 23）。本於「自我保護」以及「正者毋須向不正者低頭」的法理共識，面臨現在不法侵害時應有反擊權利，縱使客觀上的確造成法益侵害（對方身體），<strong class="text-amber-800 dark:text-amber-300 font-bold underline decoration-amber-400 decoration-2 underline-offset-4">但卻因為有正當理由而並非壞事</strong>。
                     </p>
                   </div>
+
+                  <!-- 白話文秒懂專區 -->
+                  <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-amber-300 dark:border-amber-700/80 space-y-2.5 shadow-xs">
+                    <div class="font-black text-amber-900 dark:text-amber-300 flex items-center gap-2 text-xs sm:text-sm">
+                      <span class="text-base">💡</span>
+                      <span>白話秒懂拆解：正義不向邪惡低頭！好人反擊自保完全合法！</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                      歹徒在大街上突然持刀向你猛刺（現在不法侵害），你為了保命抓起路邊雨傘或木棍反擊，把歹徒打到骨折流血。你雖然把人打傷了，但這是為了捍衛自己的生命，法律全力支持好人自衛！正義毋須向邪惡讓步，這就是最強力的阻卻違法事由。但記住：歹徒既然已經痛到棄刀倒地求饒，就不能再衝上去狂踹（防衛過當）！
+                    </p>
+                    <div class="pt-1 text-[11px] font-bold text-amber-700 dark:text-amber-300">
+                      常理口訣：惡徒無端來侵害，奮力反擊衛自身；正義不向邪惡屈！
+                    </div>
+                  </div>
+
                   <!-- 2026 現行法規查核與資料來源 -->
-                  <div class="pt-3 border-t border-slate-100 dark:border-white/[0.06] space-y-1.5 text-xs">
+                  <div class="pt-3 border-t-2 border-amber-200/80 dark:border-amber-900/60 space-y-1.5 text-xs">
                     <div class="flex items-center justify-between flex-wrap gap-2">
                       <div class="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
-                        <span class="text-emerald-500">📌</span>
+                        <span class="text-amber-600 dark:text-amber-400">📌</span>
                         <span>2026 現行法規狀態：</span>
-                        <span class="px-2 py-0.5 rounded-full text-[11px] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold">條文維持現行法・正不必向不正讓步</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-[11px] bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 font-bold border border-amber-300 dark:border-amber-700">條文維持現行法・正不必向不正讓步</span>
                       </div>
                       <div class="flex items-center gap-2 font-mono text-[11px]">
-                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=23" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">§ 23 條文 ↗</a>
+                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=23" target="_blank" rel="noopener noreferrer" class="text-amber-700 dark:text-amber-300 hover:underline font-bold">§ 23 條文 ↗</a>
                       </div>
                     </div>
-                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-[11.5px] bg-slate-50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800/60">
-                      <strong class="text-slate-700 dark:text-slate-300">條文內容與審查要件：</strong>刑法 § 23「對於現在不法之侵害，出自防衛自己或他人權利之行為，不罰。但防衛行為過當者，得減輕或免除其刑。」要件包含：(1) 面臨現在不法之侵害；(2) 主觀上出於防衛意思；(3) 防衛手段客觀上具有適當性與必要性（侵害最小且有效）。逾越程度者為防衛過當，轉為罪責層次之寬恕事由減免處罰。
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11.5px] bg-amber-50/50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-amber-200/60 dark:border-amber-800/60">
+                      <strong class="text-slate-800 dark:text-slate-200">條文內容與審查要件：</strong>刑法 § 23「對於現在不法之侵害，出自防衛自己或他人權利之行為，不罰。但防衛行為過當者，得減輕或免除其刑。」要件包含：(1) 面臨現在不法之侵害；(2) 主觀上出於防衛意思；(3) 防衛手段客觀上具有適當性與必要性（侵害最小且有效）。逾越程度者為防衛過當，轉為罪責層次之寬恕事由減免處罰。
                     </p>
                   </div>
                 </div>
 
-                <!-- 案例 1-11 卡片 (教材第 1-6 頁) -->
-                <div id="case-card-1-11" data-case="1-11" class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 font-mono">
+                <!-- 案例 1-11 卡片：緊急避難 (玫紅/茜紅主題) -->
+                <div id="case-card-1-11" data-case="1-11" class="p-5 sm:p-6 rounded-2xl border-2 border-rose-400 dark:border-rose-500 bg-gradient-to-br from-rose-50/80 via-white to-red-50/40 dark:from-[#290c16] dark:via-[#1a0e14] dark:to-[#13070b] shadow-lg hover:shadow-xl transition-all space-y-4">
+                  <div class="flex items-center justify-between flex-wrap gap-2">
+                    <span class="text-xs font-black px-3 py-1.5 rounded-xl bg-gradient-to-r from-rose-500 to-red-600 text-white shadow-sm shadow-rose-500/30 font-mono tracking-wide">
                       ⚖️ 案例 1-11
                     </span>
-                    <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">
+                    <span class="text-xs px-3 py-1 rounded-xl bg-rose-600 text-white font-black shadow-sm shadow-rose-600/30">
                       阻卻違法抗辯：緊急避難 (§ 24)
                     </span>
                   </div>
-                  <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800/80 text-xs sm:text-sm">
-                    <strong class="text-slate-900 dark:text-white">被告：</strong>「我是因為被野狗追趕，在避無可避之下才會闖入民宅。」
+                  
+                  <!-- 被告心聲對話框 -->
+                  <div class="p-4 rounded-xl bg-rose-50/90 dark:bg-rose-950/60 border-2 border-rose-300 dark:border-rose-800/80 text-xs sm:text-sm text-slate-800 dark:text-slate-100 flex items-start gap-3 shadow-inner">
+                    <span class="text-base shrink-0">🗣️</span>
+                    <div>
+                      <strong class="text-rose-900 dark:text-rose-300 font-black">被告心聲抗辯：</strong>
+                      <span class="italic">「我是因為被野狗追趕，在避無可避之下才會闖入民宅。」</span>
+                    </div>
                   </div>
-                  <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1">
-                    <div class="font-bold text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
-                      <span>◀ 問題導引 ▶</span>
+
+                  <div class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2">
+                    <div class="font-black text-rose-950 dark:text-rose-200 flex items-center gap-1.5">
+                      <span>◀ 問題導引與體系定位 ▶</span>
                     </div>
                     <p class="leading-relaxed">
-                      主張「緊急避難」的抗辯（§ 24）。本於「社會連帶性原則」以及「自主原則」的社會共識，面臨緊急危難時應有轉嫁的權利，縱使的確造成法益侵害（居住自由），<span class="text-emerald-600 dark:text-emerald-400 font-bold">但卻因為有正當理由而並非壞事</span>。
+                      主張「緊急避難」的抗辯（§ 24）。本於「社會連帶性原則」以及「利益衡量」的法理共識，面臨緊急危難時應有將危難轉嫁之權利，縱使客觀上的確造成法益侵害（他人居住隱私自由），<strong class="text-rose-800 dark:text-rose-300 font-bold underline decoration-rose-400 decoration-2 underline-offset-4">但卻因為有正當理由而並非壞事</strong>。
                     </p>
                   </div>
+
+                  <!-- 白話文秒懂專區 -->
+                  <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-rose-300 dark:border-rose-700/80 space-y-2.5 shadow-xs">
+                    <div class="font-black text-rose-900 dark:text-rose-300 flex items-center gap-2 text-xs sm:text-sm">
+                      <span class="text-base">💡</span>
+                      <span>白話秒懂拆解：大禍臨頭保命要緊！犧牲小法益保全大法益！</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                      你走在巷弄裡突然被狂吠的比特犬瘋狂追咬（野獸天災危難），眼看要被撕咬重傷，剛好旁邊有民宅大門沒鎖，你情急之下衝進去關門保命。雖然未經許可闖入民宅構成侵入住宅罪，但你保護的是無價的「人命安全」，被犧牲的只是屋主短暫的「居住隱私」。兩害相權取其輕，這就是法律允許的緊急避難！
+                    </p>
+                    <div class="pt-1 text-[11px] font-bold text-rose-700 dark:text-rose-300">
+                      常理口訣：大禍臨頭無處逃，損小保大求生存；緊急避難免處罰！
+                    </div>
+                  </div>
+
                   <!-- 2026 現行法規查核與資料來源 -->
-                  <div class="pt-3 border-t border-slate-100 dark:border-white/[0.06] space-y-1.5 text-xs">
+                  <div class="pt-3 border-t-2 border-rose-200/80 dark:border-rose-900/60 space-y-1.5 text-xs">
                     <div class="flex items-center justify-between flex-wrap gap-2">
                       <div class="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
-                        <span class="text-emerald-500">📌</span>
+                        <span class="text-rose-600 dark:text-rose-400">📌</span>
                         <span>2026 現行法規狀態：</span>
-                        <span class="px-2 py-0.5 rounded-full text-[11px] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold">條文維持現行法・社會連帶轉嫁危難</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-[11px] bg-rose-100 dark:bg-rose-950/80 text-rose-800 dark:text-rose-300 font-bold border border-rose-300 dark:border-rose-700">條文維持現行法・社會連帶轉嫁危難</span>
                       </div>
                       <div class="flex items-center gap-2 font-mono text-[11px]">
-                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=24" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">§ 24 條文 ↗</a>
+                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=24" target="_blank" rel="noopener noreferrer" class="text-rose-700 dark:text-rose-300 hover:underline font-bold">§ 24 條文 ↗</a>
                       </div>
                     </div>
-                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-[11.5px] bg-slate-50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800/60">
-                      <strong class="text-slate-700 dark:text-slate-300">條文內容與轉嫁界限：</strong>刑法 § 24 第 1 項「因避免自己或他人生命、身體、自由、財產之緊急危難出自不得已之行為，不罰。但避難行為過當者，得減輕或免除其刑。」緊急避難係將危難轉嫁給無涉之第三人，要件更嚴謹：(1) 危難不限於人為（包含野獸襲擊、天災）；(2) 不得已性（最後唯一手段）；(3) 利益衡量：所保全之法益必須顯著優於所犧牲之法益。
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11.5px] bg-rose-50/50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-rose-200/60 dark:border-rose-800/60">
+                      <strong class="text-slate-800 dark:text-slate-200">條文內容與轉嫁界限：</strong>刑法 § 24 第 1 項「因避免自己或他人生命、身體、自由、財產之緊急危難出自不得已之行為，不罰。但避難行為過當者，得減輕或免除其刑。」緊急避難係將危難轉嫁給無涉之第三人，要件更嚴謹：(1) 危難不限於人為（包含野獸襲擊、天災）；(2) 不得已性（最後唯一手段）；(3) 利益衡量：所保全之法益必須顯著優於所犧牲之法益。
                     </p>
                   </div>
                 </div>
@@ -1654,42 +2007,117 @@ window.APP_VIEWS['viewChapter1'] = window.APP_VIEWS['chapter1'] = `
                 </h3>
               </div>
 
-              <!-- 思考核心與引言 Callout (教材第 1-6 頁底) -->
-              <div class="p-6 sm:p-7 rounded-2xl border-2 border-indigo-500/30 bg-gradient-to-br from-indigo-50/40 via-white to-blue-50/30 dark:from-indigo-950/20 dark:via-[#101623] dark:to-blue-950/20 shadow-sm space-y-4">
-                <div class="flex items-center justify-between border-b border-indigo-100 dark:border-indigo-900/40 pb-2">
+              <!-- 思考核心與引言 Callout (教材第 1-6 頁底) (高飽和色彩顯眼版) -->
+              <div class="p-6 sm:p-8 rounded-3xl border-2 border-indigo-500 dark:border-indigo-400 bg-gradient-to-b from-indigo-50/60 via-white to-purple-50/40 dark:from-[#0f1128] dark:via-[#101623] dark:to-[#0a0d1e] shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b-2 border-indigo-200/80 dark:border-indigo-900/60 pb-3">
                   <div class="flex items-center gap-2">
-                    <span class="text-lg">⚖️</span>
-                    <span class="font-bold text-sm text-indigo-700 dark:text-indigo-300">實質違法性之思考核心：利益衡量原則</span>
+                    <span class="text-xl">⚖️</span>
+                    <span class="font-black text-sm sm:text-base text-indigo-700 dark:text-indigo-300 tracking-wide">實質違法性之思考核心：利益衡量原則</span>
                   </div>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold">教材第 1-6 頁底 原文</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300 font-bold border border-indigo-300 dark:border-indigo-700 shadow-xs">教材第 1-6 頁底 原文</span>
                 </div>
 
-                <blockquote class="text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed italic border-l-4 border-indigo-500 pl-4 py-1">
-                  「通說見解肯定在法律未規定的情況下，可以尋求<strong class="text-indigo-600 dark:text-indigo-400">『超法定阻卻違法事由』</strong>來推翻推定，現今犯罪體系自<strong class="text-indigo-600 dark:text-indigo-400">『是否合於利益衡量？』</strong>思考違法性，並綜合<strong class="text-slate-900 dark:text-white">結果</strong>與<strong class="text-slate-900 dark:text-white">行為</strong>來觀察。」
-                </blockquote>
+                <div class="p-4 sm:p-5 rounded-2xl bg-indigo-50/90 dark:bg-indigo-950/70 border-2 border-indigo-300 dark:border-indigo-800 text-xs sm:text-sm text-indigo-950 dark:text-indigo-100 leading-relaxed font-semibold shadow-inner border-l-6 border-l-indigo-600">
+                  「通說見解肯定在法律未規定的情況下，可以尋求<strong class="text-indigo-600 dark:text-indigo-400 font-black underline decoration-indigo-400 decoration-2">『超法定阻卻違法事由』</strong>來推翻推定，現今犯罪體系自<strong class="text-indigo-600 dark:text-indigo-400 font-black underline decoration-indigo-400 decoration-2">『是否合於利益衡量？』</strong>思考違法性，並綜合<strong class="text-slate-900 dark:text-white font-black">結果</strong>與<strong class="text-slate-900 dark:text-white font-black">行為</strong>來觀察。」
+                </div>
 
-                <!-- 雙維度檢驗卡片 -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                  <div class="p-3.5 rounded-xl border border-rose-500/30 bg-rose-50/30 dark:bg-rose-950/20 space-y-1.5">
+                <!-- 雙維度檢驗高彩卡片 (結果層面 vs 行為層面) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+                  
+                  <!-- 維度一：結果層面觀察 -->
+                  <div class="p-5 rounded-2xl border-2 border-rose-400 dark:border-rose-500 bg-gradient-to-br from-rose-50 via-white to-red-50/50 dark:from-rose-950/40 dark:via-[#190c13] dark:to-rose-950/20 shadow-md space-y-3">
                     <div class="flex items-center justify-between">
-                      <span class="font-bold text-xs text-rose-700 dark:text-rose-400">維度一：結果層面觀察</span>
-                      <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-600">肯定違法性</span>
+                      <span class="font-black text-xs sm:text-sm text-rose-900 dark:text-rose-300 flex items-center gap-1.5">
+                        <span>🍒</span>
+                        <span>維度一：結果層面觀察</span>
+                      </span>
+                      <span class="text-xs px-2.5 py-1 rounded-xl bg-rose-600 text-white font-black shadow-xs">肯定違法性</span>
                     </div>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                      若<strong>犧牲利益大於保全利益</strong>，由結果層面觀察相差過於懸殊，可以肯定違法性！（如<strong>案例 1-14 櫻桃案</strong>）
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                      若<strong class="text-rose-800 dark:text-rose-300 font-black">犧牲利益遠大於保全利益</strong>，由結果層面觀察相差過於懸殊，就算外觀有防衛理由，亦絕對不可免責！（典型警示：<strong class="underline decoration-rose-500 font-bold">案例 1-14 櫻桃案</strong>）
                     </p>
                   </div>
 
-                  <div class="p-3.5 rounded-xl border border-amber-500/30 bg-amber-50/30 dark:bg-amber-950/20 space-y-1.5">
+                  <!-- 維度二：行為手段觀察 -->
+                  <div class="p-5 rounded-2xl border-2 border-amber-400 dark:border-orange-500 bg-gradient-to-br from-amber-50 via-white to-orange-50/50 dark:from-amber-950/40 dark:via-[#1e1307] dark:to-amber-950/20 shadow-md space-y-3">
                     <div class="flex items-center justify-between">
-                      <span class="font-bold text-xs text-amber-700 dark:text-amber-400">維度二：行為層面觀察</span>
-                      <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600">肯定違法性</span>
+                      <span class="font-black text-xs sm:text-sm text-amber-900 dark:text-amber-300 flex items-center gap-1.5">
+                        <span>🩸</span>
+                        <span>維度二：行為層面觀察</span>
+                      </span>
+                      <span class="text-xs px-2.5 py-1 rounded-xl bg-orange-600 text-white font-black shadow-xs">肯定違法性</span>
                     </div>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                      若<strong>為達目的而不擇手段</strong>，手段悖離法律秩序與正當性，亦肯定違法性！（如<strong>案例 1-15 輸血案</strong>）
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                      若<strong class="text-amber-800 dark:text-amber-300 font-black">為達目的而不擇手段</strong>，手段嚴重踐踏人性尊嚴與憲法身體自主權，違法性一樣成立！（典型警示：<strong class="underline decoration-orange-500 font-bold">案例 1-15 輸血案</strong>）
                     </p>
                   </div>
+
                 </div>
+
+                <!-- 白話文秒懂專區：利益衡量雙維度 -->
+                <div class="p-5 sm:p-6 rounded-2xl border-2 border-amber-400 dark:border-amber-500 bg-gradient-to-br from-amber-50/90 via-orange-50/40 to-yellow-50/60 dark:from-[#241a0d] dark:via-[#1a150e] dark:to-[#17130c] shadow-lg space-y-4">
+                  <div class="flex items-center justify-between border-b-2 border-amber-300/80 dark:border-amber-700/60 pb-3">
+                    <div class="flex items-center gap-2">
+                      <span class="text-xl">💡</span>
+                      <span class="font-black text-sm sm:text-base text-amber-950 dark:text-amber-200">
+                        白話文超展開：什麼是「超法定阻卻違法」與「利益衡量」？
+                      </span>
+                    </div>
+                    <span class="text-xs px-2.5 py-1 rounded-full bg-amber-200/80 dark:bg-amber-800 text-amber-900 dark:text-amber-200 font-black">
+                      生活化秒懂拆解
+                    </span>
+                  </div>
+
+                  <!-- 3 大白話解析卡片 -->
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 text-xs sm:text-sm">
+                    
+                    <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-indigo-300 dark:border-indigo-700 space-y-2 shadow-xs">
+                      <div class="font-black text-indigo-900 dark:text-indigo-300 flex items-center gap-1.5 text-sm">
+                        <span class="w-5 h-5 rounded-md bg-indigo-600 text-white flex items-center justify-center font-bold text-xs">1</span>
+                        <span>超法定：法律沒寫，但法理相通</span>
+                      </div>
+                      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                        法條只有短短幾條，不可能窮盡人間所有情境。刑法雖然嚴格「罪刑法定」（不能自己發明新罪名），但對於<strong class="text-indigo-800 dark:text-indigo-300 font-bold">「有利於被告的免責事由」</strong>，法律允許依照公道常理（得承諾、義務衝突）來免除處罰！
+                      </p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-rose-300 dark:border-rose-700 space-y-2 shadow-xs">
+                      <div class="font-black text-rose-900 dark:text-rose-300 flex items-center gap-1.5 text-sm">
+                        <span class="w-5 h-5 rounded-md bg-rose-600 text-white flex items-center justify-center font-bold text-xs">2</span>
+                        <span>結果檢驗：不能拿大砲打小鳥</span>
+                      </div>
+                      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                        法益天平必須秤秤看！一顆微不足道的櫻桃價值 5 塊錢，小學生卻是無價的生命。就算你是正當防衛，也不能為了保全小果實去射殺活人，<strong class="text-rose-800 dark:text-rose-300 font-bold">禁止權利濫用</strong>！
+                      </p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-amber-300 dark:border-amber-700 space-y-2 shadow-xs">
+                      <div class="font-black text-amber-900 dark:text-amber-300 flex items-center gap-1.5 text-sm">
+                        <span class="w-5 h-5 rounded-md bg-orange-600 text-white flex items-center justify-center font-bold text-xs">3</span>
+                        <span>手段檢驗：不可把活人當耗材</span>
+                      </div>
+                      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                        即便救人性命的目的再崇高，也不能強壓路人抽血救人。憲法最神聖的底線是「人是目的，絕非工具」。<strong class="text-amber-800 dark:text-amber-300 font-bold">不擇手段的殘忍方法，違法性永遠成立</strong>！
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <!-- 核心口訣金色橫條 -->
+                  <div class="p-3.5 rounded-xl bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 text-white flex items-center justify-between gap-3 flex-wrap shadow-md">
+                    <div class="flex items-center gap-2.5">
+                      <span class="text-lg">📢</span>
+                      <span class="font-black text-xs sm:text-sm">
+                        核心精華口訣：結果失衡不能免責、手段踐踏尊嚴必罰；合情合理方阻不法！
+                      </span>
+                    </div>
+                    <span class="text-[11px] font-bold bg-white/20 backdrop-blur-xs px-2.5 py-0.5 rounded-full text-white">
+                      利益衡量雙維度
+                    </span>
+                  </div>
+
+                </div>
+
               </div>
 
               <!-- ==================== 案例導航與研讀控制台：第九節 超法定阻卻違法 (案例 1-12 ～ 1-15) ==================== -->
@@ -1722,168 +2150,252 @@ window.APP_VIEWS['viewChapter1'] = window.APP_VIEWS['chapter1'] = `
                 </div>
               </div>
 
-              <!-- 案例卡片矩陣 (案例 1-12 至 1-15) -->
+              <!-- 案例卡片矩陣 (案例 1-12 至 1-15) (高彩度主題顯眼版) -->
               <div class="grid grid-cols-1 gap-5">
 
-                <!-- 案例 1-12 卡片 (教材第 1-7 頁) -->
-                <div id="case-card-1-12" data-case="1-12" class="p-5 rounded-2xl border-2 border-indigo-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-400 font-mono">
+                <!-- 案例 1-12 卡片：得被害人承諾 (亮紫羅蘭/靛藍主題) -->
+                <div id="case-card-1-12" data-case="1-12" class="p-5 sm:p-6 rounded-2xl border-2 border-indigo-400 dark:border-indigo-500 bg-gradient-to-br from-indigo-50/80 via-white to-purple-50/40 dark:from-[#13112c] dark:via-[#0e1222] dark:to-[#090b17] shadow-lg hover:shadow-xl transition-all space-y-4">
+                  <div class="flex items-center justify-between flex-wrap gap-2">
+                    <span class="text-xs font-black px-3 py-1.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-sm shadow-indigo-500/30 font-mono tracking-wide">
                       ⚖️ 案例 1-12
                     </span>
-                    <span class="text-xs px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold">
+                    <span class="text-xs px-3 py-1 rounded-xl bg-indigo-600 text-white font-black shadow-sm shadow-indigo-600/30">
                       超法定阻卻違法：得被害人承諾
                     </span>
                   </div>
-                  <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800/80 text-xs sm:text-sm">
-                    <strong class="text-slate-900 dark:text-white">被告：</strong>「我的確有打對方一巴掌，不過那是因為我們正在玩黑白猜啦！」
+                  
+                  <!-- 被告心聲對話框 -->
+                  <div class="p-4 rounded-xl bg-indigo-50/90 dark:bg-indigo-950/60 border-2 border-indigo-300 dark:border-indigo-800/80 text-xs sm:text-sm text-slate-800 dark:text-slate-100 flex items-start gap-3 shadow-inner">
+                    <span class="text-base shrink-0">🗣️</span>
+                    <div>
+                      <strong class="text-indigo-900 dark:text-indigo-300 font-black">被告心聲抗辯：</strong>
+                      <span class="italic">「我的確有打對方一巴掌，不過那是因為我們正在玩黑白猜啦！」</span>
+                    </div>
                   </div>
-                  <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1">
-                    <div class="font-bold text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
-                      <span>◀ 問題導引 ▶</span>
+
+                  <div class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2">
+                    <div class="font-black text-indigo-950 dark:text-indigo-200 flex items-center gap-1.5">
+                      <span>◀ 問題導引與體系定位 ▶</span>
                     </div>
                     <p class="leading-relaxed">
-                      主張「得被害人承諾」的超法定抗辯。因為被害人在自由意志下自行放棄對法益的保護，縱使的確造成法益侵害（身體），<span class="text-indigo-600 dark:text-indigo-400 font-bold">但卻因為有正當理由而並非壞事</span>。
+                      主張「得被害人承諾」的超法定抗辯。因為被害人在自由意志下自行放棄對法益的保護，縱使客觀上的確造成法益侵害（輕微身體），<strong class="text-indigo-800 dark:text-indigo-300 font-bold underline decoration-indigo-400 decoration-2 underline-offset-4">但卻因為有正當理由而並非壞事</strong>。
                     </p>
                   </div>
+
+                  <!-- 白話文秒懂專區 -->
+                  <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-indigo-300 dark:border-indigo-700/80 space-y-2.5 shadow-xs">
+                    <div class="font-black text-indigo-900 dark:text-indigo-300 flex items-center gap-2 text-xs sm:text-sm">
+                      <span class="text-base">💡</span>
+                      <span>白話秒懂拆解：你情我願的小事，法律何必瞎操心？</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                      玩黑白猜猜輸被打巴掌、或是去刺青店刺青穿耳洞，外觀上都完全符合傷害罪！但因為被害人自己具有完全處分權，事前自願同意承諾，法益持有人自己放棄了保護，當然不具違法性！但請注意：承諾只適用於可自由處分的個人小法益（輕微皮肉痛、個人財產）；如果是「生命」或「重傷」，就算對方跪求你殺他，也絕對不能免除刑責（刑法 §275 加工自殺罪、§282 得承諾重傷罪一樣必罰）！
+                    </p>
+                    <div class="pt-1 text-[11px] font-bold text-indigo-700 dark:text-indigo-300">
+                      常理口訣：你情我願輕微處分免罰；傷天害理奪人性命必究！
+                    </div>
+                  </div>
+
                   <!-- 2026 現行法規查核與資料來源 -->
-                  <div class="pt-3 border-t border-slate-100 dark:border-white/[0.06] space-y-1.5 text-xs">
+                  <div class="pt-3 border-t-2 border-indigo-200/80 dark:border-indigo-900/60 space-y-1.5 text-xs">
                     <div class="flex items-center justify-between flex-wrap gap-2">
                       <div class="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
-                        <span class="text-indigo-500">📌</span>
+                        <span class="text-indigo-600 dark:text-indigo-400">📌</span>
                         <span>2026 現行法規狀態：</span>
-                        <span class="px-2 py-0.5 rounded-full text-[11px] bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold">維持超法定地位・處分法益界限</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-[11px] bg-indigo-100 dark:bg-indigo-950/80 text-indigo-800 dark:text-indigo-300 font-bold border border-indigo-300 dark:border-indigo-700">維持超法定地位・處分法益界限</span>
                       </div>
                       <div class="flex items-center gap-2 font-mono text-[11px]">
-                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=275" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">§ 275 加工自殺 ↗</a>
+                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=275" target="_blank" rel="noopener noreferrer" class="text-indigo-700 dark:text-indigo-300 hover:underline font-bold">§ 275 加工自殺 ↗</a>
                         <span class="text-slate-300 dark:text-slate-700">|</span>
-                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=282" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">§ 282 得承諾傷害 ↗</a>
+                        <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=282" target="_blank" rel="noopener noreferrer" class="text-indigo-700 dark:text-indigo-300 hover:underline font-bold">§ 282 得承諾傷害 ↗</a>
                       </div>
                     </div>
-                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-[11.5px] bg-slate-50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800/60">
-                      <strong class="text-slate-700 dark:text-slate-300">法理要旨與界限：</strong>刑法通說長期肯認「得被害人承諾」為超法定阻卻違法事由，惟僅限於個人具完全處分權之法益（如財產權、輕微身體法益如黑白猜遊戲掌摑或紋身）；對於不可任意處分之重大法益（生命、重大身體健康），法律特別以刑法 § 275、§ 282 處罰，不許以承諾免責。
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11.5px] bg-indigo-50/50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-indigo-200/60 dark:border-indigo-800/60">
+                      <strong class="text-slate-800 dark:text-slate-200">法理要旨與界限：</strong>刑法通說長期肯認「得被害人承諾」為超法定阻卻違法事由，惟僅限於個人具完全處分權之法益（如財產權、輕微身體法益如黑白猜遊戲掌摑或紋身）；對於不可任意處分之重大法益（生命、重大身體健康），法律特別以刑法 § 275、§ 282 處罰，不許以承諾免責。
                     </p>
                   </div>
                 </div>
 
-                <!-- 案例 1-13 卡片 (教材第 1-7 頁) -->
-                <div id="case-card-1-13" data-case="1-13" class="p-5 rounded-2xl border-2 border-indigo-500/30 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-400 font-mono">
+                <!-- 案例 1-13 卡片：義務衝突 (亮天藍/蔚藍主題) -->
+                <div id="case-card-1-13" data-case="1-13" class="p-5 sm:p-6 rounded-2xl border-2 border-sky-400 dark:border-sky-500 bg-gradient-to-br from-sky-50/80 via-white to-blue-50/40 dark:from-[#0c1a2e] dark:via-[#0e1726] dark:to-[#070f1e] shadow-lg hover:shadow-xl transition-all space-y-4">
+                  <div class="flex items-center justify-between flex-wrap gap-2">
+                    <span class="text-xs font-black px-3 py-1.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-sm shadow-sky-500/30 font-mono tracking-wide">
                       ⚖️ 案例 1-13
                     </span>
-                    <span class="text-xs px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold">
+                    <span class="text-xs px-3 py-1 rounded-xl bg-sky-600 text-white font-black shadow-sm shadow-sky-600/30">
                       超法定阻卻違法：義務衝突
                     </span>
                   </div>
-                  <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800/80 text-xs sm:text-sm">
-                    <strong class="text-slate-900 dark:text-white">被告：</strong>「當時我的兩個小孩都深陷火海，但我能力有限，最多只能救起一個。」
+                  
+                  <!-- 被告心聲對話框 -->
+                  <div class="p-4 rounded-xl bg-sky-50/90 dark:bg-sky-950/60 border-2 border-sky-300 dark:border-sky-800/80 text-xs sm:text-sm text-slate-800 dark:text-slate-100 flex items-start gap-3 shadow-inner">
+                    <span class="text-base shrink-0">🗣️</span>
+                    <div>
+                      <strong class="text-sky-900 dark:text-sky-300 font-black">被告心聲抗辯：</strong>
+                      <span class="italic">「當時我的兩個小孩都深陷火海，但我能力有限，最多只能救起一個。」</span>
+                    </div>
                   </div>
-                  <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1">
-                    <div class="font-bold text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
-                      <span>◀ 問題導引 ▶</span>
+
+                  <div class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2">
+                    <div class="font-black text-sky-950 dark:text-sky-200 flex items-center gap-1.5">
+                      <span>◀ 問題導引與體系定位 ▶</span>
                     </div>
                     <p class="leading-relaxed">
-                      主張「義務衝突」的超法定抗辯。此時行為人已經盡其所能地履行義務，縱使的確造成法益侵害（生命），<span class="text-indigo-600 dark:text-indigo-400 font-bold">但卻因為有正當理由而並非壞事</span>。
+                      主張「義務衝突」的超法定抗辯。此時行為人已經盡其所能地履行義務，縱使客觀上的確造成法益侵害（另一子生命），<strong class="text-sky-800 dark:text-sky-300 font-bold underline decoration-sky-400 decoration-2 underline-offset-4">但卻因為有正當理由而並非壞事</strong>。
                     </p>
                   </div>
+
+                  <!-- 白話文秒懂專區 -->
+                  <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-sky-300 dark:border-sky-700/80 space-y-2.5 shadow-xs">
+                    <div class="font-black text-sky-900 dark:text-sky-300 flex items-center gap-2 text-xs sm:text-sm">
+                      <span class="text-base">💡</span>
+                      <span>白話秒懂拆解：兩難之中竭盡全力，法律絕不強人所難！</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                      父親對兩個小孩都有法定的保護拯救義務（保證人地位）。火災時兩個孩子都在呼救，但父親只有一雙手，只能抱出一個，另一個不幸葬身火窟。外表看似「不作為殺人」，但人類不是三頭六臂的超人，在物理極限下已經窮盡全力救了一個，法律不能強人所難怪你沒長出超能力，此時阻卻違法！
+                    </p>
+                    <div class="pt-1 text-[11px] font-bold text-sky-700 dark:text-sky-300">
+                      常理口訣：手心手背皆是肉，竭盡全力救其一；法律絕不強人所難！
+                    </div>
+                  </div>
+
                   <!-- 2026 現行法規查核與資料來源 -->
-                  <div class="pt-3 border-t border-slate-100 dark:border-white/[0.06] space-y-1.5 text-xs">
+                  <div class="pt-3 border-t-2 border-sky-200/80 dark:border-sky-900/60 space-y-1.5 text-xs">
                     <div class="flex items-center justify-between flex-wrap gap-2">
                       <div class="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
-                        <span class="text-indigo-500">📌</span>
+                        <span class="text-sky-600 dark:text-sky-400">📌</span>
                         <span>2026 現行法規狀態：</span>
-                        <span class="px-2 py-0.5 rounded-full text-[11px] bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold">維持超法定地位・客觀履行可能性窮盡</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-[11px] bg-sky-100 dark:bg-sky-950/80 text-sky-800 dark:text-sky-300 font-bold border border-sky-300 dark:border-sky-700">維持超法定地位・客觀履行可能性窮盡</span>
                       </div>
                       <div class="flex items-center gap-2 font-mono text-[11px]">
-                        <span class="text-slate-500 dark:text-slate-400">通說與最高法院實務法理</span>
+                        <span class="text-slate-600 dark:text-slate-400 font-bold">通說與最高法院實務法理</span>
                       </div>
                     </div>
-                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-[11.5px] bg-slate-50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800/60">
-                      <strong class="text-slate-700 dark:text-slate-300">法理要旨：</strong>行為人同時具備數個法律上同等或不等之積極作為義務，因客觀能力所限無法同時履行全部，在窮盡所能履行其一義務時，其對未履行之他義務不具客觀期待可能性，整體法規範不強人所難，阻卻違法。
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11.5px] bg-sky-50/50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-sky-200/60 dark:border-sky-800/60">
+                      <strong class="text-slate-800 dark:text-slate-200">法理要旨：</strong>行為人同時具備數個法律上同等之積極作為義務，因客觀能力所限無法同時履行全部，在窮盡所能履行其一義務時，其對未履行之他義務不具客觀期待可能性，整體法規範不強人所難，阻卻違法。
                     </p>
                   </div>
                 </div>
 
-                <!-- 案例 1-14 卡片 【櫻桃案】 (教材第 1-7 頁) -->
-                <div id="case-card-1-14" data-case="1-14" class="p-5 rounded-2xl border-2 border-rose-500/40 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-400 font-mono">
+                <!-- 案例 1-14 卡片 【櫻桃案】 (櫻桃紅/深緋主題) -->
+                <div id="case-card-1-14" data-case="1-14" class="p-5 sm:p-6 rounded-2xl border-2 border-rose-500 dark:border-rose-400 bg-gradient-to-br from-rose-50/80 via-white to-red-50/40 dark:from-[#290c16] dark:via-[#1a0e14] dark:to-[#13070b] shadow-lg hover:shadow-xl transition-all space-y-4">
+                  <div class="flex items-center justify-between flex-wrap gap-2">
+                    <span class="text-xs font-black px-3 py-1.5 rounded-xl bg-gradient-to-r from-rose-600 to-red-600 text-white shadow-sm shadow-rose-600/30 font-mono tracking-wide">
                       🍒 案例 1-14 ───【櫻桃案】
                     </span>
-                    <span class="text-xs px-2 py-0.5 rounded bg-rose-500/10 text-rose-600 dark:text-rose-400 font-bold">
-                      利益衡量結果檢驗：無法阻卻違法
+                    <span class="text-xs px-3 py-1 rounded-xl bg-rose-600 text-white font-black shadow-sm shadow-rose-600/30">
+                      利益衡量結果檢驗：肯定違法！（無法免責）
                     </span>
                   </div>
-                  <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800/80 text-xs sm:text-sm">
-                    <p class="text-slate-800 dark:text-slate-200 leading-relaxed">
-                      患有小兒麻痺而必須以輪椅代步的櫻桃園主人，在面臨小學生偷偷進入其所屬櫻桃園偷採櫻桃的不法侵害時，只能選擇用開槍的方法加以制止，雖然保全了一顆櫻桃不被偷走，卻造成了小學生的死亡。
-                    </p>
+                  
+                  <!-- 案例事實對話框 -->
+                  <div class="p-4 rounded-xl bg-rose-50/90 dark:bg-rose-950/60 border-2 border-rose-300 dark:border-rose-800/80 text-xs sm:text-sm text-slate-800 dark:text-slate-100 flex items-start gap-3 shadow-inner">
+                    <span class="text-base shrink-0">📖</span>
+                    <div>
+                      <strong class="text-rose-900 dark:text-rose-300 font-black">經典事實重現：</strong>
+                      <span class="italic">患有小兒麻痺而必須以輪椅代步的櫻桃園主人，在面臨小學生偷偷進入其所屬櫻桃園偷採櫻桃的不法侵害時，只能選擇用開槍的方法加以制止，雖然保全了一顆櫻桃不被偷走，卻造成了小學生的死亡。</span>
+                    </div>
                   </div>
-                  <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1">
-                    <div class="font-bold text-rose-600 dark:text-rose-400 flex items-center gap-1.5">
-                      <span>◀ 問題導引 ▶</span>
+
+                  <div class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2">
+                    <div class="font-black text-rose-950 dark:text-rose-200 flex items-center gap-1.5">
+                      <span>◀ 問題導引與體系定位 ▶</span>
                     </div>
                     <p class="leading-relaxed">
-                      在本案例中，由於<strong class="text-rose-600 dark:text-rose-400">犧牲利益（生命）遠大於保全利益（一顆櫻桃）</strong>，由結果的層面觀察相差過於懸殊，違反整體法秩序而無正當理由，<span class="text-rose-600 dark:text-rose-400 font-bold underline decoration-rose-500 decoration-2">無法阻卻違法</span>。
+                      在本案例中，由於<strong class="text-rose-800 dark:text-rose-300 font-black">犧牲利益（生命）遠大於保全利益（一顆櫻桃）</strong>，由結果的層面觀察相差過於懸殊，違反整體法秩序而無正當理由，<strong class="text-rose-700 dark:text-rose-300 underline decoration-rose-500 decoration-2 underline-offset-4">肯定具備違法性，無法阻卻違法！</strong>
                     </p>
                   </div>
+
+                  <!-- 白話文秒懂專區 -->
+                  <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-rose-300 dark:border-rose-700/80 space-y-2.5 shadow-xs">
+                    <div class="font-black text-rose-900 dark:text-rose-300 flex items-center gap-2 text-xs sm:text-sm">
+                      <span class="text-base">💡</span>
+                      <span>白話秒懂拆解：就算防衛手段唯一，也不能拿大砲打小鳥！</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                      輪椅主人確實面臨偷竊的不法侵害，而且因為自己坐輪椅跑不快，「開槍」是客觀上唯一能攔住小學生的方法。但法律不容許荒謬的結論！一顆櫻桃價值 5 塊錢，小學生卻是一條活生生的人命。天平落差高達數億倍，這種防衛權行使屬於「權利濫用」，絕對成立殺人罪！
+                    </p>
+                    <div class="pt-1 text-[11px] font-bold text-rose-700 dark:text-rose-300">
+                      常理口訣：一顆櫻桃換條人命？極端失衡大錯特錯；防衛權利不許濫用！
+                    </div>
+                  </div>
+
                   <!-- 2026 現行法規查核與資料來源 -->
-                  <div class="pt-3 border-t border-slate-100 dark:border-white/[0.06] space-y-1.5 text-xs">
+                  <div class="pt-3 border-t-2 border-rose-200/80 dark:border-rose-900/60 space-y-1.5 text-xs">
                     <div class="flex items-center justify-between flex-wrap gap-2">
                       <div class="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
-                        <span class="text-rose-500">📌</span>
+                        <span class="text-rose-600 dark:text-rose-400">📌</span>
                         <span>2026 現行法規狀態：</span>
-                        <span class="px-2 py-0.5 rounded-full text-[11px] bg-rose-500/10 text-rose-600 dark:text-rose-400 font-semibold">法理審查：正當防衛之權利濫用禁止</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-[11px] bg-rose-100 dark:bg-rose-950/80 text-rose-800 dark:text-rose-300 font-bold border border-rose-300 dark:border-rose-700">法理審查：正當防衛之權利濫用禁止</span>
                       </div>
                       <div class="flex items-center gap-2 font-mono text-[11px]">
-                        <span class="text-slate-500 dark:text-slate-400">德日刑法防衛權極限法理</span>
+                        <span class="text-slate-600 dark:text-slate-400 font-bold">德日刑法防衛權極限法理</span>
                       </div>
                     </div>
-                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-[11.5px] bg-slate-50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800/60">
-                      <strong class="text-slate-700 dark:text-slate-300">法理要旨：</strong>正當防衛雖本於「正者毋須向不正者低頭」，但仍受「誠信原則與禁止權利濫用」之極端檢驗。當所保護之財產法益微不足道（一顆櫻桃），而防衛手段所犧牲者為至高無上之人的生命，結果價值落差極端失衡，防衛權之行使即屬權利濫用，行為仍具違法性，肯定成立殺人罪或傷害致死罪。
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11.5px] bg-rose-50/50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-rose-200/60 dark:border-rose-800/60">
+                      <strong class="text-slate-800 dark:text-slate-200">法理要旨：</strong>正當防衛雖本於「正者毋須向不正者低頭」，但仍受「誠信原則與禁止權利濫用」之極端檢驗。當所保護之財產法益微不足道（一顆櫻桃），而防衛手段所犧牲者為至高無上之人的生命，結果價值落差極端失衡，防衛權之行使即屬權利濫用，行為仍具違法性，肯定成立殺人罪或傷害致死罪。
                     </p>
                   </div>
                 </div>
 
-                <!-- 案例 1-15 卡片 【輸血案】 (教材第 1-7 ～ 1-8 頁) -->
-                <div id="case-card-1-15" data-case="1-15" class="p-5 rounded-2xl border-2 border-amber-500/40 bg-white dark:bg-[#101623] shadow-md space-y-3 transition-all">
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 font-mono">
+                <!-- 案例 1-15 卡片 【輸血案】 (血紅/熾橙主題) -->
+                <div id="case-card-1-15" data-case="1-15" class="p-5 sm:p-6 rounded-2xl border-2 border-orange-500 dark:border-orange-400 bg-gradient-to-br from-orange-50/80 via-white to-amber-50/40 dark:from-[#261708] dark:via-[#1a1410] dark:to-[#120a04] shadow-lg hover:shadow-xl transition-all space-y-4">
+                  <div class="flex items-center justify-between flex-wrap gap-2">
+                    <span class="text-xs font-black px-3 py-1.5 rounded-xl bg-gradient-to-r from-orange-600 to-amber-600 text-white shadow-sm shadow-orange-600/30 font-mono tracking-wide">
                       🩸 案例 1-15 ───【輸血案】
                     </span>
-                    <span class="text-xs px-2 py-0.5 rounded bg-rose-500/10 text-rose-600 dark:text-rose-400 font-bold">
-                      利益衡量行為手段檢驗：違法性肯定！
+                    <span class="text-xs px-3 py-1 rounded-xl bg-orange-600 text-white font-black shadow-sm shadow-orange-600/30">
+                      利益衡量手段檢驗：違法性肯定！（侵犯人性尊嚴）
                     </span>
                   </div>
-                  <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800/80 text-xs sm:text-sm">
-                    <p class="text-slate-800 dark:text-slate-200 leading-relaxed">
-                      甲因為車禍重傷而送至醫院急救，生命垂危而有大量輸血的需要，但醫院正好缺乏稀有的同型血液，醫師乙知悉醫院義工丙與甲的血型相同，要求助於丙，但遭丙拒絕，乙為救助甲的生命，便使用強制力抽取丙的血液用於甲的醫療，最終救活了甲。
-                    </p>
+                  
+                  <!-- 案例事實對話框 -->
+                  <div class="p-4 rounded-xl bg-orange-50/90 dark:bg-orange-950/60 border-2 border-orange-300 dark:border-orange-800/80 text-xs sm:text-sm text-slate-800 dark:text-slate-100 flex items-start gap-3 shadow-inner">
+                    <span class="text-base shrink-0">📖</span>
+                    <div>
+                      <strong class="text-orange-900 dark:text-orange-300 font-black">經典事實重現：</strong>
+                      <span class="italic">甲因車禍重傷生命垂危急需輸血，醫院缺乏稀有血液，醫師乙知悉義工丙同型，求助遭丙拒絕。乙為救甲命，便使用強制力抽取丙的血液用於甲的醫療，最終救活了甲。</span>
+                    </div>
                   </div>
-                  <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-1">
-                    <div class="font-bold text-rose-600 dark:text-rose-400 flex items-center gap-1.5">
-                      <span>◀ 問題導引 ▶</span>
+
+                  <div class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2">
+                    <div class="font-black text-orange-950 dark:text-orange-200 flex items-center gap-1.5">
+                      <span>◀ 問題導引與體系定位 ▶</span>
                       <span class="text-[11px] font-normal text-slate-400 font-mono">(教材第 1-8 頁原文)</span>
                     </div>
-                    <p class="leading-relaxed bg-rose-50/50 dark:bg-rose-950/30 p-3 rounded-xl border border-rose-500/20 text-rose-900 dark:text-rose-200">
-                      縱使保全利益（生命）大於犧牲利益（自由），但乙所使用之手段嚴重違反人性尊嚴（將丙當成輸血機），自行為層面觀察並非達成目的的合理手段。違反整體法秩序而無正當理由，無法阻卻違法。
+                    <p class="leading-relaxed bg-orange-50/50 dark:bg-orange-950/30 p-3 rounded-xl border border-orange-500/20 text-orange-950 dark:text-orange-200 font-medium">
+                      縱使保全利益（生命）大於犧牲利益（身體自由），但乙所使用之手段嚴重違反人性尊嚴（將丙當成抽血工具），自行為手段層面觀察絕非達成目的之合理手段。違反整體法秩序而無正當理由，<strong class="underline decoration-orange-500 font-bold">無法阻卻違法，成立犯罪！</strong>
                     </p>
                   </div>
+
+                  <!-- 白話文秒懂專區 -->
+                  <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-orange-300 dark:border-orange-700/80 space-y-2.5 shadow-xs">
+                    <div class="font-black text-orange-900 dark:text-orange-300 flex items-center gap-2 text-xs sm:text-sm">
+                      <span class="text-base">💡</span>
+                      <span>白話秒懂拆解：救命目的再神聖，也不能把活人當抽血機器！</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                      單看數學題：抽一點血不會死人（小法益），卻能救活一個重傷患（大法益生命），看似符合利益衡量。但是刑法嚴守憲法底線：「人是目的，絕非工具」！義工丙已經明確拒絕，若准許醫師硬抽，那全天下健康人不就隨時可能在路上被強行抓去抽血、甚至強割眼角膜？手段嚴重踐踏人性尊嚴與身體自主權，不擇手段絕不可免責！
+                    </p>
+                    <div class="pt-1 text-[11px] font-bold text-orange-700 dark:text-orange-300">
+                      常理口訣：救人性命固然崇高，強行抽血踐踏尊嚴；不擇手段依法必懲！
+                    </div>
+                  </div>
+
                   <!-- 2026 現行法規查核與資料來源 -->
-                  <div class="pt-3 border-t border-slate-100 dark:border-white/[0.06] space-y-1.5 text-xs">
+                  <div class="pt-3 border-t-2 border-orange-200/80 dark:border-orange-900/60 space-y-1.5 text-xs">
                     <div class="flex items-center justify-between flex-wrap gap-2">
                       <div class="flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
-                        <span class="text-rose-500">📌</span>
+                        <span class="text-orange-600 dark:text-orange-400">📌</span>
                         <span>2026 現行法規狀態：</span>
-                        <span class="px-2 py-0.5 rounded-full text-[11px] bg-rose-500/10 text-rose-600 dark:text-rose-400 font-semibold">法理審查：手段正當性與人性尊嚴核心</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-[11px] bg-orange-100 dark:bg-orange-950/80 text-orange-800 dark:text-orange-300 font-bold border border-orange-300 dark:border-orange-700">法理審查：手段正當性與人性尊嚴核心</span>
                       </div>
                       <div class="flex items-center gap-2 font-mono text-[11px]">
-                        <span class="text-slate-500 dark:text-slate-400">憲法第 22 條身體自主決定權</span>
+                        <span class="text-slate-600 dark:text-slate-400 font-bold">憲法第 22 條身體自主決定權</span>
                       </div>
                     </div>
-                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-[11.5px] bg-slate-50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800/60">
-                      <strong class="text-slate-700 dark:text-slate-300">法理引申核實：</strong>此即前述「若為達目的而不擇手段，亦肯定違法性」之典範案例。醫師縱為拯救甲之重大生命法益，但強行抽取已明確拒絕之義工丙血液，將人工具化作為輸血機器，嚴重侵害憲法第 22 條所保障之身體自主決定權與人性尊嚴核心，手段欠缺合理性與正當性，無法阻卻違法。
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11.5px] bg-orange-50/50 dark:bg-slate-900/40 p-2.5 rounded-xl border border-orange-200/60 dark:border-orange-800/60">
+                      <strong class="text-slate-800 dark:text-slate-200">法理引申核實：</strong>此即前述「若為達目的而不擇手段，亦肯定違法性」之典範案例。醫師縱為拯救甲之重大生命法益，但強行抽取已明確拒絕之義工丙血液，將人工具化作為輸血機器，嚴重侵害憲法第 22 條所保障之身體自主決定權與人性尊嚴核心，手段欠缺合理性與正當性，無法阻卻違法。
                     </p>
                   </div>
                 </div>
@@ -1910,96 +2422,161 @@ window.APP_VIEWS['viewChapter1'] = window.APP_VIEWS['chapter1'] = `
                 </h3>
               </div>
 
-              <!-- 原文圖解還原面板 -->
-              <div class="p-6 sm:p-8 rounded-3xl border-2 border-blue-500/30 bg-white dark:bg-[#101623] shadow-md space-y-6">
-                <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-white/[0.06]">
+              <!-- 原文圖解還原面板 (高飽和色彩顯眼版) -->
+              <div class="p-6 sm:p-8 rounded-3xl border-2 border-emerald-500 dark:border-emerald-400 bg-gradient-to-b from-emerald-50/50 via-white to-teal-50/40 dark:from-[#0b1b1c] dark:via-[#101623] dark:to-[#081318] shadow-xl space-y-6">
+                <div class="flex items-center justify-between pb-3 border-b-2 border-emerald-200/80 dark:border-emerald-900/60">
                   <div class="flex items-center gap-2">
-                    <span class="text-blue-600 dark:text-blue-400 font-bold text-sm">阻卻違法事由之體系展開圖</span>
-                    <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/10 text-blue-500 font-bold">全體系樹狀</span>
+                    <span class="text-xl">🌳</span>
+                    <span class="text-emerald-700 dark:text-emerald-300 font-black text-sm sm:text-base tracking-wide">阻卻違法事由之體系展開圖</span>
+                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-600 text-white font-black shadow-xs">全體系樹狀</span>
                   </div>
-                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-400">教材第 1-8 頁</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 font-bold border border-emerald-300 dark:border-emerald-700 shadow-xs">教材第 1-8 頁</span>
                 </div>
 
                 <div class="max-w-2xl mx-auto space-y-6 py-2">
-                  <!-- 頂層核心標籤 -->
+                  <!-- 頂層核心標籤 (立體發光膠囊) -->
                   <div class="flex flex-col items-center">
-                    <div class="px-6 py-2.5 rounded-2xl bg-blue-600 text-white font-extrabold text-sm shadow-md text-center">
+                    <div class="px-7 py-3 rounded-2xl bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 text-white font-black text-sm sm:text-base shadow-lg shadow-emerald-500/30 ring-4 ring-emerald-400/25 tracking-wide text-center">
                       阻卻違法事由
                     </div>
-                    <div class="w-0.5 h-6 bg-blue-400/50"></div>
-                    <div class="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-300 dark:border-blue-800 text-blue-600 dark:text-blue-400 text-xs font-bold">
-                      核心：合乎整體法秩序
+                    <div class="w-1 h-6 bg-gradient-to-b from-emerald-500 to-teal-500 rounded-full"></div>
+                    <div class="px-4 py-1.5 rounded-full bg-gradient-to-r from-emerald-100 to-teal-100 dark:from-emerald-950/80 dark:to-teal-950/80 border-2 border-emerald-400 dark:border-emerald-700 text-emerald-900 dark:text-emerald-200 text-xs sm:text-sm font-black shadow-xs">
+                      核心精神：合乎整體法秩序
                     </div>
-                    <div class="w-0.5 h-6 bg-blue-400/50"></div>
+                    <div class="w-1 h-6 bg-gradient-to-b from-teal-500 to-blue-500 rounded-full"></div>
                   </div>
 
-                  <!-- 兩大分流：法定的 vs 超法定的 -->
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <!-- 兩大分流：法定的 vs 超法定的 (雙軌高對比並立) -->
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     
-                    <!-- 分流 1：法定的阻卻違法事由 -->
-                    <div class="p-5 rounded-2xl border-2 border-emerald-500/30 bg-emerald-50/20 dark:bg-emerald-950/20 space-y-3">
-                      <div class="flex items-center justify-between pb-2 border-b border-emerald-500/20">
-                        <span class="text-xs font-extrabold text-emerald-700 dark:text-emerald-300 flex items-center gap-1.5">
+                    <!-- 分流 1：法定的阻卻違法事由 (翡翠綠主題) -->
+                    <div class="p-5 sm:p-6 rounded-2xl border-2 border-emerald-500 dark:border-emerald-400 bg-gradient-to-br from-emerald-50 via-white to-teal-50/50 dark:from-emerald-950/40 dark:via-[#101920] dark:to-emerald-950/20 shadow-md space-y-3.5">
+                      <div class="flex items-center justify-between pb-2.5 border-b-2 border-emerald-200/80 dark:border-emerald-900/60">
+                        <span class="text-xs sm:text-sm font-black text-emerald-950 dark:text-emerald-200 flex items-center gap-1.5">
                           <span>⚖️</span>
                           <span>法定的阻卻違法事由</span>
                         </span>
-                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 font-bold">5 大成文事由</span>
+                        <span class="text-xs px-2.5 py-1 rounded-xl bg-emerald-600 text-white font-black shadow-xs">5 大成文事由</span>
                       </div>
-                      <ul class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
-                        <li class="p-2 rounded-xl bg-white dark:bg-[#161f30] border border-emerald-500/20 flex items-center justify-between">
-                          <span class="font-medium">• 依法令之行為</span>
-                          <span class="font-mono text-emerald-600 dark:text-emerald-400 font-bold">§ 21 Ⅰ</span>
+                      <ul class="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-200">
+                        <li class="p-2.5 rounded-xl bg-white/95 dark:bg-[#161f30] border-2 border-emerald-300 dark:border-emerald-700 flex items-center justify-between shadow-2xs">
+                          <span class="font-bold">• 依法令之行為</span>
+                          <span class="font-mono text-emerald-700 dark:text-emerald-400 font-black">§ 21 Ⅰ</span>
                         </li>
-                        <li class="p-2 rounded-xl bg-white dark:bg-[#161f30] border border-emerald-500/20 flex items-center justify-between">
-                          <span class="font-medium">• 依命令之行為</span>
-                          <span class="font-mono text-emerald-600 dark:text-emerald-400 font-bold">§ 21 Ⅱ</span>
+                        <li class="p-2.5 rounded-xl bg-white/95 dark:bg-[#161f30] border-2 border-emerald-300 dark:border-emerald-700 flex items-center justify-between shadow-2xs">
+                          <span class="font-bold">• 依命令之行為</span>
+                          <span class="font-mono text-emerald-700 dark:text-emerald-400 font-black">§ 21 Ⅱ</span>
                         </li>
-                        <li class="p-2 rounded-xl bg-white dark:bg-[#161f30] border border-emerald-500/20 flex items-center justify-between">
-                          <span class="font-medium">• 業務上正當行為</span>
-                          <span class="font-mono text-emerald-600 dark:text-emerald-400 font-bold">§ 22</span>
+                        <li class="p-2.5 rounded-xl bg-white/95 dark:bg-[#161f30] border-2 border-emerald-300 dark:border-emerald-700 flex items-center justify-between shadow-2xs">
+                          <span class="font-bold">• 業務上正當行為</span>
+                          <span class="font-mono text-emerald-700 dark:text-emerald-400 font-black">§ 22</span>
                         </li>
-                        <li class="p-2 rounded-xl bg-white dark:bg-[#161f30] border border-emerald-500/20 flex items-center justify-between">
-                          <span class="font-medium">• 正當防衛</span>
-                          <span class="font-mono text-emerald-600 dark:text-emerald-400 font-bold">§ 23</span>
+                        <li class="p-2.5 rounded-xl bg-white/95 dark:bg-[#161f30] border-2 border-emerald-300 dark:border-emerald-700 flex items-center justify-between shadow-2xs">
+                          <span class="font-bold">• 正當防衛</span>
+                          <span class="font-mono text-emerald-700 dark:text-emerald-400 font-black">§ 23</span>
                         </li>
-                        <li class="p-2 rounded-xl bg-white dark:bg-[#161f30] border border-emerald-500/20 flex items-center justify-between">
-                          <span class="font-medium">• 緊急避難</span>
-                          <span class="font-mono text-emerald-600 dark:text-emerald-400 font-bold">§ 24</span>
+                        <li class="p-2.5 rounded-xl bg-white/95 dark:bg-[#161f30] border-2 border-emerald-300 dark:border-emerald-700 flex items-center justify-between shadow-2xs">
+                          <span class="font-bold">• 緊急避難</span>
+                          <span class="font-mono text-emerald-700 dark:text-emerald-400 font-black">§ 24</span>
                         </li>
                       </ul>
                     </div>
 
-                    <!-- 分流 2：超法定的阻卻違法事由 -->
-                    <div class="p-5 rounded-2xl border-2 border-amber-500/30 bg-amber-50/20 dark:bg-amber-950/20 space-y-3">
-                      <div class="flex items-center justify-between pb-2 border-b border-amber-500/20">
-                        <span class="text-xs font-extrabold text-amber-700 dark:text-amber-300 flex items-center gap-1.5">
+                    <!-- 分流 2：超法定的阻卻違法事由 (琥珀橙主題，規避 app.js 按鈕誤植) -->
+                    <div class="p-5 sm:p-6 rounded-2xl border-2 border-amber-500 dark:border-amber-400 bg-gradient-to-br from-amber-50 via-white to-orange-50/50 dark:from-amber-950/40 dark:via-[#1c140c] dark:to-amber-950/20 shadow-md space-y-3.5">
+                      <div class="flex items-center justify-between pb-2.5 border-b-2 border-amber-200/80 dark:border-amber-900/60">
+                        <span class="text-xs sm:text-sm font-black text-amber-950 dark:text-amber-200 flex items-center gap-1.5">
                           <span>💡</span>
                           <span>超法定的阻卻違法事由</span>
                         </span>
-                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-600 font-bold">實質利益衡量</span>
+                        <span class="text-xs px-2.5 py-1 rounded-xl bg-orange-600 text-white font-black shadow-xs">實質利益衡量</span>
                       </div>
-                      <ul class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
-                        <li class="p-3 rounded-xl bg-white dark:bg-[#161f30] border border-amber-500/20 space-y-1">
-                          <div class="font-semibold text-slate-900 dark:text-white flex items-center justify-between">
+                      <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-200">
+                        <li class="p-3 rounded-xl bg-white/95 dark:bg-[#161f30] border-2 border-amber-300 dark:border-amber-700 space-y-1 shadow-2xs">
+                          <div class="font-black text-slate-900 dark:text-white flex items-center justify-between">
                             <span>• 得被害人之承諾</span>
-                            <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 font-mono font-bold">案例 1-12</span>
+                            <span class="text-[11px] px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-800 dark:text-amber-300 font-bold border border-amber-300 dark:border-amber-700">實例：黑白猜/刺青</span>
                           </div>
-                          <p class="text-[11px] text-slate-500">被害人自由意志放棄個人處分權法益</p>
+                          <p class="text-[11.5px] text-slate-500 dark:text-slate-400 leading-relaxed">被害人出於自由意志放棄個人具處分權之法益（限輕微法益，不含生命與重傷）</p>
                         </li>
-                        <li class="p-3 rounded-xl bg-white dark:bg-[#161f30] border border-amber-500/20 space-y-1">
-                          <div class="font-semibold text-slate-900 dark:text-white flex items-center justify-between">
+                        <li class="p-3 rounded-xl bg-white/95 dark:bg-[#161f30] border-2 border-amber-300 dark:border-amber-700 space-y-1 shadow-2xs">
+                          <div class="font-black text-slate-900 dark:text-white flex items-center justify-between">
                             <span>• 義務衝突</span>
-                            <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-600 font-mono font-bold">案例 1-13</span>
+                            <span class="text-[11px] px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-800 dark:text-amber-300 font-bold border border-amber-300 dark:border-amber-700">實例：火海救兩子</span>
                           </div>
-                          <p class="text-[11px] text-slate-500">數個同等作為義務客觀不能同時履行已盡所能</p>
+                          <p class="text-[11.5px] text-slate-500 dark:text-slate-400 leading-relaxed">數個同等救助作為義務客觀不能同時履行，竭盡所能履行其一，法律不強人所難</p>
                         </li>
                       </ul>
-                      <div class="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[11px] text-amber-700 dark:text-amber-300 leading-relaxed">
-                        <strong>審查基準：</strong>須受結果層面（非犧牲大於保全）與行為手段層面（不可不擇手段）之雙重檢驗。
+                      <div class="p-3 rounded-xl bg-orange-100/90 dark:bg-orange-950/70 border-2 border-orange-300 dark:border-orange-800/80 text-xs text-orange-950 dark:text-orange-200 leading-relaxed font-semibold shadow-xs">
+                        <strong>雙重審查基準：</strong>須受結果層面（非犧牲大於保全）與行為手段層面（不可不擇手段）之嚴格檢驗！
                       </div>
                     </div>
 
                   </div>
+                </div>
+
+                <!-- 白話文秒懂專區：阻卻違法全景鳥瞰 -->
+                <div class="p-5 sm:p-6 rounded-2xl border-2 border-amber-400 dark:border-amber-500 bg-gradient-to-br from-amber-50/90 via-orange-50/40 to-yellow-50/60 dark:from-[#241a0d] dark:via-[#1a150e] dark:to-[#17130c] shadow-lg space-y-4">
+                  <div class="flex items-center justify-between border-b-2 border-amber-300/80 dark:border-amber-700/60 pb-3">
+                    <div class="flex items-center gap-2">
+                      <span class="text-xl">💡</span>
+                      <span class="font-black text-sm sm:text-base text-amber-950 dark:text-amber-200">
+                        白話文超展開：阻卻違法全體系一張圖秒懂
+                      </span>
+                    </div>
+                    <span class="text-xs px-2.5 py-1 rounded-full bg-amber-200/80 dark:bg-amber-800 text-amber-900 dark:text-amber-200 font-black">
+                      生活化秒懂拆解
+                    </span>
+                  </div>
+
+                  <!-- 3 大白話解析卡片 -->
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 text-xs sm:text-sm">
+                    
+                    <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-emerald-300 dark:border-emerald-700 space-y-2 shadow-xs">
+                      <div class="font-black text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5 text-sm">
+                        <span class="w-5 h-5 rounded-md bg-emerald-600 text-white flex items-center justify-center font-bold text-xs">1</span>
+                        <span>法定五大事由：成文免死金牌</span>
+                      </div>
+                      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                        刑法 §21 至 §24 條是立法者白紙黑字寫好的 5 大免罪護身符：<strong class="text-emerald-800 dark:text-emerald-300 font-bold">法令、命令、業務、防衛、避難</strong>。只要吻合其中任何一個法定要件，就是有正當理由，實質不法性直接清零！
+                      </p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-amber-300 dark:border-amber-700 space-y-2 shadow-xs">
+                      <div class="font-black text-amber-900 dark:text-amber-300 flex items-center gap-1.5 text-sm">
+                        <span class="w-5 h-5 rounded-md bg-orange-600 text-white flex items-center justify-center font-bold text-xs">2</span>
+                        <span>超法定事由：常理與實質衡量</span>
+                      </div>
+                      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                        法律條文有限，人間悲歡離合無窮！遇上法條沒寫的情境（如黑白猜被打巴掌、火災只能抱出一個小孩），只要符合<strong class="text-amber-800 dark:text-amber-300 font-bold">「利益衡量公道原則」</strong>，法院一樣可以用超法定事由判你無罪！
+                      </p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-teal-300 dark:border-teal-700 space-y-2 shadow-xs">
+                      <div class="font-black text-teal-900 dark:text-teal-300 flex items-center gap-1.5 text-sm">
+                        <span class="w-5 h-5 rounded-md bg-teal-600 text-white flex items-center justify-center font-bold text-xs">3</span>
+                        <span>最高指導原則：合乎整體法秩序</span>
+                      </div>
+                      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                        所有阻卻違法的終極檢驗只有一句話：<strong class="text-teal-800 dark:text-teal-300 font-bold">「以正常社會人的良心與法律眼光來看，這件事做得合情、合理、公道嗎？」</strong>如果答案是肯定的，那就絕不是刑法要處罰的壞事！
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <!-- 核心口訣金色橫條 -->
+                  <div class="p-3.5 rounded-xl bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 text-white flex items-center justify-between gap-3 flex-wrap shadow-md">
+                    <div class="flex items-center gap-2.5">
+                      <span class="text-lg">📢</span>
+                      <span class="font-black text-xs sm:text-sm">
+                        核心精華口訣：成文法定五護身（§21~§24）＋ 超法定利益衡量；合乎整體法秩序即阻卻不法！
+                      </span>
+                    </div>
+                    <span class="text-[11px] font-bold bg-white/20 backdrop-blur-xs px-2.5 py-0.5 rounded-full text-white">
+                      體系終極全景
+                    </span>
+                  </div>
+
                 </div>
 
               </div>
@@ -2088,85 +2665,161 @@ window.APP_VIEWS['viewChapter1'] = window.APP_VIEWS['chapter1'] = `
                 </h3>
               </div>
 
-              <!-- 原文圖解還原面板 -->
-              <div class="p-6 sm:p-8 rounded-3xl border-2 border-blue-500/30 bg-white dark:bg-[#101623] shadow-md space-y-6">
-                <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-white/[0.06]">
+              <!-- 原文圖解還原面板 (高飽和色彩顯眼版) -->
+              <div class="p-6 sm:p-8 rounded-3xl border-2 border-blue-500 dark:border-blue-400 bg-gradient-to-b from-blue-50/50 via-white to-indigo-50/40 dark:from-[#0d1627] dark:via-[#101623] dark:to-[#0c1220] shadow-xl space-y-6">
+                <div class="flex items-center justify-between pb-3 border-b-2 border-blue-200/80 dark:border-blue-900/60">
                   <div class="flex items-center gap-2">
-                    <span class="text-blue-600 dark:text-blue-400 font-bold text-sm">犯罪三階層體系論（雛形）</span>
-                    <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/10 text-blue-500 font-bold">原文架構還原</span>
+                    <span class="text-xl">🎯</span>
+                    <span class="text-blue-700 dark:text-blue-300 font-black text-sm sm:text-base tracking-wide">犯罪三階層體系論（雛形）架構圖</span>
+                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-blue-600 text-white font-black shadow-xs">原文架構還原</span>
                   </div>
-                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-400">教材第 1-9 頁</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 font-bold border border-blue-300 dark:border-blue-700 shadow-xs">教材第 1-9 頁</span>
                 </div>
 
-                <div class="max-w-xl mx-auto flex flex-col md:flex-row items-center gap-6 py-2">
+                <div class="max-w-2xl mx-auto flex flex-col md:flex-row items-center gap-6 py-2">
                   
-                  <!-- 左側起點：犯罪 -->
+                  <!-- 左側起點：犯罪 (立體飽和發光圓環) -->
                   <div class="flex flex-col items-center shrink-0">
-                    <div class="w-20 h-20 rounded-full border-4 border-blue-600 bg-white dark:bg-slate-900 flex items-center justify-center font-black text-base text-blue-600 dark:text-blue-400 shadow-lg">
+                    <div class="w-24 h-24 rounded-full border-4 border-blue-500 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white flex items-center justify-center font-black text-xl shadow-xl shadow-blue-500/30 ring-4 ring-blue-400/25 tracking-wider">
                       犯罪
                     </div>
                   </div>
 
-                  <div class="hidden md:block w-8 h-0.5 bg-slate-300 dark:bg-slate-700 relative">
-                    <div class="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t-2 border-r-2 border-slate-400 rotate-45"></div>
+                  <!-- 連接箭頭 -->
+                  <div class="hidden md:flex items-center w-10 relative">
+                    <div class="h-1.5 w-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
+                    <div class="w-3 h-3 border-t-3 border-r-3 border-indigo-500 rotate-45 -ml-1"></div>
                   </div>
 
-                  <!-- 右側評價結構 -->
+                  <!-- 右側評價結構：兩大階層並立 -->
                   <div class="flex-1 w-full space-y-4">
                     
-                    <!-- 上方：行為具備不法區塊 -->
-                    <div class="p-4 sm:p-5 rounded-2xl border-2 border-blue-500/30 bg-blue-50/20 dark:bg-blue-950/20 space-y-3">
-                      <div class="flex items-center justify-between pb-2 border-b border-blue-500/20">
-                        <span class="font-extrabold text-xs sm:text-sm text-blue-700 dark:text-blue-300">行為具備不法</span>
-                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-500 font-bold">行為評價</span>
+                    <!-- 上方：行為具備不法區塊 (亮天藍主題) -->
+                    <div class="p-5 rounded-2xl border-2 border-sky-400 dark:border-sky-500 bg-gradient-to-br from-sky-50 via-white to-blue-50/60 dark:from-sky-950/40 dark:via-[#101827] dark:to-sky-950/20 shadow-md space-y-3">
+                      <div class="flex items-center justify-between pb-2 border-b-2 border-sky-200/80 dark:border-sky-900/60">
+                        <span class="font-black text-xs sm:text-sm text-sky-950 dark:text-sky-200 flex items-center gap-1.5">
+                          <span>📐</span>
+                          <span>行為具備不法</span>
+                        </span>
+                        <span class="text-xs px-2.5 py-1 rounded-xl bg-sky-600 text-white font-black shadow-xs">行為客觀評價</span>
                       </div>
 
-                      <div class="flex flex-col items-center gap-2">
+                      <div class="flex flex-col items-center gap-2.5">
                         <!-- 法益侵害 TB -->
-                        <div class="w-full text-center py-2 px-3 rounded-xl bg-white dark:bg-[#161f30] border border-blue-500/30 font-bold text-xs text-slate-800 dark:text-slate-200">
+                        <div class="w-full text-center py-2.5 px-3 rounded-xl bg-white/95 dark:bg-[#161f30] border-2 border-sky-300 dark:border-sky-700 font-black text-xs sm:text-sm text-sky-900 dark:text-sky-200 shadow-2xs">
                           法益侵害 (TB)
                         </div>
 
                         <!-- 推定與阻卻事由 -->
-                        <div class="flex items-center justify-center gap-2 w-full">
-                          <div class="w-0.5 h-6 bg-slate-300 dark:bg-slate-700"></div>
-                          <div class="px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-300 text-amber-600 text-[11px] font-bold">
-                            推定
+                        <div class="flex items-center justify-center gap-2.5 w-full py-0.5">
+                          <div class="px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-black shadow-xs">
+                            推定違法
                           </div>
-                          <div class="h-0.5 w-6 bg-slate-300 dark:bg-slate-700"></div>
-                          <div class="text-[11px] px-2 py-1 rounded-lg border border-emerald-500/40 bg-emerald-50/50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 font-medium">
+                          <div class="h-1 w-6 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+                          <div class="text-xs px-3 py-1 rounded-xl border-2 border-emerald-400 dark:border-emerald-600 bg-emerald-600 text-white font-black shadow-xs">
                             ◀ 阻卻違法事由
                           </div>
                         </div>
 
                         <!-- 無正當理由 R -->
-                        <div class="w-full text-center py-2 px-3 rounded-xl bg-white dark:bg-[#161f30] border border-blue-500/30 font-bold text-xs text-slate-800 dark:text-slate-200">
+                        <div class="w-full text-center py-2.5 px-3 rounded-xl bg-white/95 dark:bg-[#161f30] border-2 border-sky-300 dark:border-sky-700 font-black text-xs sm:text-sm text-sky-900 dark:text-sky-200 shadow-2xs">
                           無正當理由 (R)
                         </div>
                       </div>
                     </div>
 
-                    <!-- 下方：罪責推定串聯區塊 -->
-                    <div class="p-4 sm:p-5 rounded-2xl border-2 border-indigo-500/30 bg-indigo-50/20 dark:bg-indigo-950/20 space-y-3">
+                    <!-- 下方：罪責推定串聯區塊 (紫羅蘭主題) -->
+                    <div class="p-5 rounded-2xl border-2 border-purple-400 dark:border-purple-500 bg-gradient-to-br from-purple-50 via-white to-indigo-50/60 dark:from-purple-950/40 dark:via-[#151025] dark:to-purple-950/20 shadow-md space-y-3">
+                      <div class="flex items-center justify-between pb-2 border-b-2 border-purple-200/80 dark:border-purple-900/60">
+                        <span class="font-black text-xs sm:text-sm text-purple-950 dark:text-purple-200 flex items-center gap-1.5">
+                          <span>⚖️</span>
+                          <span>行為人具備罪責</span>
+                        </span>
+                        <span class="text-xs px-2.5 py-1 rounded-xl bg-purple-600 text-white font-black shadow-xs">行為人主觀歸責</span>
+                      </div>
                       
                       <!-- 推定與阻卻 S 事由 -->
-                      <div class="flex items-center justify-center gap-2 w-full py-1">
-                        <div class="px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-300 text-amber-600 text-[11px] font-bold">
-                          推定
+                      <div class="flex items-center justify-center gap-2.5 w-full py-0.5">
+                        <div class="px-3 py-1 rounded-full bg-amber-600 text-white text-xs font-black shadow-xs">
+                          推定有責
                         </div>
-                        <div class="h-0.5 w-6 bg-slate-300 dark:bg-slate-700"></div>
-                        <div class="text-[11px] px-2 py-1 rounded-lg border border-purple-500/40 bg-purple-50/50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 font-medium">
-                          ◀ 阻卻S事由
+                        <div class="h-1 w-6 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+                        <div class="text-xs px-3 py-1 rounded-xl border-2 border-rose-400 dark:border-rose-600 bg-rose-600 text-white font-black shadow-xs">
+                          ◀ 阻卻罪責事由
                         </div>
                       </div>
 
                       <!-- 行為人具有期待可能性 S -->
-                      <div class="w-full text-center py-2 px-3 rounded-xl bg-white dark:bg-[#161f30] border border-indigo-500/30 font-bold text-xs text-slate-800 dark:text-slate-200">
+                      <div class="w-full text-center py-2.5 px-3 rounded-xl bg-white/95 dark:bg-[#161f30] border-2 border-purple-300 dark:border-purple-700 font-black text-xs sm:text-sm text-purple-900 dark:text-purple-200 shadow-2xs">
                         行為人具有期待可能性 (S)
                       </div>
                     </div>
 
                   </div>
+                </div>
+
+                <!-- 白話文秒懂專區：三階論雛形與雙重推定安全閥 -->
+                <div class="p-5 sm:p-6 rounded-2xl border-2 border-amber-400 dark:border-amber-500 bg-gradient-to-br from-amber-50/90 via-orange-50/40 to-yellow-50/60 dark:from-[#241a0d] dark:via-[#1a150e] dark:to-[#17130c] shadow-lg space-y-4">
+                  <div class="flex items-center justify-between border-b-2 border-amber-300/80 dark:border-amber-700/60 pb-3">
+                    <div class="flex items-center gap-2">
+                      <span class="text-xl">💡</span>
+                      <span class="font-black text-sm sm:text-base text-amber-950 dark:text-amber-200">
+                        白話文超展開：一張圖搞懂「三階論雛形」如何誕生
+                      </span>
+                    </div>
+                    <span class="text-xs px-2.5 py-1 rounded-full bg-amber-200/80 dark:bg-amber-800 text-amber-900 dark:text-amber-200 font-black">
+                      生活化秒懂拆解
+                    </span>
+                  </div>
+
+                  <!-- 3 大白話解析卡片 -->
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 text-xs sm:text-sm">
+                    
+                    <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-sky-300 dark:border-sky-700 space-y-2 shadow-xs">
+                      <div class="font-black text-sky-900 dark:text-sky-300 flex items-center gap-1.5 text-sm">
+                        <span class="w-5 h-5 rounded-md bg-sky-600 text-white flex items-center justify-center font-bold text-xs">1</span>
+                        <span>行為不法：先看動作是不是壞事</span>
+                      </div>
+                      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                        只要外在動作踩到刑法紅線（該當 TB），常理就<strong class="text-sky-800 dark:text-sky-300 font-bold">直接推定你毫無正當藉口（推定違法性 R）</strong>。除非你能拿出「正當防衛、緊急避難」推翻推定，否則「壞事」就正式成立！
+                      </p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-purple-300 dark:border-purple-700 space-y-2 shadow-xs">
+                      <div class="font-black text-purple-900 dark:text-purple-300 flex items-center gap-1.5 text-sm">
+                        <span class="w-5 h-5 rounded-md bg-purple-600 text-white flex items-center justify-center font-bold text-xs">2</span>
+                        <span>人有罪責：再看做事者該不該罰</span>
+                      </div>
+                      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                        確定是壞事後，常理接著<strong class="text-purple-800 dark:text-purple-300 font-bold">推定行為人應該要被譴責處罰（推定具期待可能性 S）</strong>。除非證明自己未滿 14 歲、精神喪失或被槍指頭逼迫，否則「壞人」罪責確立！
+                      </p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-white/95 dark:bg-slate-900/85 border-2 border-amber-300 dark:border-amber-700 space-y-2 shadow-xs">
+                      <div class="font-black text-amber-900 dark:text-amber-300 flex items-center gap-1.5 text-sm">
+                        <span class="w-5 h-5 rounded-md bg-orange-600 text-white flex items-center justify-center font-bold text-xs">3</span>
+                        <span>雙重推定：效率與正義兼顧</span>
+                      </div>
+                      <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                        日常社會中九成做壞事的都是正常成年人，法律採取「兩段推定」讓司法不必瞎猜動機，<strong class="text-amber-800 dark:text-amber-300 font-bold">兼顧審判效率</strong>；同時開放反證事由，<strong class="text-amber-800 dark:text-amber-300 font-bold">防範冤枉誤判</strong>！
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <!-- 核心口訣金色橫條 -->
+                  <div class="p-3.5 rounded-xl bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 text-white flex items-center justify-between gap-3 flex-wrap shadow-md">
+                    <div class="flex items-center gap-2.5">
+                      <span class="text-lg">📢</span>
+                      <span class="font-black text-xs sm:text-sm">
+                        核心精華口訣：先審壞事（TB＋R）➔ 常理推定壞人（S）➔ 雙重推定遇反證即刻推翻！
+                      </span>
+                    </div>
+                    <span class="text-[11px] font-bold bg-white/20 backdrop-blur-xs px-2.5 py-0.5 rounded-full text-white">
+                      三階雛形核心思維
+                    </span>
+                  </div>
+
                 </div>
 
               </div>
@@ -2175,86 +2828,218 @@ window.APP_VIEWS['viewChapter1'] = window.APP_VIEWS['chapter1'] = `
             <!-- SECTION 13: 目的犯罪體系與客觀／主觀要件之開展 (教材第 1-9 頁) -->
             <section id="sec-teleological-system" class="scroll-mt-28 space-y-4">
               <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500 shadow-md shadow-amber-500/50"></span>
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
                   十三、目的犯罪體系與客觀／主觀要件之開展
                 </h3>
               </div>
 
-              <div class="box-legal-gold p-6 sm:p-7 rounded-2xl space-y-6 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-200">
-                <div class="flex items-center justify-between border-b border-amber-200/60 dark:border-amber-800/40 pb-3">
-                  <div class="flex items-center gap-2">
-                    <span class="text-base sm:text-lg">🎯</span>
-                    <span class="font-extrabold text-sm sm:text-base text-amber-900 dark:text-amber-200 tracking-wide">目的犯罪體系之開展</span>
+              <!-- 主容器：高飽和琥珀/夕陽金漸層面板 -->
+              <div class="p-6 sm:p-8 rounded-3xl border-2 border-amber-500 dark:border-amber-400 bg-gradient-to-b from-amber-50/70 via-white to-orange-50/40 dark:from-[#21160a] dark:via-[#101623] dark:to-[#171008] shadow-xl space-y-6 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-200">
+                
+                <!-- 標題欄 -->
+                <div class="flex items-center justify-between border-b-2 border-amber-200 dark:border-amber-800/60 pb-3">
+                  <div class="flex items-center gap-2.5">
+                    <span class="text-2xl">🎯</span>
+                    <span class="font-black text-base sm:text-lg text-amber-900 dark:text-amber-200 tracking-wide">目的犯罪體系之開展</span>
                   </div>
-                  <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-amber-100/80 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 font-bold border border-amber-200 dark:border-amber-700/50">
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-amber-500 text-white font-bold shadow-sm shadow-amber-500/30">
                     教材第 1-9 頁
                   </span>
                 </div>
-                <p>
-                  基於三階論，我們再為他添加些內涵：
+
+                <p class="font-medium text-slate-800 dark:text-slate-200">
+                  基於三階論，我們再為他添加些內涵：傳統古典體系將不法與心靈硬生生切開，而現今的目的體系則將「人的意識目的」注入不法評價之中。
                 </p>
 
-                <!-- 學說發展對比卡片 -->
+                <!-- 學說發展對比卡片 (早期古典 vs 現今目的) -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   
-                  <!-- 早期學說 -->
-                  <div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 space-y-2">
-                    <div class="flex items-center justify-between">
-                      <span class="text-xs font-bold px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400">早期學說</span>
-                      <span class="text-xs text-slate-400">古典犯罪體系</span>
+                  <!-- 早期學說：古典犯罪體系 -->
+                  <div class="p-5 rounded-2xl border-2 border-slate-300 dark:border-slate-700 bg-slate-100/80 dark:bg-slate-900/70 shadow-sm space-y-3">
+                    <div class="flex items-center justify-between pb-2 border-b border-slate-200 dark:border-slate-800">
+                      <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-slate-300 dark:bg-slate-700 text-slate-700 dark:text-slate-200">
+                        早期學說
+                      </span>
+                      <span class="text-xs font-black text-slate-500 dark:text-slate-400">古典犯罪體系（Liszt-Beling）</span>
                     </div>
-                    <ul class="text-xs space-y-1 text-slate-600 dark:text-slate-400">
-                      <li>• 不法是壞事的外在判斷 ➔ <strong class="text-slate-800 dark:text-slate-200">純客觀的</strong></li>
-                      <li>• 罪責是壞人的內在判斷 ➔ <strong class="text-slate-800 dark:text-slate-200">純主觀的</strong></li>
+                    <ul class="text-xs sm:text-sm space-y-2 text-slate-700 dark:text-slate-300">
+                      <li class="flex items-start gap-2">
+                        <span class="text-slate-400 font-bold">•</span>
+                        <span>不法是壞事的外在判斷 ➔ <strong class="text-slate-900 dark:text-white font-black underline decoration-slate-400 decoration-2">純客觀的</strong>（只管發生了什麼物理損害）</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-slate-400 font-bold">•</span>
+                        <span>罪責是壞人的內在判斷 ➔ <strong class="text-slate-900 dark:text-white font-black underline decoration-slate-400 decoration-2">純主觀的</strong>（故意與過失全塞在第三階）</span>
+                      </li>
                     </ul>
+                    <div class="p-2.5 rounded-xl bg-slate-200/60 dark:bg-slate-800/70 text-[11px] text-slate-600 dark:text-slate-400">
+                      ⚠️ 缺陷：外在動作完全相同的持槍射擊，抽空主觀目的就無法判斷是殺人還是獵鳥！
+                    </div>
                   </div>
 
-                  <!-- 現今學說 -->
-                  <div class="p-4 rounded-2xl border-2 border-blue-500/30 bg-blue-50/20 dark:bg-blue-950/20 space-y-2">
-                    <div class="flex items-center justify-between">
-                      <span class="text-xs font-bold px-2 py-0.5 rounded bg-blue-500/10 text-blue-600 font-bold">現今學說</span>
-                      <span class="text-xs text-blue-500 font-semibold">目的犯罪體系</span>
+                  <!-- 現今學說：目的犯罪體系 -->
+                  <div class="p-5 rounded-2xl border-2 border-blue-500 dark:border-blue-400 bg-gradient-to-br from-blue-50/90 to-sky-50/50 dark:from-blue-950/40 dark:to-sky-950/20 shadow-md space-y-3">
+                    <div class="flex items-center justify-between pb-2 border-b border-blue-200 dark:border-blue-800/60">
+                      <span class="text-xs font-black px-2.5 py-1 rounded-lg bg-blue-600 text-white shadow-sm shadow-blue-500/30">
+                        現今學說（通說）
+                      </span>
+                      <span class="text-xs font-black text-blue-700 dark:text-blue-300">目的犯罪體系（Welzel）</span>
                     </div>
-                    <ul class="text-xs space-y-1 text-slate-700 dark:text-slate-300">
-                      <li>• 受<strong class="text-blue-600 dark:text-blue-400">目的行為理論</strong>影響</li>
-                      <li>• 認為目的乃判斷不法的重要基礎</li>
-                      <li>• 不法不是純客觀的，而是<strong class="text-blue-600 dark:text-blue-400 font-bold">客、主觀的綜合評價</strong></li>
+                    <ul class="text-xs sm:text-sm space-y-2 text-slate-800 dark:text-slate-200">
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 font-bold">•</span>
+                        <span>受<strong class="text-blue-700 dark:text-blue-300 font-black">「目的行為理論」</strong>深刻影響（人的動作是由意志導向目標的）</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 font-bold">•</span>
+                        <span>認為<strong class="text-blue-700 dark:text-blue-300 font-black">「目的」</strong>乃判斷行為是否為「不法」的重要基礎</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 font-bold">•</span>
+                        <span>不法不是純客觀的，而是<strong class="text-blue-700 dark:text-blue-300 font-black underline decoration-blue-500 decoration-2">「客觀＋主觀的綜合評價」</strong>！</span>
+                      </li>
                     </ul>
+                    <div class="p-2.5 rounded-xl bg-blue-100/70 dark:bg-blue-900/40 text-[11px] text-blue-800 dark:text-blue-200 font-medium">
+                      💡 核心：故意不再只是罪責，而是一開始就決定行為性質的「不法主觀構成要件」！
+                    </div>
                   </div>
 
                 </div>
 
-                <!-- 三階論搭配目的體系要件展開 -->
-                <div class="p-5 rounded-2xl border border-blue-500/20 bg-white dark:bg-[#161f30] space-y-3">
-                  <div class="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-white/[0.06]">
-                    <span class="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
-                      <span>📌</span>
-                      <span>不法階層之客觀與主觀要件展開</span>
+                <!-- 不法階層之客觀與主觀要件展開 -->
+                <div class="p-6 rounded-2xl border-2 border-indigo-400 dark:border-indigo-500 bg-white dark:bg-[#121a2d] shadow-md space-y-4">
+                  <div class="flex items-center justify-between pb-3 border-b border-indigo-100 dark:border-indigo-900/50">
+                    <span class="text-sm font-black text-indigo-950 dark:text-indigo-200 flex items-center gap-2">
+                      <span class="text-lg">📌</span>
+                      <span>不法階層之客觀與主觀要件全面展開</span>
                     </span>
-                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-500 font-bold">目的犯罪體系特徵</span>
+                    <span class="text-xs font-mono px-3 py-1 rounded-full bg-indigo-500 text-white font-bold shadow-sm shadow-indigo-500/30">
+                      目的犯罪體系之最大特徵
+                    </span>
                   </div>
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                    <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-1">
-                      <div class="font-bold text-blue-600 dark:text-blue-400">構成要件該當性 (TB)</div>
-                      <div class="text-slate-600 dark:text-slate-300">分<strong class="text-slate-900 dark:text-white">「客觀構成要件」</strong>與<strong class="text-slate-900 dark:text-white">「主觀構成要件」</strong></div>
+                  
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    
+                    <!-- TB 展開 -->
+                    <div class="p-4 rounded-xl bg-gradient-to-br from-sky-50 to-blue-50/50 dark:from-sky-950/30 dark:to-blue-950/20 border-2 border-sky-400 dark:border-sky-600 space-y-2">
+                      <div class="flex items-center justify-between">
+                        <span class="font-black text-sky-800 dark:text-sky-300 text-sm">構成要件該當性 (TB)</span>
+                        <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-sky-500 text-white">行為型態</span>
+                      </div>
+                      <div class="text-xs space-y-1.5 text-slate-700 dark:text-slate-300 pt-1">
+                        <div class="flex items-center gap-1.5">
+                          <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+                          <span><strong class="text-sky-900 dark:text-sky-200 font-bold">客觀構成要件：</strong>行為人、行為、結果、因果關係</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                          <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                          <span><strong class="text-blue-900 dark:text-blue-200 font-bold">主觀構成要件：</strong>故意（知＋欲）或 過失</span>
+                        </div>
+                      </div>
                     </div>
-                    <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-1">
-                      <div class="font-bold text-indigo-600 dark:text-indigo-400">違法性 (R)</div>
-                      <div class="text-slate-600 dark:text-slate-300">分<strong class="text-slate-900 dark:text-white">「客觀阻卻違法要件」</strong>與<strong class="text-slate-900 dark:text-white">「主觀阻卻違法要件」</strong></div>
+
+                    <!-- R 展開 -->
+                    <div class="p-4 rounded-xl bg-gradient-to-br from-violet-50 to-purple-50/50 dark:from-violet-950/30 dark:to-purple-950/20 border-2 border-purple-400 dark:border-purple-600 space-y-2">
+                      <div class="flex items-center justify-between">
+                        <span class="font-black text-purple-800 dark:text-purple-300 text-sm">違法性 (R)</span>
+                        <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-purple-600 text-white">阻卻事由</span>
+                      </div>
+                      <div class="text-xs space-y-1.5 text-slate-700 dark:text-slate-300 pt-1">
+                        <div class="flex items-center gap-1.5">
+                          <span class="w-1.5 h-1.5 rounded-full bg-violet-500"></span>
+                          <span><strong class="text-violet-900 dark:text-violet-200 font-bold">客觀阻卻違法要件：</strong>防衛情狀、手段適當性</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                          <span class="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
+                          <span><strong class="text-purple-900 dark:text-purple-200 font-bold">主觀阻卻違法要件：</strong>防衛意思、緊急避難意思</span>
+                        </div>
+                      </div>
                     </div>
+
                   </div>
                 </div>
 
                 <!-- ⚠️ 關鍵推翻鐵律卡片 -->
-                <div class="p-4 sm:p-5 rounded-2xl border-2 border-rose-500/40 bg-rose-50/30 dark:bg-rose-950/30 space-y-2">
-                  <div class="flex items-center gap-2 font-bold text-rose-700 dark:text-rose-300 text-sm">
-                    <span class="text-base">⚠️</span>
+                <div class="p-5 sm:p-6 rounded-2xl border-2 border-rose-500 dark:border-rose-400 bg-gradient-to-br from-rose-50 via-white to-red-50/60 dark:from-[#2a0e14] dark:via-[#190a0f] dark:to-[#170509] shadow-lg space-y-3">
+                  <div class="flex items-center gap-2.5 font-black text-rose-700 dark:text-rose-300 text-base">
+                    <span class="text-xl">⚠️</span>
                     <span>違法性推定之推翻鐵律（教材第 1-9 頁原文）</span>
                   </div>
-                  <blockquote class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed pl-3 border-l-2 border-rose-500">
-                    「此外，構成要件該當發生推定效力後，要想推翻違法性推定，<strong class="text-rose-600 dark:text-rose-400 font-extrabold underline">必須阻卻違法事由客、主觀要件均該當</strong>，否則推定效力將繼續維持，只能進入罪責審查。」
+                  <blockquote class="text-sm sm:text-base text-slate-800 dark:text-slate-100 leading-relaxed pl-4 border-l-4 border-rose-500 bg-rose-100/40 dark:bg-rose-950/40 py-2.5 rounded-r-xl font-medium">
+                    「此外，構成要件該當發生推定效力後，要想推翻違法性推定，<strong class="text-rose-600 dark:text-rose-400 font-black underline decoration-rose-500 decoration-2">必須阻卻違法事由客、主觀要件均該當</strong>，否則推定效力將繼續維持，只能進入罪責審查。」
                   </blockquote>
+                </div>
+
+                <!-- 💡 白話文超展開專區 -->
+                <div class="p-6 rounded-3xl border-2 border-amber-400 dark:border-amber-500/80 bg-gradient-to-br from-amber-50/90 via-orange-50/40 to-yellow-50/30 dark:from-[#24170a] dark:via-[#1a1308] dark:to-[#171005] shadow-lg space-y-5">
+                  <div class="flex items-center justify-between pb-3 border-b-2 border-amber-300 dark:border-amber-700/60">
+                    <div class="flex items-center gap-2">
+                      <span class="text-2xl">💡</span>
+                      <h4 class="font-black text-amber-950 dark:text-amber-200 text-base sm:text-lg">
+                        白話文超展開：古典體系 vs 目的體系之演進（為什麼故意要搬家？）
+                      </h4>
+                    </div>
+                    <span class="text-xs font-black px-3 py-1 rounded-full bg-amber-500 text-white shadow-sm shadow-amber-500/30">
+                      核心白話通解
+                    </span>
+                  </div>
+
+                  <!-- 3大白話拆解卡片 -->
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    
+                    <!-- 卡片 1 -->
+                    <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-900/80 border-2 border-slate-300 dark:border-slate-700 space-y-2.5 shadow-sm">
+                      <div class="flex items-center gap-2 font-black text-slate-800 dark:text-slate-100 text-sm">
+                        <span class="w-6 h-6 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center text-xs font-bold">1</span>
+                        <span>古典體系：外在歸外在、內心歸內心</span>
+                      </div>
+                      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        以前學者認為：第一階只看「外在發生的物理事實」（開槍、人死、物品碎裂）；心裡到底想幹嘛（故意還是過失）全部堆在第三階再來算帳。
+                      </p>
+                      <div class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800/80 text-[11px] text-slate-500 dark:text-slate-400">
+                        💬 致命傷：不看大腦意圖，根本無法界定這開槍動作是在「殺人」還是「打靶」！
+                      </div>
+                    </div>
+
+                    <!-- 卡片 2 -->
+                    <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-900/80 border-2 border-blue-400 dark:border-blue-600 space-y-2.5 shadow-sm">
+                      <div class="flex items-center gap-2 font-black text-blue-900 dark:text-blue-200 text-sm">
+                        <span class="w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-bold">2</span>
+                        <span>目的體系：人有大腦，故意也是不法！</span>
+                      </div>
+                      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        現代刑法發現：人類行為是有「目的性」的！你「故意瞄準仇人心臟開槍」跟「手滑走火誤傷路人」，所製造的不法本質天差地遠！所以故意、過失必須在第一階（TB）就列入審查！
+                      </p>
+                      <div class="p-2 rounded-lg bg-blue-50 dark:bg-blue-950/40 text-[11px] text-blue-700 dark:text-blue-300 font-medium">
+                        💬 成果：第一階同時檢查「客觀做了啥」＋「主觀想幹嘛」，不法定性精準無誤！
+                      </div>
+                    </div>
+
+                    <!-- 卡片 3 -->
+                    <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-900/80 border-2 border-rose-400 dark:border-rose-600 space-y-2.5 shadow-sm">
+                      <div class="flex items-center gap-2 font-black text-rose-900 dark:text-rose-200 text-sm">
+                        <span class="w-6 h-6 rounded-full bg-rose-500 text-white flex items-center justify-center text-xs font-bold">3</span>
+                        <span>推翻鐵律：不能只是「剛好湊巧」！</span>
+                      </div>
+                      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        要洗白「做壞事」的惡名，阻卻違法必須「客觀＋主觀」同時合格！如果你想謀殺仇人開槍打死他，事後才發現他口袋剛好要拔槍搶銀行（偶然防衛），你客觀救了人，但主觀純粹要殺人，法律絕不容許推翻不法！
+                      </p>
+                      <div class="p-2 rounded-lg bg-rose-50 dark:bg-rose-950/40 text-[11px] text-rose-700 dark:text-rose-300 font-medium">
+                        💬 原則：主客觀缺一不可，否則違法性推定繼續成立，依法追究刑事責任！
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- 核心記憶口訣列 -->
+                  <div class="p-4 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-md flex items-center gap-3">
+                    <span class="text-2xl">📢</span>
+                    <div class="text-xs sm:text-sm font-black tracking-wide">
+                      核心精華口訣：行為受目的支配（不法含主客觀）➔ 阻卻不法需雙該當（客主兼備方推翻）！
+                    </div>
+                  </div>
+
                 </div>
 
               </div>
@@ -2262,143 +3047,313 @@ window.APP_VIEWS['viewChapter1'] = window.APP_VIEWS['chapter1'] = `
             </section>
 
             <!-- ==================== 十四、犯罪三階層體系（完整）與推翻違法性之實例檢驗 ==================== -->
-            <section id="sec-complete-three-stages" class="p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-white/[0.08] bg-white/80 dark:bg-slate-900/50 backdrop-blur-md shadow-sm space-y-6">
+            <section id="sec-complete-three-stages" class="p-6 sm:p-8 rounded-3xl border-2 border-indigo-500/80 dark:border-indigo-400/80 bg-gradient-to-b from-indigo-50/50 via-white to-sky-50/40 dark:from-[#131b2c] dark:via-[#0e1422] dark:to-[#121a28] shadow-2xl space-y-7">
               
-              <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/[0.06] pb-3">
-                <div class="flex items-center gap-2">
-                  <span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 font-mono">第 1-10 頁</span>
-                  <span class="text-xs text-slate-400">三階完整架構與推翻檢驗</span>
+              <div class="flex items-center justify-between border-b-2 border-indigo-200 dark:border-indigo-800/60 pb-3">
+                <div class="flex items-center gap-2.5">
+                  <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-500 text-white font-mono shadow-sm shadow-indigo-500/30">教材第 1-10 頁</span>
+                  <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">三階完整架構與推翻檢驗</span>
                 </div>
-                <span class="text-xs text-slate-400">通說體系</span>
+                <span class="text-xs font-bold px-2.5 py-0.5 rounded-md bg-indigo-100 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300">通說體系實證</span>
               </div>
 
               <div class="space-y-2">
-                <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
-                  十四、犯罪三階層體系（完整）與推翻違法性之實例檢驗
+                <h3 class="text-xl sm:text-2xl font-black text-indigo-950 dark:text-white tracking-tight flex items-center gap-2">
+                  <span>🏛️</span>
+                  <span>十四、犯罪三階層體系（完整）與推翻違法性之實例檢驗</span>
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-500">
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium">
                   貫徹第 1-9 頁「阻卻違法事由客、主觀要件均該當方能推翻推定」鐵律，透過案例 1-16 與 1-17 進行實證檢驗。
                 </p>
               </div>
 
               <!-- 完整三階層架構視覺圖解卡片 -->
-              <div class="p-5 sm:p-6 rounded-2xl border border-blue-500/30 bg-gradient-to-br from-blue-50/50 via-slate-50/50 to-indigo-50/50 dark:from-blue-950/20 dark:via-slate-900/40 dark:to-indigo-950/20 space-y-4">
-                <div class="flex items-center justify-between">
-                  <div class="font-bold text-sm text-blue-600 dark:text-blue-400 flex items-center gap-1.5">
-                    <span>🏛️</span>
+              <div class="p-6 sm:p-7 rounded-3xl border-2 border-blue-500 dark:border-blue-400 bg-gradient-to-br from-blue-50/80 via-white to-indigo-50/60 dark:from-blue-950/30 dark:via-slate-900/60 dark:to-indigo-950/30 shadow-xl space-y-5">
+                <div class="flex items-center justify-between pb-3 border-b-2 border-blue-200 dark:border-blue-800/60">
+                  <div class="font-black text-base text-blue-900 dark:text-blue-200 flex items-center gap-2">
+                    <span class="text-xl">🏛️</span>
                     <span>犯罪三階層體系（完整）原文架構圖</span>
                   </div>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-500 dark:text-blue-400 font-bold">教材第 1-10 頁</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-blue-600 text-white font-bold shadow-sm shadow-blue-500/30">
+                    教材第 1-10 頁原文
+                  </span>
                 </div>
 
-                <!-- 流程圖視覺卡片 -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+                <!-- 流程圖視覺卡片 (TB, R, S 三大立體支柱) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+                  
                   <!-- TB -->
-                  <div class="p-4 rounded-xl border border-blue-500/30 bg-white dark:bg-slate-900 shadow-sm space-y-2">
-                    <div class="flex items-center justify-between">
-                      <span class="font-black text-blue-600 dark:text-blue-400 text-sm">TB (構成要件)</span>
-                      <span class="text-[10px] px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-500">階層一</span>
+                  <div class="p-5 rounded-2xl border-2 border-sky-400 dark:border-sky-500 bg-white dark:bg-slate-900 shadow-md space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2.5">
+                      <div class="flex items-center justify-between pb-2 border-b border-sky-100 dark:border-sky-900/50">
+                        <span class="font-black text-sky-700 dark:text-sky-300 text-base">TB (構成要件)</span>
+                        <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-sky-500 text-white">階層一</span>
+                      </div>
+                      <ul class="space-y-1.5 text-slate-700 dark:text-slate-300">
+                        <li class="flex items-start gap-1.5">
+                          <span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-1.5"></span>
+                          <span><strong class="text-slate-900 dark:text-white">客觀要件：</strong>外在行為、侵害結果、因果關係</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                          <span class="w-1.5 h-1.5 rounded-full bg-blue-600 mt-1.5"></span>
+                          <span><strong class="text-slate-900 dark:text-white">主觀要件：</strong>故意（知＋欲）或 過失</span>
+                        </li>
+                      </ul>
                     </div>
-                    <ul class="space-y-1 text-slate-600 dark:text-slate-300">
-                      <li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>客觀要件（外在行為、因果）</li>
-                      <li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>主觀要件（故意、過失）</li>
-                    </ul>
-                    <div class="pt-2 text-center text-amber-500 font-bold text-[11px] border-t border-slate-100 dark:border-slate-800">
-                      ⬇️ 推定違法性
+                    <div class="pt-3 text-center text-amber-600 dark:text-amber-400 font-black text-xs border-t-2 border-dashed border-amber-200 dark:border-amber-800/60 bg-amber-50/50 dark:bg-amber-950/30 p-2 rounded-xl">
+                      ⬇️ 推定違法性（壞事推定）
                     </div>
                   </div>
 
                   <!-- R -->
-                  <div class="p-4 rounded-xl border border-amber-500/30 bg-white dark:bg-slate-900 shadow-sm space-y-2">
-                    <div class="flex items-center justify-between">
-                      <span class="font-black text-amber-600 dark:text-amber-400 text-sm">R (違法性)</span>
-                      <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-500">階層二</span>
+                  <div class="p-5 rounded-2xl border-2 border-amber-500 dark:border-amber-400 bg-white dark:bg-slate-900 shadow-md space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2.5">
+                      <div class="flex items-center justify-between pb-2 border-b border-amber-100 dark:border-amber-900/50">
+                        <span class="font-black text-amber-700 dark:text-amber-300 text-base">R (違法性)</span>
+                        <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-amber-500 text-white">階層二</span>
+                      </div>
+                      <ul class="space-y-1.5 text-slate-700 dark:text-slate-300">
+                        <li class="flex items-start gap-1.5">
+                          <span class="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5"></span>
+                          <span><strong class="text-slate-900 dark:text-white">客觀阻卻要件：</strong>防衛情狀、手段適當性</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                          <span class="w-1.5 h-1.5 rounded-full bg-orange-600 mt-1.5"></span>
+                          <span><strong class="text-slate-900 dark:text-white">主觀阻卻要件：</strong>防衛意思、避難意思</span>
+                        </li>
+                      </ul>
                     </div>
-                    <ul class="space-y-1 text-slate-600 dark:text-slate-300">
-                      <li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>客觀阻卻違法要件（情狀、手段）</li>
-                      <li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>主觀阻卻違法要件（防衛/避難意思）</li>
-                    </ul>
-                    <div class="pt-2 text-emerald-600 dark:text-emerald-400 font-bold text-[10px] bg-emerald-50 dark:bg-emerald-950/30 rounded p-1 text-center">
-                      🔄 阻卻 R 事由反證推翻（需客主觀均該當）
+                    <div class="pt-3 text-emerald-700 dark:text-emerald-300 font-black text-xs border-t-2 border-dashed border-emerald-300 dark:border-emerald-800/60 bg-emerald-50/80 dark:bg-emerald-950/40 p-2 rounded-xl text-center">
+                      🔄 阻卻 R 事由反證推翻（⚠️ 需客主觀均該當）
                     </div>
                   </div>
 
                   <!-- S -->
-                  <div class="p-4 rounded-xl border border-purple-500/30 bg-white dark:bg-slate-900 shadow-sm space-y-2">
-                    <div class="flex items-center justify-between">
-                      <span class="font-black text-purple-600 dark:text-purple-400 text-sm">S (罪責)</span>
-                      <span class="text-[10px] px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-500">階層三</span>
+                  <div class="p-5 rounded-2xl border-2 border-purple-400 dark:border-purple-500 bg-white dark:bg-slate-900 shadow-md space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2.5">
+                      <div class="flex items-center justify-between pb-2 border-b border-purple-100 dark:border-purple-900/50">
+                        <span class="font-black text-purple-700 dark:text-purple-300 text-base">S (罪責)</span>
+                        <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-purple-600 text-white">階層三</span>
+                      </div>
+                      <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-xs">
+                        不法行為推定行為人具期待可能性（對壞人進行非難評價）。
+                      </p>
                     </div>
-                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
-                      不法推定行為人具期待可能性（罪責）。
-                    </p>
-                    <div class="pt-2 text-emerald-600 dark:text-emerald-400 font-bold text-[10px] bg-emerald-50 dark:bg-emerald-950/30 rounded p-1 text-center">
+                    <div class="pt-3 text-emerald-700 dark:text-emerald-300 font-black text-xs border-t-2 border-dashed border-emerald-300 dark:border-emerald-800/60 bg-emerald-50/80 dark:bg-emerald-950/40 p-2 rounded-xl text-center">
                       🔄 阻卻 S 事由反證推翻（期待可能性欠缺）
                     </div>
                   </div>
+
                 </div>
               </div>
 
               <!-- 兩大經典案例卡片 (案例 1-16 & 1-17) -->
-              <div class="space-y-4">
-                <div class="font-bold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                  <span>⚖️</span>
+              <div class="space-y-6">
+                <div class="font-black text-base text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="text-xl">⚖️</span>
                   <span>教材實例檢驗：客觀與主觀要件欠缺之效果對比</span>
                 </div>
 
-                <!-- 案例 1-16 卡片 -->
-                <div class="p-5 rounded-2xl border border-slate-200 dark:border-white/[0.08] bg-slate-50/50 dark:bg-slate-800/40 space-y-3">
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold text-blue-600 dark:text-blue-400">◆ 案例 1-16 ◆ 【誤想防衛】先發制人打傷問路人</span>
-                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-rose-500/10 text-rose-600 dark:text-rose-400 font-bold">違法性推定維持</span>
+                <!-- 案例 1-16 卡片：誤想防衛（欠缺客觀情狀） -->
+                <div class="p-6 rounded-3xl border-2 border-amber-500 dark:border-amber-400 bg-gradient-to-br from-amber-50/70 via-white to-orange-50/30 dark:from-[#21160a] dark:via-[#131b2a] dark:to-[#191108] shadow-xl space-y-4">
+                  <div class="flex items-center justify-between pb-3 border-b-2 border-amber-200 dark:border-amber-800/60">
+                    <span class="text-sm font-black text-amber-900 dark:text-amber-200">◆ 案例 1-16 ◆ 【誤想防衛】先發制人打傷問路人</span>
+                    <span class="text-xs font-mono px-3 py-1 rounded-full bg-rose-500 text-white font-black shadow-sm shadow-rose-500/30">
+                      違法性推定維持
+                    </span>
                   </div>
-                  <blockquote class="text-xs text-slate-700 dark:text-slate-300 pl-3 border-l-2 border-blue-500 italic leading-relaxed">
+
+                  <!-- 案件事實引述 -->
+                  <blockquote class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 pl-4 border-l-4 border-amber-500 py-1 bg-amber-100/40 dark:bg-amber-950/30 rounded-r-xl leading-relaxed font-medium">
                     「由於乙天生一副兇神惡煞貌，致使甲誤以為前來問路的乙對自己不懷好意，因此本於保護自己的意思先發制人，將乙打成輕傷。」
                   </blockquote>
-                  <div class="p-3 rounded-xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-500/30 space-y-1.5 text-xs">
-                    <div class="font-bold text-amber-700 dark:text-amber-300 flex items-center gap-1">
+
+                  <!-- 被告心聲自白 -->
+                  <div class="p-3.5 rounded-xl bg-orange-100/70 dark:bg-orange-950/40 border border-orange-300 dark:border-orange-800/50 flex items-start gap-2.5">
+                    <span class="text-xl">🗣️</span>
+                    <div class="text-xs sm:text-sm text-orange-950 dark:text-orange-200 leading-relaxed">
+                      <strong class="font-black text-orange-800 dark:text-orange-300">甲（被告）的崩潰自白：</strong>
+                      「法官大人，他滿臉橫肉、氣勢洶洶朝我走過來，我以為他是要掏刀搶劫啊！我是為了保護自己才先揮拳自衛的，我哪知道他只是要問路？！」
+                    </div>
+                  </div>
+
+                  <!-- 審查體系三階拆解 -->
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                    <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1">
+                      <span class="font-bold text-sky-600 dark:text-sky-400">第一階 TB (構成要件)</span>
+                      <p class="text-slate-600 dark:text-slate-300">甲出拳打乙成傷，該當 § 277 傷害罪，<strong class="text-amber-600 dark:text-amber-400">推定違法性</strong>。</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-rose-50/60 dark:bg-rose-950/30 border-2 border-rose-400 dark:border-rose-600 space-y-1">
+                      <span class="font-bold text-rose-700 dark:text-rose-300">第二階 R (違法性檢驗)</span>
+                      <p class="text-slate-700 dark:text-slate-200">
+                        ✔️ 有防衛意思<br>
+                        ❌ <strong class="text-rose-600 dark:text-rose-400">無防衛情狀（乙只是問路）</strong><br>
+                        ➔ 欠缺客觀要件，<strong class="text-rose-600 dark:text-rose-400 underline">推定不倒，仍屬不法</strong>！
+                      </p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-purple-50/60 dark:bg-purple-950/30 border border-purple-300 dark:border-purple-700 space-y-1">
+                      <span class="font-bold text-purple-700 dark:text-purple-300">第三階 S (罪責檢驗)</span>
+                      <p class="text-slate-700 dark:text-slate-200">
+                        甲誤認有防衛情狀（容許構成要件錯誤），阻卻罪責故意，<strong class="text-purple-700 dark:text-purple-300 font-bold">僅論以過失傷害罪</strong>。
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- 教材問題導引 -->
+                  <div class="p-4 rounded-xl bg-amber-50/80 dark:bg-amber-950/40 border border-amber-500/40 space-y-1.5 text-xs">
+                    <div class="font-bold text-amber-800 dark:text-amber-300 flex items-center gap-1.5">
                       <span>💡</span>
-                      <span>【問題導引】(教材第 1-10 頁原文)</span>
+                      <span>【問題導引】(教材第 1-10 頁原文精析)</span>
                     </div>
                     <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
-                      甲該當傷害罪的構成要件（§ 277），由於僅能滿足正當防衛的主觀要件（防衛意思），欠缺客觀上的防衛情狀，<strong class="text-rose-600 dark:text-rose-400">不生推翻違法的效力</strong>，必須繼續進行罪責的審查。
+                      甲該當傷害罪的構成要件（§ 277），由於僅能滿足正當防衛的主觀要件（防衛意思），欠缺客觀上的防衛情狀，<strong class="text-rose-600 dark:text-rose-400 font-bold">不生推翻違法的效力</strong>，必須繼續進行罪責的審查。
                     </p>
                   </div>
+
                   <!-- 法規查核 -->
-                  <div class="pt-2 border-t border-slate-200 dark:border-slate-700/60 text-[11px] text-slate-500 space-y-1">
+                  <div class="pt-2 border-t border-slate-200 dark:border-slate-800 text-[11px] text-slate-500 dark:text-slate-400 space-y-1">
                     <div class="flex items-center gap-1.5 font-semibold text-slate-700 dark:text-slate-300">
                       <span>📜 2026 現行法規查核：</span>
-                      <span class="px-1.5 py-0.2 rounded bg-slate-200 dark:bg-slate-700 text-[10px]">條文無更動（維持現行法）</span>
+                      <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold">條文無更動（維持現行法）</span>
                     </div>
-                    <p>刑法 § 277 第 1 項傷害罪（108年提高罰金刑）。學理上為典型「誤想防衛」，實務多數採限制法律效果之責任說，不具罪責故意，僅得依過失傷害論處。</p>
+                    <p>刑法 § 277 第 1 項傷害罪（108年提高罰金刑至五十萬元）。學理上為典型「誤想防衛」，實務多數採限制法律效果之責任說，不具罪責故意，僅得依過失傷害論處。</p>
                   </div>
                 </div>
 
-                <!-- 案例 1-17 卡片 -->
-                <div class="p-5 rounded-2xl border border-slate-200 dark:border-white/[0.08] bg-slate-50/50 dark:bg-slate-800/40 space-y-3">
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold text-blue-600 dark:text-blue-400">◆ 案例 1-17 ◆ 【偶然防衛】巧合射殺暗中瞄準之仇家</span>
-                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-rose-500/10 text-rose-600 dark:text-rose-400 font-bold">違法性推定維持</span>
+                <!-- 案例 1-17 卡片：偶然防衛（欠缺主觀意思） -->
+                <div class="p-6 rounded-3xl border-2 border-rose-500 dark:border-rose-400 bg-gradient-to-br from-rose-50/70 via-white to-red-50/30 dark:from-[#280c12] dark:via-[#151a28] dark:to-[#1f090d] shadow-xl space-y-4">
+                  <div class="flex items-center justify-between pb-3 border-b-2 border-rose-200 dark:border-rose-800/60">
+                    <span class="text-sm font-black text-rose-900 dark:text-rose-200">◆ 案例 1-17 ◆ 【偶然防衛】巧合射殺暗中瞄準之仇家</span>
+                    <span class="text-xs font-mono px-3 py-1 rounded-full bg-rose-600 text-white font-black shadow-sm shadow-rose-500/30">
+                      違法性推定維持
+                    </span>
                   </div>
-                  <blockquote class="text-xs text-slate-700 dark:text-slate-300 pl-3 border-l-2 border-blue-500 italic leading-relaxed">
+
+                  <!-- 案件事實引述 -->
+                  <blockquote class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 pl-4 border-l-4 border-rose-500 py-1 bg-rose-100/40 dark:bg-rose-950/30 rounded-r-xl leading-relaxed font-medium">
                     「角頭老大甲某日在路邊某巷道時，發現對向走來的乃是新興幫派的老大乙，甲心想先下手為強而掏槍將乙射殺。殊不知在此之前，乙放在口袋內的手也正用手槍瞄準甲，想致甲於死地。」
                   </blockquote>
-                  <div class="p-3 rounded-xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-500/30 space-y-1.5 text-xs">
-                    <div class="font-bold text-amber-700 dark:text-amber-300 flex items-center gap-1">
+
+                  <!-- 被告心聲自白 -->
+                  <div class="p-3.5 rounded-xl bg-red-100/70 dark:bg-red-950/40 border border-red-300 dark:border-red-800/50 flex items-start gap-2.5">
+                    <span class="text-xl">🗣️</span>
+                    <div class="text-xs sm:text-sm text-red-950 dark:text-red-200 leading-relaxed">
+                      <strong class="font-black text-red-800 dark:text-red-300">甲（幫派角頭）的狡辯自白：</strong>
+                      「法官大人，鑑識報告都寫了，乙口袋裡的手槍保險已經打開、正對著我的胸口！我開槍剛好打死要殺我的人，客觀上就是百分之百的保命自衛，憑什麼判我有罪？！」
+                    </div>
+                  </div>
+
+                  <!-- 審查體系三階拆解 -->
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                    <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1">
+                      <span class="font-bold text-sky-600 dark:text-sky-400">第一階 TB (構成要件)</span>
+                      <p class="text-slate-600 dark:text-slate-300">甲開槍擊斃乙，該當 § 271 殺人罪，<strong class="text-amber-600 dark:text-amber-400">推定違法性</strong>。</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-rose-50/60 dark:bg-rose-950/30 border-2 border-rose-400 dark:border-rose-600 space-y-1">
+                      <span class="font-bold text-rose-700 dark:text-rose-300">第二階 R (違法性檢驗)</span>
+                      <p class="text-slate-700 dark:text-slate-200">
+                        ✔️ 有防衛情狀（乙正要掏槍暗算）<br>
+                        ❌ <strong class="text-rose-600 dark:text-rose-400">無防衛意思（甲純粹想謀殺）</strong><br>
+                        ➔ 欠缺主觀要件，<strong class="text-rose-600 dark:text-rose-400 underline">推定不倒，仍屬不法</strong>！
+                      </p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-purple-50/60 dark:bg-purple-950/30 border border-purple-300 dark:border-purple-700 space-y-1">
+                      <span class="font-bold text-purple-700 dark:text-purple-300">第三階 S (罪責檢驗)</span>
+                      <p class="text-slate-700 dark:text-slate-200">
+                        甲具殺人故意與責任能力，無阻卻罪責事由，<strong class="text-rose-600 dark:text-rose-400 font-bold">論以殺人罪（實務既遂／學說未遂）</strong>。
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- 教材問題導引 -->
+                  <div class="p-4 rounded-xl bg-amber-50/80 dark:bg-amber-950/40 border border-amber-500/40 space-y-1.5 text-xs">
+                    <div class="font-bold text-amber-800 dark:text-amber-300 flex items-center gap-1.5">
                       <span>💡</span>
-                      <span>【問題導引】(教材第 1-10 ～ 1-11 頁原文)</span>
+                      <span>【問題導引】(教材第 1-10 ～ 1-11 頁原文精析)</span>
                     </div>
                     <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
-                      甲該當殺人罪的構成要件（§ 271），由於僅能滿足正當防衛的客觀要件（防衛情狀與防衛行為），欠缺主觀上的防衛意思，<strong class="text-rose-600 dark:text-rose-400">仍不發生推翻違法的效力</strong>，必須繼續進行罪責的審查。
+                      甲該當殺人罪的構成要件（§ 271），由於僅能滿足正當防衛的客觀要件（防衛情狀與防衛行為），欠缺主觀上的防衛意思，<strong class="text-rose-600 dark:text-rose-400 font-bold">仍不發生推翻違法的效力</strong>，必須繼續進行罪責的審查。
                     </p>
                   </div>
+
                   <!-- 法規查核 -->
-                  <div class="pt-2 border-t border-slate-200 dark:border-slate-700/60 text-[11px] text-slate-500 space-y-1">
+                  <div class="pt-2 border-t border-slate-200 dark:border-slate-800 text-[11px] text-slate-500 dark:text-slate-400 space-y-1">
                     <div class="flex items-center gap-1.5 font-semibold text-slate-700 dark:text-slate-300">
                       <span>📜 2026 現行法規查核：</span>
-                      <span class="px-1.5 py-0.2 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 text-[10px]">受重大憲法裁判拘束</span>
+                      <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 text-[10px] font-bold">受重大憲法裁判拘束</span>
                     </div>
                     <p>刑法 § 271 普通殺人罪受 113年憲判字第8號拘束（死刑僅限個案犯罪情節最嚴重且踐行最嚴格程序）。學理上為典型「偶然防衛」，通說實務認不阻卻違法，論以既遂或類推未遂處罰。</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- 💡 白話文超展開專區：誤想防衛 vs 偶然防衛 -->
+              <div class="p-6 rounded-3xl border-2 border-indigo-400 dark:border-indigo-500/80 bg-gradient-to-br from-indigo-50/90 via-sky-50/40 to-blue-50/30 dark:from-[#171e30] dark:via-[#111827] dark:to-[#0f172a] shadow-xl space-y-5">
+                <div class="flex items-center justify-between pb-3 border-b-2 border-indigo-200 dark:border-indigo-800/60">
+                  <div class="flex items-center gap-2">
+                    <span class="text-2xl">💡</span>
+                    <h4 class="font-black text-indigo-950 dark:text-indigo-200 text-base sm:text-lg">
+                      白話文超展開：誤想防衛 vs 偶然防衛（照妖鏡大對決）
+                    </h4>
+                  </div>
+                  <span class="text-xs font-black px-3 py-1 rounded-full bg-indigo-600 text-white shadow-sm shadow-indigo-500/30">
+                    一表看懂核心
+                  </span>
+                </div>
+
+                <!-- 3大白話拆解卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  
+                  <!-- 卡片 1 -->
+                  <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-900/80 border-2 border-amber-400 dark:border-amber-600 space-y-2.5 shadow-sm">
+                    <div class="flex items-center gap-2 font-black text-amber-900 dark:text-amber-200 text-sm">
+                      <span class="w-6 h-6 rounded-full bg-amber-500 text-white flex items-center justify-center text-xs font-bold">1</span>
+                      <span>誤想防衛：想得美，外面沒事（幻覺型）</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                      心裡滿腔熱血想防衛，但外面世界根本風平浪靜！你把問路的無辜路人當仇家暴打。
+                    </p>
+                    <div class="p-2 rounded-lg bg-amber-50 dark:bg-amber-950/40 text-[11px] text-amber-800 dark:text-amber-300 font-medium">
+                      🎯 關鍵：欠缺客觀要件 ➔ 違法性推定不倒（依然是不法傷害），但念你心存善念，罪責階層降等為「過失犯」！
+                    </div>
+                  </div>
+
+                  <!-- 卡片 2 -->
+                  <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-900/80 border-2 border-rose-400 dark:border-rose-600 space-y-2.5 shadow-sm">
+                    <div class="flex items-center gap-2 font-black text-rose-900 dark:text-rose-200 text-sm">
+                      <span class="w-6 h-6 rounded-full bg-rose-500 text-white flex items-center justify-center text-xs font-bold">2</span>
+                      <span>偶然防衛：心超黑，碰巧撞大運（巧合型）</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                      心裡只想著暗算殺人，開槍打死對方後，才發現對方剛好也在瞄準你！
+                    </p>
+                    <div class="p-2 rounded-lg bg-rose-50 dark:bg-rose-950/40 text-[11px] text-rose-800 dark:text-rose-300 font-medium">
+                      🎯 關鍵：欠缺主觀要件 ➔ 法律絕不當壞人的免死金牌，違法性推定維持，依法論以殺人罪！
+                    </div>
+                  </div>
+
+                  <!-- 卡片 3 -->
+                  <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-900/80 border-2 border-emerald-400 dark:border-emerald-600 space-y-2.5 shadow-sm">
+                    <div class="flex items-center gap-2 font-black text-emerald-900 dark:text-emerald-200 text-sm">
+                      <span class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xs font-bold">3</span>
+                      <span>推翻鐵律：天平兩端必須同時及格！</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                      要想推翻違法性推定，「客觀情狀」與「主觀意思」就像鳥的雙翼，少一隻就飛不起來！
+                    </p>
+                    <div class="p-2 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-[11px] text-emerald-800 dark:text-emerald-300 font-medium">
+                      🎯 關鍵：客觀欠缺（誤想）或 主觀欠缺（偶然），推定效力都牢不可破，無法阻卻違法！
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- 核心記憶口訣列 -->
+                <div class="p-4 rounded-2xl bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-md flex items-center gap-3">
+                  <span class="text-2xl">📢</span>
+                  <div class="text-xs sm:text-sm font-black tracking-wide">
+                    核心精華口訣：誤想防衛欠客觀（心存善念轉過失）➔ 偶然防衛欠主觀（心黑撞運仍不法）！
                   </div>
                 </div>
 
@@ -2407,186 +3362,288 @@ window.APP_VIEWS['viewChapter1'] = window.APP_VIEWS['chapter1'] = `
             </section>
 
             <!-- ==================== 十五、犯罪二階層體系論（二階論）與「四塊拼圖說」 ==================== -->
-            <section id="sec-two-stage-system" class="p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-white/[0.08] bg-white/80 dark:bg-slate-900/50 backdrop-blur-md shadow-sm space-y-6">
+            <section id="sec-two-stage-system" class="p-6 sm:p-8 rounded-3xl border-2 border-emerald-500 dark:border-emerald-400 bg-gradient-to-b from-emerald-50/60 via-white to-teal-50/40 dark:from-[#0a1e17] dark:via-[#0e1624] dark:to-[#0a1815] shadow-2xl space-y-7">
               
-              <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/[0.06] pb-3">
-                <div class="flex items-center gap-2">
-                  <span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono">第 1-11 頁</span>
-                  <span class="text-xs text-slate-400">二階體系與拼圖理論</span>
+              <div class="flex items-center justify-between border-b-2 border-emerald-200 dark:border-emerald-800/60 pb-3">
+                <div class="flex items-center gap-2.5">
+                  <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white font-mono shadow-sm shadow-emerald-600/30">教材第 1-11 頁</span>
+                  <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">二階體系與拼圖理論</span>
                 </div>
-                <span class="text-xs text-slate-400">學說對比</span>
+                <span class="text-xs font-bold px-2.5 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300">體系流派對比</span>
               </div>
 
               <div class="space-y-2">
-                <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
-                  十五、犯罪二階層體系論（簡稱二階論）與「四塊拼圖說」
+                <h3 class="text-xl sm:text-2xl font-black text-emerald-950 dark:text-white tracking-tight flex items-center gap-2">
+                  <span>🧩</span>
+                  <span>十五、犯罪二階層體系論（簡稱二階論）與「四塊拼圖說」</span>
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-500">
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium">
                   澄清二階論不區分 TB 與 R 的天大誤解！解析三階論與二階論本質上僅是「四塊拼圖」的不同排列組合。
                 </p>
               </div>
 
               <!-- 核心誤解澄清醒目卡片 -->
-              <div class="p-5 rounded-2xl border-2 border-indigo-500/40 bg-indigo-50/40 dark:bg-indigo-950/30 space-y-2">
-                <div class="flex items-center gap-2 font-bold text-indigo-700 dark:text-indigo-300 text-sm">
-                  <span>💡</span>
+              <div class="p-6 rounded-2xl border-2 border-indigo-500 dark:border-indigo-400 bg-gradient-to-br from-indigo-50/90 via-white to-purple-50/40 dark:from-indigo-950/40 dark:via-slate-900 dark:to-purple-950/30 shadow-lg space-y-3.5">
+                <div class="flex items-center gap-2.5 font-black text-indigo-900 dark:text-indigo-200 text-sm sm:text-base">
+                  <span class="text-xl">💡</span>
                   <span>二階論核心概念與天大誤解澄清（教材第 1-11 頁原文）</span>
                 </div>
-                <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-                  學理上另有主張「犯罪二階層體系論（簡稱二階論）」，與通說最大差異在建構不法的方式。<strong class="text-indigo-600 dark:text-indigo-400 underline">很多人以為二階論不區分TB與R，這是個天大誤解</strong>，實際上二階論所有不法組成要件都與三階論相同，只是排列組合不同罷了！
+                <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+                  學理上另有主張「犯罪二階層體系論（簡稱二階論）」，與通說最大差異在建構不法的方式。<strong class="text-rose-600 dark:text-rose-400 font-black underline decoration-rose-500 decoration-2">很多人以為二階論不區分TB與R，這是個天大誤解</strong>！實際上二階論所有不法組成要件都與三階論完全相同，只是「排列組合方式」不同罷了！
                 </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs">
-                  <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-indigo-500/20">
-                    <span class="font-bold text-blue-600 dark:text-blue-400">三階論建構方式：</span>
-                    <p class="mt-1 text-slate-600 dark:text-slate-400">由「構成要件該當性與違法性」出發建構不法（橫向階層切分）。</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1 text-xs sm:text-sm">
+                  <div class="p-4 rounded-xl bg-blue-50/80 dark:bg-blue-950/40 border-2 border-blue-400 dark:border-blue-600 space-y-1.5 shadow-xs">
+                    <span class="font-black text-blue-700 dark:text-blue-300 flex items-center gap-1.5">
+                      <span>🔵</span>
+                      <span>三階論建構方式（橫向階層切分）：</span>
+                    </span>
+                    <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+                      由「構成要件該當性 ➔ 違法性 ➔ 罪責」層層推進，先看整體行為有無犯罪該當，再看有無阻卻事由。
+                    </p>
                   </div>
-                  <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-indigo-500/20">
-                    <span class="font-bold text-emerald-600 dark:text-emerald-400">二階論建構方式：</span>
-                    <p class="mt-1 text-slate-600 dark:text-slate-400">由「客觀要件與主觀要件」出發建構不法（縱向客主觀切分）。</p>
+                  <div class="p-4 rounded-xl bg-emerald-50/80 dark:bg-emerald-950/40 border-2 border-emerald-400 dark:border-emerald-600 space-y-1.5 shadow-xs">
+                    <span class="font-black text-emerald-700 dark:text-emerald-300 flex items-center gap-1.5">
+                      <span>🟢</span>
+                      <span>二階論建構方式（縱向客主觀切分）：</span>
+                    </span>
+                    <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+                      由「客觀不法 ＋ 主觀不法 ➔ 罪責」雙軌推進，將 TB 與 R 拆解並重新組合成客觀與主觀兩大分支。
+                    </p>
                   </div>
                 </div>
               </div>
 
               <!-- 四塊拼圖理論展示區 -->
-              <div class="space-y-3">
-                <div class="font-bold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
-                  <span>🧩</span>
+              <div class="space-y-4">
+                <div class="font-black text-sm sm:text-base text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="text-xl">🧩</span>
                   <span>不法之「四塊拼圖」組合對照表</span>
                 </div>
                 
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center text-xs">
-                  <div class="p-3 rounded-xl border border-blue-500/30 bg-blue-50/50 dark:bg-blue-950/40">
-                    <div class="text-base">🧩 ①</div>
-                    <div class="font-bold text-blue-600 dark:text-blue-400 mt-1">客觀構成要件</div>
+                <!-- 4 塊立體發光拼圖卡片 -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs">
+                  <div class="p-4 rounded-2xl border-2 border-sky-400 dark:border-sky-500 bg-sky-50 dark:bg-sky-950/50 shadow-md flex flex-col justify-center items-center gap-1">
+                    <div class="text-2xl">🧩</div>
+                    <div class="font-black text-sky-800 dark:text-sky-300 text-sm">① 客觀構成要件</div>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400">行為、結果、因果</span>
                   </div>
-                  <div class="p-3 rounded-xl border border-indigo-500/30 bg-indigo-50/50 dark:bg-indigo-950/40">
-                    <div class="text-base">🧩 ②</div>
-                    <div class="font-bold text-indigo-600 dark:text-indigo-400 mt-1">主觀構成要件</div>
+                  <div class="p-4 rounded-2xl border-2 border-purple-400 dark:border-purple-500 bg-purple-50 dark:bg-purple-950/50 shadow-md flex flex-col justify-center items-center gap-1">
+                    <div class="text-2xl">🧩</div>
+                    <div class="font-black text-purple-800 dark:text-purple-300 text-sm">② 主觀構成要件</div>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400">故意、過失</span>
                   </div>
-                  <div class="p-3 rounded-xl border border-amber-500/30 bg-amber-50/50 dark:bg-amber-950/40">
-                    <div class="text-base">🧩 ③</div>
-                    <div class="font-bold text-amber-600 dark:text-amber-400 mt-1">客觀阻卻違法要件</div>
+                  <div class="p-4 rounded-2xl border-2 border-amber-400 dark:border-amber-500 bg-amber-50 dark:bg-amber-950/50 shadow-md flex flex-col justify-center items-center gap-1">
+                    <div class="text-2xl">🧩</div>
+                    <div class="font-black text-amber-800 dark:text-amber-300 text-sm">③ 客觀阻卻要件</div>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400">防衛情狀、避難手段</span>
                   </div>
-                  <div class="p-3 rounded-xl border border-pink-500/30 bg-pink-50/50 dark:bg-pink-950/40">
-                    <div class="text-base">🧩 ④</div>
-                    <div class="font-bold text-pink-600 dark:text-pink-400 mt-1">主觀阻卻違法要件</div>
+                  <div class="p-4 rounded-2xl border-2 border-rose-400 dark:border-rose-500 bg-rose-50 dark:bg-rose-950/50 shadow-md flex flex-col justify-center items-center gap-1">
+                    <div class="text-2xl">🧩</div>
+                    <div class="font-black text-rose-800 dark:text-rose-300 text-sm">④ 主觀阻卻要件</div>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400">防衛意思、避難意思</span>
                   </div>
                 </div>
 
-                <div class="p-4 rounded-2xl border border-slate-200 dark:border-white/[0.08] bg-slate-50/60 dark:bg-slate-800/30 space-y-2 text-xs">
-                  <div class="text-slate-700 dark:text-slate-300 leading-relaxed">
-                    • <strong class="text-emerald-600 dark:text-emerald-400 font-bold">客觀不法</strong> 係「客觀構成要件該當 且 無客觀阻卻違法要件」<br>
-                    • <strong class="text-emerald-600 dark:text-emerald-400 font-bold">主觀不法</strong> 係「主觀構成要件該當 且 無主觀阻卻違法要件」
+                <!-- 拼圖不法加減公式卡片 -->
+                <div class="p-5 rounded-2xl border-2 border-teal-400 dark:border-teal-500/60 bg-gradient-to-br from-teal-50/70 via-white to-emerald-50/50 dark:from-teal-950/30 dark:via-slate-900 dark:to-emerald-950/20 space-y-3 text-xs sm:text-sm">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-teal-200 dark:border-teal-800 space-y-1">
+                      <span class="font-black text-teal-800 dark:text-teal-300">客觀不法公式：</span>
+                      <p class="text-slate-700 dark:text-slate-200">
+                        「<strong>🧩 ① 客觀構成要件該當</strong>」 ➖ 「<strong>🧩 ③ 客觀阻卻違法要件</strong>」<br>
+                        <span class="text-xs text-slate-500">（做了壞事，且沒有客觀正當防衛事由）</span>
+                      </p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-teal-200 dark:border-teal-800 space-y-1">
+                      <span class="font-black text-teal-800 dark:text-teal-300">主觀不法公式：</span>
+                      <p class="text-slate-700 dark:text-slate-200">
+                        「<strong>🧩 ② 主觀構成要件該當</strong>」 ➖ 「<strong>🧩 ④ 主觀阻卻違法要件</strong>」<br>
+                        <span class="text-xs text-slate-500">（想做壞事，且沒有主觀正當防衛意思）</span>
+                      </p>
+                    </div>
                   </div>
-                  <p class="text-slate-500 dark:text-slate-400 text-[11px] pt-1 border-t border-slate-200 dark:border-slate-700/60">
-                    換言之，構成要件該當推定違法性原則將各自在客觀不法與主觀不法中產生作用，這是與三階論的最大不同。簡單說不法是由此四塊拼圖所組成，三階論與二階論僅是四塊拼圖的不同排列組合，因此兩種體系在大多數案件中會得出相同結論。
+                  <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed pt-2 border-t border-teal-200/80 dark:border-teal-800/60">
+                    💡 <strong>核心精義</strong>：構成要件該當推定違法性原則，在二階論中將各自在「客觀不法」與「主觀不法」中產生推定作用。簡單說，不法就是由這四塊拼圖所組成，三階論與二階論只是四塊拼圖的擺放排列不同，因此兩種體系在絕大多數案件中都會得出完全相同的判決結論！
                   </p>
                 </div>
               </div>
 
               <!-- 犯罪二階層體系論 原文結構圖解卡片 -->
-              <div class="p-5 sm:p-6 rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-emerald-50/40 via-slate-50/50 to-teal-50/40 dark:from-emerald-950/20 dark:via-slate-900/40 dark:to-teal-950/20 space-y-4">
-                <div class="flex items-center justify-between">
-                  <div class="font-bold text-sm text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
-                    <span>📐</span>
-                    <span>犯罪二階層體系論 原文結構圖解</span>
+              <div class="p-6 rounded-2xl border-2 border-emerald-500 dark:border-emerald-400 bg-gradient-to-br from-emerald-50/80 via-white to-teal-50/60 dark:from-emerald-950/30 dark:via-slate-900/60 dark:to-teal-950/30 shadow-lg space-y-4">
+                <div class="flex items-center justify-between pb-3 border-b-2 border-emerald-200 dark:border-emerald-800/60">
+                  <div class="font-black text-sm sm:text-base text-emerald-900 dark:text-emerald-200 flex items-center gap-2">
+                    <span class="text-xl">📐</span>
+                    <span>犯罪二階層體系論 原文結構圖解（縱向雙軌）</span>
                   </div>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">教材第 1-11 頁</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-emerald-600 text-white font-bold shadow-sm shadow-emerald-600/30">
+                    教材第 1-11 頁原文
+                  </span>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
                   <!-- 客觀要件分支 -->
-                  <div class="p-4 rounded-xl border border-emerald-500/30 bg-white dark:bg-slate-900 space-y-2">
-                    <div class="font-bold text-emerald-700 dark:text-emerald-400 flex items-center justify-between">
+                  <div class="p-5 rounded-2xl border-2 border-emerald-400 dark:border-emerald-600 bg-white dark:bg-slate-900 shadow-sm space-y-3">
+                    <div class="font-black text-emerald-800 dark:text-emerald-300 flex items-center justify-between pb-2 border-b border-emerald-100 dark:border-emerald-900/50">
                       <span>🔵 客觀要件分支 (客觀不法)</span>
-                      <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10">縱向平行</span>
+                      <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-500 text-white">縱向雙軌</span>
                     </div>
-                    <div class="flex items-center justify-around py-2 border-y border-slate-100 dark:border-slate-800 font-mono text-center">
-                      <div><span class="block text-slate-400 text-[10px]">客觀構成</span><strong class="text-blue-500">TB</strong></div>
-                      <div class="text-amber-500 text-xs">➔ 推定 ➔</div>
-                      <div><span class="block text-slate-400 text-[10px]">客觀違法</span><strong class="text-amber-500">R</strong></div>
+                    <div class="flex items-center justify-around py-3 border-y border-slate-100 dark:border-slate-800 font-mono text-center">
+                      <div><span class="block text-slate-400 text-xs">客觀構成</span><strong class="text-sky-600 dark:text-sky-400 text-base">TB</strong></div>
+                      <div class="text-amber-500 font-black text-xs">➔ 推定 ➔</div>
+                      <div><span class="block text-slate-400 text-xs">客觀違法</span><strong class="text-amber-600 dark:text-amber-400 text-base">R</strong></div>
                     </div>
-                    <div class="text-[11px] text-emerald-600 dark:text-emerald-400 text-center bg-emerald-50/60 dark:bg-emerald-950/40 rounded py-1">
-                      阻卻 R 事由（客觀情狀）反證推翻推定
+                    <div class="text-xs font-bold text-emerald-700 dark:text-emerald-300 text-center bg-emerald-50 dark:bg-emerald-950/40 rounded-xl py-2 border border-emerald-200 dark:border-emerald-800/60">
+                      🔄 阻卻 R 事由（客觀情狀）反證推翻推定
                     </div>
                   </div>
 
                   <!-- 主觀要件分支 -->
-                  <div class="p-4 rounded-xl border border-indigo-500/30 bg-white dark:bg-slate-900 space-y-2">
-                    <div class="font-bold text-indigo-700 dark:text-indigo-400 flex items-center justify-between">
+                  <div class="p-5 rounded-2xl border-2 border-indigo-400 dark:border-indigo-600 bg-white dark:bg-slate-900 shadow-sm space-y-3">
+                    <div class="font-black text-indigo-800 dark:text-indigo-300 flex items-center justify-between pb-2 border-b border-indigo-100 dark:border-indigo-900/50">
                       <span>🟣 主觀要件分支 (主觀不法)</span>
-                      <span class="text-[10px] px-1.5 py-0.5 rounded bg-indigo-500/10">縱向平行</span>
+                      <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-indigo-500 text-white">縱向雙軌</span>
                     </div>
-                    <div class="flex items-center justify-around py-2 border-y border-slate-100 dark:border-slate-800 font-mono text-center">
-                      <div><span class="block text-slate-400 text-[10px]">主觀構成</span><strong class="text-blue-500">TB</strong></div>
-                      <div class="text-amber-500 text-xs">➔ 推定 ➔</div>
-                      <div><span class="block text-slate-400 text-[10px]">主觀違法</span><strong class="text-amber-500">R</strong></div>
+                    <div class="flex items-center justify-around py-3 border-y border-slate-100 dark:border-slate-800 font-mono text-center">
+                      <div><span class="block text-slate-400 text-xs">主觀構成</span><strong class="text-purple-600 dark:text-purple-400 text-base">TB</strong></div>
+                      <div class="text-amber-500 font-black text-xs">➔ 推定 ➔</div>
+                      <div><span class="block text-slate-400 text-xs">主觀違法</span><strong class="text-amber-600 dark:text-amber-400 text-base">R</strong></div>
                     </div>
-                    <div class="text-[11px] text-indigo-600 dark:text-indigo-400 text-center bg-indigo-50/60 dark:bg-indigo-950/40 rounded py-1">
-                      阻卻 R 事由（主觀意思）反證推翻推定
+                    <div class="text-xs font-bold text-indigo-700 dark:text-indigo-300 text-center bg-indigo-50 dark:bg-indigo-950/40 rounded-xl py-2 border border-indigo-200 dark:border-indigo-800/60">
+                      🔄 阻卻 R 事由（主觀意思）反證推翻推定
                     </div>
                   </div>
                 </div>
 
-                <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center text-xs space-y-1">
-                  <div class="font-bold text-slate-800 dark:text-slate-200">
-                    不法 ➔ 推定 ➔ 行為人期待可能性 (S)
+                <div class="p-4 rounded-xl bg-gradient-to-r from-emerald-100 via-white to-indigo-100 dark:from-emerald-950/40 dark:via-slate-900 dark:to-indigo-950/40 border-2 border-emerald-300 dark:border-emerald-700 text-center text-xs sm:text-sm space-y-1">
+                  <div class="font-black text-slate-900 dark:text-white">
+                    不法成立 ➔ 推定 ➔ 行為人具備期待可能性 (S 罪責)
                   </div>
-                  <div class="text-slate-500 text-[11px]">
-                    由「阻卻 S 事由」作為反證推翻罪責推定，與三階論之罪責階層相同。
+                  <div class="text-slate-600 dark:text-slate-300 text-xs">
+                    由「阻卻 S 事由」作為反證推翻罪責推定，此部分與三階論之罪責階層完全相同！
                   </div>
                 </div>
               </div>
 
-              <!-- 教材進度里程碑卡片 (第一章 1-1 ~ 1-11 全收錄完畢) -->
-              <div class="p-5 rounded-2xl border-2 border-emerald-500/40 bg-emerald-50/30 dark:bg-emerald-950/30 text-xs text-slate-500 space-y-2 mt-4">
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-2 font-bold text-slate-800 dark:text-slate-200 text-sm">
-                    <span class="text-base">🎉</span>
-                    <span>教材第 1-10 ～ 1-11 頁收錄完畢！</span>
+              <!-- 💡 白話文超展開專區：二階論與四塊拼圖 -->
+              <div class="p-6 rounded-3xl border-2 border-emerald-400 dark:border-emerald-500/80 bg-gradient-to-br from-emerald-50/90 via-teal-50/40 to-cyan-50/30 dark:from-[#0b201a] dark:via-[#0c1822] dark:to-[#08151b] shadow-xl space-y-5">
+                <div class="flex items-center justify-between pb-3 border-b-2 border-emerald-200 dark:border-emerald-800/60">
+                  <div class="flex items-center gap-2">
+                    <span class="text-2xl">💡</span>
+                    <h4 class="font-black text-emerald-950 dark:text-emerald-200 text-base sm:text-lg">
+                      白話文超展開：二階論與四塊拼圖（換湯不換藥的真相）
+                    </h4>
                   </div>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500 text-white font-bold">第一章完整收錄</span>
+                  <span class="text-xs font-black px-3 py-1 rounded-full bg-emerald-600 text-white shadow-sm shadow-emerald-600/30">
+                    秒懂不法結構
+                  </span>
                 </div>
-                <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-xs">
-                  第一章「犯罪的概念」從直觀壞事壞人、期待可能性、法定與超法定阻卻罪責、利益衡量、法定與超法定阻卻違法、三階論到二階論與四塊拼圖已完整收錄！等待第二章教材。
+
+                <!-- 3大白話拆解卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  
+                  <!-- 卡片 1 -->
+                  <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-900/80 border-2 border-indigo-300 dark:border-indigo-700 space-y-2.5 shadow-sm">
+                    <div class="flex items-center gap-2 font-black text-indigo-900 dark:text-indigo-200 text-sm">
+                      <span class="w-6 h-6 rounded-full bg-indigo-500 text-white flex items-center justify-center text-xs font-bold">1</span>
+                      <span>大誤解：二階論不是不管違法性！</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                      很多人聽到二階論就以為「它直接跳過違法性（R）」，大錯特錯！它只是把第一階和第二階打包成「大不法階層」，法條要件一個都沒少！
+                    </p>
+                    <div class="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 text-[11px] text-indigo-800 dark:text-indigo-300 font-medium">
+                      📦 比喻：三階論像先分樓層再找房間；二階論像先把男女分開再進房間，人還是一樣多！
+                    </div>
+                  </div>
+
+                  <!-- 卡片 2 -->
+                  <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-900/80 border-2 border-teal-300 dark:border-teal-700 space-y-2.5 shadow-sm">
+                    <div class="flex items-center gap-2 font-black text-teal-900 dark:text-teal-200 text-sm">
+                      <span class="w-6 h-6 rounded-full bg-teal-500 text-white flex items-center justify-center text-xs font-bold">2</span>
+                      <span>四塊拼圖：有加有減的平衡算式</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                      做了外在壞事（+①），但有防衛情狀（-③）➔ 客觀不法歸零！心裡想使壞（+②），但有防衛意思（-④）➔ 主觀不法歸零！兩邊都清白才是真合法！
+                    </p>
+                    <div class="p-2 rounded-lg bg-teal-50 dark:bg-teal-950/40 text-[11px] text-teal-800 dark:text-teal-300 font-medium">
+                      🧩 算式：客觀構成扣掉客觀阻卻、主觀構成扣掉主觀阻卻，全都是「加法減法」！
+                    </div>
+                  </div>
+
+                  <!-- 卡片 3 -->
+                  <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-900/80 border-2 border-emerald-300 dark:border-emerald-700 space-y-2.5 shadow-sm">
+                    <div class="flex items-center gap-2 font-black text-emerald-900 dark:text-emerald-200 text-sm">
+                      <span class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xs font-bold">3</span>
+                      <span>實戰結論：九成九案件結論完全相同！</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                      通說三階論和二階論只是思考視角不同。無論是用三階橫推，還是二階雙軌縱切，判決有罪無罪在絕大多數案件中都一模一樣！
+                    </p>
+                    <div class="p-2 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-[11px] text-emerald-800 dark:text-emerald-300 font-medium">
+                      🎯 核心：二階論讓你看懂主觀與客觀在不法中的對稱之美！
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- 核心記憶口訣列 -->
+                <div class="p-4 rounded-2xl bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white shadow-md flex items-center gap-3">
+                  <span class="text-2xl">📢</span>
+                  <div class="text-xs sm:text-sm font-black tracking-wide">
+                    核心精華口訣：三階橫向層層推，二階縱向主客分；四塊拼圖同要件，結論一致不失真！
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- 教材進度里程碑卡片 (第一章 1-1 ~ 1-11 全收錄完畢) -->
+              <div class="p-5 rounded-2xl border-2 border-emerald-500 dark:border-emerald-400 bg-gradient-to-r from-emerald-50 via-teal-50 to-green-50 dark:from-[#0d2218] dark:via-[#0c1e19] dark:to-[#071610] text-xs text-slate-600 dark:text-slate-300 space-y-2 shadow-md">
+                <div class="flex items-center justify-between pb-1.5 border-b border-emerald-200 dark:border-emerald-800/60">
+                  <div class="flex items-center gap-2 font-black text-emerald-950 dark:text-emerald-200 text-sm">
+                    <span class="text-lg">🎉</span>
+                    <span>教材第 1-1 ～ 1-11 頁全章收錄完畢！</span>
+                  </div>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-emerald-600 text-white font-bold shadow-xs">第一章完整收錄</span>
+                </div>
+                <p class="leading-relaxed">
+                  第一章「犯罪的概念」從直觀壞事壞人、期待可能性、法定與超法定阻卻罪責、利益衡量、法定與超法定阻卻違法、三階論到二階論與四塊拼圖已完整收錄！
                 </p>
               </div>
 
             </section>
 
             <!-- ==================== 十六、刑法核心爭點超級對照矩陣（Mega Comparison Matrix） ==================== -->
-            <section id="sec-mega-comparison-matrix" class="p-6 sm:p-8 rounded-3xl border-2 border-indigo-500/40 bg-gradient-to-br from-indigo-50/40 via-white to-purple-50/40 dark:from-[#131b2e] dark:via-[#0f172a] dark:to-purple-950/20 backdrop-blur-md shadow-lg space-y-6 scroll-mt-28">
+            <section id="sec-mega-comparison-matrix" class="p-6 sm:p-8 rounded-3xl border-2 border-indigo-500 dark:border-indigo-400 bg-gradient-to-br from-indigo-50/70 via-white to-purple-50/50 dark:from-[#131b2e] dark:via-[#0c1220] dark:to-[#170e28] backdrop-blur-md shadow-2xl space-y-7 scroll-mt-28">
               
               <!-- 頂部標題列與資訊徽章 -->
-              <div class="flex items-center justify-between border-b border-indigo-200/70 dark:border-indigo-900/50 pb-4">
-                <div class="flex items-center gap-2.5">
-                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 text-white shadow-md text-sm font-black">⚡</span>
+              <div class="flex items-center justify-between border-b-2 border-indigo-200 dark:border-indigo-800/60 pb-4">
+                <div class="flex items-center gap-3">
+                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 text-white shadow-md shadow-indigo-500/30 text-lg font-black">⚡</span>
                   <div>
                     <div class="flex items-center gap-2">
-                      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300">第一章 總體核心樞紐</span>
-                      <span class="px-2.5 py-0.5 rounded-full text-[10.5px] font-bold bg-purple-100 dark:bg-purple-900/60 text-purple-700 dark:text-purple-300">國考高頻爭點</span>
+                      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-indigo-600 text-white shadow-xs">第一章 總體核心樞紐</span>
+                      <span class="px-2.5 py-0.5 rounded-full text-[10.5px] font-bold bg-purple-100 dark:bg-purple-900/60 text-purple-700 dark:text-purple-300">國考高頻必考爭點</span>
                     </div>
-                    <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight mt-1">
+                    <h3 class="text-xl sm:text-2xl font-black text-indigo-950 dark:text-white tracking-tight mt-1">
                       十六、刑法核心爭點超級對照矩陣（Mega Comparison Matrix）
                     </h3>
                   </div>
                 </div>
-                <div class="hidden sm:flex items-center gap-1 text-xs font-mono text-indigo-600 dark:text-indigo-400 bg-white dark:bg-slate-800 px-3 py-1.5 rounded-xl border border-indigo-200/80 dark:border-indigo-800 shadow-2xs">
+                <div class="hidden sm:flex items-center gap-1.5 text-xs font-mono font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-slate-800 px-3.5 py-2 rounded-xl border border-indigo-200 dark:border-indigo-700 shadow-sm">
                   <span>3 大矩陣</span>・<span>17 案例對照</span>
                 </div>
               </div>
 
               <!-- 導引說明 -->
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed font-medium">
                 彙整陳奕廷（易律師）《刑法總則【圖說系列】》第一章所有易混淆核心概念。針對國考申論題最常考的<strong>「阻卻違法 vs 阻卻罪責」</strong>、<strong>「正當防衛 vs 緊急避難 vs 義務衝突」</strong>與<strong>「被害人同意 vs 得承諾 vs 推定承諾」</strong>進行多維度橫向縱深對照。點擊案例標籤可快速跳轉直達內文詳解！
               </p>
 
               <!-- 互動操作控制台：爭點搜尋 + Tab 切換 -->
-              <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-3.5">
+              <div class="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border-2 border-indigo-200 dark:border-indigo-800/80 shadow-md space-y-3.5">
                 
                 <!-- 搜尋過濾器 -->
                 <div class="relative">
-                  <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                  <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-indigo-500">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                     </svg>
@@ -2594,7 +3651,7 @@ window.APP_VIEWS['viewChapter1'] = window.APP_VIEWS['chapter1'] = `
                   <input type="text" 
                          id="matrixSearchInput" 
                          placeholder="🔍 快速檢索爭點（輸入：利益衡量、人性尊嚴、共犯、櫻桃案、過當...）" 
-                         class="w-full pl-9 pr-24 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 transition-all"
+                         class="w-full pl-9 pr-24 py-2.5 text-xs sm:text-sm rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-hidden focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all font-medium"
                          oninput="filterMatrixRows(this.value)">
                   <button type="button" 
                           onclick="clearMatrixSearch()" 
@@ -2607,13 +3664,13 @@ window.APP_VIEWS['viewChapter1'] = window.APP_VIEWS['chapter1'] = `
                 <!-- Tab 標籤切換 -->
                 <div class="flex flex-wrap items-center gap-2 pt-0.5" id="matrixTabsNav">
                   <span class="text-xs font-bold text-slate-500 dark:text-slate-400 mr-1 hidden sm:inline">對照視角：</span>
-                  <button type="button" onclick="switchMatrixTab('tabA')" id="btnTabA" class="matrix-tab-btn active-matrix-tab px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5">
+                  <button type="button" onclick="switchMatrixTab('tabA')" id="btnTabA" class="matrix-tab-btn active-matrix-tab px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 cursor-pointer">
                     <span>⚔️ 矩陣 A：違法性 vs 罪責</span>
                   </button>
-                  <button type="button" onclick="switchMatrixTab('tabB')" id="btnTabB" class="matrix-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5">
+                  <button type="button" onclick="switchMatrixTab('tabB')" id="btnTabB" class="matrix-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 cursor-pointer">
                     <span>⚖️ 矩陣 B：防衛 vs 避難 vs 衝突</span>
                   </button>
-                  <button type="button" onclick="switchMatrixTab('tabC')" id="btnTabC" class="matrix-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5">
+                  <button type="button" onclick="switchMatrixTab('tabC')" id="btnTabC" class="matrix-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 cursor-pointer">
                     <span>🤝 矩陣 C：處分權與承諾界限</span>
                   </button>
                   <button type="button" onclick="switchMatrixTab('tabAll')" id="btnTabAll" class="matrix-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5">
@@ -3088,6 +4145,77 @@ window.APP_VIEWS['viewChapter1'] = window.APP_VIEWS['chapter1'] = `
                     <div id="allTableCContainer"></div>
                   </div>
                 </div>
+              </div>
+
+              <!-- 💡 白話文超展開專區：三大核心矩陣通關秘笈 -->
+              <div class="p-6 rounded-3xl border-2 border-purple-400 dark:border-purple-500/80 bg-gradient-to-br from-purple-50/90 via-indigo-50/40 to-pink-50/30 dark:from-[#1b122c] dark:via-[#120d20] dark:to-[#170a24] shadow-xl space-y-5">
+                <div class="flex items-center justify-between pb-3 border-b-2 border-purple-200 dark:border-purple-800/60">
+                  <div class="flex items-center gap-2">
+                    <span class="text-2xl">💡</span>
+                    <h4 class="font-black text-purple-950 dark:text-purple-200 text-base sm:text-lg">
+                      白話文超展開：三大核心矩陣通關秘笈（秒殺國考考點）
+                    </h4>
+                  </div>
+                  <span class="text-xs font-black px-3 py-1 rounded-full bg-purple-600 text-white shadow-sm shadow-purple-500/30">
+                    全章總結直通車
+                  </span>
+                </div>
+
+                <!-- 3大白話拆解卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  
+                  <!-- 卡片 1 -->
+                  <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-900/80 border-2 border-indigo-300 dark:border-indigo-700 space-y-2.5 shadow-sm">
+                    <div class="flex items-center gap-2 font-black text-indigo-900 dark:text-indigo-200 text-sm">
+                      <span class="w-6 h-6 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs font-bold">A</span>
+                      <span>違法性 vs 罪責：對事不對人 vs 對人不對事</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                      阻卻違法是「<strong>這件事法律准你做</strong>（如警察抓通緝犯、正當防衛反擊）」，整件事是好事，幕後幫忙的共犯也通通無罪！阻卻罪責是「<strong>你做了大壞事，但你大腦失控或法律不強人所難</strong>（如發狂精神病患）」，只原諒你個人，教唆你的幕後黑手依然要抓去坐牢！
+                    </p>
+                    <div class="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 text-[11px] text-indigo-800 dark:text-indigo-300 font-medium">
+                      🎯 核心：違法性連帶影響共犯；罪責只關心行為人個人！
+                    </div>
+                  </div>
+
+                  <!-- 卡片 2 -->
+                  <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-900/80 border-2 border-emerald-300 dark:border-emerald-700 space-y-2.5 shadow-sm">
+                    <div class="flex items-center gap-2 font-black text-emerald-900 dark:text-emerald-200 text-sm">
+                      <span class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">B</span>
+                      <span>防衛 vs 避難 vs 衝突：正邪 vs 轉嫁 vs 兩難</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                      正當防衛是「<strong>正對不正</strong>」，痛扁歹徒不用逃跑、為保護財產打傷對方原則不用利益衡量（除非櫻桃案開槍殺人太懸殊）；緊急避難是「<strong>正對正</strong>」，把災難轉嫁無辜路人，非最後手段不可、必須嚴格保大犧牲小！義務衝突則是「<strong>手心手背都是肉</strong>」的死局，已盡力救一人就不罰！
+                    </p>
+                    <div class="p-2 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-[11px] text-emerald-800 dark:text-emerald-300 font-medium">
+                      🎯 核心：防衛對壞人不衡平；避難害好人嚴格衡平！
+                    </div>
+                  </div>
+
+                  <!-- 卡片 3 -->
+                  <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-900/80 border-2 border-purple-300 dark:border-purple-700 space-y-2.5 shadow-sm">
+                    <div class="flex items-center gap-2 font-black text-purple-900 dark:text-purple-200 text-sm">
+                      <span class="w-6 h-6 rounded-full bg-purple-600 text-white flex items-center justify-center text-xs font-bold">C</span>
+                      <span>同意 vs 承諾：開門請進 vs 准你打我</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                      被害人同意是「<strong>開門請你進來住</strong>」，構成要件一開始就不該當；得被害人承諾是「<strong>打巴掌本來算傷害，但你事前准我打</strong>」，在第二階阻卻違法。但請死記國考天條：<strong>生命絕不可承諾！</strong>就算對方下跪求你殺他，動手依然成立「加工自殺罪」！
+                    </p>
+                    <div class="p-2 rounded-lg bg-purple-50 dark:bg-purple-950/40 text-[11px] text-purple-800 dark:text-purple-300 font-medium">
+                      🎯 核心：第一階同意自始無罪，第二階承諾生命不可讓！
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- 第一章總結核心大通關口訣列 -->
+                <div class="p-4 rounded-2xl bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-md flex items-center gap-3">
+                  <span class="text-2xl">📢</span>
+                  <div class="text-xs sm:text-sm font-black tracking-wide leading-relaxed">
+                    第一章通關總口訣：不法評價行為好壞，罪責評價能否期待；防衛不必低頭退讓，避難嚴格保大犧牲；生命無價不得承諾，二階三階殊途同歸！
+                  </div>
+                </div>
+
               </div>
 
             </section>
